@@ -128,7 +128,7 @@ exorbitant|adj|sangat mahal|The hotel charges ___ prices in August.
 exponent|n|penganjur, pelopor|He was a leading ___ of free trade.
 extol|v|memuji-muji|Travel writers ___ the beauty of the coast.
 exuberant|adj|penuh semangat|The crowd was ___ after the win.
-facade/façade|n|tampak muka, kedok|The ___ of the bank is made of white marble.
+facade|n|tampak muka, kedok|The ___ of the bank is made of white marble.
 fathom|v|memahami (sesuatu yang sulit)|I cannot ___ why he refused.
 feeble|adj|lemah|He offered a ___ excuse for his absence.
 fervour/fervor|n|semangat berkobar|The crowd sang with ___ in the rain.
