@@ -1,0 +1,46 @@
+# Verbarium — panji IELTS: kosakata topik esai dan grafik, ejaan Inggris.
+# Format: ranah|kata|kelas|arti|kalimat dengan ___
+1|neighbourhood|n|lingkungan tempat tinggal|The ___ has two parks and a small market.
+1|programme|n|program, acara|The training ___ lasts six weeks.
+1|behaviour|n|perilaku|The study looked at the ___ of young drivers.
+1|centre|n|pusat|The sports ___ is open until ten at night.
+1|leisure|n|waktu luang|People have less ___ time than they did ten years ago.
+1|traffic|n|lalu lintas|Heavy ___ makes the journey twice as long.
+1|rubbish|n|sampah|The council collects ___ twice a week.
+1|housing|n|perumahan|Cheap ___ is hard to find in the capital.
+1|crime|n|kejahatan|Street lighting can reduce ___ at night.
+1|diet|n|pola makan|A balanced ___ includes fresh vegetables.
+1|travel|v|bepergian|More people ___ abroad for work than before.
+1|graph|n|grafik|The ___ shows sales over five years.
+1|percentage|n|persentase|The ___ of women in work rose steadily.
+1|rise|v|naik|House prices ___ faster in cities than in villages.
+1|fall|v|turun|Sales usually ___ in the first month of the year.
+2|commute|v|pulang-pergi kerja|Many workers ___ more than an hour each day.
+2|infrastructure|n|prasarana|Good ___ attracts new businesses to a town.
+2|unemployment|n|pengangguran|Youth ___ is highest in the north.
+2|obesity|n|obesitas|Childhood ___ is linked to sugary drinks.
+2|congestion|n|kemacetan|Road ___ costs the city millions each year.
+2|renewable|adj|terbarukan|Wind is a ___ source of energy.
+2|emission|n|emisi|Each ___ of carbon adds to global warming.
+2|recycle|v|mendaur ulang|Most households ___ paper and glass.
+2|fluctuation|n|naik turun, fluktuasi|There was a slight ___ in prices during spring.
+2|peak|n|puncak|Visitor numbers reached a ___ in August.
+2|plateau|n|masa mendatar|After a sharp rise, sales reached a ___ in 2015.
+2|plummet|v|anjlok|Prices ___ whenever supply doubles.
+2|soar|v|melonjak|Rents ___ when a new station opens.
+2|dwelling|n|tempat tinggal, hunian|Each ___ in the block has its own garden.
+2|pedestrian|n|pejalan kaki|The bridge is open to every ___ and cyclist.
+2|curriculum|n|kurikulum|Art should stay in the school ___ for all ages.
+2|drawback|n|kekurangan, kelemahan|The main ___ of the plan is its cost.
+2|outskirts|n|pinggiran kota|New estates are built on the ___ of the city.
+3|urbanisation|n|urbanisasi|Rapid ___ puts pressure on water supplies.
+3|globalisation|n|globalisasi|Critics say ___ harms small local producers.
+3|sedentary|adj|kurang gerak|A ___ lifestyle raises the risk of heart disease.
+3|deforestation|n|penggundulan hutan|The report links ___ to the loss of rare species.
+3|biodiversity|n|keanekaragaman hayati|Wetlands are rich in ___ and need protection.
+3|demographic|adj|demografis, kependudukan|The country faces a ___ shift toward older citizens.
+3|affordable|adj|terjangkau|Young families need ___ homes near their work.
+3|deterrent|n|penangkal, pencegah|Heavy fines act as a ___ to careless driving.
+3|rehabilitation|n|rehabilitasi|Prisons should focus on ___ rather than punishment.
+3|consumerism|n|konsumerisme|Advertising feeds the growth of ___ among teenagers.
+3|levy|n|pungutan, retribusi|The council introduced a ___ on plastic bags.

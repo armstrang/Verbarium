@@ -1,0 +1,262 @@
+# Verbarium — ranah 1 (Squire, CEFR B1). Format: kata|kelas|arti|kalimat dengan ___
+# Kata dengan dua ejaan ditulis amerika/inggris. Semua kalimat dan arti ditulis untuk Verbarium.
+ability|n|kemampuan|She has the ___ to explain hard ideas simply.
+absence|n|ketidakhadiran|His ___ from class was noticed by the teacher.
+accept|v|menerima|The university will ___ only two hundred new students.
+accurate|adj|akurat|We need an ___ count of the people in the hall.
+achieve|v|mencapai|You can ___ a high score with steady practice.
+activity|n|kegiatan|Swimming is a healthy ___ for all ages.
+admit|v|mengakui|He had to ___ that the plan was too expensive.
+advantage|n|keuntungan, kelebihan|Speaking two languages is a big ___ at work.
+advice|n|nasihat|My tutor gave me useful ___ about the essay.
+affect|v|memengaruhi|Lack of sleep can ___ your memory.
+afford|v|mampu membayar|Many families cannot ___ private lessons.
+agreement|n|kesepakatan|The two companies signed an ___ last week.
+aim|n|tujuan|The main ___ of the course is to improve writing.
+allow|v|mengizinkan|The rules ___ students to use a dictionary.
+amount|n|jumlah|A small ___ of salt improves the taste.
+ancient|adj|kuno|The museum shows tools from ___ Egypt.
+announce|v|mengumumkan|The school will ___ the results on Friday.
+apply|v|melamar, mendaftar|She plans to ___ for a scholarship abroad.
+argue|v|berpendapat, berdebat|Some experts ___ that homework should be shorter.
+arrange|v|mengatur|Can you ___ a meeting for Monday morning?
+attend|v|menghadiri|All new students must ___ the first lecture.
+attitude|n|sikap|A positive ___ helps you learn faster.
+available|adj|tersedia|The report is ___ in the library.
+average|adj|rata-rata|The ___ age of the group is twenty-two.
+avoid|v|menghindari|Try to ___ repeating the same word.
+aware|adj|sadar, tahu|Few people are ___ of the new rule.
+background|n|latar belakang|The students come from a different cultural ___ each.
+balance|n|keseimbangan|It is hard to keep a ___ between work and rest.
+behave|v|berperilaku|Children often ___ better when they are busy.
+belief|n|keyakinan|There is a common ___ that cold weather causes colds.
+benefit|n|manfaat|Regular exercise has a clear ___ for the heart.
+borrow|v|meminjam|You may ___ three books at a time.
+brief|adj|singkat|Please write a ___ summary of the article.
+career|n|karier|He began his ___ as a science teacher.
+cause|n|penyebab|Smoking is a major ___ of lung disease.
+challenge|n|tantangan|Learning to write formally is a real ___ for me.
+character|n|watak, tokoh|The main ___ in the story is a young doctor.
+choice|n|pilihan|Students have a ___ of three topics.
+claim|v|menyatakan, mengklaim|The authors ___ that the method saves time.
+collect|v|mengumpulkan|We will ___ answers from fifty people.
+common|adj|umum|Headaches are a ___ problem among office workers.
+compare|v|membandingkan|The graph lets us ___ prices in two cities.
+complain|v|mengeluh|Customers often ___ about slow service.
+complete|v|menyelesaikan|You must ___ the form before Friday.
+concern|n|kekhawatiran|There is growing ___ about air quality.
+condition|n|kondisi|The old bridge is in poor ___ now.
+confident|adj|percaya diri|She felt ___ before the speaking test.
+connect|v|menghubungkan|A new road will ___ the two towns.
+consider|v|mempertimbangkan|Please ___ the cost before you decide.
+contain|v|berisi, mengandung|These drinks ___ a lot of sugar.
+continue|v|melanjutkan|Prices will ___ to rise next year.
+control|v|mengendalikan|It is difficult to ___ a large class.
+convince|v|meyakinkan|The data did not ___ the committee.
+correct|adj|benar|Only one answer is ___ in each question.
+create|v|menciptakan|The project will ___ two hundred jobs.
+crowd|n|kerumunan|A large ___ waited outside the stadium.
+culture|n|budaya|Food is an important part of every ___ I know.
+customer|n|pelanggan|Each ___ receives a receipt by email.
+damage|n|kerusakan|The storm caused serious ___ to the roof.
+deal|v|menangani|Teachers must ___ with many different needs.
+decide|v|memutuskan|You should ___ which topic to write about.
+decrease|v|menurun, mengurangi|Sales usually ___ after the holidays.
+degree|n|gelar sarjana|She holds a ___ in chemistry.
+deliver|v|mengantarkan|The shop can ___ the books tomorrow.
+demand|n|permintaan|There is high ___ for cheap housing.
+depend|v|bergantung|Your grade will ___ on the final essay.
+describe|v|menggambarkan|The chart does not ___ the trend after 2010.
+design|v|merancang|Engineers ___ bridges to last for decades.
+destroy|v|menghancurkan|Fires can ___ a forest in a few hours.
+detail|n|rincian|Every ___ of the plan was checked twice.
+develop|v|mengembangkan|The course will help you ___ new skills.
+difference|n|perbedaan|There is a clear ___ between the two groups.
+difficulty|n|kesulitan|He had ___ understanding the lecture.
+discover|v|menemukan|Scientists hope to ___ a cheaper treatment.
+discuss|v|membahas|We will ___ the results in the next section.
+disease|n|penyakit|The ___ spreads quickly in crowded places.
+distance|n|jarak|The ___ between the two cities is short.
+divide|v|membagi|The teacher will ___ the class into four groups.
+doubt|n|keraguan|There is no ___ that reading helps writing.
+earn|v|memperoleh penghasilan|Nurses ___ less than doctors in most countries.
+economy|n|perekonomian|Tourism is important for the local ___ here.
+education|n|pendidikan|Free ___ gives every child a fair start.
+effect|n|dampak, efek|The new law had little ___ on prices.
+effort|n|usaha|Writing well takes time and ___ every day.
+employ|v|mempekerjakan|The factory will ___ fifty more workers.
+encourage|v|mendorong, menyemangati|Good teachers ___ students to ask questions.
+energy|n|energi|Solar ___ is becoming cheaper each year.
+environment|n|lingkungan|Plastic waste harms the ___ for decades.
+equal|adj|setara, sama|All students should have ___ access to books.
+escape|v|melarikan diri|Some animals ___ danger by changing colour.
+event|n|peristiwa, acara|The festival is the biggest ___ of the year.
+evidence|n|bukti|There is strong ___ that the climate is changing.
+exact|adj|tepat, persis|Nobody knows the ___ number of speakers.
+examine|v|memeriksa, mengkaji|This essay will ___ both sides of the debate.
+example|n|contoh|Give one ___ to support your idea.
+exchange|v|menukar|Students ___ ideas in small groups.
+expect|v|memperkirakan, mengharapkan|Experts ___ the population to double.
+experience|n|pengalaman|Work ___ is useful when you look for a job.
+experiment|n|percobaan|The ___ was repeated with a larger group.
+explain|v|menjelaskan|Can you ___ why the numbers fell?
+express|v|mengungkapkan|It is hard to ___ feelings in a second language.
+fail|v|gagal|Many small shops ___ in their first year.
+familiar|adj|akrab, dikenal|The topic was ___ to most students.
+feature|n|ciri, fitur|The most useful ___ of the phone is its camera.
+final|adj|akhir|The ___ paragraph should give your opinion.
+flood|n|banjir|The ___ covered the fields for a week.
+focus|v|memusatkan perhatian|Try to ___ on one idea in each paragraph.
+foreign|adj|asing|Learning a ___ language takes patience.
+forest|n|hutan|The ___ is home to hundreds of bird species.
+fuel|n|bahan bakar|Cars that use less ___ are cheaper to run.
+function|n|fungsi|The main ___ of the heart is to pump blood.
+future|n|masa depan|Nobody can be sure about the ___ of work.
+gain|v|memperoleh|Students ___ confidence through practice.
+general|adj|umum|The book gives a ___ introduction to biology.
+global|adj|global, sedunia|Pollution is a ___ problem, not a local one.
+goal|n|sasaran|Her ___ is to study medicine in Australia.
+government|n|pemerintah|The ___ plans to build more schools.
+growth|n|pertumbuhan|The city has seen rapid ___ since 2000.
+guess|v|menebak|If you do not know, ___ the answer.
+habit|n|kebiasaan|Reading every night is a good ___ to form.
+harm|v|merugikan, membahayakan|Too much sun can ___ your skin.
+health|n|kesehatan|Clean water is necessary for public ___ everywhere.
+improve|v|meningkatkan, memperbaiki|Listening to the news can ___ your vocabulary.
+include|v|mencakup|The price does not ___ breakfast.
+income|n|pendapatan|Families with a low ___ pay less tax.
+increase|v|meningkat, menaikkan|The company plans to ___ wages next year.
+industry|n|industri|The car ___ employs thousands of people.
+influence|n|pengaruh|Parents have a strong ___ on young children.
+inform|v|memberi tahu|Please ___ the office if you change your address.
+injury|n|cedera|He could not play because of a knee ___ last month.
+instead|adv|sebagai gantinya|There was no bus, so we walked ___ of waiting.
+interest|n|minat|She has a strong ___ in marine biology.
+introduce|v|memperkenalkan|The first paragraph should ___ the topic.
+invent|v|menciptakan (penemuan)|Who was the first to ___ the telephone?
+involve|v|melibatkan|Group projects ___ a lot of discussion.
+issue|n|persoalan, isu|Traffic is a serious ___ in large cities.
+journey|n|perjalanan|The ___ to the coast takes three hours.
+knowledge|n|pengetahuan|The test checks your ___ of grammar.
+language|n|bahasa|English is the ___ of most science journals.
+law|n|hukum, undang-undang|A new ___ bans smoking in restaurants.
+limit|n|batas|There is a ___ of 250 words for the essay.
+local|adj|setempat|The market sells fruit from ___ farms.
+manage|v|mengelola, berhasil|She had to ___ a team of ten people.
+material|n|bahan|Wood is a cheap building ___ in this area.
+measure|v|mengukur|The test is meant to ___ reading speed.
+member|n|anggota|Every ___ of the club pays a small fee.
+memory|n|ingatan|Sleep helps to keep your ___ sharp.
+method|n|metode, cara|This ___ of teaching works well with adults.
+modern|adj|modern|Most ___ offices have open spaces.
+natural|adj|alami|Honey is a ___ source of sugar.
+necessary|adj|perlu|It is ___ to check your spelling.
+notice|v|memperhatikan, menyadari|Did you ___ the change in the second graph?
+obvious|adj|jelas, nyata|The answer was ___ to everyone in the room.
+occur|v|terjadi|Most accidents ___ close to home.
+offer|v|menawarkan|Many colleges ___ evening classes.
+opinion|n|pendapat|In my ___ the plan is too risky.
+opportunity|n|kesempatan|The trip was a great ___ to practise English.
+ordinary|adj|biasa|It was an ___ day until the phone rang.
+organize/organise|v|mengatur, menyelenggarakan|Students ___ a science fair every spring.
+particular|adj|tertentu|Is there a ___ reason for the delay?
+patient|adj|sabar|You must be ___ when you learn a new skill.
+perform|v|melakukan, tampil|The students will ___ the test in pairs.
+period|n|masa, periode|The chart covers a ___ of ten years.
+permit|v|mengizinkan|The library does not ___ food or drink.
+polite|adj|sopan|It is ___ to thank the speaker afterwards.
+pollution|n|pencemaran|Air ___ is worst in winter.
+popular|adj|populer, digemari|Football is the most ___ sport in the country.
+population|n|jumlah penduduk|The ___ of the city has doubled since 1990.
+positive|adj|positif|The new rule had a ___ effect on attendance.
+possible|adj|mungkin|It is ___ to finish the course in one year.
+practice|n|latihan|Speaking improves only with daily ___ and feedback.
+prefer|v|lebih menyukai|Most students ___ to study in the morning.
+prepare|v|mempersiapkan|You should ___ notes before the interview.
+prevent|v|mencegah|Washing your hands can ___ many illnesses.
+previous|adj|sebelumnya|The ___ study used a smaller sample.
+private|adj|pribadi, swasta|She attends a ___ school near the park.
+problem|n|masalah|Noise is a ___ for people who live near airports.
+process|n|proses|Learning to read is a slow ___ for most children.
+produce|v|menghasilkan|The farm can ___ enough rice for the village.
+protect|v|melindungi|Trees ___ the soil from heavy rain.
+provide|v|menyediakan|The school will ___ lunch for all visitors.
+public|adj|umum, publik|The park is open to ___ use all year.
+purpose|n|maksud, tujuan|The ___ of the survey is to find common habits.
+quality|n|mutu|The ___ of the water is tested every week.
+quantity|n|kuantitas, banyaknya|A large ___ of food is wasted daily.
+reason|n|alasan|The main ___ for the delay was bad weather.
+receive|v|menerima|You will ___ your score within ten days.
+recent|adj|baru-baru ini|A ___ study shows that walking improves mood.
+recognize/recognise|v|mengenali|Can you ___ the main idea of the text?
+reduce|v|mengurangi|Cities try to ___ traffic in the centre.
+refuse|v|menolak|Some workers ___ to accept lower pay.
+region|n|wilayah|The northern ___ gets very little rain.
+relationship|n|hubungan|There is a close ___ between diet and health.
+remain|v|tetap|Prices are likely to ___ high this year.
+remove|v|menghilangkan, memindahkan|Please ___ your shoes before entering.
+repair|v|memperbaiki|It costs a lot to ___ an old car.
+replace|v|menggantikan|Machines may ___ some factory workers.
+reply|v|membalas|Please ___ to this email by Thursday.
+report|n|laporan|The ___ describes changes in land use.
+require|v|memerlukan, mewajibkan|Most courses ___ a written exam.
+research|n|penelitian|More ___ is needed on this question.
+respect|n|rasa hormat|Students should show ___ for other opinions.
+responsible|adj|bertanggung jawab|Parents are ___ for their children's safety.
+result|n|hasil|The ___ of the test surprised everyone.
+reveal|v|mengungkapkan|The figures ___ a sharp drop in sales.
+reward|n|imbalan, hadiah|The ___ for hard work is a better grade.
+risk|n|risiko|There is a ___ of rain this afternoon.
+role|n|peran|Teachers play a key ___ in society.
+rule|n|aturan|The first ___ of writing is to be clear.
+safety|n|keselamatan|Wear a helmet for your own ___ on the road.
+salary|n|gaji|Her ___ rose after she finished the course.
+search|v|mencari|You can ___ the database by author name.
+select|v|memilih|Please ___ one topic from the list.
+separate|adj|terpisah|Keep your notes in a ___ folder.
+serious|adj|serius, parah|Water shortage is a ___ problem in the region.
+service|n|layanan|The bus ___ runs every ten minutes.
+share|v|berbagi|Students ___ a kitchen in the dormitory.
+similar|adj|serupa|The two towns have a ___ climate.
+simple|adj|sederhana|Use ___ words when the idea is complex.
+situation|n|keadaan, situasi|The ___ improved after the new manager arrived.
+skill|n|keterampilan|Typing is a useful ___ for any student.
+society|n|masyarakat|Older people play a valuable part in ___ today.
+solve|v|memecahkan|No single country can ___ the problem alone.
+source|n|sumber|Fish is a good ___ of protein.
+special|adj|khusus, istimewa|The hospital has a ___ unit for children.
+spread|v|menyebar|News can ___ around the world in minutes.
+standard|n|standar, tolok ukur|The hotel did not meet the expected ___ of service.
+steady|adj|stabil, tetap|There has been a ___ rise in house prices.
+structure|n|struktur, susunan|A clear ___ makes an essay easy to follow.
+struggle|v|berjuang, bersusah payah|Many learners ___ with English spelling.
+succeed|v|berhasil|You will ___ if you plan your time well.
+suggest|v|menyarankan, menunjukkan|The results ___ that the method works.
+supply|n|persediaan, pasokan|The town has a limited ___ of clean water.
+support|v|mendukung|Use facts to ___ your argument.
+surface|n|permukaan|Most of the earth's ___ is covered by water.
+survive|v|bertahan hidup|Few plants can ___ in the desert.
+system|n|sistem|The transport ___ needs more buses.
+task|n|tugas|The second ___ is to write a short letter.
+technology|n|teknologi|New ___ has changed how people shop.
+temperature|n|suhu|The ___ dropped below zero last night.
+tend|v|cenderung|Young people ___ to sleep later than adults.
+theory|n|teori|The ___ explains why prices rise.
+threat|n|ancaman|Rising seas are a ___ to coastal towns.
+tradition|n|tradisi|Giving gifts at new year is an old ___ here.
+transport|n|angkutan|Public ___ is cheaper than driving.
+trust|v|memercayai|Readers ___ writers who give clear evidence.
+typical|adj|khas, lazim|A ___ lesson lasts fifty minutes.
+useful|adj|berguna|A dictionary is ___ when you read news articles.
+value|n|nilai|The ___ of the house has doubled.
+variety|n|keragaman, aneka|The shop sells a wide ___ of fruit.
+various|adj|berbagai|People learn languages for ___ reasons.
+view|n|pandangan|In her ___ the tax is unfair.
+visible|adj|terlihat|The mountain is ___ from the city on clear days.
+volunteer|n|sukarelawan|Each ___ works four hours a week.
+waste|v|membuang, menyia-nyiakan|Do not ___ time copying the question.
+wealth|n|kekayaan|Oil brought great ___ to the region.
+weigh|v|menimbang|You should ___ the costs against the benefits.
+wonder|v|bertanya-tanya|Many people ___ whether robots will take their jobs.
+worth|adj|bernilai, layak|The museum is ___ a visit if you have time.
+youth|n|masa muda, kaum muda|He spent his ___ in a small fishing village.

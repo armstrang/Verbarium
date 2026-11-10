@@ -1,0 +1,197 @@
+# Verbarium — ranah 3 (Baron, CEFR C1 awal). Format: kata|kelas|arti|kalimat dengan ___
+abundant|adj|berlimpah|The region has ___ supplies of fresh water.
+accelerate|v|mempercepat|Lower taxes may ___ economic growth.
+accessible|adj|mudah dijangkau|The museum is fully ___ to wheelchair users.
+accommodate|v|menampung, menyesuaikan|The new hall can ___ six hundred guests.
+accountable|adj|bertanggung gugat|Ministers are ___ to the public for their decisions.
+acknowledge|v|mengakui|The authors ___ the limits of their sample.
+adverse|adj|merugikan, buruk|The drug had no ___ effects on the patients.
+aggregate|adj|keseluruhan, gabungan|The ___ demand for energy rises each winter.
+allocate|v|mengalokasikan|The council will ___ more funds to rural clinics.
+ambiguous|adj|bermakna ganda, taksa|The wording of the rule is ___ and needs revision.
+amend|v|mengubah (aturan, naskah)|Parliament voted to ___ the existing law.
+analogy|n|analogi, perbandingan|The writer draws an ___ between memory and a library.
+arbitrary|adj|sewenang-wenang, tanpa dasar|The age limit seems ___ and hard to defend.
+articulate|v|mengungkapkan dengan jelas|She could ___ complex ideas in simple terms.
+assert|v|menegaskan|Critics ___ that the test favours urban students.
+attribute|v|menghubungkan (sebab)|Experts ___ the decline to falling birth rates.
+autonomy|n|otonomi, kemandirian|Teachers want more ___ over what they teach.
+beneficial|adj|bermanfaat|A short walk is ___ for concentration.
+coherent|adj|runtut, padu|A ___ essay links each paragraph to the next.
+coincide|v|bertepatan|The festival will ___ with the school holiday.
+collaborate|v|bekerja sama|Two universities ___ on the vaccine project.
+commence|v|memulai|Building work will ___ early next year.
+compatible|adj|sesuai, cocok|The software is not ___ with older phones.
+compensate|v|mengganti rugi, mengimbangi|Nothing can ___ for the loss of a home.
+compile|v|menghimpun, menyusun|Researchers ___ data from forty hospitals.
+complement|v|melengkapi|The photographs ___ the written report well.
+comply|v|mematuhi|All factories must ___ with safety rules.
+comprehensive|adj|menyeluruh|The book offers a ___ guide to the region.
+comprise|v|terdiri atas|The islands ___ about a third of the country.
+conceive|v|membayangkan, merumuskan|It is hard to ___ of life without electricity.
+concurrent|adj|bersamaan|The two trials were ___ rather than successive.
+confine|v|membatasi|Please ___ your answer to two hundred words.
+consensus|n|kesepakatan bersama|The committee reached a ___ after three hours of debate.
+constitute|v|merupakan, membentuk|Women ___ half of the workforce in this sector.
+constrain|v|membatasi, mengekang|Tight budgets ___ what schools can offer.
+contemporary|adj|masa kini, sezaman|The gallery shows ___ art from Asia.
+contradict|v|bertentangan dengan|The new findings ___ earlier studies.
+controversy|n|kontroversi, perdebatan|The plan caused ___ among local residents.
+convene|v|mengadakan (rapat), berkumpul|The board will ___ a special meeting on Monday.
+conventional|adj|konvensional, lazim|Organic farms use fewer chemicals than ___ ones.
+correlate|v|berkorelasi|Higher incomes ___ with longer lives.
+credible|adj|dapat dipercaya|The witness gave a ___ account of the events.
+criterion|n|kriteria (tunggal)|Cost was the main ___ for choosing the site.
+cumulative|adj|kumulatif, bertumpuk|The ___ effect of small savings is large.
+deficit|n|defisit, kekurangan|The country has a growing trade ___ with its neighbours.
+denote|v|menandakan, berarti|In the diagram, arrows ___ the flow of water.
+depict|v|menggambarkan|The paintings ___ scenes of village life.
+deplete|v|menguras, menghabiskan|Heavy fishing can ___ stocks within a decade.
+deteriorate|v|memburuk|Roads ___ quickly without regular repair.
+deviate|v|menyimpang|The pilot had to ___ from the planned route.
+differentiate|v|membedakan|Young children cannot ___ between fact and opinion.
+diminish|v|berkurang, mengurangi|The noise did not ___ until midnight.
+discrete|adj|terpisah, tersendiri|The course is divided into six ___ units.
+discriminate|v|mendiskriminasi, membedakan|Employers must not ___ on the basis of age.
+disperse|v|membubarkan, menyebar|The wind helps to ___ the seeds.
+displace|v|menggusur, menggantikan|Rising seas could ___ millions of people.
+dispose|v|membuang|Hospitals must ___ of waste safely.
+disrupt|v|mengganggu, mengacaukan|Strikes may ___ train services this week.
+distort|v|memutarbalikkan, mengubah bentuk|Small samples can ___ the results.
+diversity|n|keanekaragaman|The reef is known for its ___ of fish.
+doctrine|n|doktrin, ajaran|The court relied on a legal ___ from the last century.
+dominant|adj|dominan, paling berpengaruh|English is the ___ language of science.
+duration|n|lama waktu, durasi|Phones must be off for the ___ of the exam.
+elaborate|v|menguraikan lebih rinci|Could you ___ on your second point?
+eligible|adj|memenuhi syarat|Only full-time students are ___ for the grant.
+embrace|v|menerima dengan terbuka|Older workers were slow to ___ the new system.
+empirical|adj|empiris, berdasarkan pengamatan|There is little ___ evidence for the claim.
+endeavor/endeavour|n|upaya sungguh-sungguh|Mapping the ocean floor is a costly ___ for any nation.
+endorse|v|mendukung secara resmi|Several doctors ___ the campaign.
+enforce|v|menegakkan (aturan)|Police rarely ___ the speed limit here.
+entity|n|entitas, badan|Each branch operates as a separate legal ___ under the law.
+equivalent|adj|setara, sepadan|One mile is roughly ___ to 1.6 kilometres.
+erode|v|mengikis|Waves slowly ___ the base of the cliff.
+ethical|adj|etis|There are ___ concerns about testing on animals.
+evident|adj|nyata, jelas terlihat|It was ___ that the patient was improving.
+exaggerate|v|melebih-lebihkan|Advertisements often ___ the benefits of a product.
+explicit|adj|eksplisit, tegas|The contract gives ___ instructions on payment.
+facilitate|v|memudahkan, memfasilitasi|Clear headings ___ quick reading.
+feasible|adj|layak, dapat dilakukan|A tunnel under the bay is not ___ at present.
+fluctuate|v|naik turun, berfluktuasi|Oil prices ___ from month to month.
+formulate|v|merumuskan|The group met to ___ a new policy.
+forthcoming|adj|yang akan datang|Details will appear in a ___ report.
+hierarchy|n|hierarki, jenjang|The company has a strict ___ of managers.
+hypothesis|n|hipotesis|The data did not support the original ___ of the team.
+identical|adj|persis sama|The two samples were ___ in weight.
+ideology|n|ideologi|The party changed its ___ after the defeat.
+immense|adj|sangat besar|The dam holds an ___ volume of water.
+implement|v|menerapkan, melaksanakan|The school will ___ the changes in September.
+implicit|adj|tersirat|There was an ___ warning in his letter.
+incentive|n|insentif, pendorong|Lower fees are an ___ to register early.
+incline|v|cenderung, condong|Recent results ___ me to accept the theory.
+incorporate|v|memasukkan, menggabungkan|The new design will ___ ideas from users.
+indigenous|adj|asli (penduduk, tumbuhan)|The plant is ___ to the highlands of Peru.
+induce|v|menimbulkan, membujuk|Certain foods ___ sleep in some people.
+infer|v|menyimpulkan (dari petunjuk)|From the tone, we can ___ that the writer disagrees.
+inherent|adj|melekat, bawaan|Risk is ___ in any new business.
+inhibit|v|menghambat|Fear of mistakes can ___ learning.
+initiate|v|memulai, memprakarsai|The ministry will ___ talks with the unions.
+integral|adj|tak terpisahkan, pokok|Practice is an ___ part of the course.
+integrate|v|memadukan, mengintegrasikan|Schools try to ___ technology into lessons.
+integrity|n|integritas, kejujuran|No one doubted the ___ of the judge.
+intervene|v|campur tangan, menengahi|The state had to ___ to save the bank.
+intrinsic|adj|hakiki, dari dalam|Children have an ___ desire to explore.
+invoke|v|merujuk, menggunakan (aturan)|Lawyers may ___ the clause in rare cases.
+legislation|n|perundang-undangan|New ___ limits working hours for drivers.
+legitimate|adj|sah, wajar|Parents have ___ concerns about class sizes.
+likewise|adv|demikian pula|Rents rose sharply, and food prices did ___ in the same period.
+mandate|n|mandat|The election gave the party a clear ___ for reform.
+manipulate|v|memanipulasi|Some firms ___ figures to hide losses.
+marginal|adj|kecil sekali, pinggiran|The change made only a ___ difference to costs.
+mediate|v|menengahi|A neutral country offered to ___ between the two sides.
+merge|v|bergabung, melebur|The two colleges plan to ___ next year.
+methodology|n|metodologi|The second chapter explains the ___ of the study.
+minimize/minimise|v|meminimalkan|Careful planning can ___ the risk of delay.
+moderate|adj|sedang, moderat|The patient showed a ___ improvement.
+momentum|n|momentum, daya dorong|The campaign lost ___ after the summer.
+nevertheless|adv|meskipun demikian|The task was hard; ___ most students finished it.
+norm|n|norma, kelaziman|Working from home has become the ___ in many firms.
+notion|n|gagasan, anggapan|The study challenges the ___ that talent is fixed.
+obsolete|adj|usang, tidak terpakai lagi|New phones make older models ___ within years.
+offset|v|mengimbangi|Higher sales did not ___ the rise in costs.
+ongoing|adj|sedang berlangsung|The ___ debate about fees shows no sign of ending.
+orient|v|mengarahkan|The course will ___ students toward research.
+paradigm|n|paradigma|The discovery created a new ___ in physics.
+parameter|n|parameter, batasan|Cost is one ___ the designers must respect.
+persist|v|bertahan, terus berlanjut|If the symptoms ___ you should see a doctor.
+plausible|adj|masuk akal|The second explanation is more ___ than the first.
+pose|v|menimbulkan (masalah, risiko)|Plastic bags ___ a danger to sea animals.
+practitioner|n|praktisi|Every medical ___ must renew the licence.
+precede|v|mendahului|A short film will ___ the main talk.
+predominant|adj|paling menonjol, utama|Rice is the ___ crop in the valley.
+preliminary|adj|awal, pendahuluan|The ___ results look promising.
+presume|v|menduga, menganggap|We ___ that the missing data were lost.
+prevail|v|berlaku, menang|Traditional customs still ___ in the mountains.
+profound|adj|mendalam|The invention had a ___ effect on daily life.
+prohibit|v|melarang|Many cities ___ smoking in parks.
+prominent|adj|terkemuka, menonjol|A ___ scientist opened the conference.
+prone|adj|rentan, mudah (terkena)|Tired drivers are ___ to mistakes.
+proximity|n|kedekatan (jarak)|The hotel is popular for its ___ to the station.
+qualitative|adj|kualitatif|Interviews provide ___ data about attitudes.
+quantitative|adj|kuantitatif|The survey produced ___ data on spending.
+radical|adj|radikal, mendasar|The report calls for ___ changes in training.
+random|adj|acak|The names were chosen in a ___ order.
+rational|adj|rasional, masuk akal|There is no ___ explanation for the fear.
+reinforce|v|memperkuat|The results ___ the need for early testing.
+reluctant|adj|enggan|Many firms are ___ to hire new staff.
+render|v|menjadikan, membuat|New software may ___ the old system useless.
+replicate|v|mengulang (hasil), meniru|Other teams could not ___ the experiment.
+resemble|v|menyerupai|The symptoms ___ those of a common cold.
+residual|adj|sisa|Some ___ heat stays in the walls overnight.
+resilient|adj|tangguh, cepat pulih|Children are often more ___ than adults expect.
+restrain|v|menahan, mengekang|The bank raised rates to ___ inflation.
+rigid|adj|kaku|The timetable is too ___ for working parents.
+rigorous|adj|ketat, teliti|All new drugs undergo ___ testing.
+scarce|adj|langka|Clean water is ___ in the dry season.
+scenario|n|skenario, kemungkinan|In the worst ___ the port would close.
+scope|n|ruang lingkup|Housing is outside the ___ of this report.
+scrutiny|n|pemeriksaan teliti|The budget came under close ___ from the press.
+simulate|v|menyimulasikan|The program can ___ a real flight.
+skeptical/sceptical|adj|skeptis, ragu|Many voters remain ___ about the promise.
+sole|adj|satu-satunya|Tourism is the ___ source of income here.
+sophisticated|adj|canggih|The lab uses ___ equipment to test the samples.
+spontaneous|adj|spontan|The speech drew ___ applause from the crowd.
+stimulate|v|merangsang, mendorong|Lower rates may ___ spending.
+straightforward|adj|lugas, mudah|The instructions are ___ and easy to follow.
+subordinate|adj|bawahan, kurang penting|Price was ___ to quality in their choice.
+subsequent|adj|berikutnya|The first test failed, but ___ attempts worked.
+subsidy|n|subsidi|Farmers receive a ___ for each field they plant.
+substantial|adj|besar, berarti|The firm made a ___ profit last year.
+successive|adj|berturut-turut|The team won three ___ matches.
+suppress|v|menekan, menindas|The drug is used to ___ a cough.
+surplus|n|kelebihan, surplus|The farm sold its ___ of rice abroad.
+suspend|v|menangguhkan|The airline had to ___ flights during the storm.
+sustainable|adj|berkelanjutan|The town wants a more ___ way to manage waste.
+tangible|adj|nyata, berwujud|The project brought ___ benefits to the village.
+terminate|v|mengakhiri|Either side can ___ the contract with notice.
+thereby|adv|dengan demikian|He missed the deadline, ___ losing the grant.
+threshold|n|ambang batas|Incomes below the ___ are not taxed.
+trigger|v|memicu|A small spark can ___ a forest fire.
+undergo|v|menjalani, mengalami|All pilots ___ regular health checks.
+underlie|v|mendasari|Two assumptions ___ the whole argument.
+undermine|v|melemahkan, merongrong|Constant delays ___ trust in the service.
+undertake|v|melaksanakan, menyanggupi|The team will ___ a survey of local schools.
+uniform|adj|seragam|The bricks are ___ in size and colour.
+unprecedented|adj|belum pernah terjadi|The city saw ___ levels of rainfall.
+utilize/utilise|v|memanfaatkan|The plant will ___ waste heat to warm homes.
+valid|adj|sah, berlaku|Your ticket is ___ for one month.
+velocity|n|kecepatan (dengan arah)|The ___ of the wind doubled within an hour.
+verify|v|memverifikasi, membuktikan benar|Banks must ___ the identity of each customer.
+versatile|adj|serbaguna|Bamboo is a strong and ___ material.
+viable|adj|layak, dapat bertahan|Solar power is now a ___ option for small towns.
+violate|v|melanggar|Such contracts ___ the rights of workers.
+virtually|adv|hampir, nyaris|The disease has ___ disappeared from the region.
+vulnerable|adj|rentan|Older people are more ___ to extreme heat.
+whereby|adv|yang dengan itu, di mana|They set up a system ___ students mark each other's work.
+yield|v|menghasilkan|The new seeds ___ twice as much grain.

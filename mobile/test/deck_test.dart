@@ -1,0 +1,56 @@
+import 'dart:io';
+
+import 'package:flutter_test/flutter_test.dart';
+import 'package:verbarium/data/deck.dart';
+import 'package:verbarium/engine/engine.dart';
+
+List<Word> core() => [
+  for (var i = 0; i < Deck.coreFiles.length; i++) ...Deck.parse(File('assets/deck/${Deck.coreFiles[i]}.txt').readAsStringSync(), tier: i + 1),
+];
+
+void main() {
+  test('every core word parses, is unique and fits its own gap', () {
+    final words = core();
+    expect(words.length, greaterThan(1000));
+    expect({for (final w in words) w.id}.length, words.length);
+    for (final w in words) {
+      expect(w.parts.length, 2, reason: w.id);
+      expect(w.accepts(w.answer(false)), isTrue, reason: w.id);
+      expect(w.accepts(' ${w.answer(true).toUpperCase()} '), isTrue, reason: w.id);
+      expect(w.meaning.trim(), isNotEmpty, reason: w.id);
+    }
+    for (var t = 1; t <= 5; t++) {
+      expect(words.where((w) => w.tier == t).length, greaterThan(Engine.trialSize * 3), reason: 'tier $t');
+    }
+  });
+
+  test('banner files carry their rank and add to the core without clashing', () {
+    final ids = {for (final w in core()) w.id};
+    for (final b in ['toefl', 'ielts']) {
+      final extra = Deck.parse(File('assets/deck/$b.txt').readAsStringSync());
+      expect(extra.length, greaterThan(35), reason: b);
+      for (final w in extra) {
+        expect(w.tier, inInclusiveRange(1, 3), reason: w.id);
+        expect(ids.contains(w.id), isFalse, reason: '${w.id} is already in the core');
+      }
+    }
+  });
+
+  test('two spellings: both accepted, the banner decides which is shown', () {
+    final w = core().firstWhere((w) => w.id == 'organize');
+    expect(w.answer(false), 'organize');
+    expect(w.answer(true), 'organise');
+    expect(w.accepts('organise'), isTrue);
+    expect(w.accepts('organize'), isTrue);
+  });
+
+  test('a slip is one letter off; short words get no second chance', () {
+    expect(slip('consensus', 'consensus'), 0);
+    expect(slip('consenus', 'consensus'), 1);
+    expect(slip('consenssus', 'consensus'), 1);
+    expect(slip('consensys', 'consensus'), 1);
+    expect(slip('conesnsus', 'consensus'), 1);
+    expect(slip('consent', 'consensus'), 2);
+    expect(slip('aim', 'air'), 2);
+  });
+}

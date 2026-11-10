@@ -1,0 +1,14 @@
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+.DS_Store
+captures/
+__pycache__/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+mobile/test/failures/
+mobile/test/goldens/
+content/tools/out/

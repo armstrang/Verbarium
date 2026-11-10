@@ -1,0 +1,45 @@
+# Verbarium — panji TOEFL: kosakata kampus dan kuliah, ejaan Amerika.
+# Format: ranah|kata|kelas|arti|kalimat dengan ___
+1|campus|n|kampus|The library is on the north side of the ___ near the gym.
+1|semester|n|semester|She is taking five courses this ___ and working part time.
+1|tuition|n|biaya kuliah|Many students take loans to pay their ___ each year.
+1|dormitory|n|asrama|First-year students usually live in a ___ on campus.
+1|professor|n|dosen, profesor|The ___ explained the experiment in the first lecture.
+1|assignment|n|tugas (kuliah)|The reading ___ is due on Monday.
+1|deadline|n|tenggat|The ___ for the paper is midnight on Friday.
+1|quiz|n|kuis|There will be a short ___ at the start of each class.
+1|freshman|n|mahasiswa tahun pertama|As a ___ he shared a room with two others.
+1|grade|n|nilai|Her final ___ depends on the group project.
+1|enroll|v|mendaftar (kuliah)|You must ___ in the course before September.
+1|laboratory|n|laboratorium|Students wear gloves in the chemistry ___ at all times.
+1|textbook|n|buku ajar|The ___ for this course costs ninety dollars.
+1|attendance|n|kehadiran|Class ___ counts for ten percent of the grade.
+1|credit|n|satuan kredit (SKS)|Each course is worth one ___ toward the degree.
+2|syllabus|n|silabus|The ___ lists every reading for the term.
+2|prerequisite|n|mata kuliah prasyarat|Statistics is a ___ for this course.
+2|transcript|n|transkrip nilai|Attach an official ___ to your application.
+2|faculty|n|staf pengajar|The ___ voted to change the grading system.
+2|seminar|n|seminar|Only twelve students may join the ___ on ethics.
+2|scholarship|n|beasiswa|She won a full ___ to study engineering.
+2|undergraduate|n|mahasiswa sarjana|Every ___ must take a writing course.
+2|graduate|v|lulus (kuliah)|He hopes to ___ in four years.
+2|internship|n|magang|A summer ___ helped her find a job.
+2|advisor|n|pembimbing akademik|Meet your ___ before you choose courses.
+2|elective|n|mata kuliah pilihan|He chose music as an ___ in his second year.
+2|midterm|n|ujian tengah semester|The ___ covers the first six chapters.
+2|registrar|n|bagian administrasi akademik|The ___ keeps records of all grades.
+2|plagiarism|n|plagiarisme|The university treats ___ as a serious offense.
+2|excerpt|n|kutipan, petikan|Read the ___ from the lecture, then answer.
+2|sophomore|n|mahasiswa tahun kedua|As a ___ she moved off campus.
+2|fieldwork|n|kerja lapangan|The geology course includes two weeks of ___ in the desert.
+2|thesis|n|tesis, skripsi|Her ___ examines water use in cities.
+3|curriculum|n|kurikulum|The new ___ adds a course on data.
+3|dissertation|n|disertasi|He spent three years writing his ___ on bird migration.
+3|tenure|n|jabatan tetap dosen|After six years the professor was granted ___ by the college.
+3|citation|n|sitasi, rujukan|Every ___ must follow the same format.
+3|peer|n|rekan sebaya|Each paper is read by a ___ before it is graded.
+3|stipend|n|tunjangan, uang saku|Research assistants receive a monthly ___ from the lab.
+3|sabbatical|n|cuti panjang dosen|The author wrote the book during a ___ in Kyoto.
+3|accreditation|n|akreditasi|The program lost its ___ after the review.
+3|interdisciplinary|adj|lintas disiplin|The center supports ___ work on climate and health.
+3|colloquium|n|kolokium|The department holds a ___ every Thursday.

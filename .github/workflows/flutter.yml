@@ -1,0 +1,144 @@
+name: Flutter
+
+# Test builds of Verbarium (0.1-alpha): every push to main. Same arrangement as XueCi: everything the run produces
+# (Flutter version, deck check, analyzer and test output, screenshots, build log) is pushed to the branch
+# ci-out/<branch>, because a run's logs cannot be read from Claude's cloud sessions but a branch can. When every
+# check passes, the APK goes to a new pre-release v0.1-alpha-N (N counts up; never marked latest).
+# Nothing here publishes to Google Play.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  FLUTTER_VERSION: 3.47.7
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+
+      - name: Prepare output folder
+        run: |
+          mkdir -p ci-out
+          flutter --version > ci-out/flutter-version.txt 2>&1
+          dart --version >> ci-out/flutter-version.txt 2>&1
+
+      - name: Check the deck
+        id: deck
+        continue-on-error: true
+        run: python3 content/tools/check_deck.py > ci-out/deck.txt 2>&1
+
+      - name: Pub get
+        id: pub
+        continue-on-error: true
+        working-directory: mobile
+        run: flutter pub get > ../ci-out/pub.txt 2>&1
+
+      - name: Analyze
+        id: analyze
+        continue-on-error: true
+        working-directory: mobile
+        run: flutter analyze --no-fatal-infos > ../ci-out/analyze.txt 2>&1
+
+      - name: Tests (deck, engine, contrast, screens)
+        id: test
+        continue-on-error: true
+        working-directory: mobile
+        run: |
+          flutter test --update-goldens --reporter expanded > ../ci-out/test.txt 2>&1
+          mkdir -p ../ci-out/shots && find test -name '*.png' -path '*goldens*' -exec cp {} ../ci-out/shots/ \; || true
+
+      # the next alpha number: one more than the highest v0.1-alpha-N published so far
+      - name: Alpha number
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          last=$(gh api "repos/${{ github.repository }}/releases?per_page=100" --jq '.[].tag_name' | sed -n 's/^v0\.1-alpha-\([0-9]\+\)$/\1/p' | sort -n | tail -1)
+          echo "ALPHA=$(( ${last:-0} + 1 ))" >> "$GITHUB_ENV"
+
+      # versionCode = 1000 + run, so each test build installs over the one before it
+      - name: Build APK
+        id: apk
+        continue-on-error: true
+        working-directory: mobile
+        run: |
+          flutter build apk --release --build-number=$((1000 + GITHUB_RUN_NUMBER)) --build-name=0.1.0-alpha.${ALPHA} > ../ci-out/build.txt 2>&1
+          ls -la build/app/outputs/flutter-apk/ >> ../ci-out/build.txt 2>&1
+          cp build/app/outputs/flutter-apk/app-release.apk ../ci-out/verbarium-dev.apk || true
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "run ${GITHUB_RUN_NUMBER} ${GITHUB_SHA}"
+            echo "deck: ${{ steps.deck.outcome }}"
+            echo "pub: ${{ steps.pub.outcome }}"
+            echo "analyze: ${{ steps.analyze.outcome }}"
+            echo "test: ${{ steps.test.outcome }}"
+            echo "apk: ${{ steps.apk.outcome }}"
+          } > ci-out/summary.txt
+          cat ci-out/summary.txt
+          tail -n 60 ci-out/build.txt || true
+
+      - name: Push the output to ci-out/<branch>
+        if: always()
+        run: |
+          cd ci-out
+          git init -q -b out
+          git config user.name "ci"
+          git config user.email "ci@users.noreply.github.com"
+          git add -A
+          git commit -q -m "ci output run ${GITHUB_RUN_NUMBER} [skip ci]"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" "out:refs/heads/ci-out/${GITHUB_REF_NAME}"
+
+      # the alpha for testing: only from main and only when everything passed
+      - name: Alpha notes
+        id: alpha
+        if: github.ref_name == 'main' && steps.deck.outcome == 'success' && steps.analyze.outcome == 'success' && steps.test.outcome == 'success' && steps.apk.outcome == 'success'
+        run: |
+          cp ci-out/verbarium-dev.apk Verbarium-alpha.apk
+          {
+            echo "**Versi uji coba, belum rilis.** 0.1-alpha-${ALPHA} (build $((1000 + GITHUB_RUN_NUMBER)), $(git rev-parse --short HEAD))."
+            echo
+            awk 'index($0,"## ")==1{if(p)exit; p=(index($0,"## v0.1")==1)} p' CHANGELOG.md | tail -n +2
+            echo
+            echo "---"
+            echo
+            echo "Unduh **Verbarium-alpha.apk** lalu buka di ponsel Android. Versi baru terpasang di atas versi uji sebelumnya dan kemajuanmu tetap."
+          } > alpha.md
+
+      - name: Publish the alpha (pre-release)
+        if: steps.alpha.outcome == 'success'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v0.1-alpha-${{ env.ALPHA }}
+          target_commitish: ${{ github.sha }}
+          name: Verbarium 0.1-alpha-${{ env.ALPHA }}
+          body_path: alpha.md
+          prerelease: true
+          make_latest: false
+          files: Verbarium-alpha.apk
+
+      - name: Fail when a step failed
+        if: steps.deck.outcome == 'failure' || steps.pub.outcome == 'failure' || steps.analyze.outcome == 'failure' || steps.test.outcome == 'failure' || steps.apk.outcome == 'failure'
+        run: exit 1
