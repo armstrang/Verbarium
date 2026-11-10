@@ -1,0 +1,197 @@
+# Verbarium — plain English definitions for 3-baron.txt: word|definition
+abundant|existing in large amounts
+accelerate|to go or make go faster
+accessible|easy to reach or enter
+accommodate|to provide room for
+accountable|required to explain your actions
+acknowledge|to accept that something is true
+adverse|harmful or unfavourable
+aggregate|formed by adding parts together
+allocate|to give out for a purpose
+ambiguous|able to be understood in more than one way
+amend|to change a law or text slightly
+analogy|a comparison that explains
+arbitrary|based on chance or will, not reason
+articulate|to express clearly in words
+assert|to state firmly
+attribute|to say that something is caused by
+autonomy|the right to govern yourself
+beneficial|having a good effect
+coherent|clear and logically connected
+coincide|to happen at the same time
+collaborate|to work with others on a task
+commence|to begin
+compatible|able to exist or work together
+compensate|to make up for a loss
+compile|to collect into a list or book
+complement|to go well with and complete
+comply|to obey a rule or request
+comprehensive|including everything
+comprise|to be made up of
+conceive|to form an idea in the mind
+concurrent|happening at the same time
+confine|to keep within limits
+consensus|general agreement
+constitute|to form or be
+constrain|to limit or force
+contemporary|belonging to the present time
+contradict|to say the opposite of
+controversy|a public argument
+convene|to call together for a meeting
+conventional|following what is usual
+correlate|to be linked so that one changes with the other
+credible|able to be believed
+criterion|a standard used for judging
+cumulative|growing by additions over time
+deficit|the amount by which something is too little
+denote|to be a sign of
+depict|to show in a picture or words
+deplete|to use up a supply
+deteriorate|to become worse
+deviate|to turn away from a course
+differentiate|to see or make a difference between
+diminish|to become smaller or less
+discrete|separate and distinct
+discriminate|to treat a group unfairly
+disperse|to scatter in different directions
+displace|to force out of the usual place
+dispose|to get rid of
+disrupt|to stop from continuing normally
+distort|to twist out of true shape or meaning
+diversity|a range of different kinds
+doctrine|a set of beliefs that is taught
+dominant|more powerful than the others
+duration|the length of time something lasts
+elaborate|to add more detail
+eligible|having the right to be chosen
+embrace|to accept gladly
+empirical|based on what is observed, not on theory
+endeavor/endeavour|a serious attempt
+endorse|to give public approval to
+enforce|to make people obey a rule
+entity|something that exists as a separate unit
+equivalent|equal in value or meaning
+erode|to wear away slowly
+ethical|morally right
+evident|plain to see
+exaggerate|to make seem bigger than it is
+explicit|stated clearly and fully
+facilitate|to make easier
+feasible|possible to do
+fluctuate|to rise and fall again and again
+formulate|to express in exact form
+forthcoming|about to happen
+hierarchy|a system of ranks one above another
+hypothesis|an idea to be tested
+identical|exactly the same
+ideology|a set of political beliefs
+immense|extremely large
+implement|to put into action
+implicit|suggested but not stated
+incentive|something that encourages effort
+incline|to tend toward
+incorporate|to include as a part
+indigenous|belonging naturally to a place
+induce|to cause or persuade
+infer|to conclude from evidence
+inherent|existing as a natural part
+inhibit|to hold back
+initiate|to start
+integral|necessary to make a whole
+integrate|to combine into a whole
+integrity|the quality of being honest and firm
+intervene|to step in to change events
+intrinsic|belonging to the basic nature
+invoke|to call on a rule or law
+legislation|laws that have been passed
+legitimate|lawful and reasonable
+likewise|in the same way
+mandate|the authority given by voters
+manipulate|to control cleverly and unfairly
+marginal|very small
+mediate|to help two sides agree
+merge|to join into one
+methodology|a system of methods
+minimize/minimise|to reduce to the smallest amount
+moderate|neither large nor small
+momentum|force gained by movement
+nevertheless|in spite of that
+norm|what is usual or expected
+notion|an idea or belief
+obsolete|no longer in use
+offset|to balance one thing against another
+ongoing|still continuing
+orient|to direct toward
+paradigm|a model or pattern of thinking
+parameter|a limit that sets how something is done
+persist|to continue
+plausible|seeming likely to be true
+pose|to present a danger or problem
+practitioner|a person who works in a profession
+precede|to come before
+predominant|strongest or most common
+preliminary|coming first to prepare
+presume|to suppose to be true
+prevail|to win or be common
+profound|very deep
+prohibit|to forbid
+prominent|well known or easily seen
+prone|likely to suffer from
+proximity|nearness
+qualitative|about kind, not amount
+quantitative|about amount
+radical|going to the root, very great
+random|with no pattern or plan
+rational|based on reason
+reinforce|to make stronger
+reluctant|not willing
+render|to cause to become
+replicate|to repeat exactly
+resemble|to look like
+residual|remaining
+resilient|able to recover quickly
+restrain|to hold back
+rigid|stiff
+rigorous|strict and careful
+scarce|hard to find
+scenario|a possible course of events
+scope|the range covered
+scrutiny|close examination
+simulate|to copy the conditions of
+skeptical/sceptical|doubting
+sole|only
+sophisticated|highly developed
+spontaneous|done without planning
+stimulate|to make more active
+straightforward|simple and easy to follow
+subordinate|lower in rank
+subsequent|coming after
+subsidy|money given by government to keep prices low
+substantial|large in amount
+successive|following one after another
+suppress|to put down by force
+surplus|an amount more than needed
+suspend|to stop for a time
+sustainable|able to continue without harm
+tangible|real enough to touch
+terminate|to bring to an end
+thereby|by that means
+threshold|the level at which something begins
+trigger|to set off
+undergo|to experience
+underlie|to be the hidden cause of
+undermine|to weaken slowly
+undertake|to take on a task
+uniform|the same everywhere
+unprecedented|never having happened before
+utilize/utilise|to make use of
+valid|legally or logically acceptable
+velocity|speed in a given direction
+verify|to check that something is true
+versatile|having many uses or skills
+viable|able to work or survive
+violate|to break a law or agreement
+virtually|almost
+vulnerable|easily hurt
+whereby|by which
+yield|to produce
