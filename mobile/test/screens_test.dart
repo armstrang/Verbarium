@@ -145,6 +145,16 @@ Future<String> answer(WidgetTester tester, {bool right = true}) async {
   return 'choice';
 }
 
+/// the sitting's order depends on the deck: step past other kinds until a gap is on the page
+Future<void> untilGap(WidgetTester tester) async {
+  for (var i = 0; i < 20 && !has(find.byKey(const ValueKey('gap-field'))); i++) {
+    await answer(tester);
+    await beat(tester, 300);
+    await tester.pump(const Duration(milliseconds: 2700));
+    await beat(tester);
+  }
+}
+
 void main() {
   setUpAll(() async {
     Native.off = true;
@@ -208,6 +218,7 @@ void main() {
     await beat(tester, 900);
     await tester.tap(find.text('Lanjut belajar'));
     await beat(tester);
+    await untilGap(tester);
     expect(find.byKey(const ValueKey('gap-field')), findsOneWidget);
     expect(find.text('Ketik kata yang hilang'), findsNothing, reason: 'no separate box any more');
     await shot(tester, '20-celah');
@@ -226,6 +237,7 @@ void main() {
     await beat(tester);
 
     // "belum tahu": the word is shown as a ghost in the gap and has to be typed
+    await untilGap(tester);
     final second = RunScreen.probe;
     await tester.tap(find.text('Belum tahu, tunjukkan'));
     await beat(tester);
