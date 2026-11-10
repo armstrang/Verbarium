@@ -43,3 +43,80 @@
 3|accreditation|n|akreditasi|The program lost its ___ after the review.
 3|interdisciplinary|adj|lintas disiplin|The center supports ___ work on climate and health.
 3|colloquium|n|kolokium|The department holds a ___ every Thursday.
+1|classmate|n|teman sekelas|A ___ lent me her notes after I was ill.
+1|roommate|n|teman sekamar|My ___ studies until two in the morning.
+1|cafeteria|n|kantin|We eat lunch in the ___ on the ground floor.
+1|notebook|n|buku catatan|Bring a ___ and a pen to every class.
+1|backpack|n|ransel|He carries his laptop in a ___ on his back.
+1|handout|n|lembar bahan|The professor gave each student a ___ with the key dates.
+1|homework|n|pekerjaan rumah|The ___ is due on Monday morning.
+1|calculator|n|kalkulator|You may use a ___ in the second part of the test.
+1|gym|n|pusat kebugaran|The campus ___ is free for students.
+1|counselor|n|konselor|A ___ helped her choose her courses.
+1|librarian|n|pustakawan|The ___ showed us how to search the catalog.
+1|presentation|n|presentasi|Each group gives a ten-minute ___ on Friday.
+1|diploma|n|ijazah|She hung her ___ on the office wall.
+1|bookstore|n|toko buku|The campus ___ sells used copies at half price.
+1|laptop|n|komputer jinjing|Please close your ___ during the exam.
+1|classroom|n|ruang kelas|The ___ on the third floor has no windows.
+1|coursework|n|tugas kuliah|Half of the final mark comes from ___ during the term.
+2|bibliography|n|daftar pustaka|List every source in the ___ at the end of the paper.
+2|workload|n|beban kerja|The ___ in the second year is much heavier.
+2|extracurricular|adj|ekstrakurikuler|Debate is her main ___ activity.
+2|alumnus|n|alumnus|An ___ of the college paid for the new library.
+2|commencement|n|wisuda|Her parents flew in for the ___ in June.
+2|practicum|n|praktikum|The nursing program ends with a ___ in a hospital.
+2|proctor|n|pengawas ujian|A ___ walked between the desks during the test.
+2|rubric|n|rubrik penilaian|The ___ shows how each essay will be graded.
+2|tutorial|n|kelas bimbingan|The weekly ___ has only six students.
+2|enrollment|n|pendaftaran, jumlah mahasiswa|___ in the course is limited to thirty.
+2|postgraduate|adj|pascasarjana|She is doing ___ work in chemistry.
+2|doctorate|n|gelar doktor|He earned a ___ in physics at twenty-six.
+2|auditorium|n|aula|The lecture was moved to the main ___ because of the crowd.
+2|paraphrase|v|memparafrasakan|Do not copy the passage; ___ it in your own words.
+2|footnote|n|catatan kaki|The source is given in a ___ on page three.
+2|appendix|n|lampiran|The full tables are in the ___ at the back.
+2|ecosystem|n|ekosistem|A coral reef is a fragile ___ of thousands of species.
+2|photosynthesis|n|fotosintesis|Plants make sugar from light by ___ in their leaves.
+2|metabolism|n|metabolisme|Exercise speeds up the body's ___ for hours.
+2|precipitation|n|curah hujan|The desert receives almost no ___ in summer.
+2|evaporation|n|penguapan|Salt is left behind after the ___ of sea water.
+2|irrigation|n|irigasi|The crops depend on ___ from the river.
+2|asteroid|n|asteroid|An ___ struck the Earth millions of years ago.
+2|artery|n|arteri|The surgeon repaired a blocked ___ near the heart.
+2|hormone|n|hormon|The gland releases a ___ that controls growth.
+2|antibiotic|n|antibiotik|The doctor prescribed an ___ for the infection.
+2|herbivore|n|herbivora|The deer is a ___ that feeds on leaves and grass.
+2|carnivore|n|karnivora|The lion is the largest ___ on the plain.
+2|pollen|n|serbuk sari|Bees carry ___ from flower to flower.
+2|settler|n|pemukim|The first ___ built a cabin by the river.
+2|composer|n|komponis|The ___ wrote nine symphonies.
+2|playwright|n|penulis drama|The ___ set all her plays in one small town.
+2|sculptor|n|pematung|The ___ worked in marble and bronze.
+2|satire|n|satire|The novel is a ___ on office life.
+2|symphony|n|simfoni|The orchestra played a ___ by Brahms.
+3|anthropology|n|antropologi|She studies the ___ of island societies.
+3|sociology|n|sosiologi|The course in ___ looks at family and work.
+3|chromosome|n|kromosom|Each human cell has a ___ count of forty-six.
+3|neuron|n|neuron|A single ___ can connect to thousands of others.
+3|enzyme|n|enzim|The ___ breaks down sugar in the gut.
+3|tectonic|adj|tektonik|The mountains were raised by ___ forces.
+3|condensation|n|pengembunan|Clouds form by the ___ of water vapor.
+3|equinox|n|ekuinoks|Day and night are equal at the spring ___ in March.
+3|nebula|n|nebula|Stars are born inside a ___ of gas and dust.
+3|vertebrate|n|vertebrata|The frog is a small ___ with a backbone.
+3|symbiosis|n|simbiosis|The fish and the coral live in ___ on the reef.
+3|stratum|n|lapisan (batuan)|Each ___ of rock holds fossils of a different age.
+3|magma|n|magma|Hot ___ rises through cracks in the crust.
+3|glacial|adj|glasial|The valley was carved in the last ___ period.
+3|aquifer|n|akuifer|The town draws its water from a deep ___ under the plain.
+3|topography|n|topografi|The ___ of the region made road building hard.
+3|archipelago|n|kepulauan|The ___ has more than a thousand islands.
+3|nomadic|adj|nomaden|The tribe led a ___ life on the steppe.
+3|suffrage|n|hak pilih|Women won ___ in the country in 1920.
+3|homestead|n|tanah garapan keluarga|The family farmed a small ___ on the prairie.
+3|impressionism|n|impresionisme|The lecture covered ___ and the painters of light.
+3|fresco|n|lukisan dinding basah|The chapel ceiling is covered by a ___ from 1510.
+3|stanza|n|bait|The poem's last ___ changes its meaning.
+3|paleontology|n|paleontologi|___ is the study of ancient life through fossils.
+3|hypothesize|v|berhipotesis|Scientists ___ that the lake was once a sea.

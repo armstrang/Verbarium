@@ -44,3 +44,78 @@
 3|rehabilitation|n|rehabilitasi|Prisons should focus on ___ rather than punishment.
 3|consumerism|n|konsumerisme|Advertising feeds the growth of ___ among teenagers.
 3|levy|n|pungutan, retribusi|The council introduced a ___ on plastic bags.
+1|lorry|n|truk|A ___ blocked the narrow street for an hour.
+1|timetable|n|jadwal|The bus ___ changes at the weekend.
+1|motorway|n|jalan tol|There was an accident on the ___ this morning.
+1|postcode|n|kode pos|Write your ___ at the end of the address.
+1|fortnight|n|dua minggu|We spent a ___ by the sea in August.
+1|cinema|n|bioskop|The ___ shows foreign films on Mondays.
+1|trainers|n|sepatu olahraga|He wore jeans and white ___ to the party.
+1|tram|n|trem|A ___ runs from the station to the beach.
+1|underground|n|kereta bawah tanah|The ___ is the fastest way across the city.
+1|roundabout|n|bundaran|Take the second exit at the ___ by the park.
+1|pensioner|n|pensiunan|The bus is free for every ___ in the city.
+1|teenager|n|remaja|The average ___ spends five hours a day online.
+1|double|v|berlipat dua|Sales are expected to ___ within five years.
+1|triple|v|berlipat tiga|The number of visitors may ___ by 2030.
+1|halve|v|berkurang separuh|The city plans to ___ its waste in a decade.
+1|steadily|adv|terus-menerus|The figure rose ___ over the period.
+1|sharply|adv|dengan tajam|Prices fell ___ in the second quarter.
+2|upward|adj|naik|The graph shows an ___ trend in car ownership.
+2|downward|adj|turun|There was a ___ trend in smoking among men.
+2|dramatically|adv|secara drastis|The number of students rose ___ after 2010.
+2|marginally|adv|sedikit|Spending on books increased only ___ last year.
+2|stabilise|v|menjadi stabil|The rate is expected to ___ at around five percent.
+2|twofold|adj|dua kali lipat|There was a ___ increase in exports.
+2|threefold|adj|tiga kali lipat|The town saw a ___ rise in rents.
+2|quadruple|v|berlipat empat|Output could ___ if the new plant opens.
+2|dip|n|penurunan kecil|There was a slight ___ in sales in March.
+2|slump|n|kemerosotan tajam|The ___ in house prices lasted three years.
+2|upturn|n|kenaikan kembali|An ___ in tourism created new jobs.
+2|trough|n|titik terendah (grafik)|Sales hit a ___ in January before recovering.
+2|respectively|adv|masing-masing|The two towns grew by five and nine percent ___ over the decade.
+2|childcare|n|pengasuhan anak|The cost of ___ keeps many parents at home.
+2|retirement|n|masa pensiun|Many people take up a new hobby in ___ these days.
+2|overpopulation|n|kelebihan penduduk|___ puts pressure on housing and water.
+2|overcrowding|n|kepadatan berlebih|___ in prisons is a growing problem.
+2|homelessness|n|tunawisma|The charity works to reduce ___ among young people.
+2|vandalism|n|perusakan|The bus shelter was closed because of ___ last month.
+2|offender|n|pelanggar hukum|A young ___ needs training more than punishment.
+2|imprisonment|n|hukuman penjara|The judge chose a fine rather than ___ for a first offence.
+2|sustainability|n|keberlanjutan|The firm publishes a report on ___ each year.
+2|landfill|n|tempat pembuangan akhir|Most plastic still ends up in ___ or the sea.
+2|greenhouse|n|rumah kaca|Carbon dioxide is the main ___ gas.
+2|footprint|n|jejak|Flying less will reduce your carbon ___ more than anything.
+2|pollutant|n|zat pencemar|The main ___ in the river is waste from farms.
+2|automation|n|otomatisasi|___ has replaced many jobs on the factory floor.
+2|outsourcing|n|alih daya|___ moved thousands of jobs abroad.
+2|multinational|adj|multinasional|A ___ company bought the local brewery.
+2|advertising|n|periklanan|Children are an easy target for ___ on television.
+2|materialism|n|materialisme|Some blame ___ for the decline of community life.
+2|multicultural|adj|multibudaya|London is a ___ city with hundreds of languages.
+2|immigration|n|imigrasi|___ has changed the face of the city.
+2|discrimination|n|diskriminasi|The law forbids ___ on grounds of age.
+2|numeracy|n|kemampuan berhitung|The school tests literacy and ___ each year.
+2|vocational|adj|kejuruan|He chose ___ training instead of university.
+2|apprenticeship|n|masa magang|She began an ___ with an electrician at sixteen.
+2|truancy|n|kebiasaan membolos|The school reduced ___ by calling parents each morning.
+2|vaccination|n|vaksinasi|___ has almost ended the disease.
+2|preventable|adj|dapat dicegah|Most of these deaths are ___ with clean water.
+2|ageing|adj|menua|An ___ population needs more doctors.
+2|healthcare|n|layanan kesehatan|Free ___ is funded by taxes.
+2|wellbeing|n|kesejahteraan|Green spaces improve the ___ of city dwellers.
+2|nutritious|adj|bergizi|Schools should offer a ___ lunch.
+2|taxpayer|n|pembayar pajak|The ___ should not pay for the bank's mistakes.
+3|tertiary|adj|tingkat ketiga (pendidikan tinggi)|Half of young adults now enter ___ education.
+3|desertification|n|penggurunan|Overgrazing speeds up ___ at the edge of the Sahara.
+3|overfishing|n|penangkapan ikan berlebihan|___ has emptied the bay of cod.
+3|telecommuting|n|kerja jarak jauh|___ cuts traffic but can isolate staff.
+3|entrepreneurship|n|kewirausahaan|The college runs a course in ___ for graduates.
+3|assimilation|n|pembauran|The ___ of newcomers takes a generation.
+3|malnourished|adj|kurang gizi|One child in five in the camp is ___ and weak.
+3|subsidise|v|menyubsidi|Governments ___ public transport to cut car use.
+3|privatise|v|memprivatisasi|The plan to ___ the railways divided the country.
+3|nationalise|v|menasionalisasi|The party promised to ___ the water companies.
+3|conservationist|n|pelestari alam|A ___ counted the turtles on the beach each night.
+3|reoffend|v|mengulangi kejahatan|Prisoners who learn a trade are less likely to ___ after release.
+3|additive|n|zat aditif|The drink contains no artificial ___ or colour.
