@@ -1,9 +1,9 @@
 name: Flutter
 
-# Test builds of Verbarium (0.1-alpha): every push to main. Same arrangement as XueCi: everything the run produces
+# Test builds of Verbarium (0.2-alpha): every push to main. Same arrangement as XueCi: everything the run produces
 # (Flutter version, deck check, analyzer and test output, screenshots, build log) is pushed to the branch
 # ci-out/<branch>, because a run's logs cannot be read from Claude's cloud sessions but a branch can. When every
-# check passes, the APK goes to a new pre-release v0.1-alpha-N (N counts up; never marked latest).
+# check passes, the APK goes to a new pre-release v0.2-alpha-N (N counts up; never marked latest).
 # Nothing here publishes to Google Play.
 on:
   push:
@@ -68,21 +68,21 @@ jobs:
           flutter test --update-goldens --reporter expanded > ../ci-out/test.txt 2>&1
           mkdir -p ../ci-out/shots && find test -name '*.png' -path '*goldens*' -exec cp {} ../ci-out/shots/ \; || true
 
-      # the next alpha number: one more than the highest v0.1-alpha-N published so far
+      # the next alpha number: one more than the highest v0.2-alpha-N published so far
       - name: Alpha number
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          last=$(gh api "repos/${{ github.repository }}/releases?per_page=100" --jq '.[].tag_name' | sed -n 's/^v0\.1-alpha-\([0-9]\+\)$/\1/p' | sort -n | tail -1)
+          last=$(gh api "repos/${{ github.repository }}/releases?per_page=100" --jq '.[].tag_name' | sed -n 's/^v0\.2-alpha-\([0-9]\+\)$/\1/p' | sort -n | tail -1)
           echo "ALPHA=$(( ${last:-0} + 1 ))" >> "$GITHUB_ENV"
 
-      # versionCode = 1000 + run, so each test build installs over the one before it
+      # versionCode = 2000 + run, so each test build installs over the one before it
       - name: Build APK
         id: apk
         continue-on-error: true
         working-directory: mobile
         run: |
-          flutter build apk --release --build-number=$((1000 + GITHUB_RUN_NUMBER)) --build-name=0.1.0-alpha.${ALPHA} > ../ci-out/build.txt 2>&1
+          flutter build apk --release --build-number=$((2000 + GITHUB_RUN_NUMBER)) --build-name=0.2.0-alpha.${ALPHA} > ../ci-out/build.txt 2>&1
           ls -la build/app/outputs/flutter-apk/ >> ../ci-out/build.txt 2>&1
           cp build/app/outputs/flutter-apk/app-release.apk ../ci-out/verbarium-dev.apk || true
 
@@ -118,9 +118,9 @@ jobs:
         run: |
           cp ci-out/verbarium-dev.apk Verbarium-alpha.apk
           {
-            echo "**Versi uji coba, belum rilis.** 0.1-alpha-${ALPHA} (build $((1000 + GITHUB_RUN_NUMBER)), $(git rev-parse --short HEAD))."
+            echo "**Versi uji coba, belum rilis.** 0.2-alpha-${ALPHA} (build $((2000 + GITHUB_RUN_NUMBER)), $(git rev-parse --short HEAD))."
             echo
-            awk 'index($0,"## ")==1{if(p)exit; p=(index($0,"## v0.1")==1)} p' CHANGELOG.md | tail -n +2
+            awk 'index($0,"## ")==1{if(p)exit; p=(index($0,"## v0.2")==1)} p' CHANGELOG.md | tail -n +2
             echo
             echo "---"
             echo
@@ -131,9 +131,9 @@ jobs:
         if: steps.alpha.outcome == 'success'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v0.1-alpha-${{ env.ALPHA }}
+          tag_name: v0.2-alpha-${{ env.ALPHA }}
           target_commitish: ${{ github.sha }}
-          name: Verbarium 0.1-alpha-${{ env.ALPHA }}
+          name: Verbarium 0.2-alpha-${{ env.ALPHA }}
           body_path: alpha.md
           prerelease: true
           make_latest: false

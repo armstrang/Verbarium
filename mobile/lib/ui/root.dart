@@ -9,7 +9,10 @@ import 'package:flutter/services.dart';
 import '../app/app.dart';
 import '../app/native.dart';
 import '../engine/engine.dart';
+import '../engine/game.dart';
 import 'chronicle.dart';
+import 'hero.dart';
+import 'pixel.dart';
 import 'realm.dart';
 import 'run.dart';
 import 'settings.dart';
@@ -389,7 +392,7 @@ class _PennantPainter extends CustomPainter {
   bool shouldRepaint(_PennantPainter old) => old.color != color;
 }
 
-// ---------------------------------------------------------------------------- the three tabs
+// ---------------------------------------------------------------------------- the tabs
 
 class Shell extends StatefulWidget {
   const Shell({super.key});
@@ -405,9 +408,9 @@ class _ShellState extends State<Shell> {
   Widget build(BuildContext context) {
     final look = Look.of(context);
     final pal = look.pal;
-    const names = ['Hari ini', 'Negeri', 'Kronik'];
-    const icons = [Icons.edit_outlined, Icons.map_outlined, Icons.menu_book_outlined];
-    final pages = [const Today(), const RealmTab(), const ChronicleTab()];
+    const names = ['Hari ini', 'Negeri', 'Karakter', 'Kronik'];
+    const icons = [Icons.edit_outlined, Icons.map_outlined, Icons.shield_outlined, Icons.menu_book_outlined];
+    final pages = [const Today(), const RealmTab(), const HeroTab(), const ChronicleTab()];
     return Material(
       type: MaterialType.transparency,
       child: Paper(
@@ -431,7 +434,7 @@ class _ShellState extends State<Shell> {
                   height: 64,
                   child: Row(
                     children: [
-                      for (var i = 0; i < 3; i++)
+                      for (var i = 0; i < names.length; i++)
                         Expanded(
                           child: Press(
                             onTap: () {
@@ -465,7 +468,7 @@ class _ShellState extends State<Shell> {
                                       ExcludeSemantics(
                                         child: Text(
                                           names[i],
-                                          style: T.body(14.5, _tab == i ? pal.ink : pal.muted, w: _tab == i ? FontWeight.w700 : FontWeight.w500),
+                                          style: T.body(14, _tab == i ? pal.ink : pal.muted, w: _tab == i ? FontWeight.w700 : FontWeight.w500),
                                         ),
                                       ),
                                     ],
@@ -506,28 +509,121 @@ class TabBody extends StatelessWidget {
   }
 }
 
+Future<void> runFrom(BuildContext context, RunScreen screen) async {
+  await Navigator.of(context).push(runRoute(screen));
+  App.I.changed();
+}
+
+/// the fight that stands next, as a card with the enemy on it; shown on Today and under the map
+class FightCard extends StatelessWidget {
+  const FightCard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final e = App.I.engine, g = App.I.game;
+    final rank = e.rank;
+    if (e.shaky) {
+      return Notice(
+        title: 'Gelarmu goyah',
+        text: 'Kata dari ranah yang sudah kamu kuasai banyak yang lepas. Pertahankan gelar ${rankNames[rank]} dalam ${e.shakyDaysLeft} hari, atau gelar turun.',
+        action: 'Pertahankan gelar',
+        strong: true,
+        onTap: () => runFrom(context, RunScreen(kind: RunKind.defence, tier: rank)),
+      );
+    }
+    final en = g.enemy;
+    if (en == null) return const Notice(title: 'Takhta di tanganmu', text: 'Tidak ada lawan di atas Raja. Jaga kata-katamu tetap kukuh.');
+    final next = rank + 1;
+    final st = e.stat(next);
+    final need = (st.total * g.fightNeeds).ceil();
+    final open = g.fightOpen;
+    final cooling = g.enemyIsBoss ? e.cooling : e.subCooldown > e.now();
+    return Rise(
+      delay: const Duration(milliseconds: 120),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: pal.field,
+          border: Border.all(color: pal.ink, width: 1.5),
+          borderRadius: BorderRadius.circular(3),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                EnemySprite(sprite: en.sprite, tone: en.tone, size: 60),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Label(en.boss ? 'Boss · menuju ${rankNames[next]}' : 'Penjaga jalan · tingkat ${stageName(e.stage)}'),
+                      const SizedBox(height: 2),
+                      Text(en.name, style: T.display(25, pal.ink)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            if (open) ...[
+              Text(
+                en.boss
+                    ? '${Engine.trialSize} kata, ${Engine.trialSeconds} detik tiap kata, tanpa petunjuk. Tumbang pada ${Engine.trialPass} pukulan; kamu kalah pada pukulan kelima yang meleset.'
+                    : '${Engine.subSize} kata, ${Engine.trialSeconds} detik tiap kata. Tumbang pada ${Engine.subPass} pukulan; kamu kalah pada pukulan ketiga yang meleset.',
+                style: T.body(15.5, pal.muted, height: 1.4),
+              ),
+              const SizedBox(height: 12),
+              InkButton(
+                'Lawan ${en.name}',
+                outline: true,
+                onTap: () => runFrom(context, RunScreen(kind: en.boss ? RunKind.trial : RunKind.sub, tier: next)),
+              ),
+            ] else ...[
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(cooling ? 'Memulihkan diri' : 'Belum bisa dilawan', style: T.body(16, pal.ink, w: FontWeight.w500)),
+                  ),
+                  Text('${st.solid} dari $need kata kukuh', style: T.body(15, pal.muted)),
+                ],
+              ),
+              const SizedBox(height: 8),
+              Bar(need == 0 ? 0 : st.solid / need, height: 6),
+              const SizedBox(height: 8),
+              Text(
+                cooling
+                    ? (en.boss ? 'Boss bisa dilawan lagi besok.' : 'Musuh ini bisa dilawan lagi dalam beberapa jam.')
+                    : 'Kata menjadi kukuh setelah kamu mengingatnya lebih dari seminggu lewat celah kalimat.',
+                style: T.body(15, pal.muted, height: 1.4),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 // ---------------------------------------------------------------------------- Today
 
 class Today extends StatelessWidget {
   const Today({super.key});
-
-  Future<void> _run(BuildContext context, RunScreen screen) async {
-    await Navigator.of(context).push(runRoute(screen));
-    App.I.changed();
-  }
 
   @override
   Widget build(BuildContext context) {
     final look = Look.of(context);
     final pal = look.pal;
     final app = App.I;
-    final e = app.engine;
+    final e = app.engine, g = app.game;
     final rank = e.rank;
     final plan = e.plan();
-    final next = min(rank + 1, Engine.maxRank);
-    final st = e.stat(next);
-    final need = (st.total * Engine.openShare).ceil();
     final moreFresh = e.freshWords(10).length;
+    final advice = g.advice();
+    final quests = g.daily;
 
     return TabBody(
       children: [
@@ -541,29 +637,55 @@ class Today extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 14),
+        const SizedBox(height: 8),
         Rise(
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Shield(rank, width: 46),
+              HeroSprite(rank: rank, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 66),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(rankNames[rank], style: T.display(30, pal.ink)),
+                    Row(
+                      children: [
+                        Shield(rank, width: 20),
+                        const SizedBox(width: 8),
+                        Expanded(child: Text('${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''}', style: T.display(28, pal.ink))),
+                      ],
+                    ),
                     const SizedBox(height: 2),
-                    Text('Panji ${bannerName(app.banner)} · kosakata setara ${scoreLine(rank, app.banner)}', style: T.body(15.5, pal.muted)),
+                    Text('Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'} · setara ${scoreLine(rank, app.banner)}', style: T.body(15, pal.muted)),
+                    const SizedBox(height: 6),
+                    Semantics(label: '${g.toNext} XP lagi ke level ${g.level + 1}', child: Bar(g.levelShare, height: 5)),
                   ],
                 ),
               ),
             ],
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 12),
+        Text(rankGreeting[rank], style: T.display(19, pal.muted, italic: true)),
+        const SizedBox(height: 14),
         const Rule(),
-        const SizedBox(height: 20),
-        const Label('Hari ini'),
+        const SizedBox(height: 16),
+        const Label('Saran hari ini'),
+        const SizedBox(height: 8),
+        for (final a in advice)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 6),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, right: 10),
+                  child: Transform.rotate(angle: 0.785, child: Container(width: 6, height: 6, color: look.accent)),
+                ),
+                Expanded(child: Text(a, style: T.body(16.5, pal.ink, height: 1.4))),
+              ],
+            ),
+          ),
         const SizedBox(height: 10),
         Rise(
           delay: const Duration(milliseconds: 60),
@@ -584,9 +706,9 @@ class Today extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 18),
+        const SizedBox(height: 16),
         if (!plan.empty)
-          InkButton(plan.doneToday > 0 ? 'Lanjut belajar' : 'Mulai belajar', onTap: () => _run(context, const RunScreen(kind: RunKind.learn)))
+          InkButton(plan.doneToday > 0 ? 'Lanjut belajar' : 'Mulai belajar', onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn)))
         else ...[
           Text(
             plan.doneToday > 0 ? 'Tercatat. Tugas hari ini selesai.' : 'Belum ada yang perlu diulang hari ini.',
@@ -594,47 +716,72 @@ class Today extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           if (moreFresh > 0)
-            InkButton('Tambah $moreFresh kata baru', outline: true, onTap: () => _run(context, const RunScreen(kind: RunKind.learn, extraFresh: 10))),
+            InkButton('Tambah $moreFresh kata baru', outline: true, onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn, extraFresh: 10))),
         ],
-        const SizedBox(height: 26),
-        if (e.shaky)
-          _Notice(
-            title: 'Gelarmu goyah',
-            text:
-                'Kata dari ranah yang sudah kamu kuasai banyak yang lepas. Pertahankan gelar ${rankNames[rank]} dalam ${e.shakyDaysLeft} hari, atau gelar turun.',
-            action: 'Pertahankan gelar',
-            strong: true,
-            onTap: () => _run(context, RunScreen(kind: RunKind.defence, tier: rank)),
-          )
-        else if (rank >= Engine.maxRank)
-          _Notice(title: 'Takhta di tanganmu', text: 'Tidak ada gelar di atas Raja. Jaga kata-katamu tetap kukuh.')
-        else if (e.trialOpen)
-          _Notice(
-            title: 'Ujian penobatan ${rankNames[next]} terbuka',
-            text: '${Engine.trialSize} kata, ${Engine.trialSeconds} detik tiap kata, tanpa petunjuk. Lulus pada ${Engine.trialPass} benar.',
-            action: 'Ikuti ujian',
-            onTap: () => _run(context, RunScreen(kind: RunKind.trial, tier: next)),
-          )
-        else ...[
-          Row(
-            children: [
-              Expanded(
-                child: Text('Menuju ${rankNames[next]}', style: T.body(16.5, pal.ink, w: FontWeight.w500)),
-              ),
-              Text('${st.solid} dari ${st.total} kata kukuh', style: T.body(15.5, pal.muted)),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Bar(st.share, height: 6),
-          const SizedBox(height: 8),
-          Text(
-            e.cooling
-                ? 'Ujian penobatan bisa dicoba lagi besok.'
-                : 'Ujian penobatan terbuka pada $need kata kukuh. Kata menjadi kukuh setelah kamu mengingatnya lebih dari seminggu.',
-            style: T.body(15, pal.muted),
-          ),
-        ],
+        const SizedBox(height: 22),
+        const FightCard(),
+        const SizedBox(height: 22),
+        const Label('Quest hari ini'),
+        const SizedBox(height: 4),
+        for (final q in quests) QuestRow(q),
       ],
+    );
+  }
+}
+
+class QuestRow extends StatelessWidget {
+  final Quest q;
+  const QuestRow(this.q, {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      decoration: BoxDecoration(
+        border: Border(bottom: BorderSide(color: pal.line)),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(q.text, style: T.body(16.5, q.claimed ? pal.muted : pal.ink).copyWith(decoration: q.claimed ? TextDecoration.lineThrough : null)),
+                const SizedBox(height: 6),
+                Row(
+                  children: [
+                    Expanded(child: Bar(q.goal == 0 ? 0 : q.prog / q.goal, height: 4)),
+                    const SizedBox(width: 10),
+                    Text('${min(q.prog, q.goal)}/${q.goal}', style: T.body(14, pal.muted)),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 12),
+          if (q.done && !q.claimed)
+            Press(
+              onTap: () {
+                final news = App.I.game.claim(q);
+                App.I.sfx(news.isEmpty ? 'rise' : 'levelup', 0.8);
+                App.I.changed();
+              },
+              child: Container(
+                height: 44,
+                padding: const EdgeInsets.symmetric(horizontal: 12),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(color: Look.of(context).accent, borderRadius: BorderRadius.circular(3)),
+                child: Text('Ambil +${q.xp}', style: T.body(15.5, pal.onAccent, w: FontWeight.w700)),
+              ),
+            )
+          else
+            SizedBox(
+              width: 74,
+              child: Text(q.claimed ? 'Diambil' : '+${q.xp} XP', textAlign: TextAlign.right, style: T.body(14.5, pal.muted)),
+            ),
+        ],
+      ),
     );
   }
 }
@@ -653,7 +800,7 @@ class _Count extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('$n', style: T.display(52, pal.ink, height: 1)),
+            Text('$n', style: T.display(48, pal.ink, height: 1)),
             Text(what, style: T.body(15.5, pal.muted)),
           ],
         ),
@@ -662,12 +809,12 @@ class _Count extends StatelessWidget {
   }
 }
 
-class _Notice extends StatelessWidget {
+class Notice extends StatelessWidget {
   final String title, text;
   final String? action;
   final VoidCallback? onTap;
   final bool strong;
-  const _Notice({required this.title, required this.text, this.action, this.onTap, this.strong = false});
+  const Notice({super.key, required this.title, required this.text, this.action, this.onTap, this.strong = false});
 
   @override
   Widget build(BuildContext context) {

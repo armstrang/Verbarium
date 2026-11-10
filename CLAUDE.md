@@ -12,12 +12,13 @@ and even then confirm first what will change and wait for his yes. Everything el
 
 | Path | What |
 |---|---|
-| `mobile/assets/deck/` | the words, canonical. Core `1-squire.txt` … `5-raja.txt`: `word|pos|meaning|sentence with ___`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british` |
+| `mobile/assets/deck/` | the words, canonical. Target ±6,000 words in all; every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british` |
 | `content/tools/` | `check_deck.py` (format, one gap, no word twice — CI runs it), `make_audio.py` (numpy + scipy + ffmpeg → `res/raw/*.ogg`), `make_icons.py` (Pillow → `mipmap-*`) |
-| `mobile/lib/engine/engine.dart` | `Engine`: memory (stability in days), plan, sitting, ranks, trials, placement, defence; `slip()` |
+| `mobile/lib/engine/engine.dart` | `Engine`: memory (stability in days, personal `ease`), plan, sitting of `Card`s, the three `Quiz` kinds and their weights, ranks, stages and sub-bosses, trials, placement, defence; `slip()` |
+| `mobile/lib/engine/game.dart` | `Game`: experience and level, combo, figures, quests, feats, gear, enemies, advice. Never changes memory or rank |
 | `mobile/lib/data/` | `store.dart` (one JSON document, keys listed at the top — never rename), `deck.dart` |
 | `mobile/lib/app/` | `app.dart` (`App`: settings, sound, `stamp`), `native.dart` (channel `verbarium/native`) |
-| `mobile/lib/ui/` | `theme.dart` (`Pal`, `Look`, `T`, `Dur`), `widgets.dart` (paper, buttons, `Shield`, `Seal`), `root.dart` (app, opening, first run, tabs, Today), `run.dart` (learning and every trial), `coronation.dart`, `realm.dart`, `chronicle.dart`, `settings.dart` |
+| `mobile/lib/ui/` | `theme.dart` (`Pal`, `Look`, `T`, `Dur`), `widgets.dart` (paper, buttons, `Shield`, `Seal`), `root.dart` (app, opening, first run, tabs, Today), `run.dart` (learning, trials and fights: gap, build, choice, the arena), `pixel.dart` (sprites as letter grids, `HeroSprite`, `EnemySprite`), `hero.dart` (Karakter), `coronation.dart`, `realm.dart`, `chronicle.dart`, `settings.dart` |
 | `mobile/android/` | Kotlin `MainActivity.kt`: files folder, splash hand-over, MediaPlayer (ambience) + SoundPool (effects) |
 | `mobile/test/` | `deck_test`, `engine_test`, `contrast_test` (WCAG 4.5:1, both themes), `screens_test` (drives the app; pictures in `test/goldens/`, not committed: look at them) |
 | `docs/riset-skor.md` | where each title's score range comes from |
@@ -33,7 +34,7 @@ output to the branch `ci-out/main` and publishes `v0.1-alpha-N` when everything 
 ## Rules
 
 - **Store keys never change** once testers have the app (`v`, `set`, `mem`, `log`, `rank`, `ev`, `win`, `shaky`,
-  `cool`, `placed`). A format change = a migration and a test.
+  `cool`, `placed`, `stage`, `subcool`, `ease`, `ret`, `er`, `game`). A format change = a migration and a test.
 - Package **`com.armstrang.verbarium`**. `versionCode` = 1000 + run for test builds. Signing key
   `keystore/verbarium.jks` is public: test builds only, never Play.
 - **Deck**: everything self-written (no copied word lists or sentences). A sentence has exactly one `___` and the
@@ -49,7 +50,9 @@ output to the branch `ci-out/main` and publishes `v0.1-alpha-N` when everything 
 - Paper (`Pal.day`) and candlelight (`Pal.night`); the accent is the tincture of the title held
   (tanah, vert, gules, azure, purpure, sable). Colour is never the only sign: each shield has its own charge.
   `contrast_test` must stay green.
-- The learning screen stays plain: one sentence, one field. Ornament lives in Negeri, Kronik and the coronation.
+- The learning screen stays plain: one sentence with the gap you type into. Ornament and pixel art live in Negeri, Karakter, the fights and the coronation.
+- Pixel art is letters in `pixel.dart` (no image files); look at `test/goldens/60-sprite.png` after changing it.
+- Music: one theme (`THEME` in `make_audio.py`), arranged per title as `m0`…`m5.ogg` plus `battle.ogg`. It must stay Verbarium's own tune: a mood may be an inspiration, a melody may not be copied.
 - Motion: transform/opacity, leaving faster than arriving (`Dur`), everything honours calm motion (`Look.calm`).
 - Screens draw from `Look.of(context)`; `Look.stamp` changes on every `App.notifyListeners()`, which is what
   redraws them.

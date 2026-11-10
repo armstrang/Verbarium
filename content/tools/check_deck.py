@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Checks the Verbarium deck (mobile/assets/deck/*.txt): format, one gap per sentence, no word twice.
 
-Core files: word|pos|meaning|sentence          (the rank comes from the file name, 1-… to 5-…)
-Banner files (toefl.txt, ielts.txt): rank|word|pos|meaning|sentence
-A word may be written american/british. Run from the repository root:  python3 content/tools/check_deck.py
+Core files: word|pos|meaning|sentence[|=form]   (the rank comes from the file name, 1-… to 5-…; a file may be
+                                                 split: 1-squire.txt, 1-squire-b.txt, …)
+Banner files (toefl.txt, ielts.txt): rank|word|pos|meaning|sentence[|=form]
+collocations.txt: rank|phrase with [answer]|wrong,wrong,wrong|meaning
+A word may be written american/british. "=form" is what the gap wants when it is not the headword (=increased). Run from the repository root:  python3 content/tools/check_deck.py
 """
 import glob, os, re, sys
 
@@ -12,6 +14,17 @@ root = os.path.join(os.path.dirname(__file__), "..", "..", "mobile", "assets", "
 bad, seen, counts = [], {}, {}
 for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
     name = os.path.basename(path)
+    if name == "collocations.txt":
+        for ln, line in enumerate(open(path, encoding="utf-8"), 1):
+            line = line.rstrip("\n")
+            if not line or line.startswith("#"):
+                continue
+            f = line.split("|")
+            ok = len(f) == 4 and f[0].isdigit() and re.search(r"\[[a-z]+\]", f[1]) and len(f[2].split(",")) == 3 and f[3].strip()
+            if not ok: bad.append(f"{name}:{ln} collocation")
+            elif re.search(r"\[([a-z]+)\]", f[1]).group(1) in f[2].split(","): bad.append(f"{name}:{ln} answer among the wrong ones")
+            counts[("colloc", int(f[0]) if f[0].isdigit() else 0)] = counts.get(("colloc", int(f[0]) if f[0].isdigit() else 0), 0) + 1
+        continue
     layer = "core" if name[0].isdigit() else name[:-4]
     for ln, line in enumerate(open(path, encoding="utf-8"), 1):
         line = line.rstrip("\n")
@@ -24,6 +37,9 @@ for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
             if not f[0].isdigit():
                 bad.append(f"{name}:{ln} no rank"); continue
             rank, f = int(f[0]), f[1:]
+        gap = None
+        if len(f) == 5 and re.fullmatch(r"=[a-z]+(/[a-z]+)?", f[4]):
+            gap, f = f[4][1:].split("/"), f[:4]
         if len(f) != 4:
             bad.append(f"{name}:{ln} {len(f)} fields"); continue
         word, pos, meaning, sent = f
@@ -31,6 +47,8 @@ for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
         if sent.count("___") != 1: bad.append(f"{name}:{ln} gaps {sent.count('___')}")
         if not meaning.strip(): bad.append(f"{name}:{ln} no meaning")
         if not re.fullmatch(r"[a-z]+(/[a-z]+)?", word): bad.append(f"{name}:{ln} word {word!r}")
+        for w in (gap or []):
+            if re.search(rf"\b{w}\b", sent.lower()): bad.append(f"{name}:{ln} answer in sentence: {w}")
         for w in word.split("/"):
             if re.search(rf"\b{w}\b", sent.lower()): bad.append(f"{name}:{ln} answer in sentence: {w}")
             key = (w, layer if layer != "core" else "core")

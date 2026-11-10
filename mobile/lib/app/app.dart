@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import '../data/deck.dart';
 import '../data/store.dart';
 import '../engine/engine.dart';
+import '../engine/game.dart';
 import 'native.dart';
 
 class App extends ChangeNotifier {
@@ -18,6 +19,7 @@ class App extends ChangeNotifier {
   final int Function()? clock;
   late Deck deck;
   late Engine engine;
+  late Game game;
 
   App._(this.store, this.clock);
 
@@ -46,6 +48,7 @@ class App extends ChangeNotifier {
   Future<void> _load() async {
     deck = await Deck.load(banner.isEmpty ? 'toefl' : banner);
     engine = Engine(store, deck, clock: clock);
+    game = Game(store, engine);
   }
 
   Map<String, dynamic> get _set => store.map('set');
@@ -83,7 +86,10 @@ class App extends ChangeNotifier {
   }
 
   /// after answers, trials, anything that moves progress
-  void changed() => notifyListeners();
+  void changed() {
+    syncMusic();
+    notifyListeners();
+  }
 
   void sfx(String name, [double volume = 1]) {
     if (sfxOn) Native.sfx(name, volume);
@@ -97,7 +103,16 @@ class App extends ChangeNotifier {
     }
   }
 
-  void syncMusic() => Native.music(musicOn, musicVol);
+  /// in a fight the battle tune plays; otherwise the tune of the title held
+  bool battle = false;
+
+  void syncMusic() => Native.music(musicOn, musicVol, battle ? 'battle' : 'm${engine.rank}');
+
+  void setBattle(bool on) {
+    if (battle == on) return;
+    battle = on;
+    syncMusic();
+  }
 
   Future<void> resetProgress() async {
     engine.reset();

@@ -16,7 +16,8 @@ import 'widgets.dart';
 class Coronation extends StatefulWidget {
   final int rank;
   final int right, total;
-  const Coronation({super.key, required this.rank, required this.right, required this.total});
+  final List<String> news;
+  const Coronation({super.key, required this.rank, required this.right, required this.total, this.news = const []});
 
   @override
   State<Coronation> createState() => _CoronationState();
@@ -157,13 +158,15 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Ujian penobatan: ${widget.right} dari ${widget.total} kata diketik benar, dengan batas waktu, tanpa petunjuk.',
+                        'Boss tumbang: ${widget.right} dari ${widget.total} kata diketik benar, dengan batas waktu, tanpa petunjuk.',
                         textAlign: TextAlign.center,
                         style: T.body(16, pal.muted, height: 1.45),
                       ),
                       const SizedBox(height: 6),
                       Text(
-                        rank >= Engine.maxRank ? 'Tidak ada gelar di atas ini. Jagalah.' : 'Gelar ini dijaga. Kata yang terlupa harus direbut kembali.',
+                        widget.news.isNotEmpty
+                            ? widget.news.toSet().take(3).join(' · ')
+                            : (rank >= Engine.maxRank ? 'Tidak ada gelar di atas ini. Jagalah.' : 'Gelar ini dijaga. Kata yang terlupa harus direbut kembali.'),
                         textAlign: TextAlign.center,
                         style: T.body(15.5, pal.muted, height: 1.45),
                       ),

@@ -124,9 +124,11 @@ class _EventRow extends StatelessWidget {
       'place' => 'Ujian penempatan. Mulai sebagai $name.',
       'drop' => 'Gelar turun menjadi $name karena tidak dipertahankan.',
       'hold' => 'Gelar $name dipertahankan. $a dari $b kata benar.',
+      'sub' => 'Seorang penjaga jalan tumbang. $name naik satu tingkat.',
+      'subfail' => 'Dipukul mundur oleh penjaga jalan. $a dari $b pukulan masuk.',
       _ => 'Gelar $name belum berhasil dipertahankan. $a dari $b kata benar.',
     };
-    final won = kind == 'crown' || kind == 'place' || kind == 'hold';
+    final won = kind == 'crown' || kind == 'place' || kind == 'hold' || kind == 'sub';
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(

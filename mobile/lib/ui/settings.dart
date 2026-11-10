@@ -85,7 +85,7 @@ class SettingsPage extends StatelessWidget {
                     _Link('Lisensi huruf', () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const LicencesPage()))),
                     const SizedBox(height: 8),
                     Text(
-                      'Verbarium 0.1 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.',
+                      'Verbarium 0.2 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.',
                       style: T.body(15, pal.muted, height: 1.5),
                     ),
                     const _Head('Mulai dari awal'),

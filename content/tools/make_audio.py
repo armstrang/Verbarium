@@ -1,8 +1,13 @@
 #!/usr/bin/env python3
 """Makes every sound of Verbarium from scratch (no samples, so nothing to license):
 
-  ambient.ogg   a 96 s court ambience in D Dorian that loops without a seam: drone, harp, a quiet flute, a soft drum
-  quill, seal, wrong, page, tap, rise, fanfare   short effects
+  m0 … m5.ogg   one original theme in a folk-fantasy vein (a lilting three-beat tune over plucked strings),
+                arranged for each title: Petani a whistle and a lute, Squire a harp and a hand drum, Knight
+                fiddle and cello, Baron harpsichord and strings, Duke choir and organ, Raja all of them and bells
+  battle.ogg    the same tune turned minor and driven, for fights
+  quill, seal, wrong, page, tap, rise, fanfare, hit, crit, hurt, levelup, victory, defeat   short effects
+
+The tune is Verbarium's own (written here, note by note, in THEME); it copies no existing melody.
 
 Needs numpy, scipy and ffmpeg (libvorbis). Run from the repository root:
     python3 content/tools/make_audio.py
@@ -123,80 +128,247 @@ def save(name, left, right=None, peak=0.8):
     print(f"{name}.ogg  {left.size / SR:.2f} s  {os.path.getsize(out) // 1024} kB")
 
 
-# ------------------------------------------------------------------ ambience
+# ------------------------------------------------------------------ instruments for the theme
 
-def ambient():
-    beat = 1.0  # 60 beats a minute, three beats to the bar
-    bar = 3 * beat
-    bars = 32
-    n = int(bars * bar * SR)
+_cache = {}
+
+
+def cpluck(freq, dur, bright=1.0, damp=1.0):
+    key = (round(freq, 2), dur, bright, damp)
+    if key not in _cache:
+        _cache[key] = pluck(freq, dur, bright, damp)
+    return _cache[key]
+
+
+def bowed(freq, dur, soft=1.0):
+    """a fiddle or cello: a slow attack, vibrato that arrives late, a dark top"""
+    n = int((dur + 0.25) * SR)
     t = np.arange(n) / SR
-    harp_l, harp_r = np.zeros(n), np.zeros(n)
-    fl = np.zeros(n)
-    dr = np.zeros(n)
+    vib = 1 + 0.005 * np.sin(2 * np.pi * 5.4 * t) * np.clip((t - 0.2) / 0.4, 0, 1)
+    ph = 2 * np.pi * np.cumsum(freq * vib) / SR
+    y = np.zeros(n)
+    k = 1
+    while k * freq < 4200 and k <= 16:
+        y += np.sin(k * ph + 0.3 * k) / k ** (1.25 * soft)
+        k += 1
+    env = np.clip(t / 0.11, 0, 1) * np.clip((dur + 0.25 - t) / 0.25, 0, 1)
+    return y * env * 0.5
 
-    # the ground under each bar (root, as MIDI): D D C D | F C D D, four times
-    ground = [38, 38, 36, 38, 41, 36, 38, 38] * 4
-    drone = np.zeros(n)
-    for b, root in enumerate(ground):
-        seg = int(bar * SR) + int(0.8 * SR)
-        tt = np.arange(seg) / SR
-        env = np.clip(tt / 0.8, 0, 1) * np.clip((bar + 0.8 - tt) / 0.8, 0, 1)
-        y = np.zeros(seg)
-        for m, g in ((root, 1.0), (root + 7, 0.55), (root + 12, 0.4)):
-            f0 = hz(m)
-            for det in (0.9985, 1.0, 1.0016):
-                for k, a in ((1, 1.0), (2, 0.42), (3, 0.2), (4, 0.09), (5, 0.05)):
-                    y += g * a * np.sin(2 * np.pi * f0 * det * k * tt + rng.uniform(0, 6.28))
-        put(drone, b * bar - 0.4, y * env)
-    drone = circular(lowpass, drone, 900) * (0.82 + 0.18 * np.sin(2 * np.pi * t / 12.0))
 
-    # the tune, as (bar, beat, MIDI note, beats held); bars count from 0
-    D4, E4, F4, G4, A4, B4, C5, D5, C4 = 62, 64, 65, 67, 69, 71, 72, 74, 60
-    tune = [
-        (0, 0, A4, 2), (0, 2, D5, 1), (1, 0, C5, 1), (1, 1, B4, 1), (1, 2, A4, 1), (2, 0, G4, 2), (2, 2, A4, 1),
-        (3, 0, F4, 1), (3, 1, E4, 1), (3, 2, D4, 1),
-        (4, 0, F4, 2), (4, 2, A4, 1), (5, 0, G4, 1), (5, 1, F4, 1), (5, 2, E4, 1), (6, 0, C4, 2), (6, 2, E4, 1),
-        (7, 0, D4, 3),
-        (8, 0, D5, 2), (8, 2, C5, 1), (9, 0, A4, 2), (9, 2, G4, 1), (10, 0, A4, 1), (10, 1, B4, 1), (10, 2, C5, 1),
-        (11, 0, A4, 3),
-        (12, 0, G4, 2), (12, 2, F4, 1), (13, 0, E4, 2), (13, 2, D4, 1), (14, 0, C4, 1), (14, 1, D4, 1), (14, 2, E4, 1),
-        (15, 0, D4, 3),
-    ]
-    # first time through: the harp carries the tune. second time: a flute, the harp answering an octave below
-    for b, bt, note, held in tune:
-        at = b * bar + bt * beat
-        y = pluck(hz(note), 3.2, bright=1.0)
-        put(harp_l, at, y, 0.62)
-        put(harp_r, at + 0.004, y, 0.5)
-        at2 = (b + 16) * bar + bt * beat
-        put(fl, at2, flute(hz(note), held * beat * 0.96), 0.5)
-        if bt == 0:
-            y2 = pluck(hz(note - 12), 3.0, bright=0.8)
-            put(harp_l, at2 + 1.5 * beat, y2, 0.28)
-            put(harp_r, at2 + 1.5 * beat, y2, 0.34)
+def choir(freq, dur):
+    """voices on "ah": harmonics shaped by three formants, three singers slightly apart"""
+    n = int((dur + 0.6) * SR)
+    t = np.arange(n) / SR
+    y = np.zeros(n)
+    for det in (0.996, 1.0, 1.005):
+        k = 1
+        while k * freq < 3600:
+            f = k * freq
+            form = np.exp(-((f - 700) / 260) ** 2) + 0.6 * np.exp(-((f - 1150) / 300) ** 2) + 0.25 * np.exp(-((f - 2700) / 400) ** 2)
+            y += (0.12 / k + form) * np.sin(2 * np.pi * f * det * t + rng.uniform(0, 6.28))
+            k += 1
+    env = np.clip(t / 0.45, 0, 1) * np.clip((dur + 0.6 - t) / 0.6, 0, 1)
+    return y * env * 0.12
 
-    # broken chords under everything: root, fifth, octave
-    for b, root in enumerate(ground):
-        for i, step in enumerate((12, 19, 24)):
-            y = pluck(hz(root + step), 2.6, bright=0.7, damp=1.2)
-            g = 0.3 if i == 0 else 0.2
-            put(harp_l, b * bar + i * beat, y, g * 0.9)
-            put(harp_r, b * bar + i * beat + 0.006, y, g)
-        if b % 2 == 0:
-            put(dr, b * bar, drum(), 0.5)
-        if b % 8 == 7:
-            put(dr, b * bar + 2 * beat, drum(), 0.3)
 
-    dry_l = drone * 0.06 + harp_l + fl * 0.8 + dr * 0.5
-    dry_r = drone * 0.06 + harp_r + fl + dr * 0.5
-    wet_l = reverb(dry_l, 2.6, 7, True)
-    wet_r = reverb(dry_r, 2.6, 8, True)
-    left = circular(highpass, dry_l * 0.7 + wet_l * 0.55, 55)
-    right = circular(highpass, dry_r * 0.7 + wet_r * 0.55, 55)
-    print("seam step", round(float(abs(left[0] - left[-1]) / np.max(np.abs(left))), 4),
-          "ordinary step p99", round(float(np.percentile(np.abs(np.diff(left)), 99) / np.max(np.abs(left))), 4))
-    save("ambient", left, right, peak=0.6)
+def organ(freq, dur):
+    n = int((dur + 0.3) * SR)
+    t = np.arange(n) / SR
+    y = sum(a * np.sin(2 * np.pi * freq * k * t) for k, a in ((1, 1.0), (2, 0.5), (3, 0.25), (4, 0.2), (6, 0.08)))
+    env = np.clip(t / 0.08, 0, 1) * np.clip((dur + 0.3 - t) / 0.3, 0, 1)
+    return y * env * 0.2
+
+
+def bell(freq, dur=3.0):
+    t = np.arange(int(dur * SR)) / SR
+    y = np.zeros_like(t)
+    for ratio, a, d in ((1, 1.0, 1.2), (2.0, 0.6, 1.8), (2.76, 0.45, 2.6), (5.4, 0.25, 4.0), (8.93, 0.12, 6.0)):
+        if freq * ratio < 15000:
+            y += a * np.exp(-d * t) * np.sin(2 * np.pi * freq * ratio * t)
+    return y * np.minimum(1, t / 0.002) * 0.4
+
+
+def hat(dur=0.06):
+    t = np.arange(int(dur * SR)) / SR
+    return highpass(rng.standard_normal(t.size), 6000) * np.exp(-t / 0.012) * 0.3
+
+
+# ------------------------------------------------------------------ the theme
+
+D4, E4, Fs4, G4, A4, B4, Cs5, D5, E5, Fs5, G5, A5 = 62, 64, 66, 67, 69, 71, 73, 74, 76, 78, 79, 81
+# (beat in the bar, note, beats held) for each bar; three beats to the bar
+A = [
+    [(0, D5, 2), (2, A4, 1)], [(0, B4, 1), (1, A4, 1), (2, Fs4, 1)], [(0, G4, 2), (2, A4, 1)], [(0, Fs4, 3)],
+    [(0, D5, 2), (2, E5, 1)], [(0, Fs5, 1), (1, E5, 1), (2, D5, 1)], [(0, B4, 2), (2, D5, 1)], [(0, A4, 3)],
+    [(0, B4, 2), (2, A4, 1)], [(0, G4, 1), (1, Fs4, 1), (2, E4, 1)], [(0, Fs4, 2), (2, A4, 1)], [(0, D5, 2), (2, B4, 1)],
+    [(0, A4, 2), (2, Fs4, 1)], [(0, E4, 2), (2, D4, 1)], [(0, E4, 1), (1, Fs4, 1), (2, E4, 1)], [(0, D4, 3)],
+]
+B = [
+    [(0, Fs5, 2), (2, E5, 1)], [(0, D5, 2), (2, B4, 1)], [(0, A4, 1), (1, B4, 1), (2, D5, 1)], [(0, E5, 3)],
+    [(0, Fs5, 2), (2, A5, 1)], [(0, G5, 1), (1, Fs5, 1), (2, E5, 1)], [(0, D5, 2), (2, E5, 1)], [(0, D5, 3)],
+]
+CH = {"D": (50, 54, 57), "Bm": (47, 50, 54), "G": (43, 47, 50), "A": (45, 49, 52), "Em": (52, 55, 59)}
+A_CH = ["D", "Bm", "G", "D", "D", "D", "G", "A", "G", "Em", "D", "Bm", "G", "A", "A", "D"]
+B_CH = ["Bm", "G", "D", "A", "Bm", "G", "A", "D"]
+
+
+def arrange(name, bpm, parts, form="ABA", shift=0, minor=False, peak=0.6):
+    """parts: melody instruments per section and the layers under them (see the calls below)"""
+    bars, chords, section = [], [], []
+    for ch in form:
+        bars += A if ch == "A" else B
+        chords += A_CH if ch == "A" else B_CH
+        section += [ch] * (16 if ch == "A" else 8)
+    beat = 60.0 / bpm
+    bar = 3 * beat
+    n = int(len(bars) * bar * SR)
+    L, R = np.zeros(n), np.zeros(n)
+
+    def tone(m):
+        if minor and m % 12 in (6, 1):  # F sharp and C sharp fall: the tune darkens
+            m -= 1
+        return hz(m + shift)
+
+    def lay(at, y, g, pan=0.0):
+        put(L, at, y, g * (1 - 0.35 * pan))
+        put(R, at + 0.003, y, g * (1 + 0.35 * pan))
+
+    seen_a = 0
+    for b, notes in enumerate(bars):
+        sec = section[b]
+        if sec == "A" and b % 16 == 0:
+            seen_a += 1
+        lead = parts["lead"][(sec, seen_a) if (sec, seen_a) in parts["lead"] else sec]
+        ch = CH[chords[b]]
+        t0 = b * bar
+        for bt, note, held in notes:
+            at, dur = t0 + bt * beat, held * beat * 0.97
+            for inst in lead:
+                if inst == "flute":
+                    if held >= 2:  # a grace note from above, the way a whistle player leans into a long note
+                        lay(at - 0.07, flute(tone(note + 2), 0.05), 0.25, 0.3)
+                    lay(at, flute(tone(note), dur), 0.5, 0.3)
+                elif inst == "harp":
+                    lay(at, cpluck(tone(note), 3.0, 1.0), 0.7, -0.3)
+                elif inst == "fiddle":
+                    lay(at, bowed(tone(note), dur), 0.75, 0.2)
+                elif inst == "fiddle8":
+                    lay(at, bowed(tone(note - 12), dur), 0.5, -0.2)
+                elif inst == "keys":
+                    lay(at, cpluck(tone(note), 1.6, 1.7, 1.8), 0.6, -0.2)
+        if "arp" in parts:  # broken chord under the tune
+            steps, bright, g = parts["arp"]
+            seq = [ch[0], ch[1], ch[2], ch[1] + 12, ch[2], ch[1]] if steps == 6 else [ch[0], ch[2], ch[1] + 12]
+            for i, m in enumerate(seq):
+                lay(t0 + i * bar / steps, cpluck(tone(m), 2.4, bright, 1.2 if bright < 1.5 else 1.8), g * (1.0 if i == 0 else 0.7), -0.5 if i % 2 else 0.5)
+        if "pad" in parts:
+            for inst, g in parts["pad"]:
+                for m in ch:
+                    y = choir(tone(m + 12), bar) if inst == "choir" else (organ(tone(m), bar) if inst == "organ" else bowed(tone(m), bar, 1.4))
+                    lay(t0, y, g, 0.0)
+        if "bass" in parts:
+            inst, g = parts["bass"]
+            if inst == "cello":
+                lay(t0, bowed(tone(ch[0] - 12), bar, 1.3), g)
+            else:  # plucked, in running eighths
+                for i in range(6):
+                    lay(t0 + i * beat / 2, cpluck(tone(ch[0] - 12 + (7 if i % 2 else 0)), 0.5, 0.7, 4), g)
+        if "drum" in parts:
+            for at, g in parts["drum"]:
+                lay(t0 + at * beat, drum(0.5), g)
+        if "hat" in parts:
+            for i in range(6):
+                lay(t0 + i * beat / 2, hat(), 0.5 if i % 2 else 0.25, 0.4)
+        if "bell" in parts and b % parts["bell"] == 0:
+            lay(t0, bell(tone(ch[0] + 24)), 0.5, 0.2)
+
+    wl, wr = reverb(L, 2.8, 21, True), reverb(R, 2.8, 22, True)
+    wet = parts.get("wet", 0.5)
+    left = circular(highpass, L * 0.75 + wl * wet, 50)
+    right = circular(highpass, R * 0.75 + wr * wet, 50)
+    save(name, left, right, peak=peak)
+
+
+def themes():
+    arrange("m0", 84, {"lead": {"A": ["flute"], "B": ["flute"]}, "arp": (3, 0.8, 0.3), "wet": 0.45})
+    arrange("m1", 88, {"lead": {("A", 1): ["harp"], "A": ["flute", "harp"], "B": ["flute"]}, "arp": (6, 0.9, 0.22),
+                       "drum": [(0, 0.35), (2, 0.18)]})
+    arrange("m2", 92, {"lead": {"A": ["fiddle"], "B": ["fiddle", "fiddle8"]}, "arp": (6, 0.9, 0.2), "bass": ("cello", 0.3),
+                       "drum": [(0, 0.5), (1.5, 0.22), (2, 0.3)]})
+    arrange("m3", 80, {"lead": {("A", 1): ["flute"], "A": ["flute", "fiddle8"], "B": ["fiddle"]}, "arp": (6, 1.7, 0.2),
+                       "pad": [("strings", 0.1)]})
+    arrange("m4", 72, {"lead": {("A", 1): ["harp"], "A": ["harp", "fiddle"], "B": ["fiddle"]}, "arp": (3, 0.9, 0.2),
+                       "pad": [("choir", 0.5), ("organ", 0.16)], "wet": 0.6}, shift=-2)
+    arrange("m5", 70, {"lead": {("A", 1): ["flute", "fiddle8"], "A": ["flute", "fiddle", "fiddle8"], "B": ["fiddle", "harp"]},
+                       "arp": (6, 0.9, 0.18), "pad": [("strings", 0.1), ("choir", 0.4)], "bass": ("cello", 0.25),
+                       "drum": [(0, 0.45)], "bell": 2, "wet": 0.6})
+    arrange("battle", 138, {"lead": {"A": ["fiddle", "keys"], "B": ["fiddle", "fiddle8"]}, "bass": ("pluck", 0.5),
+                            "drum": [(0, 0.8), (1, 0.4), (2, 0.6)], "hat": True, "wet": 0.3}, form="AB", minor=True, peak=0.65)
+
+
+# ------------------------------------------------------------------ effects of the fight
+
+def hit():
+    n = int(0.3 * SR)
+    t = np.arange(n) / SR
+    swish = bandpass(rng.standard_normal(n), 1500, 9000) * np.exp(-((t - 0.05) / 0.035) ** 2)
+    f = 70 + 90 * np.exp(-t / 0.02)
+    thud = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-(np.maximum(t - 0.09, 0)) / 0.06) * (t > 0.09)
+    save("hit", swish * 0.8 + thud, peak=0.7)
+
+
+def crit():
+    n = int(0.9 * SR)
+    t = np.arange(n) / SR
+    swish = bandpass(rng.standard_normal(n), 2000, 11000) * np.exp(-((t - 0.04) / 0.03) ** 2)
+    f = 60 + 120 * np.exp(-t / 0.02)
+    thud = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-(np.maximum(t - 0.07, 0)) / 0.08) * (t > 0.07)
+    y = swish + thud * 1.2
+    put(y, 0.08, bell(hz(93), 0.8), 0.7, wrap=False)
+    save("crit", y, peak=0.8)
+
+
+def hurt():
+    n = int(0.35 * SR)
+    t = np.arange(n) / SR
+    f = 110 - 50 * t / 0.35
+    y = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t / 0.09) + lowpass(rng.standard_normal(n), 1200) * np.exp(-t / 0.03) * 0.7
+    save("hurt", y, peak=0.7)
+
+
+def levelup():
+    n = int(1.6 * SR)
+    y = np.zeros(n)
+    for i, note in enumerate((62, 66, 69, 74, 78)):
+        put(y, i * 0.07, pluck(hz(note), 1.2, 1.2), 0.7, wrap=False)
+    put(y, 0.36, bell(hz(86), 1.2), 0.6, wrap=False)
+    w = reverb(y, 1.2, 31, False)
+    save("levelup", np.concatenate([y, np.zeros(w.size - n)]) + w * 0.4, peak=0.7)
+
+
+def victory():
+    n = int(3.4 * SR)
+    y = np.zeros(n)
+    for at, note, dur, g in ((0.0, 62, 0.14, 0.7), (0.16, 66, 0.14, 0.7), (0.32, 69, 0.14, 0.8), (0.5, 74, 0.3, 0.9), (0.86, 73, 0.16, 0.8), (1.04, 74, 1.9, 1.0)):
+        put(y, at, brass(hz(note), dur), g, wrap=False)
+    for note in (57, 66):
+        put(y, 1.04, brass(hz(note), 1.9), 0.5, wrap=False)
+    put(y, 1.04, bell(hz(86), 2.2), 0.6, wrap=False)
+    for at, g in ((0.0, 0.7), (0.5, 0.8), (1.04, 1.0)):
+        put(y, at, drum(0.7), g * 1.5, wrap=False)
+    y = lowpass(y, 5600)
+    w = reverb(y, 1.8, 33, False)
+    save("victory", np.concatenate([y, np.zeros(w.size - n)]) * 0.75 + w * 0.5, peak=0.8)
+
+
+def defeat():
+    n = int(2.8 * SR)
+    y = np.zeros(n)
+    for at, note, dur in ((0.0, 50, 0.7), (0.7, 48, 0.7), (1.4, 45, 1.3)):
+        put(y, at, bowed(hz(note), dur, 1.3), 1.0, wrap=False)
+        put(y, at, bowed(hz(note - 12), dur, 1.3), 0.8, wrap=False)
+    w = reverb(y, 1.6, 35, False)
+    save("defeat", np.concatenate([y, np.zeros(w.size - n)]) * 0.8 + w * 0.5, peak=0.6)
 
 
 # ------------------------------------------------------------------ effects
@@ -295,11 +467,6 @@ def fanfare():
 
 
 if __name__ == "__main__":
-    ambient()
-    quill()
-    seal()
-    wrong()
-    page()
-    tap()
-    rise()
-    fanfare()
+    themes()
+    for make in (quill, seal, wrong, page, tap, rise, fanfare, hit, crit, hurt, levelup, victory, defeat):
+        make()

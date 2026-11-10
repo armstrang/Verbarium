@@ -117,3 +117,13 @@ class Dur {
 }
 
 const rankNames = ['Petani', 'Squire', 'Knight', 'Baron', 'Duke', 'Raja'];
+
+/// how the app speaks to each title: plain to a farmer, with ceremony to a king
+const rankGreeting = [
+  'Ladang sudah digarap. Sekarang giliran kata.',
+  'Pedang latihanmu sudah diasah.',
+  'Kudamu sudah dipelanai, Kesatria.',
+  'Aula menantimu, Tuan Baron.',
+  'Istana sudah siap, Yang Mulia.',
+  'Takhta menunggu titahmu, Baginda.',
+];

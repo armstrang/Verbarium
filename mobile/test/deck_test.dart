@@ -2,13 +2,15 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:verbarium/data/deck.dart';
+
+import 'util.dart';
+
 import 'package:verbarium/engine/engine.dart';
 
-List<Word> core() => [
-  for (var i = 0; i < Deck.coreFiles.length; i++) ...Deck.parse(File('assets/deck/${Deck.coreFiles[i]}.txt').readAsStringSync(), tier: i + 1),
-];
+List<Word> core() => coreWords();
 
 void main() {
+  formsAndChips();
   test('every core word parses, is unique and fits its own gap', () {
     final words = core();
     expect(words.length, greaterThan(1000));
@@ -52,5 +54,19 @@ void main() {
     expect(slip('conesnsus', 'consensus'), 1);
     expect(slip('consent', 'consensus'), 2);
     expect(slip('aim', 'air'), 2);
+  });
+}
+
+// appended: forms and chips
+void formsAndChips() {
+  test('a gap can ask for another form of the word; the headword then counts as the right word in the wrong form', () {
+    final w = Deck.parse('increase|v|menaikkan|The company has ___ its prices.|=increased', tier: 2).single;
+    expect(w.inflected, isTrue);
+    expect(w.answer(false), 'increased');
+    expect(w.accepts('increased'), isTrue);
+    expect(w.accepts('increase'), isFalse);
+    expect(w.wrongForm('increase'), isTrue);
+    expect(w.tokens(false).join(' '), 'The company has increased its prices.');
+    expect(w.buildable, isTrue);
   });
 }

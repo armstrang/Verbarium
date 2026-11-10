@@ -25,6 +25,6 @@ class Native {
   static Future<String?> filesDir() => _call<String>('filesDir');
   static Future<void> ready() => _call<void>('ready');
   static Future<void> sfx(String name, double volume) => _call<void>('sfx', {'name': name, 'volume': volume});
-  static Future<void> music(bool on, double volume) => _call<void>('music', {'on': on, 'volume': volume});
+  static Future<void> music(bool on, double volume, String track) => _call<void>('music', {'on': on, 'volume': volume, 'track': track});
   static Future<void> openUrl(String url) => _call<void>('openUrl', url);
 }

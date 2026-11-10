@@ -12,6 +12,10 @@
 ///   win    the last review answers on ranks already held (1 right, 0 wrong)
 ///   shaky  ms since when the title wavers (0 = steady)
 ///   cool   ms until the next coronation trial is allowed
+///   stage  0..2: stage I, II, III inside the rank · subcool: ms until the next sub-boss fight
+///   ease, ret   the learner's own memory growth factor and the answers it is tuned from
+///   er     {word id: last kind of slip}  ·  placed  1 after placement
+///   game   everything of the game layer (engine/game.dart): xp, gear, quests, feats, figures
 library;
 
 import 'dart:async';

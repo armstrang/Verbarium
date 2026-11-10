@@ -15,11 +15,11 @@ class Paper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pal = Look.of(context).pal;
+    final look = Look.of(context);
     return Stack(
       fit: StackFit.expand,
       children: [
-        RepaintBoundary(child: CustomPaint(painter: _GrainPainter(pal))),
+        RepaintBoundary(child: CustomPaint(painter: _GrainPainter(look.pal, look.rank))),
         child,
       ],
     );
@@ -28,7 +28,8 @@ class Paper extends StatelessWidget {
 
 class _GrainPainter extends CustomPainter {
   final Pal pal;
-  _GrainPainter(this.pal);
+  final int rank;
+  _GrainPainter(this.pal, this.rank);
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -47,10 +48,25 @@ class _GrainPainter extends CustomPainter {
       final len = 6 + r.nextDouble() * 14;
       canvas.drawLine(p, p + Offset(cos(a) * len, sin(a) * len), fibre);
     }
+    // the page dresses up with the title: a farmer's page is bare, a knight's has a ruled margin in his colour,
+    // a baron's is ruled in ink, a duke's twice, a king's twice in gold
+    if (rank >= 2) {
+      final c = rank == 5 ? pal.gold : (rank == 2 ? pal.tincture(2).withValues(alpha: 0.55) : pal.ink.withValues(alpha: 0.7));
+      final line = Paint()
+        ..color = c
+        ..strokeWidth = rank == 2 ? 1 : 1.2;
+      for (final x in [7.0, size.width - 7]) {
+        canvas.drawLine(Offset(x, 0), Offset(x, size.height), line);
+        if (rank >= 4) {
+          final x2 = x < 20 ? x + 4 : x - 4;
+          canvas.drawLine(Offset(x2, 0), Offset(x2, size.height), line..strokeWidth = 0.7);
+        }
+      }
+    }
   }
 
   @override
-  bool shouldRepaint(_GrainPainter old) => old.pal != pal;
+  bool shouldRepaint(_GrainPainter old) => old.pal != pal || old.rank != rank;
 }
 
 /// Anything you can press: it gives a little under the finger and is at least 48 high.
@@ -443,11 +459,16 @@ class Leaf extends StatelessWidget {
     return Material(
       type: MaterialType.transparency,
       child: Paper(
-        child: SafeArea(
-          child: Center(
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 560),
-              child: Padding(padding: padding, child: child),
+        // the keyboard pushes the page up instead of covering it
+        child: AnimatedPadding(
+          duration: const Duration(milliseconds: 120),
+          padding: EdgeInsets.only(bottom: MediaQuery.viewInsetsOf(context).bottom),
+          child: SafeArea(
+            child: Center(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(maxWidth: 560),
+                child: Padding(padding: padding, child: child),
+              ),
             ),
           ),
         ),

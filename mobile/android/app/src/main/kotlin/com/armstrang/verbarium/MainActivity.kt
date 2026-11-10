@@ -23,6 +23,8 @@ class MainActivity : FlutterActivity() {
     private var startedAt = 0L
 
     private var music: MediaPlayer? = null
+    private var musicTrack = ""
+    private var wantedTrack = "m0"
     private var musicWanted = false
     private var musicVolume = 0.5f
     private var pool: SoundPool? = null
@@ -37,6 +39,23 @@ class MainActivity : FlutterActivity() {
         "tap" to R.raw.tap,
         "rise" to R.raw.rise,
         "fanfare" to R.raw.fanfare,
+        "hit" to R.raw.hit,
+        "crit" to R.raw.crit,
+        "hurt" to R.raw.hurt,
+        "levelup" to R.raw.levelup,
+        "victory" to R.raw.victory,
+        "defeat" to R.raw.defeat,
+    )
+
+    // one tune per title, and one for fights
+    private val tracks = mapOf(
+        "m0" to R.raw.m0,
+        "m1" to R.raw.m1,
+        "m2" to R.raw.m2,
+        "m3" to R.raw.m3,
+        "m4" to R.raw.m4,
+        "m5" to R.raw.m5,
+        "battle" to R.raw.battle,
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +86,7 @@ class MainActivity : FlutterActivity() {
                 "music" -> {
                     musicWanted = call.argument<Boolean>("on") ?: false
                     musicVolume = (call.argument<Double>("volume") ?: 0.5).toFloat().coerceIn(0f, 1f)
+                    wantedTrack = call.argument<String>("track") ?: "m0"
                     applyMusic()
                     result.success(null)
                 }
@@ -87,7 +107,7 @@ class MainActivity : FlutterActivity() {
             .setUsage(AudioAttributes.USAGE_GAME)
             .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
             .build()
-        val p = SoundPool.Builder().setMaxStreams(4).setAudioAttributes(attrs).build()
+        val p = SoundPool.Builder().setMaxStreams(5).setAudioAttributes(attrs).build()
         for ((name, res) in effects) loaded[name] = p.load(this, res, 1)
         pool = p
     }
@@ -98,10 +118,14 @@ class MainActivity : FlutterActivity() {
             return
         }
         var m = music
-        if (m == null) {
-            m = MediaPlayer.create(this, R.raw.ambient) ?: return
+        if (m == null || musicTrack != wantedTrack) {
+            m?.release()
+            music = null
+            val res = tracks[wantedTrack] ?: R.raw.m0
+            m = MediaPlayer.create(this, res) ?: return
             m.isLooping = true
             music = m
+            musicTrack = wantedTrack
         }
         m.setVolume(musicVolume, musicVolume)
         if (!m.isPlaying) m.start()

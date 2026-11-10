@@ -18,6 +18,20 @@ import '../data/store.dart';
 
 enum Grade { clean, helped, wrong }
 
+/// The three kinds of question. The gap (cloze) is the main one and the only one that can make a word solid;
+/// building the sentence counts for less, choosing the meaning for least.
+enum Quiz { cloze, build, choice }
+
+const quizWeight = {Quiz.cloze: 1.0, Quiz.build: 0.6, Quiz.choice: 0.3};
+
+/// one question of a sitting
+class Card {
+  final Word w;
+  final Quiz quiz;
+  final bool fresh;
+  const Card(this.w, this.quiz, this.fresh);
+}
+
 class Mem {
   double s;
   int due;
@@ -113,27 +127,44 @@ class Engine {
     store.touch();
   }
 
+  /// How fast memory grows for this learner: 1 is the starting point; it rises when on-time reviews are nearly
+  /// always right (the intervals were too short) and falls when too many are missed.
+  double get ease => ((store.data['ease'] as num?)?.toDouble() ?? 1.0).clamp(0.7, 1.3);
+
+  void _tune(bool right) {
+    final r = store.list('ret');
+    r.add(right ? 1 : 0);
+    if (r.length > 60) r.removeRange(0, r.length - 60);
+    if (r.length >= 30 && r.length % 10 == 0) {
+      final rate = r.where((x) => x == 1).length / r.length;
+      if (rate > 0.93) store.data['ease'] = min(1.3, ease + 0.05);
+      if (rate < 0.8) store.data['ease'] = max(0.7, ease - 0.05);
+    }
+  }
+
   /// Records one answer. [count] = false keeps it out of the daily log (placement).
-  void answer(Word w, Grade g, {bool count = true}) {
+  void answer(Word w, Grade g, {bool count = true, Quiz quiz = Quiz.cloze}) {
     final t = now();
     final old = _mem[w.id];
     final fresh = old == null;
     final m = old ?? Mem(0, t, 0, 0, t, false);
     final elapsed = (t - m.last) / day;
+    final weight = quizWeight[quiz]!;
+    final onTime = elapsed >= m.s * 0.5;
     switch (g) {
       case Grade.clean:
         if (fresh) {
-          m.s = 3;
+          m.s = quiz == Quiz.cloze ? 3 : (quiz == Quiz.build ? 2 : 0.003);
         } else {
-          final onTime = elapsed >= m.s * 0.5;
-          m.s = min(365, max(1.0, m.s) * (onTime ? 2.3 : 1.3));
+          final grow = onTime ? 1 + 1.3 * weight * ease : 1 + 0.3 * weight;
+          m.s = min(365, max(quiz == Quiz.choice ? m.s : 1.0, m.s) * grow);
         }
-        m.clean = true;
+        if (quiz == Quiz.cloze) m.clean = true;
       case Grade.helped:
-        m.s = fresh ? 1 : max(1.0, m.s * 1.1);
+        m.s = fresh ? (quiz == Quiz.cloze ? 1 : 0.003) : max(quiz == Quiz.cloze ? 1.0 : m.s, m.s * 1.1);
         m.clean = false;
       case Grade.wrong:
-        m.s = fresh ? 0.01 : max(0.01, m.s * 0.25);
+        m.s = fresh ? 0.01 : max(0.01, m.s * (quiz == Quiz.cloze ? 0.25 : (quiz == Quiz.build ? 0.5 : 0.6)));
         m.clean = false;
         if (!fresh) m.lapses++;
     }
@@ -142,7 +173,37 @@ class Engine {
     m.due = t + (m.s * day).round();
     _put(w, m);
     if (count) _log(fresh, g != Grade.wrong);
+    if (!fresh && onTime && quiz == Quiz.cloze && count) _tune(g != Grade.wrong);
     if (!fresh && w.tier <= rank && rank > 0) _window(g != Grade.wrong);
+  }
+
+  /// what kind of slip a word last suffered: 'm' meaning, 's' spelling, 'f' form, 'o' order (see Game)
+  String lastError(Word w) => store.map('er')[w.id] as String? ?? '';
+
+  /// Which question a word gets now. A new word is introduced by choosing its meaning (the gap follows in the
+  /// same sitting); after that the gap is the rule, with the other two mixed in where they help.
+  Quiz pickQuiz(Word w) {
+    final m = _mem[w.id];
+    if (m == null) return Quiz.choice;
+    final h = (w.id.codeUnits.fold<int>(0, (a, b) => a * 31 + b) + m.reps * 7) & 0x7fffffff;
+    final err = lastError(w);
+    if (err == 'm' && m.s < 2) return Quiz.choice;
+    if (err == 'o' && w.buildable) return Quiz.build;
+    if (w.buildable && m.s >= 2 && h % 5 == 0) return Quiz.build;
+    if (m.s < 1 && h % 4 == 0) return Quiz.choice;
+    return Quiz.cloze;
+  }
+
+  /// wrong meanings to offer beside the right one: same part of speech, and the stronger the learner, the closer
+  List<Word> distractors(Word w, int n, {int? seed}) {
+    final r = Random(seed ?? now());
+    final hard = (_mem[w.id]?.s ?? 0) >= 4;
+    final pool = deck.tier(w.tier).where((x) => x.id != w.id && x.meaning != w.meaning).toList()..shuffle(r);
+    pool.sort((a, b) {
+      int score(Word x) => (x.pos == w.pos ? 0 : 2) + (hard && x.id[0] != w.id[0] ? 1 : 0);
+      return score(a).compareTo(score(b));
+    });
+    return pool.take(n).toList();
   }
 
   // ---------------------------------------------------------------- daily log
@@ -243,19 +304,35 @@ class Engine {
     return Plan(dueWords().length, freshWords(left).length, today[0] + today[1]);
   }
 
-  /// today's sitting: reviews first, a new word after every third one. At most 60 items.
-  List<Word> sitting({int extraFresh = 0}) {
+  /// today's sitting: reviews first, a new word after every third one. A new word is met by choosing its meaning
+  /// and returns a few cards later as a gap. At most 70 cards.
+  List<Card> sitting({int extraFresh = 0}) {
     final today = dayLog(dayKey(now()));
     final reviews = dueWords().take(48).toList();
     final fresh = freshWords(max(0, perDay - today[0]) + extraFresh);
-    final out = <Word>[];
+    final out = <Card>[];
+    final later = <int, Word>{};
     var r = 0, f = 0;
+    void add(Card c) {
+      out.add(c);
+      final w = later.remove(out.length);
+      if (w != null) out.add(Card(w, Quiz.cloze, false));
+    }
+
     while (r < reviews.length || f < fresh.length) {
       for (var i = 0; i < 3 && r < reviews.length; i++) {
-        out.add(reviews[r++]);
+        final w = reviews[r++];
+        add(Card(w, pickQuiz(w), false));
       }
-      if (f < fresh.length) out.add(fresh[f++]);
-      if (out.length >= 60) break;
+      if (f < fresh.length) {
+        final w = fresh[f++];
+        add(Card(w, Quiz.choice, true));
+        later[out.length + 3] = w;
+      }
+      if (out.length >= 70) break;
+    }
+    for (final w in later.values) {
+      out.add(Card(w, Quiz.cloze, false));
     }
     return out;
   }
@@ -266,7 +343,38 @@ class Engine {
   bool get cooling => cooldownUntil > now();
 
   /// the coronation trial for the next rank is open
-  bool get trialOpen => rank < maxRank && !cooling && stat(rank + 1).share >= openShare;
+  bool get trialOpen => rank < maxRank && !cooling && stage >= 2 && stat(rank + 1).share >= openShare;
+
+  // -- the three stages inside a rank (I, II, III) and their sub-bosses
+
+  static const stageShare = [0.27, 0.54];
+  static const subSize = 12;
+  static const subPass = 10;
+
+  /// 0, 1, 2 = I, II, III on the way to the next rank
+  int get stage => store.integer('stage').clamp(0, 2);
+  int get subCooldown => store.integer('subcool');
+
+  /// the sub-boss guarding the next stage can be fought
+  bool get subOpen => rank < maxRank && stage < 2 && subCooldown <= now() && stat(rank + 1).share >= stageShare[stage];
+
+  /// words for a sub-boss: the ones already met in the tier being learned
+  List<Word> subWords() {
+    final l = deck.tier(learning).where(seen).toList()..shuffle(Random(now()));
+    return l.take(subSize).toList();
+  }
+
+  bool finishSub(int right, int total) {
+    final pass = right >= subPass;
+    if (pass) {
+      store.set('stage', stage + 1);
+      _event('sub', rank, right, total);
+    } else {
+      store.set('subcool', now() + 4 * 3600000);
+      _event('subfail', rank, right, total);
+    }
+    return pass;
+  }
 
   List<Word> trialWords(int tier, int size) {
     final l = List<Word>.of(deck.tier(tier))..shuffle(Random(now()));
@@ -290,6 +398,7 @@ class Engine {
     final pass = right >= (total * trialPass / trialSize).ceil();
     if (pass) {
       store.set('rank', tier);
+      store.set('stage', 0);
       store.set('cool', 0);
       store.set('shaky', 0);
       store.set('win', <int>[]);
@@ -317,6 +426,7 @@ class Engine {
       }
     }
     store.set('rank', passed);
+    store.set('stage', 0);
     store.set('placed', 1);
     _event('place', passed, right, total);
   }
@@ -345,6 +455,7 @@ class Engine {
     if (!shaky || now() - shakySince < 7 * day) return false;
     final r = rank - 1;
     store.set('rank', r);
+    store.set('stage', 2);
     store.set('shaky', 0);
     store.set('win', <int>[]);
     _event('drop', r, 0, 0);

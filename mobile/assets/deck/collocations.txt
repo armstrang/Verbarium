@@ -1,0 +1,85 @@
+# Verbarium — kolokasi: pasangan kata yang lazim. Format: ranah|frasa dengan [jawaban]|pengecoh,pengecoh,pengecoh|arti
+1|[make] a decision|do,take,give|mengambil keputusan
+1|[do] homework|make,write,work|mengerjakan PR
+1|[take] a photo|make,do,put|mengambil foto
+1|[make] a mistake|do,take,have|membuat kesalahan
+1|[have] a shower|make,do,get in|mandi
+1|[pay] attention|give,put,make|memperhatikan
+1|[catch] a cold|take,get up,find|terkena pilek
+1|[keep] a promise|hold,do,save|menepati janji
+1|[tell] the truth|say,speak,talk|berkata jujur
+1|[save] time|keep,hold,win|menghemat waktu
+1|[heavy] rain|strong,big,hard|hujan lebat
+1|[strong] wind|heavy,big,hard|angin kencang
+1|[fast] food|quick,rapid,speedy|makanan cepat saji
+1|depend [on] the weather|of,from,in|bergantung pada cuaca
+1|interested [in] science|on,at,for|tertarik pada sains
+1|good [at] maths|in,on,with|pandai matematika
+1|listen [to] music|at,on,for|mendengarkan musik
+1|arrive [at] the station|to,in,on|tiba di stasiun
+1|[make] progress|do,take,get|membuat kemajuan
+1|[take] a break|make,do,give|beristirahat sejenak
+2|[conduct] research|make,perform up,build|melakukan penelitian
+2|[raise] awareness|rise,lift,grow|meningkatkan kesadaran
+2|[meet] a deadline|reach,catch,arrive|memenuhi tenggat
+2|[draw] a conclusion|pull,make up,take out|menarik kesimpulan
+2|[gain] experience|win,earn,take|memperoleh pengalaman
+2|[play] a role|do,make,act on|memainkan peran
+2|[pose] a threat|put,place,set|menimbulkan ancaman
+2|[reach] an agreement|arrive,get to,meet up|mencapai kesepakatan
+2|[set] a goal|put,place,fix up|menetapkan tujuan
+2|[take] responsibility|make,do,carry|mengambil tanggung jawab
+2|[run] a business|drive,lead up,move|menjalankan usaha
+2|[commit] a crime|do,make,perform|melakukan kejahatan
+2|a [sharp] rise|pointed,keen,cutting|kenaikan tajam
+2|a [steady] decline|still,stable up,fixed|penurunan yang terus-menerus
+2|[highly] likely|strongly,deeply,largely|sangat mungkin
+2|[deeply] concerned|highly,strongly,largely|sangat khawatir
+2|[widely] used|largely,highly,deeply|digunakan secara luas
+2|contribute [to] the debate|for,in,on|berkontribusi pada perdebatan
+2|result [in] delays|to,on,at|berakibat penundaan
+2|aware [of] the risks|about,on,for|sadar akan risikonya
+2|responsible [for] the error|of,to,about|bertanggung jawab atas kesalahan
+2|rely [on] imports|in,at,to|mengandalkan impor
+2|an increase [in] prices|of,on,at|kenaikan harga
+2|the reason [for] the delay|of,to,about|alasan penundaan
+2|[have] an impact|make,do,give|berdampak
+2|[address] an issue|speak,answer up,talk|menangani persoalan
+3|[exert] pressure|make,push,apply up|memberi tekanan
+3|[implement] a policy|make up,do,install|menerapkan kebijakan
+3|[undergo] surgery|make,pass,suffer up|menjalani operasi
+3|[yield] results|give up,grow,make out|membuahkan hasil
+3|[bear] the cost|carry out,hold up,take up|menanggung biaya
+3|[strike] a balance|hit,make up,beat|mencapai keseimbangan
+3|[lodge] a complaint|put,place up,stay|mengajukan keluhan
+3|[shed] light on the cause|throw up,drop,put|menjelaskan penyebabnya
+3|[mounting] evidence|climbing,raising,lifting|bukti yang makin banyak
+3|a [compelling] argument|forcing,pushing,obliging|argumen yang meyakinkan
+3|a [marked] improvement|signed,noted up,written|perbaikan yang nyata
+3|[bitterly] disappointed|sourly,sharply,hardly|sangat kecewa
+3|[inextricably] linked|inevitably,unavoidably,invisibly|terkait erat tak terpisahkan
+3|comply [with] the rules|to,on,by|mematuhi aturan
+3|adhere [to] the plan|with,on,at|berpegang pada rencana
+3|prone [to] errors|for,with,of|rentan terhadap kesalahan
+3|devoid [of] meaning|from,with,in|hampa makna
+3|[in] accordance with the law|on,at,by|sesuai dengan hukum
+3|[at] the expense of quality|on,in,by|dengan mengorbankan mutu
+3|[on] the verge of collapse|at,in,by|di ambang keruntuhan
+4|[curb] inflation|cut up,bend,hold on|mengekang inflasi
+4|[foster] innovation|grow up,feed,rise|menumbuhkan inovasi
+4|[stifle] debate|choke on,cover,close up|membungkam perdebatan
+4|[wield] influence|hold up,carry,swing|memegang pengaruh
+4|[dispel] a myth|throw,break up,clear off|menepis mitos
+4|[levy] a tax|rise,lift,place up|memungut pajak
+4|a [resounding] success|sounding,loud,noisy|keberhasilan gemilang
+4|a [foregone] conclusion|forgotten,former,passed|hasil yang sudah bisa ditebak
+4|[sweeping] reforms|brushing,cleaning,wiping|reformasi besar-besaran
+4|[scant] regard|scarce,rare,thin|sedikit sekali kepedulian
+4|[vested] interests|dressed,invested,clothed|kepentingan pribadi yang mengakar
+5|[mete] out punishment|meet,measure,mark|menjatuhkan hukuman
+5|[eke] out a living|edge,ease,earn|mencari nafkah dengan susah payah
+5|[hazard] a guess|risk up,danger,chance on|memberanikan diri menebak
+5|[wreak] havoc|wreck,work,make up|menimbulkan kekacauan
+5|a [moot] point|mute,mood,mock|pokok yang masih bisa diperdebatkan
+5|[abject] poverty|object,subject,reject|kemiskinan yang parah
+5|[bated] breath|baited,beaten,bathed|napas tertahan

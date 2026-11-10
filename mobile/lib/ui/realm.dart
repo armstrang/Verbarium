@@ -8,7 +8,9 @@ import 'package:flutter/material.dart';
 
 import '../app/app.dart';
 import '../engine/engine.dart';
+import 'pixel.dart';
 import 'root.dart';
+import 'run.dart' show stageName;
 import 'theme.dart';
 import 'widgets.dart';
 
@@ -24,10 +26,7 @@ class RealmTab extends StatelessWidget {
     final app = App.I;
     final e = app.engine;
     final rank = e.rank;
-    final next = min(rank + 1, Engine.maxRank);
-    final st = e.stat(next);
     final shares = [for (var t = 1; t <= 5; t++) e.stat(t).share];
-    final need = (st.total * Engine.openShare).ceil();
     return TabBody(
       children: [
         const Label('Negerimu'),
@@ -35,36 +34,11 @@ class RealmTab extends StatelessWidget {
         Text('${rankNames[rank]} di bawah panji ${bannerName(app.banner)}', style: T.display(31, pal.ink)),
         const SizedBox(height: 16),
         Rise(
-          child: Semantics(
-            label:
-                'Peta negeri. ${[for (var t = 1; t <= 5; t++) '${landNames[t - 1]} ${t <= rank ? 'dikuasai' : (t == rank + 1 ? 'sedang direbut' : 'belum terbuka')}'].join(', ')}.',
-            child: AspectRatio(
-              aspectRatio: 342 / 214,
-              child: TweenAnimationBuilder<double>(
-                tween: Tween(begin: 0, end: 1),
-                duration: look.calm ? Duration.zero : const Duration(milliseconds: 900),
-                curve: Curves.easeOutCubic,
-                builder: (context, t, _) => CustomPaint(painter: _MapPainter(pal, rank, shares, t)),
-              ),
-            ),
-          ),
+          child: _World(rank: rank, shares: shares),
         ),
         const SizedBox(height: 18),
-        if (rank < Engine.maxRank) ...[
-          Row(
-            children: [
-              Expanded(
-                child: Text('Menuju ${rankNames[next]}', style: T.body(16.5, pal.ink, w: FontWeight.w500)),
-              ),
-              Text('${st.solid} dari ${st.total} kata kukuh', style: T.body(15.5, pal.muted)),
-            ],
-          ),
-          const SizedBox(height: 8),
-          Bar(st.share, height: 6),
-          const SizedBox(height: 6),
-          Text('Ujian penobatan terbuka pada $need kata kukuh.', style: T.body(15, pal.muted)),
-          const SizedBox(height: 20),
-        ],
+        const FightCard(),
+        const SizedBox(height: 20),
         const Rule(),
         for (var r = 0; r <= Engine.maxRank; r++) _Rung(r, rank, app.banner),
         const SizedBox(height: 12),
@@ -91,6 +65,69 @@ class RealmTab extends StatelessWidget {
   }
 }
 
+/// The map with life on it: the hero walks in from the land already held and stops before the one being won,
+/// where the enemy of the hour stands.
+class _World extends StatelessWidget {
+  final int rank;
+  final List<double> shares;
+  const _World({required this.rank, required this.shares});
+
+  @override
+  Widget build(BuildContext context) {
+    final look = Look.of(context);
+    final g = App.I.game;
+    final en = g.enemy;
+    const towns = _MapPainter._towns;
+    final from = rank <= 1 ? const Offset(20, 176) : towns[rank - 2];
+    final at = rank == 0 ? const Offset(26, 170) : towns[rank - 1];
+    final foe = rank < 5 ? towns[rank] : null;
+    return Semantics(
+      label:
+          'Peta negeri. ${[for (var t = 1; t <= 5; t++) '${landNames[t - 1]} ${t <= rank ? 'dikuasai' : (t == rank + 1 ? 'sedang direbut' : 'belum terbuka')}'].join(', ')}.${en == null ? '' : ' ${en.name} menghadang.'}',
+      child: AspectRatio(
+        aspectRatio: 342 / 214,
+        child: LayoutBuilder(
+          builder: (context, box) {
+            final k = box.maxWidth / 342;
+            return TweenAnimationBuilder<double>(
+              tween: Tween(begin: 0, end: 1),
+              duration: look.calm ? Duration.zero : const Duration(milliseconds: 1500),
+              curve: Curves.easeInOut,
+              builder: (context, t, _) {
+                final p = Offset.lerp(from, at, t)!;
+                return Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Positioned.fill(child: CustomPaint(painter: _MapPainter(look.pal, rank, shares, t))),
+                    if (foe != null && en != null)
+                      Positioned(
+                        left: (foe.dx + 12) * k,
+                        top: (foe.dy - 30) * k,
+                        child: EnemySprite(sprite: en.sprite, tone: en.tone, size: (en.boss ? 34 : 28) * k),
+                      ),
+                    Positioned(
+                      left: (p.dx - 12) * k,
+                      top: (p.dy - 30) * k,
+                      child: HeroSprite(
+                        rank: rank,
+                        weapon: g.tone('weapon'),
+                        shield: g.tone('shield'),
+                        cloak: g.tone('cloak'),
+                        pose: t < 1 ? HeroPose.walk : HeroPose.idle,
+                        size: 26 * k,
+                      ),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
 class _Rung extends StatelessWidget {
   final int r, rank;
   final String banner;
@@ -101,7 +138,11 @@ class _Rung extends StatelessWidget {
     final pal = Look.of(context).pal;
     final info = Engine.ranks[r];
     final held = r <= rank;
-    final state = r < rank ? 'Dilewati' : (r == rank ? 'Gelarmu kini' : (r == rank + 1 ? 'Berikutnya' : 'Belum terbuka'));
+    final state = r < rank
+        ? 'Dilewati'
+        : (r == rank
+              ? 'Gelarmu kini${r < Engine.maxRank ? ' · tingkat ${stageName(App.I.engine.stage)}' : ''}'
+              : (r == rank + 1 ? 'Berikutnya' : 'Belum terbuka'));
     final score = banner == 'ielts' ? 'IELTS ${info.ielts}' : 'TOEFL iBT ${info.toefl} (skala lama ${info.toeflOld})';
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
