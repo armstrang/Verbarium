@@ -1,0 +1,284 @@
+# Verbarium — plain English definitions for 2-knight.txt: word|definition
+abandon|to leave and never return to
+absorb|to take in a liquid
+abstract|existing as an idea, not a thing
+academic|about study at schools and universities
+access|the right or means to reach something
+accompany|to go with
+accomplish|to succeed in finishing
+account|a report of what happened
+accumulate|to gather more and more over time
+accuse|to say that someone did wrong
+acquire|to get or gain
+adapt|to change to suit new conditions
+adequate|enough
+adjust|to change a little to make better
+admire|to respect and like
+adopt|to take up and use as your own
+advance|a movement forward
+advocate|to speak publicly in support of
+aggressive|ready to attack
+alter|to change
+alternative|another choice
+ambition|a strong wish to succeed
+analysis|a careful study of the parts of something
+annual|happening once a year
+anticipate|to expect and prepare for
+apparent|easy to see
+appeal|to be attractive to
+approach|a way of dealing with something
+appropriate|right for the situation
+approve|to agree officially to
+approximate|close but not exact
+aspect|one side or part of a matter
+assess|to judge the quality or amount of
+assign|to give as a task
+assist|to help
+associate|to connect in the mind
+assume|to accept as true without proof
+atmosphere|the mood of a place
+attach|to join one thing to another
+attempt|an effort to do something
+attract|to draw toward itself
+authority|the power to give orders
+barrier|something that blocks the way
+bias|an unfair leaning toward one side
+boundary|the line that marks the edge
+burden|a heavy load or duty
+capable|able to do something
+capacity|the amount that can be held
+category|a group of things of one type
+cease|to stop
+circumstance|a fact or condition around an event
+cite|to mention as proof
+civil|of ordinary people, not the army
+clarify|to make easier to understand
+collapse|to fall down suddenly
+colleague|a person you work with
+combine|to join into one
+comment|a remark that gives an opinion
+commit|to do something wrong or illegal
+communicate|to share information with others
+community|the people living in one area
+compete|to try to win against others
+complex|made of many connected parts
+component|one of the parts of a whole
+concentrate|to give all your attention
+concept|an idea
+conclude|to decide after thinking about the facts
+conduct|to carry out
+conference|a large formal meeting
+conflict|a serious fight or disagreement
+confirm|to say that something is certainly true
+confront|to face a problem directly
+consequence|a result of an action
+considerable|fairly large
+consist|to be made up of
+constant|happening all the time
+construct|to build
+consult|to ask for advice
+consume|to eat, drink or use up
+contact|communication with someone
+context|the words or situation around something
+contract|a written legal agreement
+contrast|a clear difference when compared
+contribute|to give to a shared effort
+convert|to change into another form
+cooperate|to work together
+criticize/criticise|to say what is wrong with
+crucial|extremely important
+currency|the money of a country
+decade|ten years
+decline|a fall in amount or quality
+define|to say what a word means
+demonstrate|to show clearly
+deny|to say that something is not true
+derive|to get from a source
+deserve|to have earned
+despite|without being stopped by
+detect|to notice something hard to see
+determine|to find out or decide
+device|a tool or machine made for a purpose
+devote|to give time or effort to
+dimension|a measurement of length, width or height
+disaster|a sudden event causing great harm
+display|to put where people can see
+distinct|clearly different
+distribute|to give out to many
+diverse|of many different kinds
+document|an official paper
+domestic|inside a country or home
+dominate|to have control over
+draft|a first version of a text
+efficient|working well without waste
+eliminate|to remove completely
+emerge|to come out into view
+emphasis|special importance given to something
+enable|to make possible
+encounter|to meet unexpectedly
+enhance|to improve the quality of
+enormous|very large
+ensure|to make certain
+entire|whole
+equipment|the tools needed for a job
+essential|completely necessary
+establish|to set up
+estimate|to guess a number carefully
+ethnic|about a group with a shared culture
+evaluate|to judge the value of
+eventually|in the end
+evolve|to develop slowly
+exceed|to be more than
+exclude|to leave out
+exhibit|to show in public
+expand|to become larger
+expert|a person with special knowledge
+exploit|to use unfairly for gain
+explore|to travel through to learn about
+export|to sell to another country
+expose|to uncover
+extend|to make longer
+external|on the outside
+extreme|very great in degree
+factor|one of the things that cause a result
+flexible|able to bend or change easily
+formula|a rule written in signs and numbers
+foundation|the base on which something is built
+framework|a structure of ideas that supports work
+frequent|happening often
+fundamental|basic and most important
+generate|to produce
+generation|all people born at about the same time
+genuine|real, not false
+grant|money given for a purpose
+guarantee|to promise that something will happen
+guideline|advice on how to do something
+highlight|to draw attention to
+identify|to say who or what something is
+illustrate|to make clear with examples or pictures
+image|a picture
+impact|a strong effect
+imply|to suggest without saying directly
+impose|to force on others
+impress|to cause admiration in
+incident|an event, often unpleasant
+indicate|to point to or show
+individual|a single person
+inevitable|certain to happen
+initial|first
+innovation|a new idea or method
+insight|a deep understanding
+inspect|to look at closely to check
+instance|an example
+institution|a large organization such as a bank or school
+instruct|to tell someone what to do
+intend|to plan
+intense|very strong
+interact|to act on each other
+internal|inside
+interpret|to explain the meaning of
+invest|to put money in to make more
+investigate|to try to find the facts about
+isolate|to keep apart from others
+justify|to show good reason for
+labor/labour|hard work, or workers as a group
+lack|the state of not having enough
+launch|to start or send out
+lecture|a talk given to teach a class
+legal|allowed by law
+link|a connection
+logic|correct reasoning
+maintain|to keep in good condition
+major|large and important
+majority|more than half
+manufacture|to make in a factory
+mature|fully grown
+maximum|the greatest possible
+mental|of the mind
+migrate|to move to another region
+minimum|the smallest possible
+minor|small and not important
+modify|to change slightly
+monitor|to watch and check over time
+motive|a reason for acting
+mutual|felt or done by both sides
+negative|bad, or saying no
+network|a system of connected lines or people
+neutral|not supporting either side
+objective|something you aim to reach
+obtain|to get
+occupy|to fill or live in
+oppose|to be against
+option|a choice
+outcome|the final result
+overall|including everything
+overcome|to defeat a difficulty
+participate|to take part
+partner|a person you work or live with
+perceive|to notice or understand in a certain way
+permanent|lasting for ever
+perspective|a way of looking at something
+phase|a stage in a process
+phenomenon|something that is seen to happen
+physical|of the body
+policy|a plan of action chosen by a government or group
+potential|ability that may develop
+precise|exact
+predict|to say what will happen
+pressure|force that pushes
+primary|first or main
+principle|a basic rule or belief
+priority|something that must be done first
+proceed|to go on
+professional|doing something as a paid job
+profit|money gained in business
+promote|to help something grow
+proportion|a part compared with the whole
+propose|to put forward as a plan
+prospect|the chance of future success
+publish|to print and sell
+pursue|to follow in order to catch or reach
+range|the limits between which something varies
+rapid|fast
+rate|the speed or amount of change
+react|to act in answer to something
+recover|to get well again
+reflect|to show or be a sign of
+reform|a change made to improve a system
+regulate|to control by rules
+reject|to refuse to accept
+relate|to be connected
+release|to set free
+relevant|connected with the matter
+reliable|able to be trusted
+rely|to depend on
+represent|to act or speak for
+reputation|what people think of someone
+resource|a supply that can be used
+respond|to answer
+restore|to bring back to a former state
+restrict|to limit
+retain|to keep
+revenue|money that a business or state receives
+reverse|to turn the other way
+revise|to change after checking
+rural|of the countryside
+satisfy|to give what is wanted
+scale|the size or level of something
+schedule|a plan of times
+sector|a part of the economy
+secure|safe
+seek|to look for
+sequence|the order in which things follow
+shift|a change of position
+significant|large enough to matter
+site|a place where something is or was
+specific|exact and particular
+stable|firm and not likely to change
+strategy|a plan for reaching a goal
+stress|worry caused by pressure
+substitute|a person or thing that takes another's place
+sufficient|enough
+summary|a short account of the main points
+survey|a study of opinions by asking questions
+sustain|to keep going

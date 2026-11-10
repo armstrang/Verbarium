@@ -375,3 +375,14 @@ word|a single unit of language
 work|to do a job
 world|the earth and all people on it
 worry|to feel afraid that something bad may happen
+worse|more bad
+wound|a cut or hole in the body
+wrap|to cover with paper or cloth
+write|to put words on paper
+wrong|not right
+yard|an area of ground next to a house
+year|twelve months
+yet|up to now
+young|not old
+zero|the number 0
+zone|an area marked off for a purpose
