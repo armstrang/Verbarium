@@ -71,3 +71,247 @@ culpable|deserving blame
 cumbersome|heavy and awkward
 cynical|believing people act only for themselves
 debilitate|to make weak
+decry|to criticize publicly
+deference|polite respect for another's wishes
+defiant|openly refusing to obey
+deft|quick and skilful
+deluge|a great flood
+demeanour/demeanor|the way a person behaves and looks
+deplore|to disapprove of strongly
+desolate|empty and sad
+despondent|very low in spirits
+destitute|without money or the means to live
+devoid|completely lacking
+devout|deeply religious
+dexterity|skill with the hands
+dichotomy|a division into two opposite parts
+digress|to leave the main subject
+diligent|working hard with care
+discord|disagreement
+disdain|the feeling that something is not worth respect
+disillusion|to destroy a pleasant false belief
+dismal|sad and poor in quality
+dispel|to drive away
+disquiet|a feeling of worry
+dissuade|to persuade not to do
+divulge|to reveal a secret
+duress|threats used to force someone
+earmark|to set aside for a purpose
+eclectic|drawn from many different sources
+efface|to rub out
+elated|very happy and proud
+elude|to escape from
+emanate|to come out from a source
+emancipate|to free from control
+embellish|to add details to make more attractive
+encroach|to move slowly onto another's ground
+endemic|regularly found in a place
+engender|to give rise to
+enigmatic|mysterious and hard to read
+enmity|a state of being enemies
+ensue|to follow as a result
+entrenched|firmly fixed and hard to change
+enumerate|to name one by one
+envoy|a messenger of a government
+epitome|a perfect example
+equanimity|calmness of mind
+erroneous|wrong
+eschew|to keep away from on purpose
+espouse|to take up and support
+evasive|avoiding a direct answer
+exalt|to praise highly
+exasperate|to annoy greatly
+excavate|to dig out carefully
+exhaustive|covering everything
+exhort|to urge strongly
+exorbitant|far too high in price
+exponent|a person who supports and explains an idea
+extol|to praise with enthusiasm
+exuberant|full of joyful energy
+facade|the front of a building
+fathom|to understand after much thought
+feeble|very weak
+fervour/fervor|very strong feeling
+fickle|often changing in mind
+flagrant|shockingly obvious
+fledgling|new and without experience
+flimsy|thin and weak
+foreseeable|that can be known in advance
+forgo|to do without
+forlorn|sad and left alone
+forthright|direct and honest
+fraught|filled with something unpleasant
+frivolous|not serious or sensible
+galvanize/galvanise|to shock into action
+glean|to collect bit by bit
+grapple|to struggle to deal with
+gregarious|fond of company
+grudging|given unwillingly
+guile|clever dishonesty
+gullible|easily tricked
+hapless|unlucky
+harbinger|a sign of what is to come
+heinous|very wicked
+heresy|a belief against accepted teaching
+hiatus|a break in activity
+hoard|to collect and hide away
+hypocrisy|the pretence of having better morals than you do
+idyllic|peaceful and perfect
+illicit|not allowed by law
+immaculate|perfectly clean
+immutable|never changing
+impasse|a point where no progress is possible
+impeccable|without any fault
+imperil|to put in danger
+impetuous|acting quickly without thought
+implausible|hard to believe
+implore|to beg earnestly
+impoverish|to make poor
+inadvertently|by accident
+incite|to stir up to violent action
+incongruous|out of place
+incumbent|the present holder of an office
+indict|to charge formally with a crime
+indignant|angry at unfairness
+inept|without skill
+infallible|never wrong
+ingrained|deeply fixed
+inimical|harmful or hostile
+innocuous|harmless
+insatiable|impossible to satisfy
+insinuate|to suggest something unpleasant indirectly
+insurmountable|too great to overcome
+intermittent|stopping and starting
+intrepid|fearless
+irate|very angry
+jeopardy|danger of loss
+jubilant|full of joy at success
+languish|to grow weak or be forgotten
+laud|to praise
+lethal|able to kill
+lofty|high and noble
+lull|a quiet period
+malice|the wish to harm
+mar|to spoil
+meagre/meager|very small in amount
+menace|a threat
+mire|to trap in difficulty
+misgiving|a feeling of doubt
+mollify|to soften the anger of
+momentous|of very great importance
+morose|gloomy and silent
+negligent|not taking proper care
+nonchalant|calm and unconcerned
+nullify|to make without legal force
+obdurate|stubbornly refusing to change
+obliterate|to wipe out completely
+obstinate|stubborn
+ominous|suggesting that something bad will happen
+onerous|heavy and hard to bear
+opaque|not clear
+opulent|rich and luxurious
+ostracize/ostracise|to shut out from a group
+oust|to force out of a position
+palpable|easily felt or noticed
+paltry|too small to matter
+parity|equality
+patronize/patronise|to treat as if less intelligent
+penchant|a strong liking
+perilous|full of danger
+perpetrate|to commit a crime
+perturb|to worry
+peruse|to read carefully
+placid|calm and still
+poignant|touching the feelings deeply
+ponder|to think about carefully
+precipitous|very steep or sudden
+predicament|a difficult situation
+preposterous|completely absurd
+prerogative|a special right
+presumptuous|too bold in taking liberties
+pretext|a false reason
+procure|to obtain with effort
+prodigy|a young person with amazing talent
+profuse|given in large amounts
+prolific|producing a great deal
+propagate|to spread or grow more of
+propitious|favourable
+prowess|great skill
+quandary|a state of not knowing what to do
+quell|to put an end to
+rampant|spreading without control
+rapport|a friendly understanding
+ravage|to cause great damage to
+rebuff|to refuse sharply
+recede|to move back
+reclusive|living alone and avoiding people
+redress|the setting right of a wrong
+refurbish|to repair and decorate
+relegate|to move to a lower place
+remorse|deep regret for a wrong
+renounce|to give up formally
+replenish|to fill again
+reprimand|to tell off officially
+repudiate|to reject as untrue
+rescind|to cancel officially
+resilience|the power to recover
+resolute|firm in purpose
+revere|to respect deeply
+rife|very common, said of bad things
+rudimentary|basic and not developed
+scant|hardly any
+scathing|bitterly critical
+secluded|quiet and hidden away
+serene|calm and peaceful
+shun|to avoid deliberately
+slander|false spoken words that harm a name
+sluggish|slow-moving
+solace|comfort in sorrow
+sombre/somber|dark and serious
+sparse|thinly spread
+sporadic|happening now and then
+squander|to waste
+staunch|firm and loyal
+steadfast|not changing in loyalty
+stifle|to hold back or choke
+stipulate|to state as a condition
+strenuous|needing great effort
+strife|angry conflict
+subdue|to bring under control
+subjugate|to conquer and rule
+subside|to become less
+substantiate|to give proof for
+sumptuous|rich and costly
+supplant|to take the place of
+surmise|to guess
+taciturn|saying very little
+tantamount|equal in effect
+tarnish|to spoil the shine or name of
+tenacity|firm determination
+thwart|to prevent from succeeding
+tirade|a long angry speech
+torrid|very hot or difficult
+tout|to praise in order to sell
+tractable|easy to deal with
+transgress|to go beyond a limit or rule
+trepidation|fear about what may happen
+truncate|to cut short
+tumult|noisy confusion
+unassuming|modest
+uncanny|strange and hard to explain
+unruly|hard to control
+unscathed|not hurt
+untenable|impossible to defend
+unwieldy|hard to manage because of size
+usurp|to take power without right
+vanquish|to defeat completely
+venerable|respected for age
+vestige|a small remaining trace
+vex|to annoy
+vindictive|wanting revenge
+vociferous|loud in opinion
+wane|to grow weaker
+wield|to hold and use
+wistful|sadly longing
+wrath|great anger
+zenith|the highest point
