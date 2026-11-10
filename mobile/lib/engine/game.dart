@@ -4,44 +4,66 @@
 ///
 /// Everything is kept under the store key `game`:
 ///   xp, n (answers), cr (fast answers), bc (best combo), acc (last 100 answers), ms (average gap time),
-///   wk {kind: [right, wrong]}, gear [ids], eq {slot: id}, feats [ids], title, dq/wq (daily and weekly quests)
+///   wk {kind: [right, wrong]}, gear [ids], eq {slot: id}, feats [ids], title, dq/wq (daily and weekly quests),
+///   jobs [job id per title held], hid {title: hidden job id}, bp (the build of the title being won: p, s, i, e and
+///   what the hidden jobs look at), bt (the build of the whole journey), ld (day of the last answer)
 library;
 
 import 'dart:math';
 
+import '../app/lang.dart';
 import '../data/deck.dart';
 import '../data/store.dart';
 import 'engine.dart';
+import 'jobs.dart';
 
 class Gear {
-  final String id, slot, name, from;
+  final String id, slot, _id, _en, _fromId, _fromEn;
   final int tone; // which colour the sprite takes (see ui/pixel.dart)
-  const Gear(this.id, this.slot, this.name, this.from, this.tone);
+  const Gear(this.id, this.slot, this._id, this._en, this._fromId, this._fromEn, this.tone);
+  String get name => tr(_id, _en);
+  String get from => _fromId.isEmpty ? tr('Bekal awal', 'What you set out with') : tr('Rampasan dari $_fromId', 'Taken from the $_fromEn');
 }
 
 class Feat {
-  final String id, name, text;
-  final String? title;
-  const Feat(this.id, this.name, this.text, [this.title]);
+  final String id, _nameId, _nameEn, _textId, _textEn;
+  final String? _titleId, _titleEn;
+  const Feat(this.id, this._nameId, this._nameEn, this._textId, this._textEn, [this._titleId, this._titleEn]);
+  String get name => tr(_nameId, _nameEn);
+  String get text => tr(_textId, _textEn);
+  String? get title => _titleId == null ? null : tr(_titleId, _titleEn!);
+  bool named(String s) => s == id || s == _titleId || s == _titleEn;
 }
 
 class Enemy {
-  final String name, sprite;
+  final String _id, _en, sprite;
   final int tone;
   final bool boss;
-  const Enemy(this.name, this.sprite, this.tone, this.boss);
+  const Enemy(this._id, this._en, this.sprite, this.tone, this.boss);
+  String get name => tr(_id, _en);
 }
 
 class Quest {
-  final String id, text;
+  final String id;
   final int goal, xp;
   int prog;
   bool claimed;
-  Quest(this.id, this.text, this.goal, this.xp, [this.prog = 0, this.claimed = false]);
+  Quest(this.id, this.goal, this.xp, [this.prog = 0, this.claimed = false]);
   bool get done => prog >= goal;
-  Map<String, dynamic> toJson() => {'id': id, 't': text, 'g': goal, 'x': xp, 'p': prog, 'c': claimed ? 1 : 0};
-  static Quest from(Map<String, dynamic> m) =>
-      Quest(m['id'] as String, m['t'] as String, (m['g'] as num).toInt(), (m['x'] as num).toInt(), (m['p'] as num).toInt(), m['c'] == 1);
+
+  /// said in the language that is on now, so a quest made yesterday in another language still reads right
+  String get text => switch (id) {
+    'rev' => tr('Ulang $goal kata', 'Review $goal words'),
+    'new' => tr('Pelajari $goal kata baru', 'Learn $goal new words'),
+    'weak' => tr('Rebut kembali $goal kata yang pernah kamu lupa', 'Win back $goal words you once forgot'),
+    'clean' => tr('Isi $goal celah tanpa bantuan', 'Fill $goal gaps without help'),
+    'combo' => tr('Raih combo $goal', 'Reach a combo of $goal'),
+    'fast' => tr('Jawab $goal celah di bawah enam detik', 'Answer $goal gaps in under six seconds'),
+    'days5' => tr('Belajar $goal hari dalam minggu ini', 'Study on $goal days this week'),
+    _ => tr('Jawab $goal pertanyaan', 'Answer $goal questions'),
+  };
+  Map<String, dynamic> toJson() => {'id': id, 'g': goal, 'x': xp, 'p': prog, 'c': claimed ? 1 : 0};
+  static Quest from(Map<String, dynamic> m) => Quest(m['id'] as String, (m['g'] as num).toInt(), (m['x'] as num).toInt(), (m['p'] as num).toInt(), m['c'] == 1);
 }
 
 /// what one answer earned, for the screen to show
@@ -54,46 +76,68 @@ class Reward {
 
 class Game {
   static const gear = [
-    Gear('w0', 'weapon', 'Tongkat kayu', 'Bekal awal', 0),
-    Gear('w1', 'weapon', 'Pedang besi', 'Rampasan dari Kepala Bandit', 1),
-    Gear('w2', 'weapon', 'Pedang kesatria', 'Rampasan dari Ksatria Hitam', 2),
-    Gear('w3', 'weapon', 'Pedang perak', 'Rampasan dari Baron Tiran', 3),
-    Gear('w4', 'weapon', 'Pedang adipati', 'Rampasan dari Adipati Pengkhianat', 4),
-    Gear('w5', 'weapon', 'Pedang raja', 'Rampasan dari Naga Tua', 5),
-    Gear('s1', 'shield', 'Perisai kayu', 'Rampasan dari Serigala Hutan', 0),
-    Gear('s2', 'shield', 'Perisai besi', 'Rampasan dari Bandit Jalanan', 1),
-    Gear('s3', 'shield', 'Perisai baja', 'Rampasan dari Tengkorak Penjaga', 2),
-    Gear('s4', 'shield', 'Perisai perak', 'Rampasan dari Gargoyle', 3),
-    Gear('s5', 'shield', 'Perisai emas', 'Rampasan dari Penjaga Takhta', 5),
-    Gear('c1', 'cloak', 'Jubah cokelat', 'Rampasan dari Babi Hutan', 0),
-    Gear('c2', 'cloak', 'Jubah hijau', 'Rampasan dari Pemanah Liar', 1),
-    Gear('c3', 'cloak', 'Jubah merah', 'Rampasan dari Penyihir Menara', 2),
-    Gear('c4', 'cloak', 'Jubah biru', 'Rampasan dari Ksatria Bayangan', 3),
-    Gear('c5', 'cloak', 'Jubah ungu', 'Rampasan dari Raja Bayangan', 4),
+    Gear('w0', 'weapon', 'Tongkat kayu', 'Wooden stick', '', '', 0),
+    Gear('w1', 'weapon', 'Senjata besi', 'Iron arms', 'Kepala Bandit', 'Bandit Chief', 1),
+    Gear('w2', 'weapon', 'Senjata kesatria', 'Knightly arms', 'Ksatria Hitam', 'Black Knight', 2),
+    Gear('w3', 'weapon', 'Senjata perak', 'Silver arms', 'Baron Tiran', 'Tyrant Baron', 3),
+    Gear('w4', 'weapon', 'Senjata adipati', 'Ducal arms', 'Adipati Pengkhianat', 'Traitor Duke', 4),
+    Gear('w5', 'weapon', 'Senjata raja', 'Royal arms', 'Naga Tua', 'Old Dragon', 5),
+    Gear('s1', 'shield', 'Perisai kayu', 'Wooden shield', 'Serigala Hutan', 'Forest Wolf', 0),
+    Gear('s2', 'shield', 'Perisai besi', 'Iron shield', 'Bandit Jalanan', 'Highwayman', 1),
+    Gear('s3', 'shield', 'Perisai baja', 'Steel shield', 'Tengkorak Penjaga', 'Skeleton Guard', 2),
+    Gear('s4', 'shield', 'Perisai perak', 'Silver shield', 'Gargoyle', 'Gargoyle', 3),
+    Gear('s5', 'shield', 'Perisai emas', 'Golden shield', 'Penjaga Takhta', 'Throne Guard', 5),
+    Gear('c1', 'cloak', 'Jubah cokelat', 'Brown cloak', 'Babi Hutan', 'Wild Boar', 0),
+    Gear('c2', 'cloak', 'Jubah hijau', 'Green cloak', 'Pemanah Liar', 'Wild Archer', 1),
+    Gear('c3', 'cloak', 'Jubah merah', 'Red cloak', 'Penyihir Menara', 'Tower Sorcerer', 2),
+    Gear('c4', 'cloak', 'Jubah biru', 'Blue cloak', 'Ksatria Bayangan', 'Shadow Knight', 3),
+    Gear('c5', 'cloak', 'Jubah ungu', 'Purple cloak', 'Raja Bayangan', 'Shadow King', 4),
   ];
 
   /// per rank held (0..4): sub-boss I, sub-boss II, the boss of the coronation
   static const enemies = [
-    [Enemy('Serigala Hutan', 'wolf', 0, false), Enemy('Babi Hutan', 'boar', 0, false), Enemy('Kepala Bandit', 'bandit', 0, true)],
-    [Enemy('Bandit Jalanan', 'bandit', 1, false), Enemy('Pemanah Liar', 'bandit', 2, false), Enemy('Ksatria Hitam', 'knight', 0, true)],
-    [Enemy('Tengkorak Penjaga', 'skeleton', 0, false), Enemy('Penyihir Menara', 'mage', 0, false), Enemy('Baron Tiran', 'knight', 1, true)],
-    [Enemy('Gargoyle', 'gargoyle', 0, false), Enemy('Ksatria Bayangan', 'knight', 2, false), Enemy('Adipati Pengkhianat', 'mage', 1, true)],
-    [Enemy('Penjaga Takhta', 'knight', 3, false), Enemy('Raja Bayangan', 'skeleton', 1, false), Enemy('Naga Tua', 'dragon', 0, true)],
+    [
+      Enemy('Serigala Hutan', 'Forest Wolf', 'wolf', 0, false),
+      Enemy('Babi Hutan', 'Wild Boar', 'boar', 0, false),
+      Enemy('Kepala Bandit', 'Bandit Chief', 'bandit', 0, true),
+    ],
+    [
+      Enemy('Bandit Jalanan', 'Highwayman', 'bandit', 1, false),
+      Enemy('Pemanah Liar', 'Wild Archer', 'bandit', 2, false),
+      Enemy('Ksatria Hitam', 'Black Knight', 'knight', 0, true),
+    ],
+    [
+      Enemy('Tengkorak Penjaga', 'Skeleton Guard', 'skeleton', 0, false),
+      Enemy('Penyihir Menara', 'Tower Sorcerer', 'mage', 0, false),
+      Enemy('Baron Tiran', 'Tyrant Baron', 'knight', 1, true),
+    ],
+    [
+      Enemy('Gargoyle', 'Gargoyle', 'gargoyle', 0, false),
+      Enemy('Ksatria Bayangan', 'Shadow Knight', 'knight', 2, false),
+      Enemy('Adipati Pengkhianat', 'Traitor Duke', 'mage', 1, true),
+    ],
+    [
+      Enemy('Penjaga Takhta', 'Throne Guard', 'knight', 3, false),
+      Enemy('Raja Bayangan', 'Shadow King', 'skeleton', 1, false),
+      Enemy('Naga Tua', 'Old Dragon', 'dragon', 0, true),
+    ],
   ];
   static const _subDrops = ['s1', 'c1', 's2', 'c2', 's3', 'c3', 's4', 'c4', 's5', 'c5'];
 
   static const feats = [
-    Feat('first', 'Langkah pertama', 'Menjawab kata pertamamu'),
-    Feat('n1000', 'Seribu jawaban', 'Menjawab 1.000 kali', 'Si Rajin'),
-    Feat('s100', 'Seratus kata kukuh', '100 kata kukuh', 'Si Tekun'),
-    Feat('s500', 'Lima ratus kata kukuh', '500 kata kukuh', 'Penjaga Kata'),
-    Feat('s1000', 'Seribu kata kukuh', '1.000 kata kukuh', 'Empu Kata'),
-    Feat('streak7', 'Tujuh hari', 'Belajar 7 hari beruntun', 'Si Setia'),
-    Feat('streak30', 'Tiga puluh hari', 'Belajar 30 hari beruntun', 'Yang Tak Tergoyahkan'),
-    Feat('combo20', 'Dua puluh beruntun', 'Combo 20 jawaban benar', 'Si Teliti'),
-    Feat('crit50', 'Tangan cepat', '50 jawaban di bawah enam detik', 'Si Cepat'),
-    Feat('boss1', 'Penakluk pertama', 'Mengalahkan boss pertamamu', 'Penakluk'),
-    Feat('perfect', 'Tanpa cela', 'Mengalahkan boss tanpa satu pun salah', 'Tanpa Cela'),
+    Feat('first', 'Langkah pertama', 'The first step', 'Menjawab kata pertamamu', 'Answered your first word'),
+    Feat('n1000', 'Seribu jawaban', 'A thousand answers', 'Menjawab 1.000 kali', 'Answered 1,000 times', 'Si Rajin', 'the Diligent'),
+    Feat('s100', 'Seratus kata kukuh', 'A hundred solid words', '100 kata kukuh', '100 solid words', 'Si Tekun', 'the Steady'),
+    Feat('s500', 'Lima ratus kata kukuh', 'Five hundred solid words', '500 kata kukuh', '500 solid words', 'Penjaga Kata', 'Keeper of Words'),
+    Feat('s1000', 'Seribu kata kukuh', 'A thousand solid words', '1.000 kata kukuh', '1,000 solid words', 'Empu Kata', 'Master of Words'),
+    Feat('streak7', 'Tujuh hari', 'Seven days', 'Belajar 7 hari beruntun', 'Studied 7 days in a row', 'Si Setia', 'the Faithful'),
+    Feat('streak30', 'Tiga puluh hari', 'Thirty days', 'Belajar 30 hari beruntun', 'Studied 30 days in a row', 'Yang Tak Tergoyahkan', 'the Unshaken'),
+    Feat('combo20', 'Dua puluh beruntun', 'Twenty in a row', 'Combo 20 jawaban benar', 'A combo of 20 right answers', 'Si Teliti', 'the Careful'),
+    Feat('crit50', 'Tangan cepat', 'Quick hand', '50 jawaban kritis', '50 critical answers', 'Si Cepat', 'the Swift'),
+    Feat('boss1', 'Penakluk pertama', 'First conquest', 'Mengalahkan boss pertamamu', 'Beat your first boss', 'Penakluk', 'the Conqueror'),
+    Feat('perfect', 'Tanpa cela', 'Flawless', 'Mengalahkan boss tanpa satu pun salah', 'Beat a boss without a single miss', 'Tanpa Cela', 'the Flawless'),
+    Feat('jobs3', 'Tiga jalan', 'Three paths', 'Memegang tiga job berturut-turut', 'Held three jobs in turn', 'Sang Pengelana', 'the Wayfarer'),
+    Feat('secret', 'Jalan tersembunyi', 'A hidden path', 'Menemukan satu job tersembunyi', 'Found a hidden job', 'Sang Penemu', 'the Finder'),
   ];
 
   static const critMs = 6000;
@@ -144,10 +188,15 @@ class Game {
 
   /// Call once per graded answer. [err]: '' none, 's' a spelling slip, 'f' the wrong form, 'm' meaning not known,
   /// 'o' wrong order. [ms] = time taken. Returns what to show.
-  Reward onAnswer(Word w, Quiz quiz, Grade g, int ms, {String err = '', bool fresh = false, bool hadLapses = false}) {
+  Reward onAnswer(Word w, Quiz quiz, Grade g, int ms, {String err = '', bool fresh = false, bool hadLapses = false, double stab = 0}) {
     final right = g != Grade.wrong;
     final news = <String>[];
     _g['n'] = _int('n') + 1;
+    final today = Engine.dayKey(e.now());
+    final firstToday = _g['ld'] != today;
+    _g['ld'] = today;
+    final hour = DateTime.fromMillisecondsSinceEpoch(e.now()).hour;
+    final night = hour >= 22 || hour < 5;
     final acc = (_g['acc'] ??= <dynamic>[]) as List;
     acc.add(right ? 1 : 0);
     if (acc.length > 100) acc.removeRange(0, acc.length - 100);
@@ -171,19 +220,58 @@ class Game {
 
     combo = right ? combo + 1 : 0;
     if (combo > _int('bc')) _g['bc'] = combo;
-    final crit = right && quiz == Quiz.cloze && g == Grade.clean && ms > 0 && ms < critMs;
+    final crit = right && quiz == Quiz.cloze && g == Grade.clean && ms > 0 && ms < critMs + 1000 * perk('critWin');
     if (crit) _g['cr'] = _int('cr') + 1;
+    final cleanGap = quiz == Quiz.cloze && g == Grade.clean;
+    final longHeld = right && !fresh && stab >= Engine.solidDays;
 
     var gain = 0;
     if (right) {
       gain = switch (quiz) {
-        Quiz.cloze => g == Grade.clean ? 10 : 5,
-        Quiz.build => 6,
-        Quiz.choice => 3,
+        Quiz.cloze => g == Grade.clean ? 10 + perk('xpCloze') : 5,
+        Quiz.build => 6 + perk('xpBuild'),
+        Quiz.choice => 3 + perk('xpChoice'),
       };
-      gain += min(5, combo ~/ 3);
-      if (crit) gain += 3;
+      gain += min(5 + perk('comboCap'), combo ~/ 3);
+      if (crit) gain += 3 + perk('critXp');
+      if (cleanGap && w.inflected) gain += perk('formXp');
+      if (longHeld) gain += perk('solidXp');
+      if (hadLapses && cleanGap) gain += perk('lapseXp');
+      if (night) gain += perk('nightXp');
+      if (firstToday) gain += perk('dayXp');
+      gain += perk('xpAll');
     }
+
+    // the build: what kind of learner this answer shows
+    _add('n', 1);
+    if (night) _add('nt', 1);
+    if (combo > _b('bc')) _bp['bc'] = combo;
+    if (right) {
+      if (quiz == Quiz.cloze) {
+        _add('p', g == Grade.clean ? 2 : 1);
+        if (cleanGap && w.inflected) _add('p', 1);
+        if (crit) {
+          _add('s', 4);
+        } else if (cleanGap && ms > 0 && ms < 10000) {
+          _add('s', 1);
+        }
+        if (ms > 0) {
+          _add('cz', 1);
+          _add('czms', ms);
+        }
+      } else if (quiz == Quiz.build) {
+        _add('s', ms > 0 && ms < 15000 ? 3 : 1);
+      } else {
+        _add('i', 1);
+        if (ms > 0 && ms < 4000) _add('s', 1);
+      }
+      if (longHeld) _add('i', 4);
+      if (hadLapses) _add('i', 2);
+    }
+    if (!fresh) _add('e', 1);
+    if (firstToday) _add('e', e.streak >= 3 ? 12 : 8);
+    final dayAnswers = e.dayLog(today);
+    if (dayAnswers[0] + dayAnswers[1] > 30) _add('e', 1);
 
     // quests
     for (final q in [...daily, ...weekly]) {
@@ -205,12 +293,12 @@ class Game {
         case 'ans150':
           q.prog++;
       }
-      if (q.prog != before && q.done) news.add('Quest selesai: ${q.text}');
+      if (q.prog != before && q.done) news.add(tr('Quest selesai: ${q.text}', 'Quest done: ${q.text}'));
     }
     _saveQuests();
 
     final up = gain > 0 && _gain(gain);
-    if (up) news.add('Naik ke level $level');
+    if (up) news.add(_levelNews);
     news.addAll(_checkFeats());
     store.touch();
     return Reward(gain, combo, crit, up, news);
@@ -220,10 +308,15 @@ class Game {
   Reward onColloc(bool right) {
     _wk('c', right);
     combo = right ? combo + 1 : 0;
-    final up = right && _gain(4);
+    final gain = right ? 4 + perk('xpColloc') + perk('xpAll') : 0;
+    if (right) _add('p', 2);
+    _add('n', 1);
+    final up = right && _gain(gain);
     store.touch();
-    return Reward(right ? 4 : 0, combo, false, up, up ? ['Naik ke level $level'] : const []);
+    return Reward(gain, combo, false, up, up ? [_levelNews] : const []);
   }
+
+  String get _levelNews => tr('Naik ke level $level', 'Level $level reached');
 
   // ---------------------------------------------------------------- figures (0..100)
 
@@ -321,29 +414,156 @@ class Game {
   /// after a fight is won: experience, loot, feats. [rankBefore]/[stageBefore] = where the learner stood.
   List<String> onVictory(int rankBefore, int stageBefore, bool boss, bool flawless) {
     final news = <String>[];
-    if (_gain(boss ? 120 : 50)) news.add('Naik ke level $level');
+    if (_gain((boss ? 120 : 50) * (100 + perk('winXp')) ~/ 100)) news.add(_levelNews);
     final id = boss ? 'w${rankBefore + 1}' : _subDrops[min(_subDrops.length - 1, rankBefore * 2 + stageBefore)];
     final it = _grant(id);
-    if (it != null) news.add('Rampasan: ${it.name}');
-    final f = (_g['feats'] ??= <dynamic>[]) as List;
-    if (boss && !f.contains('boss1')) {
-      f.add('boss1');
-      news.add('Pencapaian: Penakluk pertama');
-    }
-    if (boss && flawless && !f.contains('perfect')) {
-      f.add('perfect');
-      news.add('Pencapaian: Tanpa cela');
-    }
+    if (it != null) news.add(tr('Rampasan: ${it.name}', 'Loot: ${it.name}'));
+    if (boss) news.addAll(_feat('boss1'));
+    if (boss && flawless) news.addAll(_feat('perfect'));
     store.touch();
     return news;
+  }
+
+  List<String> _feat(String id) {
+    final f = (_g['feats'] ??= <dynamic>[]) as List;
+    if (f.contains(id)) return const [];
+    f.add(id);
+    final name = feats.firstWhere((x) => x.id == id).name;
+    return [tr('Pencapaian: $name', 'Feat: $name')];
+  }
+
+  // ---------------------------------------------------------------- the build and the jobs
+
+  Map<String, dynamic> get _bp => (_g['bp'] ??= <String, dynamic>{}) as Map<String, dynamic>;
+  int _b(String k) => (_bp[k] as num?)?.toInt() ?? 0;
+  void _add(String k, int n) => _bp[k] = _b(k) + n;
+
+  /// the build of the title being won now
+  Build get build => Build([_b('p'), _b('s'), _b('i'), _b('e')]);
+
+  /// the build of the whole journey
+  Build get career {
+    final t = (_g['bt'] as List?)?.map((x) => (x as num).toInt()).toList();
+    return build + Build(t != null && t.length == 4 ? t : const [0, 0, 0, 0]);
+  }
+
+  /// what decides a job when no build has been gathered (a title won before jobs existed, or by placement
+  /// before the first answer): the four figures of the character
+  Build get _basis {
+    final b = build;
+    return b.total >= 20 ? b : Build([accuracy + 1, speed, memory, diligence]);
+  }
+
+  List<dynamic> get _jobs {
+    final l = (_g['jobs'] ??= <dynamic>['peasant']) as List;
+    if (l.isEmpty) l.add('peasant');
+    return l;
+  }
+
+  void _fill(int upTo) {
+    final l = _jobs;
+    while (l.length <= upTo) {
+      l.add(Jobs.natural(l.length, Jobs.byId(l.last as String), _basis, career).id);
+      store.touch();
+    }
+  }
+
+  /// the job held at title [t]: the hidden one when one was earned there, otherwise the tree's
+  Job jobAt(int t) {
+    _fill(t);
+    final h = (_g['hid'] as Map?)?['$t'] as String?;
+    return Jobs.byId(h ?? _jobs[t] as String);
+  }
+
+  Job get job => jobAt(e.rank);
+
+  /// the tree's own job at the title held (a hidden job keeps the branch underneath it)
+  Job get branch {
+    _fill(e.rank);
+    return Jobs.byId(_jobs[e.rank] as String);
+  }
+
+  /// the jobs of the path so far, Peasant first
+  List<Job> get path => [for (var t = 0; t <= e.rank; t++) jobAt(t)];
+
+  /// every job ever held, for the map (a title lost keeps what was seen)
+  Set<String> get known => {...((_g['seen'] as List?) ?? const []).cast<String>(), for (final j in path) j.id};
+
+  /// the perks of the whole path add up
+  int perk(String kind) {
+    var n = 0;
+    for (var t = 1; t <= e.rank; t++) {
+      final p = jobAt(t).perk;
+      if (p.kind == kind) n += p.v;
+    }
+    return n;
+  }
+
+  /// the branches open at the next title, and the one the build points to now (null before any answer)
+  List<Job> get nextJobs => e.rank >= Engine.maxRank ? const [] : Jobs.children(branch);
+  Job? get heading => e.rank >= Engine.maxRank || build.total < 20 ? null : Jobs.natural(e.rank + 1, branch, build, career);
+
+  bool _letterHeld(int tier) {
+    final by = <String, List<Word>>{};
+    for (final w in e.deck.tier(tier)) {
+      by.putIfAbsent(w.id[0], () => []).add(w);
+    }
+    return by.values.any((l) => l.length >= 12 && l.every((w) => e.solid(w) && (e.mem(w)?.lapses ?? 1) == 0));
+  }
+
+  /// Right after a coronation: the build of the title just won decides the job. Returns it, with news lines.
+  (Job, List<String>) onPromotion(int tier, bool flawless) {
+    final l = _jobs;
+    _fill(tier - 1);
+    if (l.length > tier) l.removeRange(tier, l.length);
+    final hid = (_g['hid'] ??= <String, dynamic>{}) as Map;
+    hid.removeWhere((k, _) => (int.tryParse('$k') ?? 0) >= tier);
+    final b = _basis, c = career;
+    final natural = Jobs.natural(tier, Jobs.byId(l.last as String), b, c);
+    l.add(natural.id);
+    final secret = Jobs.hiddenFor(tier, build, c, {
+      'n': _b('n'),
+      'nt': _b('nt'),
+      'bc': _b('bc'),
+      'cz': _b('cz'),
+      'czms': _b('czms'),
+      'letter': tier == 3 && _letterHeld(tier) ? 1 : 0,
+      'flawless': flawless ? 1 : 0,
+    });
+    if (secret != null) hid['$tier'] = secret.id;
+    final got = secret ?? natural;
+    final seen = (_g['seen'] ??= <dynamic>[]) as List;
+    for (final j in path) {
+      if (!seen.contains(j.id)) seen.add(j.id);
+    }
+    // the build starts again for the next title; the journey keeps the sum
+    _g['bt'] = c.v;
+    _g['bp'] = <String, dynamic>{};
+    e.note('job', tier, extra: {'j': got.id});
+    final news = <String>[tr('Jalan baru: ${got.name}', 'A new path: ${got.name}'), got.perk.text];
+    if (tier >= 3) news.addAll(_feat('jobs3'));
+    if (secret != null) news.addAll(_feat('secret'));
+    store.touch();
+    return (got, news);
   }
 
   // ---------------------------------------------------------------- feats and titles
 
   List<String> get earned => ((_g['feats'] as List?) ?? const []).cast<String>();
-  String get title => _g['title'] as String? ?? '';
-  void setTitle(String t) {
-    _g['title'] = t;
+
+  /// the honorary title worn, in the language that is on (kept as the feat's id; older saves hold the words)
+  String get title => titleFeat?.title ?? '';
+  Feat? get titleFeat {
+    final t = _g['title'] as String? ?? '';
+    if (t.isEmpty) return null;
+    for (final f in feats) {
+      if (f.title != null && f.named(t)) return f;
+    }
+    return null;
+  }
+
+  void setTitle(String featId) {
+    _g['title'] = featId;
     store.touch();
   }
 
@@ -365,7 +585,8 @@ class Game {
     want.forEach((id, ok) {
       if (ok && !f.contains(id)) {
         f.add(id);
-        news.add('Pencapaian: ${feats.firstWhere((x) => x.id == id).name}');
+        final name = feats.firstWhere((x) => x.id == id).name;
+        news.add(tr('Pencapaian: $name', 'Feat: $name'));
       }
     });
     return news;
@@ -405,12 +626,12 @@ class Game {
         if ((e.mem(w)?.lapses ?? 0) > 0) lapsed++;
       }
       final pool = <Quest>[
-        if (due >= 5) Quest('rev', 'Ulang ${due.clamp(5, 20)} kata', due.clamp(5, 20), 30),
-        if (fresh > 0) Quest('new', 'Pelajari $fresh kata baru', fresh, 40),
-        if (lapsed >= 5) Quest('weak', 'Rebut kembali 5 kata yang pernah kamu lupa', 5, 45),
-        Quest('clean', 'Isi 10 celah tanpa bantuan', 10, 35),
-        Quest('combo', 'Raih combo 8', 8, 30),
-        Quest('fast', 'Jawab 5 celah di bawah enam detik', 5, 35),
+        if (due >= 5) Quest('rev', due.clamp(5, 20), 30),
+        if (fresh > 0) Quest('new', fresh, 40),
+        if (lapsed >= 5) Quest('weak', 5, 45),
+        Quest('clean', 10, 35),
+        Quest('combo', 8, 30),
+        Quest('fast', 5, 35),
       ];
       final r = Random(int.parse(key));
       final head = pool.take(pool.length - 3).toList();
@@ -422,7 +643,7 @@ class Game {
   List<Quest> get weekly {
     final key = _weekKey;
     if (_weekly != null && (_g['wq'] as Map?)?['k'] == key) return _weekly!;
-    return _weekly = _load('wq', key, () => [Quest('days5', 'Belajar 5 hari dalam minggu ini', 5, 150), Quest('ans150', 'Jawab 150 pertanyaan', 150, 120)]);
+    return _weekly = _load('wq', key, () => [Quest('days5', 5, 150), Quest('ans150', 150, 120)]);
   }
 
   void _saveQuests() {
@@ -443,14 +664,17 @@ class Game {
     }
   }
 
+  /// what a quest pays, with the perks of the path
+  int questXp(Quest q) => q.xp * (100 + perk('questXp')) ~/ 100;
+
   /// takes a finished quest's reward; returns news (level up)
   List<String> claim(Quest q) {
     if (!q.done || q.claimed) return const [];
     q.claimed = true;
-    final up = _gain(q.xp);
+    final up = _gain(questXp(q));
     _saveQuests();
     store.touch();
-    return [if (up) 'Naik ke level $level'];
+    return [if (up) _levelNews];
   }
 
   // ---------------------------------------------------------------- advice
@@ -459,12 +683,27 @@ class Game {
 
   /// the weakest side of the learner right now, as a sentence; null when nothing stands out
   String? weakness() {
-    const text = {
-      's': 'Ejaanmu sering meleset satu huruf. Pelan sedikit saat mengetik kata panjang.',
-      'f': 'Artinya sudah kamu pegang, bentuk katanya yang sering meleset. Perhatikan kata sebelum celah.',
-      'm': 'Banyak arti yang belum melekat. Hari ini kata baru dikurangi, ulangan diperbanyak.',
-      'o': 'Susunan kalimatmu masih goyah. Kalimat pendek akan lebih sering muncul untuk disusun.',
-      'c': 'Pasangan kata (kolokasi) perlu diasah. Kartu kolokasi akan lebih sering muncul.',
+    final text = {
+      's': tr(
+        'Ejaanmu sering meleset satu huruf. Pelan sedikit saat mengetik kata panjang.',
+        'Your spelling is often one letter off. Slow down a little on long words.',
+      ),
+      'f': tr(
+        'Artinya sudah kamu pegang, bentuk katanya yang sering meleset. Perhatikan kata sebelum celah.',
+        'You have the meaning; it is the form of the word that slips. Look at the words before the gap.',
+      ),
+      'm': tr(
+        'Banyak arti yang belum melekat. Ulangi dulu sebelum menambah kata baru.',
+        'Many meanings have not settled yet. Review before taking on new words.',
+      ),
+      'o': tr(
+        'Susunan kalimatmu masih goyah. Kalimat pendek akan lebih sering muncul untuk disusun.',
+        'Your word order still wavers. Short sentences will come up more often to be built.',
+      ),
+      'c': tr(
+        'Pasangan kata (kolokasi) perlu diasah. Kartu kolokasi akan lebih sering muncul.',
+        'Partner words (collocations) need work. Collocation cards will come up more often.',
+      ),
     };
     String? worst;
     var rate = 0.25;
@@ -492,20 +731,35 @@ class Game {
     final out = <String>[];
     final en = enemy;
     if (e.shaky) {
-      out.add('Gelarmu goyah. Pertahankan dulu sebelum hal lain.');
+      out.add(tr('Gelarmu goyah. Pertahankan dulu sebelum hal lain.', 'Your title wavers. Defend it before anything else.'));
     } else if (en != null && fightOpen) {
-      out.add('${en.name} bisa dilawan sekarang. Peluang menangmu sekitar ${winChance()}%.');
+      out.add(
+        tr(
+          '${en.name} bisa dilawan sekarang. Peluang menangmu sekitar ${winChance()}%.',
+          'The ${en.name} can be fought now. Your chance of winning is about ${winChance()}%.',
+        ),
+      );
     }
     if (p.reviews > 0 && p.fresh > 0) {
-      out.add('Mulai dari ${p.reviews} ulangan, lalu ${p.fresh} kata baru.');
+      out.add(tr('Mulai dari ${p.reviews} ulangan, lalu ${p.fresh} kata baru.', 'Start with ${p.reviews} reviews, then ${p.fresh} new words.'));
     } else if (p.reviews > 0) {
-      out.add('${p.reviews} kata menunggu diulang.');
+      out.add(tr('${p.reviews} kata menunggu diulang.', '${p.reviews} words are waiting for review.'));
     } else if (p.fresh > 0) {
-      out.add('Tidak ada ulangan. Waktu yang baik untuk ${p.fresh} kata baru.');
+      out.add(tr('Tidak ada ulangan. Waktu yang baik untuk ${p.fresh} kata baru.', 'Nothing to review. A good time for ${p.fresh} new words.'));
     }
     final w = weakness();
     if (w != null) out.add(w);
-    if (out.isEmpty) out.add('Semua tugas hari ini selesai. Kembalilah besok.');
+    final h = heading;
+    if (h != null && e.rank >= 1) {
+      final s = build.shares, o = build.order;
+      out.add(
+        tr(
+          'Build-mu condong ke ${statNames[o[0]]} (${(s[o[0]] * 100).round()}%), lalu ${statNames[o[1]]}.',
+          'Your build leans to ${statNames[o[0]]} (${(s[o[0]] * 100).round()}%), then ${statNames[o[1]]}.',
+        ),
+      );
+    }
+    if (out.isEmpty) out.add(tr('Semua tugas hari ini selesai. Kembalilah besok.', 'All of today\'s tasks are done. Come back tomorrow.'));
     return out;
   }
 }

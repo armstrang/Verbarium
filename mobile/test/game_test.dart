@@ -92,7 +92,7 @@ void main() {
     expect(g.enemy!.name, 'Kepala Bandit');
     expect(g.enemyIsBoss, isTrue);
     final boss = g.onVictory(0, 2, true, true);
-    expect(boss.any((n) => n.contains('Pedang besi')), isTrue);
+    expect(boss.any((n) => n.contains('Senjata besi')), isTrue);
     expect(g.earned, containsAll(['boss1', 'perfect']));
     store.data['rank'] = 5;
     expect(g.enemy, isNull);

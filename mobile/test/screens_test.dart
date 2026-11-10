@@ -10,6 +10,7 @@ import 'package:verbarium/app/app.dart';
 import 'package:verbarium/app/native.dart';
 import 'package:verbarium/data/store.dart';
 import 'package:verbarium/engine/engine.dart';
+import 'package:verbarium/engine/jobs.dart';
 import 'package:verbarium/ui/coronation.dart';
 import 'package:verbarium/ui/pixel.dart';
 import 'package:verbarium/ui/root.dart';
@@ -47,13 +48,15 @@ Future<App> learner(
   bool history = true,
   int xp = 900,
   List<String> gear = const ['s1', 'c1', 'w1'],
+  String lang = 'id',
+  List<String>? jobs,
 }) async {
   rootBundle.clear(); // a deck file first read inside a test's fake clock must not be handed to the next test
   final data = <String, dynamic>{
     'v': 1,
     'rank': rank,
     'stage': stage,
-    'set': {'banner': banner, 'theme': theme, if (onboarded) 'onb': 1},
+    'set': {'banner': banner, 'theme': theme, 'lang': lang, if (onboarded) 'onb': 1},
     if (history)
       'game': {
         'xp': xp,
@@ -65,6 +68,9 @@ Future<App> learner(
         'ms': 5200,
         'n': 420,
         'bc': 14,
+        if (jobs != null) 'jobs': jobs,
+        if (jobs != null) 'seen': jobs,
+        'bp': {'p': 245, 's': 260, 'i': 120, 'e': 90, 'n': 300},
       },
   };
   final app = (await tester.runAsync(() => App.boot(backend: MemoryBackend(json.encode(data)), clock: () => now)))!;
@@ -121,18 +127,19 @@ bool has(Finder f) => f.evaluate().isNotEmpty;
 /// answers the card on screen, right or wrong, whatever kind it is; returns the kind
 Future<String> answer(WidgetTester tester, {bool right = true}) async {
   final want = RunScreen.probe;
+  final check = has(find.text('Periksa')) ? find.text('Periksa') : find.text('Check');
   if (has(find.byKey(const ValueKey('gap-field')))) {
     await tester.enterText(find.byKey(const ValueKey('gap-field')), right ? want : 'zzzzzzzz');
-    await tester.tap(find.text('Periksa'));
+    await tester.tap(check);
     return 'cloze';
   }
-  if (has(find.text('Ketuk kata di bawah sesuai urutannya'))) {
+  if (has(find.text('Ketuk kata di bawah sesuai urutannya')) || has(find.text('Tap the words below in the right order'))) {
     final words = want.split(' ');
     for (final w in right ? words : words.reversed) {
       await tester.tap(find.text(w).last);
       await tester.pump(const Duration(milliseconds: 60));
     }
-    await tester.tap(find.text('Periksa'));
+    await tester.tap(check);
     return 'build';
   }
   final options = find.byWidgetPredicate((w) => w.runtimeType.toString() == '_Option');
@@ -176,10 +183,10 @@ void main() {
       await beat(tester);
     }
     expect(find.text('Dari mana kamu mulai?'), findsOneWidget);
-    await tester.tap(find.text('Mulai sebagai Petani'));
+    await tester.tap(find.text('Mulai sebagai Peasant'));
     await beat(tester, 900);
     expect(find.text('Mulai belajar'), findsOneWidget);
-    expect(find.text('Petani I'), findsOneWidget);
+    expect(find.textContaining('Peasant I ·'), findsOneWidget);
     await shot(tester, '03-hari-ini-petani');
     await tester.pump(const Duration(seconds: 1));
   });
@@ -190,7 +197,7 @@ void main() {
       await learner(tester, theme: theme);
       await tester.pumpWidget(const VerbariumApp());
       await beat(tester, 900);
-      expect(find.text('Squire I'), findsOneWidget);
+      expect(find.textContaining('Squire I ·'), findsOneWidget);
       await shot(tester, '10-hari-ini-$theme');
       await tester.drag(find.byType(ListView), const Offset(0, -520));
       await beat(tester);
@@ -324,7 +331,9 @@ void main() {
     await shot(tester, '34-menang');
     await tester.tap(find.text('Selesai'));
     await beat(tester, 900);
-    expect(find.text('Squire II'), findsOneWidget);
+    await tester.drag(find.byType(ListView), const Offset(0, 600));
+    await beat(tester);
+    expect(find.textContaining('Squire II ·'), findsOneWidget);
     await tester.pump(const Duration(seconds: 1));
   });
 
@@ -377,7 +386,7 @@ void main() {
     await shot(tester, '37-penobatan');
     await tester.tap(find.text('Masuk ke negerimu'));
     await beat(tester, 900);
-    expect(find.text('Knight I'), findsOneWidget);
+    expect(find.textContaining('Knight I ·'), findsOneWidget);
     await shot(tester, '38-hari-ini-knight');
     await tester.pump(const Duration(seconds: 1));
   });
@@ -400,7 +409,7 @@ void main() {
       await tester.pump(const Duration(milliseconds: 1600));
       await beat(tester);
     }
-    expect(find.text('Kamu mulai sebagai Petani'), findsOneWidget);
+    expect(find.text('Kamu mulai sebagai Peasant'), findsOneWidget);
     expect(app.engine.placed, isTrue);
     await tester.pump(const Duration(seconds: 1));
   });
@@ -451,6 +460,90 @@ void main() {
     await tester.pump(const Duration(seconds: 1));
   });
 
+  testWidgets('Karakter shows the job, where the build leans, and the map of jobs', (tester) async {
+    phone(tester);
+    final app = await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    expect(find.text('Duelist'), findsOneWidget, reason: 'Today names the job');
+    await tester.tap(find.text('Karakter'));
+    await beat(tester, 900);
+    expect(find.text('Peasant  ›  Blade  ›  Duelist'), findsOneWidget);
+    await shot(tester, '40-job');
+    await tester.drag(find.byType(ListView), const Offset(0, -420));
+    await beat(tester);
+    expect(find.text('Build-mu kini mengarah ke sini'), findsOneWidget);
+    expect(find.text('? ? ?'), findsNWidgets(2), reason: 'the branches ahead have no name yet');
+    expect(app.game.heading!.id, 'spellblade', reason: 'two strongest sides close together');
+    await shot(tester, '41-arah-build');
+    await tester.drag(find.byType(ListView), const Offset(0, -300));
+    await beat(tester);
+    await tester.tap(find.text('Peta job'));
+    await beat(tester, 900);
+    expect(find.text('3 / 43'), findsOneWidget);
+    await shot(tester, '42-peta-job');
+    await tester.drag(find.byType(ListView), const Offset(0, -700));
+    await beat(tester);
+    await shot(tester, '43-peta-job-bawah');
+    await tester.pump(const Duration(seconds: 1));
+  });
+
+  testWidgets('learning through English: the app speaks English and a meaning is a definition', (tester) async {
+    phone(tester);
+    final app = await learner(tester, lang: 'en', jobs: ['peasant', 'scribe']);
+    expect(app.english, isTrue);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    expect(find.text('Continue learning'), findsOneWidget);
+    expect(find.text('Scribe'), findsOneWidget);
+    expect(find.textContaining('Squire I ·'), findsOneWidget, reason: 'titles are the same in both languages');
+    await shot(tester, '70-en-today');
+    await tester.tap(find.text('Character'));
+    await beat(tester, 900);
+    await shot(tester, '71-en-character');
+    await tester.tap(find.text('Chronicle'));
+    await beat(tester, 900);
+    await shot(tester, '72-en-chronicle');
+    await tester.tap(find.text('Today'));
+    await beat(tester, 900);
+    await tester.tap(find.text('Continue learning'));
+    await beat(tester);
+    await shot(tester, '73-en-desk');
+    final options = find.byWidgetPredicate((w) => w.runtimeType.toString() == '_Option');
+    for (var i = 0; i < 30 && !has(options); i++) {
+      await answer(tester);
+      await beat(tester, 300);
+      await tester.pump(const Duration(milliseconds: 2700));
+      await beat(tester);
+    }
+    expect(options, findsNWidgets(4));
+    await shot(tester, '74-en-choice');
+    await tester.pump(const Duration(seconds: 1));
+
+    // back to Indonesian in Settings, without losing anything
+    final rank = app.engine.rank, seen = app.engine.seenTotal;
+    app.put('lang', 'id');
+    await beat(tester);
+    expect(app.english, isFalse);
+    expect(app.engine.rank, rank);
+    expect(app.engine.seenTotal, seen);
+    await tester.pump(const Duration(seconds: 1));
+  });
+
+  testWidgets('changing the banner keeps the title, the job and what is remembered', (tester) async {
+    phone(tester);
+    final app = await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);
+    final solid = app.engine.stat(1).solid;
+    await tester.runAsync(() => app.chooseBanner('toefl'));
+    expect(app.banner, 'toefl');
+    expect(app.engine.rank, 2);
+    expect(app.engine.stage, 1);
+    expect(app.game.job.id, 'duelist');
+    expect(app.engine.stat(1).solid, greaterThan(solid * 0.95));
+    await tester.runAsync(() => app.chooseBanner('ielts'));
+    expect(app.engine.stat(1).solid, solid, reason: 'the words of the first banner were not forgotten');
+  });
+
   testWidgets('every sprite, for looking at', (tester) async {
     phone(tester, w: 420, h: 760);
     await learner(tester);
@@ -471,8 +564,11 @@ void main() {
                   spacing: 6,
                   runSpacing: 6,
                   children: [
-                    for (final pose in HeroPose.values) HeroSprite(rank: 1, pose: pose, size: 72),
-                    for (var r = 0; r < 6; r++) HeroSprite(rank: r, weapon: r, shield: r > 0 ? r : -1, cloak: r > 1 ? r : -1, size: 72),
+                    for (final pose in HeroPose.values) HeroSprite(garb: Jobs.byId('blade').garb, pose: pose, size: 72),
+                    for (final j in Jobs.all)
+                      HeroSprite(garb: j.garb, weapon: j.tier, shield: j.tier > 0 ? j.tier : -1, cloak: j.tier > 1 ? j.tier : -1, size: 56),
+                    for (final j in Jobs.all.take(6)) HeroSprite(garb: j.garb, shadow: true, size: 56),
+                    for (final j in Jobs.all.skip(1).take(8)) HeroSprite(garb: j.garb, weapon: 2, pose: HeroPose.attack, size: 56),
                   ],
                 ),
                 const SizedBox(height: 12),

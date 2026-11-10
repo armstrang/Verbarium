@@ -6,6 +6,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../app/app.dart';
+import '../app/lang.dart';
 import 'theme.dart';
 
 /// The page everything sits on: paper with a faint grain, drawn once.
@@ -478,7 +479,7 @@ class Leaf extends StatelessWidget {
 }
 
 /// A yes/no question on a slip of paper. Returns true for yes.
-Future<bool> confirm(BuildContext context, {required String title, required String text, required String yes, String no = 'Batal'}) async {
+Future<bool> confirm(BuildContext context, {required String title, required String text, required String yes, String? no}) async {
   final look = Look.of(context);
   final pal = look.pal;
   final r = await showDialog<bool>(
@@ -505,7 +506,7 @@ Future<bool> confirm(BuildContext context, {required String title, required Stri
               Text(text, style: T.body(16.5, pal.muted)),
               const SizedBox(height: 18),
               InkButton(yes, onTap: () => Navigator.of(ctx).pop(true)),
-              GhostButton(no, onTap: () => Navigator.of(ctx).pop(false)),
+              GhostButton(no ?? tr('Batal', 'Cancel'), onTap: () => Navigator.of(ctx).pop(false)),
             ],
           ),
         ),

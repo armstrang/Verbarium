@@ -10,6 +10,7 @@ import '../data/deck.dart';
 import '../data/store.dart';
 import '../engine/engine.dart';
 import '../engine/game.dart';
+import 'lang.dart' as lang;
 import 'native.dart';
 
 class App extends ChangeNotifier {
@@ -46,6 +47,7 @@ class App extends ChangeNotifier {
   }
 
   Future<void> _load() async {
+    lang.english = english;
     deck = await Deck.load(banner.isEmpty ? 'toefl' : banner);
     engine = Engine(store, deck, clock: clock);
     game = Game(store, engine);
@@ -55,6 +57,9 @@ class App extends ChangeNotifier {
 
   String get banner => _set['banner'] as String? ?? '';
   bool get british => banner == 'ielts';
+
+  /// the language the learner learns through: Indonesian, or English (monolingual)
+  bool get english => _set['lang'] == 'en';
   bool get onboarded => _set['onb'] == 1;
   int get perDay => engine.perDay;
   bool get musicOn => _set['music'] != 0;
@@ -69,6 +74,7 @@ class App extends ChangeNotifier {
     _set[key] = value;
     store.touch();
     if (key == 'music' || key == 'musicVol') syncMusic();
+    if (key == 'lang') lang.english = english;
     notifyListeners();
   }
 

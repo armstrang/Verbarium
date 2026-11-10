@@ -5,7 +5,7 @@
 /// barely moves it, a wrong answer cuts it to a quarter and brings the word back within minutes. A word is *kukuh*
 /// (solid) once its stability reaches a week and its last answer was clean.
 ///
-/// Ranks: 0 Petani, then one rank per deck tier (1 Squire … 5 Raja). Only trials change the rank. The coronation
+/// Ranks: 0 Peasant, then one rank per deck tier (1 Squire … 5 King). Only trials change the rank. The coronation
 /// trial of a tier opens when 80 % of its words are solid; it asks 30 of them against the clock, without help, and
 /// passes at 26. A rank already held wavers when recent reviews of its words fall under 60 %; it is then kept by a
 /// short defence trial, or lost after seven days.
@@ -86,12 +86,12 @@ class Engine {
 
   /// Score ranges per rank, from the test owners' own CEFR alignments (docs/riset-skor.md).
   static const ranks = [
-    RankInfo('Petani', 'A2', 'di bawah 4.0', 'di bawah 3', 'di bawah 42'),
+    RankInfo('Peasant', 'A2', '<4.0', '<3', '<42'),
     RankInfo('Squire', 'B1', '4.0–5.0', '3–3.5', '42–71'),
     RankInfo('Knight', 'B2', '5.5–6.5', '4–4.5', '72–94'),
     RankInfo('Baron', 'C1', '7.0', '5', '95–106'),
     RankInfo('Duke', 'C1', '7.5–8.0', '5.5', '107–113'),
-    RankInfo('Raja', 'C2', '8.5–9.0', '6', '114–120'),
+    RankInfo('King', 'C2', '8.5–9.0', '6', '114–120'),
   ];
 
   final Store store;
@@ -194,16 +194,27 @@ class Engine {
     return Quiz.cloze;
   }
 
-  /// wrong meanings to offer beside the right one: same part of speech, and the stronger the learner, the closer
-  List<Word> distractors(Word w, int n, {int? seed}) {
+  /// Wrong meanings to offer beside the right one: same part of speech, and the stronger the learner, the closer.
+  /// With [close] (learning through English) words that look like the right one come first, at most two of them:
+  /// telling "adapt" from "adopt" by their definitions is the point of the monolingual way.
+  List<Word> distractors(Word w, int n, {int? seed, bool close = false}) {
     final r = Random(seed ?? now());
     final hard = (_mem[w.id]?.s ?? 0) >= 4;
-    final pool = deck.tier(w.tier).where((x) => x.id != w.id && x.meaning != w.meaning).toList()..shuffle(r);
+    final pool = deck.tier(w.tier).where((x) => x.id != w.id && x.meaning != w.meaning && x.gloss != w.gloss).toList()..shuffle(r);
     pool.sort((a, b) {
       int score(Word x) => (x.pos == w.pos ? 0 : 2) + (hard && x.id[0] != w.id[0] ? 1 : 0);
       return score(a).compareTo(score(b));
     });
-    return pool.take(n).toList();
+    if (!close) return pool.take(n).toList();
+    final alike = pool.where((x) => looksLike(w.id, x.id)).take(2).toList();
+    return [...alike, ...pool.where((x) => !alike.contains(x)).take(n - alike.length)];
+  }
+
+  /// two words easily taken for each other: one slip apart, or the same first or last four letters
+  static bool looksLike(String a, String b) {
+    if (a.length < 5 || b.length < 5) return false;
+    if ((a.length - b.length).abs() <= 1 && slip(a, b) == 1) return true;
+    return a.substring(0, 4) == b.substring(0, 4) || a.substring(a.length - 4) == b.substring(b.length - 4);
   }
 
   // ---------------------------------------------------------------- daily log
@@ -381,9 +392,12 @@ class Engine {
     return l.take(size).toList();
   }
 
-  void _event(String kind, int r, int a, int b) {
+  /// a line for the chronicle from outside the engine (a new job)
+  void note(String kind, int r, {Map<String, Object> extra = const {}}) => _event(kind, r, 0, 0, extra);
+
+  void _event(String kind, int r, int a, int b, [Map<String, Object> extra = const {}]) {
     final ev = store.list('ev');
-    ev.add({'t': now(), 'k': kind, 'r': r, 'a': a, 'b': b});
+    ev.add({'t': now(), 'k': kind, 'r': r, 'a': a, 'b': b, ...extra});
     if (ev.length > 200) ev.removeRange(0, ev.length - 200);
     store.touch();
   }

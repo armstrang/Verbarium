@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.3 (alpha, not released)
+
+Jobs, a second learning language, and a deck of more than 6,000 words.
+
+- **Jobs.** From Squire on, the character has a job, and nobody picks it: every answer adds to one of four sides
+  of the build (Precision, Swiftness, Insight, Endurance), and at each coronation the build decides the branch.
+  37 jobs are on the map (4 for a Squire, 8 for a Knight, 12 for a Baron, 8 for a Duke, 4 for a King) and 6 more
+  are hidden. A job cannot be chosen or changed.
+- Each job has a perk, and the perks of the whole path add up. Perks touch experience and the fights against the
+  guards of the road; a coronation trial is the same for everyone.
+- Karakter shows the job, the path and its perks, where the build leans, and the branches ahead as shadows with a
+  hint. The map of jobs shows what has been held in colour and the rest as shadows. Each job has its own look:
+  headgear, what is carried, the colour of the tunic.
+- **Learning language** (Settings, and on the first screen): Indonesian or English. In English the whole app
+  speaks English and a word is explained by a plain English definition; when choosing a meaning, words that look
+  alike (adapt, adopt) come first among the wrong ones.
+- Titles are English in both languages: Peasant, Squire, Knight, Baron, Duke, King.
+- The banner (TOEFL, IELTS) can be changed in Settings without losing the title, the job or what is remembered.
+- The deck grows past 6,000 words, each with an English definition.
+
 ## v0.2 (alpha, not released)
 
 Verbarium becomes a game around the same learning.

@@ -1,9 +1,14 @@
 /// The words. Core files hold one rank each (`word|pos|meaning|sentence`), banner files (TOEFL, IELTS) carry the
 /// rank in front. A word with two spellings is written american/british; both are accepted, and the one shown
 /// follows the banner.
+///
+/// Each word also has a plain English definition, kept beside the deck in `assets/deck/en/<same file name>` as
+/// `word|definition`. It is what the learner sees when the learning language is English.
 library;
 
 import 'package:flutter/services.dart' show AssetManifest, rootBundle;
+
+import '../app/lang.dart';
 
 class Word {
   final String id;
@@ -15,7 +20,15 @@ class Word {
 
   /// what the gap wants when it is not the headword itself ("increased" for increase); empty = the headword
   final List<String> gap;
-  const Word(this.id, this.forms, this.pos, this.meaning, this.sentence, this.tier, [this.gap = const []]);
+
+  /// the meaning in plain English; empty when none has been written yet
+  final String def;
+  const Word(this.id, this.forms, this.pos, this.meaning, this.sentence, this.tier, [this.gap = const [], this.def = '']);
+
+  Word withDef(String d) => Word(id, forms, pos, meaning, sentence, tier, gap, d);
+
+  /// what the word means, in the language the learner learns through
+  String get gloss => english && def.isNotEmpty ? def : meaning;
 
   bool get inflected => gap.isNotEmpty;
   List<String> get wanted => gap.isEmpty ? forms : gap;
@@ -42,10 +55,11 @@ class Word {
 /// A collocation card: "[make] a decision" with wrong partners to choose from.
 class Colloc {
   final int tier;
-  final String before, correct, after, meaning;
+  final String before, correct, after, meaning, def;
   final List<String> wrong;
-  const Colloc(this.tier, this.before, this.correct, this.after, this.wrong, this.meaning);
+  const Colloc(this.tier, this.before, this.correct, this.after, this.wrong, this.meaning, [this.def = '']);
   String get id => 'c:$before$correct$after';
+  String get gloss => english && def.isNotEmpty ? def : meaning;
 }
 
 class Deck {
@@ -87,7 +101,8 @@ class Deck {
     final words = <Word>[];
     // a rank's words may be spread over several files: 1-squire.txt, 1-squire-b.txt, …
     final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
-    final files = manifest.listAssets().where((a) => a.startsWith('assets/deck/') && RegExp(r'/[1-5]-').hasMatch(a)).toList()..sort();
+    final all = manifest.listAssets();
+    final files = all.where((a) => RegExp(r'^assets/deck/[1-5]-[^/]+$').hasMatch(a)).toList()..sort();
     for (final f in files) {
       words.addAll(parse(await rootBundle.loadString(f), tier: int.parse(f.split('/').last[0])));
     }
@@ -96,20 +111,38 @@ class Deck {
     for (final w in parse(await rootBundle.loadString('assets/deck/$banner.txt'))) {
       if (seen.add(w.id)) words.add(w);
     }
-    return Deck(words, parseCollocs(await rootBundle.loadString('assets/deck/collocations.txt')));
+    final defs = <String, String>{};
+    for (final f in all.where((a) => a.startsWith('assets/deck/en/'))) {
+      defs.addAll(parseDefs(await rootBundle.loadString(f)));
+    }
+    return Deck([
+      for (final w in words) defs.containsKey(w.id) ? w.withDef(defs[w.id]!) : w,
+    ], parseCollocs(await rootBundle.loadString('assets/deck/collocations.txt')));
   }
 
-  /// `tier|[make] a decision|do,take,give|mengambil keputusan`
+  /// `word|definition` lines
+  static Map<String, String> parseDefs(String text) {
+    final out = <String, String>{};
+    for (final raw in text.split('\n')) {
+      final line = raw.trim();
+      final i = line.indexOf('|');
+      if (line.isEmpty || line.startsWith('#') || i < 1) continue;
+      out[line.substring(0, i).split('/')[0]] = line.substring(i + 1).trim();
+    }
+    return out;
+  }
+
+  /// `tier|[make] a decision|do,take,give|mengambil keputusan[|to decide]`
   static List<Colloc> parseCollocs(String text) {
     final out = <Colloc>[];
     for (final raw in text.split('\n')) {
       final line = raw.trim();
       if (line.isEmpty || line.startsWith('#')) continue;
       final f = line.split('|');
-      final a = f.length == 4 ? f[1].indexOf('[') : -1, b = f.length == 4 ? f[1].indexOf(']') : -1;
+      final a = f.length >= 4 ? f[1].indexOf('[') : -1, b = f.length >= 4 ? f[1].indexOf(']') : -1;
       final t = int.tryParse(f[0]);
       if (t == null || a < 0 || b < a) continue;
-      out.add(Colloc(t, f[1].substring(0, a), f[1].substring(a + 1, b), f[1].substring(b + 1), f[2].split(','), f[3]));
+      out.add(Colloc(t, f[1].substring(0, a), f[1].substring(a + 1, b), f[1].substring(b + 1), f[2].split(','), f[3], f.length > 4 ? f[4] : ''));
     }
     return out;
   }

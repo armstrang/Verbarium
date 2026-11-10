@@ -7,6 +7,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../app/app.dart';
+import '../app/lang.dart';
 import '../engine/engine.dart';
 import 'pixel.dart';
 import 'root.dart';
@@ -14,7 +15,7 @@ import 'run.dart' show stageName;
 import 'theme.dart';
 import 'widgets.dart';
 
-const landNames = ['Desa', 'Kota', 'Kastel', 'Kadipaten', 'Takhta'];
+List<String> get landNames => [tr('Desa', 'Village'), tr('Kota', 'Town'), tr('Kastel', 'Castle'), tr('Kadipaten', 'Duchy'), tr('Takhta', 'Throne')];
 
 class RealmTab extends StatelessWidget {
   const RealmTab({super.key});
@@ -29,9 +30,12 @@ class RealmTab extends StatelessWidget {
     final shares = [for (var t = 1; t <= 5; t++) e.stat(t).share];
     return TabBody(
       children: [
-        const Label('Negerimu'),
+        Label(tr('Negerimu', 'Your realm')),
         const SizedBox(height: 6),
-        Text('${rankNames[rank]} di bawah panji ${bannerName(app.banner)}', style: T.display(31, pal.ink)),
+        Text(
+          tr('${rankNames[rank]} di bawah panji ${bannerName(app.banner)}', '${rankNames[rank]} under the banner of ${bannerName(app.banner)}'),
+          style: T.display(31, pal.ink),
+        ),
         const SizedBox(height: 16),
         Rise(
           child: _World(rank: rank, shares: shares),
@@ -43,7 +47,10 @@ class RealmTab extends StatelessWidget {
         for (var r = 0; r <= Engine.maxRank; r++) _Rung(r, rank, app.banner),
         const SizedBox(height: 12),
         Text(
-          'Gelar mengukur kosakata, bukan menjamin skor ujian. Skor juga ditentukan oleh membaca, menyimak, menulis dan berbicara.',
+          tr(
+            'Gelar mengukur kosakata, bukan menjamin skor ujian. Skor juga ditentukan oleh membaca, menyimak, menulis dan berbicara.',
+            'A title measures vocabulary; it does not promise a test score. A score also depends on reading, listening, writing and speaking.',
+          ),
           style: T.body(15, pal.muted, height: 1.45),
         ),
         Align(
@@ -54,7 +61,7 @@ class RealmTab extends StatelessWidget {
               height: 48,
               alignment: Alignment.centerLeft,
               child: Text(
-                'Dari mana angka ini?',
+                tr('Dari mana angka ini?', 'Where do these numbers come from?'),
                 style: T.body(16, pal.ink, w: FontWeight.w500).copyWith(decoration: TextDecoration.underline),
               ),
             ),
@@ -83,7 +90,7 @@ class _World extends StatelessWidget {
     final foe = rank < 5 ? towns[rank] : null;
     return Semantics(
       label:
-          'Peta negeri. ${[for (var t = 1; t <= 5; t++) '${landNames[t - 1]} ${t <= rank ? 'dikuasai' : (t == rank + 1 ? 'sedang direbut' : 'belum terbuka')}'].join(', ')}.${en == null ? '' : ' ${en.name} menghadang.'}',
+          '${tr('Peta negeri.', 'Map of the realm.')} ${[for (var t = 1; t <= 5; t++) '${landNames[t - 1]} ${t <= rank ? tr('dikuasai', 'held') : (t == rank + 1 ? tr('sedang direbut', 'being won') : tr('belum terbuka', 'not open yet'))}'].join(', ')}.${en == null ? '' : tr(' ${en.name} menghadang.', ' The ${en.name} bars the way.')}',
       child: AspectRatio(
         aspectRatio: 342 / 214,
         child: LayoutBuilder(
@@ -109,7 +116,7 @@ class _World extends StatelessWidget {
                       left: (p.dx - 12) * k,
                       top: (p.dy - 30) * k,
                       child: HeroSprite(
-                        rank: rank,
+                        garb: g.job.garb,
                         weapon: g.tone('weapon'),
                         shield: g.tone('shield'),
                         cloak: g.tone('cloak'),
@@ -139,11 +146,13 @@ class _Rung extends StatelessWidget {
     final info = Engine.ranks[r];
     final held = r <= rank;
     final state = r < rank
-        ? 'Dilewati'
+        ? tr('Dilewati', 'Passed')
         : (r == rank
-              ? 'Gelarmu kini${r < Engine.maxRank ? ' · tingkat ${stageName(App.I.engine.stage)}' : ''}'
-              : (r == rank + 1 ? 'Berikutnya' : 'Belum terbuka'));
-    final score = banner == 'ielts' ? 'IELTS ${info.ielts}' : 'TOEFL iBT ${info.toefl} (skala lama ${info.toeflOld})';
+              ? '${tr('Gelarmu kini', 'Your title now')}${r < Engine.maxRank ? tr(' · tingkat ${stageName(App.I.engine.stage)}', ' · stage ${stageName(App.I.engine.stage)}') : ''}'
+              : (r == rank + 1 ? tr('Berikutnya', 'Next') : tr('Belum terbuka', 'Not open yet')));
+    final score = banner == 'ielts'
+        ? 'IELTS ${below(info.ielts)}'
+        : tr('TOEFL iBT ${below(info.toefl)} (skala lama ${below(info.toeflOld)})', 'TOEFL iBT ${below(info.toefl)} (old scale ${below(info.toeflOld)})');
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 12),
       decoration: BoxDecoration(
@@ -354,10 +363,10 @@ class SourcesPage extends StatelessWidget {
             children: [
               Press(
                 onTap: () => Navigator.of(context).pop(),
-                label: 'Kembali',
+                label: tr('Kembali', 'Back'),
                 child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
               ),
-              Expanded(child: Text('Dari mana angka ini?', style: T.display(25, pal.ink))),
+              Expanded(child: Text(tr('Dari mana angka ini?', 'Where do these numbers come from?'), style: T.display(25, pal.ink))),
             ],
           ),
           Expanded(
@@ -365,23 +374,43 @@ class SourcesPage extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(8, 12, 8, 24),
               children: [
                 p(
-                  'Tiap gelar dipasangkan dengan satu tingkat CEFR, kerangka Eropa yang dipakai kedua ujian untuk menjelaskan skornya. Rentang skor di tangga gelar diambil dari penyelarasan CEFR milik penyelenggara ujian sendiri.',
+                  tr(
+                    'Tiap gelar dipasangkan dengan satu tingkat CEFR, kerangka Eropa yang dipakai kedua ujian untuk menjelaskan skornya. Rentang skor di tangga gelar diambil dari penyelarasan CEFR milik penyelenggara ujian sendiri.',
+                    'Each title is paired with one CEFR level, the European framework both tests use to explain their scores. The score ranges on the ladder of titles are taken from the test owners\' own CEFR alignments.',
+                  ),
                 ),
                 h('IELTS'),
                 p(
-                  'B1 = band 4.0–5.0, B2 = 5.5–6.5, C1 = 7.0–8.0, C2 = 8.5–9.0. Band 8.0 berada di perbatasan C1 dan C2. Sumber: halaman "IELTS and the CEFR" di ielts.org, berdasarkan kajian Cambridge English.',
+                  tr(
+                    'B1 = band 4.0–5.0, B2 = 5.5–6.5, C1 = 7.0–8.0, C2 = 8.5–9.0. Band 8.0 berada di perbatasan C1 dan C2. Sumber: halaman "IELTS and the CEFR" di ielts.org, berdasarkan kajian Cambridge English.',
+                    'B1 = band 4.0–5.0, B2 = 5.5–6.5, C1 = 7.0–8.0, C2 = 8.5–9.0. Band 8.0 sits on the border of C1 and C2. Source: the page "IELTS and the CEFR" on ielts.org, based on studies by Cambridge English.',
+                  ),
                 ),
                 h('TOEFL iBT'),
                 p(
-                  'Sejak 21 Januari 2026 skor dilaporkan pada skala 1–6. Menurut ETS: 6 = 114 ke atas pada skala lama, 5.5 = 107 ke atas, 5 = 95 ke atas, 4.5 = 86 ke atas, 4 = 72 ke atas, 3.5 = 58 ke atas, 3 = 44 ke atas.',
-                ),
-                p('Padanan CEFR pada skala lama, juga dari ETS: B1 = 42–71, B2 = 72–94, C1 = 95–113, C2 = 114–120.'),
-                h('Yang kami putuskan sendiri'),
-                p(
-                  'C1 dibagi menjadi dua gelar, Baron dan Duke, supaya jarak antargelar tidak terlalu jauh. Pada TOEFL pembagian itu mengikuti setengah band (5 dan 5.5). Pada IELTS pembagian 7.0 lalu 7.5–8.0 adalah keputusan Verbarium, bukan ketetapan resmi.',
+                  tr(
+                    'Sejak 21 Januari 2026 skor dilaporkan pada skala 1–6. Menurut ETS: 6 = 114 ke atas pada skala lama, 5.5 = 107 ke atas, 5 = 95 ke atas, 4.5 = 86 ke atas, 4 = 72 ke atas, 3.5 = 58 ke atas, 3 = 44 ke atas.',
+                    'Since 21 January 2026 scores are reported on a scale of 1–6. According to ETS: 6 = 114 and above on the old scale, 5.5 = 107 and above, 5 = 95 and above, 4.5 = 86 and above, 4 = 72 and above, 3.5 = 58 and above, 3 = 44 and above.',
+                  ),
                 ),
                 p(
-                  'Pemilihan kata untuk tiap ranah juga keputusan Verbarium. Daftar katanya disusun sendiri menurut tingkat kesulitan, bukan salinan daftar resmi mana pun.',
+                  tr(
+                    'Padanan CEFR pada skala lama, juga dari ETS: B1 = 42–71, B2 = 72–94, C1 = 95–113, C2 = 114–120.',
+                    'The CEFR levels on the old scale, also from ETS: B1 = 42–71, B2 = 72–94, C1 = 95–113, C2 = 114–120.',
+                  ),
+                ),
+                h(tr('Yang kami putuskan sendiri', 'What we decided ourselves')),
+                p(
+                  tr(
+                    'C1 dibagi menjadi dua gelar, Baron dan Duke, supaya jarak antargelar tidak terlalu jauh. Pada TOEFL pembagian itu mengikuti setengah band (5 dan 5.5). Pada IELTS pembagian 7.0 lalu 7.5–8.0 adalah keputusan Verbarium, bukan ketetapan resmi.',
+                    'C1 is split into two titles, Baron and Duke, so that the step between titles is not too large. On TOEFL the split follows the half bands (5 and 5.5). On IELTS the split into 7.0 and then 7.5–8.0 is Verbarium\'s decision, not an official one.',
+                  ),
+                ),
+                p(
+                  tr(
+                    'Pemilihan kata untuk tiap ranah juga keputusan Verbarium. Daftar katanya disusun sendiri menurut tingkat kesulitan, bukan salinan daftar resmi mana pun.',
+                    'The choice of words for each land is Verbarium\'s decision as well. The lists were written by us in order of difficulty; they are not copies of any official list.',
+                  ),
                 ),
               ],
             ),

@@ -7,6 +7,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../engine/jobs.dart';
 import 'theme.dart';
 
 const _k = Color(0xFF1C1B19);
@@ -37,29 +38,124 @@ const _legs = [
   ['...c.kppppk.....', '.....kppppk.....', '......kppk......', '.....kbbbbk.....', '.....kkkkkk.....'],
 ];
 
-/// weapon overlays per pose: (x, y, char)
-List<List<Object>> _weapon(int pose) {
-  switch (pose) {
-    case 1: // raised
-      return [
-        for (var i = 0; i < 6; i++) [12 + (i > 2 ? 1 : 0), 7 - i, 'w'],
-        [11, 8, 'g'],
-        [12, 8, 'g'],
-        [13, 8, 'g'],
-      ];
-    case 2: // struck forward
-      return [
-        for (var i = 0; i < 5; i++) [11 + i, 9, 'w'],
-        [10, 8, 'g'],
-        [10, 9, 'g'],
-        [10, 10, 'g'],
-      ];
-    default: // carried
-      return [
-        for (var i = 0; i < 6; i++) [12, 8 - i, 'w'],
-        [11, 9, 'g'],
-        [13, 9, 'g'],
-      ];
+/// What is carried, as pixels around the hand: (dx, dy, char), dy counting upwards as negative. 'w' takes the
+/// colour of the blade, 'g' of the grip. 0 stick, 1 sword, 2 spear, 3 bow, 4 dagger, 5 staff, 6 mace, 7 book.
+final _arms = <List<List<Object>>>[
+  [
+    for (var i = 1; i <= 5; i++) [0, -i, 'g'],
+  ],
+  [
+    for (var i = 1; i <= 6; i++) [0, -i, 'w'],
+    [-1, 0, 'g'],
+    [1, 0, 'g'],
+  ],
+  [
+    for (var i = -3; i <= 5; i++) [0, -i, 'g'],
+    [0, -6, 'w'],
+    [0, -7, 'w'],
+  ],
+  [
+    [0, -4, 'g'],
+    [1, -3, 'g'],
+    [1, -2, 'g'],
+    [1, -1, 'g'],
+    [1, 0, 'g'],
+    [1, 1, 'g'],
+    [0, 2, 'g'],
+    [0, -3, 'w'],
+    [0, -2, 'w'],
+    [0, -1, 'w'],
+    [0, 1, 'w'],
+  ],
+  [
+    for (var i = 1; i <= 3; i++) [0, -i, 'w'],
+    [-1, 0, 'g'],
+    [1, 0, 'g'],
+  ],
+  [
+    for (var i = -3; i <= 4; i++) [0, -i, 'g'],
+    [0, -5, 'w'],
+    [1, -5, 'w'],
+    [0, -6, 'w'],
+    [1, -6, 'w'],
+  ],
+  [
+    for (var i = 1; i <= 3; i++) [0, -i, 'g'],
+    for (var x = -1; x <= 1; x++) ...[
+      [x, -4, 'w'],
+      [x, -5, 'w'],
+    ],
+  ],
+  [
+    [-1, 0, 'g'],
+    [0, 0, 'w'],
+    [1, 0, 'w'],
+    [-1, 1, 'g'],
+    [0, 1, 'w'],
+    [1, 1, 'w'],
+  ],
+];
+
+/// the arm in place for a pose: 0 carried, 1 raised, 2 struck forward
+List<List<Object>> _weapon(int arm, int pose) {
+  final shape = _arms[arm.clamp(0, _arms.length - 1)];
+  if (arm == 7) {
+    return [
+      for (final p in shape) [12 + (p[0] as int) + (pose == 2 ? 1 : 0), 9 + (p[1] as int) - (pose == 1 ? 2 : 0), p[2]],
+    ];
+  }
+  return [
+    for (final p in shape)
+      if (pose == 2)
+        if ((p[1] as int) <= 0) [10 - (p[1] as int), 9 + (p[0] as int), p[2]] else [-1, -1, '.']
+      else if (pose == 1)
+        [12 + (p[0] as int) + ((p[1] as int) < -3 ? 1 : 0), 8 + (p[1] as int), p[2]]
+      else
+        [12 + (p[0] as int), 9 + (p[1] as int), p[2]],
+  ];
+}
+
+/// Headgear, as pixels over the head: 0 bare, 1 hood, 2 helm, 3 pointed hat, 4 crown, 5 band, 6 straw hat.
+/// 'o' hood, 'm' steel, 'q' the job's colour, 'y' gold, 'z' straw.
+void _wear(List<List<String>> rows, int head) {
+  void row(int y, int from, int to, String c) {
+    for (var x = from; x <= to; x++) {
+      rows[y][x] = c;
+    }
+  }
+
+  void recolour(String c) {
+    for (var y = 1; y <= 5; y++) {
+      for (var x = 0; x < 16; x++) {
+        if (rows[y][x] == 'h') rows[y][x] = c;
+      }
+    }
+  }
+
+  switch (head) {
+    case 1:
+      recolour('o');
+      row(1, 5, 9, 'o');
+      rows[0][7] = 'o';
+    case 2:
+      recolour('m');
+      row(1, 5, 9, 'm');
+      rows[3][8] = 'm';
+      rows[3][9] = 'm';
+      rows[0][7] = 'q';
+      rows[0][8] = 'q';
+    case 3:
+      row(2, 3, 11, 'q');
+      row(1, 5, 9, 'q');
+      row(0, 6, 8, 'q');
+    case 4:
+      row(1, 5, 9, 'y');
+      rows[0][5] = rows[0][7] = rows[0][9] = 'y';
+    case 5:
+      row(2, 5, 9, 'q');
+    case 6:
+      row(1, 3, 11, 'z');
+      row(0, 6, 8, 'z');
   }
 }
 
@@ -68,10 +164,25 @@ const _weaponHilt = [Color(0xFF5A3A22), Color(0xFF4A3520), Color(0xFF8E1B16), Co
 const _shieldTone = [Color(0xFF8A6238), Color(0xFF8E959E), Color(0xFF5F6B7A), Color(0xFFDDE2E8), Color(0xFFC9A54A), Color(0xFFE8C766)];
 const _cloakTone = [Color(0xFF6B4F3A), Color(0xFF2F5D3A), Color(0xFF8E1B16), Color(0xFF1F3F73), Color(0xFF5A2A6B), Color(0xFF9A7B2C)];
 
+/// the colour of a job's tunic: earth, green, red, blue, purple, black, cream, gold, teal, steel, orange
+const _tint = [
+  Color(0xFF6B4F3A),
+  Color(0xFF2F5D3A),
+  Color(0xFF8E1B16),
+  Color(0xFF1F3F73),
+  Color(0xFF5A2A6B),
+  Color(0xFF2A2A30),
+  Color(0xFFE9E4D4),
+  Color(0xFFC9A54A),
+  Color(0xFF2C6E6A),
+  Color(0xFF6E7480),
+  Color(0xFFC56A2B),
+];
+
 enum HeroPose { idle, walk, attack, hurt, cheer }
 
 /// The hero's pixels for a pose and frame: a list of rows.
-List<String> heroGrid(HeroPose pose, int frame, {required int weapon, required int shield, required int cloak}) {
+List<String> heroGrid(HeroPose pose, int frame, {required int weapon, required int shield, required int cloak, Garb garb = const Garb(6, 0, 0)}) {
   final legs = switch (pose) {
     HeroPose.walk => _legs[[1, 2, 1, 0][frame % 4]],
     HeroPose.attack => _legs[frame % 3 == 0 ? 0 : 1],
@@ -90,13 +201,15 @@ List<String> heroGrid(HeroPose pose, int frame, {required int weapon, required i
     HeroPose.cheer => 1,
     _ => 0,
   };
+  _wear(rows, garb.head);
   if (weapon >= 0) {
-    for (final p in _weapon(wp)) {
+    for (final p in _weapon(garb.arm, wp)) {
       final x = p[0] as int, y = p[1] as int;
       if (y >= 0 && y < rows.length && x >= 0 && x < 16) rows[y][x] = p[2] as String;
     }
   }
-  if (shield >= 0) {
+  // a shield goes with what is held in one hand
+  if (shield >= 0 && const [1, 2, 6].contains(garb.arm)) {
     for (var y = 9; y <= 12; y++) {
       for (var x = 8; x <= 10; x++) {
         final edge = y == 9 || y == 12 || x == 8 || x == 10;
@@ -113,11 +226,16 @@ List<String> heroGrid(HeroPose pose, int frame, {required int weapon, required i
   return out;
 }
 
-Map<String, Color> heroPalette(Pal pal, int rank, {required int weapon, required int shield, required int cloak}) => {
+Map<String, Color> heroPalette(Pal pal, {required int weapon, required int shield, required int cloak, Garb garb = const Garb(6, 0, 0)}) => {
   'k': _k,
   'h': const Color(0xFF5A3A22),
   's': const Color(0xFFE8B98A),
-  't': Pal.day.tincture(rank == 5 ? 2 : rank),
+  't': _tint[garb.tint.clamp(0, _tint.length - 1)],
+  'q': Color.lerp(_tint[garb.tint.clamp(0, _tint.length - 1)], garb.tint == 6 ? Colors.black : Colors.white, 0.28)!,
+  'o': Color.lerp(_tint[garb.tint.clamp(0, _tint.length - 1)], Colors.black, 0.3)!,
+  'm': const Color(0xFF8E959E),
+  'y': const Color(0xFFE8C766),
+  'z': const Color(0xFFD9B861),
   'p': const Color(0xFF4A463D),
   'b': const Color(0xFF2A211B),
   'c': cloak >= 0 ? _cloakTone[cloak.clamp(0, 5)] : _k,
@@ -355,13 +473,18 @@ class PixelPainter extends CustomPainter {
 
 /// The hero, alive: breathes when idle, walks, strikes, staggers. With calm motion it stands still.
 class HeroSprite extends StatefulWidget {
-  final int rank, weapon, shield, cloak;
+  final int weapon, shield, cloak;
+  final Garb garb;
   final HeroPose pose;
   final double size;
   final bool mirror;
+
+  /// a job not yet reached: the shape only, in one colour
+  final bool shadow;
   const HeroSprite({
     super.key,
-    required this.rank,
+    this.garb = const Garb(6, 0, 0),
+    this.shadow = false,
     this.weapon = 0,
     this.shield = -1,
     this.cloak = -1,
@@ -398,7 +521,8 @@ class _HeroSpriteState extends State<HeroSprite> with SingleTickerProviderStateM
   @override
   Widget build(BuildContext context) {
     final pal = Look.of(context).pal;
-    final palette = heroPalette(pal, widget.rank, weapon: widget.weapon, shield: widget.shield, cloak: widget.cloak);
+    var palette = heroPalette(pal, weapon: widget.weapon, shield: widget.shield, cloak: widget.cloak, garb: widget.garb);
+    if (widget.shadow) palette = {for (final k in palette.keys) k: pal.line};
     return ExcludeSemantics(
       child: RepaintBoundary(
         child: AnimatedBuilder(
@@ -410,11 +534,11 @@ class _HeroSpriteState extends State<HeroSprite> with SingleTickerProviderStateM
               _ => 2,
             };
             final speed = widget.pose == HeroPose.idle ? 1 : (widget.pose == HeroPose.walk ? 2 : 1);
-            final f = _calm ? 0 : (_c.value * frames * speed).floor() % frames;
+            final f = _calm || widget.shadow ? 0 : (_c.value * frames * speed).floor() % frames;
             return CustomPaint(
               size: Size(widget.size, widget.size * 18 / 16),
               painter: PixelPainter(
-                heroGrid(widget.pose, f, weapon: widget.weapon, shield: widget.shield, cloak: widget.cloak),
+                heroGrid(widget.pose, f, weapon: widget.weapon, shield: widget.shield, cloak: widget.cloak, garb: widget.garb),
                 palette,
                 mirror: widget.mirror,
                 flash: widget.pose == HeroPose.hurt ? 0.5 : 0,

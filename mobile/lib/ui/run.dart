@@ -9,9 +9,11 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../app/app.dart';
+import '../app/lang.dart';
 import '../data/deck.dart';
 import '../engine/engine.dart';
 import '../engine/game.dart';
+import '../engine/jobs.dart';
 import 'coronation.dart';
 import 'pixel.dart';
 import 'root.dart';
@@ -87,6 +89,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
   int _solidBefore = 0;
   Timer? _pause;
   Reward? _reward;
+  Job? _newJob;
   final List<String> _news = [];
 
   // choosing and building
@@ -112,6 +115,9 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
   bool get _test => _kind != RunKind.learn;
   bool get _fight => _kind == RunKind.trial || _kind == RunKind.sub;
   bool get _timed => _fight || _kind == RunKind.defence;
+
+  /// seconds per word; a job's perk can give a little more against a guard of the road, never in a coronation
+  int get _seconds => Engine.trialSeconds + (_kind == RunKind.sub ? _g.perk('subTime') : 0);
   _Item get _item => _q[_i];
 
   @override
@@ -137,7 +143,8 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
         _startFight(Engine.trialPass, Engine.trialSize - Engine.trialPass + 1);
       case RunKind.sub:
         _q.addAll([for (final w in _e.subWords()) _Item(w, Quiz.cloze, false)]);
-        _startFight(Engine.subPass, Engine.subSize - Engine.subPass + 1);
+        _startFight(Engine.subPass, Engine.subSize - Engine.subPass + 1 + _g.perk('subHp'));
+        _clock.duration = Duration(seconds: _seconds);
       case RunKind.defence:
         _q.addAll([for (final w in _e.trialWords(widget.tier, Engine.defenceSize)) _Item(w, Quiz.cloze, false)]);
     }
@@ -163,7 +170,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     if (it.c != null) {
       _options = [it.c!.correct, ...it.c!.wrong]..shuffle(r);
     } else if (it.quiz == Quiz.choice) {
-      _options = [it.w!.meaning, ..._e.distractors(it.w!, 3, seed: _e.now() + _i).map((x) => x.meaning)]..shuffle(r);
+      _options = [it.w!.gloss, ..._e.distractors(it.w!, 3, seed: _e.now() + _i, close: App.I.english).map((x) => x.gloss)]..shuffle(r);
     } else if (it.quiz == Quiz.build) {
       _target = it.w!.tokens(App.I.british);
       final extra = <String>[];
@@ -177,7 +184,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     }
     RunScreen.probe = it.c != null
         ? it.c!.correct
-        : (it.quiz == Quiz.choice ? it.w!.meaning : (it.quiz == Quiz.build ? _target.join(' ') : it.w!.answer(App.I.british)));
+        : (it.quiz == Quiz.choice ? it.w!.gloss : (it.quiz == Quiz.build ? _target.join(' ') : it.w!.answer(App.I.british)));
     _watch
       ..reset()
       ..start();
@@ -245,7 +252,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     if (_picked != null) return;
     final it = _item;
     setState(() => _picked = option);
-    final ok = option == (it.c != null ? it.c!.correct : it.w!.meaning);
+    final ok = option == (it.c != null ? it.c!.correct : it.w!.gloss);
     ok ? _rightAnswer() : _wrong('m');
   }
 
@@ -257,8 +264,9 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     } else {
       final w = it.w!;
       final lapses = (_e.mem(w)?.lapses ?? 0) > 0;
+      final stab = _e.mem(w)?.s ?? 0.0;
       _e.answer(w, g, count: _kind != RunKind.placement, quiz: it.quiz);
-      _reward = _g.onAnswer(w, it.quiz, g, ms, err: err, fresh: it.fresh, hadLapses: lapses);
+      _reward = _g.onAnswer(w, it.quiz, g, ms, err: err, fresh: it.fresh, hadLapses: lapses, stab: stab);
     }
     _xp += _reward!.xp;
     if (_reward!.news.isNotEmpty) {
@@ -276,7 +284,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     final crit = _reward?.crit ?? false;
     if (_fight) {
       _enemyHp = max(0, _enemyHp - 1);
-      _blow(HeroPose.attack, crit ? 'KRITIS!' : '−1', true);
+      _blow(HeroPose.attack, crit ? tr('KRITIS!', 'CRITICAL!') : '−1', true);
       App.I.sfx(crit ? 'crit' : 'hit');
     } else {
       App.I.sfx('quill');
@@ -389,7 +397,13 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
       case RunKind.trial:
         _passed = _enemyHp <= 0 && _e.finishTrial(widget.tier, Engine.trialPass, Engine.trialSize);
         if (!_passed) _e.finishTrial(widget.tier, min(_right, Engine.trialPass - 1), Engine.trialSize);
-        if (_passed) _news.insertAll(0, _g.onVictory(_rankBefore, _stageBefore, true, _wrongN == 0));
+        if (_passed) {
+          _news.insertAll(0, _g.onVictory(_rankBefore, _stageBefore, true, _wrongN == 0));
+          // the build of the title just won decides the job
+          final (job, lines) = _g.onPromotion(widget.tier, _wrongN == 0);
+          _newJob = job;
+          _news.insertAll(0, lines);
+        }
       case RunKind.sub:
         _passed = _e.finishSub(_enemyHp <= 0 ? Engine.subPass : min(_right, Engine.subPass - 1), Engine.subSize);
         if (_passed) _news.insertAll(0, _g.onVictory(_rankBefore, _stageBefore, false, _wrongN == 0));
@@ -402,7 +416,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     App.I.store.flush();
     App.I.changed();
     if (_kind == RunKind.trial && _passed) {
-      Navigator.of(context).pushReplacement(runRoute(Coronation(rank: widget.tier, right: _right, total: _done, news: List.of(_news))));
+      Navigator.of(context).pushReplacement(runRoute(Coronation(rank: widget.tier, right: _right, total: _done, news: List.of(_news), job: _newJob)));
       return;
     }
     if (_kind == RunKind.trial) App.I.sfx('defeat');
@@ -417,15 +431,21 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     }
     final leave = await confirm(
       context,
-      title: _fight ? 'Lari dari pertarungan?' : 'Tinggalkan ujian?',
+      title: _fight ? tr('Lari dari pertarungan?', 'Flee the fight?') : tr('Tinggalkan ujian?', 'Leave the test?'),
       text: switch (_kind) {
-        RunKind.trial => 'Lari setelah lima kata dihitung kalah, dan boss baru bisa dilawan lagi besok.',
-        RunKind.sub => 'Lari setelah lima kata dihitung kalah, dan musuh ini baru bisa dilawan lagi empat jam kemudian.',
-        RunKind.placement => 'Gelarmu ditetapkan dari ranah yang sudah kamu lewati sejauh ini.',
-        _ => 'Gelarmu tetap goyah sampai ujian ini kamu selesaikan.',
+        RunKind.trial => tr(
+          'Lari setelah lima kata dihitung kalah, dan boss baru bisa dilawan lagi besok.',
+          'Fleeing after five words counts as a defeat, and the boss can only be fought again tomorrow.',
+        ),
+        RunKind.sub => tr(
+          'Lari setelah lima kata dihitung kalah, dan musuh ini baru bisa dilawan lagi empat jam kemudian.',
+          'Fleeing after five words counts as a defeat, and this foe can only be fought again four hours later.',
+        ),
+        RunKind.placement => tr('Gelarmu ditetapkan dari ranah yang sudah kamu lewati sejauh ini.', 'Your title is set from the lands you have passed so far.'),
+        _ => tr('Gelarmu tetap goyah sampai ujian ini kamu selesaikan.', 'Your title keeps wavering until you finish this test.'),
       },
-      yes: _fight ? 'Lari' : 'Tinggalkan',
-      no: _fight ? 'Terus bertarung' : 'Lanjut ujian',
+      yes: _fight ? tr('Lari', 'Flee') : tr('Tinggalkan', 'Leave'),
+      no: _fight ? tr('Terus bertarung', 'Keep fighting') : tr('Lanjut ujian', 'Go on with the test'),
     );
     if (!leave || !mounted) return;
     if (_kind == RunKind.trial && _done >= 5) _e.finishTrial(widget.tier, min(_right, Engine.trialPass - 1), Engine.trialSize);
@@ -463,7 +483,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
           children: [
             Press(
               onTap: _close,
-              label: 'Tutup',
+              label: tr('Tutup', 'Close'),
               child: SizedBox(width: 48, height: 48, child: Icon(Icons.close, color: pal.ink, size: 24)),
             ),
             Expanded(child: _fight ? Text(_enemy?.name ?? '', style: T.display(21, pal.ink)) : Bar(_done / total, height: 3)),
@@ -473,7 +493,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
                 padding: const EdgeInsets.only(right: 10),
                 child: Text('Combo ×$combo', style: T.body(15.5, pal.ink, w: FontWeight.w700)),
               ),
-            Text(_fight ? '+$_xp XP' : '${_done + 1} dari $total', style: T.body(15.5, pal.muted)),
+            Text(_fight ? '+$_xp XP' : tr('${_done + 1} dari $total', '${_done + 1} of $total'), style: T.body(15.5, pal.muted)),
             const SizedBox(width: 8),
           ],
         ),
@@ -484,7 +504,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             child: AnimatedBuilder(
               animation: _clock,
               builder: (context, _) => Semantics(
-                label: 'Sisa waktu ${(Engine.trialSeconds * (1 - _clock.value)).ceil()} detik',
+                label: tr('Sisa waktu ${(_seconds * (1 - _clock.value)).ceil()} detik', '${(_seconds * (1 - _clock.value)).ceil()} seconds left'),
                 child: Bar(1 - _clock.value, height: 2, color: pal.ink, animate: false),
               ),
             ),
@@ -529,7 +549,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 InkButton(
-                  _phase == _Phase.shown ? 'Lanjut' : 'Periksa',
+                  _phase == _Phase.shown ? tr('Lanjut', 'Continue') : tr('Periksa', 'Check'),
                   onTap: busy || (it.quiz == Quiz.build && _placed.length < _target.length) ? null : _check,
                   sound: false,
                 ),
@@ -537,7 +557,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
                   Opacity(
                     opacity: _phase == _Phase.ask || _phase == _Phase.near ? 1 : 0,
                     child: GhostButton(
-                      _kind == RunKind.learn ? 'Belum tahu, tunjukkan' : 'Belum tahu',
+                      _kind == RunKind.learn ? tr('Belum tahu, tunjukkan', 'I don\'t know, show me') : tr('Belum tahu', 'I don\'t know'),
                       onTap: _phase == _Phase.ask || _phase == _Phase.near ? () => _wrong('m') : null,
                     ),
                   ),
@@ -562,14 +582,14 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
         clipBehavior: Clip.none,
         children: [
           Positioned(left: 0, right: 0, bottom: 14, child: Container(height: 1.5, color: pal.ink)),
-          Positioned(left: 0, top: 0, child: _Hp('Kamu', _heroHp, _heroMax, pal.good)),
+          Positioned(left: 0, top: 0, child: _Hp(tr('Kamu', 'You'), _heroHp, _heroMax, pal.good)),
           Positioned(right: 0, top: 0, child: _Hp(en.name, _enemyHp, _enemyMax, pal.bad, right: true)),
           AnimatedPositioned(
             duration: const Duration(milliseconds: 140),
             curve: Curves.easeOut,
             left: _pose == HeroPose.attack ? 56 : (_pose == HeroPose.hurt ? 4 : 18),
             bottom: 15,
-            child: HeroSprite(rank: _rankBefore, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), pose: _pose, size: 68),
+            child: HeroSprite(garb: g.job.garb, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), pose: _pose, size: 68),
           ),
           AnimatedPositioned(
             duration: const Duration(milliseconds: 140),
@@ -608,16 +628,25 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     final answer = w.answer(App.I.british);
     final parts = w.parts;
     final heading = switch (_kind) {
-      RunKind.learn => _item.fresh ? 'Kata baru' : (w.inflected ? 'Isi dengan bentuk yang tepat' : 'Isi celahnya'),
-      RunKind.placement => 'Ujian penempatan · ${rankNames[_ptier]}',
-      RunKind.trial || RunKind.sub => 'Serang dengan kata yang tepat',
-      RunKind.defence => 'Mempertahankan gelar',
+      RunKind.learn =>
+        _item.fresh
+            ? tr('Kata baru', 'New word')
+            : (w.inflected ? tr('Isi dengan bentuk yang tepat', 'Fill in the right form') : tr('Isi celahnya', 'Fill the gap')),
+      RunKind.placement => tr('Ujian penempatan · ${rankNames[_ptier]}', 'Placement test · ${rankNames[_ptier]}'),
+      RunKind.trial || RunKind.sub => tr('Serang dengan kata yang tepat', 'Strike with the right word'),
+      RunKind.defence => tr('Mempertahankan gelar', 'Defending the title'),
     };
     final String? note = switch (_phase) {
-      _Phase.near => _nearWhy == 'f' ? 'Katanya benar, bentuknya belum tepat. Lihat kata di sekitar celah.' : 'Hampir. Periksa ejaannya.',
-      _Phase.shown => 'Jawabannya $answer. Ketik sekali supaya melekat.',
-      _Phase.miss => 'Jawabannya $answer.',
-      _Phase.right => _item.fresh ? 'Tercatat. Kata baru masuk kronikmu.' : (_reward?.crit ?? false ? 'Benar, dan cepat.' : 'Benar.'),
+      _Phase.near =>
+        _nearWhy == 'f'
+            ? tr('Katanya benar, bentuknya belum tepat. Lihat kata di sekitar celah.', 'The word is right, the form is not. Look at the words around the gap.')
+            : tr('Hampir. Periksa ejaannya.', 'Almost. Check the spelling.'),
+      _Phase.shown => tr('Jawabannya $answer. Ketik sekali supaya melekat.', 'The answer is $answer. Type it once so it sticks.'),
+      _Phase.miss => tr('Jawabannya $answer.', 'The answer is $answer.'),
+      _Phase.right =>
+        _item.fresh
+            ? tr('Tercatat. Kata baru masuk kronikmu.', 'Noted. A new word enters your chronicle.')
+            : (_reward?.crit ?? false ? tr('Benar, dan cepat.', 'Right, and fast.') : tr('Benar.', 'Right.')),
       _Phase.ask => null,
     };
     final typing = _phase == _Phase.ask || _phase == _Phase.near || _phase == _Phase.shown;
@@ -628,7 +657,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
         _heading(heading),
         const SizedBox(height: 14),
         Semantics(
-          label: typing ? '${parts[0]} celah ${parts[1]}' : '${parts[0]}$answer${parts[1]}',
+          label: typing ? tr('${parts[0]} celah ${parts[1]}', '${parts[0]} gap ${parts[1]}') : '${parts[0]}$answer${parts[1]}',
           child: GestureDetector(
             behavior: HitTestBehavior.opaque,
             onTap: _focus.requestFocus,
@@ -661,7 +690,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
           TextSpan(
             children: [
               TextSpan(
-                text: w.meaning,
+                text: w.gloss,
                 style: T.body(19, pal.ink, w: FontWeight.w500),
               ),
               TextSpan(text: '   ${_posName(w.pos)}${w.inflected ? ' · ${w.forms[0]}' : ''}', style: T.body(15, pal.muted)),
@@ -730,11 +759,15 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     final pal = Look.of(context).pal;
     final it = _item;
     final c = it.c;
-    final correct = c != null ? c.correct : it.w!.meaning;
+    final correct = c != null ? c.correct : it.w!.gloss;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _heading(c != null ? 'Pilih pasangan katanya' : (it.fresh ? 'Kata baru · pilih artinya' : 'Pilih artinya')),
+        _heading(
+          c != null
+              ? tr('Pilih pasangan katanya', 'Choose the partner word')
+              : (it.fresh ? tr('Kata baru · pilih artinya', 'New word · choose its meaning') : tr('Pilih artinya', 'Choose the meaning')),
+        ),
         const SizedBox(height: 14),
         if (c != null) ...[
           Text.rich(
@@ -751,7 +784,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             ),
           ),
           const SizedBox(height: 6),
-          Text(c.meaning, style: T.body(18, pal.muted)),
+          Text(c.gloss, style: T.body(18, pal.muted)),
         ] else ...[
           Text(it.w!.answer(App.I.british), style: T.display(42, pal.ink)),
           const SizedBox(height: 2),
@@ -766,7 +799,10 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
         if (_picked != null && c == null && it.fresh)
           Padding(
             padding: const EdgeInsets.only(top: 4),
-            child: Text('Kata ini akan kembali sebentar lagi sebagai celah.', style: T.body(15, pal.muted)),
+            child: Text(
+              tr('Kata ini akan kembali sebentar lagi sebagai celah.', 'This word will come back in a moment as a gap.'),
+              style: T.body(15, pal.muted),
+            ),
           ),
       ],
     );
@@ -785,13 +821,13 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        _heading('Susun kalimat dengan kata ini'),
+        _heading(tr('Susun kalimat dengan kata ini', 'Build the sentence with this word')),
         const SizedBox(height: 12),
         Text.rich(
           TextSpan(
             children: [
               TextSpan(
-                text: w.meaning,
+                text: w.gloss,
                 style: T.body(19, pal.ink, w: FontWeight.w500),
               ),
               TextSpan(
@@ -823,7 +859,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
               if (_placed.isEmpty)
                 Padding(
                   padding: const EdgeInsets.all(8),
-                  child: Text('Ketuk kata di bawah sesuai urutannya', style: T.body(16, pal.muted)),
+                  child: Text(tr('Ketuk kata di bawah sesuai urutannya', 'Tap the words below in the right order'), style: T.body(16, pal.muted)),
                 ),
             ],
           ),
@@ -836,22 +872,22 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             children: [for (final t in left) _Chip(text: t, state: 0, onTap: () => setState(() => _placed.add(t)))],
           )
         else if (_phase == _Phase.miss) ...[
-          Text('Susunan yang benar:', style: T.body(15, pal.muted)),
+          Text(tr('Susunan yang benar:', 'The right order:'), style: T.body(15, pal.muted)),
           const SizedBox(height: 4),
           Text(_target.join(' '), style: T.display(23, pal.ink, height: 1.4)),
         ] else
-          _noteLine('Benar. Dua kata lainnya hanya pengecoh.'),
+          _noteLine(tr('Benar. Dua kata lainnya hanya pengecoh.', 'Right. The other two words were only decoys.')),
       ],
     );
   }
 
   static String _posName(String p) => switch (p) {
-    'n' => 'kata benda',
-    'v' => 'kata kerja',
-    'adj' => 'kata sifat',
-    'adv' => 'kata keterangan',
-    'prep' => 'kata depan',
-    _ => 'kata sambung',
+    'n' => tr('kata benda', 'noun'),
+    'v' => tr('kata kerja', 'verb'),
+    'adj' => tr('kata sifat', 'adjective'),
+    'adv' => tr('kata keterangan', 'adverb'),
+    'prep' => tr('kata depan', 'preposition'),
+    _ => tr('kata sambung', 'conjunction'),
   };
 
   // ------------------------------------------------------------------ endings
@@ -867,35 +903,55 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
       case RunKind.learn:
         final gained = max(0, e.solidTotal - _solidBefore);
         mark = const Seal(size: 76);
-        label = 'Tercatat hari ini';
-        title = _done == 0 ? 'Mejamu kosong' : '$_right benar dari $_done';
+        label = tr('Tercatat hari ini', 'Noted today');
+        title = _done == 0 ? tr('Mejamu kosong', 'Your desk is empty') : tr('$_right benar dari $_done', '$_right right out of $_done');
         text = _done == 0
-            ? 'Tidak ada kata yang menunggu. Kembali besok.'
-            : ['+$_xp XP', if (_freshSeen > 0) '$_freshSeen kata baru', if (gained > 0) '$gained kata kini kukuh', 'combo terbaik ${_g.bestCombo}'].join(' · ');
+            ? tr('Tidak ada kata yang menunggu. Kembali besok.', 'No words are waiting. Come back tomorrow.')
+            : [
+                '+$_xp XP',
+                if (_freshSeen > 0) tr('$_freshSeen kata baru', '$_freshSeen new words'),
+                if (gained > 0) tr('$gained kata kini kukuh', '$gained words now solid'),
+                tr('combo terbaik ${_g.bestCombo}', 'best combo ${_g.bestCombo}'),
+              ].join(' · ');
       case RunKind.placement:
         mark = Shield(rank, width: 96);
-        label = 'Ujian penempatan';
-        title = 'Kamu mulai sebagai ${rankNames[rank]}';
+        label = tr('Ujian penempatan', 'Placement test');
+        title = tr('Kamu mulai sebagai ${rankNames[rank]}', 'You start as a ${rankNames[rank]}');
         text = rank == 0
-            ? 'Semua kesatria pernah menjadi petani. Kata pertamamu menunggu.'
-            : 'Kosakatamu setara ${scoreLine(rank, App.I.banner)}. Kata dari ranah yang kamu lewati akan muncul untuk diulang, jadi gelar ini tetap harus dijaga.';
+            ? tr('Semua kesatria pernah menjadi petani. Kata pertamamu menunggu.', 'Every knight was once a peasant. Your first word is waiting.')
+            : tr(
+                'Jalanmu: ${_g.job.name}. Kosakatamu setara ${scoreLine(rank, App.I.banner)}. Kata dari ranah yang kamu lewati akan muncul untuk diulang, jadi gelar ini tetap harus dijaga.',
+                'Your path: ${_g.job.name}. Your vocabulary is on a par with ${scoreLine(rank, App.I.banner)}. Words from the lands you skipped will come up for review, so this title still has to be kept.',
+              );
       case RunKind.trial || RunKind.sub:
         final en = _enemy!;
         mark = _passed
-            ? HeroSprite(rank: rank, weapon: _g.tone('weapon'), shield: _g.tone('shield'), cloak: _g.tone('cloak'), pose: HeroPose.cheer, size: 104)
+            ? HeroSprite(garb: _g.job.garb, weapon: _g.tone('weapon'), shield: _g.tone('shield'), cloak: _g.tone('cloak'), pose: HeroPose.cheer, size: 104)
             : EnemySprite(sprite: en.sprite, tone: en.tone, size: 104);
-        label = _passed ? 'Menang' : 'Kalah';
-        title = _passed ? '${en.name} tumbang' : '${en.name} masih berdiri';
+        label = _passed ? tr('Menang', 'Victory') : tr('Kalah', 'Defeat');
+        title = _passed ? tr('${en.name} tumbang', 'The ${en.name} has fallen') : tr('${en.name} masih berdiri', 'The ${en.name} still stands');
         text = _passed
-            ? '$_right pukulan masuk, +$_xp XP. Kamu naik ke ${rankNames[rank]} ${stageName(e.stage)}.'
-            : '$_right pukulan masuk, perlu $_enemyMax. Kata yang meleset sudah masuk antrean ulang. ${_kind == RunKind.sub ? 'Coba lagi empat jam lagi.' : 'Coba lagi besok.'}';
+            ? tr(
+                '$_right pukulan masuk, +$_xp XP. Kamu naik ke ${rankNames[rank]} ${stageName(e.stage)}.',
+                '$_right blows landed, +$_xp XP. You rise to ${rankNames[rank]} ${stageName(e.stage)}.',
+              )
+            : tr(
+                '$_right pukulan masuk, perlu $_enemyMax. Kata yang meleset sudah masuk antrean ulang. ${_kind == RunKind.sub ? 'Coba lagi empat jam lagi.' : 'Coba lagi besok.'}',
+                '$_right blows landed, $_enemyMax needed. The words you missed are queued for review. ${_kind == RunKind.sub ? 'Try again in four hours.' : 'Try again tomorrow.'}',
+              );
       case RunKind.defence:
         mark = Shield(rank, width: 96, hollow: !_passed);
-        label = 'Mempertahankan gelar';
-        title = _passed ? 'Gelar dipertahankan' : 'Belum cukup';
+        label = tr('Mempertahankan gelar', 'Defending the title');
+        title = _passed ? tr('Gelar dipertahankan', 'Title defended') : tr('Belum cukup', 'Not enough yet');
         text = _passed
-            ? '$_right dari ${Engine.defenceSize} benar. ${rankNames[rank]} tetap gelarmu.'
-            : '$_right dari ${Engine.defenceSize} benar, perlu ${Engine.defencePass}. Kamu masih punya ${e.shakyDaysLeft} hari.';
+            ? tr(
+                '$_right dari ${Engine.defenceSize} benar. ${rankNames[rank]} tetap gelarmu.',
+                '$_right of ${Engine.defenceSize} right. ${rankNames[rank]} remains your title.',
+              )
+            : tr(
+                '$_right dari ${Engine.defenceSize} benar, perlu ${Engine.defencePass}. Kamu masih punya ${e.shakyDaysLeft} hari.',
+                '$_right of ${Engine.defenceSize} right, ${Engine.defencePass} needed. You still have ${e.shakyDaysLeft} days.',
+              );
     }
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
@@ -944,7 +1000,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             ),
           ],
           const Spacer(flex: 3),
-          InkButton(_kind == RunKind.placement ? 'Masuk ke negerimu' : 'Selesai', onTap: () => Navigator.of(context).pop()),
+          InkButton(_kind == RunKind.placement ? tr('Masuk ke negerimu', 'Enter your realm') : tr('Selesai', 'Done'), onTap: () => Navigator.of(context).pop()),
           const SizedBox(height: 8),
         ],
       ),
@@ -1121,14 +1177,14 @@ class _Hp extends StatelessWidget {
   Widget build(BuildContext context) {
     final pal = Look.of(context).pal;
     return Semantics(
-      label: '$name, nyawa $hp dari $max',
+      label: tr('$name, nyawa $hp dari $max', '$name, life $hp of $max'),
       child: ExcludeSemantics(
         child: SizedBox(
           width: 132,
           child: Column(
             crossAxisAlignment: right ? CrossAxisAlignment.end : CrossAxisAlignment.start,
             children: [
-              Text('${right ? 'Musuh' : name}  $hp/$max', style: T.body(14, pal.ink, w: FontWeight.w700)),
+              Text('${right ? tr('Musuh', 'Foe') : name}  $hp/$max', style: T.body(14, pal.ink, w: FontWeight.w700)),
               const SizedBox(height: 3),
               Container(
                 height: 9,

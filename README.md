@@ -1,7 +1,7 @@
 # Verbarium
 
 Kosakata bahasa Inggris untuk TOEFL dan IELTS, dipelajari dengan mengetik kata yang hilang dalam kalimat.
-Kemajuan dicatat sebagai gelar feodal, dari Petani sampai Raja. Tiap gelar direbut dengan mengalahkan penjaga jalan
+Kemajuan dicatat sebagai gelar feodal, dari Peasant sampai King, dan sejak Squire karaktermu punya job yang ditentukan oleh cara belajarmu. Tiap gelar direbut dengan mengalahkan penjaga jalan
 dan boss dalam pertarungan kata, dengan karakter pixel art, level, quest dan perlengkapan.
 
 Aplikasi Android (Flutter), sepenuhnya offline. Masih versi uji coba: **belum dirilis di Google Play**.

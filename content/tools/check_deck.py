@@ -4,14 +4,18 @@
 Core files: word|pos|meaning|sentence[|=form]   (the rank comes from the file name, 1-… to 5-…; a file may be
                                                  split: 1-squire.txt, 1-squire-b.txt, …)
 Banner files (toefl.txt, ielts.txt): rank|word|pos|meaning|sentence[|=form]
-collocations.txt: rank|phrase with [answer]|wrong,wrong,wrong|meaning
+collocations.txt: rank|phrase with [answer]|wrong,wrong,wrong|meaning[|meaning in English]
+en/<same file name>: word|definition   (plain English, for learning through English; the definition may not
+                                        use the word itself)
 A word may be written american/british. "=form" is what the gap wants when it is not the headword (=increased). Run from the repository root:  python3 content/tools/check_deck.py
+With --loose, words that have no English definition yet are counted but are not an error.
 """
 import glob, os, re, sys
 
 POS = {"n", "v", "adj", "adv", "prep", "conj"}
 root = os.path.join(os.path.dirname(__file__), "..", "..", "mobile", "assets", "deck")
 bad, seen, counts = [], {}, {}
+words_in = {}  # file name -> headwords
 for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
     name = os.path.basename(path)
     if name == "collocations.txt":
@@ -20,7 +24,7 @@ for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
             if not line or line.startswith("#"):
                 continue
             f = line.split("|")
-            ok = len(f) == 4 and f[0].isdigit() and re.search(r"\[[a-z]+\]", f[1]) and len(f[2].split(",")) == 3 and f[3].strip()
+            ok = len(f) in (4, 5) and f[0].isdigit() and re.search(r"\[[a-z]+\]", f[1]) and len(f[2].split(",")) == 3 and f[3].strip()
             if not ok: bad.append(f"{name}:{ln} collocation")
             elif re.search(r"\[([a-z]+)\]", f[1]).group(1) in f[2].split(","): bad.append(f"{name}:{ln} answer among the wrong ones")
             counts[("colloc", int(f[0]) if f[0].isdigit() else 0)] = counts.get(("colloc", int(f[0]) if f[0].isdigit() else 0), 0) + 1
@@ -56,7 +60,32 @@ for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
                 if (w, other) in seen: bad.append(f"{name}:{ln} twice: {w} (also {seen[(w, other)]})")
             seen[key] = f"{name}:{ln}"
         if not sent.rstrip().endswith((".", "?", "!")): bad.append(f"{name}:{ln} no full stop")
+        words_in.setdefault(name, {})[word.split("/")[0]] = word.split("/")
         counts[(layer, rank)] = counts.get((layer, rank), 0) + 1
+# English definitions
+have, total = 0, sum(len(v) for v in words_in.values())
+for name, ws in sorted(words_in.items()):
+    path = os.path.join(root, "en", name)
+    defs = {}
+    if os.path.exists(path):
+        for ln, line in enumerate(open(path, encoding="utf-8"), 1):
+            line = line.rstrip("\n")
+            if not line or line.startswith("#"):
+                continue
+            w, _, d = line.partition("|")
+            w = w.split("/")[0]
+            if w not in ws: bad.append(f"en/{name}:{ln} not a word of {name}: {w}"); continue
+            if w in defs: bad.append(f"en/{name}:{ln} twice: {w}")
+            if len(d.strip()) < 3 or "|" in d: bad.append(f"en/{name}:{ln} definition")
+            for form in ws[w]:
+                if re.search(rf"\b{form}\b", d.lower()): bad.append(f"en/{name}:{ln} the definition uses the word: {form}")
+            defs[w] = d
+    have += len(defs)
+    missing = [w for w in ws if w not in defs]
+    if missing and "--loose" not in sys.argv: bad.append(f"en/{name}: {len(missing)} words without a definition, e.g. {', '.join(missing[:5])}")
+for path in glob.glob(os.path.join(root, "en", "*.txt")):
+    if os.path.basename(path) not in words_in: bad.append(f"en/{os.path.basename(path)}: no deck file of that name")
+print("definitions", have, "of", total)
 for k in sorted(counts): print(k, counts[k])
 print("core", sum(v for (l, _), v in counts.items() if l == "core"),
       "toefl", sum(v for (l, _), v in counts.items() if l == "toefl"),

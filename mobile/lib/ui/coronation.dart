@@ -8,7 +8,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 import '../app/app.dart';
+import '../app/lang.dart';
 import '../engine/engine.dart';
+import '../engine/jobs.dart';
 import 'root.dart';
 import 'theme.dart';
 import 'widgets.dart';
@@ -17,7 +19,10 @@ class Coronation extends StatefulWidget {
   final int rank;
   final int right, total;
   final List<String> news;
-  const Coronation({super.key, required this.rank, required this.right, required this.total, this.news = const []});
+
+  /// the job the build has just decided
+  final Job? job;
+  const Coronation({super.key, required this.rank, required this.right, required this.total, this.news = const [], this.job});
 
   @override
   State<Coronation> createState() => _CoronationState();
@@ -88,7 +93,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                 const Spacer(flex: 2),
                 Opacity(
                   opacity: _span(0.0, 0.1),
-                  child: const Center(child: Label('Tercatat dalam kronik')),
+                  child: Center(child: Label(tr('Tercatat dalam kronik', 'Entered in the chronicle'))),
                 ),
                 const SizedBox(height: 10),
                 SizedBox(
@@ -113,7 +118,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                 const SizedBox(height: 6),
                 Opacity(
                   opacity: _span(0.44, 0.54),
-                  child: Text('Engkau dinobatkan sebagai', textAlign: TextAlign.center, style: T.display(21, pal.muted, italic: true)),
+                  child: Text(tr('Engkau dinobatkan sebagai', 'You are crowned'), textAlign: TextAlign.center, style: T.display(21, pal.muted, italic: true)),
                 ),
                 const SizedBox(height: 4),
                 Semantics(
@@ -151,14 +156,25 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                   opacity: _span(0.74, 0.84),
                   child: Column(
                     children: [
+                      if (widget.job != null) ...[
+                        Text(
+                          tr('dan menempuh jalan ${widget.job!.name}', 'and take the path of the ${widget.job!.name}'),
+                          textAlign: TextAlign.center,
+                          style: T.display(24, pal.ink, italic: true),
+                        ),
+                        const SizedBox(height: 10),
+                      ],
                       Text(
-                        'Kosakata setara ${scoreLine(rank, App.I.banner)}',
+                        tr('Kosakata setara ${scoreLine(rank, App.I.banner)}', 'Vocabulary on a par with ${scoreLine(rank, App.I.banner)}'),
                         textAlign: TextAlign.center,
                         style: T.body(19, pal.ink, w: FontWeight.w500),
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        'Boss tumbang: ${widget.right} dari ${widget.total} kata diketik benar, dengan batas waktu, tanpa petunjuk.',
+                        tr(
+                          'Boss tumbang: ${widget.right} dari ${widget.total} kata diketik benar, dengan batas waktu, tanpa petunjuk.',
+                          'The boss has fallen: ${widget.right} of ${widget.total} words typed right, against the clock, without hints.',
+                        ),
                         textAlign: TextAlign.center,
                         style: T.body(16, pal.muted, height: 1.45),
                       ),
@@ -166,7 +182,9 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                       Text(
                         widget.news.isNotEmpty
                             ? widget.news.toSet().take(3).join(' · ')
-                            : (rank >= Engine.maxRank ? 'Tidak ada gelar di atas ini. Jagalah.' : 'Gelar ini dijaga. Kata yang terlupa harus direbut kembali.'),
+                            : (rank >= Engine.maxRank
+                                  ? tr('Tidak ada gelar di atas ini. Jagalah.', 'There is no title above this one. Guard it.')
+                                  : tr('Gelar ini dijaga. Kata yang terlupa harus direbut kembali.', 'This title is kept. Words forgotten must be won back.')),
                         textAlign: TextAlign.center,
                         style: T.body(15.5, pal.muted, height: 1.45),
                       ),
@@ -188,7 +206,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                   ignoring: end < 0.5,
                   child: Opacity(
                     opacity: end,
-                    child: InkButton('Masuk ke negerimu', onTap: () => Navigator.of(context).pop()),
+                    child: InkButton(tr('Masuk ke negerimu', 'Enter your realm'), onTap: () => Navigator.of(context).pop()),
                   ),
                 ),
                 const SizedBox(height: 8),

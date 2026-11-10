@@ -5,12 +5,12 @@ diterbitkan penyelenggara ujian sendiri, dicek pada 10 November 2026.
 
 | Gelar | CEFR | IELTS (band) | TOEFL iBT (skala 1–6) | TOEFL iBT (skala lama 0–120) |
 |---|---|---|---|---|
-| Petani | A2 | di bawah 4.0 | di bawah 3 | di bawah 42 |
+| Peasant | A2 | di bawah 4.0 | di bawah 3 | di bawah 42 |
 | Squire | B1 | 4.0–5.0 | 3–3.5 | 42–71 |
 | Knight | B2 | 5.5–6.5 | 4–4.5 | 72–94 |
 | Baron | C1 (awal) | 7.0 | 5 | 95–106 |
 | Duke | C1 (lanjut) | 7.5–8.0 | 5.5 | 107–113 |
-| Raja | C2 | 8.5–9.0 | 6 | 114–120 |
+| King | C2 | 8.5–9.0 | 6 | 114–120 |
 
 Angka ini ada di `Engine.ranks` (`mobile/lib/engine/engine.dart`) dan di layar "Dari mana angka ini?".
 
@@ -34,7 +34,7 @@ yang diselaraskan dengan CEFR. Tabel perbandingan ETS dengan skala lama: 6 = 114
 - **C1 dibagi dua** menjadi Baron dan Duke supaya jarak antargelar tidak terlalu jauh. Pada TOEFL pembagian itu
   mengikuti setengah band (5 dan 5.5, yaitu 95–106 dan 107–113 pada skala lama). Pada IELTS pembagian 7.0 lalu
   7.5–8.0 adalah keputusan kami.
-- **Petani** adalah titik awal sebelum ada bukti apa pun, dipasangkan dengan A2 dan di bawahnya.
+- **Peasant** adalah titik awal sebelum ada bukti apa pun, dipasangkan dengan A2 dan di bawahnya.
 - **Skala TOEFL 3–3.5 = B1** sedikit lebih ketat daripada skala lama: band 3 mulai dari 44, sedangkan B1 lama
   mulai dari 42.
 - **Gelar mengukur kosakata, bukan menjamin skor.** Skor ujian juga ditentukan oleh membaca, menyimak, menulis

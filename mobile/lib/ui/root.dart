@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../app/app.dart';
+import '../app/lang.dart';
 import '../app/native.dart';
 import '../engine/engine.dart';
 import '../engine/game.dart';
@@ -27,8 +28,11 @@ String bannerName(String b) => b == 'ielts' ? 'IELTS' : 'TOEFL';
 /// what a rank's vocabulary is on a par with, in the words of the chosen test
 String scoreLine(int rank, String banner) {
   final r = Engine.ranks[rank];
-  return banner == 'ielts' ? 'IELTS ${r.ielts}' : 'TOEFL iBT ${r.toefl}';
+  return banner == 'ielts' ? 'IELTS ${below(r.ielts)}' : 'TOEFL iBT ${below(r.toefl)}';
 }
+
+/// "<4.0" as words
+String below(String s) => s.startsWith('<') ? tr('di bawah ${s.substring(1)}', 'below ${s.substring(1)}') : s;
 
 class VerbariumApp extends StatelessWidget {
   const VerbariumApp({super.key});
@@ -202,7 +206,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                   child: Container(height: 2, color: pal.ink),
                 ),
                 const SizedBox(height: 14),
-                Opacity(opacity: calm ? 1 : _span(0.5, 0.72), child: Label('Kosakata TOEFL & IELTS')),
+                Opacity(opacity: calm ? 1 : _span(0.5, 0.72), child: Label(tr('Kosakata TOEFL & IELTS', 'TOEFL & IELTS vocabulary'))),
                 const SizedBox(height: 44),
                 Opacity(
                   opacity: calm ? 1 : _span(0.68, 0.76, Curves.linear),
@@ -251,12 +255,47 @@ class _OnboardingState extends State<Onboarding> {
             key: const ValueKey(0),
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 24),
-              const Label('Selamat datang'),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  for (final l in const [('id', 'Indonesia'), ('en', 'English')])
+                    Padding(
+                      padding: const EdgeInsets.only(right: 8),
+                      child: Press(
+                        onTap: () => App.I.put('lang', l.$1),
+                        label: l.$2,
+                        child: Semantics(
+                          selected: App.I.english == (l.$1 == 'en'),
+                          child: ExcludeSemantics(
+                            child: Container(
+                              height: 44,
+                              padding: const EdgeInsets.symmetric(horizontal: 14),
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: App.I.english == (l.$1 == 'en') ? pal.ink : Colors.transparent,
+                                border: Border.all(color: pal.ink, width: 1.5),
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                              child: Text(l.$2, style: T.body(15.5, App.I.english == (l.$1 == 'en') ? pal.bg : pal.ink, w: FontWeight.w700)),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              Label(tr('Selamat datang', 'Welcome')),
               const SizedBox(height: 8),
-              Text('Pilih panjimu', style: T.display(38, pal.ink)),
+              Text(tr('Pilih panjimu', 'Choose your banner'), style: T.display(38, pal.ink)),
               const SizedBox(height: 10),
-              Text('Kata dan ejaan mengikuti ujian yang kamu tuju. Bisa diganti kapan saja.', style: T.body(17.5, pal.muted)),
+              Text(
+                tr(
+                  'Kata dan ejaan mengikuti ujian yang kamu tuju. Bisa diganti kapan saja.',
+                  'Words and spelling follow the test you are heading for. You can change it at any time.',
+                ),
+                style: T.body(17.5, pal.muted),
+              ),
               const SizedBox(height: 28),
               IntrinsicHeight(
                 child: Row(
@@ -266,7 +305,7 @@ class _OnboardingState extends State<Onboarding> {
                       child: _BannerCard(
                         'toefl',
                         'TOEFL',
-                        'Kata kampus dan kuliah. Ejaan Amerika.',
+                        tr('Kata kampus dan kuliah. Ejaan Amerika.', 'Words of campus and lectures. American spelling.'),
                         _banner == 'toefl',
                         () => setState(() => _banner = 'toefl'),
                       ),
@@ -276,7 +315,7 @@ class _OnboardingState extends State<Onboarding> {
                       child: _BannerCard(
                         'ielts',
                         'IELTS',
-                        'Kata topik esai dan grafik. Ejaan Inggris.',
+                        tr('Kata topik esai dan grafik. Ejaan Inggris.', 'Words of essay topics and charts. British spelling.'),
                         _banner == 'ielts',
                         () => setState(() => _banner = 'ielts'),
                       ),
@@ -285,7 +324,7 @@ class _OnboardingState extends State<Onboarding> {
                 ),
               ),
               const Spacer(),
-              InkButton('Lanjut', onTap: _banner.isEmpty ? null : _next),
+              InkButton(tr('Lanjut', 'Continue'), onTap: _banner.isEmpty ? null : _next),
             ],
           )
         : Column(
@@ -293,12 +332,15 @@ class _OnboardingState extends State<Onboarding> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               const SizedBox(height: 24),
-              Label('Panji ${bannerName(_banner)}'),
+              Label(tr('Panji ${bannerName(_banner)}', 'Banner ${bannerName(_banner)}')),
               const SizedBox(height: 8),
-              Text('Dari mana kamu mulai?', style: T.display(38, pal.ink)),
+              Text(tr('Dari mana kamu mulai?', 'Where do you start?'), style: T.display(38, pal.ink)),
               const SizedBox(height: 10),
               Text(
-                'Semua orang mulai sebagai Petani. Kalau kosakatamu sudah jauh, ujian penempatan bisa mengangkatmu langsung, paling tinggi sampai Baron.',
+                tr(
+                  'Semua orang mulai sebagai Peasant. Kalau kosakatamu sudah jauh, ujian penempatan bisa mengangkatmu langsung, paling tinggi sampai Baron.',
+                  'Everyone starts as a Peasant. If your vocabulary is already far along, the placement test can raise you at once, as high as Baron.',
+                ),
                 style: T.body(17.5, pal.muted),
               ),
               const SizedBox(height: 28),
@@ -315,11 +357,11 @@ class _OnboardingState extends State<Onboarding> {
                 ),
               ),
               const Spacer(),
-              InkButton('Ikut ujian penempatan', onTap: _placement),
+              InkButton(tr('Ikut ujian penempatan', 'Take the placement test'), onTap: _placement),
               const SizedBox(height: 6),
-              Center(child: Text('Sampai 24 kata, sekitar lima menit', style: T.body(15, pal.muted))),
+              Center(child: Text(tr('Sampai 24 kata, sekitar lima menit', 'Up to 24 words, about five minutes'), style: T.body(15, pal.muted))),
               const SizedBox(height: 6),
-              GhostButton('Mulai sebagai Petani', onTap: App.I.finishOnboarding),
+              GhostButton(tr('Mulai sebagai Peasant', 'Start as a Peasant'), onTap: App.I.finishOnboarding),
             ],
           );
     return Leaf(
@@ -340,7 +382,7 @@ class _BannerCard extends StatelessWidget {
     final tint = pal.tincture(id == 'toefl' ? 3 : 2);
     return Press(
       onTap: onTap,
-      label: 'Panji $title',
+      label: tr('Panji $title', 'Banner $title'),
       child: Semantics(
         selected: chosen,
         child: AnimatedContainer(
@@ -408,7 +450,7 @@ class _ShellState extends State<Shell> {
   Widget build(BuildContext context) {
     final look = Look.of(context);
     final pal = look.pal;
-    const names = ['Hari ini', 'Negeri', 'Karakter', 'Kronik'];
+    final names = [tr('Hari ini', 'Today'), tr('Negeri', 'Realm'), tr('Karakter', 'Character'), tr('Kronik', 'Chronicle')];
     const icons = [Icons.edit_outlined, Icons.map_outlined, Icons.shield_outlined, Icons.menu_book_outlined];
     final pages = [const Today(), const RealmTab(), const HeroTab(), const ChronicleTab()];
     return Material(
@@ -525,15 +567,23 @@ class FightCard extends StatelessWidget {
     final rank = e.rank;
     if (e.shaky) {
       return Notice(
-        title: 'Gelarmu goyah',
-        text: 'Kata dari ranah yang sudah kamu kuasai banyak yang lepas. Pertahankan gelar ${rankNames[rank]} dalam ${e.shakyDaysLeft} hari, atau gelar turun.',
-        action: 'Pertahankan gelar',
+        title: tr('Gelarmu goyah', 'Your title wavers'),
+        text: tr(
+          'Kata dari ranah yang sudah kamu kuasai banyak yang lepas. Pertahankan gelar ${rankNames[rank]} dalam ${e.shakyDaysLeft} hari, atau gelar turun.',
+          'Many words from the lands you already hold have slipped. Defend the title of ${rankNames[rank]} within ${e.shakyDaysLeft} days, or it is lost.',
+        ),
+        action: tr('Pertahankan gelar', 'Defend the title'),
         strong: true,
         onTap: () => runFrom(context, RunScreen(kind: RunKind.defence, tier: rank)),
       );
     }
     final en = g.enemy;
-    if (en == null) return const Notice(title: 'Takhta di tanganmu', text: 'Tidak ada lawan di atas Raja. Jaga kata-katamu tetap kukuh.');
+    if (en == null) {
+      return Notice(
+        title: tr('Takhta di tanganmu', 'The throne is yours'),
+        text: tr('Tidak ada lawan di atas King. Jaga kata-katamu tetap kukuh.', 'There is no foe above a King. Keep your words solid.'),
+      );
+    }
     final next = rank + 1;
     final st = e.stat(next);
     final need = (st.total * g.fightNeeds).ceil();
@@ -560,7 +610,11 @@ class FightCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Label(en.boss ? 'Boss · menuju ${rankNames[next]}' : 'Penjaga jalan · tingkat ${stageName(e.stage)}'),
+                      Label(
+                        en.boss
+                            ? tr('Boss · menuju ${rankNames[next]}', 'Boss · on the way to ${rankNames[next]}')
+                            : tr('Penjaga jalan · tingkat ${stageName(e.stage)}', 'Guard of the road · stage ${stageName(e.stage)}'),
+                      ),
                       const SizedBox(height: 2),
                       Text(en.name, style: T.display(25, pal.ink)),
                     ],
@@ -572,13 +626,19 @@ class FightCard extends StatelessWidget {
             if (open) ...[
               Text(
                 en.boss
-                    ? '${Engine.trialSize} kata, ${Engine.trialSeconds} detik tiap kata, tanpa petunjuk. Tumbang pada ${Engine.trialPass} pukulan; kamu kalah pada pukulan kelima yang meleset.'
-                    : '${Engine.subSize} kata, ${Engine.trialSeconds} detik tiap kata. Tumbang pada ${Engine.subPass} pukulan; kamu kalah pada pukulan ketiga yang meleset.',
+                    ? tr(
+                        '${Engine.trialSize} kata, ${Engine.trialSeconds} detik tiap kata, tanpa petunjuk. Tumbang pada ${Engine.trialPass} pukulan; kamu kalah pada pukulan kelima yang meleset.',
+                        '${Engine.trialSize} words, ${Engine.trialSeconds} seconds each, no hints. It falls at ${Engine.trialPass} blows; you lose at the fifth blow that misses.',
+                      )
+                    : tr(
+                        '${Engine.subSize} kata, ${Engine.trialSeconds + g.perk('subTime')} detik tiap kata. Tumbang pada ${Engine.subPass} pukulan; kamu punya ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} nyawa.',
+                        '${Engine.subSize} words, ${Engine.trialSeconds + g.perk('subTime')} seconds each. It falls at ${Engine.subPass} blows; you have ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} lives.',
+                      ),
                 style: T.body(15.5, pal.muted, height: 1.4),
               ),
               const SizedBox(height: 12),
               InkButton(
-                'Lawan ${en.name}',
+                tr('Lawan ${en.name}', 'Fight the ${en.name}'),
                 outline: true,
                 onTap: () => runFrom(context, RunScreen(kind: en.boss ? RunKind.trial : RunKind.sub, tier: next)),
               ),
@@ -586,9 +646,12 @@ class FightCard extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Text(cooling ? 'Memulihkan diri' : 'Belum bisa dilawan', style: T.body(16, pal.ink, w: FontWeight.w500)),
+                    child: Text(
+                      cooling ? tr('Memulihkan diri', 'Recovering') : tr('Belum bisa dilawan', 'Cannot be fought yet'),
+                      style: T.body(16, pal.ink, w: FontWeight.w500),
+                    ),
                   ),
-                  Text('${st.solid} dari $need kata kukuh', style: T.body(15, pal.muted)),
+                  Text(tr('${st.solid} dari $need kata kukuh', '${st.solid} of $need solid words'), style: T.body(15, pal.muted)),
                 ],
               ),
               const SizedBox(height: 8),
@@ -596,8 +659,13 @@ class FightCard extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 cooling
-                    ? (en.boss ? 'Boss bisa dilawan lagi besok.' : 'Musuh ini bisa dilawan lagi dalam beberapa jam.')
-                    : 'Kata menjadi kukuh setelah kamu mengingatnya lebih dari seminggu lewat celah kalimat.',
+                    ? (en.boss
+                          ? tr('Boss bisa dilawan lagi besok.', 'The boss can be fought again tomorrow.')
+                          : tr('Musuh ini bisa dilawan lagi dalam beberapa jam.', 'This foe can be fought again in a few hours.'))
+                    : tr(
+                        'Kata menjadi kukuh setelah kamu mengingatnya lebih dari seminggu lewat celah kalimat.',
+                        'A word becomes solid once you have remembered it for more than a week through the gap in a sentence.',
+                      ),
                 style: T.body(15, pal.muted, height: 1.4),
               ),
             ],
@@ -632,7 +700,7 @@ class Today extends StatelessWidget {
             Expanded(child: Text('Verbarium', style: T.display(30, pal.ink))),
             Press(
               onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SettingsPage())),
-              label: 'Pengaturan',
+              label: tr('Pengaturan', 'Settings'),
               child: SizedBox(width: 48, height: 48, child: Icon(Icons.tune, color: pal.ink, size: 24)),
             ),
           ],
@@ -642,7 +710,7 @@ class Today extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              HeroSprite(rank: rank, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 66),
+              HeroSprite(garb: g.job.garb, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 66),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(
@@ -652,13 +720,29 @@ class Today extends StatelessWidget {
                       children: [
                         Shield(rank, width: 20),
                         const SizedBox(width: 8),
-                        Expanded(child: Text('${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''}', style: T.display(28, pal.ink))),
+                        Expanded(
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            alignment: Alignment.centerLeft,
+                            child: Text(g.job.name, style: T.display(28, pal.ink)),
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 2),
-                    Text('Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'} · setara ${scoreLine(rank, app.banner)}', style: T.body(15, pal.muted)),
+                    Text(
+                      '${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''} · Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'}',
+                      style: T.body(15, pal.ink, w: FontWeight.w500),
+                    ),
+                    Text(
+                      tr('Kosakata setara ${scoreLine(rank, app.banner)}', 'Vocabulary on a par with ${scoreLine(rank, app.banner)}'),
+                      style: T.body(15, pal.muted),
+                    ),
                     const SizedBox(height: 6),
-                    Semantics(label: '${g.toNext} XP lagi ke level ${g.level + 1}', child: Bar(g.levelShare, height: 5)),
+                    Semantics(
+                      label: tr('${g.toNext} XP lagi ke level ${g.level + 1}', '${g.toNext} XP to level ${g.level + 1}'),
+                      child: Bar(g.levelShare, height: 5),
+                    ),
                   ],
                 ),
               ),
@@ -666,11 +750,11 @@ class Today extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 12),
-        Text(rankGreeting[rank], style: T.display(19, pal.muted, italic: true)),
+        Text(rankGreeting(rank), style: T.display(19, pal.muted, italic: true)),
         const SizedBox(height: 14),
         const Rule(),
         const SizedBox(height: 16),
-        const Label('Saran hari ini'),
+        Label(tr('Saran hari ini', 'Advice for today')),
         const SizedBox(height: 8),
         for (final a in advice)
           Padding(
@@ -692,14 +776,14 @@ class Today extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              _Count(plan.reviews, 'ulang'),
+              _Count(plan.reviews, tr('ulang', 'to review')),
               const SizedBox(width: 32),
-              _Count(plan.fresh, 'kata baru'),
+              _Count(plan.fresh, tr('kata baru', 'new words')),
               Expanded(
                 child: e.streak > 0
                     ? Padding(
                         padding: const EdgeInsets.only(bottom: 6, left: 12),
-                        child: Text('${e.streak} hari beruntun', textAlign: TextAlign.right, style: T.body(15.5, pal.muted)),
+                        child: Text(tr('${e.streak} hari beruntun', '${e.streak} days in a row'), textAlign: TextAlign.right, style: T.body(15.5, pal.muted)),
                       )
                     : const SizedBox(),
               ),
@@ -708,20 +792,29 @@ class Today extends StatelessWidget {
         ),
         const SizedBox(height: 16),
         if (!plan.empty)
-          InkButton(plan.doneToday > 0 ? 'Lanjut belajar' : 'Mulai belajar', onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn)))
+          InkButton(
+            plan.doneToday > 0 ? tr('Lanjut belajar', 'Continue learning') : tr('Mulai belajar', 'Start learning'),
+            onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn)),
+          )
         else ...[
           Text(
-            plan.doneToday > 0 ? 'Tercatat. Tugas hari ini selesai.' : 'Belum ada yang perlu diulang hari ini.',
+            plan.doneToday > 0
+                ? tr('Tercatat. Tugas hari ini selesai.', 'Noted. Today\'s tasks are done.')
+                : tr('Belum ada yang perlu diulang hari ini.', 'Nothing needs review today.'),
             style: T.display(22, pal.ink, italic: true),
           ),
           const SizedBox(height: 12),
           if (moreFresh > 0)
-            InkButton('Tambah $moreFresh kata baru', outline: true, onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn, extraFresh: 10))),
+            InkButton(
+              tr('Tambah $moreFresh kata baru', 'Add $moreFresh new words'),
+              outline: true,
+              onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn, extraFresh: 10)),
+            ),
         ],
         const SizedBox(height: 22),
         const FightCard(),
         const SizedBox(height: 22),
-        const Label('Quest hari ini'),
+        Label(tr('Quest hari ini', 'Today\'s quests')),
         const SizedBox(height: 4),
         for (final q in quests) QuestRow(q),
       ],
@@ -772,13 +865,13 @@ class QuestRow extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(color: Look.of(context).accent, borderRadius: BorderRadius.circular(3)),
-                child: Text('Ambil +${q.xp}', style: T.body(15.5, pal.onAccent, w: FontWeight.w700)),
+                child: Text(tr('Ambil +${App.I.game.questXp(q)}', 'Take +${App.I.game.questXp(q)}'), style: T.body(15.5, pal.onAccent, w: FontWeight.w700)),
               ),
             )
           else
             SizedBox(
               width: 74,
-              child: Text(q.claimed ? 'Diambil' : '+${q.xp} XP', textAlign: TextAlign.right, style: T.body(14.5, pal.muted)),
+              child: Text(q.claimed ? tr('Diambil', 'Taken') : '+${App.I.game.questXp(q)} XP', textAlign: TextAlign.right, style: T.body(14.5, pal.muted)),
             ),
         ],
       ),

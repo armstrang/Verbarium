@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../app/app.dart';
+import '../app/lang.dart';
 import 'realm.dart';
 import 'theme.dart';
 import 'widgets.dart';
@@ -29,32 +30,50 @@ class SettingsPage extends StatelessWidget {
                 children: [
                   Press(
                     onTap: () => Navigator.of(context).pop(),
-                    label: 'Kembali',
+                    label: tr('Kembali', 'Back'),
                     child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
                   ),
-                  Expanded(child: Text('Pengaturan', style: T.display(27, pal.ink))),
+                  Expanded(child: Text(tr('Pengaturan', 'Settings'), style: T.display(27, pal.ink))),
                 ],
               ),
               Expanded(
                 child: ListView(
                   padding: const EdgeInsets.fromLTRB(8, 10, 8, 28),
                   children: [
-                    const _Head('Panji'),
+                    _Head(tr('Bahasa belajar', 'Learning language')),
+                    _Choice(options: const {'id': 'Indonesia', 'en': 'English'}, value: app.english ? 'en' : 'id', onPick: (v) => app.put('lang', v)),
+                    _Note(
+                      tr(
+                        'Dalam English, arti kata dijelaskan dengan bahasa Inggris yang lebih sederhana dan seluruh aplikasi berbahasa Inggris. Nama gelar dan job selalu bahasa Inggris. Kemajuanmu tetap.',
+                        'In English, a word is explained in simpler English and the whole app speaks English. Titles and jobs are English in either language. Your progress stays.',
+                      ),
+                    ),
+                    _Head(tr('Panji', 'Banner')),
                     _Choice(options: const {'toefl': 'TOEFL', 'ielts': 'IELTS'}, value: app.banner, onPick: (v) => app.chooseBanner(v)),
-                    const _Note('Mengganti panji mengganti kata tambahan dan ejaan. Kemajuanmu tetap.'),
-                    const _Head('Kata baru tiap hari'),
+                    _Note(
+                      tr(
+                        'Mengganti panji mengganti kata tambahan dan ejaan. Kemajuan dan gelarmu tetap.',
+                        'Changing the banner changes the extra words and the spelling. Your progress and your title stay.',
+                      ),
+                    ),
+                    _Head(tr('Kata baru tiap hari', 'New words each day')),
                     Row(
                       children: [
-                        _Step(Icons.remove, 'Kurangi', app.perDay > 5 ? () => app.put('perDay', app.perDay - 5) : null),
+                        _Step(Icons.remove, tr('Kurangi', 'Fewer'), app.perDay > 5 ? () => app.put('perDay', app.perDay - 5) : null),
                         Expanded(
                           child: Center(child: Text('${app.perDay}', style: T.display(34, pal.ink))),
                         ),
-                        _Step(Icons.add, 'Tambah', app.perDay < 40 ? () => app.put('perDay', app.perDay + 5) : null),
+                        _Step(Icons.add, tr('Tambah', 'More'), app.perDay < 40 ? () => app.put('perDay', app.perDay + 5) : null),
                       ],
                     ),
-                    const _Note('Lima belas kata sehari sudah cukup berat. Kata baru hari ini menjadi ulangan besok dan lusa.'),
-                    const _Head('Suara'),
-                    _Toggle('Musik latar', app.musicOn, (v) => app.put('music', v ? 1 : 0)),
+                    _Note(
+                      tr(
+                        'Lima belas kata sehari sudah cukup berat. Kata baru hari ini menjadi ulangan besok dan lusa.',
+                        'Fifteen words a day is already a fair load. Today\'s new words are tomorrow\'s reviews.',
+                      ),
+                    ),
+                    _Head(tr('Suara', 'Sound')),
+                    _Toggle(tr('Musik latar', 'Background music'), app.musicOn, (v) => app.put('music', v ? 1 : 0)),
                     if (app.musicOn)
                       SliderTheme(
                         data: SliderThemeData(
@@ -65,7 +84,7 @@ class SettingsPage extends StatelessWidget {
                           trackHeight: 3,
                         ),
                         child: Semantics(
-                          label: 'Keras musik',
+                          label: tr('Keras musik', 'Music volume'),
                           child: Slider(
                             value: app.musicVol.clamp(0.05, 1.0),
                             min: 0.05,
@@ -74,30 +93,51 @@ class SettingsPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                    _Toggle('Efek suara', app.sfxOn, (v) => app.put('sfx', v ? 1 : 0)),
-                    const _Head('Tampilan'),
-                    _Choice(options: const {'system': 'Ikut ponsel', 'light': 'Kertas', 'dark': 'Lilin'}, value: app.theme, onPick: (v) => app.put('theme', v)),
+                    _Toggle(tr('Efek suara', 'Sound effects'), app.sfxOn, (v) => app.put('sfx', v ? 1 : 0)),
+                    _Head(tr('Tampilan', 'Look')),
+                    _Choice(
+                      options: {'system': tr('Ikut ponsel', 'Follow phone'), 'light': tr('Kertas', 'Paper'), 'dark': tr('Lilin', 'Candle')},
+                      value: app.theme,
+                      onPick: (v) => app.put('theme', v),
+                    ),
                     const SizedBox(height: 8),
-                    _Toggle('Gerak tenang', app.calm, (v) => app.put('calm', v ? 1 : 0)),
-                    const _Note('Mengurangi animasi. Pengaturan ponselmu untuk menghilangkan animasi juga diikuti.'),
-                    const _Head('Tentang'),
-                    _Link('Dari mana rentang skor berasal', () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SourcesPage()))),
-                    _Link('Lisensi huruf', () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const LicencesPage()))),
+                    _Toggle(tr('Gerak tenang', 'Calm motion'), app.calm, (v) => app.put('calm', v ? 1 : 0)),
+                    _Note(
+                      tr(
+                        'Mengurangi animasi. Pengaturan ponselmu untuk menghilangkan animasi juga diikuti.',
+                        'Fewer animations. Your phone\'s own setting for removing animations is honoured too.',
+                      ),
+                    ),
+                    _Head(tr('Tentang', 'About')),
+                    _Link(
+                      tr('Dari mana rentang skor berasal', 'Where the score ranges come from'),
+                      () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SourcesPage())),
+                    ),
+                    _Link(
+                      tr('Lisensi huruf', 'Font licences'),
+                      () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const LicencesPage())),
+                    ),
                     const SizedBox(height: 8),
                     Text(
-                      'Verbarium 0.2 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.',
+                      tr(
+                        'Verbarium 0.3 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.',
+                        'Verbarium 0.3 (test build) · by Armstrang\nWorks without internet. Your progress lives only on this phone.',
+                      ),
                       style: T.body(15, pal.muted, height: 1.5),
                     ),
-                    const _Head('Mulai dari awal'),
+                    _Head(tr('Mulai dari awal', 'Start over')),
                     InkButton(
-                      'Hapus semua kemajuan',
+                      tr('Hapus semua kemajuan', 'Erase all progress'),
                       outline: true,
                       onTap: () async {
                         final yes = await confirm(
                           context,
-                          title: 'Hapus semua kemajuan?',
-                          text: 'Gelar, kata yang sudah kukuh dan seluruh kronikmu hilang. Ini tidak bisa dibatalkan.',
-                          yes: 'Hapus',
+                          title: tr('Hapus semua kemajuan?', 'Erase all progress?'),
+                          text: tr(
+                            'Gelar, kata yang sudah kukuh dan seluruh kronikmu hilang. Ini tidak bisa dibatalkan.',
+                            'Your title, your solid words and your whole chronicle will be gone. This cannot be undone.',
+                          ),
+                          yes: tr('Hapus', 'Erase'),
                         );
                         if (yes) await app.resetProgress();
                       },
@@ -236,7 +276,7 @@ class _Toggle extends StatelessWidget {
               const SizedBox(width: 2),
               SizedBox(
                 width: 54,
-                child: Text(value ? 'Nyala' : 'Mati', textAlign: TextAlign.right, style: T.body(15, pal.muted)),
+                child: Text(value ? tr('Nyala', 'On') : tr('Mati', 'Off'), textAlign: TextAlign.right, style: T.body(15, pal.muted)),
               ),
             ],
           ),
@@ -288,10 +328,10 @@ class LicencesPage extends StatelessWidget {
             children: [
               Press(
                 onTap: () => Navigator.of(context).pop(),
-                label: 'Kembali',
+                label: tr('Kembali', 'Back'),
                 child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
               ),
-              Expanded(child: Text('Lisensi huruf', style: T.display(25, pal.ink))),
+              Expanded(child: Text(tr('Lisensi huruf', 'Font licences'), style: T.display(25, pal.ink))),
             ],
           ),
           Expanded(

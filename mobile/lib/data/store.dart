@@ -4,10 +4,10 @@
 ///
 /// Keys (never rename one: learners' progress depends on them):
 ///   v      schema version (1)
-///   set    settings {banner, perDay, music, musicVol, sfx, theme, calm, onb}
+///   set    settings {banner, lang, perDay, music, musicVol, sfx, theme, calm, onb}
 ///   mem    {word id: [stability days, due ms, reps, lapses, last ms, last answer clean 0/1]}
 ///   log    {yyyymmdd: [new words, reviews, right, wrong]}
-///   rank   0 Petani … 5 Raja
+///   rank   0 Peasant … 5 King
 ///   ev     chronicle entries [{t, k, r, a, b}]
 ///   win    the last review answers on ranks already held (1 right, 0 wrong)
 ///   shaky  ms since when the title wavers (0 = steady)
