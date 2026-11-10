@@ -68,8 +68,8 @@ Future<App> learner(
         'ms': 5200,
         'n': 420,
         'bc': 14,
-        if (jobs != null) 'jobs': jobs,
-        if (jobs != null) 'seen': jobs,
+        'jobs': ?jobs,
+        'seen': ?jobs,
         'bp': {'p': 245, 's': 260, 'i': 120, 'e': 90, 'n': 300},
       },
   };
