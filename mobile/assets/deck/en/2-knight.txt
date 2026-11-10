@@ -282,3 +282,24 @@ sufficient|enough
 summary|a short account of the main points
 survey|a study of opinions by asking questions
 sustain|to keep going
+symbol|a sign that stands for something
+target|something you aim at
+temporary|lasting only a short time
+tension|a nervous feeling between people
+theme|the main subject of a work
+tolerate|to accept something you do not like
+trace|to follow back to where it began
+transfer|to move from one place to another
+transform|to change completely
+trend|a general direction of change
+ultimate|final and greatest
+unique|being the only one of its kind
+urban|of towns and cities
+urge|to advise strongly
+vary|to be different from each other
+vehicle|a car, bus or truck
+version|one form of something that differs from others
+vital|necessary for life or success
+voluntary|done by choice, not forced
+widespread|found over a large area
+withdraw|to take back or move back
