@@ -1,0 +1,261 @@
+# Verbarium — plain English definitions for 1-squire.txt: word|definition
+ability|the power or skill to do something
+absence|the state of not being there
+accept|to say yes to something offered
+accurate|correct in every detail
+achieve|to reach a goal by effort
+activity|something that people do
+admit|to say that something is true, often unwillingly
+advantage|something that helps you do better than others
+advice|what you tell someone they should do
+affect|to cause a change in something
+afford|to have enough money to pay for something
+agreement|a decision that two or more sides share
+aim|what you hope to do or reach
+allow|to let someone do something
+amount|how much there is of something
+ancient|very old, from a time long ago
+announce|to tell people something officially
+apply|to ask formally for a job or a place
+argue|to give reasons for a view, or to disagree in words
+arrange|to plan or put things in order
+attend|to be present at an event
+attitude|the way you think and feel about something
+available|ready to be used or obtained
+average|usual, or found by dividing a total by the number of parts
+avoid|to keep away from something
+aware|knowing that something exists or is happening
+background|the family, schooling and past that someone has
+balance|a state in which things are equal in weight or importance
+behave|to act in a certain way
+belief|something you think is true
+benefit|a good result or help that you get
+borrow|to take something and give it back later
+brief|lasting only a short time
+career|the working life of a person in one field
+cause|the thing that makes something happen
+challenge|something hard that tests your ability
+character|what a person is like, or a person in a story
+choice|the act of picking between things
+claim|to say that something is true
+collect|to bring things together
+common|found often or shared by many
+compare|to look at how two things are alike or different
+complain|to say that you are not happy about something
+complete|to finish all of something
+concern|a feeling of worry
+condition|the state that something is in
+confident|sure of your own ability
+connect|to join two things together
+consider|to think carefully about something
+contain|to have something inside
+continue|to keep doing something
+control|to have power over how something works
+convince|to make someone believe something
+correct|right, with no mistakes
+create|to make something new
+crowd|a large number of people in one place
+culture|the ideas, art and way of life of a people
+customer|a person who buys from a shop or business
+damage|harm done to something
+deal|to take action on a problem
+decide|to choose after thinking
+decrease|to become or make smaller in number
+degree|a title given by a university
+deliver|to take goods to a place
+demand|the wish of buyers for goods
+depend|to need something or someone for support
+describe|to say what something is like
+design|to plan how something will look and work
+destroy|to break something so badly it cannot be used
+detail|a small fact or part
+develop|to grow or make something grow
+difference|the way in which things are not the same
+difficulty|a problem that makes something hard
+discover|to find something for the first time
+discuss|to talk about something with others
+disease|an illness of people, animals or plants
+distance|the space between two places
+divide|to split into parts
+doubt|a feeling of not being sure
+earn|to get money for work
+economy|the system of money, trade and work in a country
+education|teaching and learning, mostly at school
+effect|a change that something causes
+effort|hard work to do something
+employ|to pay someone to work for you
+encourage|to give someone hope or courage to act
+energy|the power needed to move, work or make heat
+environment|the air, land and water around us
+equal|the same in size, number or value
+escape|to get away from a place or danger
+event|something that happens, often planned
+evidence|facts that show something is true
+exact|completely right, not near
+examine|to look at something closely
+example|one thing that shows what others are like
+exchange|to give one thing and get another
+expect|to think that something will happen
+experience|knowledge you get from doing things
+experiment|a test done to learn something
+explain|to make something clear
+express|to show a feeling or idea in words
+fail|to not succeed
+familiar|well known to you
+feature|an important part of something
+final|last in a series
+flood|a great amount of water covering dry land
+focus|to give all your attention to one thing
+foreign|from another country
+forest|a large area covered with trees
+fuel|something burned to make heat or power
+function|the job that something does
+future|the time that is still to come
+gain|to get more of something
+general|true for most cases, not exact
+global|covering the whole world
+goal|something you want to reach
+government|the people who rule a country
+growth|the process of getting bigger
+guess|to give an answer without being sure
+habit|something you do often, almost without thinking
+harm|to hurt or cause damage
+health|the state of your body and mind
+improve|to make or become better
+include|to have something as a part
+income|the money a person gets, mostly from work
+increase|to become or make larger in number
+industry|the making of goods in factories
+influence|the power to change what others think or do
+inform|to tell someone facts
+injury|harm done to the body
+instead|in place of something else
+interest|a feeling of wanting to know more
+introduce|to make someone known to another person
+invent|to make something that did not exist before
+involve|to have as a necessary part
+issue|a subject that people argue about
+journey|a trip from one place to another
+knowledge|what a person knows
+language|the words people use to speak and write
+law|a rule made by a country
+limit|the highest amount allowed
+local|of the area near you
+manage|to be in charge of, or to succeed in doing
+material|what a thing is made from
+measure|to find the size or amount of something
+member|a person who belongs to a group
+memory|the power to keep things in your mind
+method|a way of doing something
+modern|of the present time
+natural|made by the earth, not by people
+necessary|needed, not to be done without
+notice|to see or become aware of something
+obvious|easy to see or understand
+occur|to happen
+offer|to say you will give or do something
+opinion|what you think about something
+opportunity|a chance to do something
+ordinary|normal, not special
+organize/organise|to plan and arrange an event or things
+particular|one certain, not any
+patient|able to wait calmly
+perform|to do a task, or to act or play for people
+period|a length of time
+permit|to let something be done
+polite|having good manners
+pollution|dirt and waste that harm air, water or land
+popular|liked by many people
+population|all the people who live in a place
+positive|hopeful, or showing yes
+possible|able to happen or be done
+practice|doing something again and again to get better
+prefer|to like one thing more than another
+prepare|to get ready
+prevent|to stop something from happening
+previous|coming before this one
+private|belonging to one person, not to everyone
+problem|something hard that must be solved
+process|a set of steps that lead to a result
+produce|to make or grow something
+protect|to keep safe from harm
+provide|to give what is needed
+public|for all people
+purpose|the reason for doing something
+quality|how good something is
+quantity|how much or how many there is
+reason|why something happens or is done
+receive|to get something that is given or sent
+recent|happening a short time ago
+recognize/recognise|to know someone or something you have seen before
+reduce|to make smaller or less
+refuse|to say no
+region|a large area of a country or the world
+relationship|the way two people or things are joined
+remain|to stay in the same place or state
+remove|to take something away
+repair|to mend something broken
+replace|to put a new thing in the place of an old one
+reply|to answer
+report|a written or spoken account of something
+require|to need, or to make something necessary
+research|careful study to find new facts
+respect|a feeling that someone is good and important
+responsible|having the duty to look after something
+result|what happens because of something
+reveal|to make known something hidden
+reward|something given for good work
+risk|the chance that something bad may happen
+role|the part someone plays
+rule|a statement of what you must or must not do
+safety|the state of being free from danger
+salary|money paid each month for a job
+search|to look carefully for something
+select|to pick from a group
+separate|apart, not joined
+serious|bad or important, not a joke
+service|work done to help people
+share|to use or have something together with others
+similar|almost the same
+simple|easy, not hard to understand
+situation|what is happening at a certain time and place
+skill|the ability to do something well
+society|people living together in a group
+solve|to find the answer to a problem
+source|the place something comes from
+special|different from the usual and better
+spread|to move out over a wider area
+standard|a level of quality used to judge things
+steady|not changing, firm
+structure|the way the parts of something are put together
+struggle|to try very hard against difficulty
+succeed|to do what you tried to do
+suggest|to offer an idea for others to think about
+supply|an amount of something ready for use
+support|to help or agree with someone
+surface|the outside or top of something
+survive|to stay alive
+system|a set of parts that work together
+task|a piece of work to be done
+technology|machines and methods made by science
+temperature|how hot or cold something is
+tend|to be likely to do something
+theory|an idea that tries to explain something
+threat|a sign of danger or of harm to come
+tradition|a custom passed down over many years
+transport|the moving of people or goods
+trust|to believe that someone is honest
+typical|like most others of its kind
+useful|helping you to do something
+value|how much something is worth
+variety|many different kinds
+various|of several different kinds
+view|what you think about something
+visible|able to be seen
+volunteer|a person who works without pay
+waste|to use more than is needed
+wealth|a large amount of money and things owned
+weigh|to find how heavy something is
+wonder|to ask yourself about something
+worth|having a certain value
+youth|the time of being young
