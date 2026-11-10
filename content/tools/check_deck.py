@@ -24,7 +24,12 @@ for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
             if not line or line.startswith("#"):
                 continue
             f = line.split("|")
-            ok = len(f) in (4, 5) and f[0].isdigit() and re.search(r"\[[a-z]+\]", f[1]) and len(f[2].split(",")) == 3 and f[3].strip()
+            ok = len(f) in (4, 5) and f[0].isdigit()
+            if ok and len(f) == 5:
+                m = re.search(r"\[(.+?)\]", f[1])
+                if m and re.search(rf"\b{re.escape(m.group(1))}\b", f[4].lower()): bad.append(f"{name}:{ln} the English meaning gives the answer away")
+                if "--loose" not in sys.argv and len(f[4].strip()) < 3: bad.append(f"{name}:{ln} English meaning")
+            elif ok and "--loose" not in sys.argv: bad.append(f"{name}:{ln} no English meaning") and re.search(r"\[[a-z]+\]", f[1]) and len(f[2].split(",")) == 3 and f[3].strip()
             if not ok: bad.append(f"{name}:{ln} collocation")
             elif re.search(r"\[([a-z]+)\]", f[1]).group(1) in f[2].split(","): bad.append(f"{name}:{ln} answer among the wrong ones")
             counts[("colloc", int(f[0]) if f[0].isdigit() else 0)] = counts.get(("colloc", int(f[0]) if f[0].isdigit() else 0), 0) + 1

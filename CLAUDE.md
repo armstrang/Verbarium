@@ -13,8 +13,8 @@ and even then confirm first what will change and wait for his yes. Everything el
 
 | Path | What |
 |---|---|
-| `mobile/assets/deck/` | the words, canonical. Target ±6,000 words in all; every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`. `en/<same file>`: `word|definition`, plain English, for learning through English |
-| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py`, `make_audio.py` (numpy + scipy + ffmpeg → `res/raw/*.ogg`), `make_icons.py` (Pillow → `mipmap-*`) |
+| `mobile/assets/deck/` | the words, canonical. 6,133 words in all (5,894 core, about 120 per banner); every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`. `en/<same file>`: `word|definition`, plain English, for learning through English |
+| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_audio.py` (numpy + scipy + ffmpeg → `res/raw/*.ogg`), `make_icons.py` (Pillow → `mipmap-*`) |
 | `mobile/lib/engine/engine.dart` | `Engine`: memory (stability in days, personal `ease`), plan, sitting of `Card`s, the three `Quiz` kinds and their weights, ranks, stages and sub-bosses, trials, placement, defence; `slip()` |
 | `mobile/lib/engine/game.dart` | `Game`: experience and level, combo, figures, quests, feats, gear, enemies, advice, the build (`bp`) and the path of jobs. Never changes memory or rank |
 | `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (37 on the map + 6 hidden), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
@@ -32,13 +32,13 @@ Cloud sessions: Flutter comes from XueCi's `dev-flutter-sdk` release (public dow
 `FLUTTER_ROOT=/opt/flutter dart pub get --offline`, `flutter analyze --no-pub`, `flutter test --no-pub --update-goldens`.
 Only packages in that cache resolve offline, so **no third-party plugins**: native needs go through the method
 channel. No Android SDK here: Kotlin is compiled by CI only. CI (`.github/workflows/flutter.yml`) pushes its
-output to the branch `ci-out/main` and publishes `v0.1-alpha-N` when everything passes.
+output to the branch `ci-out/main` and publishes `v0.3-alpha-N` when everything passes.
 
 ## Rules
 
 - **Store keys never change** once testers have the app (`v`, `set`, `mem`, `log`, `rank`, `ev`, `win`, `shaky`,
   `cool`, `placed`, `stage`, `subcool`, `ease`, `ret`, `er`, `game`). A format change = a migration and a test.
-- Package **`com.armstrang.verbarium`**. `versionCode` = 1000 + run for test builds. Signing key
+- Package **`com.armstrang.verbarium`**. `versionCode` = 3000 + run for test builds. Signing key
   `keystore/verbarium.jks` is public: test builds only, never Play.
 - **Deck**: everything self-written (no copied word lists or sentences). A sentence has exactly one `___` and the
   headword fits it in the form given. Run `check_deck.py` after edits.

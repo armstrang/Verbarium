@@ -46,7 +46,7 @@ jobs:
       - name: Check the deck
         id: deck
         continue-on-error: true
-        run: python3 content/tools/check_deck.py --loose > ci-out/deck.txt 2>&1
+        run: python3 content/tools/check_deck.py > ci-out/deck.txt 2>&1
 
       - name: Pub get
         id: pub

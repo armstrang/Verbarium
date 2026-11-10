@@ -1,0 +1,121 @@
+# Verbarium — plain English definitions for toefl.txt: word|definition
+campus|the grounds of a university
+semester|one of the two terms of a college year
+tuition|the money paid for teaching
+dormitory|a building where students sleep
+professor|a senior teacher at a university
+assignment|a piece of work set by a teacher
+deadline|the last time by which work must be done
+quiz|a short test
+freshman|a first-year college student
+grade|a mark for school work
+enroll|to join a course officially
+laboratory|a room for science experiments
+textbook|a book used to study a subject
+attendance|the fact of being present in class
+credit|a unit that counts toward a degree
+syllabus|the plan of what a course covers
+prerequisite|a course you must pass before another
+transcript|the official record of a student's marks
+faculty|the teaching staff of a university
+seminar|a small class for discussion
+scholarship|money given to pay for study
+undergraduate|a student working for a first degree
+graduate|to finish a degree
+internship|a period of work to gain experience
+advisor|a teacher who guides a student's choices
+elective|a course you choose to take
+midterm|an exam in the middle of a term
+registrar|the office that keeps student records
+plagiarism|the copying of another's work as your own
+excerpt|a short piece taken from a text
+sophomore|a second-year college student
+fieldwork|research done outside the classroom
+thesis|a long paper written for a degree
+curriculum|all the subjects taught in a school
+dissertation|a long paper for a doctor's degree
+tenure|a permanent teaching post
+citation|a mention of a source
+peer|a person of the same age or level
+stipend|a regular sum paid to a student
+sabbatical|a long paid leave for study
+accreditation|official approval of a school
+interdisciplinary|joining several fields of study
+colloquium|an academic meeting with talks
+classmate|a student in your class
+roommate|a person who shares your room
+cafeteria|a self-service place to eat
+notebook|a small book for writing notes
+backpack|a bag carried on the back
+handout|a printed sheet given in class
+homework|school work done at home
+calculator|a small machine for doing sums
+gym|a room with equipment for exercise
+counselor|a person who gives advice to students
+librarian|a person who works in a library
+presentation|a talk that shows and explains something
+diploma|a paper showing you finished a course
+bookstore|a shop that sells books
+laptop|a small computer you can carry
+classroom|a room where lessons are held
+coursework|work done during a course that counts for the mark
+bibliography|a list of the books used
+workload|the amount of work to be done
+extracurricular|outside the normal lessons
+alumnus|a former student of a school
+commencement|the ceremony at which degrees are given
+practicum|a course of practical work
+proctor|a person who watches over an exam
+rubric|a guide showing how work will be marked
+tutorial|a small class with a tutor
+enrollment|the number of students who have joined
+postgraduate|after a first degree
+doctorate|the highest university degree
+auditorium|a large hall for lectures or shows
+paraphrase|to say the same thing in other words
+footnote|a note at the bottom of a page
+appendix|extra material at the end of a book
+ecosystem|all the living things in an area and their surroundings
+photosynthesis|the way plants make food from light
+metabolism|the chemical processes that keep a body alive
+precipitation|rain, snow and hail
+evaporation|the change of liquid into gas
+irrigation|the supplying of water to crops
+asteroid|a rock moving around the sun
+artery|a tube that carries blood from the heart
+hormone|a chemical the body makes to control itself
+antibiotic|a drug that kills bacteria
+herbivore|an animal that eats only plants
+carnivore|an animal that eats meat
+pollen|the fine dust of flowers
+settler|a person who makes a home in a new land
+composer|a person who writes music
+playwright|a writer of plays
+sculptor|an artist who shapes stone or metal
+satire|writing that mocks faults by humour
+symphony|a long work for orchestra
+anthropology|the study of human societies
+sociology|the study of how society works
+chromosome|a thread in a cell that carries genes
+neuron|a nerve cell
+enzyme|a substance in the body that speeds chemical change
+tectonic|of the plates of the earth's crust
+condensation|the change of gas into liquid
+equinox|a day when day and night are equal
+nebula|a cloud of gas and dust in space
+vertebrate|an animal with a backbone
+symbiosis|a relation in which two species help each other
+stratum|a layer of rock
+magma|melted rock under the ground
+glacial|of ice or an ice age
+aquifer|a layer of rock that holds water
+topography|the shape of the land
+archipelago|a group of islands
+nomadic|moving from place to place
+suffrage|the right to vote
+homestead|a farmhouse with its land
+impressionism|a style of painting that shows light and feeling
+fresco|a painting done on wet plaster
+stanza|a group of lines in a poem
+paleontology|the study of fossils
+hypothesize|to suggest as a possible explanation

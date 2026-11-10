@@ -1,0 +1,211 @@
+# Verbarium — plain English definitions for 5-raja-b.txt: word|definition
+abject|as low or hopeless as can be
+abjure|to give up solemnly
+abrogate|to end a law or agreement officially
+abscond|to run away secretly
+abstemious|eating and drinking very little
+accolade|a mark of high praise
+acerbic|sharp and bitter in speech
+acrimony|bitter angry feeling
+adroit|clever and skilful
+adulation|too much admiration
+alacrity|cheerful speed
+anachronism|a thing placed in the wrong period of time
+anathema|something hated intensely
+antipathy|a settled dislike
+aplomb|calm self-confidence
+apocryphal|well known but probably untrue
+apposite|very suitable
+approbation|approval
+arcane|known to very few
+ascetic|living without comforts
+atrophy|to waste away from lack of use
+augur|to be a sign of the future
+avarice|extreme greed for wealth
+belligerent|aggressive and ready to fight
+beguile|to charm, often in order to trick
+bellicose|eager for war
+bombastic|using grand words with little meaning
+brusque|short and rude in manner
+bucolic|of pleasant country life
+cacophony|a harsh mix of loud sounds
+cajole|to persuade by flattery
+callous|not caring about others' pain
+castigate|to criticize harshly
+chicanery|clever dishonest tricks
+circumlocution|the use of many words to avoid saying something plainly
+cognizant|aware
+complicit|involved in a wrong with others
+conciliatory|meant to end a quarrel
+consummate|complete and highly skilled
+contrite|very sorry for a wrong
+convivial|friendly and cheerful in company
+convoluted|twisted and hard to follow
+culpability|the degree of blame deserved
+cupidity|greed for money
+decorum|proper polite behaviour
+deferential|showing polite respect
+demagogue|a leader who wins support by stirring feelings
+denigrate|to speak of as worthless
+desultory|without plan or purpose
+diatribe|a long bitter attack in words
+dilatory|slow to act
+disingenuous|not honest while seeming so
+dissemble|to hide your real feelings
+dissonance|a lack of agreement
+ebb|to flow away
+effrontery|shameless boldness
+egalitarian|treating all people as equal
+elegy|a sad poem for the dead
+eloquence|fine and moving speech
+emollient|soothing
+encomium|a formal speech of praise
+enervate|to drain of energy
+ennui|tired boredom
+equivocate|to speak unclearly on purpose
+erudition|deep learning
+evanescent|soon fading
+exculpate|to clear of blame
+execrable|extremely bad
+exigency|an urgent need
+expiate|to make amends for
+expunge|to remove completely from a record
+extant|still existing
+facetious|joking at the wrong time
+fallacious|based on false reasoning
+fatuous|silly and pointless
+feckless|weak and irresponsible
+felicitous|well chosen
+fetter|to restrict
+foment|to stir up trouble
+forbearance|patient self-control
+fractious|bad-tempered and hard to control
+furtive|secretive
+garrulous|talking too much
+germane|closely relevant
+grandiloquent|using showy words
+guileless|innocent and honest
+harangue|to lecture at length and loudly
+hegemony|leadership by one over others
+iconoclast|a person who attacks accepted beliefs
+ignominious|shameful
+impecunious|having no money
+imperious|commanding in a proud way
+implacable|impossible to calm or satisfy
+impugn|to call into question
+inchoate|just begun and not yet formed
+incontrovertible|impossible to deny
+indefatigable|never tiring
+indigent|very poor
+ineluctable|impossible to escape
+inimitable|impossible to copy
+insipid|without taste or interest
+insolent|rude and disrespectful
+intractable|very hard to solve
+inure|to harden to something unpleasant
+invective|violent abusive language
+inveterate|fixed by long habit
+irascible|quick to anger
+jejune|childish and thin in content
+lachrymose|tearful
+lambast|to attack fiercely in words
+largesse|generous giving
+lassitude|weariness
+laudable|deserving praise
+levity|lack of seriousness
+licentious|without moral restraint
+limpid|perfectly clear
+loquacious|very talkative
+lugubrious|sad in an exaggerated way
+magnate|a very rich person in business
+malfeasance|wrongdoing by an official
+malign|to speak evil of
+maudlin|tearfully sentimental
+mendacious|lying
+mercurial|changing mood quickly
+meretricious|attractive on the surface but worthless
+munificent|extremely generous
+nadir|the lowest point
+nefarious|wicked
+neophyte|a beginner
+noxious|poisonous
+obstreperous|noisy and hard to control
+obtuse|slow to understand
+obviate|to remove the need for
+officious|too eager to give orders
+opprobrium|public shame
+palliate|to ease without curing
+paragon|a model of excellence
+parsimonious|unwilling to spend
+pedantic|too concerned with small rules
+pellucid|transparently clear
+penury|extreme poverty
+peremptory|expecting to be obeyed at once
+perfidy|betrayal of trust
+petulant|childishly bad-tempered
+phlegmatic|calm and not easily excited
+pithy|short and full of meaning
+platitude|a remark too often made to be interesting
+portent|a sign of something to come
+pragmatism|a practical way of dealing with things
+precocious|developed earlier than usual
+prevaricate|to avoid telling the truth directly
+probity|complete honesty
+proclivity|a natural tendency
+profligate|wildly wasteful
+prolix|using too many words
+promulgate|to announce a law publicly
+propitiate|to win the favour of
+prosaic|plain and ordinary
+puerile|childish
+pugnacious|eager to fight
+punctilious|very careful about correct behaviour
+quiescent|quiet for a time
+quixotic|nobly unrealistic
+rancour/rancor|long bitter hatred
+rapacious|greedy and grasping
+rebut|to answer by proving wrong
+recant|to take back a belief publicly
+recondite|little known and hard to grasp
+redolent|strongly suggesting
+refractory|stubbornly disobedient
+remonstrate|to protest
+reprehensible|deserving blame
+reprobate|a person of bad character
+restive|impatient under control
+ribald|humorous in a rude way
+salubrious|good for health
+sardonic|mocking in a bitter way
+sedulous|careful and hard-working
+solicitous|showing care and concern
+specious|seeming right but false
+splenetic|bad-tempered
+stolid|showing little feeling
+strident|loud and harsh
+stultify|to make dull
+supercilious|behaving as if superior
+supine|lying face up, or failing to act
+sycophant|a person who flatters the powerful
+temerity|reckless boldness
+torpor|a state of no energy
+tortuous|full of twists
+trenchant|sharp and forceful
+truculent|quick to argue or fight
+turgid|swollen and pompous
+turpitude|wickedness
+umbrage|offence
+unctuous|falsely smooth and flattering
+upbraid|to scold
+vacillate|to keep changing your mind
+vapid|dull and empty
+venal|willing to be bribed
+veracity|truthfulness
+vicarious|felt through another's experience
+vicissitude|a change of fortune
+vilify|to speak very badly of
+vitiate|to spoil the quality or force of
+vitriolic|full of bitter hatred
+voluble|talking fast and easily
+wanton|cruel without reason
+winsome|charming in a fresh way
+zeitgeist|the spirit of an age

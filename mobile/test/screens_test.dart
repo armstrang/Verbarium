@@ -517,6 +517,8 @@ void main() {
       await beat(tester);
     }
     expect(options, findsNWidgets(4));
+    expect(app.deck.words.every((w) => w.def.isNotEmpty), isTrue, reason: 'every word the app loads has its definition');
+    expect(app.deck.words.length, greaterThan(5900));
     await shot(tester, '74-en-choice');
     await tester.pump(const Duration(seconds: 1));
 

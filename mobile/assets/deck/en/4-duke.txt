@@ -143,3 +143,4 @@ vague|not clear
 vigorous|strong and active
 volatile|likely to change suddenly
 warrant|to make necessary
+wary|careful because of possible danger

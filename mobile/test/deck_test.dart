@@ -38,6 +38,30 @@ void main() {
     }
   });
 
+  test('the deck holds more than 6,000 words and every one has a plain English definition', () {
+    final defs = <String, String>{};
+    for (final f in Directory('assets/deck/en').listSync().whereType<File>().where((f) => f.path.endsWith('.txt'))) {
+      defs.addAll(Deck.parseDefs(f.readAsStringSync()));
+    }
+    final all = [
+      ...core(),
+      for (final b in ['toefl', 'ielts']) ...Deck.parse(File('assets/deck/$b.txt').readAsStringSync()),
+    ];
+    expect(all.length, greaterThan(6000));
+    for (final w in all) {
+      final d = defs[w.id];
+      expect(d, isNotNull, reason: '${w.id} has no definition');
+      expect(d!.length, greaterThan(2), reason: w.id);
+      for (final form in w.forms) {
+        expect(RegExp('\\b$form\\b', caseSensitive: false).hasMatch(d), isFalse, reason: 'the definition of ${w.id} uses the word itself');
+      }
+    }
+    for (final c in Deck.parseCollocs(File('assets/deck/collocations.txt').readAsStringSync())) {
+      expect(c.def, isNotEmpty, reason: c.id);
+      expect(RegExp('\\b${c.correct}\\b').hasMatch(c.def), isFalse, reason: '${c.id}: the English meaning gives the answer away');
+    }
+  });
+
   test('two spellings: both accepted, the banner decides which is shown', () {
     final w = core().firstWhere((w) => w.id == 'organize');
     expect(w.answer(false), 'organize');
