@@ -9,7 +9,7 @@ deadline|the last time by which work must be done
 quiz|a short test
 freshman|a first-year college student
 grade|a mark for school work
-enroll|to join a course officially
+enroll/enrol|to join a course officially
 laboratory|a room for science experiments
 textbook|a book used to study a subject
 attendance|the fact of being present in class
@@ -51,7 +51,7 @@ handout|a printed sheet given in class
 homework|school work done at home
 calculator|a small machine for doing sums
 gym|a room with equipment for exercise
-counselor|a person who gives advice to students
+counselor/counsellor|a person who gives advice to students
 librarian|a person who works in a library
 presentation|a talk that shows and explains something
 diploma|a paper showing you finished a course
@@ -68,7 +68,7 @@ practicum|a course of practical work
 proctor|a person who watches over an exam
 rubric|a guide showing how work will be marked
 tutorial|a small class with a tutor
-enrollment|the number of students who have joined
+enrollment/enrolment|the number of students who have joined
 postgraduate|after a first degree
 doctorate|the highest university degree
 auditorium|a large hall for lectures or shows
@@ -119,3 +119,396 @@ fresco|a painting done on wet plaster
 stanza|a group of lines in a poem
 paleontology|the study of fossils
 hypothesize|to suggest as a possible explanation
+algae|very simple plants that grow in water and have no roots
+amphibian|an animal that begins life in water and later lives on land too
+appendage|a part such as a leg or a fin that sticks out from the main body
+arid|having very little rain and so very dry
+atoll|a ring-shaped island made of coral
+axis|the imaginary line that a spinning object turns around
+bacterium|a very small living thing with one cell
+basalt|a dark, hard rock formed from cooled lava
+biome|a large region with its own climate, plants and animals
+biomass|plant and animal material used as a fuel or measured by weight
+bipedal|walking on two legs
+blizzard|a heavy snowstorm with strong winds
+botany|the scientific study of plants
+bronze|a brown metal made by mixing copper and tin
+burrow|a hole in the ground that an animal digs to live in
+calcium|a chemical element found in bones, teeth and chalk
+canopy|the top layer of branches and leaves in a forest
+capillary|one of the smallest, thinnest blood tubes in the body
+carbohydrate|a substance in food, such as sugar or starch, that gives energy
+carbonate|a salt that contains carbon and oxygen
+cartography|the skill or science of making maps
+cellulose|the substance that forms the walls of plant cells
+chlorophyll|the green substance in plants that takes in light
+chronology|the order in which events happened
+circulation|the movement of something, such as blood, around a system
+cognition|the mental process of knowing, thinking and understanding
+colonist|a person who settles in a new land ruled by their home country
+colonize/colonise|to move into a place and settle there
+comet|an object of ice and dust that travels around the sun
+convection|the movement of heat through a gas or liquid as warm parts rise
+coral|a hard material built up by small sea animals in warm water
+cortex|the outer layer of the brain
+crater|a round hole made by an explosion or a falling object
+crust|the hard outer layer of a planet
+crystal|a solid with a regular shape and flat sides
+cuneiform|an early form of writing made of wedge-shaped marks
+cyclone|a strong storm with winds that spin in a circle
+deciduous|losing leaves every year in the autumn
+delta|the flat land where a river splits before reaching the sea
+deposition|the laying down of sand, mud or stones by water, wind or ice
+digestion|the process of breaking down food in the body
+dinosaur|a large reptile that lived millions of years ago
+dune|a hill of sand formed by the wind
+ecologist|a scientist who studies how living things relate to their surroundings
+electron|a tiny particle with a negative charge that moves around an atom
+estuary|the wide part of a river where it meets the sea
+evaporate|to change from a liquid into a gas
+evolution|the slow change of living things over many generations
+exoskeleton|a hard covering on the outside of an animal's body
+fauna|all the animals of a place or a time
+fertilizer/fertiliser|a substance added to soil to help plants grow
+filament|a very thin thread or wire
+fungus|a living thing such as a mushroom that grows on plants or dead matter
+genetic|related to the units passed from parents to children
+geologist|a scientist who studies rocks and the earth's history
+geyser|a hot spring that sends up steam and water
+gill|the part of a fish that takes oxygen from water
+glucose|a simple sugar that gives living things energy
+gravitational|related to the force that pulls objects toward each other
+heredity|the passing of features from parents to their young
+hibernation|the long winter sleep of some animals
+hieroglyph|a picture used as writing, as in ancient Egypt
+homeostasis|the way a body keeps its inside conditions steady
+humidity|the amount of water in the air
+hydrogen|the lightest gas and the most common element in the universe
+iceberg|a very large piece of ice floating in the sea
+igneous|formed when hot melted rock cools
+invertebrate|an animal without a backbone
+ion|an atom with an electric charge
+isotope|a form of an element with a different number of neutrons
+kinetic|related to movement
+lagoon|a shallow lake of sea water separated from the sea
+larva|the young form of an insect before it changes into an adult
+lava|melted rock that comes out of a volcano
+lichen|a plant-like growth on rocks made of a fungus and an alga together
+linguistics|the scientific study of language
+lunar|related to the moon
+mantle|the thick layer of the earth below the crust
+marsupial|a mammal that carries its young in a pouch
+membrane|a thin layer that covers or separates parts
+meteorite|a piece of rock from space that lands on the earth
+microorganism|a living thing too small to see without a microscope
+mitosis|the way one cell divides into two identical cells
+mold/mould|a soft growth that forms on old food or damp places
+mollusk/mollusc|a soft-bodied animal, often with a shell
+mutation|a change in the genes of a living thing
+nectar|the sweet liquid inside flowers
+nitrogen|a gas without color that forms most of the air
+novelist|a person who writes long stories
+oasis|a place in a desert with water and plants
+osmosis|the passing of water through a thin layer from a weak to a strong mixture
+ozone|a gas in the upper air that protects the earth
+petroleum|oil found under the ground
+pigment|a substance that gives color
+planetary|related to planets
+plankton|very small plants and animals that drift in water
+pollination|moving pollen from one flower to another
+predation|the killing and eating of animals by others
+prism|a clear block of glass that bends light into colors
+protozoa|very small single-celled animals
+pulley|a wheel with a rope used to lift heavy things
+rainforest|a thick tropical forest with heavy rain all year
+reef|a line of rock or coral near the surface of the sea
+respiration|the process of breathing or of using oxygen to make energy
+runoff|water that flows over the land into streams
+saline|containing salt
+salinity|the amount of salt in water
+savanna|a wide grassy plain with few trees in a hot region
+scavenger|an animal that feeds on dead bodies or waste
+secrete|to produce and release a liquid inside the body
+sedimentary|formed from layers of sand or mud pressed together
+seismic|related to earthquakes
+shale|a soft rock that splits into thin layers
+shrub|a small plant with many woody stems
+silt|fine sand or soil carried by water
+slavery|the system of owning people and forcing them to work
+solstice|either of the two days when the sun is farthest north or south
+specimen|one example of something, kept for study
+spore|a tiny cell from which a new fungus or plant can grow
+stalactite|a pointed stone that hangs from the roof of a cave
+strata|layers of rock
+subsoil|the layer of earth under the top soil
+sulfur/sulphur|a yellow element that smells like bad eggs when burned
+supernova|the huge explosion of a dying star
+swamp|an area of wet, soft land
+telescope|a tube with lenses that makes far objects look closer
+temperate|neither very hot nor very cold
+terrain|land, judged by its shape and surface
+textile|cloth or fabric
+thermal|related to heat
+tidal|related to the rise and fall of the sea
+toxin|a poison made by a living thing
+transpiration|the loss of water vapor from the leaves of plants
+tremor|a slight shaking of the ground
+tributary|a smaller river that flows into a larger one
+tundra|a flat, cold region where the ground stays frozen
+turbine|a machine with blades that spin to make power
+typhoon|a violent tropical storm in the western Pacific
+ultraviolet|light beyond violet that people cannot see but can burn skin
+vapor/vapour|a gas formed from a liquid
+vegetation|plants in general
+venom|poison from a snake, spider or insect bite
+vertebra|one of the small bones of the backbone
+volcanic|related to or made by a volcano
+voltage|the force of an electric current, measured in volts
+wavelength|the distance between two waves of light or sound
+wetland|land covered by shallow water, such as a marsh
+zoology|the scientific study of animals
+aesthetics|the study of beauty and art
+archaeologist|a person who studies the past by digging up old objects
+bankruptcy|a state of being unable to pay debts
+canal|a waterway dug for boats or for water
+deflation|a general fall in prices
+homesteader|a settler who was given farmland by the government
+industrialization/industrialisation|the growth of factories and industry in a country
+mercantile|related to trade and merchants
+plantation|a large farm growing one crop such as cotton or tea
+railroad|a track for trains, or a train company
+ranch|a large farm for raising cattle or horses
+settlement|a place where people have come to live
+shareholder|a person who owns part of a company
+steamboat|a boat driven by steam power
+telegraph|an old system for sending messages over wires
+acoustics|the way a room carries sound
+aria|a song for one voice in an opera
+canvas|strong cloth on which oil paintings are made
+choreography|the planning of dance steps
+concerto|a piece for one instrument and an orchestra
+embroidery|patterns sewn onto cloth with thread
+engraving|a picture printed from lines cut into metal or wood
+etching|a print made from a metal plate marked by acid
+improvisation|making music or a speech without preparing it
+lithograph|a print made from a flat stone or metal plate
+melody|a tune
+opera|a play in which all the words are sung
+quartet|a group of four musicians
+realism|a style of art that shows things as they really are
+romanticism|a movement in art that values emotion and nature
+sonnet|a poem of fourteen lines
+tempo|the speed of a piece of music
+tapestry|a heavy cloth with a picture woven into it
+woodcut|a print made from a carved block of wood
+bulletin|a short official notice or news report
+deferral|the act of putting something off until later
+dean|a senior head of a college or a faculty
+dining|eating meals
+extension|extra time allowed for something
+honors/honours|a special class or degree for top students
+incomplete|a mark given when a student has not finished a course
+lecturer|a person who teaches at a college
+plagiarize/plagiarise|to copy another person's work and present it as your own
+provost|a senior official in charge of academic matters at a university
+residence|a place where people live
+sorority|a social club for women students
+waitlist|a list of people waiting for a place
+abiotic|not living, such as rock, water or light
+aeration|letting air into soil or water
+aerosol|tiny drops or bits floating in the air
+alluvial|made of sand and mud left by rivers
+amino|describing the acids that build proteins
+amplitude|the height of a wave, showing its strength
+anaerobic|living or working without oxygen
+antarctic|related to the region around the South Pole
+anther|the part of a flower that makes pollen
+aphid|a small insect that feeds on plants
+arctic|related to the region around the North Pole
+arthropod|an animal with jointed legs and a hard outer shell
+astrophysics|the study of the physics of stars and space
+auditory|related to hearing
+aurora|colored lights seen in the night sky near the poles
+axon|the long thread of a nerve cell that sends signals
+bedrock|the solid rock under soil and sand
+biochemistry|the chemistry of living things
+biologist|a scientist who studies living things
+bioluminescence|light made by living things
+bison|a large wild ox of North America
+bladder|the bag in the body that holds urine
+blubber|the fat of whales and seals
+bog|wet, soft ground made of rotting plants
+brackish|slightly salty
+buoyancy|the power to float
+cactus|a desert plant with thick stems and spines
+caldera|a large hole left when a volcano collapses
+carapace|the hard shell on the back of a turtle or crab
+caribou|a large deer of the far north
+carnivorous|eating meat
+cartilage|firm, bendy tissue in the body, as in the nose
+catastrophism|the old idea that sudden disasters shaped the earth
+cephalopod|a sea animal with arms around its head, such as a squid
+cereal|a grass grown for its grain
+chloroplast|the part of a plant cell where light is used to make food
+cicada|a large insect that makes a loud buzzing sound
+cilia|very small hairs on the surface of some cells
+codex|an old book written by hand
+collagen|a protein that holds skin and bones together
+conductor|a material that lets heat or electricity pass
+conifer|a tree with needles and cones
+cosmic|related to the universe
+cosmology|the study of the origin and shape of the universe
+crustacean|a sea animal with a hard shell, such as a crab
+cytoplasm|the jelly-like substance inside a cell
+decibel|a unit for measuring how loud a sound is
+decomposer|a living thing that breaks down dead matter
+deforest|to cut down all the trees of an area
+dendrite|a short branch of a nerve cell that receives signals
+desalination|removing salt from sea water
+detritus|bits of dead plants and animals
+dormancy|a time when growth stops for a while
+downstream|in the direction the river flows
+echolocation|finding things by sending sounds and hearing the echo
+ectotherm|an animal whose body heat comes from its surroundings
+elk|a large deer
+emission|the sending out of gas, heat or light
+endotherm|an animal that makes its own body heat
+entomology|the scientific study of insects
+epidermis|the outer layer of the skin
+exoplanet|a planet that circles a star other than the sun
+fermentation|a change caused by yeast or bacteria, as when sugar becomes alcohol
+fission|the splitting of an atom
+flagellum|a long thin tail that helps a cell swim
+floodplain|flat land beside a river that floods
+fluorescence|light given off by a substance after it takes in other light
+foraging|searching for food
+fossilize/fossilise|to turn into a fossil
+freshwater|living in or made of water that is not salty
+gastropod|a soft animal that moves on one flat foot, such as a snail
+geneticist|a scientist who studies genes
+gestation|the time a baby grows inside its mother
+gneiss|a hard rock with bands of minerals
+granary|a building for storing grain
+graphite|a soft black form of carbon
+grassland|a large area covered with grass
+groundwater|water held under the ground
+gypsum|a soft white mineral used in building
+hatchling|a young animal just out of its egg
+hemoglobin/haemoglobin|the red protein in blood that carries oxygen
+hominid|a member of the family of humans and their ancestors
+humus|the dark part of soil made from rotted plants
+hydrology|the study of water on and under the earth
+hydrothermal|related to hot water inside the earth
+hyena|a wild African animal like a dog that eats dead animals
+icecap|a large area of thick ice that covers land
+incisor|a sharp front tooth used for cutting
+infrared|related to rays just beyond red light, felt as heat
+insectivore|an animal that eats insects
+interglacial|between two ice ages
+intertidal|between the high and low marks of the tide
+jellyfish|a soft sea animal shaped like an umbrella that can sting
+keratin|a tough protein in hair, nails and horns
+kiln|a hot oven for baking clay or bricks
+krill|tiny shrimp-like sea animals
+lemur|a tree-climbing animal with a long tail, related to monkeys
+lignin|the substance that makes the walls of plant cells woody
+loess|fine yellow soil laid down by wind
+lodestone|a natural magnetic rock
+luminosity|the amount of light a star gives out
+lymph|a clear liquid in the body that carries cells that fight germs
+magnetism|the force that makes magnets pull iron
+magnetosphere|the area around a planet controlled by its magnetic field
+mammoth|a large hairy elephant that lived long ago
+marble|a hard stone often used for statues and floors
+marrow|the soft tissue inside bones
+mastodon|an extinct animal like an elephant
+meltwater|water from melted snow or ice
+mesa|a hill with a flat top and steep sides
+metamorphic|changed by heat and pressure
+metamorphosis|a complete change of form as an animal grows
+meteorology|the study of the weather
+methane|a gas without color that burns easily
+microclimate|the climate of a small area that differs from what is around it
+midden|an old pile of waste left by people long ago
+migratory|moving from one region to another each season
+millennium|a period of a thousand years
+mimicry|the copying of the look of another animal for protection
+moraine|a ridge of rocks and soil left by a glacier
+morphology|the study of the form of living things or of words
+mudstone|a rock formed from hardened mud
+mycelium|the mass of thin threads that forms the body of a fungus
+neolithic|related to the late stone age when farming began
+nitrate|a salt containing nitrogen, used in fertilizer
+obsidian|a dark glass formed from lava
+ocher/ochre|a yellow or red earth used as paint
+omnivore|an animal that eats both plants and meat
+orchid|a plant with bright and unusual flowers
+organelle|a small part inside a cell that has a special job
+ornithology|the scientific study of birds
+outcrop|a part of rock that sticks out of the ground
+oxidation|the joining of a substance with oxygen
+paleolithic|related to the early stone age
+pancreas|an organ near the stomach that helps digest food
+parasitic|living on or inside another living thing and harming it
+pelt|the skin and fur of an animal
+permafrost|ground that stays frozen all year
+petrify|to slowly turn into stone
+phloem|the tissue in plants that carries food
+photon|a single unit of light
+phylum|a major group of animals or plants
+physiology|the study of how living bodies work
+pistil|the part of a flower that receives pollen
+placenta|the organ that feeds a baby inside its mother
+plumage|the feathers of a bird
+pollinator|an animal, such as a bee, that carries pollen
+polyp|a small sea animal with a tube-shaped body
+potassium|a soft metal element found in many foods
+pterosaur|a flying reptile that lived millions of years ago
+pupa|an insect in the stage between larva and adult
+quartz|a hard clear mineral found in many rocks
+radar|a system that finds objects using radio waves
+radioactive|giving off harmful energy as atoms break down
+rainfall|the amount of rain that falls
+raptor|a bird that hunts other animals
+receptor|a cell that senses light, heat, taste or touch
+redshift|the stretching of light from objects moving away
+salamander|a small animal like a lizard with soft wet skin
+sandstone|rock made of sand pressed together
+schist|a rock that splits into thin shiny layers
+seabed|the ground under the sea
+seaweed|plants that grow in the sea
+seedling|a young plant grown from a seed
+semiarid|having little rain but not as dry as a desert
+silica|a hard mineral found in sand
+sinkhole|a hole formed when the ground falls in
+slate|a gray rock that splits into thin flat pieces
+snout|the long nose of an animal
+sonar|a system that finds objects under water with sound
+spawn|to lay eggs in water
+stamen|the male part of a flower
+starch|a white food substance in rice and potatoes
+steppe|a large flat grassy plain without trees
+stomata|small openings in leaves that let gases in and out
+subduction|the sliding of one plate of the earth under another
+succulent|a plant with thick leaves that store water
+sunspot|a dark patch on the surface of the sun
+symbiotic|living together to help each other
+synapse|the gap between two nerve cells
+taxonomy|the system of naming and grouping living things
+tendril|a thin curling stem that a climbing plant holds on with
+terrestrial|living on land
+thorax|the middle part of an insect or the chest of an animal
+thunderstorm|a storm with lightning and loud noise
+topsoil|the top layer of soil where plants grow
+tornado|a violent spinning column of air
+trilobite|an extinct sea animal with a three-part body
+tuber|a thick underground stem that stores food
+upstream|against the flow of a river
+vacuole|a space inside a cell that stores water or waste
+vascular|having tubes that carry liquid
+warbler|a small singing bird
+weathering|the slow breaking down of rock by weather
+whale|a very large sea mammal
+xylem|the tissue in plants that carries water up from the roots
+yolk|the yellow part of an egg
+zooplankton|very small animals that drift in the sea

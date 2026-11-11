@@ -10,7 +10,7 @@
 1|quiz|n|kuis|There will be a short ___ at the start of each class.
 1|freshman|n|mahasiswa tahun pertama|As a ___ he shared a room with two others.
 1|grade|n|nilai|Her final ___ depends on the group project.
-1|enroll|v|mendaftar (kuliah)|You must ___ in the course before September.
+1|enroll/enrol|v|mendaftar (kuliah)|You must ___ in the course before September.
 1|laboratory|n|laboratorium|Students wear gloves in the chemistry ___ at all times.
 1|textbook|n|buku ajar|The ___ for this course costs ninety dollars.
 1|attendance|n|kehadiran|Class ___ counts for ten percent of the grade.
@@ -52,7 +52,7 @@
 1|homework|n|pekerjaan rumah|The ___ is due on Monday morning.
 1|calculator|n|kalkulator|You may use a ___ in the second part of the test.
 1|gym|n|pusat kebugaran|The campus ___ is free for students.
-1|counselor|n|konselor|A ___ helped her choose her courses.
+1|counselor/counsellor|n|konselor|A ___ helped her choose her courses.
 1|librarian|n|pustakawan|The ___ showed us how to search the catalog.
 1|presentation|n|presentasi|Each group gives a ten-minute ___ on Friday.
 1|diploma|n|ijazah|She hung her ___ on the office wall.
@@ -69,7 +69,7 @@
 2|proctor|n|pengawas ujian|A ___ walked between the desks during the test.
 2|rubric|n|rubrik penilaian|The ___ shows how each essay will be graded.
 2|tutorial|n|kelas bimbingan|The weekly ___ has only six students.
-2|enrollment|n|pendaftaran, jumlah mahasiswa|___ in the course is limited to thirty.
+2|enrollment/enrolment|n|pendaftaran, jumlah mahasiswa|___ in the course is limited to thirty.
 2|postgraduate|adj|pascasarjana|She is doing ___ work in chemistry.
 2|doctorate|n|gelar doktor|He earned a ___ in physics at twenty-six.
 2|auditorium|n|aula|The lecture was moved to the main ___ because of the crowd.
@@ -120,3 +120,396 @@
 3|stanza|n|bait|The poem's last ___ changes its meaning.
 3|paleontology|n|paleontologi|___ is the study of ancient life through fossils.
 3|hypothesize|v|berhipotesis|Scientists ___ that the lake was once a sea.
+2|algae|n|ganggang|Green ___ cover the surface of the pond every summer.
+2|amphibian|n|amfibi|A frog is an ___ that lives both in water and on land.
+2|bacterium|n|bakteri|A single ___ can divide into two in twenty minutes.
+2|blizzard|n|badai salju|The ___ closed every road for three days.
+2|bronze|n|perunggu|The statue in front of the library is cast in ___.
+2|burrow|n|liang|The rabbit dug a deep ___ under the hedge.
+2|calcium|n|kalsium|Milk is a good source of ___ for strong bones.
+2|circulation|n|peredaran (darah)|Exercise improves blood ___.
+2|comet|n|komet|The ___ had a long bright tail.
+2|coral|n|karang|Bright fish swim among the ___ near the shore.
+2|crater|n|kawah|A meteor left a huge ___ in the desert.
+2|crust|n|kerak (bumi)|The earth's ___ is thinner under the oceans.
+2|crystal|n|kristal|Salt forms a cube-shaped ___ as water dries.
+2|delta|n|delta (sungai)|Rich farmland lies in the river ___.
+2|dinosaur|n|dinosaurus|The museum has the skeleton of a huge ___.
+2|dune|n|bukit pasir|The wind shapes each ___ in the desert.
+2|electron|n|elektron|An ___ carries a negative charge.
+2|evolution|n|evolusi|Darwin wrote about the ___ of species.
+2|fertilizer/fertiliser|n|pupuk|Farmers spread ___ on the fields in spring.
+2|fungus|n|jamur|A ___ grew on the old log.
+2|genetic|adj|genetik|Eye color is a ___ trait.
+2|humidity|n|kelembapan|High ___ makes the heat feel worse.
+2|hydrogen|n|hidrogen|Water contains ___ and oxygen.
+2|iceberg|n|gunung es|Only a small part of an ___ shows above the water.
+2|lava|n|lava|Hot ___ flowed down the mountain.
+2|lunar|adj|bulan, berkaitan dengan bulan|A ___ eclipse turns the moon red.
+2|mold/mould|n|jamur, kapang|Green ___ grew on the bread.
+2|nitrogen|n|nitrogen|Most of the air is ___.
+2|oasis|n|oasis|Travelers rested at the ___ in the desert.
+2|ozone|n|ozon|The ___ layer blocks harmful sunlight.
+2|prism|n|prisma|A glass ___ splits white light into colors.
+2|rainforest|n|hutan hujan|The Amazon ___ holds millions of species.
+2|reef|n|terumbu|Divers explored the coral ___.
+2|swamp|n|rawa|Alligators live in the ___.
+2|telescope|n|teleskop|Galileo used a ___ to see the moons of Jupiter.
+2|textile|n|tekstil|The town grew around a ___ mill.
+2|vapor/vapour|n|uap|Water ___ rises from the lake in the morning.
+2|vegetation|n|tumbuh-tumbuhan|Thick ___ covers the hills.
+2|wetland|n|lahan basah|Birds nest in the ___ near the coast.
+2|canal|n|kanal, terusan|The Erie ___ linked the lake to New York.
+2|railroad|n|jalur kereta api|The ___ crossed the continent in 1869.
+2|ranch|n|peternakan|Cattle grazed on the ___ in Texas.
+2|settlement|n|permukiman|Jamestown was the first lasting English ___ in America.
+2|canvas|n|kanvas|The painter stretched a new ___.
+2|melody|n|melodi|The ___ is easy to remember.
+2|opera|n|opera|They saw an ___ in Italian.
+2|bulletin|n|buletin, pengumuman|Check the ___ board for room changes.
+2|dean|n|dekan|The ___ of students signed the letter.
+2|dining|n|makan|The ___ hall opens at seven.
+2|incomplete|n|nilai belum lengkap|He got an ___ because he missed the final.
+2|lecturer|n|dosen|The ___ spoke about early cities.
+2|bladder|n|kandung kemih|The ___ stores urine.
+2|cactus|n|kaktus|A ___ stores water in its thick stem.
+2|freshwater|adj|air tawar|Trout live in ___ streams.
+2|grassland|n|padang rumput|The ___ supports many grazing animals.
+2|jellyfish|n|ubur-ubur|A ___ drifted onto the beach.
+2|marble|n|marmer|The steps are made of white ___.
+2|quartz|n|kuarsa|Sand is mostly ___.
+2|radar|n|radar|Pilots use ___ to see storms.
+2|seabed|n|dasar laut|Divers searched the ___ for the wreck.
+2|seaweed|n|rumput laut|Piles of ___ washed up after the storm.
+2|seedling|n|bibit, kecambah|Each ___ was planted by hand.
+2|thunderstorm|n|badai petir|A ___ knocked out the power.
+2|tornado|n|tornado|A ___ tore through the town.
+2|whale|n|paus|A blue ___ is the largest animal alive.
+2|yolk|n|kuning telur|The ___ feeds the growing chick.
+3|appendage|n|anggota tubuh tambahan|An insect's antenna is a thin ___ used for sensing.
+3|arid|adj|gersang|Few trees grow in the ___ south of the state.
+3|axis|n|sumbu|The earth turns on its ___ once every day.
+3|biome|n|bioma|The desert is a ___ with extreme heat and little water.
+3|botany|n|ilmu tumbuhan|She took a course in ___ to learn how plants grow.
+3|canopy|n|kanopi, lapisan tajuk hutan|Monkeys live high in the ___ of the rainforest.
+3|carbohydrate|n|karbohidrat|Rice and bread are rich in ___.
+3|chlorophyll|n|klorofil|Leaves are green because of ___.
+3|chronology|n|kronologi|The professor gave us a ___ of the war, year by year.
+3|cognition|n|kognisi|Sleep loss slows ___ and memory.
+3|colonist|n|kolonis, pendatang|The first ___ arrived by ship in 1607.
+3|colonize/colonise|v|menjajah, mendiami|Plants quickly ___ new volcanic islands.
+3|convection|n|konveksi|Hot air rises and cool air sinks by ___.
+3|cyclone|n|siklon|The ___ brought heavy rain to the coast.
+3|deciduous|adj|meranggas|Oak and maple are ___ trees.
+3|digestion|n|pencernaan|Fiber helps ___.
+3|ecologist|n|ahli ekologi|An ___ studied how wolves change the river.
+3|estuary|n|muara|Salt water and fresh water mix in the ___.
+3|evaporate|v|menguap|Water in the dish will ___ in the sun.
+3|fauna|n|fauna|The island's ___ includes rare birds.
+3|geologist|n|ahli geologi|A ___ studied the layers of the canyon.
+3|geyser|n|geiser|The ___ shoots hot water into the air every hour.
+3|gill|n|insang|A fish breathes through each ___.
+3|glucose|n|glukosa|Plants make ___ from sunlight.
+3|gravitational|adj|gravitasi|The moon's ___ pull causes the tides.
+3|hibernation|n|hibernasi|Bears lose weight during ___.
+3|ion|n|ion|An ___ forms when an atom gains an electron.
+3|lagoon|n|laguna|Calm water fills the ___ behind the reef.
+3|larva|n|larva|A caterpillar is the ___ of a butterfly.
+3|linguistics|n|linguistik|She majored in ___ and studied how children learn grammar.
+3|mantle|n|mantel (bumi)|The ___ lies between the crust and the core.
+3|membrane|n|selaput, membran|The cell ___ controls what enters.
+3|meteorite|n|meteorit|A ___ landed in a farmer's field.
+3|mutation|n|mutasi|A ___ can give a plant white flowers.
+3|nectar|n|nektar, sari bunga|Bees collect ___ from flowers.
+3|novelist|n|novelis|The ___ wrote about life on the prairie.
+3|petroleum|n|minyak bumi|Plastic is made from ___.
+3|pigment|n|pigmen, zat warna|Early artists ground stones to make ___.
+3|planetary|adj|planet, berkaitan dengan planet|The class studied ___ motion.
+3|plankton|n|plankton|Whales feed on tiny ___.
+3|pollination|n|penyerbukan|Wind helps the ___ of grasses.
+3|predation|n|pemangsaan|Rabbits face ___ from foxes and hawks.
+3|pulley|n|katrol|Builders used a ___ to lift the stones.
+3|respiration|n|pernapasan, respirasi|Plants release water during ___.
+3|runoff|n|limpasan air|Rain ___ carries soil into the river.
+3|savanna|n|sabana|Lions hunt on the open ___.
+3|scavenger|n|pemakan bangkai|A vulture is a ___ that eats dead animals.
+3|shrub|n|semak|A low ___ grows along the trail.
+3|slavery|n|perbudakan|The war ended ___ in the United States.
+3|solstice|n|titik balik matahari|The summer ___ is the longest day of the year.
+3|specimen|n|spesimen, contoh|The lab kept a ___ of every rock found.
+3|sulfur/sulphur|n|belerang|Volcanic gas smells of ___.
+3|temperate|adj|sedang (iklim)|Most of Europe has a ___ climate.
+3|terrain|n|medan|The rocky ___ made the journey slow.
+3|thermal|adj|panas, termal|Hot springs are a source of ___ energy.
+3|tidal|adj|pasang surut|The ___ pool fills twice a day.
+3|toxin|n|racun|The plant makes a ___ that keeps insects away.
+3|tremor|n|getaran (gempa)|A small ___ shook the building.
+3|tributary|n|anak sungai|The Missouri is a ___ of the Mississippi.
+3|tundra|n|tundra|Few trees grow on the frozen ___.
+3|turbine|n|turbin|Wind turns the blades of the ___.
+3|typhoon|n|topan|A ___ struck the island in September.
+3|ultraviolet|adj|ultraviolet|Sunscreen blocks ___ light.
+3|venom|n|bisa (racun hewan)|The snake's ___ can stop a heart.
+3|volcanic|adj|vulkanik|The island is made of ___ rock.
+3|voltage|n|tegangan listrik|High ___ wires run along the road.
+3|wavelength|n|panjang gelombang|Red light has a longer ___ than blue.
+3|zoology|n|zoologi|The ___ department keeps snakes for study.
+3|archaeologist|n|arkeolog|An ___ found pottery at the site.
+3|bankruptcy|n|kebangkrutan|The railroad company went into ___ in 1893.
+3|plantation|n|perkebunan|Cotton grew on every ___ in the South.
+3|shareholder|n|pemegang saham|Every ___ voted at the meeting.
+3|steamboat|n|kapal uap|A ___ carried goods up the river.
+3|telegraph|n|telegraf|News traveled by ___ in a few minutes.
+3|embroidery|n|sulaman|The quilt has fine ___ on its border.
+3|improvisation|n|improvisasi|Jazz is known for ___.
+3|quartet|n|kuartet|A string ___ played at the dinner.
+3|realism|n|realisme|Nineteenth-century ___ showed ordinary life.
+3|sonnet|n|soneta|Every ___ has fourteen lines.
+3|tempo|n|tempo|The ___ of the last movement is fast.
+3|extension|n|perpanjangan|The professor gave me an ___ on the essay.
+3|honors/honours|n|predikat kehormatan|She graduated with ___ in biology.
+3|residence|n|asrama, tempat tinggal|The new ___ hall has single rooms.
+3|waitlist|n|daftar tunggu|I am fifth on the ___ for the class.
+3|aerosol|n|aerosol|Smoke from fires is an ___ that cools the air.
+3|antarctic|adj|antartika|Penguins live in ___ waters.
+3|aphid|n|kutu daun|An ___ sucks juice from rose stems.
+3|arctic|adj|arktik|The ___ fox turns white in winter.
+3|auditory|adj|pendengaran|The ___ nerve carries sound to the brain.
+3|aurora|n|aurora|Lights of the ___ filled the northern sky.
+3|bedrock|n|batuan dasar|The builders drilled down to ___.
+3|biologist|n|ahli biologi|A marine ___ tagged the whales.
+3|bison|n|bison|Huge herds of ___ once crossed the plains.
+3|bog|n|rawa gambut|Old bodies were found preserved in the ___.
+3|caribou|n|karibu|The ___ travel south before winter.
+3|cartilage|n|tulang rawan|Your ears are shaped by ___.
+3|cereal|n|serealia, biji-bijian|Wheat is the main ___ grown on the plains.
+3|cicada|n|tonggeret|The ___ sings loudly in summer.
+3|conductor|n|penghantar (listrik)|Copper is a good ___ of heat.
+3|conifer|n|pohon jarum|A pine is a ___.
+3|cosmic|adj|kosmik|High-energy ___ rays come from deep space.
+3|decomposer|n|pengurai|A mushroom is a ___ that breaks down dead wood.
+3|deforest|v|menggunduli hutan|Settlers began to ___ the valley for farms.
+3|downstream|adv|ke hilir|The logs floated ___ to the mill.
+3|elk|n|rusa besar|A herd of ___ grazed in the meadow.
+3|emission|n|emisi|The ___ of gases from factories rose.
+3|floodplain|n|dataran banjir|Farms on the ___ flood every spring.
+3|foraging|n|mencari makan|Bees spend the day ___ for food.
+3|fossilize/fossilise|v|memfosil|Bones ___ only in special conditions.
+3|granary|n|lumbung|Grain was stored in the village ___.
+3|groundwater|n|air tanah|Wells draw ___ from deep layers.
+3|hatchling|n|anak (hewan) yang baru menetas|Each turtle ___ ran to the sea.
+3|hyena|n|hiena|A ___ laughed in the dark.
+3|infrared|adj|inframerah|Snakes can sense ___ heat.
+3|kiln|n|tungku pembakaran|The potter fired the bowls in a ___.
+3|krill|n|krill|Whales eat tons of ___ each day.
+3|magnetism|n|kemagnetan|The class tested the ___ of iron filings.
+3|mammoth|n|mamut|A frozen ___ was found in Siberia.
+3|marrow|n|sumsum|Blood cells are made in bone ___.
+3|meltwater|n|air lelehan|Spring ___ fills the rivers.
+3|mesa|n|mesa, bukit berpuncak datar|A flat-topped ___ rose above the desert.
+3|metamorphosis|n|metamorfosis|A tadpole goes through ___ to become a frog.
+3|meteorology|n|meteorologi|The science of ___ helps pilots plan flights.
+3|methane|n|metana|Cows release ___ when they digest grass.
+3|migratory|adj|bermigrasi|Many ___ birds stop at the lake.
+3|millennium|n|milenium|The city is more than a ___ old.
+3|omnivore|n|omnivora|A bear is an ___ that eats berries and fish.
+3|orchid|n|anggrek|A rare ___ grows on the tree trunk.
+3|oxidation|n|oksidasi|Rust is a form of ___.
+3|pancreas|n|pankreas|The ___ makes insulin.
+3|pelt|n|kulit berbulu|Traders bought a beaver ___ for a few coins.
+3|photon|n|foton|Each ___ carries a little energy.
+3|physiology|n|fisiologi|The ___ course covers the heart and lungs.
+3|plumage|n|bulu (burung)|The peacock shows off its ___.
+3|pollinator|n|penyerbuk|The bee is the most important ___.
+3|potassium|n|kalium|Bananas contain ___.
+3|pupa|n|pupa, kepompong|The ___ hangs still for two weeks.
+3|radioactive|adj|radioaktif|Uranium is ___.
+3|rainfall|n|curah hujan|Annual ___ in the desert is low.
+3|salamander|n|salamander|A ___ hid under the wet log.
+3|sandstone|n|batu pasir|The cliffs are red ___.
+3|silica|n|silika|Glass is made from ___.
+3|sinkhole|n|lubang amblesan|A ___ swallowed part of the road.
+3|slate|n|batu sabak|The roof is covered with ___.
+3|snout|n|moncong|The pig dug with its ___.
+3|sonar|n|sonar|Ships use ___ to map the sea floor.
+3|spawn|v|bertelur (ikan)|Salmon swim upstream to ___.
+3|stamen|n|benang sari|Each ___ holds pollen.
+3|starch|n|pati|Potatoes are rich in ___.
+3|steppe|n|stepa|Nomads crossed the dry ___.
+3|succulent|n|tumbuhan sukulen|An aloe is a ___ that stores water.
+3|sunspot|n|bintik matahari|A dark ___ appeared on the sun.
+3|tendril|n|sulur|The vine grips the fence with a ___.
+3|terrestrial|adj|darat|Most snails are ___, not marine.
+3|topsoil|n|lapisan tanah atas|Wind blew away the dry ___.
+3|tuber|n|umbi|A potato is a ___.
+3|upstream|adv|ke hulu|The fish swam ___ to lay eggs.
+3|warbler|n|burung pengicau|A ___ sang in the bushes.
+3|weathering|n|pelapukan|Rain and frost cause ___ of rock.
+4|atoll|n|atol, pulau karang berbentuk cincin|The ___ is a ring of coral around a shallow lagoon.
+4|basalt|n|basal, batuan vulkanik gelap|Most of the ocean floor is made of dark ___.
+4|biomass|n|biomassa|Burning crop waste turns ___ into heat.
+4|bipedal|adj|berjalan dengan dua kaki|Early humans became ___ millions of years ago.
+4|capillary|n|pembuluh kapiler|Oxygen passes from the blood through the wall of each ___.
+4|carbonate|n|karbonat|Limestone is mostly calcium ___.
+4|cartography|n|kartografi, ilmu pembuatan peta|Satellites changed ___ in the twentieth century.
+4|cellulose|n|selulosa|Paper is made mostly of plant ___.
+4|cortex|n|korteks|The ___ handles planning and language.
+4|deposition|n|pengendapan|The ___ of sand builds new beaches.
+4|exoskeleton|n|kerangka luar|A crab's ___ protects its soft body.
+4|filament|n|filamen, serat halus|The ___ in the bulb glows when it gets hot.
+4|heredity|n|keturunan, pewarisan sifat|Mendel's peas showed how ___ works.
+4|hieroglyph|n|hieroglif|Each ___ stands for a word or a sound.
+4|igneous|adj|beku (batuan)|Granite is an ___ rock.
+4|invertebrate|n|invertebrata|A worm is an ___.
+4|isotope|n|isotop|Carbon dating uses a rare ___ of carbon.
+4|kinetic|adj|kinetik|A rolling ball has ___ energy.
+4|lichen|n|lumut kerak|Gray ___ grows on rocks in the tundra.
+4|marsupial|n|marsupial, hewan berkantong|A kangaroo is a ___.
+4|microorganism|n|mikroorganisme|Yogurt is made with a useful ___.
+4|mitosis|n|mitosis|A cell copies itself through ___.
+4|mollusk/mollusc|n|moluska|A snail is a ___.
+4|osmosis|n|osmosis|Water enters the root by ___.
+4|protozoa|n|protozoa|Some ___ cause disease in drinking water.
+4|saline|adj|asin, bergaram|The lake is so ___ that fish cannot live in it.
+4|salinity|n|kadar garam|The ___ of the sea rises when water evaporates.
+4|secrete|v|mengeluarkan (cairan)|Glands ___ sweat when we are hot.
+4|sedimentary|adj|sedimen, endapan|Sandstone is a ___ rock.
+4|seismic|adj|seismik|Scientists measured ___ waves after the quake.
+4|shale|n|serpih|Fossils are often found in soft ___.
+4|silt|n|lumpur halus|The flood left a layer of ___ on the fields.
+4|spore|n|spora|A fern spreads by releasing a ___.
+4|strata|n|lapisan batuan|The canyon walls show ___ of different colors.
+4|subsoil|n|lapisan tanah bawah|Roots of the oak reach deep into the ___.
+4|supernova|n|supernova|A ___ can shine brighter than a whole galaxy.
+4|transpiration|n|transpirasi|Leaves lose water through ___.
+4|vertebra|n|ruas tulang belakang|He cracked a ___ in the fall.
+4|aesthetics|n|estetika|The course covers the ___ of Greek temples.
+4|deflation|n|deflasi|Prices fell for years during ___.
+4|homesteader|n|pemukim penggarap tanah|Each ___ received land if he farmed it for five years.
+4|industrialization/industrialisation|n|industrialisasi|Rapid ___ drew farm workers into cities.
+4|acoustics|n|akustik|The hall's ___ make every note clear.
+4|aria|n|aria|The soprano sang an ___ from the opera.
+4|choreography|n|koreografi|The ___ of the ballet was new.
+4|concerto|n|konserto|She played a piano ___ with the orchestra.
+4|engraving|n|ukiran, grafir|An old ___ shows the harbor in 1800.
+4|etching|n|etsa|Rembrandt made each ___ with acid on copper.
+4|romanticism|n|romantisisme|The age of ___ valued feeling and nature.
+4|tapestry|n|permadani dinding|A huge ___ hung in the castle hall.
+4|woodcut|n|cukil kayu|The book has a ___ on every page.
+4|deferral|n|penangguhan|He asked for a ___ of his tuition payment.
+4|plagiarize/plagiarise|v|menjiplak|Students who ___ may fail the course.
+4|sorority|n|perkumpulan mahasiswi|She joined a ___ in her first year.
+4|abiotic|adj|abiotik, tak hidup|Sunlight and water are ___ parts of an ecosystem.
+4|aeration|n|aerasi, pemberian udara|Worms improve the ___ of the soil.
+4|alluvial|adj|aluvial|Rice grows well on ___ soil near the river.
+4|amino|adj|amino|Proteins are chains of ___ acids.
+4|amplitude|n|amplitudo|A loud sound has a large ___.
+4|anaerobic|adj|anaerob, tanpa oksigen|Some bacteria live in ___ mud.
+4|anther|n|kepala sari|Pollen forms on the ___ of a flower.
+4|arthropod|n|artropoda|A spider is an ___ with eight legs.
+4|axon|n|akson|An ___ carries signals away from a nerve cell.
+4|biochemistry|n|biokimia|She studied ___ before medical school.
+4|bioluminescence|n|bioluminesensi|Fireflies glow because of ___.
+4|blubber|n|lapisan lemak (hewan laut)|A thick layer of ___ keeps seals warm.
+4|brackish|adj|payau|Mangroves grow in ___ water.
+4|buoyancy|n|daya apung|Salt water gives more ___ than fresh water.
+4|caldera|n|kaldera|A lake fills the old ___.
+4|carapace|n|tempurung, cangkang punggung|The turtle pulled its head under its ___.
+4|carnivorous|adj|karnivora, pemakan daging|The ___ plant traps flies.
+4|cephalopod|n|sefalopoda|An octopus is a ___.
+4|chloroplast|n|kloroplas|Each ___ turns light into food for the plant.
+4|cilia|n|silia, rambut getar|Tiny ___ move dust out of the lungs.
+4|collagen|n|kolagen|Skin loses ___ with age.
+4|cosmology|n|kosmologi|The field of ___ asks how the universe began.
+4|crustacean|n|krustasea|A lobster is a ___.
+4|cytoplasm|n|sitoplasma|The nucleus floats in the ___.
+4|decibel|n|desibel|A jet engine reaches 140 on the ___ scale.
+4|dendrite|n|dendrit|Each ___ receives signals from other cells.
+4|desalination|n|desalinasi|A ___ plant turns sea water into drinking water.
+4|detritus|n|detritus, serpihan sisa|Crabs feed on ___ on the seabed.
+4|dormancy|n|masa dorman|Seeds can survive years of ___.
+4|echolocation|n|ekolokasi|Bats find insects by ___.
+4|ectotherm|n|hewan berdarah dingin|A lizard is an ___ that warms itself in the sun.
+4|endotherm|n|hewan berdarah panas|A bird is an ___ that keeps a steady body heat.
+4|entomology|n|entomologi|Her interest in beetles led her to ___.
+4|epidermis|n|epidermis, lapisan kulit luar|The ___ protects the body from germs.
+4|exoplanet|n|eksoplanet|Astronomers found an ___ near a small star.
+4|fermentation|n|fermentasi|Bread rises because of ___.
+4|flagellum|n|flagela|A bacterium swims by moving its ___.
+4|fluorescence|n|fluoresensi|The rock glows by ___ under black light.
+4|gastropod|n|gastropoda|A snail is a ___.
+4|geneticist|n|ahli genetika|A ___ studies inherited diseases.
+4|gestation|n|masa kehamilan|An elephant's ___ lasts nearly two years.
+4|graphite|n|grafit|Pencils contain ___, not lead.
+4|gypsum|n|gipsum|Walls are made with boards of ___.
+4|hemoglobin/haemoglobin|n|hemoglobin|The protein ___ carries oxygen in the blood.
+4|hominid|n|hominid|The skull belonged to an early ___.
+4|humus|n|humus|Rich ___ makes the forest floor dark.
+4|hydrology|n|hidrologi|The field of ___ studies how water moves through land.
+4|icecap|n|tudung es|Greenland is covered by a thick ___.
+4|incisor|n|gigi seri|A beaver's ___ never stops growing.
+4|insectivore|n|pemakan serangga|A mole is an ___ that hunts underground.
+4|interglacial|adj|antarglasial|We live in an ___ period between ice ages.
+4|intertidal|adj|zona pasang surut|Starfish live in the ___ zone.
+4|keratin|n|keratin|Hair and nails are made of ___.
+4|lemur|n|lemur|The ___ lives only on Madagascar.
+4|luminosity|n|luminositas, kecerlangan|A star's ___ depends on its size.
+4|lymph|n|getah bening|Clear ___ carries cells that fight infection.
+4|mastodon|n|mastodon|A ___ tooth was found in the creek.
+4|metamorphic|adj|metamorf|Marble is a ___ rock.
+4|microclimate|n|iklim mikro|The walled garden has its own ___.
+4|mimicry|n|mimikri|Some harmless flies use ___ to look like bees.
+4|moraine|n|morena|A ___ marks where the glacier stopped.
+4|morphology|n|morfologi|The ___ of the beak shows what the bird eats.
+4|mudstone|n|batu lumpur|Footprints were found in the ___.
+4|neolithic|adj|neolitikum|Early ___ farmers built the first villages.
+4|nitrate|n|nitrat|Too much ___ in the river feeds algae.
+4|obsidian|n|obsidian|Ancient tools were made of black ___.
+4|ocher/ochre|n|oker|Cave painters used red ___.
+4|organelle|n|organel|The nucleus is the largest ___ in the cell.
+4|ornithology|n|ornitologi|Her love of birds led her to ___.
+4|outcrop|n|singkapan batuan|The geologist climbed the ___ to take samples.
+4|paleolithic|adj|paleolitikum|Early ___ hunters used stone tools.
+4|parasitic|adj|parasit|A ___ worm lives in the gut.
+4|permafrost|n|tanah beku abadi|Roads crack when ___ melts.
+4|petrify|v|membatu|Wood can ___ over thousands of years.
+4|phylum|n|filum|Insects belong to a large ___.
+4|pistil|n|putik|The ___ is the female part of a flower.
+4|placenta|n|plasenta|The baby gets food through the ___.
+4|polyp|n|polip|Each coral ___ builds a tiny cup.
+4|raptor|n|burung pemangsa|An eagle is a ___.
+4|receptor|n|reseptor|Each taste ___ responds to one flavor.
+4|schist|n|sekis|The old ___ sparkles with mica.
+4|semiarid|adj|semi-kering|The ___ plains get little rain.
+4|subduction|n|subduksi|Plate ___ pushes one plate under another.
+4|symbiotic|adj|simbiotik|Bees and flowers have a ___ link.
+4|synapse|n|sinapsis|Signals cross the ___ between nerves.
+4|taxonomy|n|taksonomi|The science of ___ puts every species in a group.
+4|thorax|n|toraks, dada|An insect's legs attach to its ___.
+4|trilobite|n|trilobita|Each ___ fossil is millions of years old.
+4|vacuole|n|vakuola|A plant cell stores water in a large ___.
+4|vascular|adj|pembuluh (vaskular)|Ferns have ___ tissue.
+4|zooplankton|n|zooplankton|Fish larvae eat ___.
+5|cuneiform|n|aksara paku|Ancient scribes wrote ___ on clay tablets.
+5|homeostasis|n|homeostasis|Sweating is part of ___.
+5|stalactite|n|stalaktit|A long ___ hung from the roof of the cave.
+5|mercantile|adj|perdagangan, merkantil|Boston grew as a ___ port.
+5|lithograph|n|litograf|The poster is a ___ from 1890.
+5|provost|n|rektor bidang akademik|The ___ approved the new program.
+5|astrophysics|n|astrofisika|Modern ___ explains how stars burn.
+5|catastrophism|n|katastrofisme|Old ___ held that floods shaped the land.
+5|codex|n|kodeks|The Maya painted each ___ on bark paper.
+5|fission|n|fisi|Nuclear ___ releases huge energy.
+5|gneiss|n|gneis|Banded ___ forms under great heat and pressure.
+5|hydrothermal|adj|hidrotermal|Strange worms live near ___ vents.
+5|lignin|n|lignin|A substance called ___ makes wood hard.
+5|loess|n|loess, tanah endapan angin|Fine ___ was blown in by ancient winds.
+5|lodestone|n|batu magnet|Sailors used a ___ to find north.
+5|magnetosphere|n|magnetosfer|The earth's ___ shields us from solar wind.
+5|midden|n|timbunan sampah purba|Shells in the ___ show what people ate.
+5|mycelium|n|miselium|A mushroom grows from an underground ___.
+5|phloem|n|floem|The tube called ___ carries sugar down from the leaves.
+5|pterosaur|n|pterosaurus|A ___ flew above the dinosaurs.
+5|redshift|n|pergeseran merah|A ___ in their light shows that galaxies move away from us.
+5|stomata|n|stomata, mulut daun|Leaves breathe through tiny ___.
+5|xylem|n|xilem|Water rises through the ___ in a stem.

@@ -23,9 +23,13 @@ class Word {
 
   /// the meaning in plain English; empty when none has been written yet
   final String def;
-  const Word(this.id, this.forms, this.pos, this.meaning, this.sentence, this.tier, [this.gap = const [], this.def = '']);
 
-  Word withDef(String d) => Word(id, forms, pos, meaning, sentence, tier, gap, d);
+  /// from the banner's own layer (TOEFL or IELTS), not the core: such words come first among a rank's new ones
+  final bool banner;
+  const Word(this.id, this.forms, this.pos, this.meaning, this.sentence, this.tier, [this.gap = const [], this.def = '', this.banner = false]);
+
+  Word withDef(String d) => Word(id, forms, pos, meaning, sentence, tier, gap, d, banner);
+  Word asBanner() => Word(id, forms, pos, meaning, sentence, tier, gap, def, true);
 
   /// what the word means, in the language the learner learns through
   String get gloss => english && def.isNotEmpty ? def : meaning;
@@ -71,7 +75,10 @@ class Deck {
   final Map<String, Word> byId;
   final List<List<Word>> _tier;
 
-  Deck(this.words, [this.collocs = const []])
+  /// 'toefl' or 'ielts'; empty in tests that build a deck by hand
+  final String banner;
+
+  Deck(this.words, [this.collocs = const [], this.banner = ''])
     : byId = {for (final w in words) w.id: w},
       _tier = [for (var t = 0; t <= tiers; t++) words.where((w) => w.tier == t).toList()];
 
@@ -109,7 +116,7 @@ class Deck {
     final seen = <String>{};
     words.retainWhere((w) => seen.add(w.id));
     for (final w in parse(await rootBundle.loadString('assets/deck/$banner.txt'))) {
-      if (seen.add(w.id)) words.add(w);
+      if (seen.add(w.id)) words.add(w.asBanner());
     }
     final defs = <String, String>{};
     for (final f in all.where((a) => a.startsWith('assets/deck/en/'))) {
@@ -117,7 +124,7 @@ class Deck {
     }
     return Deck([
       for (final w in words) defs.containsKey(w.id) ? w.withDef(defs[w.id]!) : w,
-    ], parseCollocs(await rootBundle.loadString('assets/deck/collocations.txt')));
+    ], parseCollocs(await rootBundle.loadString('assets/deck/collocations.txt')), banner);
   }
 
   /// `word|definition` lines

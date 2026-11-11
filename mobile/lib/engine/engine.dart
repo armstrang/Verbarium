@@ -105,10 +105,17 @@ class Engine {
       final m = Mem.from(v);
       if (m != null && deck.byId.containsKey(k)) _mem[k] = m;
     });
-    // new words arrive in a fixed shuffled order, not alphabetically
+    // new words arrive in a fixed shuffled order, not alphabetically; the banner's own words come early, one in
+    // every two, until they run out
     for (var t = 0; t <= Deck.tiers; t++) {
       final l = List<Word>.of(deck.tier(t))..shuffle(Random(1215 + t));
-      _order.add(l);
+      final own = l.where((w) => w.banner).toList(), core = l.where((w) => !w.banner).toList();
+      final mixed = <Word>[];
+      for (var i = 0; i < max(own.length, core.length); i++) {
+        if (i < own.length) mixed.add(own[i]);
+        if (i < core.length) mixed.add(core[i]);
+      }
+      _order.add(mixed);
     }
   }
 
@@ -189,7 +196,8 @@ class Engine {
     final err = lastError(w);
     if (err == 'm' && m.s < 2) return Quiz.choice;
     if (err == 'o' && w.buildable) return Quiz.build;
-    if (w.buildable && m.s >= 2 && h % 5 == 0) return Quiz.build;
+    // the TOEFL has a build-a-sentence task, so under its banner the build comes more often
+    if (w.buildable && m.s >= 2 && h % (deck.banner == 'toefl' ? 3 : 5) == 0) return Quiz.build;
     if (m.s < 1 && h % 4 == 0) return Quiz.choice;
     return Quiz.cloze;
   }

@@ -5,7 +5,7 @@ abrasive|rough enough to scratch
 abstraction|a general idea not tied to a real case
 abundance|a very large amount
 accession|the act of becoming ruler
-acclimatize|to get used to a new climate
+acclimatize/acclimatise|to get used to a new climate
 accomplice|a partner in crime
 accountability|the duty to explain your actions
 accumulation|a slow gathering into a heap
@@ -147,7 +147,7 @@ cavalry|soldiers on horses
 cede|to give up land or rights
 celestial|of the sky or heavens
 cemetery|a place where the dead are buried
-centralize|to bring under one control
+centralize/centralise|to bring under one control
 ceramic|made of baked clay
 certify|to state officially in writing
 chancellor|a head of government or of finance

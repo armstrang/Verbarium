@@ -5,7 +5,7 @@ abrasive|adj|kasar, mengikis|Do not clean the lens with an ___ cloth.
 abstraction|n|abstraksi|Justice is an ___ until it touches a real case.
 abundance|n|kelimpahan|The lake holds an ___ of fish.
 accession|n|naik takhta, aksesi|Her ___ to the throne was celebrated for a week.
-acclimatize|v|menyesuaikan diri (iklim)|Climbers need a few days to ___ to the altitude.
+acclimatize/acclimatise|v|menyesuaikan diri (iklim)|Climbers need a few days to ___ to the altitude.
 accomplice|n|kaki tangan|The thief and his ___ were arrested at the border.
 accountability|n|pertanggungjawaban|Voters demand more ___ from public officials.
 accumulation|n|penumpukan|The ___ of dust damaged the machine.
@@ -147,7 +147,7 @@ cavalry|n|pasukan berkuda|The ___ charged across the open field.
 cede|v|menyerahkan (wilayah)|The treaty forced the state to ___ two provinces.
 celestial|adj|berkaitan dengan langit|Sailors steered by ___ bodies.
 cemetery|n|pemakaman|The poet is buried in the village ___ near the church.
-centralize|v|memusatkan|The plan would ___ power in the capital.
+centralize/centralise|v|memusatkan|The plan would ___ power in the capital.
 ceramic|adj|keramik|The floor is covered with ___ tiles.
 certify|v|mengesahkan|Two doctors must ___ the cause of death.
 chancellor|n|kanselir|The ___ announced a new tax on fuel.

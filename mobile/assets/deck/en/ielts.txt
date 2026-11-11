@@ -1,8 +1,8 @@
 # Verbarium — plain English definitions for ielts.txt: word|definition
-neighbourhood|the area around your home
+neighborhood/neighbourhood|the area around your home
 programme|a show on television or radio
-behaviour|the way a person acts
-centre|the middle point
+behavior/behaviour|the way a person acts
+center/centre|the middle point
 leisure|free time
 traffic|cars and buses moving on roads
 rubbish|things thrown away
@@ -32,8 +32,8 @@ pedestrian|a person walking in the street
 curriculum|all the subjects taught in a school
 drawback|a disadvantage
 outskirts|the outer parts of a town
-urbanisation|the growth of cities
-globalisation|the growing together of the world's trade and culture
+urbanization/urbanisation|the growth of cities
+globalization/globalisation|the growing together of the world's trade and culture
 sedentary|involving much sitting
 deforestation|the cutting down of forests
 biodiversity|the variety of living things
@@ -64,7 +64,7 @@ upward|going higher
 downward|going lower
 dramatically|suddenly and greatly
 marginally|by a very small amount
-stabilise|to stop changing
+stabilize/stabilise|to stop changing
 twofold|twice as great
 threefold|three times as great
 quadruple|to become four times as large
@@ -112,9 +112,395 @@ telecommuting|working from home by computer
 entrepreneurship|the starting and running of new businesses
 assimilation|the process of becoming part of a new society
 malnourished|weak from lack of good food
-subsidise|to pay part of the cost of
-privatise|to sell a state business to private owners
-nationalise|to put a business under state ownership
+subsidize/subsidise|to pay part of the cost of
+privatize/privatise|to sell a state business to private owners
+nationalize/nationalise|to put a business under state ownership
 conservationist|a person who works to protect nature
 reoffend|to commit a crime again
 additive|a substance put into food to keep or colour it
+advert|a notice or short film that tries to sell something
+allotment|a small piece of land rented by a town for growing vegetables
+anaesthetic|a drug that stops a person feeling pain
+arthritis|a disease that makes the joints painful and stiff
+banking|the business of running a bank
+barrister|a lawyer who argues cases in a higher court in Britain
+bedsit|a single rented room used for both living and sleeping
+bicycle|a vehicle with two wheels that you ride by pushing pedals
+biofuel|fuel made from plants or animal waste
+bungalow|a house with only one floor
+calorie|a unit for measuring the energy in food
+canteen|a room where food is served in a school or workplace
+careers|the jobs that a person may do in life, as a subject of advice
+carer|a person who looks after someone ill or old at home
+cheque|a printed paper that orders a bank to pay money
+citizenship|the legal right to belong to a country
+civilization/civilisation|a society with its own culture, laws and cities
+commuter|a person who travels some distance to work each day
+convenience|the quality of being easy and saving time
+councillor|an elected member of a town council
+cyclist|a person who rides a bicycle
+deprived|lacking money, good housing and services
+diabetes|a disease in which the body cannot control sugar in the blood
+digitize/digitise|to change pictures or documents into a computer form
+disposable|made to be thrown away after use
+ecotourism|travel to natural places that tries to protect them
+enroll/enrol|to put your name on the list for a course
+flatmate|a person you share a flat with
+fridge|a cold box for keeping food fresh
+funding|money given for a special purpose
+gentrification|the change of a poor area as richer people move in
+graffiti|words or drawings painted on walls in public
+greenery|green plants and trees
+grocer|a shopkeeper who sells food
+headteacher|the person in charge of a school
+heatwave|a period of unusually hot weather
+humanities|subjects such as history, literature and languages
+illiteracy|not being able to read or write
+immunize/immunise|to protect from a disease with an injection
+insulation|material that stops heat from escaping
+internship|a short period of work to gain experience
+irrigation|supplying land with water through channels or pipes
+jobseeker|a person looking for a job
+kerb|the edge of the pavement next to the road
+lecturer|a teacher at a university
+lifelong|lasting for all of a person's life
+lifespan|the length of time a person or thing lives or works
+lone|being the only one; on its own
+manufacturing|the making of goods in factories
+maternity|related to being a mother and having a baby
+metropolitan|related to a large city and its suburbs
+motorist|a person who drives a car
+offshore|in the sea, away from the coast
+overheads|the regular costs of running a business, such as rent
+overtime|time worked beyond normal hours
+packaging|the materials used to wrap goods
+paramedic|a person trained to give emergency medical help
+parenthood|the state of being a parent
+parking|leaving a vehicle in a place for a time
+photovoltaic|turning light directly into electricity
+playground|an outdoor area where children play
+plumber|a person who fits and repairs water pipes
+rainfall|the amount of rain that falls in a place
+residential|made up of homes rather than shops or offices
+retailer|a business that sells goods to the public
+sanitation|systems for clean water and the removal of waste
+secondary|for children aged about eleven to eighteen
+sewage|waste water from homes and toilets
+skyscraper|a very tall building
+spending|money spent
+suburban|related to the areas at the edge of a city
+supermarket|a large shop that sells food and household goods
+taxation|the system of charging taxes
+terraced|built in a row with shared side walls
+textile|cloth or the making of cloth
+tourism|the business of travel and holidays
+trainee|a person learning a job
+transit|the moving of people or goods from one place to another
+tuition|teaching, or the money paid for it
+turbine|a machine with blades turned by wind or water to make power
+upbringing|the way a child is cared for and taught
+utilities|services such as water, gas and electricity
+wastage|the amount of something lost or not used
+wheelchair|a chair with wheels for someone who cannot walk
+wholesale|related to selling goods in large amounts to shops
+workplace|a place where people work
+approximately|close to but not exactly
+declining|becoming smaller or fewer
+proportionate|in the right amount compared with something else
+rapidly|very quickly
+slightly|a little
+similarly|in a way that is almost the same
+consequently|as a result
+arguably|as can be shown with good reasons
+undeniably|in a way that nobody can question
+deprivation|a lack of things people need, such as food or housing
+censorship|the control of what may be published or shown
+individualism|the belief that each person should act freely for themselves
+materialistic|caring too much about money and possessions
+globalize/globalise|to spread or operate across the world
+standardize/standardise|to make things the same in type or size
+prioritize/prioritise|to decide which things are most important and deal with them first
+maximize/maximise|to make as large as possible
+characterise|to be the typical feature of something
+categorise|to put things into groups
+civilize/civilise|to make a society more educated and polite
+urbanize/urbanise|to change a rural area into a town or city
+industrialize/industrialise|to develop factories and industry
+specialize/specialise|to study or work in one particular area
+legalize/legalise|to make something allowed by law
+penalize/penalise|to punish for breaking a rule
+custodial|involving time in prison
+punishment|a penalty for doing something wrong
+delinquency|minor crime, especially by young people
+cybercrime|crime carried out using computers or the internet
+anonymity|the state of being unknown by name
+addiction|a strong need to keep doing or using something harmful
+burnout|extreme tiredness caused by too much work and stress
+flexitime|a system that lets workers choose when they start and finish
+commuting|travelling to and from work
+telecommute|to work from home using a computer
+dependency|the state of needing something to survive
+pedestrianize/pedestrianise|to close a street to cars so only walkers can use it
+emissions|gases sent into the air
+warming|a rise in temperature
+flooding|water covering land that is usually dry
+fertiliser|a substance added to soil to help plants grow
+souvenir|an object kept to remember a place or event
+backpacker|a person who travels cheaply with a bag on their back
+preservation|the act of keeping something safe from harm or change
+loyalty|the quality of staying faithful to someone
+marketing|the work of promoting and selling products
+abattoir|a place where animals are killed for meat
+affordability|how cheap enough something is for people to buy
+alcoholism|a disease of not being able to stop drinking alcohol
+antisocial|harmful or annoying to other people
+arcade|a place with games machines, or a covered row of shops
+asthma|an illness that makes breathing difficult
+autism|a condition that affects how a person communicates and relates to others
+barbecue|a meal cooked over an open fire outdoors
+biscuit|a small, flat, sweet baked food
+bursary|a sum of money given to help a student pay for study
+carriageway|one side of a large road for traffic going one way
+catchment|the area from which a school takes its pupils
+chemist|a shop that sells medicine and toiletries
+childminder|a person paid to look after children in their own home
+chips|long pieces of fried potato
+conurbation|a large urban area formed by towns growing together
+cooker|a machine for cooking food, with an oven and hot rings
+cosmetics|products used to make the face or body look better
+crisps|thin fried slices of potato sold in bags
+dentistry|the work of caring for teeth
+detached|not joined to another building
+diesel|a heavy fuel used in some engines
+dietary|related to the food people eat
+dishwasher|a machine that cleans plates and cups
+doorstep|the step in front of the door of a house
+duvet|a thick soft cover for a bed
+employability|the skills and qualities that help someone get a job
+eviction|forcing someone to leave their home
+exhaustion|extreme tiredness
+flyover|a bridge that carries one road over another
+footpath|a path for people walking
+freeway|a wide fast road with no charges
+fundraising|collecting money for a cause
+gardening|growing and caring for plants in a garden
+generator|a machine that makes electricity
+geriatric|related to the medical care of old people
+gigabyte|a unit of computer memory
+greenbelt|an area of countryside around a city where building is restricted
+guarantor|a person who promises to pay if another person cannot
+handset|a mobile phone or the part of a phone you hold
+hoarding|a large board for advertisements beside a road
+hostel|a cheap place to stay, often with shared rooms
+householder|a person who owns or rents a house
+housewife|a woman who manages a home and does not work outside it
+incineration|the burning of waste
+incinerator|a large furnace for burning waste
+inpatient|a patient who stays in hospital
+intercity|travelling between cities
+jobcentre|a government office that helps people find work
+junction|a place where roads meet
+kindergarten|a school for children aged about four to six
+landline|a phone connected by a cable, not a mobile
+laundry|clothes that need washing
+layby|a space beside a road where vehicles can stop
+lettings|the business of renting out houses and flats
+lodger|a person who pays to live in part of someone's house
+marketplace|an open area where a market is held
+mayor|the elected head of a town or city
+menswear|clothes for men
+microchip|a very small piece of electronics that holds data
+midwife|a nurse trained to help women give birth
+monorail|a railway with a single rail
+motorcyclist|a person who rides a motorbike
+nappy|a cloth or paper pad worn by a baby
+newsagent|a shop that sells newspapers and magazines
+nightlife|places to go for entertainment at night
+obligatory|required by a rule or law
+occupancy|the share of rooms or homes that are being used
+outpatient|a patient who visits hospital but does not stay overnight
+overcharge|to ask for too much money
+overdraft|money borrowed by spending more than is in the bank
+overweight|heavier than is healthy
+paperwork|the forms and documents needed for work
+parental|related to parents
+pharmacist|a person trained to prepare and sell medicine
+physiotherapy|treatment of injuries with exercise and massage
+pickpocket|a thief who steals from people's pockets
+placement|a period of work done as part of a course
+policing|the work of the police in keeping order
+pollen|the fine powder made by flowers
+postal|related to sending letters by post
+pothole|a hole in the surface of a road
+premises|the land and buildings of a business
+preschool|a school for children too young for primary school
+pub|a bar in Britain where people drink and meet
+punctuality|being on time
+quarterly|happening every three months
+railcard|a card that gives cheaper train tickets
+rainwater|water that has fallen as rain
+receptionist|a person who greets visitors and answers phones
+recruitment|the process of finding new staff
+refurbishment|the work of repairing and decorating a building
+regeneration|the improvement of a run-down area
+rental|renting something, or the money paid for it
+retiree|a person who has stopped working because of age
+roadworks|repairs being done on a road
+rota|a list showing who does a task and when
+salesperson|a person whose job is selling things
+savings|money kept for later
+schooling|education at school
+seaside|an area by the sea, often a holiday place
+shopkeeper|a person who owns or runs a small shop
+sickness|illness
+signpost|a sign at a road showing the way
+skateboard|a short board with wheels used for riding
+smog|dirty air made of smoke and fog
+solicitor|a lawyer in Britain who gives advice and prepares documents
+spa|a place for health treatments and relaxing
+spokesperson|a person who speaks for a group
+sportswear|clothes worn for sport
+starvation|suffering or death from lack of food
+stationery|paper, pens and other things for writing
+statistician|a person who works with numbers and data
+storey|a level of a building
+streetlight|a lamp on a post beside a road
+subway|a tunnel under a road for people to walk through
+superstore|a very large shop
+surcharge|an extra charge added to a price
+takeaway|a meal bought from a restaurant and eaten at home
+tenancy|the period or right of renting a home
+terminal|a building at an airport or a bus station
+textbook|a book used for study
+thermostat|a device that controls heating
+toddler|a young child learning to walk
+toiletries|soap, toothpaste and similar things
+tollbooth|a small building where drivers pay to use a road
+torch|a small electric light you hold in your hand
+townhouse|a tall house in a row in a town
+tracksuit|a loose jacket and trousers for sport
+trolley|a cart with wheels for carrying shopping
+underpass|a road or path that goes under another road
+unpaid|not paid
+valuation|an estimate of how much something is worth
+vandal|a person who damages public property on purpose
+vending|selling things from machines
+veterinary|related to the medical care of animals
+viaduct|a long high bridge that carries a road or railway
+villager|a person who lives in a village
+wardrobe|a tall cupboard for clothes
+warranty|a written promise to repair a product
+weekday|any day from Monday to Friday
+wellness|the state of being healthy in body and mind
+whiteboard|a white board you write on with special pens
+windfarm|a group of wind turbines that make electricity
+aridity|the state of being very dry
+biodegradable|able to rot away naturally
+compost|rotted plant waste used to feed soil
+conservationism|the belief that nature should be protected
+contamination|making something dirty or harmful
+coolant|a liquid used to keep machines cool
+degradation|the gradual damage of something
+depletion|the reduction of something until little is left
+dioxide|a substance with two oxygen atoms
+drainage|a system of pipes or ditches that carry away water
+ecological|related to living things and their surroundings
+ecosystem|all the living things in an area and how they affect each other
+effluent|liquid waste sent out from factories
+environmentalist|a person who works to protect nature
+eutrophication|too much plant growth in water caused by extra nutrients
+floodwater|water that has flooded an area
+geothermal|using heat from inside the earth
+hydroelectric|making electricity from moving water
+incentivize/incentivise|to encourage by offering a reward
+methane|a gas that burns easily and warms the climate
+microplastic|a very small piece of plastic
+monoculture|growing a single crop over a large area
+ozone|a gas high in the air that blocks harmful sunlight
+permafrost|ground that stays frozen all year
+photosynthesis|the way plants use sunlight to make food
+plantation|a large farm growing one crop
+poaching|killing or catching animals illegally
+purification|the process of making something clean
+radioactive|giving off harmful energy as atoms break down
+rainforest|a thick tropical forest with heavy rain
+reforestation|planting trees where a forest was cut down
+reusable|able to be used again
+salinization/salinisation|the build-up of salt in soil
+sewerage|the system of underground pipes for waste water
+smokestack|a tall chimney of a factory
+toxin|a poisonous substance
+advertisement|a notice or film that promotes a product
+affluence|wealth
+bilingualism|the ability to speak two languages
+breadwinner|the person who earns money for the family
+childrearing|bringing up children
+commercialization/commercialisation|changing something so that it makes money
+commodification|treating something as a product to be sold
+conformist|following what most people do
+crowdfunding|raising money from many people online
+cyberbullying|bullying through phones or the internet
+disadvantaged|having less money or fewer chances than others
+dropout|a person who leaves school or college early
+elitism|the belief that a small group should have power or privileges
+emancipation|the act of setting people free from limits
+ethnicity|belonging to a group with a shared culture or origin
+globalized/globalised|linked across the whole world
+homogeneity|the state of being the same throughout
+inclusivity|the practice of including everyone
+intergenerational|between different age groups
+joblessness|the state of having no job
+literate|able to read and write
+marginalized/marginalised|treated as unimportant and kept apart from society
+meritocracy|a system that rewards ability rather than birth or money
+multilingual|using several languages
+obsolescence|the state of becoming out of date
+offline|not connected to the internet
+online|on the internet
+outsource|to pay another company to do part of your work
+overconsumption|using more than is needed
+polarization/polarisation|division into two opposite groups
+populist|claiming to speak for ordinary people against the elite
+privatization/privatisation|selling a state service to private companies
+selfie|a photo you take of yourself
+socialize/socialise|to meet and spend time with other people
+stereotyping|having a fixed and unfair idea about a group
+teleworking|working from home using computers and phones
+upskilling|learning new skills for work
+traveling/travelling|going from place to place
+meter/metre|a unit of length of one hundred centimetres
+liter/litre|a unit for measuring liquids
+disproportionately|to a degree that is too large or too small compared with others
+counterproductive|having the opposite effect to the one intended
+overrepresented|present in larger numbers than their share of the population
+underrepresented|present in smaller numbers than their share of the population
+underfunded|not given enough money
+overcrowded|with too many people in a space
+underpaid|paid too little for the work done
+overpriced|costing more than it is worth
+fourfold|by four times
+fivefold|by five times
+tenfold|by ten times
+midpoint|the point halfway between two others
+upsurge|a sudden rise
+recovery|a return to a normal state after a fall
+hike|a sudden large increase in a price
+spike|a sudden short rise
+stagnation|a period with no growth or change
+proportionally|in a way that matches the size of something else
+noticeable|easy to see or notice
+whilst|while; at the same time as
+amongst|among; in the middle of a group
+thereafter|after that time
+undoubtedly|without any doubt
+inevitably|in a way that cannot be avoided
+tighten|to make stricter
+broadband|a fast internet connection
+smartphone|a mobile phone that works like a small computer
+streaming|watching or listening to content directly over the internet
+footfall|the number of people who enter a shop or area
+megacity|a city with more than ten million people
+sprawl|the uncontrolled spread of a city into the countryside
+slum|a poor, crowded area with bad housing
+brownfield|describing land that was used before, such as old factory sites
+greenfield|describing land that has never been built on

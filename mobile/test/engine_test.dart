@@ -239,4 +239,32 @@ void main() {
     }
     expect(e.ease, lessThan(strong));
   });
+
+  test('banner words come early among the new words of a rank, one in every two', () {
+    final words = coreWords();
+    final own = [for (final w in words.where((w) => w.tier == 1).take(6)) w.asBanner()];
+    final ids = {for (final w in own) w.id};
+    final mixed = Deck([...own, ...words.where((w) => !ids.contains(w.id))], const [], 'ielts');
+    final eb = Engine(Store(MemoryBackend()), mixed, clock: () => now);
+    final first = eb.sitting().where((c) => c.fresh).map((c) => c.w).take(12).toList();
+    expect(first.where((w) => w.banner).length, 6, reason: 'all six banner words are among the first twelve');
+    expect(first[0].banner, isTrue);
+  });
+
+  test('under the TOEFL banner the build question comes more often', () {
+    int builds(String banner) {
+      final dk = Deck(coreWords(), const [], banner);
+      final en = Engine(Store(MemoryBackend()), dk, clock: () => now);
+      var n = 0;
+      for (final w in dk.words.where((w) => w.buildable).take(300)) {
+        en.answer(w, Grade.clean);
+        days(3);
+        en.answer(w, Grade.clean);
+        if (en.pickQuiz(w) == Quiz.build) n++;
+      }
+      return n;
+    }
+
+    expect(builds('toefl'), greaterThan(builds('ielts')));
+  });
 }

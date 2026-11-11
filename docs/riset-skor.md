@@ -23,7 +23,8 @@ adalah skor keseluruhan, bukan skor tiap keterampilan.
 
 **TOEFL iBT, skala 1–6.** Sejak 21 Januari 2026 ETS melaporkan skor pada skala 1–6 dengan kelipatan setengah,
 yang diselaraskan dengan CEFR. Tabel perbandingan ETS dengan skala lama: 6 = 114+, 5.5 = 107+, 5 = 95+,
-4.5 = 86+, 4 = 72+, 3.5 = 58+, 3 = 44+, 2.5 = 34+, 2 = 24+.
+4.5 = 86+, 4 = 72+, 3.5 = 58+, 3 = 44+, 2.5 = 34+, 2 = 24+. Dicek ulang pada 11 November 2026: tabel ETS
+masih sama, dan laporan skor menampilkan kedua skala sampai Januari 2028.
 <https://www.ets.org/toefl/test-takers/ibt/scores/understand-scores.html>
 
 **TOEFL iBT, skala lama dan CEFR.** ETS: C2 = 114–120, C1 = 95–113, B2 = 72–94, B1 = 42–71, di bawah 42 = A2.
