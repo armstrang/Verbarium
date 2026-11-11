@@ -11,7 +11,8 @@ import '../engine/game.dart';
 import '../engine/jobs.dart';
 import 'pixel.dart';
 import 'root.dart';
-import 'run.dart' show stageName;
+import 'lore.dart';
+import 'run.dart' show runRoute, stageName;
 import 'theme.dart';
 import 'widgets.dart';
 
@@ -36,17 +37,29 @@ class HeroTab extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Container(
-                width: 132,
-                height: 150,
-                alignment: Alignment.bottomCenter,
-                padding: const EdgeInsets.only(bottom: 10),
-                decoration: BoxDecoration(
-                  color: pal.field,
-                  border: Border.all(color: pal.ink, width: 1.5),
-                  borderRadius: BorderRadius.circular(3),
+              Press(
+                // the hero tapped: the story of who they are
+                onTap: () => Navigator.of(context).push(runRoute(LorePage(job: job, rank: rank))),
+                label: tr('Kisah ${job.name}', 'Story of the ${job.name}'),
+                child: Container(
+                  width: 132,
+                  height: 150,
+                  alignment: Alignment.bottomCenter,
+                  padding: const EdgeInsets.only(bottom: 10),
+                  decoration: BoxDecoration(
+                    color: pal.field,
+                    border: Border.all(color: pal.ink, width: 1.5),
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                  child: HeroSprite(
+                    garb: job.garb,
+                    tier: job.tier,
+                    weapon: g.tone('weapon'),
+                    shield: g.tone('shield'),
+                    cloak: g.tone('cloak'),
+                    size: 108,
+                  ),
                 ),
-                child: HeroSprite(garb: job.garb, tier: job.tier, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 108),
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -58,18 +71,31 @@ class HeroTab extends StatelessWidget {
                       alignment: Alignment.centerLeft,
                       child: Text(job.name, style: T.display(30, pal.ink)),
                     ),
-                    Text('${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''}', style: T.body(16.5, pal.ink, w: FontWeight.w500)),
+                    Text(
+                      '${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''}',
+                      style: T.body(16.5, pal.ink, w: FontWeight.w500),
+                    ),
                     if (g.title.isNotEmpty) Text(g.title, style: T.display(19, pal.muted, italic: true)),
                     const SizedBox(height: 8),
                     Text('Level ${g.level}', style: T.body(17, pal.ink, w: FontWeight.w700)),
                     const SizedBox(height: 6),
                     Bar(g.levelShare, height: 6),
                     const SizedBox(height: 4),
-                    Text(tr('${g.toNext} XP lagi ke level ${g.level + 1}', '${g.toNext} XP to level ${g.level + 1}'), style: T.body(14.5, pal.muted)),
+                    Text(
+                      tr('${g.toNext} XP lagi ke level ${g.level + 1}', '${g.toNext} XP to level ${g.level + 1}'),
+                      style: T.body(14.5, pal.muted),
+                    ),
                   ],
                 ),
               ),
             ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Text(
+            tr('Ketuk karakternya untuk membaca kisahnya.', 'Tap the figure to read their story.'),
+            style: T.body(14, pal.muted),
           ),
         ),
         const SizedBox(height: 22),
@@ -96,13 +122,28 @@ class HeroTab extends StatelessWidget {
         const SizedBox(height: 22),
         Label(tr('Kemampuan', 'Figures')),
         const SizedBox(height: 6),
-        _Figure(tr('Ingatan', 'Memory'), g.memory, tr('kata kukuh dari ranah yang sudah kamu masuki', 'solid words out of the lands you have entered')),
-        _Figure(tr('Ketepatan', 'Accuracy'), g.accuracy, tr('jawaban benar dari 100 terakhir', 'right answers out of the last 100')),
-        _Figure(tr('Kecepatan', 'Speed'), g.speed, tr('dari waktu rata-rata mengisi celah', 'from the average time to fill a gap')),
+        _Figure(
+          tr('Ingatan', 'Memory'),
+          g.memory,
+          tr('kata kukuh dari ranah yang sudah kamu masuki', 'solid words out of the lands you have entered'),
+        ),
+        _Figure(
+          tr('Ketepatan', 'Accuracy'),
+          g.accuracy,
+          tr('jawaban benar dari 100 terakhir', 'right answers out of the last 100'),
+        ),
+        _Figure(
+          tr('Kecepatan', 'Speed'),
+          g.speed,
+          tr('dari waktu rata-rata mengisi celah', 'from the average time to fill a gap'),
+        ),
         _Figure(
           tr('Ketekunan', 'Diligence'),
           g.diligence,
-          tr('${g.activeDays14} dari 14 hari terakhir kamu belajar', 'you studied on ${g.activeDays14} of the last 14 days'),
+          tr(
+            '${g.activeDays14} dari 14 hari terakhir kamu belajar',
+            'you studied on ${g.activeDays14} of the last 14 days',
+          ),
         ),
         const SizedBox(height: 22),
         Label(tr('Perlengkapan', 'Gear')),
@@ -147,7 +188,12 @@ class HeroTab extends StatelessWidget {
           ),
           const SizedBox(height: 22),
         ],
-        Label(tr('Pencapaian · ${earned.length} dari ${Game.feats.length}', 'Feats · ${earned.length} of ${Game.feats.length}')),
+        Label(
+          tr(
+            'Pencapaian · ${earned.length} dari ${Game.feats.length}',
+            'Feats · ${earned.length} of ${Game.feats.length}',
+          ),
+        ),
         const SizedBox(height: 4),
         for (final f in Game.feats)
           Container(
@@ -157,14 +203,24 @@ class HeroTab extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Icon(earned.contains(f.id) ? Icons.check_circle_outline : Icons.circle_outlined, size: 22, color: earned.contains(f.id) ? pal.good : pal.muted),
+                Icon(
+                  earned.contains(f.id) ? Icons.check_circle_outline : Icons.circle_outlined,
+                  size: 22,
+                  color: earned.contains(f.id) ? pal.good : pal.muted,
+                ),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(f.name, style: T.body(16.5, earned.contains(f.id) ? pal.ink : pal.muted, w: FontWeight.w500)),
-                      Text('${f.text}${f.title == null ? '' : tr(' · gelar "${f.title}"', ' · title "${f.title}"')}', style: T.body(14.5, pal.muted)),
+                      Text(
+                        f.name,
+                        style: T.body(16.5, earned.contains(f.id) ? pal.ink : pal.muted, w: FontWeight.w500),
+                      ),
+                      Text(
+                        '${f.text}${f.title == null ? '' : tr(' · gelar "${f.title}"', ' · title "${f.title}"')}',
+                        style: T.body(14.5, pal.muted),
+                      ),
                     ],
                   ),
                 ),
@@ -219,7 +275,11 @@ class _BuildBlock extends StatelessWidget {
                     Expanded(child: Bar(b.total == 0 ? 0 : shares[i], height: 6)),
                     SizedBox(
                       width: 46,
-                      child: Text(b.total == 0 ? '–' : '${(shares[i] * 100).round()}%', textAlign: TextAlign.right, style: T.body(15, pal.muted)),
+                      child: Text(
+                        b.total == 0 ? '–' : '${(shares[i] * 100).round()}%',
+                        textAlign: TextAlign.right,
+                        style: T.body(15, pal.muted),
+                      ),
                     ),
                   ],
                 ),
@@ -289,7 +349,10 @@ class _PathRow extends StatelessWidget {
                 if (pointed)
                   Padding(
                     padding: const EdgeInsets.only(top: 3),
-                    child: Text(tr('Build-mu kini mengarah ke sini', 'Your build points here now'), style: T.body(14.5, pal.ink, w: FontWeight.w700)),
+                    child: Text(
+                      tr('Build-mu kini mengarah ke sini', 'Your build points here now'),
+                      style: T.body(14.5, pal.ink, w: FontWeight.w700),
+                    ),
                   ),
               ],
             ),
@@ -347,7 +410,9 @@ class JobMapPage extends StatelessWidget {
                   Wrap(
                     spacing: 10,
                     runSpacing: 12,
-                    children: [for (final j in Jobs.tier(t)) _JobTile(j, known: known.contains(j.id), mine: mine.contains(j.id))],
+                    children: [
+                      for (final j in Jobs.tier(t)) _JobTile(j, known: known.contains(j.id), mine: mine.contains(j.id)),
+                    ],
                   ),
                 ],
                 const SizedBox(height: 22),
@@ -367,8 +432,14 @@ class JobMapPage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(known.contains(j.id) ? j.name : '? ? ?', style: T.display(20, known.contains(j.id) ? pal.ink : pal.muted)),
-                              Text(known.contains(j.id) ? j.perk.text : j.hint, style: T.body(15, pal.muted, height: 1.35)),
+                              Text(
+                                known.contains(j.id) ? j.name : '? ? ?',
+                                style: T.display(20, known.contains(j.id) ? pal.ink : pal.muted),
+                              ),
+                              Text(
+                                known.contains(j.id) ? j.perk.text : j.hint,
+                                style: T.body(15, pal.muted, height: 1.35),
+                              ),
                             ],
                           ),
                         ),
@@ -409,7 +480,10 @@ class _JobTile extends StatelessWidget {
               const SizedBox(height: 6),
               FittedBox(
                 fit: BoxFit.scaleDown,
-                child: Text(known ? job.name : '? ? ?', style: T.body(14.5, known ? pal.ink : pal.muted, w: FontWeight.w700)),
+                child: Text(
+                  known ? job.name : '? ? ?',
+                  style: T.body(14.5, known ? pal.ink : pal.muted, w: FontWeight.w700),
+                ),
               ),
             ],
           ),
@@ -463,7 +537,11 @@ class _Slot extends StatelessWidget {
   Widget build(BuildContext context) {
     final pal = Look.of(context).pal;
     final g = App.I.game;
-    final name = {'weapon': tr('Senjata', 'Arms'), 'shield': tr('Perisai', 'Shield'), 'cloak': tr('Jubah', 'Cloak')}[slot]!;
+    final name = {
+      'weapon': tr('Senjata', 'Arms'),
+      'shield': tr('Perisai', 'Shield'),
+      'cloak': tr('Jubah', 'Cloak'),
+    }[slot]!;
     final mine = Game.gear.where((x) => x.slot == slot && g.owned.contains(x.id)).toList();
     final worn = g.gearOf(g.equipped(slot));
     final all = Game.gear.where((x) => x.slot == slot).length;
@@ -478,8 +556,14 @@ class _Slot extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(tr('$name · ${mine.length} dari $all', '$name · ${mine.length} of $all'), style: T.body(14.5, pal.muted)),
-                Text(worn?.name ?? tr('Belum punya', 'None yet'), style: T.body(17, worn == null ? pal.muted : pal.ink, w: FontWeight.w500)),
+                Text(
+                  tr('$name · ${mine.length} dari $all', '$name · ${mine.length} of $all'),
+                  style: T.body(14.5, pal.muted),
+                ),
+                Text(
+                  worn?.name ?? tr('Belum punya', 'None yet'),
+                  style: T.body(17, worn == null ? pal.muted : pal.ink, w: FontWeight.w500),
+                ),
                 if (worn != null) Text(worn.from, style: T.body(14, pal.muted)),
               ],
             ),

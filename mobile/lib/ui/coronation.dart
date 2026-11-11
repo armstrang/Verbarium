@@ -11,7 +11,9 @@ import '../app/app.dart';
 import '../app/lang.dart';
 import '../engine/engine.dart';
 import '../engine/jobs.dart';
+import 'lore.dart';
 import 'root.dart';
+import 'run.dart' show runRoute;
 import 'theme.dart';
 import 'widgets.dart';
 
@@ -22,7 +24,14 @@ class Coronation extends StatefulWidget {
 
   /// the job the build has just decided
   final Job? job;
-  const Coronation({super.key, required this.rank, required this.right, required this.total, this.news = const [], this.job});
+  const Coronation({
+    super.key,
+    required this.rank,
+    required this.right,
+    required this.total,
+    this.news = const [],
+    this.job,
+  });
 
   @override
   State<Coronation> createState() => _CoronationState();
@@ -63,7 +72,8 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
     super.dispose();
   }
 
-  double _span(double a, double b, [Curve curve = Curves.easeOutCubic]) => curve.transform(((_c.value - a) / (b - a)).clamp(0.0, 1.0));
+  double _span(double a, double b, [Curve curve = Curves.easeOutCubic]) =>
+      curve.transform(((_c.value - a) / (b - a)).clamp(0.0, 1.0));
 
   @override
   Widget build(BuildContext context) {
@@ -102,14 +112,21 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                     alignment: Alignment.center,
                     children: [
                       Positioned.fill(
-                        child: RepaintBoundary(child: CustomPaint(painter: _RaysPainter(_span(0.36, 0.7), _c.value, pal.dark ? pal.gold : tint, pal.gold))),
+                        child: RepaintBoundary(
+                          child: CustomPaint(
+                            painter: _RaysPainter(_span(0.36, 0.7), _c.value, pal.dark ? pal.gold : tint, pal.gold),
+                          ),
+                        ),
                       ),
                       Transform.scale(
                         scale: 0.72 + 0.28 * grow,
                         child: Transform(
                           alignment: Alignment.center,
                           transform: Matrix4.diagonal3Values(flip, 1, 1),
-                          child: Opacity(opacity: _span(0.04, 0.14), child: Shield(showNew ? rank : rank - 1, width: 132)),
+                          child: Opacity(
+                            opacity: _span(0.04, 0.14),
+                            child: Shield(showNew ? rank : rank - 1, width: 132),
+                          ),
                         ),
                       ),
                     ],
@@ -118,7 +135,11 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                 const SizedBox(height: 6),
                 Opacity(
                   opacity: _span(0.44, 0.54),
-                  child: Text(tr('Engkau dinobatkan sebagai', 'You are crowned'), textAlign: TextAlign.center, style: T.display(21, pal.muted, italic: true)),
+                  child: Text(
+                    tr('Engkau dinobatkan sebagai', 'You are crowned'),
+                    textAlign: TextAlign.center,
+                    style: T.display(21, pal.muted, italic: true),
+                  ),
                 ),
                 const SizedBox(height: 4),
                 Semantics(
@@ -165,7 +186,10 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                         const SizedBox(height: 10),
                       ],
                       Text(
-                        tr('Kosakata setara ${scoreLine(rank, App.I.banner)}', 'Vocabulary on a par with ${scoreLine(rank, App.I.banner)}'),
+                        tr(
+                          'Kosakata setara ${scoreLine(rank, App.I.banner)}',
+                          'Vocabulary on a par with ${scoreLine(rank, App.I.banner)}',
+                        ),
                         textAlign: TextAlign.center,
                         style: T.body(19, pal.ink, w: FontWeight.w500),
                       ),
@@ -183,8 +207,14 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                         widget.news.isNotEmpty
                             ? widget.news.toSet().take(3).join(' · ')
                             : (rank >= Engine.maxRank
-                                  ? tr('Tidak ada gelar di atas ini. Jagalah.', 'There is no title above this one. Guard it.')
-                                  : tr('Gelar ini dijaga. Kata yang terlupa harus direbut kembali.', 'This title is kept. Words forgotten must be won back.')),
+                                  ? tr(
+                                      'Tidak ada gelar di atas ini. Jagalah.',
+                                      'There is no title above this one. Guard it.',
+                                    )
+                                  : tr(
+                                      'Gelar ini dijaga. Kata yang terlupa harus direbut kembali.',
+                                      'This title is kept. Words forgotten must be won back.',
+                                    )),
                         textAlign: TextAlign.center,
                         style: T.body(15.5, pal.muted, height: 1.45),
                       ),
@@ -206,7 +236,18 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                   ignoring: end < 0.5,
                   child: Opacity(
                     opacity: end,
-                    child: InkButton(tr('Masuk ke negerimu', 'Enter your realm'), onTap: () => Navigator.of(context).pop()),
+                    child: InkButton(
+                      tr('Masuk ke negerimu', 'Enter your realm'),
+                      onTap: () {
+                        final job = widget.job;
+                        // the new character is introduced once, on its own page that only its button closes
+                        if (job == null) {
+                          Navigator.of(context).pop();
+                        } else {
+                          Navigator.of(context).pushReplacement(runRoute(JobIntro(job: job, rank: widget.rank)));
+                        }
+                      },
+                    ),
                   ),
                 ),
                 const SizedBox(height: 8),

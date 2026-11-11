@@ -12,6 +12,7 @@ import 'package:verbarium/data/store.dart';
 import 'package:verbarium/engine/engine.dart';
 import 'package:verbarium/engine/jobs.dart';
 import 'package:verbarium/ui/coronation.dart';
+import 'package:verbarium/ui/lore.dart';
 import 'package:verbarium/ui/pixel.dart';
 import 'package:verbarium/ui/root.dart';
 import 'package:verbarium/ui/run.dart';
@@ -385,6 +386,17 @@ void main() {
     await beat(tester, 400);
     await shot(tester, '37-penobatan');
     await tester.tap(find.text('Masuk ke negerimu'));
+    await beat(tester, 900);
+    // the new character is introduced; only its button closes the page
+    expect(find.byType(JobIntro), findsOneWidget);
+    await shot(tester, '37b-perkenalan');
+    await tester.tap(find.text('Lihat kisahnya'));
+    await beat(tester, 700);
+    expect(find.byType(LorePage), findsOneWidget);
+    await shot(tester, '37c-kisah');
+    await tester.tap(find.bySemanticsLabel('Kembali'));
+    await beat(tester, 600);
+    await tester.tap(find.textContaining('Mulai sebagai'));
     await beat(tester, 900);
     expect(find.textContaining('Knight I ·'), findsOneWidget);
     await shot(tester, '38-hari-ini-knight');
