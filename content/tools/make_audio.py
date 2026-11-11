@@ -3,7 +3,8 @@
 
   quill, seal, page, tap, hit, crit, hurt, victory, defeat   short effects
 
-The music (m0 … m5, battle) and the effects wrong, rise, levelup and fanfare are made by make_music.py.
+The music (m0 … m5, battle) and the effects wrong, rise, levelup, fanfare and the lines' taps and hits are made by
+make_music.py, from CC0 samples.
 
 Needs numpy, scipy and ffmpeg (libvorbis). Run from the repository root:
     python3 content/tools/make_audio.py

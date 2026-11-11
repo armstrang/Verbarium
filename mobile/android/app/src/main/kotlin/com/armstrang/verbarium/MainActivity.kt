@@ -45,6 +45,20 @@ class MainActivity : FlutterActivity() {
         "levelup" to R.raw.levelup,
         "victory" to R.raw.victory,
         "defeat" to R.raw.defeat,
+        "tap_p" to R.raw.tap_p,
+        "tap_0" to R.raw.tap_0,
+        "tap_1" to R.raw.tap_1,
+        "tap_2" to R.raw.tap_2,
+        "tap_3" to R.raw.tap_3,
+        "hit_p" to R.raw.hit_p,
+        "hit_0" to R.raw.hit_0,
+        "hit_1" to R.raw.hit_1,
+        "hit_2" to R.raw.hit_2,
+        "hit_3" to R.raw.hit_3,
+        "hitx_0" to R.raw.hitx_0,
+        "hitx_1" to R.raw.hitx_1,
+        "hitx_2" to R.raw.hitx_2,
+        "hitx_3" to R.raw.hitx_3,
     )
 
     // one tune per title, and one for fights
@@ -107,7 +121,7 @@ class MainActivity : FlutterActivity() {
             .setUsage(AudioAttributes.USAGE_GAME)
             .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
             .build()
-        val p = SoundPool.Builder().setMaxStreams(5).setAudioAttributes(attrs).build()
+        val p = SoundPool.Builder().setMaxStreams(6).setAudioAttributes(attrs).build()
         for ((name, res) in effects) loaded[name] = p.load(this, res, 1)
         pool = p
     }

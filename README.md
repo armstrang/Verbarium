@@ -23,8 +23,9 @@ Unduh `Verbarium-alpha.apk` dari [Releases](../../releases) (pilih pre-release t
 ## Sumber dan lisensi
 
 - Semua kata, arti dan kalimat contoh ditulis untuk Verbarium.
-- Musik latar (satu lagu asli per gelar) dan efek suara disintesis oleh `content/tools/make_music.py` dan
-  `make_audio.py`, tanpa sampel.
+- Musik latar mengikuti lore: satu tema Sang Pencatat yang dimainkan berbeda di tiap gelar, dirender oleh
+  `content/tools/make_music.py` dari sampel instrumen berlisensi CC0 (VSCO 2 CE dan VCSL, Versilian Studios).
+  Efek suara lain disintesis oleh `make_audio.py`.
 - Huruf: IM Fell English (Igino Marini) dan Alegreya Sans (Huerta Tipográfica), SIL Open Font License 1.1.
 
 oleh Armstrang

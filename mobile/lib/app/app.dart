@@ -98,7 +98,22 @@ class App extends ChangeNotifier {
   }
 
   void sfx(String name, [double volume = 1]) {
-    if (sfxOn) Native.sfx(name, volume);
+    if (!sfxOn) return;
+    // a tap and a blow sound like the character who makes them: the Peasant on wood, then each line its own
+    // family (Blade steel, Scout string and wind, Scribe ink and bells, Sentinel wood and stone), richer from tier 3
+    final job = game.job;
+    final line = job.tier == 0 ? 'p' : '${job.line}';
+    switch (name) {
+      case 'tap':
+        Native.sfx('tap_$line', volume);
+      case 'hit':
+        Native.sfx(job.tier >= 3 ? 'hitx_$line' : 'hit_$line', volume);
+      case 'crit':
+        Native.sfx('crit', volume * 0.7);
+        Native.sfx(line == 'p' ? 'hit_p' : 'hitx_$line', volume);
+      default:
+        Native.sfx(name, volume);
+    }
   }
 
   void haptic({bool strong = false}) {

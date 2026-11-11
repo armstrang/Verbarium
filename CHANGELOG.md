@@ -2,6 +2,21 @@
 
 ## v0.4 (alpha, not released)
 
+### v0.4-alpha-2: the lore
+
+- **Lore.** Verbarium has a world now: everything lasts as long as its name is remembered, the Fog of Forgetting
+  fades the rest, and the Great Chronicle records every word held. Every title and every job has its quote, story,
+  nature, background and drive, in both languages.
+- **A new character is introduced** after each coronation, on its own page that only its button closes.
+- **Tap the hero** in Karakter to read their story and the realm of the title held.
+- **Music from the lore**, played on recorded instruments (CC0 samples): one theme belongs to the Chronicler and is
+  played differently for each title, from the Peasant's lone recorder that never comes home to the King's, which
+  comes home for the first time. Each piece is followed by the sound of its place (wind, town, hall, night).
+- **Characters sound like themselves:** taps and blows follow the line (Peasant wood, Blade steel, Scout string and
+  wind, Scribe ink and bells, Sentinel wood and stone), richer from tier 3.
+
+### v0.4-alpha-1
+
 A new look for every figure, a piece of music for every title, and banners that matter.
 
 - **Figures.** The hero, all 43 jobs and the enemies are drawn anew: taller and more heroic (40×43), with eyes

@@ -14,9 +14,10 @@ and even then confirm first what will change and wait for his yes. Everything el
 | Path | What |
 |---|---|
 | `mobile/assets/deck/` | the words, canonical. 6,912 words in all (5,894 core, about 500 per banner: 513 TOEFL, 505 IELTS); every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`; the banner decides which one is shown, both are accepted. A banner's own words come early among a rank's new words (one in two), and under TOEFL the build question comes more often. `en/<same file>`: `word|definition`, plain English, for learning through English |
-| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_music.py` (the music `m0`…`m5`, `battle` and the effects wrong, rise, levelup, fanfare), `make_audio.py` (the other effects; both numpy + scipy + ffmpeg → `res/raw/*.ogg`), `pair_spellings.py` (adds the British spelling where a known pattern gives one), `make_icons.py` (Pillow → `mipmap-*`) |
+| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_music.py` (the music `m0`…`m5`, `battle`, the effects wrong, rise, levelup, fanfare and each line's `tap_*`, `hit_*`, `hitx_*`, rendered from the CC0 sample libraries VSCO 2 CE and VCSL, which are cloned outside the repo, see its header), `make_audio.py` (the other effects, synthesised; both numpy + scipy + ffmpeg → `res/raw/*.ogg`), `pair_spellings.py` (adds the British spelling where a known pattern gives one), `make_icons.py` (Pillow → `mipmap-*`) |
 | `mobile/lib/engine/engine.dart` | `Engine`: memory (stability in days, personal `ease`), plan, sitting of `Card`s, the three `Quiz` kinds and their weights, ranks, stages and sub-bosses, trials, placement, defence; `slip()` |
 | `mobile/lib/engine/game.dart` | `Game`: experience and level, combo, figures, quests, feats, gear, enemies, advice, the build (`bp`) and the path of jobs. Never changes memory or rank |
+| `mobile/lib/engine/lore.dart` | `LoreBook`: the lore of every title and job (quote, story, nature, background, drive) in both languages, from the document "Kitab Lore Verbarium"; shown only by `ui/lore.dart` (the introduction after a coronation, closed by its button, and the story page when the hero is tapped in Karakter) |
 | `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (37 on the map + 6 hidden), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
 | `mobile/lib/app/lang.dart` | `english` and `tr(id, en)`: every text is written in both languages where it is used |
 | `mobile/lib/data/` | `store.dart` (one JSON document, keys listed at the top — never rename), `deck.dart` |
@@ -50,7 +51,8 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
   and a perk may never touch memory, rank or a coronation trial.
 - **App text** sounds human, short, "kamu"; the chronicle voice ("Tercatat …", "Engkau dinobatkan …") only in
   ceremonies and the chronicle.
-- No network permission. Sounds are synthesised, fonts are OFL (About → Lisensi huruf shows them).
+- No network permission. Sounds are synthesised or rendered from CC0 samples (VSCO 2 CE, VCSL by Versilian
+  Studios); fonts are OFL (About → Lisensi huruf shows them).
 
 ## Look and motion
 
@@ -61,9 +63,12 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
 - Pixel art is built from shapes in `pixel.dart` (no image files): figures 40×43 (body 32 wide, room for a swing),
   beasts 32×32, each material shaded from the upper left and outlined in its own dark tone. Look at
   `test/goldens/60-sprite.png` after changing it.
-- Music: one original piece per title in `make_music.py` (`m0` Hutan Pagi, `m1` Perjalanan, `m2` Benteng, `m3`
-  Kenangan Lampau, `m4` Malam Bintang, `m5` Takhta) plus `battle`, growing fuller as the titles rise. Every
-  melody stays Verbarium's own: a mood may be an inspiration, a melody may not be copied.
+- Music follows the lore: the title decides the music, the character decides the effects. One theme belongs to the
+  Chronicler (`THEME` in `make_music.py`) and is played differently for each title: the Peasant's recorder never
+  comes home, the Knight's horn is answered by minor cellos over a pedal, the Baron's harpsichords chase each other,
+  the Duke's theme hangs at half speed, the King's comes home for the first time and returns to the village. Each
+  piece is followed by its place alone (wind, town, hall, night). Taps and blows sound like the character's line
+  (`App.sfx`). Every melody stays Verbarium's own: a mood may be an inspiration, a melody may not be copied.
 - Motion: transform/opacity, leaving faster than arriving (`Dur`), everything honours calm motion (`Look.calm`).
 - Screens draw from `Look.of(context)`; `Look.stamp` changes on every `App.notifyListeners()`, which is what
   redraws them.
