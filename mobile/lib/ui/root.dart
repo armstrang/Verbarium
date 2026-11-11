@@ -710,7 +710,7 @@ class Today extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              HeroSprite(garb: g.job.garb, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 66),
+              HeroSprite(garb: g.job.garb, tier: g.job.tier, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 66),
               const SizedBox(width: 14),
               Expanded(
                 child: Column(

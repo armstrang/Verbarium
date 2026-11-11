@@ -117,6 +117,7 @@ class _World extends StatelessWidget {
                       top: (p.dy - 30) * k,
                       child: HeroSprite(
                         garb: g.job.garb,
+                        tier: g.job.tier,
                         weapon: g.tone('weapon'),
                         shield: g.tone('shield'),
                         cloak: g.tone('cloak'),

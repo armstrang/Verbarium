@@ -46,7 +46,7 @@ class HeroTab extends StatelessWidget {
                   border: Border.all(color: pal.ink, width: 1.5),
                   borderRadius: BorderRadius.circular(3),
                 ),
-                child: HeroSprite(garb: job.garb, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 108),
+                child: HeroSprite(garb: job.garb, tier: job.tier, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), size: 108),
               ),
               const SizedBox(width: 16),
               Expanded(
@@ -278,7 +278,7 @@ class _PathRow extends StatelessWidget {
       ),
       child: Row(
         children: [
-          HeroSprite(garb: job.garb, shadow: !known, size: 40),
+          HeroSprite(garb: job.garb, tier: job.tier, shadow: !known, size: 40),
           const SizedBox(width: 12),
           Expanded(
             child: Column(
@@ -361,7 +361,7 @@ class JobMapPage extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        HeroSprite(garb: j.garb, shadow: !known.contains(j.id), size: 36),
+                        HeroSprite(garb: j.garb, tier: j.tier, shadow: !known.contains(j.id), size: 36),
                         const SizedBox(width: 12),
                         Expanded(
                           child: Column(
@@ -405,7 +405,7 @@ class _JobTile extends StatelessWidget {
           ),
           child: Column(
             children: [
-              HeroSprite(garb: job.garb, shadow: !known, size: 44),
+              HeroSprite(garb: job.garb, tier: job.tier, shadow: !known, size: 44),
               const SizedBox(height: 6),
               FittedBox(
                 fit: BoxFit.scaleDown,

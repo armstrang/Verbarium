@@ -568,9 +568,9 @@ void main() {
                   children: [
                     for (final pose in HeroPose.values) HeroSprite(garb: Jobs.byId('blade').garb, pose: pose, size: 72),
                     for (final j in Jobs.all)
-                      HeroSprite(garb: j.garb, weapon: j.tier, shield: j.tier > 0 ? j.tier : -1, cloak: j.tier > 1 ? j.tier : -1, size: 56),
+                      HeroSprite(garb: j.garb, tier: j.tier, weapon: j.tier, shield: j.tier > 0 ? j.tier : -1, cloak: j.tier > 1 ? j.tier : -1, size: 56),
                     for (final j in Jobs.all.take(6)) HeroSprite(garb: j.garb, shadow: true, size: 56),
-                    for (final j in Jobs.all.skip(1).take(8)) HeroSprite(garb: j.garb, weapon: 2, pose: HeroPose.attack, size: 56),
+                    for (final j in Jobs.all.skip(1).take(8)) HeroSprite(garb: j.garb, tier: j.tier, weapon: 2, pose: HeroPose.attack, size: 56),
                   ],
                 ),
                 const SizedBox(height: 12),

@@ -577,7 +577,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     final en = _enemy!;
     final big = en.boss;
     return SizedBox(
-      height: 132,
+      height: 144,
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -589,13 +589,13 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             curve: Curves.easeOut,
             left: _pose == HeroPose.attack ? 56 : (_pose == HeroPose.hurt ? 4 : 18),
             bottom: 15,
-            child: HeroSprite(garb: g.job.garb, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), pose: _pose, size: 68),
+            child: HeroSprite(garb: g.job.garb, tier: g.job.tier, weapon: g.tone('weapon'), shield: g.tone('shield'), cloak: g.tone('cloak'), pose: _pose, size: 80),
           ),
           AnimatedPositioned(
             duration: const Duration(milliseconds: 140),
             right: _pose == HeroPose.hurt ? 44 : 18,
             bottom: 15,
-            child: EnemySprite(sprite: en.sprite, tone: en.tone, size: big ? 92 : 76, struck: _struck, beaten: _enemyHp <= 0),
+            child: EnemySprite(sprite: en.sprite, tone: en.tone, size: big ? 104 : 84, struck: _struck, beaten: _enemyHp <= 0),
           ),
           if (_float.isNotEmpty)
             Positioned.fill(
@@ -926,7 +926,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
       case RunKind.trial || RunKind.sub:
         final en = _enemy!;
         mark = _passed
-            ? HeroSprite(garb: _g.job.garb, weapon: _g.tone('weapon'), shield: _g.tone('shield'), cloak: _g.tone('cloak'), pose: HeroPose.cheer, size: 104)
+            ? HeroSprite(garb: _g.job.garb, tier: _g.job.tier, weapon: _g.tone('weapon'), shield: _g.tone('shield'), cloak: _g.tone('cloak'), pose: HeroPose.cheer, size: 104)
             : EnemySprite(sprite: en.sprite, tone: en.tone, size: 104);
         label = _passed ? tr('Menang', 'Victory') : tr('Kalah', 'Defeat');
         title = _passed ? tr('${en.name} tumbang', 'The ${en.name} has fallen') : tr('${en.name} masih berdiri', 'The ${en.name} still stands');
