@@ -13,16 +13,20 @@ bool get english => code == 'en';
 set english(bool v) => code = v ? 'en' : 'id';
 
 /// index of the language among the ones that are not written inline as `id`/`en`: 0 Spanish, 1 French, -1 neither
-int get foreign => switch (code) { 'es' => 0, 'fr' => 1, _ => -1 };
+int get foreign => switch (code) {
+  'es' => 0,
+  'fr' => 1,
+  _ => -1,
+};
 
 /// one sentence in every language; the app shows the one that is on. Spanish and French may be left out where the
 /// English is a piece of data (a gear or feat name): then they come from [l10n], keyed by the English
 String tr(String id, String en, [String? es, String? fr]) => switch (code) {
-      'id' => id,
-      'es' => es ?? tx(en),
-      'fr' => fr ?? tx(en),
-      _ => en,
-    };
+  'id' => id,
+  'es' => es ?? tx(en),
+  'fr' => fr ?? tx(en),
+  _ => en,
+};
 
 /// a piece of English data in the language that is on (Indonesian has its own text where the data is written)
 String tx(String en) {

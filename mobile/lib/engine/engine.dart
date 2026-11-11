@@ -43,7 +43,14 @@ class Mem {
 
   static Mem? from(Object? v) {
     if (v is! List || v.length < 6) return null;
-    return Mem((v[0] as num).toDouble(), (v[1] as num).toInt(), (v[2] as num).toInt(), (v[3] as num).toInt(), (v[4] as num).toInt(), v[5] == 1);
+    return Mem(
+      (v[0] as num).toDouble(),
+      (v[1] as num).toInt(),
+      (v[2] as num).toInt(),
+      (v[3] as num).toInt(),
+      (v[4] as num).toInt(),
+      v[5] == 1,
+    );
   }
 
   List<Object> toJson() => [double.parse(s.toStringAsFixed(3)), due, reps, lapses, last, clean ? 1 : 0];
@@ -100,7 +107,8 @@ class Engine {
   final Map<String, Mem> _mem = {};
   final List<List<Word>> _order = [];
 
-  Engine(this.store, this.deck, {int Function()? clock}) : now = clock ?? (() => DateTime.now().millisecondsSinceEpoch) {
+  Engine(this.store, this.deck, {int Function()? clock})
+    : now = clock ?? (() => DateTime.now().millisecondsSinceEpoch) {
     store.map('mem').forEach((k, v) {
       final m = Mem.from(v);
       if (m != null && deck.byId.containsKey(k)) _mem[k] = m;
@@ -208,7 +216,8 @@ class Engine {
   List<Word> distractors(Word w, int n, {int? seed, bool close = false}) {
     final r = Random(seed ?? now());
     final hard = (_mem[w.id]?.s ?? 0) >= 4;
-    final pool = deck.tier(w.tier).where((x) => x.id != w.id && x.meaning != w.meaning && x.gloss != w.gloss).toList()..shuffle(r);
+    final pool = deck.tier(w.tier).where((x) => x.id != w.id && x.meaning != w.meaning && x.gloss != w.gloss).toList()
+      ..shuffle(r);
     pool.sort((a, b) {
       int score(Word x) => (x.pos == w.pos ? 0 : 2) + (hard && x.id[0] != w.id[0] ? 1 : 0);
       return score(a).compareTo(score(b));

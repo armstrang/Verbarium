@@ -38,7 +38,11 @@ class _GrainPainter extends CustomPainter {
     final r = Random(7);
     final speck = Paint()..color = pal.ink.withValues(alpha: pal.dark ? 0.05 : 0.035);
     for (var i = 0; i < 900; i++) {
-      canvas.drawCircle(Offset(r.nextDouble() * size.width, r.nextDouble() * size.height), 0.4 + r.nextDouble() * 0.6, speck);
+      canvas.drawCircle(
+        Offset(r.nextDouble() * size.width, r.nextDouble() * size.height),
+        0.4 + r.nextDouble() * 0.6,
+        speck,
+      );
     }
     final fibre = Paint()
       ..color = pal.ink.withValues(alpha: pal.dark ? 0.04 : 0.03)
@@ -52,7 +56,9 @@ class _GrainPainter extends CustomPainter {
     // the page dresses up with the title: a farmer's page is bare, a knight's has a ruled margin in his colour,
     // a baron's is ruled in ink, a duke's twice, a king's twice in gold
     if (rank >= 2) {
-      final c = rank == 5 ? pal.gold : (rank == 2 ? pal.tincture(2).withValues(alpha: 0.55) : pal.ink.withValues(alpha: 0.7));
+      final c = rank == 5
+          ? pal.gold
+          : (rank == 2 ? pal.tincture(2).withValues(alpha: 0.55) : pal.ink.withValues(alpha: 0.7));
       final line = Paint()
         ..color = c
         ..strokeWidth = rank == 2 ? 1 : 1.2;
@@ -202,7 +208,10 @@ class Bar extends StatelessWidget {
       tween: Tween(end: value.clamp(0, 1)),
       duration: look.calm || !animate ? Duration.zero : Dur.slow,
       curve: Curves.easeOutCubic,
-      builder: (context, v, _) => CustomPaint(size: Size(double.infinity, height), painter: _BarPainter(v, look.pal.line, color ?? look.accent)),
+      builder: (context, v, _) => CustomPaint(
+        size: Size(double.infinity, height),
+        painter: _BarPainter(v, look.pal.line, color ?? look.accent),
+      ),
     );
   }
 }
@@ -290,7 +299,14 @@ class ShieldPainter extends CustomPainter {
   final Color field, charge, ink;
   final Color? gold;
   final bool hollow;
-  ShieldPainter({required this.rank, required this.field, required this.charge, required this.ink, this.gold, this.hollow = false});
+  ShieldPainter({
+    required this.rank,
+    required this.field,
+    required this.charge,
+    required this.ink,
+    this.gold,
+    this.hollow = false,
+  });
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -369,7 +385,8 @@ class ShieldPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(ShieldPainter old) => old.rank != rank || old.field != field || old.charge != charge || old.ink != ink || old.hollow != hollow;
+  bool shouldRepaint(ShieldPainter old) =>
+      old.rank != rank || old.field != field || old.charge != charge || old.ink != ink || old.hollow != hollow;
 }
 
 class Shield extends StatelessWidget {
@@ -384,7 +401,14 @@ class Shield extends StatelessWidget {
     return ExcludeSemantics(
       child: CustomPaint(
         size: Size(width, width * 1.22),
-        painter: ShieldPainter(rank: rank, field: pal.tincture(rank), charge: pal.onAccent, ink: pal.ink, gold: pal.gold, hollow: hollow),
+        painter: ShieldPainter(
+          rank: rank,
+          field: pal.tincture(rank),
+          charge: pal.onAccent,
+          ink: pal.ink,
+          gold: pal.gold,
+          hollow: hollow,
+        ),
       ),
     );
   }
@@ -444,7 +468,10 @@ class Seal extends StatelessWidget {
   Widget build(BuildContext context) {
     final pal = Look.of(context).pal;
     return ExcludeSemantics(
-      child: CustomPaint(size: Size.square(size), painter: SealPainter(pal.dark ? const Color(0xFFB8463C) : const Color(0xFF8E1B16), const Color(0xFFFCFBF7))),
+      child: CustomPaint(
+        size: Size.square(size),
+        painter: SealPainter(pal.dark ? const Color(0xFFB8463C) : const Color(0xFF8E1B16), const Color(0xFFFCFBF7)),
+      ),
     );
   }
 }
@@ -479,7 +506,13 @@ class Leaf extends StatelessWidget {
 }
 
 /// A yes/no question on a slip of paper. Returns true for yes.
-Future<bool> confirm(BuildContext context, {required String title, required String text, required String yes, String? no}) async {
+Future<bool> confirm(
+  BuildContext context, {
+  required String title,
+  required String text,
+  required String yes,
+  String? no,
+}) async {
   final look = Look.of(context);
   final pal = look.pal;
   final r = await showDialog<bool>(
@@ -506,7 +539,10 @@ Future<bool> confirm(BuildContext context, {required String title, required Stri
               Text(text, style: T.body(16.5, pal.muted)),
               const SizedBox(height: 18),
               InkButton(yes, onTap: () => Navigator.of(ctx).pop(true)),
-              GhostButton(no ?? tr('Batal', 'Cancel', 'Cancelar', 'Annuler'), onTap: () => Navigator.of(ctx).pop(false)),
+              GhostButton(
+                no ?? tr('Batal', 'Cancel', 'Cancelar', 'Annuler'),
+                onTap: () => Navigator.of(ctx).pop(false),
+              ),
             ],
           ),
         ),

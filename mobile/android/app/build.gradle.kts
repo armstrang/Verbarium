@@ -57,6 +57,7 @@ kotlin {
 dependencies {
     implementation("androidx.core:core-ktx:1.16.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
+    implementation("com.android.billingclient:billing:8.0.0")
 }
 
 flutter {

@@ -19,7 +19,8 @@ class _T {
   const _T(this.hi, this.mid, this.lo, this.edge);
 }
 
-_T _of(Color c) => _T(Color.lerp(c, Colors.white, .3)!, c, Color.lerp(c, Colors.black, .32)!, Color.lerp(c, Colors.black, .72)!);
+_T _of(Color c) =>
+    _T(Color.lerp(c, Colors.white, .3)!, c, Color.lerp(c, Colors.black, .32)!, Color.lerp(c, Colors.black, .72)!);
 _T _one(int a, [int? edge]) => _T(Color(a), Color(a), Color(a), Color(edge ?? a));
 
 /// materials drawn in one flat colour, never shaded or outlined from inside
@@ -154,7 +155,11 @@ class _B {
         if (mat != 'skin') {
           for (final d in const [(1, 0), (-1, 0), (0, 1), (0, -1)]) {
             final o = at(x + d.$1, y + d.$2);
-            if (o != null && o != mat && !_flat.contains(o) && lay[(y + d.$2) * w + x + d.$1] > lay[i] && pal[o]!.edge != t.edge) {
+            if (o != null &&
+                o != mat &&
+                !_flat.contains(o) &&
+                lay[(y + d.$2) * w + x + d.$1] > lay[i] &&
+                pal[o]!.edge != t.edge) {
               c = t.edge;
               tone = 3;
               break;
@@ -395,12 +400,37 @@ void _figure(_B b, _Fig f, HeroPose pose, int frame) {
   // ---- body
   upper();
   if (f.bone) {
-    b.rows(10, 16, ['...######...', '.##########.', '##.##..##.##', '############', '.#.##..##.#.', '..########..',
-        '....####....', '....####....', '...######...', '...######...', '..########..', '..########..'], 'skin');
+    b.rows(10, 16, [
+      '...######...',
+      '.##########.',
+      '##.##..##.##',
+      '############',
+      '.#.##..##.#.',
+      '..########..',
+      '....####....',
+      '....####....',
+      '...######...',
+      '...######...',
+      '..########..',
+      '..########..',
+    ], 'skin');
     b.rect(11, 26, 20, 26, 'leather');
   } else {
     b.n++;
-    const widths = [(12, 19), (9, 22), (9, 22), (9, 22), (10, 21), (10, 21), (10, 21), (10, 21), (11, 20), (11, 20), (11, 20), (11, 20)];
+    const widths = [
+      (12, 19),
+      (9, 22),
+      (9, 22),
+      (9, 22),
+      (10, 21),
+      (10, 21),
+      (10, 21),
+      (10, 21),
+      (11, 20),
+      (11, 20),
+      (11, 20),
+      (11, 20),
+    ];
     for (var i = 0; i < widths.length; i++) {
       b.span(16 + i, widths[i].$1, widths[i].$2, 'coat');
     }
@@ -449,18 +479,40 @@ void _figure(_B b, _Fig f, HeroPose pose, int frame) {
   switch (f.head) {
     case 1:
       b.ell(16, 8.8, 7.6, 7.8, 'hood', ymax: 8);
-      b.rows(8, 8, ['###..........###', '###..........###', '###..........###', '####........####', '.####......####.'], 'hood');
+      b.rows(8, 8, [
+        '###..........###',
+        '###..........###',
+        '###..........###',
+        '####........####',
+        '.####......####.',
+      ], 'hood');
       if (!f.bone) b.rows(10, 7, ['#.##..#.##..'], 'hair');
     case 2:
       b.ell(16, 8.6, 7.2, 7.4, 'metal', ymax: 7);
-      b.rows(9, 8, ['##............##', '##............##', '###..........###', '###..........###', '.###........###.'], 'metal');
+      b.rows(9, 8, [
+        '##............##',
+        '##............##',
+        '###..........###',
+        '###..........###',
+        '.###........###.',
+      ], 'metal');
       if (f.visor) b.rect(10, 8, 21, 13, 'metal');
       b.rect(9, 7, 22, 7, 'trim');
       b.rect(15, 1, 16, 7, 'trim');
       b.rows(13, -3, ['...##', '..####', '.######', '.#####', '..###'], 'plume');
     case 3:
       if (!f.bone) b.rows(9, 8, ['#............#', '#............#', '##..........##'], 'hair');
-      b.rows(11, -2, ['.........##', '........###', '.......####', '......#####', '.....######', '....#######', '...#########', '..##########', '.###########'], 'hat');
+      b.rows(11, -2, [
+        '.........##',
+        '........###',
+        '.......####',
+        '......#####',
+        '.....######',
+        '....#######',
+        '...#########',
+        '..##########',
+        '.###########',
+      ], 'hat');
       b.rect(4, 7, 27, 8, 'hat');
       b.rect(9, 6, 22, 6, 'trim');
     case 4:
@@ -531,8 +583,26 @@ void _figure(_B b, _Fig f, HeroPose pose, int frame) {
     // a bow is held out in front, at the height of the chest
     b.line(22, 18, 25, 15, sleeve, width: 3);
     b.rect(25, 14, 27, 16, hand);
-    b.rows(25, 6, ['###..', '..##.', '...##', '...##', '....#', '....#', '....#', '....#', '....#', '....#', '....#', '....#',
-        '....#', '....#', '...##', '...##', '..##.', '###..'], 'grip');
+    b.rows(25, 6, [
+      '###..',
+      '..##.',
+      '...##',
+      '...##',
+      '....#',
+      '....#',
+      '....#',
+      '....#',
+      '....#',
+      '....#',
+      '....#',
+      '....#',
+      '....#',
+      '....#',
+      '...##',
+      '...##',
+      '..##.',
+      '###..',
+    ], 'grip');
     b.n++;
     if (wp == 1) {
       b.line(25, 7, 22, 15, 'string');
@@ -590,7 +660,13 @@ void _figure(_B b, _Fig f, HeroPose pose, int frame) {
       b.ell(6.5, sy + 6.0, 5.4, 5.6, 'shield');
       b.ell(6.5, sy + 6.0, 1.8, 1.8, 'metal');
     } else {
-      b.rows(1, sy, [...List.filled(7, '##########'), '.########.', '..######..', '...####...', '....##....'], 'shield');
+      b.rows(1, sy, [
+        ...List.filled(7, '##########'),
+        '.########.',
+        '..######..',
+        '...####...',
+        '....##....',
+      ], 'shield');
       b.rect(1, sy, 10, sy, 'trim');
       b.line(1, sy, 1, sy + 7, 'trim');
       b.line(10, sy, 10, sy + 7, 'trim');
@@ -618,12 +694,40 @@ const _tint = [
 ];
 
 /// blade, by the weapon's grade: wood, iron, steel, bright steel, crystal, gold
-const _weaponBlade = [Color(0xFF9A7B5A), Color(0xFFA8B0BA), Color(0xFFC3CDD9), Color(0xFFE4EAF0), Color(0xFF9AD8FF), Color(0xFFF2D272)];
-const _weaponHilt = [Color(0xFF6E4A2E), Color(0xFF5A3A22), Color(0xFF8E1B16), Color(0xFF1F3F73), Color(0xFF5A2A6B), Color(0xFF7A5A1C)];
+const _weaponBlade = [
+  Color(0xFF9A7B5A),
+  Color(0xFFA8B0BA),
+  Color(0xFFC3CDD9),
+  Color(0xFFE4EAF0),
+  Color(0xFF9AD8FF),
+  Color(0xFFF2D272),
+];
+const _weaponHilt = [
+  Color(0xFF6E4A2E),
+  Color(0xFF5A3A22),
+  Color(0xFF8E1B16),
+  Color(0xFF1F3F73),
+  Color(0xFF5A2A6B),
+  Color(0xFF7A5A1C),
+];
 
 /// shield: wood, iron, steel, silver, gold, bright gold
-const _shieldTone = [Color(0xFF94643A), Color(0xFF8E959E), Color(0xFF3360AE), Color(0xFFAE2E28), Color(0xFF74408E), Color(0xFFE8BC3A)];
-const _cloakTone = [Color(0xFF7A5A3E), Color(0xFF3A7A48), Color(0xFFAE2E28), Color(0xFF3360AE), Color(0xFF74408E), Color(0xFFC9A03A)];
+const _shieldTone = [
+  Color(0xFF94643A),
+  Color(0xFF8E959E),
+  Color(0xFF3360AE),
+  Color(0xFFAE2E28),
+  Color(0xFF74408E),
+  Color(0xFFE8BC3A),
+];
+const _cloakTone = [
+  Color(0xFF7A5A3E),
+  Color(0xFF3A7A48),
+  Color(0xFFAE2E28),
+  Color(0xFF3360AE),
+  Color(0xFF74408E),
+  Color(0xFFC9A03A),
+];
 
 Color _darker(Color c, double f) => Color.lerp(c, Colors.black, f)!;
 
@@ -631,7 +735,15 @@ final _heroCache = <String, PixelArt>{};
 
 /// The hero for a pose and frame. [tier] is the job's tier: from tier 2 a fighter wears plate, from tier 3 the trim
 /// turns to gold on a dark field.
-PixelArt heroArt(HeroPose pose, int frame, {required int weapon, required int shield, required int cloak, required Garb garb, int tier = 0}) {
+PixelArt heroArt(
+  HeroPose pose,
+  int frame, {
+  required int weapon,
+  required int shield,
+  required int cloak,
+  required Garb garb,
+  int tier = 0,
+}) {
   final key = '${pose.index}/$frame/$weapon/$shield/$cloak/${garb.head}/${garb.arm}/${garb.tint}/$tier';
   final hit = _heroCache[key];
   if (hit != null) return hit;
@@ -692,9 +804,30 @@ const _tones = <String, List<Map<String, Color>>>{
     {'a': Color(0xFF7E5038), 'b': Color(0xFF3B271A), 'w': Color(0xFFF4F0E0)},
   ],
   'bandit': [
-    {'a': Color(0xFF4E5A44), 'b': Color(0xFF2A211B), 'w': Color(0xFFC3CDD9), 'g': Color(0xFF5A3A22), 's': Color(0xFFD9A678), 'p': Color(0xFF4A463D)},
-    {'a': Color(0xFF7A5434), 'b': Color(0xFF8E1B16), 'w': Color(0xFFC3CDD9), 'g': Color(0xFF5A3A22), 's': Color(0xFFD9A678), 'p': Color(0xFF3B3A36)},
-    {'a': Color(0xFF5A6A30), 'b': Color(0xFF2A211B), 'w': Color(0xFF9A7B5A), 'g': Color(0xFF5A3A22), 's': Color(0xFFE8B98A), 'p': Color(0xFF4A463D)},
+    {
+      'a': Color(0xFF4E5A44),
+      'b': Color(0xFF2A211B),
+      'w': Color(0xFFC3CDD9),
+      'g': Color(0xFF5A3A22),
+      's': Color(0xFFD9A678),
+      'p': Color(0xFF4A463D),
+    },
+    {
+      'a': Color(0xFF7A5434),
+      'b': Color(0xFF8E1B16),
+      'w': Color(0xFFC3CDD9),
+      'g': Color(0xFF5A3A22),
+      's': Color(0xFFD9A678),
+      'p': Color(0xFF3B3A36),
+    },
+    {
+      'a': Color(0xFF5A6A30),
+      'b': Color(0xFF2A211B),
+      'w': Color(0xFF9A7B5A),
+      'g': Color(0xFF5A3A22),
+      's': Color(0xFFE8B98A),
+      'p': Color(0xFF4A463D),
+    },
   ],
   'knight': [
     {'a': Color(0xFF4A4E58), 'b': Color(0xFF8E1B16), 'w': Color(0xFFD9DEE4), 'g': Color(0xFF5A3A22)},
@@ -707,8 +840,20 @@ const _tones = <String, List<Map<String, Color>>>{
     {'a': Color(0xFFC9B8E8), 'w': Color(0xFFF2D272), 'g': Color(0xFF5A2A6B)},
   ],
   'mage': [
-    {'a': Color(0xFF2E3F6B), 'b': Color(0xFFC9A54A), 'w': Color(0xFF8FD0E8), 'g': Color(0xFF5A3A22), 's': Color(0xFFD9C3A8)},
-    {'a': Color(0xFF5A2A6B), 'b': Color(0xFFC9A54A), 'w': Color(0xFFE39A91), 'g': Color(0xFF3B271A), 's': Color(0xFFD9C3A8)},
+    {
+      'a': Color(0xFF2E3F6B),
+      'b': Color(0xFFC9A54A),
+      'w': Color(0xFF8FD0E8),
+      'g': Color(0xFF5A3A22),
+      's': Color(0xFFD9C3A8),
+    },
+    {
+      'a': Color(0xFF5A2A6B),
+      'b': Color(0xFFC9A54A),
+      'w': Color(0xFFE39A91),
+      'g': Color(0xFF3B271A),
+      's': Color(0xFFD9C3A8),
+    },
   ],
   'gargoyle': [
     {'a': Color(0xFF8C919C), 'w': Color(0xFFFF5A3C)},
@@ -801,8 +946,14 @@ void _beast(_B b, String kind) {
       b.rows(29, 15, ['#', '##', '.#'], 'b');
     case 'gargoyle':
       b.ox = 4;
-      b.rows(0, 6, ['###.................###', '#####.............#####', '#######.........#######', '########.......########',
-          '.#######.......#######.', '..#####.........#####..'], 'ad');
+      b.rows(0, 6, [
+        '###.................###',
+        '#####.............#####',
+        '#######.........#######',
+        '########.......########',
+        '.#######.......#######.',
+        '..#####.........#####..',
+      ], 'ad');
       b.ell(11.5, 22, 7, 7.5, 'a');
       b.ell(11.5, 12, 6.5, 6, 'a');
       b.rows(5, 3, ['#..........#', '##........##', '.##......##.'], 'al');
@@ -817,8 +968,20 @@ void _beast(_B b, String kind) {
       b.rect(14, 28, 18, 30, 'a');
       b.rows(17, 26, ['....###', '..####.', '####...'], 'a');
     case 'dragon':
-      b.rows(15, 2, ['..........#....', '.........##....', '........###..#.', '.......####.##.', '......########.', '.....#########.',
-          '....##########.', '...###########.', '..############', '.###.###.###.##', '.##..##..##..#.', '.#...#....#....'], 'ad');
+      b.rows(15, 2, [
+        '..........#....',
+        '.........##....',
+        '........###..#.',
+        '.......####.##.',
+        '......########.',
+        '.....#########.',
+        '....##########.',
+        '...###########.',
+        '..############',
+        '.###.###.###.##',
+        '.##..##..##..#.',
+        '.#...#....#....',
+      ], 'ad');
       b.rows(24, 21, ['..###', '.####', '####.', '##...', '#....'], 'a');
       b.ell(15, 22, 9, 7.5, 'a');
       b.ell(14, 24, 5.5, 4.5, 'b');
@@ -864,7 +1027,6 @@ void _beast(_B b, String kind) {
 
 // ---------------------------------------------------------------------------- drawing
 
-
 class PixelPainter extends CustomPainter {
   final List<String> grid;
   final Map<String, Color> palette;
@@ -893,7 +1055,8 @@ class PixelPainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(PixelPainter old) => old.grid != grid || old.flash != flash || old.mirror != mirror || old.palette != palette;
+  bool shouldRepaint(PixelPainter old) =>
+      old.grid != grid || old.flash != flash || old.mirror != mirror || old.palette != palette;
 }
 
 /// The hero, alive: breathes when idle, walks, strikes, staggers. With calm motion it stands still.
@@ -962,7 +1125,15 @@ class _HeroSpriteState extends State<HeroSprite> with SingleTickerProviderStateM
             };
             final speed = widget.pose == HeroPose.idle ? 1 : (widget.pose == HeroPose.walk ? 2 : 1);
             final f = _calm || widget.shadow ? 0 : (_c.value * frames * speed).floor() % frames;
-            final art = heroArt(widget.pose, f, weapon: widget.weapon, shield: widget.shield, cloak: widget.cloak, garb: widget.garb, tier: widget.tier);
+            final art = heroArt(
+              widget.pose,
+              f,
+              weapon: widget.weapon,
+              shield: widget.shield,
+              cloak: widget.cloak,
+              garb: widget.garb,
+              tier: widget.tier,
+            );
             final palette = widget.shadow ? {for (final k in art.palette.keys) k: pal.line} : art.palette;
             return CustomPaint(
               size: Size(widget.size, widget.size * 18 / 16),
@@ -986,7 +1157,14 @@ class EnemySprite extends StatefulWidget {
   final int tone;
   final double size;
   final bool struck, beaten;
-  const EnemySprite({super.key, required this.sprite, this.tone = 0, this.size = 96, this.struck = false, this.beaten = false});
+  const EnemySprite({
+    super.key,
+    required this.sprite,
+    this.tone = 0,
+    this.size = 96,
+    this.struck = false,
+    this.beaten = false,
+  });
 
   @override
   State<EnemySprite> createState() => _EnemySpriteState();

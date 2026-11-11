@@ -26,7 +26,17 @@ class Word {
 
   /// from the banner's own layer (TOEFL or IELTS), not the core: such words come first among a rank's new ones
   final bool banner;
-  const Word(this.id, this.forms, this.pos, this.meaning, this.sentence, this.tier, [this.gap = const [], this.def = '', this.banner = false]);
+  const Word(
+    this.id,
+    this.forms,
+    this.pos,
+    this.meaning,
+    this.sentence,
+    this.tier, [
+    this.gap = const [],
+    this.def = '',
+    this.banner = false,
+  ]);
 
   Word withDef(String d) => Word(id, forms, pos, meaning, sentence, tier, gap, d, banner);
   Word asBanner() => Word(id, forms, pos, meaning, sentence, tier, gap, def, true);
@@ -49,7 +59,8 @@ class Word {
   }
 
   /// the whole sentence as chips for "susun kalimat": words, with the full stop kept on the last one
-  List<String> tokens(bool british) => sentence.replaceFirst('___', answer(british)).split(' ').where((t) => t.isNotEmpty).toList();
+  List<String> tokens(bool british) =>
+      sentence.replaceFirst('___', answer(british)).split(' ').where((t) => t.isNotEmpty).toList();
   bool get buildable {
     final n = sentence.split(' ').length;
     return n >= 4 && n <= 10;
@@ -141,13 +152,17 @@ class Deck {
     for (final (i, l) in const [(0, 'es'), (1, 'fr')]) {
       for (final f in all.where((a) => a.startsWith('assets/deck/$l/'))) {
         final text = await rootBundle.loadString(f);
-        final m = f.endsWith('/collocations.txt') ? parseDefs(text).map((k, v) => MapEntry('c:${k.replaceAll('[', '').replaceAll(']', '')}', v)) : parseDefs(text);
+        final m = f.endsWith('/collocations.txt')
+            ? parseDefs(text).map((k, v) => MapEntry('c:${k.replaceAll('[', '').replaceAll(']', '')}', v))
+            : parseDefs(text);
         m.forEach((k, v) => (glosses[k] ??= ['', ''])[i] = v);
       }
     }
-    return Deck([
-      for (final w in words) defs.containsKey(w.id) ? w.withDef(defs[w.id]!) : w,
-    ], parseCollocs(await rootBundle.loadString('assets/deck/collocations.txt')), banner);
+    return Deck(
+      [for (final w in words) defs.containsKey(w.id) ? w.withDef(defs[w.id]!) : w],
+      parseCollocs(await rootBundle.loadString('assets/deck/collocations.txt')),
+      banner,
+    );
   }
 
   /// `word|definition` lines
@@ -172,7 +187,17 @@ class Deck {
       final a = f.length >= 4 ? f[1].indexOf('[') : -1, b = f.length >= 4 ? f[1].indexOf(']') : -1;
       final t = int.tryParse(f[0]);
       if (t == null || a < 0 || b < a) continue;
-      out.add(Colloc(t, f[1].substring(0, a), f[1].substring(a + 1, b), f[1].substring(b + 1), f[2].split(','), f[3], f.length > 4 ? f[4] : ''));
+      out.add(
+        Colloc(
+          t,
+          f[1].substring(0, a),
+          f[1].substring(a + 1, b),
+          f[1].substring(b + 1),
+          f[2].split(','),
+          f[3],
+          f.length > 4 ? f[4] : '',
+        ),
+      );
     }
     return out;
   }

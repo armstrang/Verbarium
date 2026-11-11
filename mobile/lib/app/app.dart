@@ -59,7 +59,12 @@ class App extends ChangeNotifier {
   bool get british => banner == 'ielts';
 
   /// the language the learner learns through: 'id', 'en' (monolingual), 'es' or 'fr'
-  String get langCode => switch (_set['lang']) { 'en' => 'en', 'es' => 'es', 'fr' => 'fr', _ => 'id' };
+  String get langCode => switch (_set['lang']) {
+    'en' => 'en',
+    'es' => 'es',
+    'fr' => 'fr',
+    _ => 'id',
+  };
   bool get english => langCode == 'en';
   bool get onboarded => _set['onb'] == 1;
   int get perDay => engine.perDay;
@@ -70,6 +75,15 @@ class App extends ChangeNotifier {
 
   /// fewer and gentler animations (Settings); the phone's own setting is honoured as well
   bool get calm => _set['calm'] == 1;
+
+  /// Dukung Verbarium: consumable products on Google Play that unlock nothing
+  static const donIds = ['donasi_kecil', 'donasi_sedang', 'donasi_besar'];
+
+  /// how many times this phone has supported Verbarium (only counted here, never sent anywhere)
+  int get donations => (_set['dn'] as num?)?.toInt() ?? 0;
+  void donAdd(int n) {
+    if (n > 0) put('dn', donations + n);
+  }
 
   void put(String key, Object value) {
     _set[key] = value;

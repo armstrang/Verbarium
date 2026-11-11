@@ -279,7 +279,7 @@ leak|v|bocor|The roof will ___ if it rains hard.
 lean|v|bersandar, condong|Do not ___ on the glass.
 leap|v|melompat|Fish ___ out of the water at dusk.
 lease|n|sewa kontrak|We signed a two-year ___ on the flat.
-legend|n|legenda|According to ___ a dragon lived in the lake.
+legend|n|legenda|According to ___, a dragon lived in the lake.
 liberal|adj|liberal|The city has a ___ attitude to art.
 liberty|n|kebebasan|The statue is a symbol of ___ for many.
 lid|n|tutup|Put the ___ back on the jar.

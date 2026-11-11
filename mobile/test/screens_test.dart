@@ -576,6 +576,37 @@ void main() {
     });
   }
 
+  testWidgets('privacy, software licences, and the support page that only Google Play can open', (tester) async {
+    phone(tester);
+    await learner(tester);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await tester.tap(find.byIcon(Icons.tune));
+    await beat(tester);
+    await tester.scrollUntilVisible(find.text('Privasi'), 200, scrollable: find.byType(Scrollable).last);
+    expect(find.text('Lisensi perangkat lunak'), findsOneWidget);
+    expect(find.text('Dukung Verbarium'), findsNothing, reason: 'off Google Play the donation products are not found');
+    await tester.tap(find.text('Privasi'));
+    await beat(tester);
+    expect(find.byType(PrivacyPage), findsOneWidget);
+    await shot(tester, '53-privasi');
+    tester.state<NavigatorState>(find.byType(Navigator).first).pop();
+    await beat(tester);
+    tester.state<NavigatorState>(find.byType(Navigator).first).push(
+      MaterialPageRoute<void>(
+        builder: (_) => const SupportPage([
+          (id: 'donasi_kecil', price: 'Rp15.000'),
+          (id: 'donasi_sedang', price: 'Rp45.000'),
+          (id: 'donasi_besar', price: 'Rp150.000'),
+        ]),
+      ),
+    );
+    await beat(tester);
+    expect(find.textContaining('Rp45.000'), findsOneWidget);
+    await shot(tester, '54-dukung');
+    await tester.pump(const Duration(seconds: 1));
+  });
+
   testWidgets('changing the banner keeps the title, the job and what is remembered', (tester) async {
     phone(tester);
     final app = await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);

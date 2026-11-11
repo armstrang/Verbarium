@@ -7,11 +7,14 @@ import android.media.MediaPlayer
 import android.media.SoundPool
 import android.net.Uri
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.os.SystemClock
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
+import org.json.JSONArray
 
 /**
  * The Android side of Verbarium, on the method channel "verbarium/native": the app's files folder, the system
@@ -19,6 +22,11 @@ import io.flutter.plugin.common.MethodChannel
  * The sounds are plain resources in res/raw, made by content/tools/make_audio.py.
  */
 class MainActivity : FlutterActivity() {
+    private val main = Handler(Looper.getMainLooper())
+    private var donate: Donate? = null
+
+    /** Google Play Billing only starts when the support page asks for products */
+    private fun don(): Donate = donate ?: Donate(this).also { donate = it }
     @Volatile private var ready = false
     private var startedAt = 0L
 
@@ -111,6 +119,11 @@ class MainActivity : FlutterActivity() {
                     }
                     result.success(null)
                 }
+                "donProducts" -> {
+                    val a = JSONArray(call.arguments as String)
+                    don().products((0 until a.length()).map { a.getString(it) }) { main.post { result.success(it) } }
+                }
+                "donBuy" -> don().buy(call.arguments as String) { main.post { result.success(it) } }
                 else -> result.notImplemented()
             }
         }
@@ -156,6 +169,8 @@ class MainActivity : FlutterActivity() {
     }
 
     override fun onDestroy() {
+        donate?.end()
+        donate = null
         music?.release()
         music = null
         pool?.release()

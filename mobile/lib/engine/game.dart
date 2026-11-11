@@ -22,7 +22,9 @@ class Gear {
   final int tone; // which colour the sprite takes (see ui/pixel.dart)
   const Gear(this.id, this.slot, this._id, this._en, this._fromId, this._fromEn, this.tone);
   String get name => tr(_id, _en);
-  String get from => _fromId.isEmpty ? tr('Bekal awal', 'What you set out with', 'Con lo que partiste', 'Ce avec quoi tu es parti') : tr('Rampasan dari $_fromId', 'Taken from the $_fromEn', 'Botín: ${tx(_fromEn)}', 'Butin : ${tx(_fromEn)}');
+  String get from => _fromId.isEmpty
+      ? tr('Bekal awal', 'What you set out with', 'Con lo que partiste', 'Ce avec quoi tu es parti')
+      : tr('Rampasan dari $_fromId', 'Taken from the $_fromEn', 'Botín: ${tx(_fromEn)}', 'Butin : ${tx(_fromEn)}');
 }
 
 class Feat {
@@ -54,16 +56,52 @@ class Quest {
   /// said in the language that is on now, so a quest made yesterday in another language still reads right
   String get text => switch (id) {
     'rev' => tr('Ulang $goal kata', 'Review $goal words', 'Repasa $goal palabras', 'Révise $goal mots'),
-    'new' => tr('Pelajari $goal kata baru', 'Learn $goal new words', 'Aprende $goal palabras nuevas', 'Apprends $goal nouveaux mots'),
-    'weak' => tr('Rebut kembali $goal kata yang pernah kamu lupa', 'Win back $goal words you once forgot', 'Recupera $goal palabras que olvidaste', 'Reconquiers $goal mots oubliés'),
-    'clean' => tr('Isi $goal celah tanpa bantuan', 'Fill $goal gaps without help', 'Completa $goal huecos sin ayuda', 'Remplis $goal trous sans aide'),
-    'combo' => tr('Raih combo $goal', 'Reach a combo of $goal', 'Llega a un combo de $goal', 'Atteins un combo de $goal'),
-    'fast' => tr('Jawab $goal celah di bawah enam detik', 'Answer $goal gaps in under six seconds', 'Responde $goal huecos en menos de seis segundos', 'Réponds à $goal trous en moins de six secondes'),
-    'days5' => tr('Belajar $goal hari dalam minggu ini', 'Study on $goal days this week', 'Estudia $goal días esta semana', 'Étudie $goal jours cette semaine'),
-    _ => tr('Jawab $goal pertanyaan', 'Answer $goal questions', 'Responde $goal preguntas', 'Réponds à $goal questions'),
+    'new' => tr(
+      'Pelajari $goal kata baru',
+      'Learn $goal new words',
+      'Aprende $goal palabras nuevas',
+      'Apprends $goal nouveaux mots',
+    ),
+    'weak' => tr(
+      'Rebut kembali $goal kata yang pernah kamu lupa',
+      'Win back $goal words you once forgot',
+      'Recupera $goal palabras que olvidaste',
+      'Reconquiers $goal mots oubliés',
+    ),
+    'clean' => tr(
+      'Isi $goal celah tanpa bantuan',
+      'Fill $goal gaps without help',
+      'Completa $goal huecos sin ayuda',
+      'Remplis $goal trous sans aide',
+    ),
+    'combo' => tr(
+      'Raih combo $goal',
+      'Reach a combo of $goal',
+      'Llega a un combo de $goal',
+      'Atteins un combo de $goal',
+    ),
+    'fast' => tr(
+      'Jawab $goal celah di bawah enam detik',
+      'Answer $goal gaps in under six seconds',
+      'Responde $goal huecos en menos de seis segundos',
+      'Réponds à $goal trous en moins de six secondes',
+    ),
+    'days5' => tr(
+      'Belajar $goal hari dalam minggu ini',
+      'Study on $goal days this week',
+      'Estudia $goal días esta semana',
+      'Étudie $goal jours cette semaine',
+    ),
+    _ => tr(
+      'Jawab $goal pertanyaan',
+      'Answer $goal questions',
+      'Responde $goal preguntas',
+      'Réponds à $goal questions',
+    ),
   };
   Map<String, dynamic> toJson() => {'id': id, 'g': goal, 'x': xp, 'p': prog, 'c': claimed ? 1 : 0};
-  static Quest from(Map<String, dynamic> m) => Quest(m['id'] as String, (m['g'] as num).toInt(), (m['x'] as num).toInt(), (m['p'] as num).toInt(), m['c'] == 1);
+  static Quest from(Map<String, dynamic> m) =>
+      Quest(m['id'] as String, (m['g'] as num).toInt(), (m['x'] as num).toInt(), (m['p'] as num).toInt(), m['c'] == 1);
 }
 
 /// what one answer earned, for the screen to show
@@ -126,18 +164,106 @@ class Game {
 
   static const feats = [
     Feat('first', 'Langkah pertama', 'The first step', 'Menjawab kata pertamamu', 'Answered your first word'),
-    Feat('n1000', 'Seribu jawaban', 'A thousand answers', 'Menjawab 1.000 kali', 'Answered 1,000 times', 'Si Rajin', 'the Diligent'),
-    Feat('s100', 'Seratus kata kukuh', 'A hundred solid words', '100 kata kukuh', '100 solid words', 'Si Tekun', 'the Steady'),
-    Feat('s500', 'Lima ratus kata kukuh', 'Five hundred solid words', '500 kata kukuh', '500 solid words', 'Penjaga Kata', 'Keeper of Words'),
-    Feat('s1000', 'Seribu kata kukuh', 'A thousand solid words', '1.000 kata kukuh', '1,000 solid words', 'Empu Kata', 'Master of Words'),
-    Feat('streak7', 'Tujuh hari', 'Seven days', 'Belajar 7 hari beruntun', 'Studied 7 days in a row', 'Si Setia', 'the Faithful'),
-    Feat('streak30', 'Tiga puluh hari', 'Thirty days', 'Belajar 30 hari beruntun', 'Studied 30 days in a row', 'Yang Tak Tergoyahkan', 'the Unshaken'),
-    Feat('combo20', 'Dua puluh beruntun', 'Twenty in a row', 'Combo 20 jawaban benar', 'A combo of 20 right answers', 'Si Teliti', 'the Careful'),
+    Feat(
+      'n1000',
+      'Seribu jawaban',
+      'A thousand answers',
+      'Menjawab 1.000 kali',
+      'Answered 1,000 times',
+      'Si Rajin',
+      'the Diligent',
+    ),
+    Feat(
+      's100',
+      'Seratus kata kukuh',
+      'A hundred solid words',
+      '100 kata kukuh',
+      '100 solid words',
+      'Si Tekun',
+      'the Steady',
+    ),
+    Feat(
+      's500',
+      'Lima ratus kata kukuh',
+      'Five hundred solid words',
+      '500 kata kukuh',
+      '500 solid words',
+      'Penjaga Kata',
+      'Keeper of Words',
+    ),
+    Feat(
+      's1000',
+      'Seribu kata kukuh',
+      'A thousand solid words',
+      '1.000 kata kukuh',
+      '1,000 solid words',
+      'Empu Kata',
+      'Master of Words',
+    ),
+    Feat(
+      'streak7',
+      'Tujuh hari',
+      'Seven days',
+      'Belajar 7 hari beruntun',
+      'Studied 7 days in a row',
+      'Si Setia',
+      'the Faithful',
+    ),
+    Feat(
+      'streak30',
+      'Tiga puluh hari',
+      'Thirty days',
+      'Belajar 30 hari beruntun',
+      'Studied 30 days in a row',
+      'Yang Tak Tergoyahkan',
+      'the Unshaken',
+    ),
+    Feat(
+      'combo20',
+      'Dua puluh beruntun',
+      'Twenty in a row',
+      'Combo 20 jawaban benar',
+      'A combo of 20 right answers',
+      'Si Teliti',
+      'the Careful',
+    ),
     Feat('crit50', 'Tangan cepat', 'Quick hand', '50 jawaban kritis', '50 critical answers', 'Si Cepat', 'the Swift'),
-    Feat('boss1', 'Penakluk pertama', 'First conquest', 'Mengalahkan boss pertamamu', 'Beat your first boss', 'Penakluk', 'the Conqueror'),
-    Feat('perfect', 'Tanpa cela', 'Flawless', 'Mengalahkan boss tanpa satu pun salah', 'Beat a boss without a single miss', 'Tanpa Cela', 'the Flawless'),
-    Feat('jobs3', 'Tiga jalan', 'Three paths', 'Memegang tiga job berturut-turut', 'Held three jobs in turn', 'Sang Pengelana', 'the Wayfarer'),
-    Feat('secret', 'Jalan tersembunyi', 'A hidden path', 'Menemukan satu job tersembunyi', 'Found a hidden job', 'Sang Penemu', 'the Finder'),
+    Feat(
+      'boss1',
+      'Penakluk pertama',
+      'First conquest',
+      'Mengalahkan boss pertamamu',
+      'Beat your first boss',
+      'Penakluk',
+      'the Conqueror',
+    ),
+    Feat(
+      'perfect',
+      'Tanpa cela',
+      'Flawless',
+      'Mengalahkan boss tanpa satu pun salah',
+      'Beat a boss without a single miss',
+      'Tanpa Cela',
+      'the Flawless',
+    ),
+    Feat(
+      'jobs3',
+      'Tiga jalan',
+      'Three paths',
+      'Memegang tiga job berturut-turut',
+      'Held three jobs in turn',
+      'Sang Pengelana',
+      'the Wayfarer',
+    ),
+    Feat(
+      'secret',
+      'Jalan tersembunyi',
+      'A hidden path',
+      'Menemukan satu job tersembunyi',
+      'Found a hidden job',
+      'Sang Penemu',
+      'the Finder',
+    ),
   ];
 
   static const critMs = 6000;
@@ -188,7 +314,16 @@ class Game {
 
   /// Call once per graded answer. [err]: '' none, 's' a spelling slip, 'f' the wrong form, 'm' meaning not known,
   /// 'o' wrong order. [ms] = time taken. Returns what to show.
-  Reward onAnswer(Word w, Quiz quiz, Grade g, int ms, {String err = '', bool fresh = false, bool hadLapses = false, double stab = 0}) {
+  Reward onAnswer(
+    Word w,
+    Quiz quiz,
+    Grade g,
+    int ms, {
+    String err = '',
+    bool fresh = false,
+    bool hadLapses = false,
+    double stab = 0,
+  }) {
     final right = g != Grade.wrong;
     final news = <String>[];
     _g['n'] = _int('n') + 1;
@@ -293,7 +428,16 @@ class Game {
         case 'ans150':
           q.prog++;
       }
-      if (q.prog != before && q.done) news.add(tr('Quest selesai: ${q.text}', 'Quest done: ${q.text}', 'Misión cumplida: ${q.text}', 'Quête accomplie : ${q.text}'));
+      if (q.prog != before && q.done) {
+        news.add(
+          tr(
+            'Quest selesai: ${q.text}',
+            'Quest done: ${q.text}',
+            'Misión cumplida: ${q.text}',
+            'Quête accomplie : ${q.text}',
+          ),
+        );
+      }
     }
     _saveQuests();
 
@@ -316,7 +460,8 @@ class Game {
     return Reward(gain, combo, false, up, up ? [_levelNews] : const []);
   }
 
-  String get _levelNews => tr('Naik ke level $level', 'Level $level reached', 'Nivel $level alcanzado', 'Niveau $level atteint');
+  String get _levelNews =>
+      tr('Naik ke level $level', 'Level $level reached', 'Nivel $level alcanzado', 'Niveau $level atteint');
 
   // ---------------------------------------------------------------- figures (0..100)
 
@@ -501,7 +646,8 @@ class Game {
 
   /// the branches open at the next title, and the one the build points to now (null before any answer)
   List<Job> get nextJobs => e.rank >= Engine.maxRank ? const [] : Jobs.children(branch);
-  Job? get heading => e.rank >= Engine.maxRank || build.total < 20 ? null : Jobs.natural(e.rank + 1, branch, build, career);
+  Job? get heading =>
+      e.rank >= Engine.maxRank || build.total < 20 ? null : Jobs.natural(e.rank + 1, branch, build, career);
 
   bool _letterHeld(int tier) {
     final by = <String, List<Word>>{};
@@ -540,7 +686,15 @@ class Game {
     _g['bt'] = c.v;
     _g['bp'] = <String, dynamic>{};
     e.note('job', tier, extra: {'j': got.id});
-    final news = <String>[tr('Jalan baru: ${got.name}', 'A new path: ${got.name}', 'Un nuevo camino: ${got.name}', 'Une nouvelle voie : ${got.name}'), got.perk.text];
+    final news = <String>[
+      tr(
+        'Jalan baru: ${got.name}',
+        'A new path: ${got.name}',
+        'Un nuevo camino: ${got.name}',
+        'Une nouvelle voie : ${got.name}',
+      ),
+      got.perk.text,
+    ];
     if (tier >= 3) news.addAll(_feat('jobs3'));
     if (secret != null) news.addAll(_feat('secret'));
     store.touch();
@@ -686,23 +840,33 @@ class Game {
     final text = {
       's': tr(
         'Ejaanmu sering meleset satu huruf. Pelan sedikit saat mengetik kata panjang.',
-        'Your spelling is often one letter off. Slow down a little on long words.', 'A menudo fallas por una letra. Ve un poco más despacio con las palabras largas.', 'Ton orthographe dérape souvent d’une lettre. Ralentis un peu sur les mots longs.',
+        'Your spelling is often one letter off. Slow down a little on long words.',
+        'A menudo fallas por una letra. Ve un poco más despacio con las palabras largas.',
+        'Ton orthographe dérape souvent d’une lettre. Ralentis un peu sur les mots longs.',
       ),
       'f': tr(
         'Artinya sudah kamu pegang, bentuk katanya yang sering meleset. Perhatikan kata sebelum celah.',
-        'You have the meaning; it is the form of the word that slips. Look at the words before the gap.', 'Ya sabes el significado; lo que se escapa es la forma. Mira las palabras antes del hueco.', 'Tu connais le sens ; c’est la forme du mot qui t’échappe. Regarde les mots avant le trou.',
+        'You have the meaning; it is the form of the word that slips. Look at the words before the gap.',
+        'Ya sabes el significado; lo que se escapa es la forma. Mira las palabras antes del hueco.',
+        'Tu connais le sens ; c’est la forme du mot qui t’échappe. Regarde les mots avant le trou.',
       ),
       'm': tr(
         'Banyak arti yang belum melekat. Ulangi dulu sebelum menambah kata baru.',
-        'Many meanings have not settled yet. Review before taking on new words.', 'Muchos significados aún no se han asentado. Repasa antes de aprender palabras nuevas.', 'Beaucoup de sens ne sont pas encore ancrés. Révise avant d’aborder de nouveaux mots.',
+        'Many meanings have not settled yet. Review before taking on new words.',
+        'Muchos significados aún no se han asentado. Repasa antes de aprender palabras nuevas.',
+        'Beaucoup de sens ne sont pas encore ancrés. Révise avant d’aborder de nouveaux mots.',
       ),
       'o': tr(
         'Susunan kalimatmu masih goyah. Kalimat pendek akan lebih sering muncul untuk disusun.',
-        'Your word order still wavers. Short sentences will come up more often to be built.', 'El orden de las palabras aún vacila. Aparecerán más frases cortas para construir.', 'L’ordre des mots hésite encore. Des phrases courtes à construire reviendront plus souvent.',
+        'Your word order still wavers. Short sentences will come up more often to be built.',
+        'El orden de las palabras aún vacila. Aparecerán más frases cortas para construir.',
+        'L’ordre des mots hésite encore. Des phrases courtes à construire reviendront plus souvent.',
       ),
       'c': tr(
         'Pasangan kata (kolokasi) perlu diasah. Kartu kolokasi akan lebih sering muncul.',
-        'Partner words (collocations) need work. Collocation cards will come up more often.', 'Las palabras compañeras (colocaciones) necesitan trabajo. Aparecerán más a menudo.', 'Les mots compagnons (collocations) demandent du travail. Ils reviendront plus souvent.',
+        'Partner words (collocations) need work. Collocation cards will come up more often.',
+        'Las palabras compañeras (colocaciones) necesitan trabajo. Aparecerán más a menudo.',
+        'Les mots compagnons (collocations) demandent du travail. Ils reviendront plus souvent.',
       ),
     };
     String? worst;
@@ -731,21 +895,51 @@ class Game {
     final out = <String>[];
     final en = enemy;
     if (e.shaky) {
-      out.add(tr('Gelarmu goyah. Pertahankan dulu sebelum hal lain.', 'Your title wavers. Defend it before anything else.', 'Tu título se tambalea. Defiéndelo antes que nada.', 'Ton titre vacille. Défends-le avant toute chose.'));
+      out.add(
+        tr(
+          'Gelarmu goyah. Pertahankan dulu sebelum hal lain.',
+          'Your title wavers. Defend it before anything else.',
+          'Tu título se tambalea. Defiéndelo antes que nada.',
+          'Ton titre vacille. Défends-le avant toute chose.',
+        ),
+      );
     } else if (en != null && fightOpen) {
       out.add(
         tr(
           '${en.name} bisa dilawan sekarang. Peluang menangmu sekitar ${winChance()}%.',
-          'The ${en.name} can be fought now. Your chance of winning is about ${winChance()}%.', 'Ya puedes enfrentarte a ${en.name}. Tu probabilidad de ganar ronda el ${winChance()} %.', 'Tu peux affronter ${en.name}. Tes chances de victoire sont d’environ ${winChance()} %.',
+          'The ${en.name} can be fought now. Your chance of winning is about ${winChance()}%.',
+          'Ya puedes enfrentarte a ${en.name}. Tu probabilidad de ganar ronda el ${winChance()} %.',
+          'Tu peux affronter ${en.name}. Tes chances de victoire sont d’environ ${winChance()} %.',
         ),
       );
     }
     if (p.reviews > 0 && p.fresh > 0) {
-      out.add(tr('Mulai dari ${p.reviews} ulangan, lalu ${p.fresh} kata baru.', 'Start with ${p.reviews} reviews, then ${p.fresh} new words.', 'Empieza con ${p.reviews} repasos y luego ${p.fresh} palabras nuevas.', 'Commence par ${p.reviews} révisions, puis ${p.fresh} nouveaux mots.'));
+      out.add(
+        tr(
+          'Mulai dari ${p.reviews} ulangan, lalu ${p.fresh} kata baru.',
+          'Start with ${p.reviews} reviews, then ${p.fresh} new words.',
+          'Empieza con ${p.reviews} repasos y luego ${p.fresh} palabras nuevas.',
+          'Commence par ${p.reviews} révisions, puis ${p.fresh} nouveaux mots.',
+        ),
+      );
     } else if (p.reviews > 0) {
-      out.add(tr('${p.reviews} kata menunggu diulang.', '${p.reviews} words are waiting for review.', '${p.reviews} palabras esperan repaso.', '${p.reviews} mots attendent une révision.'));
+      out.add(
+        tr(
+          '${p.reviews} kata menunggu diulang.',
+          '${p.reviews} words are waiting for review.',
+          '${p.reviews} palabras esperan repaso.',
+          '${p.reviews} mots attendent une révision.',
+        ),
+      );
     } else if (p.fresh > 0) {
-      out.add(tr('Tidak ada ulangan. Waktu yang baik untuk ${p.fresh} kata baru.', 'Nothing to review. A good time for ${p.fresh} new words.', 'Nada que repasar. Buen momento para ${p.fresh} palabras nuevas.', 'Rien à réviser. Bon moment pour ${p.fresh} nouveaux mots.'));
+      out.add(
+        tr(
+          'Tidak ada ulangan. Waktu yang baik untuk ${p.fresh} kata baru.',
+          'Nothing to review. A good time for ${p.fresh} new words.',
+          'Nada que repasar. Buen momento para ${p.fresh} palabras nuevas.',
+          'Rien à réviser. Bon moment pour ${p.fresh} nouveaux mots.',
+        ),
+      );
     }
     final w = weakness();
     if (w != null) out.add(w);
@@ -755,11 +949,22 @@ class Game {
       out.add(
         tr(
           'Build-mu condong ke ${statNames[o[0]]} (${(s[o[0]] * 100).round()}%), lalu ${statNames[o[1]]}.',
-          'Your build leans to ${statNames[o[0]]} (${(s[o[0]] * 100).round()}%), then ${statNames[o[1]]}.', 'Tu estilo se inclina hacia ${statNames[o[0]]} (${(s[o[0]] * 100).round()} %), luego ${statNames[o[1]]}.', 'Ton style penche vers ${statNames[o[0]]} (${(s[o[0]] * 100).round()} %), puis ${statNames[o[1]]}.',
+          'Your build leans to ${statNames[o[0]]} (${(s[o[0]] * 100).round()}%), then ${statNames[o[1]]}.',
+          'Tu estilo se inclina hacia ${statNames[o[0]]} (${(s[o[0]] * 100).round()} %), luego ${statNames[o[1]]}.',
+          'Ton style penche vers ${statNames[o[0]]} (${(s[o[0]] * 100).round()} %), puis ${statNames[o[1]]}.',
         ),
       );
     }
-    if (out.isEmpty) out.add(tr('Semua tugas hari ini selesai. Kembalilah besok.', 'All of today\'s tasks are done. Come back tomorrow.', 'Todas las tareas de hoy están hechas. Vuelve mañana.', 'Toutes les tâches du jour sont faites. Reviens demain.'));
+    if (out.isEmpty) {
+      out.add(
+        tr(
+          'Semua tugas hari ini selesai. Kembalilah besok.',
+          'All of today\'s tasks are done. Come back tomorrow.',
+          'Todas las tareas de hoy están hechas. Vuelve mañana.',
+          'Toutes les tâches du jour sont faites. Reviens demain.',
+        ),
+      );
+    }
     return out;
   }
 }

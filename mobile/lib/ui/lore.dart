@@ -58,7 +58,16 @@ class JobIntro extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
-                  Center(child: Label(tr('Tercatat dalam kronik', 'Entered in the chronicle', 'Registrado en la crónica', 'Consigné dans la chronique'))),
+                  Center(
+                    child: Label(
+                      tr(
+                        'Tercatat dalam kronik',
+                        'Entered in the chronicle',
+                        'Registrado en la crónica',
+                        'Consigné dans la chronique',
+                      ),
+                    ),
+                  ),
                   const SizedBox(height: 16),
                   Center(child: _figure(context, job, pose: HeroPose.cheer)),
                   const SizedBox(height: 18),
@@ -89,7 +98,12 @@ class JobIntro extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             InkButton(
-              tr('Mulai sebagai ${job.name}', 'Begin as ${job.name}', 'Empezar como ${job.name}', 'Commencer en ${job.name}'),
+              tr(
+                'Mulai sebagai ${job.name}',
+                'Begin as ${job.name}',
+                'Empezar como ${job.name}',
+                'Commencer en ${job.name}',
+              ),
               onTap: () => Navigator.of(context).pop(),
             ),
             const SizedBox(height: 6),
@@ -161,12 +175,23 @@ class LorePage extends StatelessWidget {
                 part(tr('Motivasi', 'What drives them', 'Lo que le impulsa', 'Ce qui l’anime'), lore.drive),
                 const SizedBox(height: 26),
                 Divider(color: pal.line, height: 1),
-                part(tr('Negeri ${rankNames[rank]}', 'The realm of the ${rankNames[rank]}', 'El reino de ${rankNames[rank]}', 'Le royaume du ${rankNames[rank]}'), realm.story),
+                part(
+                  tr(
+                    'Negeri ${rankNames[rank]}',
+                    'The realm of the ${rankNames[rank]}',
+                    'El reino de ${rankNames[rank]}',
+                    'Le royaume du ${rankNames[rank]}',
+                  ),
+                  realm.story,
+                ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
                   child: Text('“${realm.quote}”', style: T.display(18, pal.muted, italic: true, height: 1.3)),
                 ),
-                part(tr('Dunia Verbarium', 'The world of Verbarium', 'El mundo de Verbarium', 'Le monde de Verbarium'), LoreBook.world),
+                part(
+                  tr('Dunia Verbarium', 'The world of Verbarium', 'El mundo de Verbarium', 'Le monde de Verbarium'),
+                  LoreBook.world,
+                ),
               ],
             ),
           ),
