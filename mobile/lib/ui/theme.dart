@@ -122,10 +122,10 @@ const rankNames = ['Peasant', 'Squire', 'Knight', 'Baron', 'Duke', 'King'];
 
 /// how the app speaks to each title: plain to a farmer, with ceremony to a king
 String rankGreeting(int rank) => [
-  tr('Ladang sudah digarap. Sekarang giliran kata.', 'The field is tilled. Now it is the words\' turn.'),
-  tr('Senjata latihanmu sudah diasah.', 'Your practice arms are sharpened.'),
-  tr('Kudamu sudah dipelanai, Kesatria.', 'Your horse is saddled, Sir Knight.'),
-  tr('Aula menantimu, Tuan Baron.', 'The hall awaits you, my lord Baron.'),
-  tr('Istana sudah siap, Yang Mulia.', 'The palace is ready, Your Grace.'),
-  tr('Takhta menunggu titahmu, Baginda.', 'The throne awaits your word, Your Majesty.'),
+  tr('Ladang sudah digarap. Sekarang giliran kata.', 'The field is tilled. Now it is the words\' turn.', 'El campo está arado. Ahora les toca a las palabras.', 'Le champ est labouré. Place aux mots.'),
+  tr('Senjata latihanmu sudah diasah.', 'Your practice arms are sharpened.', 'Tus armas de práctica están afiladas.', 'Tes armes d’entraînement sont affûtées.'),
+  tr('Kudamu sudah dipelanai, Kesatria.', 'Your horse is saddled, Sir Knight.', 'Tu caballo está ensillado, Sir Knight.', 'Ton cheval est sellé, Sir Knight.'),
+  tr('Aula menantimu, Tuan Baron.', 'The hall awaits you, my lord Baron.', 'La sala te espera, mi señor Baron.', 'La salle t’attend, mon seigneur Baron.'),
+  tr('Istana sudah siap, Yang Mulia.', 'The palace is ready, Your Grace.', 'El palacio está listo, Vuestra Gracia.', 'Le palais est prêt, Votre Grâce.'),
+  tr('Takhta menunggu titahmu, Baginda.', 'The throne awaits your word, Your Majesty.', 'El trono espera tu palabra, Majestad.', 'Le trône attend ta parole, Majesté.'),
 ][rank.clamp(0, 5)];

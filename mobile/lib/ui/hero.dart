@@ -31,7 +31,7 @@ class HeroTab extends StatelessWidget {
     final perks = [for (final j in g.path.skip(1)) j];
     return TabBody(
       children: [
-        Label(tr('Karakter', 'Character')),
+        Label(tr('Karakter', 'Character', 'Personaje', 'Personnage')),
         const SizedBox(height: 10),
         Rise(
           child: Row(
@@ -40,7 +40,7 @@ class HeroTab extends StatelessWidget {
               Press(
                 // the hero tapped: the story of who they are
                 onTap: () => Navigator.of(context).push(runRoute(LorePage(job: job, rank: rank))),
-                label: tr('Kisah ${job.name}', 'Story of the ${job.name}'),
+                label: tr('Kisah ${job.name}', 'Story of the ${job.name}', 'Historia de ${job.name}', 'Histoire de ${job.name}'),
                 child: Container(
                   width: 132,
                   height: 150,
@@ -82,7 +82,7 @@ class HeroTab extends StatelessWidget {
                     Bar(g.levelShare, height: 6),
                     const SizedBox(height: 4),
                     Text(
-                      tr('${g.toNext} XP lagi ke level ${g.level + 1}', '${g.toNext} XP to level ${g.level + 1}'),
+                      tr('${g.toNext} XP lagi ke level ${g.level + 1}', '${g.toNext} XP to level ${g.level + 1}', '${g.toNext} XP para el nivel ${g.level + 1}', '${g.toNext} XP avant le niveau ${g.level + 1}'),
                       style: T.body(14.5, pal.muted),
                     ),
                   ],
@@ -94,12 +94,12 @@ class HeroTab extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(top: 8),
           child: Text(
-            tr('Ketuk karakternya untuk membaca kisahnya.', 'Tap the figure to read their story.'),
+            tr('Ketuk karakternya untuk membaca kisahnya.', 'Tap the figure to read their story.', 'Toca la figura para leer su historia.', 'Touche le personnage pour lire son histoire.'),
             style: T.body(14, pal.muted),
           ),
         ),
         const SizedBox(height: 22),
-        Label(tr('Jalan dan perk', 'Path and perks')),
+        Label(tr('Jalan dan perk', 'Path and perks', 'Camino y ventajas', 'Voie et atouts')),
         const SizedBox(height: 6),
         Text(g.path.map((j) => j.name).join('  ›  '), style: T.body(16.5, pal.ink, w: FontWeight.w500, height: 1.45)),
         const SizedBox(height: 4),
@@ -107,7 +107,7 @@ class HeroTab extends StatelessWidget {
           Text(
             tr(
               'Job pertamamu ditentukan saat kamu dinobatkan menjadi Squire. Bukan kamu yang memilih: cara belajarmu yang menentukan.',
-              'Your first job is decided when you are crowned Squire. You do not choose it: the way you learn does.',
+              'Your first job is decided when you are crowned Squire. You do not choose it: the way you learn does.', 'Tu primer oficio se decide cuando te coronan Squire. No lo eliges tú: lo decide tu manera de aprender.', 'Ton premier métier se décide quand tu es couronné Squire. Tu ne le choisis pas : ta façon d’apprendre le fait.',
             ),
             style: T.body(15, pal.muted, height: 1.45),
           )
@@ -120,42 +120,42 @@ class HeroTab extends StatelessWidget {
         const SizedBox(height: 22),
         const _BuildBlock(),
         const SizedBox(height: 22),
-        Label(tr('Kemampuan', 'Figures')),
+        Label(tr('Kemampuan', 'Figures', 'Cifras', 'Chiffres')),
         const SizedBox(height: 6),
         _Figure(
-          tr('Ingatan', 'Memory'),
+          tr('Ingatan', 'Memory', 'Memoria', 'Mémoire'),
           g.memory,
-          tr('kata kukuh dari ranah yang sudah kamu masuki', 'solid words out of the lands you have entered'),
+          tr('kata kukuh dari ranah yang sudah kamu masuki', 'solid words out of the lands you have entered', 'palabras firmes de las tierras que ya pisaste', 'mots ancrés des terres où tu es entré'),
         ),
         _Figure(
-          tr('Ketepatan', 'Accuracy'),
+          tr('Ketepatan', 'Accuracy', 'Precisión', 'Précision'),
           g.accuracy,
-          tr('jawaban benar dari 100 terakhir', 'right answers out of the last 100'),
+          tr('jawaban benar dari 100 terakhir', 'right answers out of the last 100', 'respuestas correctas de las últimas 100', 'bonnes réponses sur les 100 dernières'),
         ),
         _Figure(
-          tr('Kecepatan', 'Speed'),
+          tr('Kecepatan', 'Speed', 'Rapidez', 'Rapidité'),
           g.speed,
-          tr('dari waktu rata-rata mengisi celah', 'from the average time to fill a gap'),
+          tr('dari waktu rata-rata mengisi celah', 'from the average time to fill a gap', 'según el tiempo medio para completar un hueco', 'd’après le temps moyen pour remplir un trou'),
         ),
         _Figure(
-          tr('Ketekunan', 'Diligence'),
+          tr('Ketekunan', 'Diligence', 'Constancia', 'Assiduité'),
           g.diligence,
           tr(
             '${g.activeDays14} dari 14 hari terakhir kamu belajar',
-            'you studied on ${g.activeDays14} of the last 14 days',
+            'you studied on ${g.activeDays14} of the last 14 days', 'estudiaste ${g.activeDays14} de los últimos 14 días', 'tu as étudié ${g.activeDays14} des 14 derniers jours',
           ),
         ),
         const SizedBox(height: 22),
-        Label(tr('Perlengkapan', 'Gear')),
+        Label(tr('Perlengkapan', 'Gear', 'Equipo', 'Équipement')),
         const SizedBox(height: 6),
         for (final slot in const ['weapon', 'shield', 'cloak']) _Slot(slot),
         const SizedBox(height: 22),
-        Label(tr('Quest minggu ini', 'This week\'s quests')),
+        Label(tr('Quest minggu ini', 'This week\'s quests', 'Misiones de la semana', 'Quêtes de la semaine')),
         const SizedBox(height: 4),
         for (final q in g.weekly) QuestRow(q),
         const SizedBox(height: 22),
         if (titled.isNotEmpty) ...[
-          Label(tr('Gelar kehormatan', 'Honorary title')),
+          Label(tr('Gelar kehormatan', 'Honorary title', 'Título honorífico', 'Titre honorifique')),
           const SizedBox(height: 8),
           Wrap(
             spacing: 8,
@@ -178,7 +178,7 @@ class HeroTab extends StatelessWidget {
                         borderRadius: BorderRadius.circular(3),
                       ),
                       child: Text(
-                        f == null ? tr('Tanpa gelar', 'No title') : f.title!,
+                        f == null ? tr('Tanpa gelar', 'No title', 'Sin título', 'Aucun titre') : f.title!,
                         style: T.body(15.5, g.titleFeat?.id == f?.id ? pal.bg : pal.ink, w: FontWeight.w500),
                       ),
                     ),
@@ -191,7 +191,7 @@ class HeroTab extends StatelessWidget {
         Label(
           tr(
             'Pencapaian · ${earned.length} dari ${Game.feats.length}',
-            'Feats · ${earned.length} of ${Game.feats.length}',
+            'Feats · ${earned.length} of ${Game.feats.length}', 'Hazañas · ${earned.length} de ${Game.feats.length}', 'Exploits · ${earned.length} sur ${Game.feats.length}',
           ),
         ),
         const SizedBox(height: 4),
@@ -218,7 +218,7 @@ class HeroTab extends StatelessWidget {
                         style: T.body(16.5, earned.contains(f.id) ? pal.ink : pal.muted, w: FontWeight.w500),
                       ),
                       Text(
-                        '${f.text}${f.title == null ? '' : tr(' · gelar "${f.title}"', ' · title "${f.title}"')}',
+                        '${f.text}${f.title == null ? '' : tr(' · gelar "${f.title}"', ' · title "${f.title}"', ' · título «${f.title}»', ' · titre « ${f.title} »')}',
                         style: T.body(14.5, pal.muted),
                       ),
                     ],
@@ -250,13 +250,13 @@ class _BuildBlock extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Label(tr('Arah build', 'Where your build leans')),
+        Label(tr('Arah build', 'Where your build leans', 'Hacia dónde se inclina tu estilo', 'Vers où penche ton style')),
         const SizedBox(height: 6),
         if (b.total < 20)
           Text(
             tr(
               'Belum cukup jawaban untuk dibaca. Tiap jawaban menambah salah satu dari empat sisi di bawah ini.',
-              'Not enough answers to read yet. Every answer adds to one of the four sides below.',
+              'Not enough answers to read yet. Every answer adds to one of the four sides below.', 'Aún no hay respuestas suficientes. Cada respuesta suma a uno de los cuatro lados de abajo.', 'Pas encore assez de réponses. Chaque réponse s’ajoute à l’un des quatre côtés ci-dessous.',
             ),
             style: T.body(15, pal.muted, height: 1.45),
           ),
@@ -290,27 +290,27 @@ class _BuildBlock extends StatelessWidget {
         Text(
           tr(
             'Precision dari celah yang diisi bersih dan bentuk kata yang tepat. Swiftness dari jawaban cepat. Insight dari kata lama yang masih kamu ingat. Endurance dari hari-hari kamu datang.',
-            'Precision comes from gaps filled cleanly and the right form of a word. Swiftness from quick answers. Insight from old words you still remember. Endurance from the days you show up.',
+            'Precision comes from gaps filled cleanly and the right form of a word. Swiftness from quick answers. Insight from old words you still remember. Endurance from the days you show up.', 'La precisión viene de los huecos completados sin fallo y de la forma correcta. La rapidez, de responder rápido. La perspicacia, de las palabras antiguas que aún recuerdas. La resistencia, de los días que vienes.', 'La précision vient des trous remplis sans faute et de la bonne forme du mot. La rapidité, des réponses vives. La perspicacité, des vieux mots dont tu te souviens encore. L’endurance, des jours où tu reviens.',
           ),
           style: T.body(14.5, pal.muted, height: 1.45),
         ),
         if (next.isNotEmpty) ...[
           const SizedBox(height: 18),
-          Label(tr('Jalan berikutnya', 'The paths ahead')),
+          Label(tr('Jalan berikutnya', 'The paths ahead', 'Los caminos por delante', 'Les voies à venir')),
           const SizedBox(height: 8),
           for (final j in next) _PathRow(j, known: known.contains(j.id), pointed: heading?.id == j.id),
           const SizedBox(height: 4),
           Text(
             tr(
               'Job ditentukan saat penobatan, dari build-mu waktu itu. Tidak bisa dipilih dan tidak bisa diganti.',
-              'The job is decided at the coronation, from your build at that moment. It cannot be chosen and cannot be changed.',
+              'The job is decided at the coronation, from your build at that moment. It cannot be chosen and cannot be changed.', 'El oficio se decide en la coronación, según tu estilo en ese momento. No se puede elegir ni cambiar.', 'Le métier se décide au couronnement, d’après ton style à ce moment-là. Il ne peut être ni choisi ni changé.',
             ),
             style: T.body(14.5, pal.muted, height: 1.45),
           ),
         ],
         const SizedBox(height: 10),
         InkButton(
-          tr('Peta job', 'Map of jobs'),
+          tr('Peta job', 'Map of jobs', 'Mapa de oficios', 'Carte des métiers'),
           outline: true,
           onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const JobMapPage())),
         ),
@@ -350,7 +350,7 @@ class _PathRow extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 3),
                     child: Text(
-                      tr('Build-mu kini mengarah ke sini', 'Your build points here now'),
+                      tr('Build-mu kini mengarah ke sini', 'Your build points here now', 'Tu estilo apunta aquí ahora', 'Ton style mène ici en ce moment'),
                       style: T.body(14.5, pal.ink, w: FontWeight.w700),
                     ),
                   ),
@@ -384,10 +384,10 @@ class JobMapPage extends StatelessWidget {
             children: [
               Press(
                 onTap: () => Navigator.of(context).pop(),
-                label: tr('Kembali', 'Back'),
+                label: tr('Kembali', 'Back', 'Volver', 'Retour'),
                 child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
               ),
-              Expanded(child: Text(tr('Peta job', 'Map of jobs'), style: T.display(25, pal.ink))),
+              Expanded(child: Text(tr('Peta job', 'Map of jobs', 'Mapa de oficios', 'Carte des métiers'), style: T.display(25, pal.ink))),
               Text('$seenAll / ${Jobs.all.length}', style: T.body(15.5, pal.muted)),
               const SizedBox(width: 8),
             ],
@@ -399,7 +399,7 @@ class JobMapPage extends StatelessWidget {
                 Text(
                   tr(
                     '${Jobs.visible.length} job terlihat di peta, ${Jobs.secret.length} lagi tersembunyi. Yang pernah kamu pegang tampil berwarna; sisanya bayangan sampai kamu sendiri tiba di sana.',
-                    '${Jobs.visible.length} jobs are on the map, ${Jobs.secret.length} more are hidden. Those you have held are in colour; the rest stay shadows until you get there yourself.',
+                    '${Jobs.visible.length} jobs are on the map, ${Jobs.secret.length} more are hidden. Those you have held are in colour; the rest stay shadows until you get there yourself.', 'Hay ${Jobs.visible.length} oficios en el mapa y ${Jobs.secret.length} más ocultos. Los que has tenido aparecen en color; el resto son sombras hasta que llegues allí.', '${Jobs.visible.length} métiers sont sur la carte, ${Jobs.secret.length} autres sont cachés. Ceux que tu as tenus sont en couleur ; les autres restent des ombres jusqu’à ce que tu y arrives.',
                   ),
                   style: T.body(15.5, pal.muted, height: 1.45),
                 ),
@@ -416,7 +416,7 @@ class JobMapPage extends StatelessWidget {
                   ),
                 ],
                 const SizedBox(height: 22),
-                Label(tr('Tersembunyi', 'Hidden')),
+                Label(tr('Tersembunyi', 'Hidden', 'Oculto', 'Caché')),
                 const SizedBox(height: 6),
                 for (final j in Jobs.secret)
                   Container(
@@ -464,7 +464,7 @@ class _JobTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final pal = Look.of(context).pal;
     return Semantics(
-      label: known ? '${job.name}. ${job.perk.text}' : tr('Job yang belum dikenal', 'A job not yet known'),
+      label: known ? '${job.name}. ${job.perk.text}' : tr('Job yang belum dikenal', 'A job not yet known', 'Un oficio aún desconocido', 'Un métier encore inconnu'),
       child: ExcludeSemantics(
         child: Container(
           width: 106,
@@ -504,7 +504,7 @@ class _Figure extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 7),
       child: Semantics(
-        label: tr('$name $value dari 100. $note', '$name $value out of 100. $note'),
+        label: tr('$name $value dari 100. $note', '$name $value out of 100. $note', '$name $value de 100. $note', '$name $value sur 100. $note'),
         child: ExcludeSemantics(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -538,9 +538,9 @@ class _Slot extends StatelessWidget {
     final pal = Look.of(context).pal;
     final g = App.I.game;
     final name = {
-      'weapon': tr('Senjata', 'Arms'),
-      'shield': tr('Perisai', 'Shield'),
-      'cloak': tr('Jubah', 'Cloak'),
+      'weapon': tr('Senjata', 'Arms', 'Arma', 'Arme'),
+      'shield': tr('Perisai', 'Shield', 'Escudo', 'Bouclier'),
+      'cloak': tr('Jubah', 'Cloak', 'Capa', 'Cape'),
     }[slot]!;
     final mine = Game.gear.where((x) => x.slot == slot && g.owned.contains(x.id)).toList();
     final worn = g.gearOf(g.equipped(slot));
@@ -557,11 +557,11 @@ class _Slot extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  tr('$name · ${mine.length} dari $all', '$name · ${mine.length} of $all'),
+                  tr('$name · ${mine.length} dari $all', '$name · ${mine.length} of $all', '$name · ${mine.length} de $all', '$name · ${mine.length} sur $all'),
                   style: T.body(14.5, pal.muted),
                 ),
                 Text(
-                  worn?.name ?? tr('Belum punya', 'None yet'),
+                  worn?.name ?? tr('Belum punya', 'None yet', 'Aún nada', 'Rien encore'),
                   style: T.body(17, worn == null ? pal.muted : pal.ink, w: FontWeight.w500),
                 ),
                 if (worn != null) Text(worn.from, style: T.body(14, pal.muted)),
@@ -575,7 +575,7 @@ class _Slot extends StatelessWidget {
                 g.equip(slot, mine[(i + 1) % mine.length].id);
                 App.I.changed();
               },
-              label: tr('Ganti $name', 'Change $name'),
+              label: tr('Ganti $name', 'Change $name', 'Cambiar $name', 'Changer $name'),
               child: Container(
                 height: 44,
                 padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -584,7 +584,7 @@ class _Slot extends StatelessWidget {
                   border: Border.all(color: pal.ink, width: 1.5),
                   borderRadius: BorderRadius.circular(3),
                 ),
-                child: Text(tr('Ganti', 'Change'), style: T.body(15.5, pal.ink, w: FontWeight.w700)),
+                child: Text(tr('Ganti', 'Change', 'Cambiar', 'Changer'), style: T.body(15.5, pal.ink, w: FontWeight.w700)),
               ),
             ),
         ],

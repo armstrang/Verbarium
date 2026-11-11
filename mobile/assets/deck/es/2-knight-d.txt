@@ -1,0 +1,460 @@
+# Verbarium — Spanish meanings for 2-knight-d.txt: word|meaning
+magnificent|magnífico
+mainland|tierra firme
+makeup|maquillaje, composición
+mammal|mamífero
+management|gestión, dirección
+mankind|humanidad
+manual|manual
+margin|margen
+marine|marino
+massive|enorme
+master|dominar
+means|medio
+meanwhile|mientras tanto
+mechanic|mecánico
+mechanism|mecanismo
+medal|medalla
+media|medios de comunicación
+medieval|medieval
+medium|mediano
+membership|afiliación
+memorial|monumento conmemorativo
+merchant|comerciante
+mercy|piedad, misericordia
+mere|mero, simple
+merit|mérito
+mess|desorden, lío
+military|militar
+mill|molino, fábrica
+mineral|mineral
+minister|ministro
+ministry|ministerio
+minority|minoría
+miracle|milagro
+miserable|desdichado
+misery|miseria, desdicha
+mislead|engañar, confundir
+mission|misión
+mixture|mezcla
+mobile|móvil
+mode|modo
+model|modelo
+modest|modesto
+moist|húmedo
+moisture|humedad
+molecule|molécula
+monument|monumento
+moral|moral
+moreover|además
+mortgage|hipoteca
+motion|movimiento
+motivate|motivar
+mount|montar, subir
+mourn|llorar (a un muerto)
+multiple|múltiple
+multiply|multiplicar
+municipal|municipal
+mutter|murmurar, refunfuñar
+myth|mito
+naked|desnudo
+narrative|narración
+nasty|desagradable
+native|nativo
+naval|naval
+navigate|navegar, orientarse
+necessity|necesidad
+negotiate|negociar
+nerve|nervio, valor
+nest|nido
+nightmare|pesadilla
+noble|noble
+nominate|nominar, proponer
+nonsense|tonterías
+notify|notificar
+nuclear|nuclear
+nuisance|molestia
+numerous|numerosos
+nutrition|nutrición
+obedient|obediente
+objection|objeción
+obligation|obligación
+oblige|obligar
+observation|observación
+observe|observar
+obstacle|obstáculo
+occasion|ocasión
+occasional|ocasional
+occupation|ocupación, profesión
+odd|raro, impar
+offend|ofender
+offence|delito, ofensa
+operate|manejar, funcionar
+opponent|adversario
+optimistic|optimista
+oral|oral
+orbit|órbita
+orchestra|orquesta
+organic|orgánico
+organism|organismo
+original|original
+ornament|adorno
+orphan|huérfano
+outbreak|brote, estallido
+outline|esquema
+outlook|perspectiva
+output|producción
+outstanding|destacado
+overlook|pasar por alto, dar a
+overseas|en el extranjero
+overtake|adelantar
+overwhelm|abrumar
+oxygen|oxígeno
+pace|ritmo
+pad|almohadilla, bloc
+palm|palma, palmera
+panel|panel, jurado
+panic|pánico
+parade|desfile
+paradise|paraíso
+paragraph|párrafo
+parallel|paralelo
+parliament|parlamento
+partial|parcial
+particle|partícula
+passage|pasaje, pasillo
+passion|pasión
+passive|pasivo
+patent|patente
+patience|paciencia
+patrol|patrullar
+pavement|acera
+peasant|campesino
+peculiar|peculiar, raro
+penalty|pena, multa
+pension|pensión, jubilación
+performance|actuación, rendimiento
+personality|personalidad
+personnel|personal
+pessimistic|pesimista
+petrol|gasolina
+philosophy|filosofía
+phrase|frase, expresión
+physician|médico
+pierce|perforar
+pill|pastilla
+pioneer|pionero
+pitch|campo, tono
+plot|trama, parcela
+plunge|zambullirse, desplomarse
+poetry|poesía
+poisonous|venenoso
+pole|poste, polo
+polish|pulir
+political|político
+politician|político
+politics|política
+poll|encuesta
+pollute|contaminar
+portion|porción
+portrait|retrato
+possession|posesión
+postpone|aplazar
+pottery|cerámica
+poverty|pobreza
+practical|práctico
+precaution|precaución
+precious|precioso, valioso
+preference|preferencia
+pregnant|embarazada
+prejudice|prejuicio
+premium|prima
+preparation|preparación
+prescribe|recetar
+presence|presencia
+preserve|conservar
+prey|presa
+priest|sacerdote
+prime|principal
+primitive|primitivo
+principal|principal
+privacy|intimidad, privacidad
+privilege|privilegio
+procedure|procedimiento
+profession|profesión
+prompt|rápido, puntual
+proof|prueba
+prosecute|procesar
+prosper|prosperar
+protein|proteína
+protest|protesta
+province|provincia
+provoke|provocar
+psychology|psicología
+publicity|publicidad
+punctual|puntual
+purchase|comprar
+pursuit|búsqueda, persecución
+qualify|cumplir los requisitos
+quarrel|riña
+quote|citar
+racial|racial
+radiation|radiación
+rage|furia
+raid|incursión, redada
+rank|rango
+ratio|proporción
+ray|rayo
+reaction|reacción
+readily|fácilmente, de buena gana
+realistic|realista
+reality|realidad
+rear|trasero
+reasonable|razonable
+rebel|rebelde
+rebuild|reconstruir
+recall|recordar
+reception|recepción
+recession|recesión
+reckon|creer, calcular
+recommend|recomendar
+recreation|recreo, ocio
+recruit|reclutar
+refer|referirse
+reference|referencia
+refine|refinar
+refresh|refrescar
+refugee|refugiado
+refund|reembolso
+regard|considerar
+regarding|en cuanto a
+regardless|sin importar
+regime|régimen
+register|registrarse
+regulation|norma, reglamento
+rehearse|ensayar
+reign|reinado
+relation|relación
+relative|pariente
+relief|alivio, ayuda
+relieve|aliviar
+religion|religión
+religious|religioso
+remark|comentario
+remarkable|notable
+remote|remoto, aislado
+renew|renovar
+repay|devolver (dinero)
+representative|representante
+republic|república
+resident|residente
+resign|dimitir
+resist|resistir
+resolve|resolver
+resort|centro turístico
+responsibility|responsabilidad
+retail|venta al por menor
+retire|jubilarse
+retreat|retirarse
+revenge|venganza
+review|reseña, revisión
+revolution|revolución
+rhythm|ritmo
+rid|librar (de)
+ridiculous|ridículo
+rival|rival
+roar|rugir
+romantic|romántico
+rotate|girar, rotar
+routine|rutina
+rumour|rumor
+sacred|sagrado
+sacrifice|sacrificio
+sake|por (for the sake of)
+sample|muestra
+sanction|sanción
+satellite|satélite
+satisfaction|satisfacción
+scandal|escándalo
+scatter|esparcir
+scheme|plan, programa
+scholar|erudito
+scientific|científico
+scratch|rascar, arañar
+sculpture|escultura
+section|sección
+security|seguridad
+seize|apoderarse de, confiscar
+senior|superior, mayor
+sensation|sensación
+sensitive|sensible
+sequel|secuela, continuación
+series|serie
+session|sesión
+settle|establecerse, resolver
+severe|grave, severo
+shelter|refugio
+shortage|escasez
+shrink|encogerse
+sibling|hermano
+sigh|suspirar
+signature|firma
+sincere|sincero
+skeleton|esqueleto
+sketch|bosquejo
+slave|esclavo
+slope|pendiente
+soak|remojar
+solar|solar
+solution|solución
+sorrow|pena, tristeza
+spacious|espacioso
+span|lapso, extensión
+species|especie
+spectacular|espectacular
+split|partir, dividir
+sponsor|patrocinador
+squeeze|apretar, exprimir
+staff|personal
+starve|morir de hambre
+statement|declaración
+statistic|estadística
+statue|estatua
+status|estatus, condición
+stimulus|estímulo
+stock|existencias, acciones
+strain|tensión
+stubborn|terco
+submit|entregar, presentar
+substance|sustancia
+suburb|barrio de las afueras
+sue|demandar
+suicide|suicidio
+superior|superior
+supervise|supervisar
+supplement|suplemento
+surgeon|cirujano
+surgery|cirugía
+surrender|rendirse
+suspect|sospechar
+suspicion|sospecha
+swear|jurar, decir palabrotas
+sweat|sudor
+swell|hincharse
+swift|rápido
+sword|espada
+sympathy|compasión
+symptom|síntoma
+tackle|abordar
+tap|grifo
+technical|técnico
+technique|técnica
+temper|temperamento, genio
+temple|templo
+tempt|tentar
+tenant|inquilino
+tendency|tendencia
+tender|tierno
+territory|territorio
+terror|terror
+testify|testificar
+therapy|terapia
+thorough|minucioso
+threaten|amenazar
+thrill|emoción
+thrive|prosperar
+throne|trono
+tide|marea
+timber|madera
+tissue|tejido, pañuelo
+tolerance|tolerancia
+tomb|tumba
+tone|tono
+topic|tema
+torture|tortura
+tough|duro, resistente
+tournament|torneo
+toxic|tóxico
+track|huella, pista
+traditional|tradicional
+tragedy|tragedia
+trail|sendero, rastro
+trait|rasgo
+transaction|transacción
+transition|transición
+transmit|transmitir
+transparent|transparente
+trap|trampa
+treasure|tesoro
+treatment|tratamiento
+treaty|tratado
+tremble|temblar
+tremendous|tremendo
+trial|juicio, prueba
+tribe|tribu
+tribute|homenaje
+trick|truco
+triumph|triunfo
+troop|tropa
+tropical|tropical
+tunnel|túnel
+tutor|profesor particular
+undertaking|empresa, tarea
+unemployed|desempleado
+union|sindicato, unión
+unite|unir
+universe|universo
+upper|superior
+upright|erguido
+utter|total, absoluto
+vacant|vacío, libre
+vaccine|vacuna
+vain|vano, vanidoso
+van|furgoneta
+vanish|desvanecerse
+vast|vasto
+venture|empresa arriesgada
+venue|lugar (de un evento)
+verse|verso, estrofa
+vessel|buque, recipiente
+veteran|veterano
+via|a través de, por
+vice|vicio
+victim|víctima
+victory|victoria
+violence|violencia
+violent|violento
+virtue|virtud
+virus|virus
+vision|visión, vista
+visual|visual
+vivid|vívido
+vocabulary|vocabulario
+volcano|volcán
+volume|volumen, tomo
+voyage|travesía
+wagon|carro, vagón
+warehouse|almacén
+warrior|guerrero
+weave|tejer
+weed|mala hierba
+welfare|bienestar
+whereas|mientras que
+wicked|malvado
+widow|viuda
+wilderness|naturaleza salvaje
+wildlife|fauna
+willing|dispuesto
+wipe|limpiar, secar
+wisdom|sabiduría
+withstand|resistir
+witness|testigo
+workshop|taller
+worship|adorar
+worthwhile|que vale la pena
+wreck|restos, naufragio
+wrist|muñeca
+yawn|bostezar
+yell|gritar
+youngster|joven
+zeal|celo, fervor

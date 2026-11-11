@@ -1,0 +1,190 @@
+# Verbarium — Spanish meanings for 1-squire-b.txt: word|meaning
+accident|accidente
+act|actuar
+action|acción
+active|activo
+actual|real, verdadero
+add|añadir
+address|dirección
+adult|adulto
+adventure|aventura
+advertise|anunciar, hacer publicidad
+afraid|asustado, con miedo
+age|edad
+agency|agencia
+agree|estar de acuerdo
+ahead|delante
+air|aire
+airport|aeropuerto
+alarm|alarma
+alive|vivo
+alone|solo
+aloud|en voz alta
+although|aunque
+amazing|asombroso
+ambulance|ambulancia
+among|entre
+angry|enfadado
+animal|animal
+annoy|molestar, fastidiar
+answer|responder
+anxious|ansioso, preocupado
+apartment|apartamento, piso
+apologize|pedir perdón
+appear|aparecer, parecer
+appearance|aspecto, apariencia
+appointment|cita
+area|zona, área
+argument|discusión, argumento
+army|ejército
+arrive|llegar
+article|artículo
+artist|artista
+ashamed|avergonzado
+asleep|dormido
+athlete|atleta
+attack|atacar
+attention|atención
+attractive|atractivo
+audience|público
+author|autor
+autumn|otoño
+awake|despierto
+award|premio
+awful|horrible, terrible
+baggage|equipaje
+bake|hornear
+bank|banco
+bargain|ganga
+basic|básico
+basket|cesta
+battery|batería, pila
+battle|batalla
+beach|playa
+bear|soportar, aguantar
+beat|vencer, golpear
+beauty|belleza
+behind|detrás de
+believe|creer
+belong|pertenecer
+below|debajo de
+bend|doblar, inclinarse
+beside|al lado de
+bill|factura, cuenta
+birth|nacimiento
+bite|morder
+bitter|amargo
+blame|culpar
+blanket|manta
+bleed|sangrar
+blind|ciego
+block|bloquear
+blood|sangre
+blow|soplar
+board|tablero, tabla
+boil|hervir
+bomb|bomba
+bone|hueso
+border|frontera
+bored|aburrido
+boring|aburrido, pesado
+boss|jefe
+bother|molestar
+bottom|fondo, parte de abajo
+brain|cerebro
+branch|rama, sucursal
+brave|valiente
+break|romper
+breath|aliento, respiración
+breathe|respirar
+bridge|puente
+bright|brillante, listo
+bring|traer
+broad|ancho, amplio
+build|construir
+burn|quemar, arder
+bury|enterrar
+business|negocio, empresa
+busy|ocupado
+calm|tranquilo, sereno
+camera|cámara
+camp|campamento
+cancel|cancelar
+candidate|candidato
+capital|capital
+captain|capitán
+care|importar, preocuparse
+careful|cuidadoso
+careless|descuidado
+carry|llevar, cargar
+case|caso
+cash|dinero en efectivo
+castle|castillo
+catch|atrapar
+celebrate|celebrar
+central|central
+century|siglo
+ceremony|ceremonia
+certain|seguro, cierto
+chain|cadena
+chance|oportunidad, posibilidad
+change|cambiar
+charge|cobrar
+cheap|barato
+cheat|hacer trampa, engañar
+check|comprobar, revisar
+cheerful|alegre
+chemical|sustancia química
+chief|principal
+childhood|infancia
+choose|elegir
+citizen|ciudadano
+clear|claro
+clever|listo, inteligente
+climate|clima
+climb|escalar, subir
+close|cerrar
+cloth|tela
+clothes|ropa
+cloud|nube
+coach|entrenador
+coast|costa
+coin|moneda
+collection|colección
+college|universidad, facultad
+colour|color
+comfortable|cómodo
+company|empresa
+competition|competencia, concurso
+computer|ordenador, computadora
+concert|concierto
+conversation|conversación
+cook|cocinar
+cool|fresco
+copy|copiar
+corner|esquina, rincón
+cost|costar
+cotton|algodón
+count|contar
+country|país
+countryside|campo
+couple|pareja
+courage|valor, coraje
+course|curso, asignatura
+court|tribunal
+cover|cubrir
+crash|chocar, estrellarse
+crazy|loco
+cream|crema, nata
+creature|criatura
+crop|cosecha, cultivo
+cross|cruzar
+cruel|cruel
+cry|llorar
+cup|taza
+cure|cura, remedio
+curious|curioso
+current|actual
+custom|costumbre
+cut|cortar
+cycle|ir en bicicleta

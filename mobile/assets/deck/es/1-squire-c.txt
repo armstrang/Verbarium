@@ -1,0 +1,239 @@
+# Verbarium — Spanish meanings for 1-squire-c.txt: word|meaning
+daily|diario
+danger|peligro
+dangerous|peligroso
+dark|oscuro
+date|fecha
+dead|muerto
+deaf|sordo
+dear|querido, caro
+death|muerte
+debt|deuda
+decision|decisión
+deep|profundo
+defend|defender
+delay|retraso
+delicious|delicioso
+department|departamento
+depth|profundidad
+desert|desierto
+desk|escritorio
+dictionary|diccionario
+die|morir
+different|diferente
+difficult|difícil
+dig|cavar
+dinner|cena
+direct|directo
+direction|dirección
+dirty|sucio
+disagree|no estar de acuerdo
+disappear|desaparecer
+disappointed|decepcionado
+discount|descuento
+dish|plato
+dislike|no gustar, tener aversión
+distant|lejano
+disturb|molestar
+dive|bucear, zambullirse
+doubtful|dudoso
+downstairs|abajo, en el piso de abajo
+dozen|docena
+drag|arrastrar
+draw|dibujar
+dream|sueño
+dress|vestirse
+drink|beber
+drive|conducir
+drop|dejar caer, bajar
+drown|ahogarse
+drug|medicamento, droga
+dry|seco
+dull|aburrido, apagado
+during|durante
+dust|polvo
+duty|deber, obligación
+eager|ansioso, deseoso
+early|temprano
+earth|tierra
+earthquake|terremoto
+east|este
+easy|fácil
+edge|borde
+educate|educar
+elderly|anciano, mayor
+elect|elegir (en elecciones)
+electric|eléctrico
+electricity|electricidad
+else|más, otro
+embarrassed|avergonzado, cohibido
+emergency|emergencia
+emotion|emoción
+empty|vacío
+end|terminar
+enemy|enemigo
+engine|motor
+engineer|ingeniero
+enjoy|disfrutar
+enough|suficiente, bastante
+enter|entrar
+entrance|entrada
+envelope|sobre
+error|error
+especially|especialmente
+even|incluso
+evening|tarde, noche
+ever|alguna vez
+everywhere|en todas partes
+evil|malvado
+exam|examen
+excellent|excelente
+except|excepto
+excited|emocionado
+excuse|excusa
+exercise|ejercicio
+exist|existir
+exit|salida
+expensive|caro
+explode|explotar
+extra|adicional, extra
+fact|hecho
+factory|fábrica
+fair|justo
+faith|fe, confianza
+false|falso
+famous|famoso
+far|lejos
+farm|granja
+fashion|moda
+fasten|abrochar, sujetar
+fat|grasa
+fault|culpa, falta
+favour|favor
+favourite|favorito
+fear|miedo
+feed|alimentar, dar de comer
+feel|sentir
+female|femenino, hembra
+fence|valla
+festival|festival
+fever|fiebre
+few|pocos
+field|campo
+fight|luchar, pelear
+figure|cifra, figura
+fill|llenar
+finally|por fin, finalmente
+find|encontrar
+fine|bien, fino
+finger|dedo
+finish|terminar
+fire|fuego, incendio
+firm|firme
+fit|quedar bien, encajar
+fix|arreglar
+flag|bandera
+flat|plano
+flavour|sabor
+flight|vuelo
+float|flotar
+floor|suelo
+flour|harina
+flow|fluir
+fly|volar
+fog|niebla
+fold|doblar
+follow|seguir
+fond|encariñado, aficionado
+fool|tonto
+forbid|prohibir
+force|fuerza
+forecast|pronóstico
+forget|olvidar
+forgive|perdonar
+fork|tenedor
+form|formulario, forma
+formal|formal
+fortunate|afortunado
+forward|hacia delante
+frame|marco
+free|libre, gratis
+freedom|libertad
+freeze|congelarse
+fresh|fresco
+friendly|amable
+frighten|asustar
+front|parte delantera
+fruit|fruta
+full|lleno
+fun|diversión
+funny|gracioso
+fur|pelaje
+furniture|muebles
+further|más lejos, más allá
+game|juego
+gap|hueco, espacio
+garage|garaje, taller
+garden|jardín
+gate|puerta, portón
+gather|reunir, reunirse
+generous|generoso
+gentle|suave, amable
+gift|regalo
+glad|contento
+glass|vidrio, vaso
+glove|guante
+goods|mercancías, bienes
+gradually|poco a poco
+grain|grano
+grass|hierba
+grateful|agradecido
+great|genial, grande
+greet|saludar
+ground|suelo, tierra
+group|grupo
+grow|crecer, cultivar
+guard|guardia
+guest|invitado
+guide|guía
+guilty|culpable
+habitat|hábitat
+half|mitad
+hall|sala, salón
+hammer|martillo
+handle|manejar, ocuparse de
+hang|colgar
+happen|pasar, ocurrir
+harbour|puerto
+hard|duro, difícil
+hardly|apenas
+hate|odiar
+headache|dolor de cabeza
+heal|curar, sanar
+healthy|sano
+heart|corazón
+heat|calor
+heavy|pesado
+height|altura
+helpful|útil, servicial
+hero|héroe
+hide|esconder, esconderse
+hill|colina
+hire|contratar, alquilar
+history|historia
+hit|golpear
+hobby|afición
+hold|sostener
+hole|agujero
+holiday|vacaciones
+honest|honrado, sincero
+hope|esperar
+horrible|horrible
+hospital|hospital
+host|anfitrión
+huge|enorme
+human|humano
+hungry|hambriento
+hunt|cazar
+hurry|darse prisa
+hurt|herir, doler

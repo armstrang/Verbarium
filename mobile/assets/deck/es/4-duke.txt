@@ -1,0 +1,146 @@
+# Verbarium — Spanish meanings for 4-duke.txt: word|meaning
+abolish|abolir
+abstain|abstenerse
+acute|agudo
+adhere|adherirse, cumplir
+adjacent|adyacente
+advent|llegada
+aesthetic|estético
+affluent|acomodado
+alleviate|aliviar
+allude|aludir
+altruistic|altruista
+ample|amplio, suficiente
+anomaly|anomalía
+apprehend|detener, comprender
+aptitude|aptitud
+ascertain|averiguar
+assimilate|asimilar
+augment|aumentar
+austere|austero
+benevolent|benévolo
+bolster|reforzar
+catalyst|catalizador
+cohesion|cohesión
+commodity|materia prima, mercancía
+compel|obligar
+complacent|complaciente, confiado
+comprehend|comprender
+concede|conceder
+condone|consentir, tolerar
+conducive|propicio
+conjecture|conjetura
+conspicuous|llamativo
+contemplate|contemplar, considerar
+contend|sostener, competir
+contingent|supeditado
+converge|converger
+counteract|contrarrestar
+culminate|culminar
+curtail|recortar
+daunting|desalentador
+deduce|deducir
+deem|considerar
+deliberate|deliberado
+delineate|delinear
+demise|fallecimiento, fin
+detrimental|perjudicial
+dilemma|dilema
+discern|discernir
+discrepancy|discrepancia
+disparity|disparidad
+disseminate|difundir
+divergent|divergente
+dwindle|menguar
+elicit|provocar, obtener
+elusive|esquivo
+embody|encarnar
+eminent|eminente
+encompass|abarcar
+endure|soportar, perdurar
+enigma|enigma
+entail|conllevar
+envisage|prever, imaginar
+equitable|equitativo
+eradicate|erradicar
+erratic|errático
+exacerbate|exacerbar
+exemplify|ejemplificar
+exert|ejercer
+expedite|agilizar
+extrapolate|extrapolar
+fallacy|falacia
+forge|forjar
+foster|fomentar
+fragile|frágil
+futile|inútil
+hamper|obstaculizar
+hinder|dificultar
+impartial|imparcial
+impede|impedir
+imperative|imperativo
+impetus|impulso
+inadvertent|involuntario
+incidence|incidencia
+indispensable|indispensable
+ingenious|ingenioso
+innate|innato
+instigate|instigar
+intricate|intrincado
+jeopardize|poner en peligro
+lucid|lúcido
+lucrative|lucrativo
+meticulous|meticuloso
+mitigate|mitigar
+negligible|insignificante
+notable|notable
+nurture|criar, fomentar
+obscure|oscuro, poco conocido
+omit|omitir
+onset|comienzo
+opt|optar
+outweigh|pesar más que
+paradox|paradoja
+perpetuate|perpetuar
+pertinent|pertinente
+pervasive|omnipresente
+pivotal|crucial
+pragmatic|pragmático
+precarious|precario
+preclude|impedir
+premise|premisa
+prestige|prestigio
+pristine|prístino
+proliferate|proliferar
+prudent|prudente
+rectify|rectificar
+redundant|superfluo
+refute|refutar
+relinquish|renunciar a
+remedy|remedio
+repercussion|repercusión
+resent|resentirse de
+robust|robusto
+salient|sobresaliente
+saturate|saturar
+scrutinize|escudriñar
+stagnant|estancado
+stringent|riguroso
+subtle|sutil
+succumb|sucumbir
+superficial|superficial
+supersede|reemplazar
+susceptible|susceptible, propenso
+tedious|tedioso
+tentative|provisional, tímido
+trivial|trivial
+turbulent|turbulento
+unanimous|unánime
+underscore|subrayar
+unveil|presentar, desvelar
+uphold|defender, sostener
+vague|vago
+vigorous|vigoroso
+volatile|volátil
+warrant|justificar
+wary|receloso

@@ -1,0 +1,197 @@
+# Verbarium — Spanish meanings for 3-baron.txt: word|meaning
+abundant|abundante
+accelerate|acelerar
+accessible|accesible
+accommodate|alojar, adaptarse a
+accountable|responsable
+acknowledge|reconocer
+adverse|adverso
+aggregate|total, conjunto
+allocate|asignar
+ambiguous|ambiguo
+amend|enmendar
+analogy|analogía
+arbitrary|arbitrario
+articulate|expresar con claridad
+assert|afirmar
+attribute|atribuir
+autonomy|autonomía
+beneficial|beneficioso
+coherent|coherente
+coincide|coincidir
+collaborate|colaborar
+commence|comenzar
+compatible|compatible
+compensate|compensar
+compile|recopilar
+complement|complementar
+comply|cumplir
+comprehensive|exhaustivo, completo
+comprise|comprender, constar de
+conceive|concebir
+concurrent|simultáneo
+confine|limitar
+consensus|consenso
+constitute|constituir
+constrain|restringir
+contemporary|contemporáneo
+contradict|contradecir
+controversy|controversia
+convene|convocar, reunirse
+conventional|convencional
+correlate|correlacionar
+credible|creíble
+criterion|criterio
+cumulative|acumulativo
+deficit|déficit
+denote|denotar
+depict|representar
+deplete|agotar
+deteriorate|deteriorarse
+deviate|desviarse
+differentiate|diferenciar
+diminish|disminuir
+discrete|discreto, separado
+discriminate|discriminar, distinguir
+disperse|dispersar
+displace|desplazar
+dispose|deshacerse de
+disrupt|perturbar
+distort|distorsionar
+diversity|diversidad
+doctrine|doctrina
+dominant|dominante
+duration|duración
+elaborate|explicar en detalle
+eligible|que reúne los requisitos
+embrace|acoger, abrazar
+empirical|empírico
+endeavor|esfuerzo, empeño
+endorse|respaldar
+enforce|hacer cumplir
+entity|entidad
+equivalent|equivalente
+erode|erosionar
+ethical|ético
+evident|evidente
+exaggerate|exagerar
+explicit|explícito
+facilitate|facilitar
+feasible|factible
+fluctuate|fluctuar
+formulate|formular
+forthcoming|próximo
+hierarchy|jerarquía
+hypothesis|hipótesis
+identical|idéntico
+ideology|ideología
+immense|inmenso
+implement|implementar
+implicit|implícito
+incentive|incentivo
+incline|inclinarse
+incorporate|incorporar
+indigenous|indígena, autóctono
+induce|inducir
+infer|inferir
+inherent|inherente
+inhibit|inhibir
+initiate|iniciar
+integral|integral, esencial
+integrate|integrar
+integrity|integridad
+intervene|intervenir
+intrinsic|intrínseco
+invoke|invocar
+legislation|legislación
+legitimate|legítimo
+likewise|asimismo
+mandate|mandato
+manipulate|manipular
+marginal|marginal
+mediate|mediar
+merge|fusionarse
+methodology|metodología
+minimize|minimizar
+moderate|moderado
+momentum|impulso
+nevertheless|sin embargo
+norm|norma
+notion|noción
+obsolete|obsoleto
+offset|compensar
+ongoing|en curso
+orient|orientar
+paradigm|paradigma
+parameter|parámetro
+persist|persistir
+plausible|plausible
+pose|plantear (un riesgo)
+practitioner|profesional
+precede|preceder
+predominant|predominante
+preliminary|preliminar
+presume|presumir, suponer
+prevail|prevalecer
+profound|profundo
+prohibit|prohibir
+prominent|destacado
+prone|propenso
+proximity|proximidad
+qualitative|cualitativo
+quantitative|cuantitativo
+radical|radical
+random|aleatorio
+rational|racional
+reinforce|reforzar
+reluctant|reacio
+render|hacer, volver
+replicate|replicar
+resemble|parecerse a
+residual|residual
+resilient|resiliente
+restrain|contener
+rigid|rígido
+rigorous|riguroso
+scarce|escaso
+scenario|escenario, situación
+scope|alcance
+scrutiny|escrutinio
+simulate|simular
+skeptical|escéptico
+sole|único
+sophisticated|sofisticado
+spontaneous|espontáneo
+stimulate|estimular
+straightforward|sencillo, directo
+subordinate|subordinado
+subsequent|posterior
+subsidy|subsidio
+substantial|considerable
+successive|sucesivo
+suppress|reprimir, suprimir
+surplus|excedente
+suspend|suspender
+sustainable|sostenible
+tangible|tangible
+terminate|terminar
+thereby|de ese modo
+threshold|umbral
+trigger|desencadenar
+undergo|someterse a, sufrir
+underlie|subyacer a
+undermine|socavar
+undertake|emprender
+uniform|uniforme
+unprecedented|sin precedentes
+utilize|utilizar
+valid|válido
+velocity|velocidad
+verify|verificar
+versatile|versátil
+viable|viable
+violate|violar
+virtually|prácticamente
+vulnerable|vulnerable
+whereby|por el cual
+yield|producir, rendir

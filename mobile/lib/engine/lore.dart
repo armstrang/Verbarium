@@ -41,7 +41,7 @@ class LoreBook {
     "Di Verbarium, segala sesuatu tetap ada selama namanya diingat. Kabut Lupa memudarkan apa pun yang tak lagi disebut, "
         "dan Kronik Agung mencatat setiap kata yang kamu kuasai.",
     "In Verbarium, everything lasts as long as its name is remembered. The Fog of Forgetting fades whatever is no longer "
-        "spoken, and the Great Chronicle records every word you hold.",
+        "spoken, and the Great Chronicle records every word you hold.", 'En Verbarium, todo perdura mientras se recuerde su nombre. La Niebla del Olvido borra lo que ya nadie nombra, y la Gran Crónica registra cada palabra que dominas.', 'À Verbarium, tout dure tant que son nom est retenu. Le Brouillard de l’Oubli efface ce que plus personne ne nomme, et la Grande Chronique consigne chaque mot que tu maîtrises.',
   );
 
   /// the six titles, Peasant to King, each with its realm

@@ -1,0 +1,466 @@
+# Verbarium — Spanish meanings for 3-baron-e.txt: word|meaning
+magistrate|magistrado
+magnet|imán
+magnify|ampliar
+majestic|majestuoso
+malady|mal, enfermedad
+malicious|malicioso
+malnutrition|desnutrición
+manifesto|manifiesto
+manoeuvre|maniobra
+mansion|mansión
+marvel|maravillarse
+masculine|masculino
+masterpiece|obra maestra
+maternal|maternal, materno
+matrix|matriz
+maxim|máxima
+meander|serpentear
+meddle|entrometerse
+medication|medicación
+meditate|meditar
+melancholy|melancolía
+memoir|memorias
+memorable|memorable
+memorandum|memorando
+menial|servil, de baja categoría
+mercenary|mercenario
+merger|fusión
+meteor|meteoro
+metropolis|metrópoli
+microbe|microbio
+midst|medio
+migrant|migrante
+militant|militante
+mingle|mezclarse
+miniature|en miniatura
+minimal|mínimo
+miraculous|milagroso
+mischief|travesura
+misfortune|desgracia
+misguided|equivocado
+mishap|percance
+misinterpret|malinterpretar
+misplace|extraviar
+mistrust|desconfianza
+misuse|mal uso
+moan|gemir, quejarse
+mobility|movilidad
+mock|burlarse de
+moderation|moderación
+modernize|modernizar
+modesty|modestia
+modification|modificación
+momentary|momentáneo
+monarch|monarca
+monarchy|monarquía
+monastery|monasterio
+monetary|monetario
+monotonous|monótono
+monsoon|monzón
+monstrous|monstruoso
+monumental|monumental
+morality|moralidad
+morbid|morboso
+mortal|mortal
+mosaic|mosaico
+motivation|motivación
+motto|lema
+mound|montículo
+mourning|luto
+muddle|lío
+mural|mural
+murky|turbio
+murmur|murmurar
+muse|reflexionar
+mutiny|motín
+mystical|místico
+mythology|mitología
+naive|ingenuo
+narcotic|narcótico
+narrator|narrador
+nationalism|nacionalismo
+nationwide|a escala nacional
+nausea|náuseas
+navigation|navegación
+necessitate|requerir
+needy|necesitado
+negate|anular
+neglect|descuidar
+negotiation|negociación
+neighbouring|vecino
+neurotic|neurótico
+neutrality|neutralidad
+newcomer|recién llegado
+nimble|ágil
+nobility|nobleza
+nocturnal|nocturno
+nomad|nómada
+nomination|nominación
+nostalgia|nostalgia
+notation|notación
+noteworthy|notable
+notwithstanding|a pesar de
+nourish|nutrir
+nucleus|núcleo
+numb|entumecido
+numerical|numérico
+nursery|guardería, vivero
+oath|juramento
+obedience|obediencia
+obese|obeso
+obituary|necrológica
+objectivity|objetividad
+obscene|obsceno
+obscurity|oscuridad, anonimato
+observatory|observatorio
+obsess|obsesionar
+obsession|obsesión
+occupational|laboral
+offspring|descendencia
+olfactory|olfativo
+omen|presagio
+omission|omisión
+onslaught|embestida
+operational|operativo
+opportune|oportuno
+oppress|oprimir
+oppression|opresión
+optical|óptico
+optimum|óptimo
+oration|discurso solemne
+orchard|huerto
+ordeal|calvario
+ordinance|ordenanza
+ore|mineral
+orientation|orientación
+originate|originarse
+ornate|recargado, ornamentado
+outburst|arrebato
+outcast|marginado
+outcry|protesta
+outdated|anticuado
+outfit|conjunto, atuendo
+outgoing|extrovertido, saliente
+outlaw|prohibir
+outlet|salida, punto de venta
+outnumber|superar en número
+outpost|puesto avanzado
+outrageous|escandaloso
+outspoken|franco
+outward|externo
+ovation|ovación
+overboard|por la borda
+overcast|nublado
+overdue|atrasado
+overflow|desbordarse
+overhead|por encima
+overhear|oír por casualidad
+overload|sobrecargar
+overpower|dominar
+override|anular, prevalecer
+overrun|invadir, exceder
+oversight|descuido, supervisión
+overthrow|derrocar
+overture|obertura, propuesta
+overturn|volcar, anular
+overview|visión general
+pacify|pacificar
+pageant|desfile, espectáculo
+painstaking|minucioso
+palatable|sabroso, aceptable
+pamphlet|folleto
+pandemic|pandemia
+panorama|panorama
+parable|parábola
+paralyse|paralizar
+parasite|parásito
+parchment|pergamino
+parish|parroquia
+parody|parodia
+partition|tabique, partición
+passionate|apasionado
+pastoral|pastoral, rural
+pasture|pasto
+paternal|paternal, paterno
+pathetic|patético
+patriot|patriota
+patriotic|patriótico
+patronage|patrocinio
+payroll|nómina
+pebble|guijarro
+pedigree|pedigrí
+penal|penal
+pendulum|péndulo
+peninsula|península
+pensive|pensativo
+perceptive|perspicaz
+perch|posarse
+perennial|perenne
+peril|peligro
+perimeter|perímetro
+periodic|periódico
+perish|perecer
+perjury|perjurio
+permissible|permisible
+perplex|desconcertar
+persecute|perseguir
+perseverance|perseverancia
+persevere|perseverar
+persona|imagen pública
+persuasion|persuasión
+persuasive|persuasivo
+pertain|concernir
+pervade|impregnar
+pessimism|pesimismo
+pest|plaga
+pesticide|pesticida
+petty|mezquino, nimio
+pharmacy|farmacia
+phenomenal|fenomenal
+philanthropist|filántropo
+phobia|fobia
+picturesque|pintoresco
+pilgrim|peregrino
+pilgrimage|peregrinación
+pillar|pilar
+pinnacle|cumbre
+pious|piadoso
+piracy|piratería
+pivot|eje
+plague|plaga, peste
+plaintiff|demandante
+plea|súplica
+plead|suplicar, declararse
+pledge|prometer
+plentiful|abundante
+pliable|flexible
+plough|arar
+pluck|arrancar, desplumar
+plumb|sondear
+plunder|saquear
+plural|plural
+poise|aplomo
+polar|polar
+pollinate|polinizar
+pomp|pompa
+populate|poblar
+populous|populoso
+porous|poroso
+portable|portátil
+posterity|posteridad
+posture|postura
+potency|potencia
+pounce|abalanzarse
+prairie|pradera
+preach|predicar
+preamble|preámbulo
+precinct|recinto, distrito
+predator|depredador
+predictable|previsible
+predominate|predominar
+preface|prefacio
+preferable|preferible
+prehistoric|prehistórico
+premiere|estreno
+preoccupy|preocupar
+prescription|receta médica
+presentable|presentable
+preside|presidir
+presumably|presumiblemente
+pretence|fingimiento
+prevalence|prevalencia
+preventive|preventivo
+primarily|principalmente
+primate|primate
+probation|libertad condicional, prueba
+procession|procesión
+proclamation|proclamación
+procrastinate|postergar
+prodigal|pródigo
+productive|productivo
+productivity|productividad
+profess|profesar, declarar
+proficient|competente
+profile|perfil
+profitable|rentable
+progression|progresión
+progressive|progresista
+prohibition|prohibición
+projection|proyección
+proliferation|proliferación
+prolonged|prolongado
+prominence|prominencia
+promising|prometedor
+promotion|ascenso, promoción
+prop|apuntalar
+propel|impulsar
+prophecy|profecía
+prophet|profeta
+proponent|defensor
+proposition|propuesta, proposición
+proprietor|propietario
+prose|prosa
+prosecution|acusación, enjuiciamiento
+prospective|posible, futuro
+prosperous|próspero
+protagonist|protagonista
+protective|protector
+protrude|sobresalir
+proverb|proverbio
+providence|providencia
+provincial|provincial
+provocation|provocación
+provocative|provocador
+proxy|apoderado
+prudence|prudencia
+prune|podar
+pseudonym|seudónimo
+psychiatric|psiquiátrico
+puberty|pubertad
+publicize|dar publicidad a
+pulp|pulpa
+pulse|pulso
+pungent|acre, penetrante
+punitive|punitivo
+purify|purificar
+purity|pureza
+quaint|pintoresco
+qualification|titulación
+quantify|cuantificar
+quarantine|cuarentena
+quarry|cantera
+query|consulta
+quest|búsqueda
+questionable|cuestionable
+questionnaire|cuestionario
+quiver|temblar
+quotation|cita, presupuesto
+radiant|radiante
+radiate|irradiar
+radius|radio
+ramble|pasear, divagar
+rampage|alboroto violento
+ransom|rescate
+rapture|éxtasis
+rash|precipitado
+ratification|ratificación
+ration|racionar
+rationalize|racionalizar
+rattle|traquetear, desconcertar
+raucous|estridente
+readiness|disposición
+realm|reino, ámbito
+reap|cosechar
+reassurance|tranquilidad
+rebellion|rebelión
+rebound|rebotar, recuperarse
+recapture|recuperar
+receptive|receptivo
+recess|receso, hueco
+recite|recitar
+reckless|imprudente
+reclaim|reclamar, recuperar
+recline|reclinarse
+recollect|recordar
+reconstruct|reconstruir
+recourse|recurso
+recreate|recrear
+rectangle|rectángulo
+recurrence|recurrencia
+redemption|redención
+redevelop|reurbanizar
+redundancy|despido, redundancia
+referendum|referéndum
+refinery|refinería
+reflex|reflejo
+refuge|refugio
+refusal|negativa
+regal|regio
+regenerate|regenerar
+regiment|regimiento
+regress|retroceder
+regrettable|lamentable
+rehearsal|ensayo
+reimbursement|reembolso
+rein|rienda
+rejoice|regocijarse
+relapse|recaída
+relay|transmitir
+relic|reliquia
+relish|disfrutar
+relocate|trasladarse
+reluctance|reticencia
+remainder|resto
+remembrance|recuerdo
+reminder|recordatorio
+remission|remisión
+remittance|remesa
+remuneration|remuneración
+renaissance|renacimiento
+rendition|interpretación
+renovate|renovar
+repatriate|repatriar
+repel|repeler
+repentance|arrepentimiento
+repetitive|repetitivo
+replica|réplica
+repression|represión
+reprieve|indulto, respiro
+reprisal|represalia
+reproach|reproche
+reproduce|reproducirse
+reptile|reptil
+repulsive|repulsivo
+requisite|necesario
+resemblance|parecido
+resentment|resentimiento
+reservation|reserva
+residue|residuo
+resignation|dimisión
+resistant|resistente
+resolution|resolución
+resonate|resonar
+resourceful|ingenioso
+respiratory|respiratorio
+respite|respiro
+responsive|receptivo, sensible
+restless|inquieto
+restoration|restauración
+restraint|moderación
+resultant|resultante
+resume|reanudar
+resurgence|resurgimiento
+resurrect|resucitar
+retention|retención
+retort|replicar
+retract|retractarse, retirar
+retribution|castigo, venganza
+retrospective|retrospectivo
+reunion|reencuentro
+revelation|revelación
+reverence|reverencia
+reversal|inversión, revés
+revert|volver
+revision|revisión
+revival|renacimiento
+revoke|revocar
+revolt|revuelta
+revolve|girar
+rhetorical|retórico
+rift|grieta, ruptura
+righteous|justo, recto
+rigidity|rigidez
+rim|borde
+riot|disturbio
+ripple|onda
+ritual|ritual
+rivalry|rivalidad
+rodent|roedor
+rogue|rebelde, deshonesto
+rot|pudrirse
+rotation|rotación
+rubble|escombros
+ruling|fallo
+rupture|ruptura
+rustic|rústico

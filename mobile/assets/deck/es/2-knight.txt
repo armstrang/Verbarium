@@ -1,0 +1,305 @@
+# Verbarium — Spanish meanings for 2-knight.txt: word|meaning
+abandon|abandonar
+absorb|absorber
+abstract|abstracto
+academic|académico
+access|acceso
+accompany|acompañar
+accomplish|lograr, realizar
+account|relato, explicación
+accumulate|acumular
+accuse|acusar
+acquire|adquirir
+adapt|adaptarse
+adequate|adecuado, suficiente
+adjust|ajustar
+admire|admirar
+adopt|adoptar
+advance|avance
+advocate|defender, abogar por
+aggressive|agresivo
+alter|alterar, cambiar
+alternative|alternativa
+ambition|ambición
+analysis|análisis
+annual|anual
+anticipate|prever
+apparent|evidente, aparente
+appeal|atraer, apelar
+approach|enfoque
+appropriate|apropiado
+approve|aprobar
+approximate|aproximado
+aspect|aspecto
+assess|evaluar
+assign|asignar
+assist|ayudar
+associate|asociar
+assume|suponer
+atmosphere|ambiente, atmósfera
+attach|adjuntar, sujetar
+attempt|intento
+attract|atraer
+authority|autoridad
+barrier|barrera
+bias|sesgo, prejuicio
+boundary|límite
+burden|carga
+capable|capaz
+capacity|capacidad
+category|categoría
+cease|cesar
+circumstance|circunstancia
+cite|citar
+civil|civil
+clarify|aclarar
+collapse|derrumbarse
+colleague|colega
+combine|combinar
+comment|comentario
+commit|comprometerse, cometer
+communicate|comunicarse
+community|comunidad
+compete|competir
+complex|complejo
+component|componente
+concentrate|concentrarse
+concept|concepto
+conclude|concluir
+conduct|llevar a cabo
+conference|congreso, conferencia
+conflict|conflicto
+confirm|confirmar
+confront|enfrentarse a
+consequence|consecuencia
+considerable|considerable
+consist|consistir (en)
+constant|constante
+construct|construir
+consult|consultar
+consume|consumir
+contact|contacto
+context|contexto
+contract|contrato
+contrast|contraste
+contribute|contribuir
+convert|convertir
+cooperate|cooperar
+criticize|criticar
+crucial|crucial
+currency|moneda
+decade|década
+decline|declive, descenso
+define|definir
+demonstrate|demostrar
+deny|negar
+derive|derivar, obtener
+deserve|merecer
+despite|a pesar de
+detect|detectar
+determine|determinar
+device|dispositivo
+devote|dedicar
+dimension|dimensión
+disaster|desastre
+display|mostrar, exhibir
+distinct|distinto
+distribute|distribuir
+diverse|diverso
+document|documento
+domestic|nacional, doméstico
+dominate|dominar
+draft|borrador
+efficient|eficiente
+eliminate|eliminar
+emerge|surgir
+emphasis|énfasis
+enable|permitir
+encounter|encontrarse con
+enhance|mejorar
+enormous|enorme
+ensure|asegurar
+entire|entero
+equipment|equipo
+essential|esencial
+establish|establecer, fundar
+estimate|estimar
+ethnic|étnico
+evaluate|evaluar
+eventually|al final
+evolve|evolucionar
+exceed|superar
+exclude|excluir
+exhibit|exponer, mostrar
+expand|ampliar, expandirse
+expert|experto
+exploit|explotar, aprovechar
+explore|explorar
+export|exportar
+expose|exponer
+extend|extender, prolongar
+external|externo
+extreme|extremo
+factor|factor
+flexible|flexible
+formula|fórmula
+foundation|base, cimientos
+framework|marco
+frequent|frecuente
+fundamental|fundamental
+generate|generar
+generation|generación
+genuine|auténtico, sincero
+grant|subvención, beca
+guarantee|garantizar
+guideline|pauta, directriz
+highlight|destacar
+identify|identificar
+illustrate|ilustrar
+image|imagen
+impact|impacto
+imply|implicar, insinuar
+impose|imponer
+impress|impresionar
+incident|incidente
+indicate|indicar
+individual|individuo
+inevitable|inevitable
+initial|inicial
+innovation|innovación
+insight|percepción, comprensión
+inspect|inspeccionar
+instance|ejemplo, caso
+institution|institución
+instruct|instruir, ordenar
+intend|tener la intención
+intense|intenso
+interact|interactuar
+internal|interno
+interpret|interpretar
+invest|invertir
+investigate|investigar
+isolate|aislar
+justify|justificar
+labor|mano de obra, trabajo
+lack|falta, carencia
+launch|lanzar
+lecture|clase, conferencia
+legal|legal
+link|vínculo
+logic|lógica
+maintain|mantener
+major|principal, importante
+majority|mayoría
+manufacture|fabricar
+mature|maduro
+maximum|máximo
+mental|mental
+migrate|migrar
+minimum|mínimo
+minor|menor
+modify|modificar
+monitor|vigilar, supervisar
+motive|motivo
+mutual|mutuo
+negative|negativo
+network|red
+neutral|neutral
+objective|objetivo
+obtain|obtener
+occupy|ocupar
+oppose|oponerse a
+option|opción
+outcome|resultado
+overall|general, global
+overcome|superar
+participate|participar
+partner|socio, pareja
+perceive|percibir
+permanent|permanente
+perspective|perspectiva
+phase|fase
+phenomenon|fenómeno
+physical|físico
+policy|política (medidas)
+potential|potencial
+precise|preciso
+predict|predecir
+pressure|presión
+primary|principal, primario
+principle|principio
+priority|prioridad
+proceed|proseguir
+professional|profesional
+profit|beneficio, ganancia
+promote|promover
+proportion|proporción
+propose|proponer
+prospect|perspectiva, posibilidad
+publish|publicar
+pursue|perseguir, dedicarse a
+range|gama, rango
+rapid|rápido
+rate|tasa, ritmo
+react|reaccionar
+recover|recuperarse
+reflect|reflejar
+reform|reforma
+regulate|regular
+reject|rechazar
+relate|relacionar
+release|liberar, lanzar
+relevant|pertinente
+reliable|fiable
+rely|depender, confiar en
+represent|representar
+reputation|reputación
+resource|recurso
+respond|responder
+restore|restaurar
+restrict|restringir
+retain|conservar, retener
+revenue|ingresos
+reverse|invertir
+revise|revisar, repasar
+rural|rural
+satisfy|satisfacer
+scale|escala
+schedule|horario, calendario
+sector|sector
+secure|seguro
+seek|buscar
+sequence|secuencia
+shift|cambio, turno
+significant|significativo
+site|lugar, sitio
+specific|específico
+stable|estable
+strategy|estrategia
+stress|estrés, presión
+substitute|sustituto
+sufficient|suficiente
+summary|resumen
+survey|encuesta
+sustain|sostener, mantener
+symbol|símbolo
+target|objetivo, meta
+temporary|temporal
+tension|tensión
+theme|tema
+tolerate|tolerar
+trace|rastrear
+transfer|transferir
+transform|transformar
+trend|tendencia
+ultimate|final, máximo
+unique|único
+urban|urbano
+urge|instar
+vary|variar
+vehicle|vehículo
+version|versión
+vital|vital
+voluntary|voluntario
+widespread|generalizado
+withdraw|retirar, retirarse

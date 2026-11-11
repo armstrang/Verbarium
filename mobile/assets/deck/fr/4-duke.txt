@@ -1,0 +1,146 @@
+# Verbarium — French meanings for 4-duke.txt: word|meaning
+abolish|abolir
+abstain|s’abstenir
+acute|aigu
+adhere|adhérer, respecter
+adjacent|adjacent
+advent|avènement
+aesthetic|esthétique
+affluent|aisé
+alleviate|atténuer
+allude|faire allusion
+altruistic|altruiste
+ample|ample, largement suffisant
+anomaly|anomalie
+apprehend|appréhender
+aptitude|aptitude
+ascertain|établir, vérifier
+assimilate|assimiler
+augment|augmenter
+austere|austère
+benevolent|bienveillant
+bolster|renforcer
+catalyst|catalyseur
+cohesion|cohésion
+commodity|marchandise, matière première
+compel|contraindre
+complacent|suffisant, satisfait
+comprehend|comprendre
+concede|concéder
+condone|cautionner, fermer les yeux sur
+conducive|propice
+conjecture|conjecture
+conspicuous|voyant
+contemplate|envisager, contempler
+contend|soutenir, rivaliser
+contingent|subordonné à
+converge|converger
+counteract|contrecarrer
+culminate|culminer
+curtail|restreindre
+daunting|intimidant
+deduce|déduire
+deem|juger
+deliberate|délibéré
+delineate|délimiter, décrire
+demise|disparition, fin
+detrimental|préjudiciable
+dilemma|dilemme
+discern|discerner
+discrepancy|écart
+disparity|disparité
+disseminate|diffuser
+divergent|divergent
+dwindle|diminuer
+elicit|susciter, obtenir
+elusive|insaisissable
+embody|incarner
+eminent|éminent
+encompass|englober
+endure|endurer, durer
+enigma|énigme
+entail|entraîner, impliquer
+envisage|envisager
+equitable|équitable
+eradicate|éradiquer
+erratic|irrégulier
+exacerbate|exacerber
+exemplify|illustrer
+exert|exercer
+expedite|accélérer
+extrapolate|extrapoler
+fallacy|sophisme, idée fausse
+forge|forger
+foster|favoriser
+fragile|fragile
+futile|futile, vain
+hamper|entraver
+hinder|gêner, entraver
+impartial|impartial
+impede|entraver
+imperative|impératif
+impetus|élan
+inadvertent|involontaire
+incidence|incidence, fréquence
+indispensable|indispensable
+ingenious|ingénieux
+innate|inné
+instigate|provoquer, lancer
+intricate|complexe
+jeopardize|compromettre
+lucid|lucide
+lucrative|lucratif
+meticulous|méticuleux
+mitigate|atténuer
+negligible|négligeable
+notable|notable
+nurture|nourrir, entretenir
+obscure|obscur, peu connu
+omit|omettre
+onset|début, apparition
+opt|opter
+outweigh|l’emporter sur
+paradox|paradoxe
+perpetuate|perpétuer
+pertinent|pertinent
+pervasive|omniprésent
+pivotal|crucial
+pragmatic|pragmatique
+precarious|précaire
+preclude|exclure, empêcher
+premise|prémisse
+prestige|prestige
+pristine|immaculé, intact
+proliferate|proliférer
+prudent|prudent
+rectify|rectifier
+redundant|superflu, redondant
+refute|réfuter
+relinquish|renoncer à
+remedy|remède
+repercussion|répercussion
+resent|en vouloir à
+robust|robuste
+salient|saillant
+saturate|saturer
+scrutinize|scruter
+stagnant|stagnant
+stringent|rigoureux
+subtle|subtil
+succumb|succomber
+superficial|superficiel
+supersede|remplacer
+susceptible|sensible, sujet à
+tedious|fastidieux
+tentative|provisoire, hésitant
+trivial|insignifiant
+turbulent|turbulent
+unanimous|unanime
+underscore|souligner
+unveil|dévoiler
+uphold|défendre, maintenir
+vague|vague
+vigorous|vigoureux
+volatile|volatil, instable
+warrant|justifier
+wary|méfiant

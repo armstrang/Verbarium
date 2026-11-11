@@ -1,0 +1,197 @@
+# Verbarium — French meanings for 3-baron.txt: word|meaning
+abundant|abondant
+accelerate|accélérer
+accessible|accessible
+accommodate|loger, s’adapter à
+accountable|responsable
+acknowledge|reconnaître
+adverse|défavorable
+aggregate|global, total
+allocate|allouer
+ambiguous|ambigu
+amend|modifier, amender
+analogy|analogie
+arbitrary|arbitraire
+articulate|formuler clairement
+assert|affirmer
+attribute|attribuer
+autonomy|autonomie
+beneficial|bénéfique
+coherent|cohérent
+coincide|coïncider
+collaborate|collaborer
+commence|commencer
+compatible|compatible
+compensate|compenser
+compile|compiler
+complement|compléter
+comply|se conformer
+comprehensive|complet, exhaustif
+comprise|comprendre, se composer de
+conceive|concevoir
+concurrent|simultané
+confine|limiter
+consensus|consensus
+constitute|constituer
+constrain|contraindre
+contemporary|contemporain
+contradict|contredire
+controversy|controverse
+convene|convoquer, se réunir
+conventional|conventionnel
+correlate|être corrélé
+credible|crédible
+criterion|critère
+cumulative|cumulatif
+deficit|déficit
+denote|dénoter
+depict|représenter
+deplete|épuiser
+deteriorate|se détériorer
+deviate|s’écarter
+differentiate|différencier
+diminish|diminuer
+discrete|distinct, séparé
+discriminate|discriminer, distinguer
+disperse|disperser
+displace|déplacer, supplanter
+dispose|se débarrasser de
+disrupt|perturber
+distort|déformer
+diversity|diversité
+doctrine|doctrine
+dominant|dominant
+duration|durée
+elaborate|développer
+eligible|admissible
+embrace|adopter, embrasser
+empirical|empirique
+endeavor|effort, entreprise
+endorse|approuver, soutenir
+enforce|faire respecter
+entity|entité
+equivalent|équivalent
+erode|éroder
+ethical|éthique
+evident|évident
+exaggerate|exagérer
+explicit|explicite
+facilitate|faciliter
+feasible|réalisable
+fluctuate|fluctuer
+formulate|formuler
+forthcoming|à venir
+hierarchy|hiérarchie
+hypothesis|hypothèse
+identical|identique
+ideology|idéologie
+immense|immense
+implement|mettre en œuvre
+implicit|implicite
+incentive|incitation
+incline|être enclin
+incorporate|intégrer
+indigenous|indigène, autochtone
+induce|provoquer, inciter
+infer|déduire
+inherent|inhérent
+inhibit|inhiber, freiner
+initiate|lancer, amorcer
+integral|intégral, essentiel
+integrate|intégrer
+integrity|intégrité
+intervene|intervenir
+intrinsic|intrinsèque
+invoke|invoquer
+legislation|législation
+legitimate|légitime
+likewise|de même
+mandate|mandat
+manipulate|manipuler
+marginal|marginal
+mediate|servir de médiateur
+merge|fusionner
+methodology|méthodologie
+minimize|minimiser
+moderate|modéré
+momentum|élan
+nevertheless|néanmoins
+norm|norme
+notion|notion
+obsolete|obsolète
+offset|compenser
+ongoing|en cours
+orient|orienter
+paradigm|paradigme
+parameter|paramètre
+persist|persister
+plausible|plausible
+pose|poser (un risque)
+practitioner|praticien
+precede|précéder
+predominant|prédominant
+preliminary|préliminaire
+presume|présumer
+prevail|prévaloir
+profound|profond
+prohibit|interdire
+prominent|éminent, saillant
+prone|enclin, sujet à
+proximity|proximité
+qualitative|qualitatif
+quantitative|quantitatif
+radical|radical
+random|aléatoire
+rational|rationnel
+reinforce|renforcer
+reluctant|réticent
+render|rendre
+replicate|reproduire
+resemble|ressembler à
+residual|résiduel
+resilient|résilient
+restrain|retenir
+rigid|rigide
+rigorous|rigoureux
+scarce|rare
+scenario|scénario
+scope|portée
+scrutiny|examen minutieux
+simulate|simuler
+skeptical|sceptique
+sole|seul, unique
+sophisticated|sophistiqué
+spontaneous|spontané
+stimulate|stimuler
+straightforward|simple, direct
+subordinate|subordonné
+subsequent|ultérieur
+subsidy|subvention
+substantial|considérable
+successive|successif
+suppress|réprimer, étouffer
+surplus|excédent
+suspend|suspendre
+sustainable|durable
+tangible|tangible
+terminate|mettre fin à
+thereby|ainsi
+threshold|seuil
+trigger|déclencher
+undergo|subir
+underlie|sous-tendre
+undermine|saper
+undertake|entreprendre
+uniform|uniforme
+unprecedented|sans précédent
+utilize|utiliser
+valid|valable
+velocity|vitesse, vélocité
+verify|vérifier
+versatile|polyvalent
+viable|viable
+violate|violer, enfreindre
+virtually|pratiquement
+vulnerable|vulnérable
+whereby|par lequel
+yield|produire, rapporter

@@ -1,0 +1,85 @@
+# Verbarium — Spanish meanings for collocations.txt: phrase with [answer]|meaning
+[make] a decision|tomar una decisión
+[do] homework|hacer los deberes
+[take] a photo|hacer una foto
+[make] a mistake|cometer un error
+[have] a shower|ducharse
+[pay] attention|prestar atención
+[catch] a cold|resfriarse
+[keep] a promise|cumplir una promesa
+[tell] the truth|decir la verdad
+[save] time|ahorrar tiempo
+[heavy] rain|lluvia intensa
+[strong] wind|viento fuerte
+[fast] food|comida rápida
+depend [on] the weather|depender del tiempo
+interested [in] science|interesado en la ciencia
+good [at] maths|bueno en matemáticas
+listen [to] music|escuchar música
+arrive [at] the station|llegar a la estación
+[make] progress|progresar
+[take] a break|tomarse un descanso
+[conduct] research|realizar una investigación
+[raise] awareness|concienciar
+[meet] a deadline|cumplir un plazo
+[draw] a conclusion|sacar una conclusión
+[gain] experience|adquirir experiencia
+[play] a role|desempeñar un papel
+[pose] a threat|suponer una amenaza
+[reach] an agreement|llegar a un acuerdo
+[set] a goal|fijar un objetivo
+[take] responsibility|asumir la responsabilidad
+[run] a business|dirigir un negocio
+[commit] a crime|cometer un delito
+a [sharp] rise|un fuerte aumento
+a [steady] decline|un descenso constante
+[highly] likely|muy probable
+[deeply] concerned|profundamente preocupado
+[widely] used|ampliamente utilizado
+contribute [to] the debate|contribuir al debate
+result [in] delays|provocar retrasos
+aware [of] the risks|consciente de los riesgos
+responsible [for] the error|responsable del error
+rely [on] imports|depender de las importaciones
+an increase [in] prices|un aumento de los precios
+the reason [for] the delay|el motivo del retraso
+[have] an impact|tener un impacto
+[address] an issue|abordar un problema
+[exert] pressure|ejercer presión
+[implement] a policy|aplicar una política
+[undergo] surgery|someterse a una operación
+[yield] results|dar resultados
+[bear] the cost|asumir el coste
+[strike] a balance|encontrar un equilibrio
+[lodge] a complaint|presentar una queja
+[shed] light on the cause|arrojar luz sobre la causa
+[mounting] evidence|pruebas cada vez mayores
+a [compelling] argument|un argumento convincente
+a [marked] improvement|una mejora notable
+[bitterly] disappointed|amargamente decepcionado
+[inextricably] linked|indisolublemente unidos
+comply [with] the rules|cumplir las normas
+adhere [to] the plan|ceñirse al plan
+prone [to] errors|propenso a errores
+devoid [of] meaning|carente de sentido
+[in] accordance with the law|conforme a la ley
+[at] the expense of quality|a costa de la calidad
+[on] the verge of collapse|al borde del colapso
+[curb] inflation|frenar la inflación
+[foster] innovation|fomentar la innovación
+[stifle] debate|sofocar el debate
+[wield] influence|ejercer influencia
+[dispel] a myth|desmentir un mito
+[levy] a tax|imponer un impuesto
+a [resounding] success|un éxito rotundo
+a [foregone] conclusion|un resultado previsible
+[sweeping] reforms|reformas radicales
+[scant] regard|escasa consideración
+[vested] interests|intereses creados
+[mete] out punishment|imponer un castigo
+[eke] out a living|ganarse la vida a duras penas
+[hazard] a guess|aventurar una respuesta
+[wreak] havoc|causar estragos
+a [moot] point|una cuestión discutible
+[abject] poverty|pobreza extrema
+[bated] breath|el aliento contenido

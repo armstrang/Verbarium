@@ -1,0 +1,85 @@
+# Verbarium — French meanings for collocations.txt: phrase with [answer]|meaning
+[make] a decision|prendre une décision
+[do] homework|faire ses devoirs
+[take] a photo|prendre une photo
+[make] a mistake|faire une erreur
+[have] a shower|prendre une douche
+[pay] attention|faire attention
+[catch] a cold|attraper un rhume
+[keep] a promise|tenir une promesse
+[tell] the truth|dire la vérité
+[save] time|gagner du temps
+[heavy] rain|forte pluie
+[strong] wind|vent fort
+[fast] food|restauration rapide
+depend [on] the weather|dépendre du temps
+interested [in] science|intéressé par les sciences
+good [at] maths|bon en maths
+listen [to] music|écouter de la musique
+arrive [at] the station|arriver à la gare
+[make] progress|faire des progrès
+[take] a break|faire une pause
+[conduct] research|mener des recherches
+[raise] awareness|sensibiliser
+[meet] a deadline|respecter un délai
+[draw] a conclusion|tirer une conclusion
+[gain] experience|acquérir de l’expérience
+[play] a role|jouer un rôle
+[pose] a threat|représenter une menace
+[reach] an agreement|parvenir à un accord
+[set] a goal|se fixer un objectif
+[take] responsibility|assumer la responsabilité
+[run] a business|diriger une entreprise
+[commit] a crime|commettre un crime
+a [sharp] rise|une forte hausse
+a [steady] decline|un déclin régulier
+[highly] likely|très probable
+[deeply] concerned|profondément inquiet
+[widely] used|largement utilisé
+contribute [to] the debate|contribuer au débat
+result [in] delays|entraîner des retards
+aware [of] the risks|conscient des risques
+responsible [for] the error|responsable de l’erreur
+rely [on] imports|dépendre des importations
+an increase [in] prices|une hausse des prix
+the reason [for] the delay|la raison du retard
+[have] an impact|avoir un impact
+[address] an issue|traiter une question
+[exert] pressure|exercer une pression
+[implement] a policy|mettre en œuvre une politique
+[undergo] surgery|subir une opération
+[yield] results|donner des résultats
+[bear] the cost|supporter le coût
+[strike] a balance|trouver un équilibre
+[lodge] a complaint|déposer une plainte
+[shed] light on the cause|faire la lumière sur la cause
+[mounting] evidence|des preuves de plus en plus nombreuses
+a [compelling] argument|un argument convaincant
+a [marked] improvement|une nette amélioration
+[bitterly] disappointed|amèrement déçu
+[inextricably] linked|inextricablement liés
+comply [with] the rules|respecter les règles
+adhere [to] the plan|s’en tenir au plan
+prone [to] errors|sujet aux erreurs
+devoid [of] meaning|dénué de sens
+[in] accordance with the law|conformément à la loi
+[at] the expense of quality|au détriment de la qualité
+[on] the verge of collapse|au bord de l’effondrement
+[curb] inflation|freiner l’inflation
+[foster] innovation|favoriser l’innovation
+[stifle] debate|étouffer le débat
+[wield] influence|exercer une influence
+[dispel] a myth|dissiper un mythe
+[levy] a tax|prélever un impôt
+a [resounding] success|un succès retentissant
+a [foregone] conclusion|une issue courue d’avance
+[sweeping] reforms|des réformes de grande ampleur
+[scant] regard|peu d’égard
+[vested] interests|intérêts particuliers
+[mete] out punishment|infliger une punition
+[eke] out a living|gagner péniblement sa vie
+[hazard] a guess|risquer une réponse
+[wreak] havoc|faire des ravages
+a [moot] point|un point discutable
+[abject] poverty|misère noire
+[bated] breath|le souffle coupé

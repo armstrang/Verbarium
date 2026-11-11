@@ -1,0 +1,460 @@
+# Verbarium — French meanings for 2-knight-d.txt: word|meaning
+magnificent|magnifique
+mainland|continent
+makeup|maquillage, composition
+mammal|mammifère
+management|gestion, direction
+mankind|humanité
+manual|manuel
+margin|marge
+marine|marin
+massive|énorme, massif
+master|maîtriser
+means|moyen
+meanwhile|pendant ce temps
+mechanic|mécanicien
+mechanism|mécanisme
+medal|médaille
+media|médias
+medieval|médiéval
+medium|moyen
+membership|adhésion
+memorial|mémorial
+merchant|marchand
+mercy|pitié, clémence
+mere|simple, seul
+merit|mérite
+mess|désordre, pagaille
+military|militaire
+mill|moulin, usine
+mineral|minéral
+minister|ministre
+ministry|ministère
+minority|minorité
+miracle|miracle
+miserable|malheureux, misérable
+misery|misère
+mislead|induire en erreur
+mission|mission
+mixture|mélange
+mobile|mobile
+mode|mode
+model|modèle
+modest|modeste
+moist|humide, moite
+moisture|humidité
+molecule|molécule
+monument|monument
+moral|moral
+moreover|de plus
+mortgage|prêt immobilier
+motion|mouvement
+motivate|motiver
+mount|monter, installer
+mourn|pleurer (un mort)
+multiple|multiple
+multiply|multiplier
+municipal|municipal
+mutter|marmonner
+myth|mythe
+naked|nu
+narrative|récit
+nasty|désagréable, méchant
+native|natal, indigène
+naval|naval
+navigate|naviguer, s’orienter
+necessity|nécessité
+negotiate|négocier
+nerve|nerf, culot
+nest|nid
+nightmare|cauchemar
+noble|noble
+nominate|nommer, désigner
+nonsense|absurdités
+notify|notifier
+nuclear|nucléaire
+nuisance|nuisance, gêne
+numerous|nombreux
+nutrition|nutrition
+obedient|obéissant
+objection|objection
+obligation|obligation
+oblige|obliger
+observation|observation
+observe|observer
+obstacle|obstacle
+occasion|occasion
+occasional|occasionnel
+occupation|profession, occupation
+odd|bizarre, impair
+offend|offenser
+offence|délit, offense
+operate|faire fonctionner, opérer
+opponent|adversaire
+optimistic|optimiste
+oral|oral
+orbit|orbite
+orchestra|orchestre
+organic|biologique, organique
+organism|organisme
+original|original
+ornament|ornement
+orphan|orphelin
+outbreak|épidémie, déclenchement
+outline|grandes lignes
+outlook|perspective
+output|production
+outstanding|remarquable
+overlook|négliger, donner sur
+overseas|à l’étranger
+overtake|dépasser, doubler
+overwhelm|submerger, accabler
+oxygen|oxygène
+pace|rythme
+pad|tampon, bloc-notes
+palm|paume, palmier
+panel|panneau, jury
+panic|panique
+parade|défilé
+paradise|paradis
+paragraph|paragraphe
+parallel|parallèle
+parliament|parlement
+partial|partiel
+particle|particule
+passage|passage, couloir
+passion|passion
+passive|passif
+patent|brevet
+patience|patience
+patrol|patrouiller
+pavement|trottoir
+peasant|paysan
+peculiar|particulier, bizarre
+penalty|peine, amende
+pension|retraite, pension
+performance|représentation, performance
+personality|personnalité
+personnel|personnel
+pessimistic|pessimiste
+petrol|essence
+philosophy|philosophie
+phrase|expression
+physician|médecin
+pierce|percer
+pill|pilule
+pioneer|pionnier
+pitch|terrain, ton
+plot|intrigue, parcelle
+plunge|plonger, chuter
+poetry|poésie
+poisonous|vénéneux, toxique
+pole|poteau, pôle
+polish|polir, cirer
+political|politique
+politician|homme politique
+politics|politique
+poll|sondage
+pollute|polluer
+portion|portion
+portrait|portrait
+possession|possession
+postpone|reporter
+pottery|poterie
+poverty|pauvreté
+practical|pratique
+precaution|précaution
+precious|précieux
+preference|préférence
+pregnant|enceinte
+prejudice|préjugé
+premium|prime
+preparation|préparation
+prescribe|prescrire
+presence|présence
+preserve|préserver, conserver
+prey|proie
+priest|prêtre
+prime|principal
+primitive|primitif
+principal|principal
+privacy|vie privée
+privilege|privilège
+procedure|procédure
+profession|profession
+prompt|rapide, prompt
+proof|preuve
+prosecute|poursuivre en justice
+prosper|prospérer
+protein|protéine
+protest|protestation
+province|province
+provoke|provoquer
+psychology|psychologie
+publicity|publicité
+punctual|ponctuel
+purchase|acheter
+pursuit|poursuite, quête
+qualify|remplir les conditions
+quarrel|dispute
+quote|citer
+racial|racial
+radiation|rayonnement
+rage|rage
+raid|raid, descente
+rank|rang, grade
+ratio|rapport, ratio
+ray|rayon
+reaction|réaction
+readily|facilement, volontiers
+realistic|réaliste
+reality|réalité
+rear|arrière
+reasonable|raisonnable
+rebel|rebelle
+rebuild|reconstruire
+recall|se rappeler
+reception|réception, accueil
+recession|récession
+reckon|penser, estimer
+recommend|recommander
+recreation|loisirs
+recruit|recruter
+refer|faire référence
+reference|référence
+refine|raffiner, peaufiner
+refresh|rafraîchir
+refugee|réfugié
+refund|remboursement
+regard|considérer
+regarding|concernant
+regardless|quel que soit
+regime|régime
+register|s’inscrire
+regulation|règlement
+rehearse|répéter
+reign|règne
+relation|relation
+relative|parent
+relief|soulagement, secours
+relieve|soulager
+religion|religion
+religious|religieux
+remark|remarque
+remarkable|remarquable
+remote|isolé, éloigné
+renew|renouveler
+repay|rembourser
+representative|représentant
+republic|république
+resident|résident, habitant
+resign|démissionner
+resist|résister
+resolve|résoudre
+resort|station touristique
+responsibility|responsabilité
+retail|commerce de détail
+retire|prendre sa retraite
+retreat|battre en retraite
+revenge|vengeance
+review|critique, examen
+revolution|révolution
+rhythm|rythme
+rid|débarrasser
+ridiculous|ridicule
+rival|rival
+roar|rugir
+romantic|romantique
+rotate|tourner
+routine|routine
+rumour|rumeur
+sacred|sacré
+sacrifice|sacrifice
+sake|pour (for the sake of)
+sample|échantillon
+sanction|sanction
+satellite|satellite
+satisfaction|satisfaction
+scandal|scandale
+scatter|disperser
+scheme|plan, projet
+scholar|érudit
+scientific|scientifique
+scratch|gratter, rayer
+sculpture|sculpture
+section|section
+security|sécurité
+seize|saisir
+senior|supérieur, aîné
+sensation|sensation
+sensitive|sensible
+sequel|suite
+series|série
+session|séance
+settle|s’installer, régler
+severe|grave, sévère
+shelter|abri
+shortage|pénurie
+shrink|rétrécir
+sibling|frère ou sœur
+sigh|soupirer
+signature|signature
+sincere|sincère
+skeleton|squelette
+sketch|croquis
+slave|esclave
+slope|pente
+soak|tremper
+solar|solaire
+solution|solution
+sorrow|chagrin
+spacious|spacieux
+span|durée, étendue
+species|espèce
+spectacular|spectaculaire
+split|fendre, diviser
+sponsor|sponsor
+squeeze|presser
+staff|personnel
+starve|mourir de faim
+statement|déclaration
+statistic|statistique
+statue|statue
+status|statut
+stimulus|stimulus
+stock|stock, actions
+strain|tension
+stubborn|têtu
+submit|soumettre, remettre
+substance|substance
+suburb|banlieue
+sue|poursuivre en justice
+suicide|suicide
+superior|supérieur
+supervise|superviser
+supplement|supplément
+surgeon|chirurgien
+surgery|chirurgie
+surrender|se rendre
+suspect|soupçonner
+suspicion|soupçon
+swear|jurer
+sweat|sueur
+swell|enfler
+swift|rapide
+sword|épée
+sympathy|compassion
+symptom|symptôme
+tackle|s’attaquer à
+tap|robinet
+technical|technique
+technique|technique
+temper|caractère, colère
+temple|temple
+tempt|tenter
+tenant|locataire
+tendency|tendance
+tender|tendre
+territory|territoire
+terror|terreur
+testify|témoigner
+therapy|thérapie
+thorough|minutieux, approfondi
+threaten|menacer
+thrill|frisson
+thrive|prospérer
+throne|trône
+tide|marée
+timber|bois de construction
+tissue|tissu, mouchoir
+tolerance|tolérance
+tomb|tombeau
+tone|ton
+topic|sujet
+torture|torture
+tough|dur, coriace
+tournament|tournoi
+toxic|toxique
+track|trace, piste
+traditional|traditionnel
+tragedy|tragédie
+trail|sentier, piste
+trait|trait
+transaction|transaction
+transition|transition
+transmit|transmettre
+transparent|transparent
+trap|piège
+treasure|trésor
+treatment|traitement
+treaty|traité
+tremble|trembler
+tremendous|énorme, formidable
+trial|procès, essai
+tribe|tribu
+tribute|hommage
+trick|tour, astuce
+triumph|triomphe
+troop|troupe
+tropical|tropical
+tunnel|tunnel
+tutor|précepteur
+undertaking|entreprise, tâche
+unemployed|au chômage
+union|syndicat, union
+unite|unir
+universe|univers
+upper|supérieur
+upright|droit, debout
+utter|total, complet
+vacant|vacant, libre
+vaccine|vaccin
+vain|vain, vaniteux
+van|camionnette
+vanish|disparaître
+vast|vaste
+venture|entreprise risquée
+venue|lieu
+verse|vers, strophe
+vessel|navire, récipient
+veteran|vétéran
+via|via, par
+vice|vice
+victim|victime
+victory|victoire
+violence|violence
+violent|violent
+virtue|vertu
+virus|virus
+vision|vision, vue
+visual|visuel
+vivid|vif, frappant
+vocabulary|vocabulaire
+volcano|volcan
+volume|volume, tome
+voyage|voyage en mer
+wagon|chariot, wagon
+warehouse|entrepôt
+warrior|guerrier
+weave|tisser
+weed|mauvaise herbe
+welfare|bien-être
+whereas|tandis que
+wicked|méchant
+widow|veuve
+wilderness|nature sauvage
+wildlife|faune
+willing|disposé
+wipe|essuyer
+wisdom|sagesse
+withstand|résister à
+witness|témoin
+workshop|atelier
+worship|adorer, vénérer
+worthwhile|qui en vaut la peine
+wreck|épave
+wrist|poignet
+yawn|bâiller
+yell|hurler
+youngster|jeune
+zeal|zèle

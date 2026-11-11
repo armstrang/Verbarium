@@ -544,6 +544,38 @@ void main() {
     await tester.pump(const Duration(seconds: 1));
   });
 
+  for (final (code, cont, tabs, prefix) in const [
+    ('es', 'Seguir aprendiendo', ['Personaje', 'Crónica', 'Ajustes'], '75-es'),
+    ('fr', 'Continuer d’apprendre', ['Personnage', 'Chronique', 'Réglages'], '76-fr'),
+  ]) {
+    testWidgets('learning through $code: the app speaks it and a meaning is in it', (tester) async {
+      phone(tester);
+      final app = await learner(tester, lang: code, jobs: ['peasant', 'scribe']);
+      expect(app.langCode, code);
+      await tester.pumpWidget(const VerbariumApp());
+      await beat(tester, 900);
+      expect(find.text(cont), findsOneWidget);
+      expect(find.text('Scribe'), findsOneWidget, reason: 'jobs keep their English names');
+      await shot(tester, '$prefix-today');
+      await tester.tap(find.byIcon(Icons.tune));
+      await beat(tester, 900);
+      await shot(tester, '$prefix-settings');
+      tester.state<NavigatorState>(find.byType(Navigator).first).pop();
+      await beat(tester, 900);
+      await tester.tap(find.text(tabs[0]));
+      await beat(tester, 900);
+      await shot(tester, '$prefix-character');
+      await tester.tap(find.text(tabs[1]));
+      await beat(tester, 900);
+      await shot(tester, '$prefix-chronicle');
+      final w = app.deck.byId['tide']!;
+      expect(w.gloss, code == 'es' ? 'marea' : 'marée');
+      final c = app.deck.collocs.first;
+      expect(c.gloss, code == 'es' ? 'tomar una decisión' : 'prendre une décision');
+      await tester.pump(const Duration(seconds: 1));
+    });
+  }
+
   testWidgets('changing the banner keeps the title, the job and what is remembered', (tester) async {
     phone(tester);
     final app = await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);

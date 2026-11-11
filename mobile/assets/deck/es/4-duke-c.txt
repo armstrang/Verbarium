@@ -1,0 +1,303 @@
+# Verbarium — Spanish meanings for 4-duke-c.txt: word|meaning
+abase|humillarse
+aberrant|aberrante
+abeyance|suspenso
+abhor|aborrecer
+abominable|abominable
+abridge|abreviar, resumir
+absolve|absolver
+accede|acceder
+accost|abordar
+accretion|acumulación
+acuity|agudeza
+adjudicate|juzgar, resolver
+adulterate|adulterar
+aegis|égida
+affable|afable
+affront|afrenta
+aggrandize|engrandecer
+alchemy|alquimia
+allay|calmar
+amiable|amable
+amity|amistad
+anomalous|anómalo
+antiquated|anticuado
+apprise|informar
+arbiter|árbitro
+artful|astuto
+askew|torcido
+assail|atacar
+attenuate|atenuar
+avow|reconocer
+awry|mal, torcido
+balk|resistirse
+bask|disfrutar, tomar el sol
+beleaguer|asediar, acosar
+bemused|perplejo
+bereft|privado de
+berate|regañar
+blithe|despreocupado
+boisterous|bullicioso
+bravado|bravuconería
+brazen|descarado
+bristle|erizarse
+broach|sacar a colación
+buttress|apuntalar
+cadence|cadencia
+callow|inexperto
+canny|astuto
+carp|quejarse por nimiedades
+chagrin|disgusto
+chastise|castigar
+chide|regañar
+churlish|grosero
+clamber|trepar
+cloying|empalagoso
+coddle|mimar
+cognate|afín
+collusion|colusión
+comely|bien parecido
+commiserate|compadecerse
+compunction|remordimiento
+concoct|inventar, preparar
+concomitant|concomitante
+condescension|condescendencia
+confound|confundir
+congruent|congruente
+connive|confabularse
+contrition|contrición
+coterie|camarilla
+countenance|consentir
+covet|codiciar
+cower|acobardarse
+crass|grosero, burdo
+craven|cobarde
+credulity|credulidad
+curt|seco, cortante
+dally|entretenerse
+dawdle|holgazanear
+debacle|debacle
+debunk|desmentir
+decimate|diezmar
+decorous|decoroso
+defame|difamar
+deflate|desinflar
+defunct|extinto
+deign|dignarse
+delectable|delicioso
+delve|ahondar
+demean|degradar
+demure|recatado
+deprecate|desaprobar
+despoil|saquear
+dictum|sentencia, dictamen
+discomfit|desconcertar
+disconsolate|desconsolado
+disgruntled|descontento
+dishearten|desanimar
+dishevelled|desaliñado
+dispassionate|desapasionado
+dissolute|disoluto
+dither|vacilar
+doleful|lastimero
+dour|severo, adusto
+droll|gracioso
+dupe|engañar
+edify|edificar
+effusive|efusivo
+egress|salida
+embroil|enredar
+encumber|estorbar
+engulf|engullir
+ensconce|acomodarse
+entreat|suplicar
+epitomize|personificar
+equable|ecuánime
+evince|mostrar
+excoriate|criticar duramente
+exhume|exhumar
+exude|rezumar
+facile|simplista
+fallow|en barbecho
+fanfare|bombo, fanfarria
+fawn|adular
+fester|enconarse
+fiat|decreto
+flaunt|alardear
+flout|desobedecer abiertamente
+forbidding|imponente, amenazador
+fortitude|fortaleza
+frenetic|frenético
+frolic|retozar
+furore|furor, escándalo
+gaffe|metedura de pata
+gainsay|contradecir
+gall|descaro
+gambit|táctica
+garish|chillón
+gaunt|demacrado
+genial|cordial
+giddy|mareado, eufórico
+glib|superficial
+goad|incitar
+gouge|arrancar, abrir
+grate|rallar, irritar
+grovel|arrastrarse
+hallowed|sagrado
+haggard|demacrado
+haughty|altivo
+heady|embriagador
+hedonism|hedonismo
+hubris|soberbia
+humdrum|monótono
+impinge|repercutir, invadir
+importune|importunar
+impudent|insolente
+inane|necio, vacío
+incandescent|incandescente, furioso
+incarnate|encarnado
+incisive|incisivo
+incredulous|incrédulo
+indelible|imborrable
+indomitable|indomable
+inexplicable|inexplicable
+infirm|débil, achacoso
+ingratiate|congraciarse
+inkling|sospecha, idea
+innuendo|insinuación
+inroad|avance
+insolvent|insolvente
+instil|inculcar
+insuperable|insuperable
+interject|interponer
+interloper|intruso
+inveigh|arremeter contra
+irk|fastidiar
+jaded|hastiado
+jaunty|desenfadado
+jibe|pulla
+jocular|jocoso
+kindred|afín
+lacklustre|deslucido
+lampoon|satirizar
+languid|lánguido
+lax|laxo
+lionize|ensalzar
+lithe|ágil, flexible
+livid|lívido, furioso
+lurid|espeluznante, chillón
+malaise|malestar
+malevolent|malévolo
+maverick|inconformista
+meek|manso
+mettle|temple, valor
+misnomer|nombre inapropiado
+modicum|mínimo
+morass|cenagal, embrollo
+muster|reunir
+myopic|miope
+nascent|naciente
+nettle|irritar
+nonplussed|desconcertado
+oblique|indirecto, oblicuo
+obtrusive|llamativo, molesto
+odious|odioso
+opine|opinar
+overwrought|alterado
+pallid|pálido
+parch|resecar
+parry|esquivar
+penitent|arrepentido
+pique|despertar, ofender
+plaintive|lastimero
+plucky|valiente
+ponderous|pesado
+portend|presagiar
+prattle|parlotear
+precept|precepto
+preen|acicalarse
+prim|remilgado
+profane|profano
+protracted|prolongado
+prowl|merodear
+puny|enclenque
+purport|pretender
+qualm|escrúpulo
+querulous|quejumbroso
+quibble|poner pegas
+quip|ocurrencia
+rankle|doler, escocer
+recrimination|recriminación
+redoubtable|temible
+remiss|negligente
+repose|reposo
+reprove|reprobar
+resplendent|resplandeciente
+retinue|séquito
+revel|deleitarse
+rile|irritar
+rout|derrota aplastante
+ruminate|rumiar
+sacrosanct|sacrosanto
+sallow|cetrino
+sanctimonious|santurrón
+sate|saciar
+savour|saborear
+scoff|burlarse
+scorn|desprecio
+scourge|azote
+scuttle|hundir, escabullirse
+sedate|sosegado
+seethe|hervir de rabia
+shirk|eludir
+skirmish|escaramuza
+slovenly|desaliñado
+smug|engreído
+snub|desairar
+sojourn|estancia
+spurn|desdeñar
+squalid|sórdido
+stoic|estoico
+stupor|estupor
+suave|afable, cortés
+subterfuge|subterfugio
+succinct|sucinto
+sullen|hosco
+sully|mancillar
+surly|arisco
+swagger|pavonearse
+tawdry|chabacano
+temperance|templanza
+tepid|tibio
+terse|lacónico
+throng|multitud
+timorous|temeroso
+toil|trabajar duro
+travesty|parodia, farsa
+trite|trillado
+truant|alumno que hace novillos
+tutelage|tutela
+unkempt|descuidado
+upshot|resultado
+urbane|cortés, refinado
+vagary|capricho
+valour|valor
+veer|virar
+veneer|barniz, apariencia
+verve|brío
+vie|competir
+vigil|vigilia
+virulent|virulento
+vitality|vitalidad
+waft|flotar
+wallow|revolcarse
+whet|abrir (el apetito)
+whim|capricho
+wily|astuto
+wince|hacer una mueca
+wizened|arrugado
+woe|aflicción
+wrangle|discutir
+wrest|arrebatar
+yearn|anhelar
+zest|entusiasmo

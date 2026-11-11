@@ -1,0 +1,317 @@
+# Verbarium — Spanish meanings for 4-duke-b.txt: word|meaning
+abate|amainar
+abound|abundar
+abstinence|abstinencia
+accentuate|acentuar
+accrue|acumularse
+adamant|inflexible, firme
+adept|experto, hábil
+adjourn|aplazar
+admonition|amonestación
+adorn|adornar
+adversity|adversidad
+affinity|afinidad
+aggrieved|agraviado
+agile|ágil
+allegiance|lealtad
+aloof|distante
+amass|amasar
+amenable|receptivo, dispuesto
+amicable|amistoso
+animosity|animosidad
+antagonize|enemistarse con
+apex|cúspide
+appease|apaciguar
+archaic|arcaico
+ardent|ferviente
+ascribe|atribuir
+aspire|aspirar
+assuage|aliviar
+astute|astuto
+atone|expiar
+attest|atestiguar
+audacious|audaz
+avert|evitar
+avid|ávido
+backfire|salir el tiro por la culata
+baffle|desconcertar
+barren|estéril, árido
+bequest|legado
+beset|acosar
+blatant|descarado
+blight|plaga, azote
+brevity|brevedad
+buoyant|optimista, flotante
+capitulate|capitular
+censure|censurar
+cessation|cese
+circumspect|prudente
+clandestine|clandestino
+clemency|clemencia
+cohesive|cohesionado
+collude|confabularse
+colossal|colosal
+commend|elogiar
+complacency|complacencia
+concur|coincidir, estar de acuerdo
+condolence|pésame
+confer|conceder, deliberar
+conjure|hacer aparecer, evocar
+consecrate|consagrar
+constrict|constreñir
+construe|interpretar
+contentious|polémico
+contrive|idear, lograr
+copious|copioso
+cordial|cordial
+covert|encubierto
+credence|crédito
+crux|quid
+culpable|culpable
+cumbersome|engorroso
+cynical|cínico
+debilitate|debilitar
+decry|censurar
+deference|deferencia
+defiant|desafiante
+deft|hábil, diestro
+deluge|diluvio
+demeanour|porte, conducta
+deplore|deplorar
+desolate|desolado
+despondent|abatido
+destitute|indigente
+devoid|desprovisto
+devout|devoto
+dexterity|destreza
+dichotomy|dicotomía
+digress|divagar
+diligent|diligente
+discord|discordia
+disdain|desdén
+disillusion|desilusionar
+dismal|lúgubre, pésimo
+dispel|disipar
+disquiet|inquietud
+dissuade|disuadir
+divulge|divulgar
+duress|coacción
+earmark|destinar
+eclectic|ecléctico
+efface|borrar
+elated|eufórico
+elude|eludir
+emanate|emanar
+emancipate|emancipar
+embellish|adornar, embellecer
+encroach|invadir, usurpar
+endemic|endémico
+engender|engendrar
+enigmatic|enigmático
+enmity|enemistad
+ensue|seguir, sobrevenir
+entrenched|arraigado
+enumerate|enumerar
+envoy|enviado
+epitome|epítome, modelo
+equanimity|ecuanimidad
+erroneous|erróneo
+eschew|evitar
+espouse|abrazar, adoptar
+evasive|evasivo
+exalt|exaltar
+exasperate|exasperar
+excavate|excavar
+exhaustive|exhaustivo
+exhort|exhortar
+exorbitant|exorbitante
+exponent|defensor, exponente
+extol|ensalzar
+exuberant|exuberante
+facade|fachada
+fathom|comprender
+feeble|débil
+fervour|fervor
+fickle|voluble
+flagrant|flagrante
+fledgling|incipiente
+flimsy|endeble
+foreseeable|previsible
+forgo|renunciar a
+forlorn|desamparado
+forthright|directo, franco
+fraught|lleno de (peligros)
+frivolous|frívolo
+galvanize|galvanizar
+glean|recabar
+grapple|lidiar
+gregarious|sociable
+grudging|a regañadientes
+guile|astucia
+gullible|crédulo
+hapless|desventurado
+harbinger|presagio, precursor
+heinous|atroz
+heresy|herejía
+hiatus|pausa
+hoard|acaparar
+hypocrisy|hipocresía
+idyllic|idílico
+illicit|ilícito
+immaculate|inmaculado
+immutable|inmutable
+impasse|callejón sin salida
+impeccable|impecable
+imperil|poner en peligro
+impetuous|impetuoso
+implausible|inverosímil
+implore|implorar
+impoverish|empobrecer
+inadvertently|sin querer
+incite|incitar
+incongruous|incongruente
+incumbent|titular
+indict|acusar formalmente
+indignant|indignado
+inept|inepto
+infallible|infalible
+ingrained|arraigado
+inimical|perjudicial, hostil
+innocuous|inocuo
+insatiable|insaciable
+insinuate|insinuar
+insurmountable|insuperable
+intermittent|intermitente
+intrepid|intrépido
+irate|airado
+jeopardy|peligro
+jubilant|jubiloso
+languish|languidecer
+laud|alabar
+lethal|letal
+lofty|elevado, noble
+lull|calma
+malice|malicia
+mar|estropear
+meagre|escaso
+menace|amenaza
+mire|empantanar
+misgiving|recelo
+mollify|apaciguar
+momentous|trascendental
+morose|taciturno
+negligent|negligente
+nonchalant|despreocupado
+nullify|anular
+obdurate|obstinado
+obliterate|arrasar
+obstinate|obstinado
+ominous|siniestro, amenazador
+onerous|oneroso
+opaque|opaco
+opulent|opulento
+ostracize|marginar
+oust|expulsar, destituir
+palpable|palpable
+paltry|insignificante
+parity|paridad
+patronize|tratar con condescendencia
+penchant|inclinación
+perilous|peligroso
+perpetrate|perpetrar
+perturb|perturbar
+peruse|examinar, leer con atención
+placid|plácido
+poignant|conmovedor
+ponder|reflexionar
+precipitous|escarpado, precipitado
+predicament|aprieto
+preposterous|absurdo
+prerogative|prerrogativa
+presumptuous|presuntuoso
+pretext|pretexto
+procure|conseguir
+prodigy|prodigio
+profuse|profuso
+prolific|prolífico
+propagate|propagar
+propitious|propicio
+prowess|destreza, proeza
+quandary|dilema
+quell|sofocar
+rampant|desenfrenado
+rapport|buena relación
+ravage|asolar
+rebuff|rechazar
+recede|retroceder
+reclusive|solitario
+redress|reparación
+refurbish|renovar
+relegate|relegar
+remorse|remordimiento
+renounce|renunciar a
+replenish|reponer
+reprimand|reprender
+repudiate|repudiar
+rescind|rescindir
+resilience|resiliencia
+resolute|resuelto
+revere|venerar
+rife|plagado
+rudimentary|rudimentario
+scant|escaso
+scathing|mordaz
+secluded|apartado
+serene|sereno
+shun|rehuir
+slander|calumnia
+sluggish|lento, aletargado
+solace|consuelo
+sombre|sombrío
+sparse|escaso, disperso
+sporadic|esporádico
+squander|derrochar
+staunch|firme, leal
+steadfast|firme
+stifle|sofocar
+stipulate|estipular
+strenuous|agotador
+strife|conflicto
+subdue|someter
+subjugate|subyugar
+subside|amainar
+substantiate|corroborar
+sumptuous|suntuoso
+supplant|suplantar
+surmise|conjeturar
+taciturn|taciturno
+tantamount|equivalente a
+tarnish|empañar
+tenacity|tenacidad
+thwart|frustrar
+tirade|diatriba
+torrid|tórrido
+tout|promocionar
+tractable|dócil, manejable
+transgress|transgredir
+trepidation|inquietud, temor
+truncate|truncar
+tumult|tumulto
+unassuming|modesto
+uncanny|misterioso, asombroso
+unruly|revoltoso
+unscathed|ileso
+untenable|insostenible
+unwieldy|difícil de manejar
+usurp|usurpar
+vanquish|vencer
+venerable|venerable
+vestige|vestigio
+vex|irritar
+vindictive|vengativo
+vociferous|vociferante
+wane|menguar
+wield|blandir, ejercer
+wistful|nostálgico
+wrath|ira
+zenith|cénit, apogeo

@@ -1,0 +1,388 @@
+# Verbarium — Spanish meanings for 1-squire-e.txt: word|meaning
+quarter|cuarto
+queen|reina
+question|pregunta
+queue|cola, fila
+quick|rápido
+quiet|tranquilo, silencioso
+quit|dejar, abandonar
+quite|bastante
+race|carrera
+railway|ferrocarril
+rain|lluvia
+raise|subir, levantar
+rare|raro, escaso
+rarely|rara vez
+rather|bastante, más bien
+raw|crudo
+reach|alcanzar, llegar a
+ready|listo
+real|real, auténtico
+realise|darse cuenta
+receipt|recibo
+recipe|receta
+record|grabar, registrar
+regret|lamentar, arrepentirse
+regular|regular, habitual
+relax|relajarse
+remember|recordar
+remind|recordar (a alguien)
+rent|alquilar
+repeat|repetir
+request|petición, solicitud
+rescue|rescatar
+rest|descansar
+restaurant|restaurante
+return|volver, devolver
+rice|arroz
+rich|rico
+ride|montar, ir en
+ring|sonar, llamar
+river|río
+road|carretera
+rob|robar, asaltar
+rock|roca
+roof|tejado
+root|raíz
+rope|cuerda
+rough|áspero, irregular
+round|redondo
+route|ruta
+row|fila
+royal|real
+rub|frotar
+rude|grosero, maleducado
+ruin|arruinar, estropear
+rush|apresurarse
+sad|triste
+safe|seguro
+sail|navegar
+sale|venta, rebajas
+salt|sal
+same|mismo
+sand|arena
+satisfied|satisfecho
+save|ahorrar, salvar
+scared|asustado
+scene|escena
+science|ciencia
+scissors|tijeras
+score|puntuación
+scream|gritar
+screen|pantalla
+sea|mar
+season|estación, temporada
+seat|asiento
+second|segundo
+secret|secreto
+secretary|secretario
+seed|semilla
+seem|parecer
+seldom|rara vez
+sell|vender
+send|enviar
+sense|sentido
+sensible|sensato
+sentence|oración, frase
+servant|sirviente
+serve|servir
+several|varios
+sew|coser
+shade|sombra
+shadow|sombra
+shake|sacudir, agitar
+shallow|poco profundo
+shame|vergüenza, lástima
+shape|forma
+sharp|afilado
+sheet|hoja, sábana
+shelf|estante
+shell|concha, cáscara
+shine|brillar
+ship|barco
+shirt|camisa
+shock|conmoción, susto
+shoot|disparar
+shop|tienda
+shore|orilla
+short|corto, bajo
+shoulder|hombro
+shout|gritar
+show|mostrar
+shower|ducha, chubasco
+shut|cerrar
+shy|tímido
+sick|enfermo, mareado
+side|lado
+sight|vista
+sign|señal, letrero
+signal|señal
+silence|silencio
+silent|callado, silencioso
+silly|tonto
+silver|plata
+since|desde
+sing|cantar
+single|único, soltero
+sink|hundirse
+size|tamaño, talla
+skin|piel
+sky|cielo
+sleep|dormir
+slice|rebanada
+slide|deslizarse
+slight|ligero, leve
+slip|resbalar
+slow|lento
+smart|listo, elegante
+smell|oler
+smile|sonreír
+smoke|humo
+smooth|liso, suave
+snake|serpiente
+snow|nieve
+soap|jabón
+social|social
+sock|calcetín
+soft|suave, blando
+soil|tierra, suelo
+soldier|soldado
+solid|sólido
+sometimes|a veces
+somewhere|en algún lugar
+song|canción
+soon|pronto
+sore|dolorido
+sorry|arrepentido, lo siento
+sort|tipo, clase
+soul|alma
+sound|sonido
+soup|sopa
+sour|agrio
+south|sur
+space|espacio
+spare|de repuesto, libre
+speak|hablar
+speech|discurso
+speed|velocidad
+spell|deletrear
+spend|gastar, pasar (tiempo)
+spicy|picante
+spill|derramar
+spirit|espíritu, ánimo
+spite|a pesar de (in spite of)
+spoil|estropear, mimar
+spoon|cuchara
+sport|deporte
+spot|punto, lugar
+spring|primavera
+square|cuadrado, plaza
+stage|escenario, etapa
+stair|escalón
+stamp|sello
+stand|estar de pie
+star|estrella
+stare|mirar fijamente
+start|empezar
+state|estado
+station|estación
+stay|quedarse, alojarse
+steal|robar
+steam|vapor
+steel|acero
+steep|empinado
+step|paso
+stick|palo
+still|todavía
+stomach|estómago
+stone|piedra
+stop|parar
+store|guardar, almacenar
+storm|tormenta
+story|historia, cuento
+straight|recto
+strange|extraño
+stranger|desconocido
+stream|arroyo
+street|calle
+strength|fuerza
+stretch|estirar
+strict|estricto
+strike|golpear, hacer huelga
+string|cuerda
+strong|fuerte
+student|estudiante
+study|estudiar
+stupid|estúpido
+style|estilo
+subject|asignatura, tema
+success|éxito
+sudden|repentino
+suffer|sufrir
+sugar|azúcar
+suit|quedar bien, convenir
+suitable|adecuado
+sum|suma
+summer|verano
+sunny|soleado
+supper|cena
+suppose|suponer
+sure|seguro
+surprise|sorpresa
+surround|rodear
+swallow|tragar
+sweep|barrer
+sweet|dulce
+swim|nadar
+swing|balancearse
+switch|cambiar
+table|mesa
+tail|cola
+tale|cuento
+talent|talento
+talk|hablar
+tall|alto
+taste|probar, saber a
+tax|impuesto
+teach|enseñar
+team|equipo
+tear|romper, rasgar
+tent|tienda de campaña
+term|trimestre, término
+terrible|terrible
+test|prueba, examen
+thank|agradecer
+theatre|teatro
+thick|grueso
+thief|ladrón
+thin|delgado, fino
+thirsty|sediento
+though|aunque
+thought|pensamiento
+thread|hilo
+throat|garganta
+through|a través de
+throw|lanzar, tirar
+thunder|trueno
+ticket|billete, entrada
+tidy|ordenado
+tie|atar
+tight|ajustado, apretado
+tiny|diminuto
+tip|punta, consejo, propina
+tired|cansado
+title|título
+together|juntos
+tongue|lengua
+tool|herramienta
+tooth|diente
+top|cima, parte de arriba
+total|total
+touch|tocar
+tour|gira, recorrido
+tourist|turista
+towards|hacia
+towel|toalla
+tower|torre
+town|pueblo, ciudad
+toy|juguete
+trade|comercio
+train|entrenar
+translate|traducir
+treat|tratar
+tree|árbol
+trip|viaje
+trouble|problema, dificultad
+trousers|pantalones
+true|verdadero
+truth|verdad
+try|intentar
+tube|tubo
+tune|melodía
+turn|girar
+twice|dos veces
+twin|gemelo
+type|tipo
+ugly|feo
+umbrella|paraguas
+uncle|tío
+understand|entender
+unit|unidad
+unless|a menos que
+until|hasta
+unusual|poco común
+upset|disgustado, molesto
+upstairs|arriba
+urgent|urgente
+use|usar
+usual|habitual
+usually|normalmente
+valley|valle
+valuable|valioso
+vegetable|verdura
+village|pueblo, aldea
+visit|visitar
+visitor|visitante
+voice|voz
+vote|votar
+wage|salario
+wait|esperar
+wake|despertar
+walk|caminar
+wall|pared, muro
+wallet|cartera
+wander|deambular
+war|guerra
+warm|cálido
+warn|advertir
+wash|lavar
+watch|mirar, vigilar
+wave|ola
+weak|débil
+weapon|arma
+wear|llevar puesto
+weather|tiempo (clima)
+wedding|boda
+week|semana
+weekend|fin de semana
+weight|peso
+welcome|dar la bienvenida
+west|oeste
+wet|mojado
+wheel|rueda
+whether|si
+while|rato, mientras
+whisper|susurrar
+whistle|silbar
+whole|entero
+wide|ancho
+wife|esposa
+wild|salvaje
+win|ganar
+wind|viento
+window|ventana
+wing|ala
+winter|invierno
+wire|alambre, cable
+wise|sabio
+wish|desear
+within|dentro de
+without|sin
+wonderful|maravilloso
+wood|madera
+wool|lana
+word|palabra
+work|trabajar
+world|mundo
+worry|preocuparse
+worse|peor
+wound|herida
+wrap|envolver
+write|escribir
+wrong|equivocado, incorrecto
+yard|patio
+year|año
+yet|todavía, ya
+young|joven
+zero|cero
+zone|zona

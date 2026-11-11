@@ -506,7 +506,7 @@ Future<bool> confirm(BuildContext context, {required String title, required Stri
               Text(text, style: T.body(16.5, pal.muted)),
               const SizedBox(height: 18),
               InkButton(yes, onTap: () => Navigator.of(ctx).pop(true)),
-              GhostButton(no ?? tr('Batal', 'Cancel'), onTap: () => Navigator.of(ctx).pop(false)),
+              GhostButton(no ?? tr('Batal', 'Cancel', 'Cancelar', 'Annuler'), onTap: () => Navigator.of(ctx).pop(false)),
             ],
           ),
         ),

@@ -32,7 +32,7 @@ class Word {
   Word asBanner() => Word(id, forms, pos, meaning, sentence, tier, gap, def, true);
 
   /// what the word means, in the language the learner learns through
-  String get gloss => english && def.isNotEmpty ? def : meaning;
+  String get gloss => glossOf(id, def, meaning);
 
   bool get inflected => gap.isNotEmpty;
   List<String> get wanted => gap.isEmpty ? forms : gap;
@@ -63,7 +63,22 @@ class Colloc {
   final List<String> wrong;
   const Colloc(this.tier, this.before, this.correct, this.after, this.wrong, this.meaning, [this.def = '']);
   String get id => 'c:$before$correct$after';
-  String get gloss => english && def.isNotEmpty ? def : meaning;
+  String get gloss => glossOf(id, def, meaning);
+}
+
+/// Spanish and French meanings, from `assets/deck/es/` and `assets/deck/fr/` (`word|meaning`; for collocations
+/// `phrase with [answer]|meaning`), keyed by word id or collocation id: [Spanish, French]
+final glosses = <String, List<String>>{};
+
+/// what a word means in the language that is on: Indonesian meaning, English definition, or the Spanish or French
+/// meaning (the English definition stands in while one is missing)
+String glossOf(String id, String def, String meaning) {
+  final i = foreign;
+  if (i >= 0) {
+    final g = glosses[id]?[i] ?? '';
+    if (g.isNotEmpty) return g;
+  }
+  return code != 'id' && def.isNotEmpty ? def : meaning;
 }
 
 class Deck {
@@ -121,6 +136,14 @@ class Deck {
     final defs = <String, String>{};
     for (final f in all.where((a) => a.startsWith('assets/deck/en/'))) {
       defs.addAll(parseDefs(await rootBundle.loadString(f)));
+    }
+    glosses.clear();
+    for (final (i, l) in const [(0, 'es'), (1, 'fr')]) {
+      for (final f in all.where((a) => a.startsWith('assets/deck/$l/'))) {
+        final text = await rootBundle.loadString(f);
+        final m = f.endsWith('/collocations.txt') ? parseDefs(text).map((k, v) => MapEntry('c:${k.replaceAll('[', '').replaceAll(']', '')}', v)) : parseDefs(text);
+        m.forEach((k, v) => (glosses[k] ??= ['', ''])[i] = v);
+      }
     }
     return Deck([
       for (final w in words) defs.containsKey(w.id) ? w.withDef(defs[w.id]!) : w,

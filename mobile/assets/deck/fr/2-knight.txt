@@ -1,0 +1,305 @@
+# Verbarium — French meanings for 2-knight.txt: word|meaning
+abandon|abandonner
+absorb|absorber
+abstract|abstrait
+academic|universitaire, académique
+access|accès
+accompany|accompagner
+accomplish|accomplir
+account|récit, compte rendu
+accumulate|accumuler
+accuse|accuser
+acquire|acquérir
+adapt|s’adapter
+adequate|suffisant, adéquat
+adjust|ajuster
+admire|admirer
+adopt|adopter
+advance|progrès, avancée
+advocate|préconiser, défendre
+aggressive|agressif
+alter|modifier
+alternative|alternative
+ambition|ambition
+analysis|analyse
+annual|annuel
+anticipate|anticiper, prévoir
+apparent|apparent, évident
+appeal|plaire, faire appel
+approach|approche
+appropriate|approprié
+approve|approuver
+approximate|approximatif
+aspect|aspect
+assess|évaluer
+assign|attribuer, assigner
+assist|aider
+associate|associer
+assume|supposer
+atmosphere|ambiance, atmosphère
+attach|joindre, attacher
+attempt|tentative
+attract|attirer
+authority|autorité
+barrier|barrière
+bias|parti pris, biais
+boundary|limite, frontière
+burden|fardeau
+capable|capable
+capacity|capacité
+category|catégorie
+cease|cesser
+circumstance|circonstance
+cite|citer
+civil|civil
+clarify|clarifier
+collapse|s’effondrer
+colleague|collègue
+combine|combiner
+comment|commentaire
+commit|s’engager, commettre
+communicate|communiquer
+community|communauté
+compete|rivaliser
+complex|complexe
+component|composant
+concentrate|se concentrer
+concept|concept
+conclude|conclure
+conduct|mener, effectuer
+conference|conférence
+conflict|conflit
+confirm|confirmer
+confront|affronter
+consequence|conséquence
+considerable|considérable
+consist|consister (en)
+constant|constant
+construct|construire
+consult|consulter
+consume|consommer
+contact|contact
+context|contexte
+contract|contrat
+contrast|contraste
+contribute|contribuer
+convert|convertir
+cooperate|coopérer
+criticize|critiquer
+crucial|crucial
+currency|monnaie, devise
+decade|décennie
+decline|déclin, baisse
+define|définir
+demonstrate|démontrer
+deny|nier
+derive|tirer, dériver
+deserve|mériter
+despite|malgré
+detect|détecter
+determine|déterminer
+device|appareil, dispositif
+devote|consacrer
+dimension|dimension
+disaster|catastrophe
+display|afficher, exposer
+distinct|distinct
+distribute|distribuer
+diverse|divers, varié
+document|document
+domestic|national, domestique
+dominate|dominer
+draft|brouillon
+efficient|efficace
+eliminate|éliminer
+emerge|émerger
+emphasis|accent, insistance
+enable|permettre
+encounter|rencontrer
+enhance|améliorer, renforcer
+enormous|énorme
+ensure|assurer, garantir
+entire|entier
+equipment|équipement
+essential|essentiel
+establish|établir, fonder
+estimate|estimer
+ethnic|ethnique
+evaluate|évaluer
+eventually|finalement
+evolve|évoluer
+exceed|dépasser
+exclude|exclure
+exhibit|exposer, montrer
+expand|élargir, se développer
+expert|expert
+exploit|exploiter
+explore|explorer
+export|exporter
+expose|exposer
+extend|prolonger, étendre
+external|externe
+extreme|extrême
+factor|facteur
+flexible|souple, flexible
+formula|formule
+foundation|fondement, base
+framework|cadre
+frequent|fréquent
+fundamental|fondamental
+generate|générer
+generation|génération
+genuine|authentique, sincère
+grant|subvention, bourse
+guarantee|garantir
+guideline|ligne directrice
+highlight|souligner
+identify|identifier
+illustrate|illustrer
+image|image
+impact|impact
+imply|impliquer, sous-entendre
+impose|imposer
+impress|impressionner
+incident|incident
+indicate|indiquer
+individual|individu
+inevitable|inévitable
+initial|initial
+innovation|innovation
+insight|aperçu, compréhension
+inspect|inspecter
+instance|exemple, cas
+institution|institution
+instruct|instruire, ordonner
+intend|avoir l’intention
+intense|intense
+interact|interagir
+internal|interne
+interpret|interpréter
+invest|investir
+investigate|enquêter
+isolate|isoler
+justify|justifier
+labor|main-d’œuvre, travail
+lack|manque
+launch|lancer
+lecture|cours magistral, conférence
+legal|légal
+link|lien
+logic|logique
+maintain|maintenir, entretenir
+major|majeur, principal
+majority|majorité
+manufacture|fabriquer
+mature|mûr, adulte
+maximum|maximum
+mental|mental
+migrate|migrer
+minimum|minimum
+minor|mineur
+modify|modifier
+monitor|surveiller
+motive|motif
+mutual|mutuel
+negative|négatif
+network|réseau
+neutral|neutre
+objective|objectif
+obtain|obtenir
+occupy|occuper
+oppose|s’opposer à
+option|option
+outcome|résultat
+overall|global, d’ensemble
+overcome|surmonter
+participate|participer
+partner|partenaire
+perceive|percevoir
+permanent|permanent
+perspective|perspective
+phase|phase
+phenomenon|phénomène
+physical|physique
+policy|politique (mesures)
+potential|potentiel
+precise|précis
+predict|prédire
+pressure|pression
+primary|principal, primaire
+principle|principe
+priority|priorité
+proceed|poursuivre
+professional|professionnel
+profit|bénéfice
+promote|promouvoir
+proportion|proportion
+propose|proposer
+prospect|perspective
+publish|publier
+pursue|poursuivre
+range|éventail, gamme
+rapid|rapide
+rate|taux, rythme
+react|réagir
+recover|se rétablir
+reflect|refléter
+reform|réforme
+regulate|réglementer
+reject|rejeter
+relate|relier, se rapporter
+release|libérer, sortir
+relevant|pertinent
+reliable|fiable
+rely|compter sur
+represent|représenter
+reputation|réputation
+resource|ressource
+respond|répondre
+restore|restaurer
+restrict|restreindre
+retain|conserver, retenir
+revenue|recettes
+reverse|inverser
+revise|réviser
+rural|rural
+satisfy|satisfaire
+scale|échelle
+schedule|emploi du temps, calendrier
+sector|secteur
+secure|sûr, sécurisé
+seek|chercher
+sequence|séquence, suite
+shift|changement, poste
+significant|important, significatif
+site|site
+specific|spécifique
+stable|stable
+strategy|stratégie
+stress|stress
+substitute|remplaçant, substitut
+sufficient|suffisant
+summary|résumé
+survey|enquête, sondage
+sustain|soutenir, maintenir
+symbol|symbole
+target|cible, objectif
+temporary|temporaire
+tension|tension
+theme|thème
+tolerate|tolérer
+trace|retracer
+transfer|transférer
+transform|transformer
+trend|tendance
+ultimate|ultime
+unique|unique
+urban|urbain
+urge|exhorter
+vary|varier
+vehicle|véhicule
+version|version
+vital|vital
+voluntary|volontaire, bénévole
+widespread|répandu
+withdraw|retirer, se retirer

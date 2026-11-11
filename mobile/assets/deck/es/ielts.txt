@@ -1,0 +1,506 @@
+# Verbarium — Spanish meanings for ielts.txt: word|meaning
+neighborhood|barrio
+programme|programa
+behavior|comportamiento
+center|centro
+leisure|ocio
+traffic|tráfico
+rubbish|basura
+housing|vivienda
+crime|delincuencia
+diet|dieta, alimentación
+travel|viajar
+graph|gráfico
+percentage|porcentaje
+rise|subir
+fall|bajar
+commute|desplazarse al trabajo
+infrastructure|infraestructura
+unemployment|desempleo
+obesity|obesidad
+congestion|congestión
+renewable|renovable
+emission|emisión
+recycle|reciclar
+fluctuation|fluctuación
+peak|pico
+plateau|estancamiento
+plummet|caer en picado
+soar|dispararse
+dwelling|vivienda
+pedestrian|peatón
+curriculum|plan de estudios
+drawback|inconveniente
+outskirts|afueras
+urbanization|urbanización
+globalization|globalización
+sedentary|sedentario
+deforestation|deforestación
+biodiversity|biodiversidad
+demographic|demográfico
+affordable|asequible
+deterrent|elemento disuasorio
+rehabilitation|rehabilitación
+consumerism|consumismo
+levy|gravamen
+lorry|camión
+timetable|horario
+motorway|autopista
+postcode|código postal
+fortnight|quincena
+cinema|cine
+trainers|zapatillas de deporte
+tram|tranvía
+underground|metro
+roundabout|rotonda
+pensioner|jubilado
+teenager|adolescente
+double|duplicarse
+triple|triplicarse
+halve|reducirse a la mitad
+steadily|de forma constante
+sharply|bruscamente
+upward|ascendente
+downward|descendente
+dramatically|drásticamente
+marginally|ligeramente
+stabilize|estabilizarse
+twofold|doble
+threefold|triple
+quadruple|cuadruplicarse
+dip|ligero descenso
+slump|caída brusca
+upturn|repunte
+trough|punto más bajo
+respectively|respectivamente
+childcare|cuidado infantil
+retirement|jubilación
+overpopulation|superpoblación
+overcrowding|hacinamiento
+homelessness|sinhogarismo
+vandalism|vandalismo
+offender|delincuente
+imprisonment|encarcelamiento
+sustainability|sostenibilidad
+landfill|vertedero
+greenhouse|invernadero
+footprint|huella
+pollutant|contaminante
+automation|automatización
+outsourcing|externalización
+multinational|multinacional
+advertising|publicidad
+materialism|materialismo
+multicultural|multicultural
+immigration|inmigración
+discrimination|discriminación
+numeracy|competencia numérica
+vocational|profesional (formación)
+apprenticeship|aprendizaje (oficio)
+truancy|absentismo escolar
+vaccination|vacunación
+preventable|evitable
+ageing|envejecido
+healthcare|atención sanitaria
+wellbeing|bienestar
+nutritious|nutritivo
+taxpayer|contribuyente
+tertiary|terciario (enseñanza superior)
+desertification|desertificación
+overfishing|sobrepesca
+telecommuting|teletrabajo
+entrepreneurship|emprendimiento
+assimilation|asimilación
+malnourished|desnutrido
+subsidize|subvencionar
+privatize|privatizar
+nationalize|nacionalizar
+conservationist|conservacionista
+reoffend|reincidir
+additive|aditivo
+advert|anuncio
+bicycle|bicicleta
+canteen|comedor
+fridge|nevera
+parking|aparcamiento
+playground|parque infantil
+supermarket|supermercado
+tourism|turismo
+slightly|ligeramente
+souvenir|recuerdo
+barbecue|barbacoa
+biscuit|galleta
+chips|patatas fritas
+cooker|cocina (aparato)
+crisps|patatas fritas de bolsa
+dishwasher|lavavajillas
+duvet|edredón
+gardening|jardinería
+kindergarten|jardín de infancia
+laundry|colada
+mayor|alcalde
+pub|bar, pub
+seaside|costa, playa
+takeaway|comida para llevar
+toddler|niño pequeño
+torch|linterna
+trolley|carrito
+weekday|día laborable
+traveling|viajes
+smartphone|teléfono inteligente
+banking|banca
+bungalow|casa de una planta
+calorie|caloría
+careers|orientación profesional
+carer|cuidador
+cheque|cheque
+commuter|persona que viaja al trabajo
+convenience|comodidad
+cyclist|ciclista
+disposable|desechable
+enroll|inscribirse
+flatmate|compañero de piso
+funding|financiación
+graffiti|grafiti
+grocer|tendero
+headteacher|director de escuela
+heatwave|ola de calor
+internship|prácticas
+lecturer|profesor universitario
+manufacturing|fabricación
+motorist|conductor
+overtime|horas extra
+packaging|embalaje
+plumber|fontanero
+rainfall|precipitaciones
+secondary|secundario
+skyscraper|rascacielos
+spending|gasto
+terraced|adosado
+textile|textil
+trainee|aprendiz, becario
+tuition|matrícula, clases
+wheelchair|silla de ruedas
+workplace|lugar de trabajo
+approximately|aproximadamente
+declining|en declive
+rapidly|rápidamente
+flooding|inundaciones
+backpacker|mochilero
+marketing|marketing
+arcade|salón recreativo
+asthma|asma
+chemist|farmacia
+cosmetics|cosméticos
+detached|independiente (casa)
+diesel|diésel
+doorstep|umbral
+footpath|sendero
+fundraising|recaudación de fondos
+hostel|albergue
+junction|cruce
+landline|teléfono fijo
+marketplace|mercado
+nightlife|vida nocturna
+overweight|con sobrepeso
+paperwork|papeleo
+pollen|polen
+postal|postal
+preschool|preescolar
+savings|ahorros
+sickness|enfermedad
+signpost|señal indicadora
+skateboard|monopatín
+spa|balneario, spa
+sportswear|ropa deportiva
+subway|paso subterráneo
+terminal|terminal
+textbook|libro de texto
+toiletries|artículos de aseo
+tracksuit|chándal
+unpaid|no remunerado
+villager|aldeano
+wardrobe|armario
+whiteboard|pizarra blanca
+compost|compost
+ozone|ozono
+rainforest|selva tropical
+reusable|reutilizable
+offline|sin conexión
+online|en línea
+selfie|selfi
+meter|metro
+liter|litro
+overcrowded|abarrotado
+underpaid|mal pagado
+overpriced|demasiado caro
+recovery|recuperación
+hike|subida brusca
+noticeable|notable
+broadband|banda ancha
+streaming|streaming
+allotment|huerto urbano
+arthritis|artritis
+bedsit|estudio de una habitación
+biofuel|biocombustible
+citizenship|ciudadanía
+civilization|civilización
+councillor|concejal
+deprived|desfavorecido
+diabetes|diabetes
+ecotourism|ecoturismo
+greenery|vegetación
+humanities|humanidades
+insulation|aislamiento
+irrigation|riego
+jobseeker|demandante de empleo
+lifelong|de toda la vida
+lifespan|esperanza de vida
+maternity|maternidad
+offshore|marino, en alta mar
+paramedic|paramédico
+residential|residencial
+retailer|minorista
+suburban|suburbano
+taxation|fiscalidad
+transit|transporte, tránsito
+turbine|turbina
+upbringing|crianza
+utilities|suministros
+similarly|del mismo modo
+consequently|por consiguiente
+globalize|globalizar
+standardize|estandarizar
+prioritize|priorizar
+maximize|maximizar
+urbanize|urbanizar
+industrialize|industrializar
+specialize|especializarse
+legalize|legalizar
+punishment|castigo
+addiction|adicción
+burnout|agotamiento laboral
+commuting|desplazamientos diarios
+emissions|emisiones
+warming|calentamiento
+fertiliser|fertilizante
+preservation|conservación
+loyalty|lealtad
+affordability|asequibilidad
+antisocial|antisocial, incívico
+autism|autismo
+childminder|niñera
+dentistry|odontología
+dietary|alimentario
+exhaustion|agotamiento
+flyover|paso elevado
+freeway|autopista
+generator|generador
+gigabyte|gigabyte
+handset|auricular, móvil
+householder|propietario de vivienda
+housewife|ama de casa
+intercity|interurbano
+jobcentre|oficina de empleo
+lodger|inquilino (de una habitación)
+menswear|ropa de hombre
+midwife|comadrona
+motorcyclist|motorista
+nappy|pañal
+newsagent|quiosco
+overcharge|cobrar de más
+overdraft|descubierto
+parental|parental
+pharmacist|farmacéutico
+pickpocket|carterista
+placement|prácticas
+policing|labor policial
+pothole|bache
+punctuality|puntualidad
+railcard|tarjeta de descuento de tren
+rainwater|agua de lluvia
+receptionist|recepcionista
+recruitment|contratación
+rental|alquiler
+retiree|jubilado
+salesperson|vendedor
+schooling|escolarización
+shopkeeper|tendero
+smog|esmog
+spokesperson|portavoz
+starvation|inanición
+stationery|papelería
+storey|planta, piso
+streetlight|farola
+superstore|hipermercado
+thermostat|termostato
+townhouse|casa adosada
+underpass|paso inferior
+vandal|vándalo
+vending|venta automática
+warranty|garantía
+wellness|bienestar
+windfarm|parque eólico
+biodegradable|biodegradable
+drainage|drenaje
+ecological|ecológico
+ecosystem|ecosistema
+environmentalist|ecologista
+floodwater|aguas de inundación
+methane|metano
+photosynthesis|fotosíntesis
+plantation|plantación
+radioactive|radiactivo
+toxin|toxina
+advertisement|anuncio
+breadwinner|sostén de la familia
+disadvantaged|desfavorecido
+dropout|alumno que abandona los estudios
+literate|alfabetizado
+multilingual|multilingüe
+outsource|externalizar
+socialize|socializar
+underfunded|infrafinanciado
+fourfold|cuatro veces
+fivefold|cinco veces
+tenfold|diez veces
+midpoint|punto medio
+upsurge|aumento repentino
+spike|pico, subida brusca
+proportionally|proporcionalmente
+whilst|mientras que
+amongst|entre
+undoubtedly|sin duda
+inevitably|inevitablemente
+tighten|endurecer
+sprawl|expansión urbana descontrolada
+slum|barrio marginal
+anaesthetic|anestésico
+barrister|abogado (ante tribunales)
+digitize|digitalizar
+gentrification|gentrificación
+illiteracy|analfabetismo
+immunize|inmunizar
+kerb|bordillo
+lone|solitario
+metropolitan|metropolitano
+overheads|gastos generales
+parenthood|paternidad, maternidad
+sanitation|saneamiento
+sewage|aguas residuales
+wastage|desperdicio
+wholesale|al por mayor
+proportionate|proporcionado
+arguably|posiblemente
+undeniably|innegablemente
+deprivation|privación, pobreza
+censorship|censura
+individualism|individualismo
+materialistic|materialista
+characterise|caracterizar
+categorise|clasificar
+penalize|penalizar
+cybercrime|ciberdelincuencia
+anonymity|anonimato
+flexitime|horario flexible
+telecommute|teletrabajar
+dependency|dependencia
+alcoholism|alcoholismo
+bursary|beca
+carriageway|calzada
+catchment|zona de influencia (escolar)
+employability|empleabilidad
+eviction|desahucio
+geriatric|geriátrico
+greenbelt|cinturón verde
+hoarding|valla publicitaria
+incineration|incineración
+incinerator|incineradora
+inpatient|paciente hospitalizado
+layby|área de descanso
+lettings|alquileres
+microchip|microchip
+monorail|monorraíl
+obligatory|obligatorio
+occupancy|ocupación
+outpatient|paciente ambulatorio
+physiotherapy|fisioterapia
+premises|local, instalaciones
+quarterly|trimestral
+refurbishment|reforma
+regeneration|regeneración
+roadworks|obras en la carretera
+rota|turnos
+solicitor|abogado
+statistician|estadístico
+surcharge|recargo
+tenancy|arrendamiento
+tollbooth|cabina de peaje
+valuation|tasación
+veterinary|veterinario
+viaduct|viaducto
+aridity|aridez
+contamination|contaminación
+coolant|refrigerante
+degradation|degradación
+depletion|agotamiento
+dioxide|dióxido
+effluent|efluente
+geothermal|geotérmico
+hydroelectric|hidroeléctrico
+incentivize|incentivar
+microplastic|microplástico
+permafrost|permafrost
+poaching|caza furtiva
+purification|purificación
+reforestation|reforestación
+sewerage|alcantarillado
+smokestack|chimenea industrial
+affluence|opulencia
+bilingualism|bilingüismo
+childrearing|crianza de los hijos
+conformist|conformista
+crowdfunding|micromecenazgo
+cyberbullying|ciberacoso
+elitism|elitismo
+emancipation|emancipación
+ethnicity|etnia
+globalized|globalizado
+inclusivity|inclusividad
+intergenerational|intergeneracional
+joblessness|desempleo
+marginalized|marginado
+overconsumption|consumo excesivo
+populist|populista
+stereotyping|estereotipación
+teleworking|teletrabajo
+upskilling|mejora de competencias
+disproportionately|desproporcionadamente
+counterproductive|contraproducente
+overrepresented|sobrerrepresentado
+underrepresented|infrarrepresentado
+stagnation|estancamiento
+thereafter|a partir de entonces
+footfall|afluencia de clientes
+megacity|megaciudad
+brownfield|terreno industrial abandonado
+greenfield|terreno sin urbanizar
+photovoltaic|fotovoltaico
+civilize|civilizar
+custodial|privativo de libertad
+delinquency|delincuencia juvenil
+pedestrianize|peatonalizar
+abattoir|matadero
+conurbation|conurbación
+guarantor|avalista
+conservationism|conservacionismo
+eutrophication|eutrofización
+monoculture|monocultivo
+salinization|salinización
+commercialization|comercialización
+commodification|mercantilización
+homogeneity|homogeneidad
+meritocracy|meritocracia
+obsolescence|obsolescencia
+polarization|polarización
+privatization|privatización

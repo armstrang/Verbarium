@@ -1,0 +1,388 @@
+# Verbarium — French meanings for 1-squire-e.txt: word|meaning
+quarter|quart
+queen|reine
+question|question
+queue|file d’attente
+quick|rapide
+quiet|calme, silencieux
+quit|quitter, arrêter
+quite|assez, plutôt
+race|course
+railway|chemin de fer
+rain|pluie
+raise|lever, augmenter
+rare|rare
+rarely|rarement
+rather|plutôt
+raw|cru
+reach|atteindre
+ready|prêt
+real|réel, vrai
+realise|se rendre compte
+receipt|reçu
+recipe|recette
+record|enregistrer
+regret|regretter
+regular|régulier
+relax|se détendre
+remember|se souvenir
+remind|rappeler
+rent|louer
+repeat|répéter
+request|demande
+rescue|secourir
+rest|se reposer
+restaurant|restaurant
+return|revenir, rendre
+rice|riz
+rich|riche
+ride|monter, aller à
+ring|sonner, appeler
+river|rivière, fleuve
+road|route
+rob|voler, cambrioler
+rock|rocher
+roof|toit
+root|racine
+rope|corde
+rough|rugueux, accidenté
+round|rond
+route|itinéraire
+row|rang, rangée
+royal|royal
+rub|frotter
+rude|impoli
+ruin|ruiner, gâcher
+rush|se précipiter
+sad|triste
+safe|sûr, en sécurité
+sail|naviguer
+sale|vente, soldes
+salt|sel
+same|même
+sand|sable
+satisfied|satisfait
+save|économiser, sauver
+scared|effrayé
+scene|scène
+science|science
+scissors|ciseaux
+score|score, note
+scream|crier, hurler
+screen|écran
+sea|mer
+season|saison
+seat|siège
+second|seconde
+secret|secret
+secretary|secrétaire
+seed|graine
+seem|sembler
+seldom|rarement
+sell|vendre
+send|envoyer
+sense|sens
+sensible|raisonnable
+sentence|phrase
+servant|serviteur
+serve|servir
+several|plusieurs
+sew|coudre
+shade|ombre
+shadow|ombre
+shake|secouer
+shallow|peu profond
+shame|honte, dommage
+shape|forme
+sharp|tranchant, aiguisé
+sheet|feuille, drap
+shelf|étagère
+shell|coquillage, coquille
+shine|briller
+ship|navire
+shirt|chemise
+shock|choc
+shoot|tirer
+shop|magasin
+shore|rivage
+short|court, petit
+shoulder|épaule
+shout|crier
+show|montrer
+shower|douche, averse
+shut|fermer
+shy|timide
+sick|malade
+side|côté
+sight|vue
+sign|signe, panneau
+signal|signal
+silence|silence
+silent|silencieux
+silly|bête, ridicule
+silver|argent
+since|depuis
+sing|chanter
+single|seul, célibataire
+sink|couler
+size|taille
+skin|peau
+sky|ciel
+sleep|dormir
+slice|tranche
+slide|glisser
+slight|léger
+slip|glisser
+slow|lent
+smart|intelligent, élégant
+smell|sentir, sentir bon
+smile|sourire
+smoke|fumée
+smooth|lisse
+snake|serpent
+snow|neige
+soap|savon
+social|social
+sock|chaussette
+soft|doux, mou
+soil|sol, terre
+soldier|soldat
+solid|solide
+sometimes|parfois
+somewhere|quelque part
+song|chanson
+soon|bientôt
+sore|douloureux
+sorry|désolé
+sort|sorte
+soul|âme
+sound|son
+soup|soupe
+sour|aigre
+south|sud
+space|espace
+spare|de rechange, libre
+speak|parler
+speech|discours
+speed|vitesse
+spell|épeler
+spend|dépenser, passer
+spicy|épicé
+spill|renverser
+spirit|esprit
+spite|malgré (in spite of)
+spoil|gâcher, gâter
+spoon|cuillère
+sport|sport
+spot|tache, endroit
+spring|printemps
+square|carré, place
+stage|scène, étape
+stair|marche
+stamp|timbre, tampon
+stand|être debout
+star|étoile
+stare|fixer du regard
+start|commencer
+state|état
+station|gare, station
+stay|rester, séjourner
+steal|voler
+steam|vapeur
+steel|acier
+steep|raide
+step|pas
+stick|bâton
+still|encore, toujours
+stomach|estomac, ventre
+stone|pierre
+stop|arrêter
+store|stocker, ranger
+storm|tempête
+story|histoire
+straight|droit
+strange|étrange
+stranger|inconnu
+stream|ruisseau
+street|rue
+strength|force
+stretch|étirer
+strict|strict
+strike|frapper, faire grève
+string|ficelle, corde
+strong|fort
+student|étudiant
+study|étudier
+stupid|stupide
+style|style
+subject|matière, sujet
+success|succès
+sudden|soudain
+suffer|souffrir
+sugar|sucre
+suit|aller bien, convenir
+suitable|adapté, approprié
+sum|somme
+summer|été
+sunny|ensoleillé
+supper|souper, dîner
+suppose|supposer
+sure|sûr
+surprise|surprise
+surround|entourer
+swallow|avaler
+sweep|balayer
+sweet|sucré, doux
+swim|nager
+swing|se balancer
+switch|changer, basculer
+table|table
+tail|queue
+tale|conte
+talent|talent
+talk|parler
+tall|grand
+taste|goûter
+tax|impôt, taxe
+teach|enseigner
+team|équipe
+tear|déchirer
+tent|tente
+term|trimestre, terme
+terrible|terrible
+test|test, examen
+thank|remercier
+theatre|théâtre
+thick|épais
+thief|voleur
+thin|mince
+thirsty|assoiffé
+though|bien que
+thought|pensée
+thread|fil
+throat|gorge
+through|à travers
+throw|lancer, jeter
+thunder|tonnerre
+ticket|billet
+tidy|rangé, ordonné
+tie|attacher, nouer
+tight|serré
+tiny|minuscule
+tip|bout, conseil, pourboire
+tired|fatigué
+title|titre
+together|ensemble
+tongue|langue
+tool|outil
+tooth|dent
+top|sommet, haut
+total|total
+touch|toucher
+tour|visite, tournée
+tourist|touriste
+towards|vers
+towel|serviette
+tower|tour
+town|ville
+toy|jouet
+trade|commerce
+train|s’entraîner, former
+translate|traduire
+treat|traiter, soigner
+tree|arbre
+trip|voyage
+trouble|ennui, difficulté
+trousers|pantalon
+true|vrai
+truth|vérité
+try|essayer
+tube|tube
+tune|air, mélodie
+turn|tourner
+twice|deux fois
+twin|jumeau
+type|type
+ugly|laid
+umbrella|parapluie
+uncle|oncle
+understand|comprendre
+unit|unité
+unless|à moins que
+until|jusqu’à
+unusual|inhabituel
+upset|contrarié
+upstairs|en haut
+urgent|urgent
+use|utiliser
+usual|habituel
+usually|d’habitude
+valley|vallée
+valuable|précieux
+vegetable|légume
+village|village
+visit|visiter
+visitor|visiteur
+voice|voix
+vote|voter
+wage|salaire
+wait|attendre
+wake|se réveiller, réveiller
+walk|marcher
+wall|mur
+wallet|portefeuille
+wander|errer
+war|guerre
+warm|chaud
+warn|avertir
+wash|laver
+watch|regarder, surveiller
+wave|vague
+weak|faible
+weapon|arme
+wear|porter
+weather|temps (météo)
+wedding|mariage
+week|semaine
+weekend|week-end
+weight|poids
+welcome|accueillir
+west|ouest
+wet|mouillé
+wheel|roue
+whether|si
+while|moment, pendant que
+whisper|chuchoter
+whistle|siffler
+whole|entier
+wide|large
+wife|épouse, femme
+wild|sauvage
+win|gagner
+wind|vent
+window|fenêtre
+wing|aile
+winter|hiver
+wire|fil, câble
+wise|sage
+wish|souhaiter
+within|en moins de, à l’intérieur de
+without|sans
+wonderful|merveilleux
+wood|bois
+wool|laine
+word|mot
+work|travailler
+world|monde
+worry|s’inquiéter
+worse|pire
+wound|blessure
+wrap|envelopper
+write|écrire
+wrong|faux, erroné
+yard|cour
+year|année
+yet|encore, déjà
+young|jeune
+zero|zéro
+zone|zone

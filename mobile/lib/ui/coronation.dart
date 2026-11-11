@@ -103,7 +103,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                 const Spacer(flex: 2),
                 Opacity(
                   opacity: _span(0.0, 0.1),
-                  child: Center(child: Label(tr('Tercatat dalam kronik', 'Entered in the chronicle'))),
+                  child: Center(child: Label(tr('Tercatat dalam kronik', 'Entered in the chronicle', 'Registrado en la crónica', 'Consigné dans la chronique'))),
                 ),
                 const SizedBox(height: 10),
                 SizedBox(
@@ -136,7 +136,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                 Opacity(
                   opacity: _span(0.44, 0.54),
                   child: Text(
-                    tr('Engkau dinobatkan sebagai', 'You are crowned'),
+                    tr('Engkau dinobatkan sebagai', 'You are crowned', 'Has sido coronado', 'Te voici couronné'),
                     textAlign: TextAlign.center,
                     style: T.display(21, pal.muted, italic: true),
                   ),
@@ -179,7 +179,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                     children: [
                       if (widget.job != null) ...[
                         Text(
-                          tr('dan menempuh jalan ${widget.job!.name}', 'and take the path of the ${widget.job!.name}'),
+                          tr('dan menempuh jalan ${widget.job!.name}', 'and take the path of the ${widget.job!.name}', 'y tomas el camino de ${widget.job!.name}', 'et tu prends la voie de ${widget.job!.name}'),
                           textAlign: TextAlign.center,
                           style: T.display(24, pal.ink, italic: true),
                         ),
@@ -188,7 +188,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                       Text(
                         tr(
                           'Kosakata setara ${scoreLine(rank, App.I.banner)}',
-                          'Vocabulary on a par with ${scoreLine(rank, App.I.banner)}',
+                          'Vocabulary on a par with ${scoreLine(rank, App.I.banner)}', 'Vocabulario equivalente a ${scoreLine(rank, App.I.banner)}', 'Vocabulaire équivalent à ${scoreLine(rank, App.I.banner)}',
                         ),
                         textAlign: TextAlign.center,
                         style: T.body(19, pal.ink, w: FontWeight.w500),
@@ -197,7 +197,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                       Text(
                         tr(
                           'Boss tumbang: ${widget.right} dari ${widget.total} kata diketik benar, dengan batas waktu, tanpa petunjuk.',
-                          'The boss has fallen: ${widget.right} of ${widget.total} words typed right, against the clock, without hints.',
+                          'The boss has fallen: ${widget.right} of ${widget.total} words typed right, against the clock, without hints.', 'El jefe ha caído: ${widget.right} de ${widget.total} palabras escritas bien, contra el reloj y sin pistas.', 'Le boss est tombé : ${widget.right} mots tapés justes sur ${widget.total}, contre la montre, sans indice.',
                         ),
                         textAlign: TextAlign.center,
                         style: T.body(16, pal.muted, height: 1.45),
@@ -209,11 +209,11 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                             : (rank >= Engine.maxRank
                                   ? tr(
                                       'Tidak ada gelar di atas ini. Jagalah.',
-                                      'There is no title above this one. Guard it.',
+                                      'There is no title above this one. Guard it.', 'No hay título por encima de este. Guárdalo.', 'Il n’y a pas de titre au-dessus. Garde-le.',
                                     )
                                   : tr(
                                       'Gelar ini dijaga. Kata yang terlupa harus direbut kembali.',
-                                      'This title is kept. Words forgotten must be won back.',
+                                      'This title is kept. Words forgotten must be won back.', 'Este título se conserva. Las palabras olvidadas hay que recuperarlas.', 'Ce titre est conservé. Les mots oubliés doivent être reconquis.',
                                     )),
                         textAlign: TextAlign.center,
                         style: T.body(15.5, pal.muted, height: 1.45),
@@ -237,7 +237,7 @@ class _CoronationState extends State<Coronation> with SingleTickerProviderStateM
                   child: Opacity(
                     opacity: end,
                     child: InkButton(
-                      tr('Masuk ke negerimu', 'Enter your realm'),
+                      tr('Masuk ke negerimu', 'Enter your realm', 'Entra en tu reino', 'Entre dans ton royaume'),
                       onTap: () {
                         final job = widget.job;
                         // the new character is introduced once, on its own page that only its button closes

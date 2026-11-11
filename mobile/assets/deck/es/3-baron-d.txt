@@ -1,0 +1,445 @@
+# Verbarium — Spanish meanings for 3-baron-d.txt: word|meaning
+earnings|ingresos
+eavesdrop|escuchar a escondidas
+edible|comestible
+edifice|edificio
+effigy|efigie
+elasticity|elasticidad
+electoral|electoral
+elegance|elegancia
+elevation|elevación, altitud
+elimination|eliminación
+embargo|embargo
+embezzle|malversar
+emblem|emblema
+embryo|embrión
+emigrate|emigrar
+eminence|eminencia
+emissary|emisario
+empathize|empatizar
+emphatic|enfático
+enactment|promulgación
+enchant|encantar
+enclave|enclave
+encode|codificar
+endanger|poner en peligro
+endorsement|respaldo
+endowment|dotación
+endurance|resistencia
+enforcement|aplicación (de la ley)
+engrave|grabar
+engross|absorber
+enlargement|ampliación
+enlist|alistarse, recurrir a
+enormity|magnitud, gravedad
+enrage|enfurecer
+ensemble|conjunto
+enslave|esclavizar
+entangle|enredar
+enthral|cautivar
+entice|atraer, tentar
+entourage|séquito
+entrant|participante
+entrust|confiar
+envious|envidioso
+epic|epopeya
+epoch|época
+equate|equiparar
+equator|ecuador
+equestrian|ecuestre
+equity|equidad, capital
+eradication|erradicación
+erect|erigir
+erosion|erosión
+errand|recado
+eruption|erupción
+escort|escoltar
+espionage|espionaje
+estrange|distanciar
+eternal|eterno
+ethos|espíritu, valores
+etiquette|etiqueta
+evacuation|evacuación
+evaluation|evaluación
+evict|desahuciar
+excavation|excavación
+excel|sobresalir
+excise|impuesto especial
+exclaim|exclamar
+exclusion|exclusión
+execution|ejecución
+exemption|exención
+exertion|esfuerzo
+exhale|exhalar
+exhilarate|regocijar, estimular
+exile|exilio
+exodus|éxodo
+expanse|extensión
+expatriate|expatriado
+expectancy|expectativa (de vida)
+expel|expulsar
+expend|gastar
+experimental|experimental
+expiry|vencimiento
+exploration|exploración
+exponential|exponencial
+exposition|exposición
+expulsion|expulsión
+extermination|exterminio
+extinction|extinción
+extinguish|extinguir
+extort|extorsionar
+extradite|extraditar
+extravagant|derrochador, extravagante
+extremist|extremista
+exuberance|exuberancia
+fable|fábula
+fallible|falible
+falter|vacilar
+famished|hambriento
+fanatic|fanático
+farce|farsa
+feasibility|viabilidad
+federation|federación
+feign|fingir
+felony|delito grave
+ferment|fermentar
+ferocious|feroz
+fertilize|fertilizar, fecundar
+feud|enemistad, contienda
+feudal|feudal
+fiasco|fiasco
+figurative|figurado
+finale|final
+finesse|delicadeza, destreza
+fixture|instalación fija, partido
+flagship|buque insignia, emblema
+flair|don, talento
+flamboyant|extravagante, llamativo
+flammable|inflamable
+flank|flanco
+flatter|halagar
+fleeting|fugaz
+flicker|parpadear
+flinch|estremecerse
+flora|flora
+flounder|forcejear, titubear
+flurry|ráfaga, revuelo
+foil|frustrar
+folklore|folclore
+footage|imágenes, metraje
+forage|buscar alimento
+foray|incursión
+foreboding|presentimiento
+forefront|vanguardia
+foreground|primer plano
+forensic|forense
+foresee|prever
+foresight|previsión
+forestall|anticiparse a
+forgery|falsificación
+formality|formalidad
+formation|formación
+formative|formativo
+forsake|abandonar
+fortify|fortificar
+fortress|fortaleza
+fracture|fractura
+fragrance|fragancia
+frail|frágil, débil
+fraternity|fraternidad
+fraudulent|fraudulento
+freelance|autónomo
+frenzy|frenesí
+fringe|margen
+frown|fruncir el ceño
+fruition|realización
+fugitive|fugitivo
+fulfilment|realización, satisfacción
+fumble|buscar a tientas
+functional|funcional
+furnace|horno
+fury|furia
+fusion|fusión
+futility|inutilidad
+gadget|artilugio
+galaxy|galaxia
+gallant|gallardo
+garment|prenda
+garrison|guarnición
+gasp|jadear
+gateway|puerta de entrada
+genealogy|genealogía
+generalization|generalización
+generosity|generosidad
+genesis|génesis
+genocide|genocidio
+gentry|pequeña nobleza
+geology|geología
+geometry|geometría
+germinate|germinar
+ghetto|gueto
+gigantic|gigantesco
+gimmick|truco publicitario
+glacier|glaciar
+glamour|glamur
+glare|mirar con furia, deslumbrar
+glaze|esmalte, glaseado
+gleam|relucir
+glide|deslizarse
+glitter|brillar
+gloom|penumbra, tristeza
+glossary|glosario
+glut|exceso
+gorge|desfiladero
+gospel|evangelio
+graft|corrupción, injerto
+grandeur|grandeza
+granite|granito
+graphic|gráfico, crudo
+gratify|complacer
+gratitude|gratitud
+gravel|grava
+graze|pastar
+grid|cuadrícula, red
+grim|sombrío, severo
+grind|moler
+groan|gemir
+groove|surco, ranura
+gruelling|agotador
+grumble|refunfuñar
+guerrilla|guerrillero
+guild|gremio
+guise|apariencia
+gust|ráfaga
+hail|aclamar
+hallucination|alucinación
+hamlet|aldea
+handicap|desventaja, discapacidad
+handicraft|artesanía
+harass|acosar
+hardy|resistente
+harmonize|armonizar
+harrowing|desgarrador
+hatch|salir del cascarón
+haul|arrastrar, transportar
+haunt|atormentar, rondar
+haven|refugio
+havoc|estragos
+headway|progreso
+hearsay|rumores
+hectic|ajetreado
+hedge|seto
+heirloom|reliquia familiar
+helm|timón
+hemisphere|hemisferio
+herald|anunciar
+herbal|de hierbas
+heretic|hereje
+hermit|ermitaño
+heroic|heroico
+heyday|apogeo
+hibernate|hibernar
+highland|de las tierras altas
+hijack|secuestrar (un vehículo)
+hilarious|divertidísimo
+hindrance|estorbo
+hinge|depender de
+hinterland|interior
+hoax|engaño, bulo
+homage|homenaje
+homeland|patria
+homicide|homicidio
+honorary|honorario
+horde|horda
+horrific|horroroso
+hospitable|hospitalario
+hospitality|hospitalidad
+hostage|rehén
+hover|flotar, cernerse
+hub|centro, eje
+hue|tono, matiz
+humanitarian|humanitario
+humiliate|humillar
+humility|humildad
+hurdle|obstáculo
+hurl|lanzar
+hygiene|higiene
+hymn|himno
+hype|bombo publicitario
+hypocrite|hipócrita
+hysteria|histeria
+icon|icono
+ideological|ideológico
+idiom|modismo
+ignite|encender
+illiterate|analfabeto
+illustrious|ilustre
+imbalance|desequilibrio
+immaterial|irrelevante
+immortal|inmortal
+immunity|inmunidad
+impassioned|apasionado
+impassive|impasible
+impeach|destituir
+imperial|imperial
+impersonal|impersonal
+impertinent|impertinente
+implant|implantar
+implicate|implicar
+impound|confiscar, incautar
+impractical|poco práctico
+imprint|huella
+imprison|encarcelar
+improbable|improbable
+impromptu|improvisado
+inaccessible|inaccesible
+inadequate|inadecuado
+inanimate|inanimado
+inaugural|inaugural
+incapable|incapaz
+incense|enfurecer
+inception|comienzo
+incidental|secundario
+incision|incisión
+inclination|inclinación
+incoherent|incoherente
+incompatible|incompatible
+incompetent|incompetente
+inconclusive|no concluyente
+inconsistent|incoherente
+increment|incremento
+incubate|incubar
+indebted|en deuda
+indecisive|indeciso
+indictment|acusación formal
+indignation|indignación
+indiscriminate|indiscriminado
+indisputable|indiscutible
+indistinct|indistinto
+induction|investidura, inducción
+indulgent|indulgente
+industrious|trabajador
+inert|inerte
+inertia|inercia
+infamous|infame
+infantry|infantería
+infatuated|encaprichado
+inference|inferencia
+infest|infestar
+infiltrate|infiltrarse
+infirmary|enfermería
+inflame|inflamar, avivar
+inflate|inflar
+inflexible|inflexible
+informative|informativo
+infuriate|enfurecer
+infuse|infundir
+ingest|ingerir
+inhale|inhalar
+inheritance|herencia
+inhospitable|inhóspito
+inhumane|inhumano
+initiation|iniciación
+injunction|orden judicial
+injustice|injusticia
+inland|del interior
+inmate|recluso
+innovate|innovar
+innumerable|innumerable
+inquisitive|curioso
+insane|loco
+inscription|inscripción
+insecure|inseguro
+inseparable|inseparable
+insignificant|insignificante
+insoluble|insoluble
+insomnia|insomnio
+inspection|inspección
+inspiration|inspiración
+instalment|plazo, cuota
+instantaneous|instantáneo
+instrumental|decisivo
+insufficient|insuficiente
+insular|cerrado, aislado
+insurgent|insurgente
+intangible|intangible
+intelligible|inteligible
+intensify|intensificar
+intensive|intensivo
+intent|intención
+intercept|interceptar
+interchangeable|intercambiable
+interlude|intermedio
+intermediary|intermediario
+interminable|interminable
+intern|becario
+interrogate|interrogar
+intersect|cruzarse
+intertwine|entrelazarse
+intervention|intervención
+intimidate|intimidar
+intolerable|intolerable
+intoxicate|embriagar
+intrigue|intrigar
+introvert|introvertido
+intrude|entrometerse
+intuitive|intuitivo
+invalid|inválido, nulo
+invariably|invariablemente
+invasion|invasión
+invigorate|vigorizar
+invincible|invencible
+involuntary|involuntario
+ironic|irónico
+irrational|irracional
+irregular|irregular
+irreparable|irreparable
+irresistible|irresistible
+irreversible|irreversible
+irritable|irritable
+itinerary|itinerario
+jargon|jerga
+jostle|empujar
+jubilee|jubileo
+judicial|judicial
+judiciary|poder judicial
+juncture|coyuntura
+juvenile|juvenil, infantil
+kernel|núcleo, grano
+kindle|encender
+kinship|parentesco
+knack|habilidad, don
+laborious|laborioso
+labyrinth|laberinto
+lament|lamentar
+landlord|casero
+landslide|deslizamiento, victoria aplastante
+latitude|latitud, libertad
+lawsuit|demanda judicial
+layman|profano
+leaflet|folleto
+leeway|margen
+legible|legible
+legion|legión
+legislature|poder legislativo
+leverage|influencia
+liberate|liberar
+lieutenant|teniente
+likelihood|probabilidad
+limestone|caliza
+lineage|linaje
+liquidate|liquidar
+listless|apático
+litigation|litigio
+livelihood|sustento
+livestock|ganado
+loathe|aborrecer
+locomotive|locomotora
+lodge|presentar, alojarse
+logistics|logística
+longitude|longitud
+loom|cernerse
+lure|atraer
+lush|exuberante
+lyrical|lírico

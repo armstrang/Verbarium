@@ -1,0 +1,261 @@
+# Verbarium — Spanish meanings for 1-squire.txt: word|meaning
+ability|capacidad
+absence|ausencia
+accept|aceptar
+accurate|preciso
+achieve|lograr
+activity|actividad
+admit|admitir
+advantage|ventaja
+advice|consejo
+affect|afectar
+afford|permitirse (pagar)
+agreement|acuerdo
+aim|objetivo
+allow|permitir
+amount|cantidad
+ancient|antiguo
+announce|anunciar
+apply|solicitar
+argue|discutir, sostener
+arrange|organizar
+attend|asistir a
+attitude|actitud
+available|disponible
+average|medio, promedio
+avoid|evitar
+aware|consciente
+background|origen, trasfondo
+balance|equilibrio
+behave|comportarse
+belief|creencia
+benefit|beneficio
+borrow|pedir prestado
+brief|breve
+career|carrera profesional
+cause|causa
+challenge|desafío, reto
+character|carácter, personaje
+choice|elección
+claim|afirmar
+collect|recoger, coleccionar
+common|común
+compare|comparar
+complain|quejarse
+complete|completar
+concern|preocupación
+condition|condición, estado
+confident|seguro de sí mismo
+connect|conectar
+consider|considerar
+contain|contener
+continue|continuar
+control|controlar
+convince|convencer
+correct|correcto
+create|crear
+crowd|multitud
+culture|cultura
+customer|cliente
+damage|daño
+deal|ocuparse de
+decide|decidir
+decrease|disminuir
+degree|título universitario
+deliver|entregar, repartir
+demand|demanda
+depend|depender
+describe|describir
+design|diseñar
+destroy|destruir
+detail|detalle
+develop|desarrollar
+difference|diferencia
+difficulty|dificultad
+discover|descubrir
+discuss|hablar de, discutir
+disease|enfermedad
+distance|distancia
+divide|dividir
+doubt|duda
+earn|ganar (dinero)
+economy|economía
+education|educación
+effect|efecto
+effort|esfuerzo
+employ|emplear
+encourage|animar, fomentar
+energy|energía
+environment|medio ambiente
+equal|igual
+escape|escapar
+event|acontecimiento, evento
+evidence|pruebas
+exact|exacto
+examine|examinar
+example|ejemplo
+exchange|intercambiar
+expect|esperar, prever
+experience|experiencia
+experiment|experimento
+explain|explicar
+express|expresar
+fail|fracasar, suspender
+familiar|conocido, familiar
+feature|rasgo, característica
+final|final
+flood|inundación
+focus|concentrarse
+foreign|extranjero
+forest|bosque
+fuel|combustible
+function|función
+future|futuro
+gain|obtener, ganar
+general|general
+global|global, mundial
+goal|meta
+government|gobierno
+growth|crecimiento
+guess|adivinar
+habit|hábito
+harm|dañar
+health|salud
+improve|mejorar
+include|incluir
+income|ingresos
+increase|aumentar
+industry|industria
+influence|influencia
+inform|informar
+injury|lesión
+instead|en su lugar
+interest|interés
+introduce|presentar
+invent|inventar
+involve|implicar
+issue|asunto, problema
+journey|viaje
+knowledge|conocimiento
+language|idioma, lengua
+law|ley
+limit|límite
+local|local
+manage|gestionar, lograr
+material|material
+measure|medir
+member|miembro
+memory|memoria, recuerdo
+method|método
+modern|moderno
+natural|natural
+necessary|necesario
+notice|notar, darse cuenta
+obvious|obvio
+occur|ocurrir
+offer|ofrecer
+opinion|opinión
+opportunity|oportunidad
+ordinary|corriente, común
+organize|organizar
+particular|particular, concreto
+patient|paciente
+perform|realizar, actuar
+period|periodo
+permit|permitir
+polite|educado
+pollution|contaminación
+popular|popular
+population|población
+positive|positivo
+possible|posible
+practice|práctica
+prefer|preferir
+prepare|preparar
+prevent|impedir, prevenir
+previous|anterior
+private|privado
+problem|problema
+process|proceso
+produce|producir
+protect|proteger
+provide|proporcionar
+public|público
+purpose|propósito
+quality|calidad
+quantity|cantidad
+reason|razón
+receive|recibir
+recent|reciente
+recognize|reconocer
+reduce|reducir
+refuse|negarse, rechazar
+region|región
+relationship|relación
+remain|permanecer, seguir
+remove|quitar, eliminar
+repair|reparar
+replace|sustituir
+reply|responder
+report|informe
+require|requerir, exigir
+research|investigación
+respect|respeto
+responsible|responsable
+result|resultado
+reveal|revelar
+reward|recompensa
+risk|riesgo
+role|papel
+rule|regla
+safety|seguridad
+salary|sueldo
+search|buscar
+select|seleccionar
+separate|separado
+serious|serio, grave
+service|servicio
+share|compartir
+similar|similar, parecido
+simple|sencillo
+situation|situación
+skill|habilidad
+society|sociedad
+solve|resolver
+source|fuente
+special|especial
+spread|extenderse, difundir
+standard|norma, nivel
+steady|estable, constante
+structure|estructura
+struggle|luchar, esforzarse
+succeed|tener éxito
+suggest|sugerir, indicar
+supply|suministro
+support|apoyar
+surface|superficie
+survive|sobrevivir
+system|sistema
+task|tarea
+technology|tecnología
+temperature|temperatura
+tend|tender a
+theory|teoría
+threat|amenaza
+tradition|tradición
+transport|transporte
+trust|confiar en
+typical|típico
+useful|útil
+value|valor
+variety|variedad
+various|varios, diversos
+view|opinión, vista
+visible|visible
+volunteer|voluntario
+waste|desperdiciar
+wealth|riqueza
+weigh|pesar
+wonder|preguntarse
+worth|que vale, digno de
+youth|juventud

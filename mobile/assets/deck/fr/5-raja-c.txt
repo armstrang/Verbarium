@@ -1,0 +1,124 @@
+# Verbarium — French meanings for 5-raja-c.txt: word|meaning
+abnegation|abnégation
+adumbrate|esquisser
+anodyne|anodin
+antediluvian|antédiluvien
+apotheosis|apothéose
+arrant|fieffé
+arrogate|s’arroger
+asperity|aspérité, rudesse
+avuncular|paternel, bienveillant
+beatific|béat
+bilious|bilieux
+bowdlerize|expurger
+bumptious|prétentieux
+calumny|calomnie
+captious|pointilleux
+cavil|chicaner
+chary|méfiant
+chimera|chimère
+coda|coda
+compendious|concis et complet
+contumacious|rebelle
+corpulent|corpulent
+coruscate|scintiller
+credo|credo
+cynosure|point de mire
+denouement|dénouement
+desiccate|dessécher
+diaphanous|diaphane
+dilettante|dilettante
+disabuse|détromper
+disquisition|dissertation
+doggerel|vers de mirliton
+dyspeptic|dyspeptique, grincheux
+effete|affaibli, efféminé
+effulgent|resplendissant
+elide|élider
+enjoin|enjoindre
+epigram|épigramme
+equipoise|équilibre
+ersatz|ersatz
+eulogy|éloge funèbre
+euphemism|euphémisme
+exegesis|exégèse
+exiguous|exigu
+expostulate|protester
+fecund|fécond
+fulminate|fulminer
+fulsome|excessif
+halcyon|paisible, heureux
+hermetic|hermétique
+histrionic|théâtral
+homily|homélie
+hortatory|exhortatif
+imbroglio|imbroglio
+immure|emmurer
+impute|imputer
+inculcate|inculquer
+insouciant|insouciant
+internecine|fratricide
+inveigle|embobiner
+invidious|odieux, injuste
+jingoism|chauvinisme
+lacuna|lacune
+liminal|liminal
+litany|litanie
+maladroit|maladroit
+martinet|tyran (de la discipline)
+mellifluous|mélodieux
+mendicant|mendiant
+minatory|menaçant
+misanthrope|misanthrope
+nugatory|futile, nul
+obloquy|opprobre
+otiose|oiseux
+palimpsest|palimpseste
+panegyric|panégyrique
+paroxysm|paroxysme
+parvenu|parvenu
+peccadillo|peccadille
+pedagogue|pédagogue
+pejorative|péjoratif
+penumbra|pénombre
+peregrination|pérégrination
+perspicuous|clair, limpide
+pertinacious|opiniâtre
+philistine|philistin
+plangent|plaintif
+plenary|plénier
+polyglot|polyglotte
+propinquity|proximité
+proscribe|proscrire
+protean|protéiforme
+puissant|puissant
+pulchritude|beauté
+pusillanimous|pusillanime
+raconteur|conteur
+rapprochement|rapprochement
+rebarbative|rébarbatif
+recrudescence|recrudescence
+redoubt|redoute
+refulgent|resplendissant
+riposte|riposte
+saturnine|taciturne
+sententious|sentencieux
+simulacrum|simulacre
+sinecure|sinécure
+solecism|solécisme
+solipsism|solipsisme
+somnolent|somnolent
+sophistry|sophisme
+stentorian|de stentor
+sybarite|sybarite
+tendentious|tendancieux
+torpid|engourdi
+traduce|calomnier
+tumid|enflé, ampoulé
+vainglorious|vaniteux
+variegated|bigarré
+venial|véniel
+verisimilitude|vraisemblance
+vituperate|vitupérer
+winnow|vanner, trier
+zephyr|zéphyr

@@ -1,0 +1,190 @@
+# Verbarium — French meanings for 1-squire-b.txt: word|meaning
+accident|accident
+act|agir
+action|action
+active|actif
+actual|réel, véritable
+add|ajouter
+address|adresse
+adult|adulte
+adventure|aventure
+advertise|faire de la publicité
+afraid|effrayé, qui a peur
+age|âge
+agency|agence
+agree|être d’accord
+ahead|devant, en avant
+air|air
+airport|aéroport
+alarm|alarme
+alive|vivant
+alone|seul
+aloud|à voix haute
+although|bien que
+amazing|étonnant
+ambulance|ambulance
+among|parmi
+angry|en colère
+animal|animal
+annoy|agacer
+answer|répondre
+anxious|anxieux
+apartment|appartement
+apologize|s’excuser
+appear|apparaître, sembler
+appearance|apparence
+appointment|rendez-vous
+area|zone, région
+argument|dispute, argument
+army|armée
+arrive|arriver
+article|article
+artist|artiste
+ashamed|honteux
+asleep|endormi
+athlete|athlète
+attack|attaquer
+attention|attention
+attractive|attirant
+audience|public, auditoire
+author|auteur
+autumn|automne
+awake|éveillé
+award|prix, récompense
+awful|affreux
+baggage|bagages
+bake|cuire au four
+bank|banque
+bargain|bonne affaire
+basic|de base
+basket|panier
+battery|batterie, pile
+battle|bataille
+beach|plage
+bear|supporter
+beat|battre, frapper
+beauty|beauté
+behind|derrière
+believe|croire
+belong|appartenir
+below|en dessous de
+bend|plier, se pencher
+beside|à côté de
+bill|facture, addition
+birth|naissance
+bite|mordre
+bitter|amer
+blame|blâmer, reprocher
+blanket|couverture
+bleed|saigner
+blind|aveugle
+block|bloquer
+blood|sang
+blow|souffler
+board|planche, tableau
+boil|bouillir
+bomb|bombe
+bone|os
+border|frontière
+bored|qui s’ennuie
+boring|ennuyeux
+boss|patron, chef
+bother|déranger
+bottom|fond, bas
+brain|cerveau
+branch|branche, succursale
+brave|courageux
+break|casser
+breath|souffle, respiration
+breathe|respirer
+bridge|pont
+bright|brillant, vif
+bring|apporter
+broad|large
+build|construire
+burn|brûler
+bury|enterrer
+business|affaires, entreprise
+busy|occupé
+calm|calme
+camera|appareil photo
+camp|camp
+cancel|annuler
+candidate|candidat
+capital|capitale
+captain|capitaine
+care|se soucier
+careful|prudent, soigneux
+careless|négligent
+carry|porter
+case|cas, affaire
+cash|argent liquide
+castle|château
+catch|attraper
+celebrate|fêter, célébrer
+central|central
+century|siècle
+ceremony|cérémonie
+certain|certain
+chain|chaîne
+chance|chance, occasion
+change|changer
+charge|faire payer
+cheap|bon marché
+cheat|tricher, tromper
+check|vérifier
+cheerful|joyeux
+chemical|produit chimique
+chief|principal
+childhood|enfance
+choose|choisir
+citizen|citoyen
+clear|clair
+clever|intelligent, malin
+climate|climat
+climb|grimper, escalader
+close|fermer
+cloth|tissu
+clothes|vêtements
+cloud|nuage
+coach|entraîneur
+coast|côte
+coin|pièce de monnaie
+collection|collection
+college|université, faculté
+colour|couleur
+comfortable|confortable
+company|entreprise
+competition|concurrence, concours
+computer|ordinateur
+concert|concert
+conversation|conversation
+cook|cuisiner
+cool|frais
+copy|copier
+corner|coin
+cost|coûter
+cotton|coton
+count|compter
+country|pays
+countryside|campagne
+couple|couple
+courage|courage
+course|cours
+court|tribunal
+cover|couvrir
+crash|s’écraser, percuter
+crazy|fou
+cream|crème
+creature|créature
+crop|récolte, culture
+cross|traverser
+cruel|cruel
+cry|pleurer
+cup|tasse
+cure|remède, guérison
+curious|curieux
+current|actuel
+custom|coutume
+cut|couper
+cycle|faire du vélo

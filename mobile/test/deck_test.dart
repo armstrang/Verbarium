@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:verbarium/app/lang.dart' as lang;
 import 'package:verbarium/data/deck.dart';
 
 import 'util.dart';
@@ -92,5 +93,34 @@ void formsAndChips() {
     expect(w.wrongForm('increase'), isTrue);
     expect(w.tokens(false).join(' '), 'The company has increased its prices.');
     expect(w.buildable, isTrue);
+  });
+
+  test('every word and collocation has a Spanish and a French meaning, and the gloss follows the language', () {
+    final all = [
+      ...core(),
+      for (final b in ['toefl', 'ielts']) ...Deck.parse(File('assets/deck/$b.txt').readAsStringSync()),
+    ];
+    final collocs = Deck.parseCollocs(File('assets/deck/collocations.txt').readAsStringSync());
+    for (final l in ['es', 'fr']) {
+      final m = <String, String>{};
+      for (final f in Directory('assets/deck/$l').listSync().whereType<File>().where((f) => f.path.endsWith('.txt') && !f.path.endsWith('collocations.txt'))) {
+        m.addAll(Deck.parseDefs(f.readAsStringSync()));
+      }
+      for (final w in all) {
+        expect(m[w.id] ?? '', isNotEmpty, reason: '$l: ${w.id}');
+      }
+      final c = Deck.parseDefs(File('assets/deck/$l/collocations.txt').readAsStringSync());
+      for (final x in collocs) {
+        expect(c['${x.before}[${x.correct}]${x.after}'] ?? '', isNotEmpty, reason: '$l: ${x.id}');
+      }
+    }
+    glosses['tide'] = ['marea', 'marée'];
+    const w = Word('tide', ['tide'], 'n', 'pasang surut', 'The ___ came in.', 1, [], 'the rise and fall of the sea');
+    for (final (code, want) in const [('id', 'pasang surut'), ('en', 'the rise and fall of the sea'), ('es', 'marea'), ('fr', 'marée')]) {
+      lang.code = code;
+      expect(w.gloss, want, reason: code);
+    }
+    lang.code = 'id';
+    glosses.remove('tide');
   });
 }

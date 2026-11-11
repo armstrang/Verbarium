@@ -21,6 +21,8 @@ flutter:
   assets:
     - assets/deck/
     - assets/deck/en/
+    - assets/deck/es/
+    - assets/deck/fr/
     - assets/legal/
   fonts:
     - family: Fell

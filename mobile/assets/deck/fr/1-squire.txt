@@ -1,0 +1,261 @@
+# Verbarium — French meanings for 1-squire.txt: word|meaning
+ability|capacité
+absence|absence
+accept|accepter
+accurate|exact, précis
+achieve|atteindre, réaliser
+activity|activité
+admit|admettre
+advantage|avantage
+advice|conseil
+affect|affecter
+afford|avoir les moyens
+agreement|accord
+aim|but, objectif
+allow|permettre
+amount|quantité, montant
+ancient|ancien, antique
+announce|annoncer
+apply|postuler
+argue|se disputer, soutenir
+arrange|organiser
+attend|assister à
+attitude|attitude
+available|disponible
+average|moyen
+avoid|éviter
+aware|conscient
+background|milieu, contexte
+balance|équilibre
+behave|se comporter
+belief|croyance
+benefit|avantage, bienfait
+borrow|emprunter
+brief|bref
+career|carrière
+cause|cause
+challenge|défi
+character|caractère, personnage
+choice|choix
+claim|affirmer
+collect|collecter, ramasser
+common|courant, commun
+compare|comparer
+complain|se plaindre
+complete|achever, compléter
+concern|inquiétude
+condition|condition, état
+confident|confiant, sûr de soi
+connect|relier, connecter
+consider|envisager, considérer
+contain|contenir
+continue|continuer
+control|contrôler
+convince|convaincre
+correct|correct
+create|créer
+crowd|foule
+culture|culture
+customer|client
+damage|dégâts, dommage
+deal|s’occuper de
+decide|décider
+decrease|diminuer
+degree|diplôme
+deliver|livrer
+demand|demande
+depend|dépendre
+describe|décrire
+design|concevoir
+destroy|détruire
+detail|détail
+develop|développer
+difference|différence
+difficulty|difficulté
+discover|découvrir
+discuss|discuter de
+disease|maladie
+distance|distance
+divide|diviser
+doubt|doute
+earn|gagner (de l’argent)
+economy|économie
+education|éducation
+effect|effet
+effort|effort
+employ|employer
+encourage|encourager
+energy|énergie
+environment|environnement
+equal|égal
+escape|s’échapper
+event|événement
+evidence|preuves
+exact|exact
+examine|examiner
+example|exemple
+exchange|échanger
+expect|s’attendre à
+experience|expérience
+experiment|expérience
+explain|expliquer
+express|exprimer
+fail|échouer
+familiar|familier
+feature|caractéristique
+final|final
+flood|inondation
+focus|se concentrer
+foreign|étranger
+forest|forêt
+fuel|carburant
+function|fonction
+future|avenir
+gain|gagner, obtenir
+general|général
+global|mondial
+goal|objectif
+government|gouvernement
+growth|croissance
+guess|deviner
+habit|habitude
+harm|nuire à
+health|santé
+improve|améliorer
+include|inclure
+income|revenu
+increase|augmenter
+industry|industrie
+influence|influence
+inform|informer
+injury|blessure
+instead|à la place
+interest|intérêt
+introduce|présenter
+invent|inventer
+involve|impliquer
+issue|question, problème
+journey|voyage, trajet
+knowledge|connaissance
+language|langue
+law|loi
+limit|limite
+local|local
+manage|gérer, réussir à
+material|matériau
+measure|mesurer
+member|membre
+memory|mémoire, souvenir
+method|méthode
+modern|moderne
+natural|naturel
+necessary|nécessaire
+notice|remarquer
+obvious|évident
+occur|se produire
+offer|offrir, proposer
+opinion|opinion, avis
+opportunity|occasion
+ordinary|ordinaire
+organize|organiser
+particular|particulier
+patient|patient
+perform|effectuer, jouer
+period|période
+permit|permettre
+polite|poli
+pollution|pollution
+popular|populaire
+population|population
+positive|positif
+possible|possible
+practice|pratique, entraînement
+prefer|préférer
+prepare|préparer
+prevent|empêcher, prévenir
+previous|précédent
+private|privé
+problem|problème
+process|processus
+produce|produire
+protect|protéger
+provide|fournir
+public|public
+purpose|but
+quality|qualité
+quantity|quantité
+reason|raison
+receive|recevoir
+recent|récent
+recognize|reconnaître
+reduce|réduire
+refuse|refuser
+region|région
+relationship|relation
+remain|rester
+remove|enlever, supprimer
+repair|réparer
+replace|remplacer
+reply|répondre
+report|rapport
+require|exiger, nécessiter
+research|recherche
+respect|respect
+responsible|responsable
+result|résultat
+reveal|révéler
+reward|récompense
+risk|risque
+role|rôle
+rule|règle
+safety|sécurité
+salary|salaire
+search|chercher
+select|sélectionner
+separate|séparé
+serious|sérieux, grave
+service|service
+share|partager
+similar|semblable
+simple|simple
+situation|situation
+skill|compétence
+society|société
+solve|résoudre
+source|source
+special|spécial
+spread|se répandre
+standard|norme, niveau
+steady|stable, régulier
+structure|structure
+struggle|lutter, peiner
+succeed|réussir
+suggest|suggérer, indiquer
+supply|approvisionnement, réserve
+support|soutenir
+surface|surface
+survive|survivre
+system|système
+task|tâche
+technology|technologie
+temperature|température
+tend|avoir tendance à
+theory|théorie
+threat|menace
+tradition|tradition
+transport|transport
+trust|faire confiance à
+typical|typique
+useful|utile
+value|valeur
+variety|variété
+various|divers
+view|avis, vue
+visible|visible
+volunteer|bénévole
+waste|gaspiller
+wealth|richesse
+weigh|peser
+wonder|se demander
+worth|qui vaut, digne de
+youth|jeunesse

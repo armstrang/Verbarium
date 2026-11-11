@@ -1,0 +1,480 @@
+# Verbarium — Spanish meanings for 3-baron-b.txt: word|meaning
+abbreviate|abreviar
+abide|cumplir (abide by)
+abnormal|anormal
+abrupt|brusco
+absurd|absurdo
+accessory|accesorio
+acclaim|aclamación
+accord|acuerdo
+accordingly|en consecuencia
+accusation|acusación
+activate|activar
+adaptation|adaptación
+addict|adicto
+adhesive|adhesivo
+adjoin|lindar con
+administer|administrar
+admirable|admirable
+adolescence|adolescencia
+adversary|adversario
+advisory|consultivo
+affection|cariño
+affirm|afirmar
+aggravate|agravar
+agitate|agitar, inquietar
+agrarian|agrario
+albeit|aunque
+alienate|alejar, enajenar
+align|alinear
+allegation|acusación, alegato
+allege|alegar, afirmar
+alliance|alianza
+allot|asignar
+ambivalent|ambivalente
+amid|en medio de
+analogous|análogo
+anecdote|anécdota
+annex|anexionar
+anonymous|anónimo
+antagonist|antagonista
+apparatus|aparato
+appraise|evaluar, tasar
+apprentice|aprendiz
+arbitrate|arbitrar
+archive|archivo
+arena|estadio, ruedo
+aristocracy|aristocracia
+array|conjunto, serie
+ascend|ascender
+aspiration|aspiración
+assertion|afirmación
+assumption|suposición
+assurance|garantía
+asylum|asilo
+attain|alcanzar
+attainment|logro
+attentive|atento
+audit|auditoría
+authentic|auténtico
+authorize|autorizar
+aviation|aviación
+backdrop|telón de fondo
+backlash|reacción adversa
+ballot|votación
+bankrupt|en quiebra
+benchmark|referencia
+beneficiary|beneficiario
+benign|benigno
+bilateral|bilateral
+bizarre|extraño, estrafalario
+bleak|sombrío
+blueprint|plano, proyecto
+blunt|desafilado, directo
+blur|desdibujar
+breakdown|avería, desglose
+brink|borde, umbral
+brutal|brutal
+bulky|voluminoso
+bureaucracy|burocracia
+bypass|eludir, rodear
+calibre|calibre, nivel
+candid|franco
+captivate|cautivar
+cater|atender, satisfacer
+caveat|advertencia
+censor|censurar
+census|censo
+chronic|crónico
+chronicle|crónica
+chronological|cronológico
+clarity|claridad
+coalition|coalición
+coerce|coaccionar
+cognitive|cognitivo
+collateral|garantía, aval
+commemorate|conmemorar
+commentary|comentario
+commonplace|habitual
+communal|comunal
+compassion|compasión
+compelling|convincente
+competence|competencia
+complexity|complejidad
+compliance|cumplimiento
+complication|complicación
+composition|composición
+compress|comprimir
+conceivable|concebible
+conception|concepción
+concession|concesión
+concise|conciso
+condense|condensar
+configuration|configuración
+confiscate|confiscar
+conform|ajustarse
+conscientious|concienzudo
+consecutive|consecutivo
+consolidate|consolidar
+conspiracy|conspiración
+constituent|componente, elector
+constraint|restricción
+contaminate|contaminar
+contempt|desprecio
+contention|argumento, disputa
+continuity|continuidad
+conversely|a la inversa
+conviction|convicción, condena
+coordinate|coordinar
+cornerstone|piedra angular
+correlation|correlación
+correspondence|correspondencia
+counterpart|homólogo
+credibility|credibilidad
+culprit|culpable
+curb|frenar
+customary|habitual
+daunt|intimidar
+deadlock|punto muerto
+debris|escombros
+decisive|decisivo
+decree|decreto
+default|impago, incumplimiento
+defer|aplazar
+deficiency|carencia
+defy|desafiar
+degrade|degradar
+deliberately|a propósito
+denial|negación
+density|densidad
+deploy|desplegar
+depreciate|depreciarse
+deprive|privar
+descendant|descendiente
+detain|detener
+devise|idear
+diagnosis|diagnóstico
+dictate|dictar
+diffuse|difundir
+dilute|diluir
+diplomacy|diplomacia
+directive|directiva
+disclose|revelar
+discourse|discurso
+discretion|discreción, criterio
+dismantle|desmantelar
+disparate|dispar
+dispatch|enviar
+disposal|eliminación
+disposition|temperamento
+dissent|disidencia
+distinctive|distintivo
+divert|desviar
+documentary|documental
+dormant|inactivo
+dubious|dudoso
+duplicate|duplicar
+dwell|detenerse en, morar
+eccentric|excéntrico
+eclipse|eclipse
+ecology|ecología
+elapse|transcurrir
+electorate|electorado
+elite|élite
+eloquent|elocuente
+embark|emprender, embarcarse
+embed|incrustar
+empathy|empatía
+empower|capacitar
+enact|promulgar
+endow|dotar
+enlighten|iluminar, aclarar
+enrich|enriquecer
+entrepreneur|emprendedor
+epidemic|epidemia
+equilibrium|equilibrio
+escalate|intensificarse
+essence|esencia
+esteem|estima
+ethics|ética
+evade|eludir
+evoke|evocar
+exceptional|excepcional
+exclusive|exclusivo
+exemplary|ejemplar
+exempt|exento
+expenditure|gasto
+expire|caducar
+explanatory|explicativo
+exploitation|explotación
+exquisite|exquisito
+fabricate|inventar, falsificar
+facet|faceta
+faction|facción
+fallout|consecuencias
+feat|hazaña
+fertility|fertilidad
+fidelity|fidelidad
+finite|finito
+flaw|defecto
+flourish|florecer, prosperar
+foremost|principal
+forfeit|perder (un derecho)
+formidable|formidable, temible
+forum|foro
+franchise|franquicia
+frantic|frenético
+frugal|frugal, ahorrador
+gauge|medir, calibrar
+generic|genérico
+genre|género
+gist|lo esencial
+governance|gobernanza
+grievance|queja, agravio
+grounds|motivos
+habitual|habitual
+hallmark|sello distintivo
+haphazard|desordenado, al azar
+harness|aprovechar
+hasten|acelerar
+hazardous|peligroso
+heed|hacer caso de
+hefty|considerable
+heighten|aumentar
+hereditary|hereditario
+hindsight|retrospectiva
+homogeneous|homogéneo
+hostility|hostilidad
+humane|humano, humanitario
+hybrid|híbrido
+hypothetical|hipotético
+illuminate|iluminar
+imminent|inminente
+immerse|sumergir
+impair|perjudicar
+impending|inminente
+implication|implicación
+improvise|improvisar
+inaugurate|inaugurar
+inclusive|inclusivo
+incur|incurrir en
+indefinite|indefinido
+indicator|indicador
+indifferent|indiferente
+indulge|consentir, darse un gusto
+inequality|desigualdad
+infinite|infinito
+inflict|infligir
+influx|afluencia
+infringe|infringir
+ingenuity|ingenio
+inquire|preguntar
+insistence|insistencia
+insofar|en la medida en que (insofar as)
+instability|inestabilidad
+insulate|aislar
+intact|intacto
+intake|ingesta
+integration|integración
+interim|provisional
+intuition|intuición
+invaluable|inestimable
+inventory|inventario
+irony|ironía
+irrelevant|irrelevante
+irrespective|independientemente de
+jurisdiction|jurisdicción
+landmark|hito, punto de referencia
+lapse|lapsus, intervalo
+lavish|lujoso, espléndido
+layout|disposición
+legacy|legado
+legislate|legislar
+legitimacy|legitimidad
+lenient|indulgente
+liability|responsabilidad, carga
+liable|responsable, propenso
+liaison|enlace
+linear|lineal
+literacy|alfabetización
+literal|literal
+lobby|presionar
+longevity|longevidad
+loophole|laguna legal
+magnitude|magnitud
+mainstream|convencional, dominante
+malfunction|avería
+mandatory|obligatorio
+manifest|manifestar
+manuscript|manuscrito
+maritime|marítimo
+materialize|materializarse
+mediocre|mediocre
+mentor|mentor
+metaphor|metáfora
+migration|migración
+milestone|hito
+mimic|imitar
+misconception|idea errónea
+mobilize|movilizar
+monopoly|monopolio
+morale|moral (ánimo)
+mortality|mortalidad
+motif|motivo
+mundane|mundano, rutinario
+narrate|narrar
+negligence|negligencia
+niche|nicho
+nominal|nominal, simbólico
+nonetheless|no obstante
+notorious|de mala fama
+novelty|novedad
+nutrient|nutriente
+oblivious|ajeno, inconsciente
+obstruct|obstruir
+occupant|ocupante
+occurrence|suceso
+optimal|óptimo
+optimism|optimismo
+orthodox|ortodoxo
+outrage|indignación
+outright|total, abierto
+outset|comienzo
+overhaul|revisar a fondo
+overlap|solaparse
+oversee|supervisar
+overt|abierto, manifiesto
+pact|pacto
+paramount|primordial
+partisan|partidista
+patron|mecenas, cliente
+penetrate|penetrar
+perception|percepción
+peripheral|periférico
+perpetual|perpetuo
+persistent|persistente
+petition|petición
+philanthropy|filantropía
+pinpoint|precisar
+plight|situación difícil
+polarize|polarizar
+portfolio|cartera
+portray|retratar
+postulate|postular
+potent|potente
+precedent|precedente
+precision|precisión
+predecessor|predecesor
+predominantly|predominantemente
+premature|prematuro
+prestigious|prestigioso
+prevalent|extendido
+proactive|proactivo
+probe|investigar
+proclaim|proclamar
+proficiency|competencia, dominio
+prolong|prolongar
+propaganda|propaganda
+prosperity|prosperidad
+protocol|protocolo
+prototype|prototipo
+provision|provisión, disposición
+provisional|provisional
+quota|cuota
+ratify|ratificar
+rationale|razón de ser
+reassure|tranquilizar
+rebuke|reprender
+recipient|destinatario
+reciprocal|recíproco
+reconcile|reconciliar
+recur|repetirse
+redeem|redimir, canjear
+refrain|abstenerse
+rehabilitate|rehabilitar
+reimburse|reembolsar
+reiterate|reiterar
+relentless|implacable
+reminiscent|que recuerda a
+remnant|resto
+renowned|renombrado
+repeal|derogar
+repertoire|repertorio
+repress|reprimir
+reservoir|embalse
+respective|respectivo
+retaliate|tomar represalias
+retrieve|recuperar
+retrospect|retrospectiva
+revive|reavivar
+rhetoric|retórica
+rigour|rigor
+rite|rito
+ruthless|despiadado
+safeguard|salvaguardar
+sanctuary|santuario, refugio
+saturation|saturación
+secular|laico
+sediment|sedimento
+segment|segmento
+sentiment|sentimiento
+setback|revés
+shortcoming|defecto
+shrewd|astuto
+siege|asedio
+simultaneous|simultáneo
+solidarity|solidaridad
+sovereign|soberano
+spark|provocar
+spectrum|espectro
+speculate|especular
+stance|postura
+stagnate|estancarse
+stakeholder|parte interesada
+stark|marcado, austero
+statute|estatuto, ley
+stereotype|estereotipo
+stigma|estigma
+strand|hebra, hilo
+streamline|simplificar
+subsidiary|filial
+succession|sucesión
+supervision|supervisión
+surge|aumento repentino
+surpass|superar
+surveillance|vigilancia
+symmetry|simetría
+synthesis|síntesis
+tariff|arancel
+temperament|temperamento
+testimony|testimonio
+texture|textura
+theoretical|teórico
+tolerant|tolerante
+toll|número de víctimas, peaje
+trajectory|trayectoria
+tranquil|tranquilo
+transcend|trascender
+transient|pasajero
+transparency|transparencia
+traverse|atravesar
+tribunal|tribunal
+turmoil|agitación
+turnover|facturación, rotación
+underestimate|subestimar
+unify|unificar
+upheaval|agitación, trastorno
+utility|utilidad, servicio
+validate|validar
+variable|variable
+vendor|vendedor
+verdict|veredicto
+versus|contra
+vicinity|alrededores
+vigilant|vigilante
+vocation|vocación
+void|vacío
+waive|renunciar a
+watershed|momento decisivo
+withhold|retener, negar
+workforce|mano de obra

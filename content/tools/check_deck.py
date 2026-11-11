@@ -91,6 +91,29 @@ for name, ws in sorted(words_in.items()):
 for path in glob.glob(os.path.join(root, "en", "*.txt")):
     if os.path.basename(path) not in words_in: bad.append(f"en/{os.path.basename(path)}: no deck file of that name")
 print("definitions", have, "of", total)
+# Spanish and French meanings: es/<same file>, fr/<same file> (`word|meaning`; collocations `phrase with [answer]|meaning`)
+colloc_phrases = [l.split("|")[1] for l in open(os.path.join(root, "collocations.txt"), encoding="utf-8") if l.strip() and not l.startswith("#")]
+for lang in ("es", "fr"):
+    n = 0
+    for name, ws in sorted(words_in.items()):
+        path = os.path.join(root, lang, name)
+        got = {}
+        if os.path.exists(path):
+            for ln, line in enumerate(open(path, encoding="utf-8"), 1):
+                line = line.rstrip("\n")
+                if not line or line.startswith("#"): continue
+                w, _, m = line.partition("|")
+                if w not in ws: bad.append(f"{lang}/{name}:{ln} not a word of {name}: {w}"); continue
+                if w in got: bad.append(f"{lang}/{name}:{ln} twice: {w}")
+                if not m.strip() or "|" in m or "'" in m: bad.append(f"{lang}/{name}:{ln} meaning")
+                got[w] = m
+        n += len(got)
+        missing = [w for w in ws if w not in got]
+        if missing and "--loose" not in sys.argv: bad.append(f"{lang}/{name}: {len(missing)} words without a meaning, e.g. {', '.join(missing[:5])}")
+    path = os.path.join(root, lang, "collocations.txt")
+    have_c = [l.split("|")[0] for l in open(path, encoding="utf-8") if l.strip() and not l.startswith("#")] if os.path.exists(path) else []
+    if sorted(have_c) != sorted(colloc_phrases) and "--loose" not in sys.argv: bad.append(f"{lang}/collocations.txt does not match collocations.txt")
+    print(lang, "meanings", n, "of", total, "collocations", len(have_c), "of", len(colloc_phrases))
 for k in sorted(counts): print(k, counts[k])
 print("core", sum(v for (l, _), v in counts.items() if l == "core"),
       "toefl", sum(v for (l, _), v in counts.items() if l == "toefl"),

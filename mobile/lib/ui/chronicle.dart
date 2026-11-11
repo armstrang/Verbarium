@@ -16,10 +16,12 @@ import 'widgets.dart';
 
 const _months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
 const _monthsEn = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const _monthsEs = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const _monthsFr = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
 
 String dateText(int ms) {
   final d = DateTime.fromMillisecondsSinceEpoch(ms);
-  return '${d.day} ${(english ? _monthsEn : _months)[d.month - 1]} ${d.year}';
+  return '${d.day} ${(switch (code) { 'id' => _months, 'es' => _monthsEs, 'fr' => _monthsFr, _ => _monthsEn })[d.month - 1]} ${d.year}';
 }
 
 class ChronicleTab extends StatelessWidget {
@@ -36,33 +38,33 @@ class ChronicleTab extends StatelessWidget {
     final events = e.events;
     return TabBody(
       children: [
-        Label(tr('Kronik', 'Chronicle')),
+        Label(tr('Kronik', 'Chronicle', 'Crónica', 'Chronique')),
         const SizedBox(height: 6),
         Text(
           today[0] + today[1] == 0
-              ? tr('Hari ini belum ada catatan.', 'Nothing is noted for today yet.')
-              : tr('Tercatat hari ini, ${today[2]} kata dijawab benar.', 'Noted today: ${today[2]} words answered right.'),
+              ? tr('Hari ini belum ada catatan.', 'Nothing is noted for today yet.', 'Hoy aún no hay nada anotado.', 'Rien n’est encore noté aujourd’hui.')
+              : tr('Tercatat hari ini, ${today[2]} kata dijawab benar.', 'Noted today: ${today[2]} words answered right.', 'Anotado hoy: ${today[2]} palabras respondidas bien.', 'Noté aujourd’hui : ${today[2]} mots bien répondus.'),
           style: T.display(27, pal.ink),
         ),
         const SizedBox(height: 20),
         Rise(
           child: Row(
             children: [
-              Expanded(child: _Figure(e.streak, tr('hari beruntun', 'days in a row'))),
-              Expanded(child: _Figure(e.solidTotal, tr('kata kukuh', 'solid words'))),
-              Expanded(child: _Figure(e.seenTotal, tr('kata dikenal', 'words met'))),
+              Expanded(child: _Figure(e.streak, tr('hari beruntun', 'days in a row', 'días seguidos', 'jours d’affilée'))),
+              Expanded(child: _Figure(e.solidTotal, tr('kata kukuh', 'solid words', 'palabras firmes', 'mots ancrés'))),
+              Expanded(child: _Figure(e.seenTotal, tr('kata dikenal', 'words met', 'palabras vistas', 'mots rencontrés'))),
             ],
           ),
         ),
         const SizedBox(height: 22),
         const Rule(),
         const SizedBox(height: 18),
-        Label(tr('Empat belas hari terakhir', 'The last fourteen days')),
+        Label(tr('Empat belas hari terakhir', 'The last fourteen days', 'Los últimos catorce días', 'Les quatorze derniers jours')),
         const SizedBox(height: 12),
         Semantics(
           label: tr(
             'Jawaban per hari selama empat belas hari. Hari ini ${counts.last}, paling banyak ${counts.reduce(max)}.',
-            'Answers per day over fourteen days. Today ${counts.last}, at most ${counts.reduce(max)}.',
+            'Answers per day over fourteen days. Today ${counts.last}, at most ${counts.reduce(max)}.', 'Respuestas por día en catorce días. Hoy ${counts.last}, como máximo ${counts.reduce(max)}.', 'Réponses par jour sur quatorze jours. Aujourd’hui ${counts.last}, au plus ${counts.reduce(max)}.',
           ),
           child: SizedBox(
             height: 96,
@@ -74,13 +76,13 @@ class ChronicleTab extends StatelessWidget {
           children: [
             Text(dateText(now - 13 * Engine.day), style: T.body(14, pal.muted)),
             const Spacer(),
-            Text(tr('hari ini · ${counts.last} jawaban', 'today · ${counts.last} answers'), style: T.body(14, pal.muted)),
+            Text(tr('hari ini · ${counts.last} jawaban', 'today · ${counts.last} answers', 'hoy · ${counts.last} respuestas', 'aujourd’hui · ${counts.last} réponses'), style: T.body(14, pal.muted)),
           ],
         ),
         const SizedBox(height: 22),
         const Rule(),
         const SizedBox(height: 18),
-        Label(tr('Peristiwa', 'Events')),
+        Label(tr('Peristiwa', 'Events', 'Sucesos', 'Événements')),
         const SizedBox(height: 4),
         if (events.isEmpty)
           Padding(
@@ -88,7 +90,7 @@ class ChronicleTab extends StatelessWidget {
             child: Text(
               tr(
                 'Belum ada ujian yang tercatat. Kronikmu mulai ditulis saat kamu pertama kali diuji.',
-                'No trial is on record yet. Your chronicle begins when you are first put to the test.',
+                'No trial is on record yet. Your chronicle begins when you are first put to the test.', 'Aún no consta ninguna prueba. Tu crónica empieza la primera vez que te pongan a prueba.', 'Aucune épreuve n’est encore consignée. Ta chronique commence à ta première épreuve.',
               ),
               style: T.body(16, pal.muted, height: 1.45),
             ),
@@ -139,16 +141,16 @@ class _EventRow extends StatelessWidget {
     final text = switch (kind) {
       'job' =>
         job.hidden
-            ? tr('Sebuah jalan tersembunyi terbuka: engkau kini ${job.name}.', 'A hidden path opened: you are now a ${job.name}.')
-            : tr('Engkau menempuh jalan ${job.name}.', 'You took the path of the ${job.name}.'),
-      'crown' => tr('Dinobatkan sebagai $name. $a dari $b kata benar.', 'Crowned $name. $a of $b words right.'),
-      'fail' => tr('Ujian penobatan $name belum lulus. $a dari $b kata benar.', 'The coronation trial for $name was not passed. $a of $b words right.'),
-      'place' => tr('Ujian penempatan. Mulai sebagai $name.', 'Placement test. Started as $name.'),
-      'drop' => tr('Gelar turun menjadi $name karena tidak dipertahankan.', 'The title fell to $name because it was not defended.'),
-      'hold' => tr('Gelar $name dipertahankan. $a dari $b kata benar.', 'The title of $name was defended. $a of $b words right.'),
-      'sub' => tr('Seorang penjaga jalan tumbang. $name naik satu tingkat.', 'A guard of the road fell. $name rose one stage.'),
-      'subfail' => tr('Dipukul mundur oleh penjaga jalan. $a dari $b pukulan masuk.', 'Beaten back by a guard of the road. $a of $b blows landed.'),
-      _ => tr('Gelar $name belum berhasil dipertahankan. $a dari $b kata benar.', 'The title of $name was not defended yet. $a of $b words right.'),
+            ? tr('Sebuah jalan tersembunyi terbuka: engkau kini ${job.name}.', 'A hidden path opened: you are now a ${job.name}.', 'Se abrió un camino oculto: ahora eres ${job.name}.', 'Une voie cachée s’est ouverte : tu es désormais ${job.name}.')
+            : tr('Engkau menempuh jalan ${job.name}.', 'You took the path of the ${job.name}.', 'Tomaste el camino de ${job.name}.', 'Tu as pris la voie de ${job.name}.'),
+      'crown' => tr('Dinobatkan sebagai $name. $a dari $b kata benar.', 'Crowned $name. $a of $b words right.', 'Coronado $name. $a de $b palabras bien.', 'Couronné $name. $a mots justes sur $b.'),
+      'fail' => tr('Ujian penobatan $name belum lulus. $a dari $b kata benar.', 'The coronation trial for $name was not passed. $a of $b words right.', 'No superaste la prueba de coronación de $name. $a de $b palabras bien.', 'L’épreuve de couronnement de $name n’est pas réussie. $a mots justes sur $b.'),
+      'place' => tr('Ujian penempatan. Mulai sebagai $name.', 'Placement test. Started as $name.', 'Prueba de nivel. Empezaste como $name.', 'Test de niveau. Début en tant que $name.'),
+      'drop' => tr('Gelar turun menjadi $name karena tidak dipertahankan.', 'The title fell to $name because it was not defended.', 'El título cayó a $name por no defenderlo.', 'Le titre est retombé à $name faute d’avoir été défendu.'),
+      'hold' => tr('Gelar $name dipertahankan. $a dari $b kata benar.', 'The title of $name was defended. $a of $b words right.', 'El título de $name fue defendido. $a de $b palabras bien.', 'Le titre de $name a été défendu. $a mots justes sur $b.'),
+      'sub' => tr('Seorang penjaga jalan tumbang. $name naik satu tingkat.', 'A guard of the road fell. $name rose one stage.', 'Cayó un guardián del camino. $name subió una etapa.', 'Un gardien de la route est tombé. $name monte d’une étape.'),
+      'subfail' => tr('Dipukul mundur oleh penjaga jalan. $a dari $b pukulan masuk.', 'Beaten back by a guard of the road. $a of $b blows landed.', 'Rechazado por un guardián del camino. $a de $b golpes acertados.', 'Repoussé par un gardien de la route. $a coups portés sur $b.'),
+      _ => tr('Gelar $name belum berhasil dipertahankan. $a dari $b kata benar.', 'The title of $name was not defended yet. $a of $b words right.', 'El título de $name aún no está defendido. $a de $b palabras bien.', 'Le titre de $name n’est pas encore défendu. $a mots justes sur $b.'),
     };
     final won = kind == 'crown' || kind == 'place' || kind == 'hold' || kind == 'sub' || kind == 'job';
     return Container(
