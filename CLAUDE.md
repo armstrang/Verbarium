@@ -13,8 +13,8 @@ and even then confirm first what will change and wait for his yes. Everything el
 
 | Path | What |
 |---|---|
-| `mobile/assets/deck/` | the words, canonical. 6,133 words in all (5,894 core, about 120 per banner); every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`. `en/<same file>`: `word|definition`, plain English, for learning through English |
-| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_audio.py` (numpy + scipy + ffmpeg → `res/raw/*.ogg`), `make_icons.py` (Pillow → `mipmap-*`) |
+| `mobile/assets/deck/` | the words, canonical. 6,912 words in all (5,894 core, about 500 per banner: 513 TOEFL, 505 IELTS); every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`; the banner decides which one is shown, both are accepted. A banner's own words come early among a rank's new words (one in two), and under TOEFL the build question comes more often. `en/<same file>`: `word|definition`, plain English, for learning through English |
+| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_music.py` (the music `m0`…`m5`, `battle` and the effects wrong, rise, levelup, fanfare), `make_audio.py` (the other effects; both numpy + scipy + ffmpeg → `res/raw/*.ogg`), `pair_spellings.py` (adds the British spelling where a known pattern gives one), `make_icons.py` (Pillow → `mipmap-*`) |
 | `mobile/lib/engine/engine.dart` | `Engine`: memory (stability in days, personal `ease`), plan, sitting of `Card`s, the three `Quiz` kinds and their weights, ranks, stages and sub-bosses, trials, placement, defence; `slip()` |
 | `mobile/lib/engine/game.dart` | `Game`: experience and level, combo, figures, quests, feats, gear, enemies, advice, the build (`bp`) and the path of jobs. Never changes memory or rank |
 | `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (37 on the map + 6 hidden), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
@@ -32,13 +32,13 @@ Cloud sessions: Flutter comes from XueCi's `dev-flutter-sdk` release (public dow
 `FLUTTER_ROOT=/opt/flutter dart pub get --offline`, `flutter analyze --no-pub`, `flutter test --no-pub --update-goldens`.
 Only packages in that cache resolve offline, so **no third-party plugins**: native needs go through the method
 channel. No Android SDK here: Kotlin is compiled by CI only. CI (`.github/workflows/flutter.yml`) pushes its
-output to the branch `ci-out/main` and publishes `v0.3-alpha-N` when everything passes.
+output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything passes.
 
 ## Rules
 
 - **Store keys never change** once testers have the app (`v`, `set`, `mem`, `log`, `rank`, `ev`, `win`, `shaky`,
   `cool`, `placed`, `stage`, `subcool`, `ease`, `ret`, `er`, `game`). A format change = a migration and a test.
-- Package **`com.armstrang.verbarium`**. `versionCode` = 3000 + run for test builds. Signing key
+- Package **`com.armstrang.verbarium`**. `versionCode` = 4000 + run for test builds. Signing key
   `keystore/verbarium.jks` is public: test builds only, never Play.
 - **Deck**: everything self-written (no copied word lists or sentences). A sentence has exactly one `___` and the
   headword fits it in the form given. Run `check_deck.py` after edits.
@@ -58,8 +58,12 @@ output to the branch `ci-out/main` and publishes `v0.3-alpha-N` when everything 
   (tanah, vert, gules, azure, purpure, sable). Colour is never the only sign: each shield has its own charge.
   `contrast_test` must stay green.
 - The learning screen stays plain: one sentence with the gap you type into. Ornament and pixel art live in Negeri, Karakter, the fights and the coronation.
-- Pixel art is letters in `pixel.dart` (no image files); look at `test/goldens/60-sprite.png` after changing it.
-- Music: one theme (`THEME` in `make_audio.py`), arranged per title as `m0`…`m5.ogg` plus `battle.ogg`. It must stay Verbarium's own tune: a mood may be an inspiration, a melody may not be copied.
+- Pixel art is built from shapes in `pixel.dart` (no image files): figures 40×43 (body 32 wide, room for a swing),
+  beasts 32×32, each material shaded from the upper left and outlined in its own dark tone. Look at
+  `test/goldens/60-sprite.png` after changing it.
+- Music: one original piece per title in `make_music.py` (`m0` Hutan Pagi, `m1` Perjalanan, `m2` Benteng, `m3`
+  Kenangan Lampau, `m4` Malam Bintang, `m5` Takhta) plus `battle`, growing fuller as the titles rise. Every
+  melody stays Verbarium's own: a mood may be an inspiration, a melody may not be copied.
 - Motion: transform/opacity, leaving faster than arriving (`Dur`), everything honours calm motion (`Look.calm`).
 - Screens draw from `Look.of(context)`; `Look.stamp` changes on every `App.notifyListeners()`, which is what
   redraws them.

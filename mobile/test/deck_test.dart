@@ -30,9 +30,9 @@ void main() {
     final ids = {for (final w in core()) w.id};
     for (final b in ['toefl', 'ielts']) {
       final extra = Deck.parse(File('assets/deck/$b.txt').readAsStringSync());
-      expect(extra.length, greaterThan(35), reason: b);
+      expect(extra.length, greaterThan(450), reason: b);
       for (final w in extra) {
-        expect(w.tier, inInclusiveRange(1, 3), reason: w.id);
+        expect(w.tier, inInclusiveRange(1, 5), reason: w.id);
         expect(ids.contains(w.id), isFalse, reason: '${w.id} is already in the core');
       }
     }

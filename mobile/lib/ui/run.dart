@@ -577,7 +577,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     final en = _enemy!;
     final big = en.boss;
     return SizedBox(
-      height: 144,
+      height: 152,
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -595,7 +595,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             duration: const Duration(milliseconds: 140),
             right: _pose == HeroPose.hurt ? 44 : 18,
             bottom: 15,
-            child: EnemySprite(sprite: en.sprite, tone: en.tone, size: big ? 104 : 84, struck: _struck, beaten: _enemyHp <= 0),
+            child: EnemySprite(sprite: en.sprite, tone: en.tone, size: big ? 96 : 84, struck: _struck, beaten: _enemyHp <= 0),
           ),
           if (_float.isNotEmpty)
             Positioned.fill(

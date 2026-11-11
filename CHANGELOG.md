@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.4 (alpha, not released)
+
+A new look for every figure, a piece of music for every title, and banners that matter.
+
+- **Figures.** The hero, all 43 jobs and the enemies are drawn anew: taller and more heroic (40×43), with eyes
+  and brows, three tones of light on every material and an outline in each part's own dark colour. From tier 2 a
+  fighter wears plate; capes blow behind. The hero walks, winds up and strikes with a swing, flinches when hit and
+  cheers. Enemies (wolf, boar, bandit, knight, skeleton, mage, gargoyle, dragon) are drawn in the same style.
+  The arena is a little larger.
+- **Music.** Each title has its own original piece, fuller as the titles rise: Hutan Pagi (Peasant, harp and
+  flute), Perjalanan (Squire, 6/8 with a frame drum), Benteng (Knight, a slow march with horn and timpani),
+  Kenangan Lampau (Baron, piano), Malam Bintang (Duke, celesta and crickets), Takhta (King, strings, horn and a soft
+  choir). A new battle piece, and new sounds for a wrong answer, a trial passed, a level and a coronation.
+- **Banners.** TOEFL and IELTS now have about 500 words of their own each (TOEFL: lectures in the sciences, history
+  and the arts, and campus life; IELTS: describing graphs and trends, and the topics of essays and of everyday
+  British life), every one with a sentence and an English definition. A banner's words come early among a rank's
+  new words. Under TOEFL the build question, close to its build-a-sentence task, comes more often.
+- More words carry both spellings (organize/organise), shown by the banner and both accepted.
+- The TOEFL score ranges were checked again against ETS's table for the 1–6 scale.
+
 ## v0.3 (alpha, not released)
 
 Jobs, a second learning language, and a deck of more than 6,000 words.

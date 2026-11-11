@@ -120,8 +120,8 @@ class SettingsPage extends StatelessWidget {
                     const SizedBox(height: 8),
                     Text(
                       tr(
-                        'Verbarium 0.3 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.',
-                        'Verbarium 0.3 (test build) · by Armstrang\nWorks without internet. Your progress lives only on this phone.',
+                        'Verbarium 0.4 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.',
+                        'Verbarium 0.4 (test build) · by Armstrang\nWorks without internet. Your progress lives only on this phone.',
                       ),
                       style: T.body(15, pal.muted, height: 1.5),
                     ),
