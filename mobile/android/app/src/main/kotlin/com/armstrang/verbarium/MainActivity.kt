@@ -6,6 +6,7 @@ import android.media.AudioAttributes
 import android.media.MediaPlayer
 import android.media.SoundPool
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -25,8 +26,18 @@ class MainActivity : FlutterActivity() {
     private val main = Handler(Looper.getMainLooper())
     private var donate: Donate? = null
 
-    /** Google Play Billing only starts when the support page asks for products */
+    /** Google Play Billing only starts when the support page is opened, and ends when it is left: the internet
+     *  permission that Billing brings is used for nothing else */
     private fun don(): Donate = donate ?: Donate(this).also { donate = it }
+
+    /** installed from the Play Store? Read on the phone, no network */
+    private fun fromPlay(): Boolean = try {
+        val who = if (Build.VERSION.SDK_INT >= 30) packageManager.getInstallSourceInfo(packageName).installingPackageName
+        else @Suppress("DEPRECATION") packageManager.getInstallerPackageName(packageName)
+        who == "com.android.vending"
+    } catch (e: Exception) {
+        false
+    }
     @Volatile private var ready = false
     private var startedAt = 0L
 
@@ -124,6 +135,12 @@ class MainActivity : FlutterActivity() {
                     don().products((0 until a.length()).map { a.getString(it) }) { main.post { result.success(it) } }
                 }
                 "donBuy" -> don().buy(call.arguments as String) { main.post { result.success(it) } }
+                "donEnd" -> {
+                    donate?.end()
+                    donate = null
+                    result.success(null)
+                }
+                "fromPlay" -> result.success(fromPlay())
                 else -> result.notImplemented()
             }
         }

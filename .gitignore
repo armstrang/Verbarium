@@ -12,3 +12,6 @@ __pycache__/
 mobile/test/failures/
 mobile/test/goldens/
 content/tools/out/
+
+# the Play upload key, decrypted only inside CI from keystore/upload.jks.enc
+keystore/upload.jks

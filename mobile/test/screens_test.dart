@@ -85,14 +85,28 @@ Future<App> learner(
     final next = app.deck.tier(rank + 1);
     final n = (next.length * share).round();
     for (var i = 0; i < n; i++) {
-      mem[next[i].id] = [9.0, i < 12 ? now - 1000 * (i + 1) : now + 3 * Engine.day, 3, i < 6 ? 1 : 0, now - 2 * Engine.day, 1];
+      mem[next[i].id] = [
+        9.0,
+        i < 12 ? now - 1000 * (i + 1) : now + 3 * Engine.day,
+        3,
+        i < 6 ? 1 : 0,
+        now - 2 * Engine.day,
+        1,
+      ];
     }
   }
   final log = app.store.map('log');
   const pattern = [22, 31, 0, 18, 40, 27, 35, 12, 0, 29, 44, 38, 30, 16];
   for (var i = 0; i < 14; i++) {
     final c = history ? pattern[i] : 0;
-    if (c > 0) log[Engine.dayKey(now - (13 - i) * Engine.day)] = [c ~/ 3, c - c ~/ 3, (c * 0.85).round(), c - (c * 0.85).round()];
+    if (c > 0) {
+      log[Engine.dayKey(now - (13 - i) * Engine.day)] = [
+        c ~/ 3,
+        c - c ~/ 3,
+        (c * 0.85).round(),
+        c - (c * 0.85).round(),
+      ];
+    }
   }
   if (rank > 0) {
     app.store.list('ev').addAll([
@@ -102,7 +116,9 @@ Future<App> learner(
       {'t': now - 8 * Engine.day, 'k': 'crown', 'r': rank, 'a': 26, 'b': 28},
     ]);
   }
-  return (await tester.runAsync(() => App.boot(backend: MemoryBackend(json.encode(app.store.data)), clock: () => now)))!;
+  return (await tester.runAsync(
+    () => App.boot(backend: MemoryBackend(json.encode(app.store.data)), clock: () => now),
+  ))!;
 }
 
 Future<void> shot(WidgetTester tester, String name) async {
@@ -134,7 +150,8 @@ Future<String> answer(WidgetTester tester, {bool right = true}) async {
     await tester.tap(check);
     return 'cloze';
   }
-  if (has(find.text('Ketuk kata di bawah sesuai urutannya')) || has(find.text('Tap the words below in the right order'))) {
+  if (has(find.text('Ketuk kata di bawah sesuai urutannya')) ||
+      has(find.text('Tap the words below in the right order'))) {
     final words = want.split(' ');
     for (final w in right ? words : words.reversed) {
       await tester.tap(find.text(w).last);
@@ -165,9 +182,33 @@ Future<void> untilGap(WidgetTester tester) async {
 
 void main() {
   setUpAll(() async {
+    App.phoneLanguage = () => 'id';
     Native.off = true;
     splashOn = false;
     await fonts();
+  });
+
+  for (final (phone, want) in const [('es', 'es'), ('fr', 'fr'), ('ja', 'en'), ('id', 'id')]) {
+    testWidgets('a new learner starts in the phone language ($phone -> $want)', (tester) async {
+      App.phoneLanguage = () => phone;
+      final app = (await tester.runAsync(() => App.boot(backend: MemoryBackend())))!;
+      expect(app.langCode, want);
+      App.phoneLanguage = () => 'id';
+    });
+  }
+  testWidgets('a learner who already chose keeps the language', (tester) async {
+    App.phoneLanguage = () => 'fr';
+    final app = (await tester.runAsync(
+      () => App.boot(
+        backend: MemoryBackend(
+          json.encode({
+            'set': {'lang': 'id', 'onb': 1},
+          }),
+        ),
+      ),
+    ))!;
+    expect(app.langCode, 'id');
+    App.phoneLanguage = () => 'id';
   });
 
   testWidgets('first run: banner, then where to start', (tester) async {
@@ -257,8 +298,12 @@ void main() {
 
     final seen = <String>{};
     for (var i = 0; i < 140 && !has(find.text('Selesai')); i++) {
-      final shown = has(find.byKey(const ValueKey('gap-field'))) ? 'cloze' : (has(find.text('Ketuk kata di bawah sesuai urutannya')) ? 'build' : 'choice');
-      if (seen.add(shown)) await shot(tester, '24-${shown == 'cloze' ? 'celah-lagi' : (shown == 'build' ? 'susun' : 'pilih')}');
+      final shown = has(find.byKey(const ValueKey('gap-field')))
+          ? 'cloze'
+          : (has(find.text('Ketuk kata di bawah sesuai urutannya')) ? 'build' : 'choice');
+      if (seen.add(shown)) {
+        await shot(tester, '24-${shown == 'cloze' ? 'celah-lagi' : (shown == 'build' ? 'susun' : 'pilih')}');
+      }
       final kind = await answer(tester, right: i % 9 != 4);
       await beat(tester, 300);
       if (kind == 'build' && seen.add('build-done')) await shot(tester, '25-susun-hasil');
@@ -529,7 +574,11 @@ void main() {
       await beat(tester);
     }
     expect(options, findsNWidgets(4));
-    expect(app.deck.words.every((w) => w.def.isNotEmpty), isTrue, reason: 'every word the app loads has its definition');
+    expect(
+      app.deck.words.every((w) => w.def.isNotEmpty),
+      isTrue,
+      reason: 'every word the app loads has its definition',
+    );
     expect(app.deck.words.length, greaterThan(5900));
     await shot(tester, '74-en-choice');
     await tester.pump(const Duration(seconds: 1));
@@ -592,15 +641,19 @@ void main() {
     await shot(tester, '53-privasi');
     tester.state<NavigatorState>(find.byType(Navigator).first).pop();
     await beat(tester);
-    tester.state<NavigatorState>(find.byType(Navigator).first).push(
-      MaterialPageRoute<void>(
-        builder: (_) => const SupportPage([
-          (id: 'donasi_kecil', price: 'Rp15.000'),
-          (id: 'donasi_sedang', price: 'Rp45.000'),
-          (id: 'donasi_besar', price: 'Rp150.000'),
-        ]),
-      ),
-    );
+    tester
+        .state<NavigatorState>(find.byType(Navigator).first)
+        .push(
+          MaterialPageRoute<void>(
+            builder: (_) => const SupportPage(
+              items: [
+                (id: 'donasi_kecil', price: 'Rp15.000'),
+                (id: 'donasi_sedang', price: 'Rp45.000'),
+                (id: 'donasi_besar', price: 'Rp150.000'),
+              ],
+            ),
+          ),
+        );
     await beat(tester);
     expect(find.textContaining('Rp45.000'), findsOneWidget);
     await shot(tester, '54-dukung');
@@ -643,9 +696,17 @@ void main() {
                   children: [
                     for (final pose in HeroPose.values) HeroSprite(garb: Jobs.byId('blade').garb, pose: pose, size: 72),
                     for (final j in Jobs.all)
-                      HeroSprite(garb: j.garb, tier: j.tier, weapon: j.tier, shield: j.tier > 0 ? j.tier : -1, cloak: j.tier > 1 ? j.tier : -1, size: 56),
+                      HeroSprite(
+                        garb: j.garb,
+                        tier: j.tier,
+                        weapon: j.tier,
+                        shield: j.tier > 0 ? j.tier : -1,
+                        cloak: j.tier > 1 ? j.tier : -1,
+                        size: 56,
+                      ),
                     for (final j in Jobs.all.take(6)) HeroSprite(garb: j.garb, shadow: true, size: 56),
-                    for (final j in Jobs.all.skip(1).take(8)) HeroSprite(garb: j.garb, tier: j.tier, weapon: 2, pose: HeroPose.attack, size: 56),
+                    for (final j in Jobs.all.skip(1).take(8))
+                      HeroSprite(garb: j.garb, tier: j.tier, weapon: 2, pose: HeroPose.attack, size: 56),
                   ],
                 ),
                 const SizedBox(height: 12),

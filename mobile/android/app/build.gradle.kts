@@ -31,11 +31,24 @@ android {
             keyAlias = "verbarium"
             keyPassword = "verbariumkunci"
         }
+        // The Google Play upload key. Only CI has it: keystore/upload.jks.enc is decrypted there with the secret
+        // VERBARIUM_UPLOAD_PASSWORD, and the AAB for Play is built with VERBARIUM_PLAY=1. Google re-signs the app.
+        val upload = rootProject.file("../../keystore/upload.jks")
+        val pw = System.getenv("VERBARIUM_UPLOAD_PASSWORD")
+        if (upload.exists() && !pw.isNullOrEmpty()) {
+            create("upload") {
+                storeFile = upload
+                storePassword = pw
+                keyAlias = "upload"
+                keyPassword = pw
+            }
+        }
     }
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("sideload")
+            signingConfig = if (System.getenv("VERBARIUM_PLAY") == "1") signingConfigs.getByName("upload")
+            else signingConfigs.getByName("sideload")
         }
         debug {
             signingConfig = signingConfigs.getByName("sideload")

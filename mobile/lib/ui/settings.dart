@@ -469,12 +469,21 @@ class PrivacyPage extends StatelessWidget {
       ),
     ),
     (
+      tr('Izin internet', 'Internet permission', 'Permiso de internet', 'Autorisation internet'),
+      tr(
+        'Verbarium meminta izin internet hanya karena Google Play membutuhkannya untuk donasi. Koneksi itu hanya dibuka saat halaman Dukung Verbarium terbuka, dan hanya ke Google Play. Verbarium sendiri tidak mengirim atau mengambil data apa pun.',
+        'Verbarium asks for internet access only because Google Play needs it for donations. The connection is opened only while the Support Verbarium page is open, and only to Google Play. Verbarium itself sends and collects nothing.',
+        'Verbarium pide acceso a internet solo porque Google Play lo necesita para las donaciones. La conexión solo se abre mientras la página Apoya a Verbarium está abierta, y solo con Google Play. Verbarium por sí mismo no envía ni recoge ningún dato.',
+        'Verbarium demande l’accès à internet uniquement parce que Google Play en a besoin pour les dons. La connexion n’est ouverte que pendant que la page Soutenir Verbarium est ouverte, et seulement vers Google Play. Verbarium lui-même n’envoie et ne collecte aucune donnée.',
+      ),
+    ),
+    (
       tr('Dukungan', 'Support', 'Apoyo', 'Soutien'),
       tr(
-        'Jika suatu saat ada pilihan untuk mendukung Verbarium, pembayarannya diurus sepenuhnya oleh Google Play. Verbarium tidak pernah melihat data pembayaranmu, dan dukungan tidak membuka apa pun: aplikasinya tetap sama untuk semua orang.',
-        'If there is ever a way to support Verbarium, the payment is handled entirely by Google Play. Verbarium never sees your payment details, and support unlocks nothing: the app is the same for everyone.',
-        'Si algún día hay una forma de apoyar a Verbarium, el pago lo gestiona por completo Google Play. Verbarium nunca ve tus datos de pago, y el apoyo no desbloquea nada: la aplicación es igual para todos.',
-        'Si un jour il est possible de soutenir Verbarium, le paiement est entièrement géré par Google Play. Verbarium ne voit jamais tes données de paiement, et le soutien ne débloque rien : l’application est la même pour tous.',
+        'Untuk versi dari Play Store ada pilihan mendukung Verbarium; pembayarannya diurus sepenuhnya oleh Google Play. Verbarium tidak pernah melihat data pembayaranmu, dan dukungan tidak membuka apa pun: aplikasinya tetap sama untuk semua orang.',
+        'The Play Store version offers a way to support Verbarium; the payment is handled entirely by Google Play. Verbarium never sees your payment details, and support unlocks nothing: the app is the same for everyone.',
+        'La versión de Play Store ofrece una forma de apoyar a Verbarium; el pago lo gestiona por completo Google Play. Verbarium nunca ve tus datos de pago, y el apoyo no desbloquea nada: la aplicación es igual para todos.',
+        'La version du Play Store permet de soutenir Verbarium ; le paiement est entièrement géré par Google Play. Verbarium ne voit jamais tes données de paiement, et le soutien ne débloque rien : l’application est la même pour tous.',
       ),
     ),
     (
@@ -530,33 +539,32 @@ class _SupportLink extends StatefulWidget {
 }
 
 class _SupportLinkState extends State<_SupportLink> {
-  List<({String id, String price})>? items;
+  bool play = false;
 
   @override
   void initState() {
     super.initState();
-    Native.donProducts(App.donIds).then((r) {
-      if (r == null || !mounted) return;
-      App.I.donAdd(r.done);
-      setState(() => items = r.items);
+    // read on the phone: no connection to Google Play is made until the page is opened
+    Native.fromPlay().then((v) {
+      if (v && mounted) setState(() => play = true);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final it = items;
-    if (it == null || it.isEmpty) return const SizedBox.shrink();
+    if (!play) return const SizedBox.shrink();
     return _Link(
       tr('Dukung Verbarium', 'Support Verbarium', 'Apoya a Verbarium', 'Soutenir Verbarium'),
-      () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => SupportPage(it))),
+      () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SupportPage())),
     );
   }
 }
 
 /// Voluntary support through Google Play. It unlocks nothing: Verbarium is the same for everyone.
 class SupportPage extends StatefulWidget {
-  final List<({String id, String price})> items;
-  const SupportPage(this.items, {super.key});
+  /// the products, when already known (tests); otherwise the page asks Google Play for them while it is open
+  final List<({String id, String price})>? items;
+  const SupportPage({this.items, super.key});
   @override
   State<SupportPage> createState() => _SupportPageState();
 }
@@ -564,6 +572,28 @@ class SupportPage extends StatefulWidget {
 class _SupportPageState extends State<SupportPage> {
   bool busy = false;
   String? msg; // ok | pending | error
+  late List<({String id, String price})>? items = widget.items;
+  bool asked = false;
+
+  @override
+  void initState() {
+    super.initState();
+    if (items != null) return;
+    Native.donProducts(App.donIds).then((r) {
+      if (!mounted) return;
+      if (r != null) App.I.donAdd(r.done);
+      setState(() {
+        asked = true;
+        items = r?.items ?? const [];
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    if (widget.items == null) Native.donEnd(); // the connection to Google Play lives only as long as this page
+    super.dispose();
+  }
 
   Future<void> _buy(String id) async {
     if (busy) return;
@@ -634,7 +664,27 @@ class _SupportPageState extends State<SupportPage> {
                   style: T.body(16, pal.ink, height: 1.5),
                 ),
                 const SizedBox(height: 16),
-                for (final it in widget.items) ...[
+                if (items == null)
+                  Text(
+                    tr(
+                      'Menghubungi Google Play…',
+                      'Asking Google Play…',
+                      'Consultando Google Play…',
+                      'Connexion à Google Play…',
+                    ),
+                    style: T.body(15, pal.muted, height: 1.5),
+                  )
+                else if (items!.isEmpty && asked)
+                  Text(
+                    tr(
+                      'Belum tersedia. Coba lagi nanti.',
+                      'Not available yet. Try again later.',
+                      'Aún no está disponible. Inténtalo más tarde.',
+                      'Pas encore disponible. Réessaie plus tard.',
+                    ),
+                    style: T.body(15, pal.muted, height: 1.5),
+                  ),
+                for (final it in items ?? const <({String id, String price})>[]) ...[
                   InkButton('${_name(it.id)} · ${it.price}', outline: true, onTap: busy ? null : () => _buy(it.id)),
                   const SizedBox(height: 10),
                 ],

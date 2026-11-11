@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Verbarium works fully offline: no network permission. -->
+    <!-- No network permission of our own. Google Play Billing (Dukung Verbarium) adds INTERNET to the built app; it is used only while the support page is open. -->
     <!-- Light haptic feedback on answers -->
     <uses-permission android:name="android.permission.VIBRATE" />
 

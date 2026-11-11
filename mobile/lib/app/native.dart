@@ -48,6 +48,12 @@ class Native {
     }
   }
 
+  /// installed from the Play Store (read on the phone, no network): only then is Dukung Verbarium offered
+  static Future<bool> fromPlay() async => await _call<bool>('fromPlay') ?? false;
+
+  /// closes the connection to Google Play when the support page is left
+  static Future<void> donEnd() => _call<void>('donEnd');
+
   /// ok | pending | cancel | error
   static Future<String> donBuy(String id) async => await _call<String>('donBuy', id) ?? 'error';
 }

@@ -2,6 +2,16 @@
 
 ## v0.4 (alpha, not released)
 
+### v0.4-alpha-4: ready for Google Play
+
+- **Internet only for donations.** Dukung Verbarium appears only when the app was installed from the Play Store
+  (read on the phone, no network). Google Play is contacted only while that page is open, and the connection is
+  closed when it is left. A new test fails the build if any other code tries to use the network.
+- **Privacy** (in the app and `docs/privasi.md`) explains the internet permission in all four languages.
+- **The phone's language first.** A new learner starts in Indonesian, English, Spanish or French as the phone
+  is set; any other language starts in English. It can still be changed.
+- **AAB for Google Play**, signed with a private upload key, built by CI next to the test APK.
+
 ### v0.4-alpha-3: four languages
 
 - **Spanish and French.** Learn through Español or Français as well as Indonesian and English: every screen, the

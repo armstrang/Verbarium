@@ -86,6 +86,22 @@ jobs:
           ls -la build/app/outputs/flutter-apk/ >> ../ci-out/build.txt 2>&1
           cp build/app/outputs/flutter-apk/app-release.apk ../ci-out/verbarium-dev.apk || true
 
+      # the bundle for Google Play, signed with the upload key; skipped (not failed) until the secret exists
+      - name: Build AAB for Google Play
+        id: aab
+        continue-on-error: true
+        working-directory: mobile
+        env:
+          VERBARIUM_UPLOAD_PASSWORD: ${{ secrets.VERBARIUM_UPLOAD_PASSWORD }}
+          VERBARIUM_PLAY: '1'
+        run: |
+          if [ -z "$VERBARIUM_UPLOAD_PASSWORD" ]; then echo "no upload key secret: AAB skipped" > ../ci-out/aab.txt; exit 0; fi
+          openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -in ../keystore/upload.jks.enc -out ../keystore/upload.jks -pass env:VERBARIUM_UPLOAD_PASSWORD
+          flutter build appbundle --release --build-number=$((4000 + GITHUB_RUN_NUMBER)) --build-name=0.4.0-alpha.${ALPHA} > ../ci-out/aab.txt 2>&1
+          rm -f ../keystore/upload.jks
+          ls -la build/app/outputs/bundle/release/ >> ../ci-out/aab.txt 2>&1
+          cp build/app/outputs/bundle/release/app-release.aab ../Verbarium.aab
+
       - name: Summary
         if: always()
         run: |
@@ -96,6 +112,7 @@ jobs:
             echo "analyze: ${{ steps.analyze.outcome }}"
             echo "test: ${{ steps.test.outcome }}"
             echo "apk: ${{ steps.apk.outcome }}"
+            echo "aab: ${{ steps.aab.outcome }} $( [ -f Verbarium.aab ] && echo built || echo none )"
           } > ci-out/summary.txt
           cat ci-out/summary.txt
           tail -n 60 ci-out/build.txt || true
@@ -120,11 +137,13 @@ jobs:
           {
             echo "**Versi uji coba, belum rilis.** 0.4-alpha-${ALPHA} (build $((4000 + GITHUB_RUN_NUMBER)), $(git rev-parse --short HEAD))."
             echo
-            awk 'index($0,"## ")==1{if(p)exit; p=(index($0,"## v0.3")==1)} p' CHANGELOG.md | tail -n +2
+            awk 'index($0,"## ")==1{if(p)exit; p=(index($0,"## v0.4")==1)} p' CHANGELOG.md | tail -n +2
             echo
             echo "---"
             echo
             echo "Unduh **Verbarium-alpha.apk** lalu buka di ponsel Android. Versi baru terpasang di atas versi uji sebelumnya dan kemajuanmu tetap."
+            echo
+            echo "**Verbarium.aab** (jika ada) adalah berkas untuk Google Play Console, ditandatangani kunci upload. Jangan dipasang langsung."
           } > alpha.md
 
       - name: Publish the alpha (pre-release)
@@ -137,8 +156,11 @@ jobs:
           body_path: alpha.md
           prerelease: true
           make_latest: false
-          files: Verbarium-alpha.apk
+          files: |
+            Verbarium-alpha.apk
+            Verbarium.aab
+          fail_on_unmatched_files: false
 
       - name: Fail when a step failed
-        if: steps.deck.outcome == 'failure' || steps.pub.outcome == 'failure' || steps.analyze.outcome == 'failure' || steps.test.outcome == 'failure' || steps.apk.outcome == 'failure'
+        if: steps.deck.outcome == 'failure' || steps.pub.outcome == 'failure' || steps.analyze.outcome == 'failure' || steps.test.outcome == 'failure' || steps.apk.outcome == 'failure' || steps.aab.outcome == 'failure'
         run: exit 1

@@ -2,6 +2,7 @@
 library;
 
 import 'dart:io';
+import 'dart:ui' as ui;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -46,7 +47,14 @@ class App extends ChangeNotifier {
     return app;
   }
 
+  /// the phone's language; a new learner starts in it when Verbarium speaks it, otherwise in English
+  static String Function() phoneLanguage = () => ui.PlatformDispatcher.instance.locale.languageCode;
+
   Future<void> _load() async {
+    if (!onboarded && _set['lang'] == null) {
+      final p = phoneLanguage();
+      _set['lang'] = const ['id', 'en', 'es', 'fr'].contains(p) ? p : 'en';
+    }
     lang.code = langCode;
     deck = await Deck.load(banner.isEmpty ? 'toefl' : banner);
     engine = Engine(store, deck, clock: clock);

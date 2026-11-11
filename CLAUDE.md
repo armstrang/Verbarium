@@ -39,8 +39,10 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
 
 - **Store keys never change** once testers have the app (`v`, `set`, `mem`, `log`, `rank`, `ev`, `win`, `shaky`,
   `cool`, `placed`, `stage`, `subcool`, `ease`, `ret`, `er`, `game`). A format change = a migration and a test.
-- Package **`com.armstrang.verbarium`**. `versionCode` = 4000 + run for test builds. Signing key
-  `keystore/verbarium.jks` is public: test builds only, never Play.
+- Package **`com.armstrang.verbarium`**. `versionCode` = 4000 + run for every build. Signing key
+  `keystore/verbarium.jks` is public: test APKs only, never Play. The Play upload key is `keystore/upload.jks.enc`
+  (AES-256, decrypted only in CI with the secret `VERBARIUM_UPLOAD_PASSWORD`; Josh keeps the original `.jks` and
+  password); CI then builds `Verbarium.aab` with `VERBARIUM_PLAY=1`. Play App Signing holds the real app key.
 - **Deck**: everything self-written (no copied word lists or sentences). A sentence has exactly one `___` and the
   headword fits it in the form given. Run `check_deck.py` after edits.
 - **Score ranges** only from the test owners' own CEFR alignments; update `docs/riset-skor.md`, `Engine.ranks`
@@ -52,7 +54,9 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
   and a perk may never touch memory, rank or a coronation trial.
 - **App text** sounds human, short, "kamu"; the chronicle voice ("Tercatat …", "Engkau dinobatkan …") only in
   ceremonies and the chronicle.
-- No network permission. Sounds are rendered from CC0 samples (VSCO 2 CE, VCSL by Versilian
+- **Internet only for donations.** Our manifest asks for no network permission; Google Play Billing adds INTERNET,
+  used only while the Dukung Verbarium page is open (shown only when installed from the Play Store). No other
+  network code, ads, analytics or trackers: `privacy_test` guards it. Sounds are rendered from CC0 samples (VSCO 2 CE, VCSL by Versilian
   Studios); fonts are OFL (About → Lisensi huruf shows them).
 
 ## Look and motion
