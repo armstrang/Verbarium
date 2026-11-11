@@ -2,6 +2,19 @@
 
 ## v0.4 (alpha, not released)
 
+### v0.4-alpha-3: four languages
+
+- **Spanish and French.** Learn through Español or Français as well as Indonesian and English: every screen, the
+  lore, and the meaning of all 6,912 words and 84 collocations. Titles and jobs keep their English names.
+- **Longer lore.** Every job's story is now told in two or three sentences, in all four languages.
+- **New sounds.** The last synthesised effects (right answer, page, seal, tap, blow, critical, hurt, victory,
+  defeat) are now played on the same CC0 instruments as the music; `make_audio.py` is gone.
+- **Ready for the Play Store:** Settings → Software licences (Flutter's notices, the fonts, the CC0 samples) and
+  Settings → Privacy (`docs/privasi.md`): nothing leaves the phone.
+- **Dukung Verbarium** (dormant): voluntary support through Google Play Billing that unlocks nothing. The page
+  appears only when the products exist on Google Play, so never in the test APK.
+- Deck: a comma in one sentence; automatic checks for a/an, doubled words, missing verb forms and spacing pass.
+
 ### v0.4-alpha-2: the lore
 
 - **Lore.** Verbarium has a world now: everything lasts as long as its name is remembered, the Fog of Forgetting

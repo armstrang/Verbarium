@@ -13,17 +13,17 @@ and even then confirm first what will change and wait for his yes. Everything el
 
 | Path | What |
 |---|---|
-| `mobile/assets/deck/` | the words, canonical. 6,912 words in all (5,894 core, about 500 per banner: 513 TOEFL, 505 IELTS); every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`; the banner decides which one is shown, both are accepted. A banner's own words come early among a rank's new words (one in two), and under TOEFL the build question comes more often. `en/<same file>`: `word|definition`, plain English, for learning through English |
-| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_music.py` (the music `m0`…`m5`, `battle`, the effects wrong, rise, levelup, fanfare and each line's `tap_*`, `hit_*`, `hitx_*`, rendered from the CC0 sample libraries VSCO 2 CE and VCSL, which are cloned outside the repo, see its header), `make_audio.py` (the other effects, synthesised; both numpy + scipy + ffmpeg → `res/raw/*.ogg`), `pair_spellings.py` (adds the British spelling where a known pattern gives one), `make_icons.py` (Pillow → `mipmap-*`) |
+| `mobile/assets/deck/` | the words, canonical. 6,912 words in all (5,894 core, about 500 per banner: 513 TOEFL, 505 IELTS); every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`; the banner decides which one is shown, both are accepted. A banner's own words come early among a rank's new words (one in two), and under TOEFL the build question comes more often. `en/<same file>`: `word|definition`, plain English, for learning through English. `es/<same file>`, `fr/<same file>`: `word|meaning` in Spanish and French (collocations: `phrase with [answer]|meaning`), use ’ never ' |
+| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_music.py` (every sound: the music `m0`…`m5`, `battle`, and all effects — wrong, rise, levelup, fanfare, quill, seal, page, tap, hit, crit, hurt, victory, defeat and each line's `tap_*`, `hit_*`, `hitx_*` — rendered from the CC0 sample libraries VSCO 2 CE and VCSL, which are cloned outside the repo, see its header; numpy + scipy + ffmpeg → `res/raw/*.ogg`), `pair_spellings.py` (adds the British spelling where a known pattern gives one), `make_icons.py` (Pillow → `mipmap-*`) |
 | `mobile/lib/engine/engine.dart` | `Engine`: memory (stability in days, personal `ease`), plan, sitting of `Card`s, the three `Quiz` kinds and their weights, ranks, stages and sub-bosses, trials, placement, defence; `slip()` |
 | `mobile/lib/engine/game.dart` | `Game`: experience and level, combo, figures, quests, feats, gear, enemies, advice, the build (`bp`) and the path of jobs. Never changes memory or rank |
 | `mobile/lib/engine/lore.dart` | `LoreBook`: the lore of every title and job (quote, story, nature, background, drive) in both languages, from the document "Kitab Lore Verbarium"; shown only by `ui/lore.dart` (the introduction after a coronation, closed by its button, and the story page when the hero is tapped in Karakter) |
 | `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (37 on the map + 6 hidden), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
-| `mobile/lib/app/lang.dart` | `english` and `tr(id, en)`: every text is written in both languages where it is used |
+| `mobile/lib/app/lang.dart`, `l10n.dart` | `code` ('id', 'en', 'es', 'fr') and `tr(id, en, es, fr)`: every text is written in all four languages where it is used; data written only in English (gear, enemies, feats, job hints) gets its Spanish and French from `l10n.dart` through `tx(en)` |
 | `mobile/lib/data/` | `store.dart` (one JSON document, keys listed at the top — never rename), `deck.dart` |
 | `mobile/lib/app/` | `app.dart` (`App`: settings, sound, `stamp`), `native.dart` (channel `verbarium/native`) |
 | `mobile/lib/ui/` | `theme.dart` (`Pal`, `Look`, `T`, `Dur`), `widgets.dart` (paper, buttons, `Shield`, `Seal`), `root.dart` (app, opening, first run, tabs, Today), `run.dart` (learning, trials and fights: gap, build, choice, the arena), `pixel.dart` (sprites as letter grids, `HeroSprite`, `EnemySprite`), `hero.dart` (Karakter), `coronation.dart`, `realm.dart`, `chronicle.dart`, `settings.dart` |
-| `mobile/android/` | Kotlin `MainActivity.kt`: files folder, splash hand-over, MediaPlayer (ambience) + SoundPool (effects) |
+| `mobile/android/` | Kotlin `MainActivity.kt`: files folder, splash hand-over, MediaPlayer (ambience) + SoundPool (effects); `Donate.kt`: Google Play Billing for Dukung Verbarium (consumables `donasi_kecil`, `donasi_sedang`, `donasi_besar` that unlock nothing; the page shows only when Play has them, counted in `set.dn`) |
 | `mobile/test/` | `deck_test`, `engine_test`, `contrast_test` (WCAG 4.5:1, both themes), `screens_test` (drives the app; pictures in `test/goldens/`, not committed: look at them) |
 | `docs/riset-skor.md` | where each title's score range comes from |
 
@@ -45,13 +45,14 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
   headword fits it in the form given. Run `check_deck.py` after edits.
 - **Score ranges** only from the test owners' own CEFR alignments; update `docs/riset-skor.md`, `Engine.ranks`
   and `SourcesPage` together. A title is "kosakata setara …", never a promised score.
-- **Two languages**: Indonesian and English (`set.lang`). A new text goes in as `tr('…', '…')`; names of titles and
-  jobs stay English. A definition never uses the word it explains.
+- **Four languages**: Indonesian, English, Spanish and French (`set.lang`: id, en, es, fr). A new text goes in as
+  `tr('…', '…', '…', '…')` (French with ’, never '); names of titles and jobs stay English in every language. A
+  definition never uses the word it explains. `docs/privasi.md` and Pengaturan → Privasi say the same thing.
 - **Jobs** are decided by the build at a coronation (`Game.onPromotion`); there is no way to pick or change one,
   and a perk may never touch memory, rank or a coronation trial.
 - **App text** sounds human, short, "kamu"; the chronicle voice ("Tercatat …", "Engkau dinobatkan …") only in
   ceremonies and the chronicle.
-- No network permission. Sounds are synthesised or rendered from CC0 samples (VSCO 2 CE, VCSL by Versilian
+- No network permission. Sounds are rendered from CC0 samples (VSCO 2 CE, VCSL by Versilian
   Studios); fonts are OFL (About → Lisensi huruf shows them).
 
 ## Look and motion

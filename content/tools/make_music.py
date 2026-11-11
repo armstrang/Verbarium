@@ -17,7 +17,7 @@ One short theme belongs to the Chronicler, the player. It never changes; the way
                          (its notes bent to Phrygian), and the Chronicler's own theme tries to break through.
 Every piece is followed by its place alone (wind, town, hall, night) before it plays again: music, then silence
 that belongs to the place, as the lore asks.
-Effects made here as well: wrong, rise, levelup, fanfare, and each line's tap and hit (see sfx()).
+Effects made here as well: wrong, rise, levelup, fanfare, quill, seal, page, tap, hit, crit, hurt, victory, defeat, and each line's tap and hit (see sfx()). Every sound of the app now comes from this file.
 
 The instruments are samples from two CC0 (public domain) libraries by Versilian Studios, used only to render the
 files; nothing of them ships in the app except the rendered music:
@@ -595,6 +595,60 @@ def sfx(k):
         mx.add(k['crash'].hit(.35), 1.2, 0, .2, .5, 'c')
 
     one('wrong', wrong, 1.6); one('rise', rise, 2.4, 2.8); one('levelup', levelup, 2.8); one('fanfare', fanfare, 4.0, 2.4)
+
+    # the desk and the ceremonies, all from the same samples (they used to be synthesised by make_audio.py)
+    def quill(mx):
+        # a right answer while learning: the pen touches the page, one soft harp note of the theme's home
+        mx.add(hp(k['frameS'].hit(.12, shift=12, length=.08), 2500), 0, -.2, .4, .05, 'q')
+        mx.add(k['fharp'].note(midi('D6'), .25, .3), .02, .2, .3, .35, 'q')
+
+    def seal(mx):
+        # wax pressed on a page: a muffled low drum and a low bell under it
+        mx.add(lp(k['timpsoft'].hit(.7, length=.6), 900), 0, 0, .6, .2, 's')
+        mx.add(k['bells'].note(midi('D3'), 1.6, .25), .03, 0, .25, .55, 's')
+
+    def page(mx):
+        # a page turned: brushed skin, quick and dry
+        x = k['frameS'].hit(.3, shift=-7, length=.3)
+        mx.add(bp(x, 900, 6000), 0, -.3, .5, .15, 'p')
+        mx.add(bp(rng.standard_normal((int(.22 * SR), 2)), 2000, 7000) * np.linspace(0, 1, int(.22 * SR))[:, None] ** .5
+               * np.linspace(1, 0, int(.22 * SR))[:, None] ** 2 * .12, .02, .3, .4, .15, 'p')
+
+    def tap(mx):
+        mx.add(k['frameS'].hit(.22, shift=5, length=.2), 0, 0, .45, .05, 't')
+
+    def hit(mx):
+        mx.add(k['frame'].hit(.55, length=.35), 0, 0, .55, .1, 'h')
+        mx.add(k['pizz'].note(midi('D3'), .2, .5), 0, 0, .3, .2, 'h')
+
+    def crit(mx):
+        # a critical blow: a bright spark over the line's own hit (App.sfx plays both)
+        for j, m in enumerate(['A6', 'D7', 'F#7']):
+            mx.add(k['glock'].note(midi(m), .3, .5), j * .03, -.3 + j * .3, .35, .6, 'c')
+        mx.add(k['crash'].hit(.25), 0, 0, .2, .5, 'c')
+
+    def hurt(mx):
+        # a blow taken: a dull drum and two cello notes a half step apart
+        mx.add(k['timpsoft'].hit(.6, shift=-3, length=.5), 0, 0, .55, .2, 'u')
+        mx.add(k['pizz'].note(midi('C#3'), .2, .6), .02, -.2, .35, .2, 'u'); mx.add(k['pizz'].note(midi('C3'), .3, .5), .14, .2, .3, .2, 'u')
+
+    def victory(mx):
+        # the theme's first phrase on horn, answered by the harp, landing home on D
+        play(mx, k['horn'], P("A3:.5 D4:.75 E4:.25 F#4:1.5"), 0, .38, pan=.1, gain=.5, vel=.75, tag='horn')
+        mx.add(k['timp'].hit(.6), 0, 0, .35, .3, 't')
+        for j, m in enumerate(['D4', 'F#4', 'A4', 'D5', 'F#5']):
+            mx.add(k['harp'].note(midi(m), 1.4, .45), 1.1 + j * .07, -.4 + j * .2, .35, .55, 'h')
+        chord(mx, k['violas'], ['D4', 'F#4', 'A4'], 1.1, 1.6, gain=.1, vel=.5)
+
+    def defeat(mx):
+        # not a punishment: the theme sinks a step and rests, unresolved, on a soft roll
+        play(mx, k['cellos'], P("F#3:1 E3:1 D3:.75 C#3:1.5"), 0, .42, pan=-.1, gain=.4, vel=.5, tag='cello')
+        mx.add(k['timpsoft'].hit(.35, length=1.2), .9, 0, .3, .4, 't')
+        chord(mx, k['violas'], ['A3', 'C#4', 'E4'], 1.3, 1.6, gain=.07, vel=.4)
+
+    one('quill', quill, .6, rt=1.0, peak=-8); one('seal', seal, 1.8, rt=1.8, peak=-4); one('page', page, .5, rt=.8, peak=-10)
+    one('tap', tap, .3, rt=.6, peak=-14); one('hit', hit, .8, rt=1.2, peak=-3); one('crit', crit, 1.2, rt=1.6, peak=-6)
+    one('hurt', hurt, .9, rt=1.2, peak=-4); one('victory', victory, 3.6, rt=2.4); one('defeat', defeat, 3.4, rt=2.6)
 
     # each line's tap and hit; '_p' is the Peasant, then lines 0-3 (Blade, Scout, Scribe, Sentinel); 'x' = from tier 3
     taps = {

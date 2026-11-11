@@ -19,7 +19,7 @@ import org.json.JSONArray
 /**
  * The Android side of Verbarium, on the method channel "verbarium/native": the app's files folder, the system
  * splash hand-over, and sound (a looping court ambience through MediaPlayer, short effects through SoundPool).
- * The sounds are plain resources in res/raw, made by content/tools/make_audio.py.
+ * The sounds are plain resources in res/raw, made by content/tools/make_music.py from CC0 samples.
  */
 class MainActivity : FlutterActivity() {
     private val main = Handler(Looper.getMainLooper())
