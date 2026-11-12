@@ -91,9 +91,9 @@ for name, ws in sorted(words_in.items()):
 for path in glob.glob(os.path.join(root, "en", "*.txt")):
     if os.path.basename(path) not in words_in: bad.append(f"en/{os.path.basename(path)}: no deck file of that name")
 print("definitions", have, "of", total)
-# Spanish and French meanings: es/<same file>, fr/<same file> (`word|meaning`; collocations `phrase with [answer]|meaning`)
+# Spanish, French, German and Portuguese meanings: es/, fr/, de/, pt/ <same file> (`word|meaning`; collocations `phrase with [answer]|meaning`)
 colloc_phrases = [l.split("|")[1] for l in open(os.path.join(root, "collocations.txt"), encoding="utf-8") if l.strip() and not l.startswith("#")]
-for lang in ("es", "fr"):
+for lang in ("es", "fr", "de", "pt"):
     n = 0
     for name, ws in sorted(words_in.items()):
         path = os.path.join(root, lang, name)

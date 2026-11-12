@@ -1,0 +1,569 @@
+# Verbarium — Portuguese meanings for 2-knight.txt: word|meaning
+academic|acadêmico
+access|acesso
+accommodation|hospedagem, alojamento
+account|relato, explicação
+achievement|conquista, realização
+addict|viciado
+addition|acréscimo, adição
+administration|administração
+admire|admirar
+admit|admitir
+affirm|afirmar
+afford|ter condições de pagar
+agent|agente
+agreement|acordo
+ahead|à frente
+aim|objetivo
+alarm|alarme
+alcohol|álcool
+ambition|ambição
+amuse|divertir
+analysis|análise
+announce|anunciar
+annoy|irritar, incomodar
+apart|separado, à parte
+apologize|pedir desculpas
+application|candidatura, aplicação
+appointment|consulta, compromisso
+appreciate|apreciar, agradecer
+approximate|aproximado
+archaeology|arqueologia
+arrest|prender
+assist|ajudar
+atmosphere|atmosfera, clima
+attach|anexar, prender
+attitude|atitude
+attract|atrair
+attraction|atração
+authority|autoridade
+automatic|automático
+awake|acordado
+aware|consciente
+backward|para trás, atrasado
+baggage|bagagem
+bake|assar
+balance|equilíbrio
+ban|proibir
+banish|banir
+base|basear
+basic|básico
+basis|base
+battery|bateria, pilha
+battle|batalha
+beauty|beleza
+belief|crença
+bend|dobrar, curvar-se
+bite|morder
+bloom|florescer
+bomb|bomba
+border|fronteira
+bother|incomodar
+branch|galho, filial
+brand|marca
+brandish|brandir
+brave|corajoso
+breath|fôlego, respiração
+breathe|respirar
+bureau|escritório, agência
+bury|enterrar
+calm|calmo
+campaign|campanha
+candidate|candidato
+captain|capitão
+careless|descuidado
+category|categoria
+central|central
+ceremony|cerimônia
+chain|corrente
+challenge|desafio
+champion|campeão
+channel|canal
+chapter|capítulo
+charge|cobrar
+cheat|trapacear, enganar
+cheerful|alegre
+chemical|substância química
+childhood|infância
+claim|afirmar, alegar
+clause|cláusula, oração
+client|cliente
+cloth|tecido, pano
+clue|pista
+coal|carvão
+coin|moeda
+collection|coleção
+combine|combinar
+commercial|comercial
+commit|comprometer-se, cometer
+comparison|comparação
+competitive|competitivo
+complaint|reclamação
+complex|complexo
+concentrate|concentrar-se
+conclude|concluir
+confident|confiante
+confirm|confirmar
+confuse|confundir
+connection|conexão, relação
+consequence|consequência
+consist|consistir (em)
+constrain|restringir
+consume|consumir
+consumer|consumidor
+contact|contato
+container|recipiente
+content|conteúdo
+continuous|contínuo
+contradict|contradizer
+contrast|contraste
+convenient|conveniente, prático
+convince|convencer
+cottage|chalé
+cotton|algodão
+counsel|conselho, advogado
+countryside|campo, interior
+court|tribunal
+cruel|cruel
+cultural|cultural
+currency|moeda
+current|atual
+custom|costume
+damage|dano
+damp|úmido
+decade|década
+decorate|decorar
+dedicate|dedicar
+define|definir
+definite|definitivo, claro
+definition|definição
+deliver|entregar
+departure|partida, saída
+depress|deprimir
+despite|apesar de
+destination|destino
+determine|determinar
+development|desenvolvimento
+diagram|diagrama
+difficulty|dificuldade
+disadvantage|desvantagem
+disappointed|decepcionado
+discount|desconto
+discreet|discreto
+discriminate|discriminar, distinguir
+disgust|nojo
+dislike|não gostar
+district|distrito, bairro
+divide|dividir
+documentary|documentário
+donate|doar
+doubt|dúvida
+doubtful|duvidoso
+due|devido, previsto
+dust|poeira
+duty|dever
+earthquake|terremoto
+economic|econômico
+economy|economia
+edge|borda, beira
+editor|editor
+educate|educar
+effective|eficaz
+effort|esforço
+election|eleição
+element|elemento
+embarrass|envergonhar
+embarrassed|envergonhado
+emergency|emergência
+emit|emitir
+emotion|emoção
+encourage|incentivar, encorajar
+enemy|inimigo
+entertain|entreter
+entertainment|entretenimento
+entrance|entrada
+entry|entrada
+environmental|ambiental
+episode|episódio
+equal|igual
+escape|escapar, fugir
+essential|essencial
+eventually|no fim, finalmente
+examine|examinar
+exchange|trocar
+excitement|empolgação
+exhaust|esgotar
+exhibition|exposição
+exit|saída
+expand|expandir
+expedition|expedição
+explode|explodir
+explore|explorar
+explosion|explosão
+export|exportar
+faint|fraco, tênue
+familiar|familiar, conhecido
+fancy|chique, sofisticado
+fascinate|fascinar
+fasten|prender, apertar
+favour|favor
+federal|federal
+fence|cerca
+fertile|fértil
+fetch|buscar
+file|arquivo
+financial|financeiro
+flag|bandeira
+flagship|carro-chefe, nau capitânia
+flavour|sabor
+flood|enchente
+flour|farinha
+flow|fluir
+fold|dobrar
+folk|popular, folclórico
+force|força
+frame|moldura, estrutura
+freeze|congelar
+frighten|assustar
+frost|geada
+frustrate|frustrar
+fuel|combustível
+function|função
+fur|pelo, pelagem
+fury|fúria
+garage|garagem, oficina
+gather|reunir, juntar-se
+generation|geração
+generous|generoso
+gentle|suave, gentil
+giant|gigante
+glad|contente
+global|global, mundial
+glove|luva
+glow|brilhar
+goods|mercadorias, bens
+gradual|gradual
+grain|grão
+grateful|grato
+growth|crescimento
+guard|guarda
+guilty|culpado
+hang|pendurar
+harbour|porto
+hardly|mal, quase não
+headline|manchete
+heap|monte
+hedge|cerca viva
+highlight|destacar
+hire|contratar, alugar
+historic|histórico
+honest|honesto
+horrible|horrível
+horror|horror
+host|anfitrião
+hunt|caçar
+hurry|apressar-se
+identity|identidade
+ignore|ignorar
+illegal|ilegal
+imaginary|imaginário
+immediate|imediato
+immigrant|imigrante
+impact|impacto
+imperial|imperial
+implicate|implicar, envolver
+import|importar
+impression|impressão
+impressive|impressionante
+improvement|melhoria
+indeed|de fato
+indicate|indicar
+indoor|interno, coberto
+inflate|inflar
+influence|influência
+ingredient|ingrediente
+inhabit|habitar
+injure|ferir, machucar
+innocent|inocente
+innovate|inovar
+inquire|perguntar, indagar
+intelligence|inteligência
+intend|pretender
+intention|intenção
+invest|investir
+investigate|investigar
+iron|ferro
+issue|questão, problema
+jaw|mandíbula
+journal|revista, diário
+judge|juiz
+keen|entusiasmado
+kick|chutar
+knit|tricotar
+label|etiqueta, rótulo
+lack|falta
+layer|camada
+layman|leigo
+leaf|folha
+lease|contrato de aluguel
+leather|couro
+legal|legal, jurídico
+legislate|legislar
+length|comprimento
+liberate|libertar
+lid|tampa
+limit|limite
+liquid|líquido
+literal|literal
+literature|literatura
+lodge|apresentar, hospedar-se
+lonely|solitário
+loss|perda
+lump|caroço, torrão
+luxury|luxo
+mad|louco, bravo
+magnet|ímã
+management|gestão, direção
+manual|manual
+marvel|maravilhar-se
+match|partida, jogo
+meanwhile|enquanto isso
+measure|medir
+medium|médio
+mental|mental
+mess|bagunça
+migrate|migrar
+mild|suave, ameno
+mix|misturar
+mixture|mistura
+molecule|molécula
+mood|humor
+mortal|mortal
+mud|lama
+murder|assassinato
+muscle|músculo
+mystery|mistério
+nail|prego, unha
+narrate|narrar
+narrative|narrativa
+nation|nação
+native|nativo
+neat|arrumado, caprichado
+needle|agulha
+net|rede
+nuclear|nuclear
+obvious|óbvio
+occasion|ocasião
+occur|ocorrer
+odd|estranho, ímpar
+official|oficial
+operation|operação
+outdoor|ao ar livre
+overflow|transbordar
+package|pacote
+pale|pálido
+participate|participar
+passion|paixão
+path|trilha, caminho
+pavement|calçada
+peaceful|tranquilo, pacífico
+performance|desempenho, apresentação
+persuade|persuadir, convencer
+pipe|cano
+pleasant|agradável
+pleasure|prazer
+plenty|bastante, de sobra
+plot|enredo, terreno
+poem|poema
+poetry|poesia
+poison|veneno
+poisonous|venenoso
+policy|política
+polish|polir
+political|político
+politician|político
+politics|política
+pollute|poluir
+port|porto
+portrait|retrato
+pour|despejar, servir
+poverty|pobreza
+powder|pó
+powerful|poderoso
+practical|prático
+pray|rezar
+press|apertar
+pressure|pressão
+pretend|fingir
+previous|anterior
+priest|padre, sacerdote
+primary|principal, primário
+prince|príncipe
+principal|principal
+private|privado
+profession|profissão
+profit|lucro
+promote|promover
+proper|adequado
+property|propriedade
+prosper|prosperar
+protest|protesto
+proud|orgulhoso
+prove|provar
+punish|punir
+qualification|qualificação
+qualify|qualificar-se
+queue|fila
+quit|largar, abandonar
+quotation|citação, orçamento
+quote|citar
+radiate|irradiar
+range|faixa, variedade
+rare|raro
+rarely|raramente
+reaction|reação
+reality|realidade
+receipt|recibo
+reference|referência
+reflect|refletir
+reject|rejeitar
+relate|relacionar
+relation|relação
+relative|parente
+release|libertar, lançar
+reliable|confiável
+religion|religião
+religious|religioso
+remain|permanecer
+remind|lembrar (alguém)
+remote|remoto, isolado
+rent|alugar
+represent|representar
+require|exigir
+reservation|reserva
+resource|recurso
+resourceful|engenhoso
+respect|respeito
+responsibility|responsabilidade
+responsible|responsável
+restrain|conter
+retire|aposentar-se
+revise|revisar
+risk|risco
+roar|rugir
+romantic|romântico
+rope|corda
+rot|apodrecer
+rough|áspero
+row|fileira
+royal|real
+safeguard|salvaguardar
+safety|segurança
+sample|amostra
+sand|areia
+scatter|espalhar
+scientific|científico
+sculpture|escultura
+security|segurança
+seed|semente
+sensible|sensato
+servant|criado
+setback|revés
+sew|costurar
+sharp|afiado
+shelf|prateleira
+shell|concha, casca
+shift|mudança, turno
+shine|brilhar
+shoot|atirar
+shy|tímido
+sight|vista, visão
+signal|sinal
+silent|calado, silencioso
+silly|bobo
+simultaneous|simultâneo
+sink|afundar
+slave|escravo
+slice|fatia
+smooth|liso, suave
+soil|solo, terra
+solid|sólido
+sore|dolorido
+sovereign|soberano
+spicy|apimentado
+spirit|espírito, ânimo
+spot|ponto, lugar
+spread|espalhar-se
+staff|pessoal, equipe
+standard|padrão, nível
+statistic|estatística
+statue|estátua
+statute|estatuto, lei
+stick|vara, pau
+stranger|estranho, desconhecido
+strength|força
+string|barbante, corda
+substance|substância
+sudden|repentino
+suffer|sofrer
+suitable|adequado
+summary|resumo
+sunny|ensolarado
+supply|abastecimento
+surface|superfície
+survive|sobreviver
+sweat|suor
+swell|inchar
+switch|trocar, mudar
+symptom|sintoma
+tail|cauda, rabo
+talent|talento
+tax|imposto
+technical|técnico
+technique|técnica
+tend|tender a
+tent|barraca
+theme|tema
+theory|teoria
+though|embora
+thrill|emoção
+throat|garganta
+tight|apertado
+tiny|minúsculo
+tongue|língua
+total|total
+trade|comércio
+translate|traduzir
+treat|tratar
+treatment|tratamento
+trend|tendência
+trick|truque
+truth|verdade
+tube|tubo
+ugly|feio
+underlie|estar na base de
+unemployed|desempregado
+union|sindicato, união
+unless|a menos que
+upset|chateado
+valuable|valioso
+value|valor
+various|vários
+version|versão
+victim|vítima
+violent|violento
+volunteer|voluntário
+vote|votar
+warn|avisar, alertar
+waste|desperdiçar
+weapon|arma
+weigh|pesar
+whether|se
+whistle|assobiar
+wicked|perverso, malvado
+wing|asa
+within|dentro de
+wonder|perguntar-se
+wool|lã
+worth|que vale
+youth|juventude

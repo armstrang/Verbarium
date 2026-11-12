@@ -1,0 +1,354 @@
+# Verbarium — Portuguese meanings for 3-baron-b.txt: word|meaning
+origin|origem
+orthodox|ortodoxo
+otherwise|caso contrário
+outcome|resultado
+outfit|roupa, traje
+outline|esboço
+output|produção
+outstanding|excelente, destacado
+overall|geral
+overcome|superar
+overhead|acima, no alto
+overlap|sobrepor-se
+owe|dever (dinheiro)
+oxygen|oxigênio
+pace|ritmo
+palm|palma, palmeira
+panel|painel, banca
+panic|pânico
+parade|desfile
+paradox|paradoxo
+parallel|paralelo
+parliament|parlamento
+particle|partícula
+passage|passagem, trecho
+passionate|apaixonado
+patience|paciência
+patriot|patriota
+pause|fazer uma pausa
+penalty|pena, multa
+penetrate|penetrar
+pension|aposentadoria, pensão
+perceive|perceber
+perception|percepção
+permanent|permanente
+permit|permitir
+perspective|perspectiva
+phase|fase
+phenomenon|fenômeno
+philosophy|filosofia
+pile|pilha
+pilgrim|peregrino
+pill|comprimido
+pitch|campo, tom
+pity|pena, compaixão
+plague|praga, peste
+plain|simples, liso
+plaintiff|autor da ação
+plural|plural
+polar|polar
+portion|porção
+pose|representar (risco)
+possess|possuir
+potential|potencial
+pottery|cerâmica
+praise|elogiar
+precede|preceder
+precious|precioso
+precise|preciso
+predictable|previsível
+predominant|predominante
+preference|preferência
+pregnant|grávida
+preoccupy|preocupar
+preparation|preparação
+presence|presença
+preserve|preservar
+prestige|prestígio
+prevalent|predominante, comum
+pride|orgulho
+primarily|principalmente
+prime|principal
+primitive|primitivo
+principle|princípio
+priority|prioridade
+privacy|privacidade
+procedure|procedimento
+proceed|prosseguir
+progressive|progressista
+prohibit|proibir
+prolong|prolongar
+prolonged|prolongado
+promising|promissor
+promotion|promoção
+prompt|rápido, pontual
+proof|prova
+prop|escorar
+proportion|proporção
+propose|propor
+prospect|perspectiva
+protein|proteína
+psychology|psicologia
+publicity|publicidade
+punctual|pontual
+pupil|aluno
+purchase|comprar
+pure|puro
+pursue|perseguir, dedicar-se a
+pursuit|busca, perseguição
+puzzle|quebra-cabeça
+questionnaire|questionário
+racial|racial
+radiation|radiação
+random|aleatório
+rank|posto, patente
+rapid|rápido
+rattle|chacoalhar, abalar
+raw|cru
+realistic|realista
+reasonable|razoável
+rebuild|reconstruir
+recall|lembrar
+recession|recessão
+reckon|achar, calcular
+reconcile|reconciliar
+recover|recuperar-se
+recreation|lazer
+recruit|recrutar
+recur|repetir-se
+refine|refinar
+refresh|refrescar
+refugee|refugiado
+regard|considerar
+regarding|quanto a
+register|registrar-se
+regress|regredir
+regret|lamentar, arrepender-se
+regrettable|lamentável
+regulate|regular
+regulation|regulamento
+rehabilitate|reabilitar
+rehearse|ensaiar
+reinforce|reforçar
+relevant|pertinente
+relief|alívio, ajuda
+relieve|aliviar
+rely|depender, confiar em
+remark|comentário
+remarkable|notável
+repay|reembolsar
+representative|representante
+repress|reprimir
+reputation|reputação
+rescue|resgatar
+resent|ressentir-se de
+resentment|ressentimento
+resident|morador
+resign|renunciar, demitir-se
+resist|resistir
+resolution|resolução
+resolve|resolver
+resort|resort, estância
+restore|restaurar
+restrict|restringir
+retail|varejo
+retain|reter, conservar
+reveal|revelar
+revenue|receita
+revision|revisão
+revolution|revolução
+reward|recompensa
+rhythm|ritmo
+rid|livrar (de)
+ridiculous|ridículo
+rigid|rígido
+rigour|rigor
+rival|rival
+rob|roubar, assaltar
+root|raiz
+rub|esfregar
+ruin|arruinar, estragar
+rumour|boato
+rural|rural
+rush|apressar-se
+satellite|satélite
+satisfaction|satisfação
+satisfied|satisfeito
+satisfy|satisfazer
+scale|escala
+scandal|escândalo
+scarce|escasso
+scenario|cenário
+scheme|plano, programa
+scholar|estudioso
+scratch|coçar, arranhar
+scream|gritar
+sector|setor
+secure|seguro
+seek|buscar
+select|selecionar
+senior|sênior, superior
+sensitive|sensível
+sequence|sequência
+session|sessão
+settle|estabelecer-se, resolver
+severe|grave, severo
+shade|sombra
+shadow|sombra
+shallow|raso
+shame|vergonha, pena
+shelter|abrigo
+shock|choque
+shore|margem, praia
+shortage|escassez
+sibling|irmão
+signature|assinatura
+significant|significativo
+silence|silêncio
+sincere|sincero
+slide|deslizar
+slight|leve
+slip|escorregar
+slope|encosta, declive
+solar|solar
+sophisticated|sofisticado
+soul|alma
+spacious|espaçoso
+spare|reserva, livre
+species|espécie
+spectacular|espetacular
+speculate|especular
+spill|derramar
+spite|apesar de (in spite of)
+split|dividir, partir
+spoil|estragar, mimar
+sponsor|patrocinador
+spontaneous|espontâneo
+stable|estável
+stance|postura
+stare|encarar
+starve|passar fome
+status|status, condição
+steady|estável, constante
+steam|vapor
+steel|aço
+steep|íngreme
+stimulate|estimular
+stock|estoque, ações
+stream|riacho
+stretch|esticar
+strict|rigoroso
+strike|bater, fazer greve
+struggle|lutar, esforçar-se
+submit|enviar, entregar
+subordinate|subordinado
+subsequent|posterior
+subsidiary|subsidiária
+suburb|subúrbio
+sufficient|suficiente
+sum|soma
+supper|ceia, jantar
+surgeon|cirurgião
+surgery|cirurgia
+surround|cercar
+suspect|suspeitar
+suspend|suspender
+sustainable|sustentável
+swallow|engolir
+swear|jurar, xingar
+sweep|varrer
+swift|veloz
+sympathy|compaixão
+tackle|enfrentar
+tale|conto
+tap|torneira
+tear|rasgar
+temple|templo
+temporary|temporário
+tendency|tendência
+tension|tensão
+territory|território
+terror|terror
+therapy|terapia
+thorough|minucioso
+threat|ameaça
+threaten|ameaçar
+thunder|trovão
+tissue|tecido, lenço
+tone|tom
+tough|duro, resistente
+tournament|torneio
+trace|rastrear
+tragedy|tragédia
+trait|traço
+transfer|transferir
+transform|transformar
+transition|transição
+transmit|transmitir
+trap|armadilha
+treasure|tesouro
+tremble|tremer
+trial|julgamento, teste
+tribe|tribo
+trigger|desencadear
+troop|tropa
+tropical|tropical
+trust|confiar em
+tune|melodia
+tunnel|túnel
+tutor|professor particular
+ultimate|final, supremo
+undergo|passar por
+undertake|empreender
+undertaking|empreendimento, tarefa
+unique|único
+unite|unir
+universe|universo
+upper|superior
+urban|urbano
+urge|instar, pedir
+urgent|urgente
+utter|total, absoluto
+valid|válido
+validate|validar
+vary|variar
+vast|vasto
+vendor|vendedor
+venue|local (de evento)
+via|via, por
+victory|vitória
+vigorous|vigoroso
+violence|violência
+virtually|praticamente
+visible|visível
+vision|visão
+visual|visual
+vital|vital
+vivid|vívido
+vocation|vocação
+volcano|vulcão
+volume|volume
+voluntary|voluntário
+wage|salário
+wagon|carroça, vagão
+wander|vaguear
+wealth|riqueza
+welfare|bem-estar
+whereas|enquanto
+whisper|sussurrar
+widespread|generalizado
+wildlife|vida selvagem
+willing|disposto
+wire|fio, arame
+wisdom|sabedoria
+wise|sábio
+withdraw|retirar
+witness|testemunha
+workforce|força de trabalho
+workshop|oficina
+wound|ferida
+wrap|embrulhar
+wreck|destroços, naufrágio
+wrist|pulso
+zone|zona

@@ -1,0 +1,406 @@
+# Verbarium — German meanings for 4-count-c.txt: word|meaning
+probe|untersuchen
+procession|Prozession
+proclaim|verkünden
+proclamation|Verkündung
+procrastinate|aufschieben
+procure|beschaffen
+prodigal|verschwenderisch
+productive|produktiv
+productivity|Produktivität
+proficiency|Können, Beherrschung
+profitable|gewinnbringend
+profound|tiefgreifend
+progression|Fortschreiten
+prohibition|Verbot
+projection|Hochrechnung, Projektion
+proliferate|sich stark vermehren
+proliferation|Verbreitung
+prominence|Bedeutung
+prominent|prominent
+prone|anfällig
+propaganda|Propaganda
+propagate|verbreiten
+propel|antreiben
+prophet|Prophet
+proponent|Befürworter
+proposition|Vorschlag, Behauptung
+proprietor|Inhaber
+prose|Prosa
+prosecute|strafrechtlich verfolgen
+prosecution|Strafverfolgung, Anklage
+prospective|voraussichtlich
+prosperity|Wohlstand
+prosperous|wohlhabend
+protagonist|Hauptfigur
+protective|schützend
+protocol|Protokoll
+prototype|Prototyp
+providence|Vorsehung
+province|Provinz
+provincial|Provinz-
+provision|Bereitstellung, Bestimmung
+provisional|vorläufig
+provocation|Provokation
+provocative|provokant
+provoke|provozieren
+proximity|Nähe
+prudence|Klugheit
+prudent|umsichtig
+prune|beschneiden
+pseudonym|Pseudonym
+psychiatric|psychiatrisch
+publicize|bekannt machen
+pulse|Puls
+purify|reinigen
+purity|Reinheit
+purport|vorgeben
+qualitative|qualitativ
+quantify|beziffern
+quantitative|quantitativ
+quarrel|Streit
+quarry|Steinbruch
+query|Anfrage
+quest|Suche
+quiver|zittern
+quota|Quote
+radiant|strahlend
+radical|radikal
+radius|Radius
+rage|Wut
+raid|Überfall, Razzia
+ramble|wandern, abschweifen
+rash|übereilt
+ratification|Ratifizierung
+ratify|ratifizieren
+ratio|Verhältnis
+ration|rationieren
+rational|vernünftig
+rationale|Begründung
+rationalize|rechtfertigen, rationalisieren
+ray|Strahl
+readily|bereitwillig, leicht
+readiness|Bereitschaft
+realm|Reich, Bereich
+reap|ernten
+rear|hintere
+reassurance|Beruhigung
+reassure|beruhigen
+rebel|Rebell
+rebellion|Aufstand
+rebound|abprallen, sich erholen
+recede|zurückgehen
+receptive|empfänglich
+recess|Pause, Nische
+recipient|Empfänger
+reciprocal|gegenseitig
+recite|aufsagen
+reckless|leichtsinnig
+reclaim|zurückfordern
+recollect|sich erinnern
+reconstruct|wiederaufbauen
+recreate|nachbilden
+rectangle|Rechteck
+recurrence|Wiederauftreten
+redeem|erlösen, einlösen
+redemption|Erlösung
+redevelop|sanieren
+redundancy|Entlassung, Überflüssigkeit
+redundant|überflüssig
+referendum|Volksabstimmung
+refinery|Raffinerie
+reflex|Reflex
+reform|Reform
+refrain|sich enthalten
+refuge|Zuflucht
+refund|Rückerstattung
+refurbish|renovieren
+refusal|Ablehnung
+regardless|ungeachtet
+regenerate|erneuern
+regime|Regime
+regiment|Regiment
+rehearsal|Probe
+reign|Herrschaft
+reimburse|erstatten
+reimbursement|Erstattung
+rein|Zügel
+reiterate|wiederholen
+relay|weitergeben
+relegate|herabstufen
+relentless|unerbittlich
+relic|Relikt
+relinquish|aufgeben
+relish|genießen
+relocate|umziehen
+reluctance|Widerwille
+reluctant|widerwillig
+remainder|Rest
+remedy|Heilmittel
+remembrance|Gedenken
+reminder|Erinnerung
+reminiscent|erinnernd an
+remittance|Überweisung
+remnant|Überrest
+remuneration|Vergütung
+renaissance|Wiedergeburt
+render|machen
+renew|erneuern
+renounce|verzichten auf
+renovate|renovieren
+renowned|berühmt
+repeal|aufheben
+repel|abwehren
+repentance|Reue
+repertoire|Repertoire
+replicate|nachbilden
+repression|Unterdrückung
+reproduce|sich fortpflanzen
+republic|Republik
+repulsive|abstoßend
+requisite|erforderlich
+resemblance|Ähnlichkeit
+resemble|ähneln
+reservoir|Stausee
+residual|übrig
+residue|Rückstand
+resignation|Rücktritt
+resilience|Widerstandskraft
+resilient|widerstandsfähig
+resistant|widerstandsfähig
+respective|jeweilig
+respiratory|Atem-
+responsive|reaktionsschnell, aufgeschlossen
+restoration|Wiederherstellung
+restraint|Zurückhaltung
+resultant|daraus folgend
+resume|wieder aufnehmen
+resurrect|wiederbeleben
+retaliate|Vergeltung üben
+retention|Beibehaltung
+retort|erwidern
+retreat|sich zurückziehen
+retrieve|zurückholen
+retrospect|Rückblick
+retrospective|rückblickend
+reunion|Wiedersehen
+revel|schwelgen
+revelation|Enthüllung
+revenge|Rache
+revere|verehren
+reverence|Ehrfurcht
+reversal|Umkehr
+reverse|umkehren
+revert|zurückkehren
+revival|Wiederbelebung
+revive|wiederbeleben
+revolt|Aufstand
+revolve|sich drehen
+rhetoric|Rhetorik
+rhetorical|rhetorisch
+rigidity|Starrheit
+rigorous|streng
+rim|Rand
+riot|Krawall
+ripple|kleine Welle
+rite|Ritus
+ritual|Ritual
+rivalry|Rivalität
+robust|robust
+rogue|abtrünnig
+rotate|drehen
+rotation|Drehung, Wechsel
+rubble|Schutt
+ruling|Urteil
+ruthless|rücksichtslos
+sacred|heilig
+sacrifice|Opfer
+sake|um ... willen (for the sake of)
+salient|hervorstechend
+sanction|Sanktion
+sanctuary|Zufluchtsort
+saturate|sättigen
+saturation|Sättigung
+savour|genießen
+scant|gering
+scissors|Schere
+scope|Umfang
+scorn|Verachtung
+scrutiny|genaue Prüfung
+secular|weltlich
+sediment|Ablagerung
+segment|Abschnitt
+seize|ergreifen, beschlagnahmen
+seldom|selten
+sensation|Empfindung, Sensation
+sentiment|Gefühl
+serene|gelassen
+shortcoming|Mangel
+shrewd|klug, gewieft
+shrink|schrumpfen
+siege|Belagerung
+sigh|seufzen
+simulate|simulieren
+skeleton|Skelett
+skeptical|skeptisch
+sketch|Skizze
+soak|einweichen
+sole|einzig
+solidarity|Solidarität
+sorrow|Kummer
+sour|sauer
+span|Spanne
+spark|auslösen
+sparse|spärlich
+spectrum|Spektrum
+squeeze|drücken, auspressen
+stakeholder|Beteiligter
+stark|krass, kahl
+stereotype|Klischee
+stifle|ersticken
+stimulus|Reiz
+stipulate|festlegen
+straightforward|einfach, direkt
+strain|Belastung
+strand|Strähne, Faden
+streamline|vereinfachen
+stringent|streng
+stubborn|stur
+subdue|unterwerfen
+subside|abklingen
+subsidy|Subvention
+substantial|beträchtlich
+substitute|Ersatz
+subtle|subtil
+succession|Abfolge, Nachfolge
+successive|aufeinanderfolgend
+succumb|erliegen
+sue|verklagen
+suicide|Selbstmord
+superficial|oberflächlich
+superior|überlegen
+supervise|beaufsichtigen
+supervision|Aufsicht
+supplement|Ergänzung
+suppress|unterdrücken
+surge|Anstieg
+surpass|übertreffen
+surplus|Überschuss
+surrender|sich ergeben
+surveillance|Überwachung
+susceptible|anfällig
+suspicion|Verdacht
+sustain|aufrechterhalten
+swing|schwingen
+sword|Schwert
+symmetry|Symmetrie
+synthesis|Synthese
+tangible|greifbar
+tariff|Zoll
+temper|Temperament, Laune
+temperament|Wesensart
+tempt|verführen
+tenant|Mieter
+tender|zärtlich
+tentative|vorläufig, zaghaft
+terminate|beenden
+testify|aussagen
+testimony|Zeugenaussage
+texture|Beschaffenheit
+theoretical|theoretisch
+thereby|dadurch
+thread|Faden
+threshold|Schwelle
+thrive|gedeihen
+throne|Thron
+thwart|vereiteln
+tide|Gezeiten
+timber|Bauholz
+tolerance|Toleranz
+tolerant|tolerant
+tolerate|dulden
+toll|Opferzahl, Maut
+tomb|Grab
+torture|Folter
+tout|anpreisen
+toxic|giftig
+trail|Pfad, Spur
+tranquil|ruhig
+transaction|Geschäft
+transcend|übersteigen
+transient|vergänglich
+transparency|Transparenz
+transparent|durchsichtig
+traverse|durchqueren
+treaty|Vertrag
+tremendous|enorm
+tribunal|Gericht
+tribute|Hommage
+triumph|Triumph
+trivial|belanglos
+turmoil|Aufruhr
+turnover|Umsatz, Fluktuation
+unanimous|einstimmig
+underestimate|unterschätzen
+undermine|untergraben
+unify|vereinigen
+unprecedented|beispiellos
+unveil|enthüllen
+upheaval|Umbruch
+uphold|aufrechterhalten
+upright|aufrecht
+utility|Nutzen, Versorgung
+utilize|nutzen
+vacant|frei, leer
+vaccine|Impfstoff
+vague|vage
+vain|vergeblich, eitel
+vanish|verschwinden
+variable|Variable
+velocity|Geschwindigkeit
+venture|Wagnis
+verdict|Urteil
+verify|überprüfen
+versatile|vielseitig
+verse|Vers, Strophe
+versus|gegen
+vessel|Schiff, Gefäß
+veteran|Veteran
+viable|tragfähig
+vice|Laster
+vicinity|Umgebung
+vigil|Mahnwache
+vigilant|wachsam
+violate|verletzen
+virtue|Tugend
+vitality|Lebenskraft
+vocabulary|Wortschatz
+void|Leere
+volatile|unbeständig
+voyage|Seereise
+vulnerable|verletzlich
+waive|verzichten auf
+wallet|Geldbörse
+wane|abnehmen
+warehouse|Lagerhaus
+warrant|rechtfertigen
+warrior|Krieger
+weave|weben
+weed|Unkraut
+whereby|wodurch
+widow|Witwe
+wield|schwingen, ausüben
+wilderness|Wildnis
+wince|zusammenzucken
+wipe|wischen
+withhold|zurückhalten
+withstand|standhalten
+woe|Leid
+worship|anbeten
+worthwhile|lohnend
+yawn|gähnen
+yearn|sich sehnen
+yell|brüllen
+yield|hervorbringen, ergeben
+youngster|Jugendlicher
+zeal|Eifer

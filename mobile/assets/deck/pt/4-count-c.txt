@@ -1,0 +1,406 @@
+# Verbarium — Portuguese meanings for 4-count-c.txt: word|meaning
+probe|investigar, sondar
+procession|procissão
+proclaim|proclamar
+proclamation|proclamação
+procrastinate|procrastinar
+procure|obter
+prodigal|pródigo
+productive|produtivo
+productivity|produtividade
+proficiency|proficiência, domínio
+profitable|lucrativo
+profound|profundo
+progression|progressão
+prohibition|proibição
+projection|projeção
+proliferate|proliferar
+proliferation|proliferação
+prominence|destaque
+prominent|proeminente
+prone|propenso
+propaganda|propaganda
+propagate|propagar
+propel|impulsionar
+prophet|profeta
+proponent|defensor
+proposition|proposta, proposição
+proprietor|proprietário
+prose|prosa
+prosecute|processar
+prosecution|acusação, promotoria
+prospective|possível, futuro
+prosperity|prosperidade
+prosperous|próspero
+protagonist|protagonista
+protective|protetor
+protocol|protocolo
+prototype|protótipo
+providence|providência
+province|província
+provincial|provincial
+provision|provisão, disposição
+provisional|provisório
+provocation|provocação
+provocative|provocativo
+provoke|provocar
+proximity|proximidade
+prudence|prudência
+prudent|prudente
+prune|podar
+pseudonym|pseudônimo
+psychiatric|psiquiátrico
+publicize|divulgar
+pulse|pulso
+purify|purificar
+purity|pureza
+purport|pretender
+qualitative|qualitativo
+quantify|quantificar
+quantitative|quantitativo
+quarrel|briga
+quarry|pedreira
+query|consulta
+quest|busca
+quiver|tremer
+quota|cota
+radiant|radiante
+radical|radical
+radius|raio
+rage|fúria
+raid|incursão, batida
+ramble|passear, divagar
+rash|precipitado
+ratification|ratificação
+ratify|ratificar
+ratio|proporção
+ration|racionar
+rational|racional
+rationale|fundamento, razão
+rationalize|racionalizar
+ray|raio
+readily|facilmente, de bom grado
+readiness|prontidão
+realm|reino, âmbito
+reap|colher
+rear|traseiro
+reassurance|tranquilidade
+reassure|tranquilizar
+rebel|rebelde
+rebellion|rebelião
+rebound|ricochetear, recuperar-se
+recede|recuar
+receptive|receptivo
+recess|recesso, nicho
+recipient|destinatário
+reciprocal|recíproco
+recite|recitar
+reckless|imprudente
+reclaim|recuperar
+recollect|recordar
+reconstruct|reconstruir
+recreate|recriar
+rectangle|retângulo
+recurrence|recorrência
+redeem|redimir, resgatar
+redemption|redenção
+redevelop|revitalizar
+redundancy|demissão, redundância
+redundant|supérfluo
+referendum|referendo
+refinery|refinaria
+reflex|reflexo
+reform|reforma
+refrain|abster-se
+refuge|refúgio
+refund|reembolso
+refurbish|reformar
+refusal|recusa
+regardless|independentemente
+regenerate|regenerar
+regime|regime
+regiment|regimento
+rehearsal|ensaio
+reign|reinado
+reimburse|reembolsar
+reimbursement|reembolso
+rein|rédea
+reiterate|reiterar
+relay|transmitir
+relegate|relegar
+relentless|implacável
+relic|relíquia
+relinquish|renunciar a
+relish|saborear, apreciar
+relocate|mudar-se
+reluctance|relutância
+reluctant|relutante
+remainder|restante
+remedy|remédio
+remembrance|lembrança
+reminder|lembrete
+reminiscent|que lembra
+remittance|remessa
+remnant|resto
+remuneration|remuneração
+renaissance|renascimento
+render|tornar
+renew|renovar
+renounce|renunciar a
+renovate|reformar
+renowned|renomado
+repeal|revogar
+repel|repelir
+repentance|arrependimento
+repertoire|repertório
+replicate|replicar
+repression|repressão
+reproduce|reproduzir-se
+republic|república
+repulsive|repulsivo
+requisite|necessário
+resemblance|semelhança
+resemble|parecer-se com
+reservoir|reservatório
+residual|residual
+residue|resíduo
+resignation|renúncia, demissão
+resilience|resiliência
+resilient|resiliente
+resistant|resistente
+respective|respectivo
+respiratory|respiratório
+responsive|receptivo, sensível
+restoration|restauração
+restraint|moderação
+resultant|resultante
+resume|retomar
+resurrect|ressuscitar
+retaliate|retaliar
+retention|retenção
+retort|retrucar
+retreat|recuar
+retrieve|recuperar
+retrospect|retrospecto
+retrospective|retrospectivo
+reunion|reencontro
+revel|deleitar-se
+revelation|revelação
+revenge|vingança
+revere|venerar
+reverence|reverência
+reversal|reviravolta
+reverse|inverter
+revert|voltar
+revival|renascimento
+revive|reavivar
+revolt|revolta
+revolve|girar
+rhetoric|retórica
+rhetorical|retórico
+rigidity|rigidez
+rigorous|rigoroso
+rim|borda
+riot|tumulto
+ripple|ondulação
+rite|rito
+ritual|ritual
+rivalry|rivalidade
+robust|robusto
+rogue|desonesto, rebelde
+rotate|girar, revezar
+rotation|rotação, rodízio
+rubble|entulho
+ruling|decisão
+ruthless|implacável
+sacred|sagrado
+sacrifice|sacrifício
+sake|por (for the sake of)
+salient|saliente
+sanction|sanção
+sanctuary|santuário, refúgio
+saturate|saturar
+saturation|saturação
+savour|saborear
+scant|escasso
+scissors|tesoura
+scope|alcance, escopo
+scorn|desprezo
+scrutiny|escrutínio
+secular|laico
+sediment|sedimento
+segment|segmento
+seize|apoderar-se de, confiscar
+seldom|raramente
+sensation|sensação
+sentiment|sentimento
+serene|sereno
+shortcoming|falha
+shrewd|astuto
+shrink|encolher
+siege|cerco
+sigh|suspirar
+simulate|simular
+skeleton|esqueleto
+skeptical|cético
+sketch|esboço
+soak|deixar de molho
+sole|único
+solidarity|solidariedade
+sorrow|tristeza
+sour|azedo
+span|período, extensão
+spark|desencadear
+sparse|escasso, esparso
+spectrum|espectro
+squeeze|apertar, espremer
+stakeholder|parte interessada
+stark|nítido, austero
+stereotype|estereótipo
+stifle|sufocar
+stimulus|estímulo
+stipulate|estipular
+straightforward|simples, direto
+strain|tensão
+strand|fio
+streamline|simplificar
+stringent|rigoroso
+stubborn|teimoso
+subdue|subjugar
+subside|diminuir
+subsidy|subsídio
+substantial|substancial
+substitute|substituto
+subtle|sutil
+succession|sucessão
+successive|sucessivo
+succumb|sucumbir
+sue|processar
+suicide|suicídio
+superficial|superficial
+superior|superior
+supervise|supervisionar
+supervision|supervisão
+supplement|suplemento
+suppress|reprimir
+surge|aumento repentino
+surpass|superar
+surplus|excedente
+surrender|render-se
+surveillance|vigilância
+susceptible|suscetível
+suspicion|suspeita
+sustain|sustentar
+swing|balançar
+sword|espada
+symmetry|simetria
+synthesis|síntese
+tangible|tangível
+tariff|tarifa
+temper|temperamento, gênio
+temperament|temperamento
+tempt|tentar
+tenant|inquilino
+tender|terno
+tentative|provisório, hesitante
+terminate|encerrar
+testify|testemunhar
+testimony|depoimento
+texture|textura
+theoretical|teórico
+thereby|assim, desse modo
+thread|fio
+threshold|limiar
+thrive|prosperar
+throne|trono
+thwart|frustrar
+tide|maré
+timber|madeira
+tolerance|tolerância
+tolerant|tolerante
+tolerate|tolerar
+toll|número de vítimas, pedágio
+tomb|túmulo
+torture|tortura
+tout|promover, alardear
+toxic|tóxico
+trail|trilha, rastro
+tranquil|tranquilo
+transaction|transação
+transcend|transcender
+transient|passageiro
+transparency|transparência
+transparent|transparente
+traverse|atravessar
+treaty|tratado
+tremendous|tremendo
+tribunal|tribunal
+tribute|homenagem
+triumph|triunfo
+trivial|trivial
+turmoil|tumulto
+turnover|faturamento, rotatividade
+unanimous|unânime
+underestimate|subestimar
+undermine|minar
+unify|unificar
+unprecedented|sem precedentes
+unveil|revelar, apresentar
+upheaval|reviravolta
+uphold|defender, manter
+upright|ereto
+utility|utilidade, serviço público
+utilize|utilizar
+vacant|vago, livre
+vaccine|vacina
+vague|vago
+vain|vão, vaidoso
+vanish|desaparecer
+variable|variável
+velocity|velocidade
+venture|empreendimento
+verdict|veredicto
+verify|verificar
+versatile|versátil
+verse|verso, estrofe
+versus|contra
+vessel|embarcação, recipiente
+veteran|veterano
+viable|viável
+vice|vício
+vicinity|arredores
+vigil|vigília
+vigilant|vigilante
+violate|violar
+virtue|virtude
+vitality|vitalidade
+vocabulary|vocabulário
+void|vazio
+volatile|volátil
+voyage|viagem
+vulnerable|vulnerável
+waive|abrir mão de
+wallet|carteira
+wane|minguar
+warehouse|armazém
+warrant|justificar
+warrior|guerreiro
+weave|tecer
+weed|erva daninha
+whereby|pelo qual
+widow|viúva
+wield|empunhar, exercer
+wilderness|natureza selvagem
+wince|estremecer
+wipe|limpar
+withhold|reter, negar
+withstand|resistir a
+woe|aflição
+worship|adorar
+worthwhile|que vale a pena
+yawn|bocejar
+yearn|ansiar
+yell|berrar
+yield|produzir, render
+youngster|jovem
+zeal|zelo, fervor

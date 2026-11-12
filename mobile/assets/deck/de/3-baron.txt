@@ -1,0 +1,701 @@
+# Verbarium — German meanings for 3-baron.txt: word|meaning
+abandon|aufgeben, verlassen
+abnormal|unnormal
+abrupt|abrupt, plötzlich
+absolute|absolut
+absorb|aufnehmen
+abstract|abstrakt
+abundant|reichlich
+accent|Akzent
+acceptable|annehmbar
+accidental|zufällig
+accommodate|unterbringen, sich anpassen
+accompany|begleiten
+accomplish|vollbringen
+accurate|genau
+accuse|beschuldigen
+acid|Säure
+acknowledge|anerkennen
+acknowledgement|Anerkennung
+acquaintance|Bekannter
+acquire|erwerben
+activate|aktivieren
+actual|tatsächlich
+adapt|sich anpassen
+additional|zusätzlich
+adequate|angemessen, ausreichend
+adjust|anpassen
+adopt|annehmen, adoptieren
+advance|Fortschritt
+affair|Angelegenheit
+affiliate|sich anschließen
+agency|Agentur
+agenda|Tagesordnung
+aggressive|aggressiv
+agriculture|Landwirtschaft
+aid|Hilfe
+aircraft|Flugzeug
+alien|fremd
+alongside|neben
+alter|ändern
+altogether|insgesamt, völlig
+ambiguous|mehrdeutig
+ambulance|Krankenwagen
+ancestor|Vorfahr
+angle|Winkel
+animate|beleben
+annual|jährlich
+anticipate|vorhersehen
+anxiety|Angst, Sorge
+anxious|besorgt, ängstlich
+apology|Entschuldigung
+apparent|offensichtlich, scheinbar
+apparently|anscheinend
+appeal|ansprechen, appellieren
+applicant|Bewerber
+appraise|bewerten, schätzen
+approach|Ansatz
+appropriate|angemessen
+approve|genehmigen
+arch|Bogen
+arise|entstehen
+armed|bewaffnet
+arouse|wecken, erregen
+arrogant|arrogant
+artificial|künstlich
+ashamed|beschämt
+aside|beiseite
+aspect|Aspekt
+assess|beurteilen
+asset|Vermögenswert
+assign|zuweisen
+assistance|Hilfe
+associate|verbinden, in Verbindung bringen
+association|Verein, Verbindung
+assume|annehmen
+assumption|Annahme
+assure|versichern
+astonish|erstaunen
+astronomy|Astronomie
+attempt|Versuch
+auction|Versteigerung
+awareness|Bewusstsein
+awkward|unangenehm, ungeschickt
+bankrupt|bankrott
+barely|kaum
+bargain|Schnäppchen
+barrier|Schranke, Hindernis
+basket|Korb
+beneficial|nützlich
+beside|neben
+beyond|jenseits
+bias|Voreingenommenheit
+bid|Gebot, Angebot
+bitter|bitter
+blame|beschuldigen
+blanket|Decke
+blind|blind
+blur|verwischen
+bold|kühn, fett
+bond|Bindung
+boost|ankurbeln
+bound|sicher, verpflichtet
+brief|kurz
+broad|breit, weit
+broadcast|senden, ausstrahlen
+broker|Makler
+budget|Haushalt, Budget
+bullet|Kugel
+bunch|Strauß, Bund
+bureaucrat|Bürokrat
+cabin|Hütte, Kabine
+calculate|berechnen
+cancel|absagen
+capable|fähig
+capacity|Kapazität
+capture|fangen, erobern
+carbon|Kohlenstoff
+cast|werfen, besetzen
+casual|lässig
+catalogue|Katalog
+cathedral|Kathedrale
+cave|Höhle
+censor|zensieren
+census|Volkszählung
+certify|bescheinigen
+chairman|Vorsitzender
+chancellor|Kanzler
+characteristic|Merkmal
+chase|jagen, verfolgen
+chief|wichtigste
+chronicle|Chronik
+circuit|Stromkreis, Rundkurs
+circumstance|Umstand
+cite|zitieren
+citizen|Bürger
+civil|zivil, bürgerlich
+clarify|klären
+classic|klassisch
+classify|einordnen
+cliff|Klippe
+clinic|Klinik
+coherent|zusammenhängend
+coincidence|Zufall
+collapse|einstürzen
+colony|Kolonie
+combination|Kombination
+comfort|Komfort, Trost
+command|Befehl, Beherrschung
+commission|Kommission, Provision
+commitment|Verpflichtung
+committee|Ausschuss
+compatible|vereinbar
+complicated|kompliziert
+component|Bestandteil
+compose|komponieren, verfassen
+compound|Verbindung
+comprehend|begreifen
+comprehensive|umfassend
+compress|zusammendrücken
+comprise|umfassen
+compulsory|verpflichtend
+concept|Begriff, Konzept
+concern|Sorge
+concerning|bezüglich
+concrete|konkret
+conduct|durchführen
+confess|gestehen
+confidence|Vertrauen
+confidential|vertraulich
+conflict|Konflikt
+conform|sich anpassen
+congregate|sich versammeln
+congress|Kongress
+conscious|bewusst
+conservation|Erhaltung, Naturschutz
+conservative|konservativ
+considerable|beträchtlich
+consideration|Überlegung, Rücksicht
+consistent|beständig, schlüssig
+conspiracy|Verschwörung
+constant|ständig
+construct|bauen
+consult|befragen
+consumption|Verbrauch
+contaminate|verunreinigen
+contemporary|zeitgenössisch
+contest|Wettbewerb
+contingent|abhängig
+contract|Vertrag
+contribute|beitragen
+controversial|umstritten
+controversy|Streit
+convention|Konvention, Gepflogenheit
+conventional|herkömmlich
+convert|umwandeln
+convey|vermitteln
+cope|zurechtkommen
+core|Kern
+corporate|Unternehmens-
+corporation|Konzern
+corridor|Flur, Gang
+council|Rat
+counter|Theke, Schalter
+county|Grafschaft, Landkreis
+courage|Mut
+coverage|Berichterstattung, Abdeckung
+crack|Riss
+craft|Handwerk
+crash|zusammenstoßen, abstürzen
+creature|Geschöpf
+crew|Besatzung
+crisis|Krise
+criterion|Kriterium
+critic|Kritiker
+critical|kritisch
+criticism|Kritik
+criticize|kritisieren
+crop|Ernte, Feldfrucht
+crucial|entscheidend
+cure|Heilmittel
+curious|neugierig
+curve|Kurve
+dare|wagen
+deaf|taub
+debate|Debatte
+debt|Schuld
+decay|verfallen
+decent|anständig
+declare|erklären
+decline|Rückgang
+decrease|abnehmen
+deduct|abziehen
+defeat|besiegen
+defence|Verteidigung
+defend|verteidigen
+defer|aufschieben
+delay|Verspätung
+deliberate|absichtlich
+deliberately|absichtlich
+delight|Freude
+demand|Nachfrage
+democracy|Demokratie
+demonstrate|zeigen, beweisen
+deny|leugnen
+depart|abreisen
+dependent|abhängig
+deposit|Anzahlung, Ablagerung
+depression|Depression
+depth|Tiefe
+derive|ableiten, gewinnen
+deserve|verdienen
+desire|Wunsch
+despair|Verzweiflung
+desperate|verzweifelt
+destruction|Zerstörung
+detach|abtrennen
+detect|entdecken
+deter|abschrecken
+determination|Entschlossenheit
+devote|widmen
+diameter|Durchmesser
+differ|sich unterscheiden
+dig|graben
+disabled|behindert
+disappoint|enttäuschen
+discipline|Disziplin
+discourage|entmutigen, abraten
+disguise|verkleiden
+dismiss|entlassen, abtun
+disorder|Unordnung, Störung
+disperse|zerstreuen
+display|zeigen, ausstellen
+distant|fern
+distinct|deutlich, verschieden
+distinguish|unterscheiden
+distribute|verteilen
+disturb|stören
+dive|tauchen
+diverse|vielfältig
+diversity|Vielfalt
+dividend|Dividende
+division|Teilung, Abteilung
+divorce|Scheidung
+domestic|inländisch, häuslich
+dominant|vorherrschend
+dominate|beherrschen
+dozen|Dutzend
+draft|Entwurf
+drag|ziehen, schleppen
+dramatic|dramatisch
+drought|Dürre
+dull|langweilig, matt
+dump|abladen, wegwerfen
+duration|Dauer
+dwell|verweilen, wohnen
+dynamic|dynamisch
+edit|bearbeiten
+edition|Ausgabe
+efficient|effizient
+elderly|älter, betagt
+elect|wählen
+elegant|elegant
+elementary|grundlegend
+eliminate|beseitigen
+embrace|umarmen, annehmen
+emerge|auftauchen
+emotional|emotional
+emperor|Kaiser
+emphasis|Betonung
+emphasize|betonen
+empire|Reich
+enable|ermöglichen
+enclose|beilegen, einschließen
+encounter|begegnen
+endanger|gefährden
+endow|ausstatten
+endowment|Stiftung, Ausstattung
+energetic|energisch
+engage|beteiligen, sich einsetzen
+enhance|verbessern
+enjoyable|angenehm
+enlargement|Vergrößerung
+enlighten|aufklären
+enquiry|Anfrage
+ensure|sicherstellen
+enthusiasm|Begeisterung
+enthusiastic|begeistert
+entire|ganz
+entrepreneur|Unternehmer
+envelope|Umschlag
+envy|Neid
+equip|ausstatten
+equity|Gerechtigkeit, Eigenkapital
+equivalent|gleichwertig
+era|Zeitalter
+erupt|ausbrechen
+escort|begleiten
+establish|gründen
+estate|Gut, Anwesen
+estimate|schätzen
+ethic|Ethik
+ethical|ethisch
+ethics|Ethik
+ethnic|ethnisch
+evaluate|bewerten
+evaluation|Bewertung
+evident|offensichtlich
+evil|böse
+evolve|sich entwickeln
+excavate|ausgraben
+exceed|übersteigen
+exception|Ausnahme
+exclaim|ausrufen
+exclude|ausschließen
+excuse|Ausrede
+executive|Führungskraft
+exempt|befreit
+exhibit|ausstellen, zeigen
+existence|Dasein
+exotic|exotisch
+expectation|Erwartung
+expense|Ausgabe
+expertise|Fachwissen
+exploit|ausbeuten, nutzen
+exploration|Erkundung
+expose|aussetzen, enthüllen
+exposure|Aussetzung, Enthüllung
+extend|verlängern, ausdehnen
+extensive|umfangreich
+extent|Ausmaß
+external|äußerlich
+extract|herausziehen
+extraordinary|außergewöhnlich
+fabric|Stoff
+facility|Einrichtung
+failure|Misserfolg
+faith|Glaube, Vertrauen
+faithful|treu
+fake|gefälscht
+fame|Ruhm
+fantasy|Fantasie
+fare|Fahrpreis
+fault|Schuld, Fehler
+feather|Feder
+fee|Gebühr
+feedback|Rückmeldung
+fellow|Mit-
+fibre|Faser
+finance|Finanzen
+firm|fest
+fiscal|steuerlich
+flame|Flamme
+flank|Flanke
+flash|Blitz, Aufleuchten
+flexible|flexibel
+flicker|flackern
+float|schwimmen, treiben
+flock|Schar, Herde
+fog|Nebel
+fond|zugetan
+fool|Narr
+forbid|verbieten
+forecast|Vorhersage
+foresee|vorhersehen
+forgive|vergeben
+format|Format
+formation|Bildung, Formation
+former|ehemalig
+fortunate|glücklich
+fortune|Vermögen, Glück
+forum|Forum
+fossil|Fossil
+found|gründen
+foundation|Grundlage, Fundament
+fraction|Bruchteil
+fracture|Bruch
+fragment|Bruchstück
+framework|Rahmen
+frank|offen, ehrlich
+fraud|Betrug
+freedom|Freiheit
+frequency|Häufigkeit
+frequent|häufig
+fringe|Rand
+frontier|Grenze
+frown|die Stirn runzeln
+fulfil|erfüllen
+fulfilment|Erfüllung
+fund|Fonds
+fundamental|grundlegend
+furious|wütend
+furnish|möblieren
+furthermore|außerdem
+gain|gewinnen
+galaxy|Galaxie
+gamble|wetten, spielen
+gasp|keuchen
+gauge|messen, einschätzen
+gender|Geschlecht
+gene|Gen
+generate|erzeugen
+genius|Genie
+genre|Gattung, Genre
+genuine|echt
+geology|Geologie
+geometry|Geometrie
+gesture|Geste
+glamour|Glanz
+glare|starren, blenden
+gleam|schimmern
+glide|gleiten
+gloom|Düsternis
+gospel|Evangelium
+govern|regieren
+governor|Gouverneur
+grab|packen
+gradually|allmählich
+grand|großartig
+grant|Zuschuss, Stipendium
+graphic|anschaulich, drastisch
+gravel|Kies
+graze|grasen
+greed|Gier
+grim|düster, grimmig
+guarantee|garantieren
+guideline|Richtlinie
+gulf|Golf, Kluft
+habitat|Lebensraum
+hammer|Hammer
+handicap|Nachteil, Behinderung
+handle|handhaben
+harass|belästigen
+harm|schaden
+harmful|schädlich
+haste|Eile
+hatch|schlüpfen
+haul|schleppen
+headquarters|Hauptsitz
+heal|heilen
+heaven|Himmel
+heir|Erbe
+hell|Hölle
+hence|daher
+herd|Herde
+hesitate|zögern
+hilarious|urkomisch
+hollow|hohl
+holy|heilig
+honour|Ehre
+hook|Haken
+household|Haushalt
+humiliate|demütigen
+humour|Humor
+hunger|Hunger
+hut|Hütte
+hybrid|Mischform
+hypothesis|Hypothese
+icon|Symbol, Ikone
+identical|identisch
+idle|untätig
+illuminate|beleuchten
+illusion|Illusion
+illustrate|veranschaulichen
+imagination|Vorstellungskraft
+imitate|nachahmen
+immune|immun
+impair|beeinträchtigen
+impatient|ungeduldig
+implement|umsetzen
+implication|Folge, Andeutung
+implicit|stillschweigend
+imply|andeuten
+impose|auferlegen
+impress|beeindrucken
+impulse|Impuls
+incentive|Anreiz
+incident|Vorfall
+incline|neigen
+income|Einkommen
+incorporate|einbeziehen
+incorrect|falsch
+index|Verzeichnis, Index
+indifferent|gleichgültig
+industrial|industriell
+inevitable|unvermeidlich
+infection|Infektion
+infer|folgern
+infinite|unendlich
+inflame|entzünden, anheizen
+inflation|Inflation
+inform|informieren
+inhabitant|Einwohner
+inherit|erben
+initial|anfänglich
+initiative|Initiative
+inn|Gasthaus
+inner|innere
+innovation|Neuerung
+input|Beitrag, Eingabe
+insert|einfügen
+insight|Einblick
+insist|bestehen
+inspire|inspirieren
+install|installieren
+instalment|Rate
+instance|Beispiel, Fall
+instant|sofortig
+institute|Institut
+institution|Einrichtung
+insulate|isolieren
+insurance|Versicherung
+integrate|integrieren
+intellectual|intellektuell
+intense|intensiv
+interact|interagieren
+internal|intern
+interpret|deuten
+interrupt|unterbrechen
+interval|Abstand, Pause
+intimidate|einschüchtern
+intrigue|faszinieren
+invade|einmarschieren
+invasion|Invasion
+investment|Investition
+isolate|isolieren
+jail|Gefängnis
+jar|Glas, Gefäß
+jet|Düsenflugzeug
+joint|gemeinsam
+joy|Freude
+judgement|Urteil
+junior|untergeordnet, jünger
+jury|Geschworene
+justice|Gerechtigkeit
+justify|rechtfertigen
+juvenile|jugendlich
+kit|Ausrüstung, Bausatz
+kneel|knien
+knot|Knoten
+labor|Arbeit, Arbeitskräfte
+ladder|Leiter
+landscape|Landschaft
+landslide|Erdrutsch
+lane|Spur, Gasse
+lately|in letzter Zeit
+launch|starten
+leaflet|Flugblatt
+league|Liga
+lean|sich lehnen
+legend|Legende
+licence|Lizenz, Erlaubnis
+lieutenant|Leutnant
+lifetime|Lebenszeit
+likewise|ebenso
+literary|literarisch
+litter|Abfall
+lively|lebhaft
+livestock|Vieh
+load|Last
+loan|Darlehen
+loose|locker
+loyal|treu
+lung|Lunge
+magnificent|prächtig
+maintain|aufrechterhalten
+majority|Mehrheit
+mammal|Säugetier
+manufacture|herstellen
+margin|Rand, Spanne
+massive|riesig
+master|beherrschen
+matrix|Matrix
+maximum|höchste
+means|Mittel
+mechanic|Mechaniker
+mechanism|Mechanismus
+medal|Medaille
+mediate|vermitteln
+medication|Medikament
+melt|schmelzen
+membership|Mitgliedschaft
+memorable|unvergesslich
+metaphor|Metapher
+military|militärisch
+mineral|Mineral
+minimum|Mindest-
+minister|Minister
+minor|gering
+minority|Minderheit
+miserable|elend
+mislead|irreführen
+mission|Auftrag, Mission
+mock|verspotten
+mode|Modus
+modest|bescheiden
+modesty|Bescheidenheit
+modify|verändern
+moisture|Feuchtigkeit
+monarch|Monarch
+monarchy|Monarchie
+monetary|Geld-, monetär
+monitor|überwachen
+monument|Denkmal
+moral|moralisch
+moreover|überdies
+mortgage|Hypothek
+motion|Bewegung
+motivate|motivieren
+motivation|Motivation
+motor|Motor
+mount|besteigen
+mourn|trauern
+mourning|Trauer
+multiple|mehrfach
+multiply|multiplizieren
+murmur|murmeln
+mutter|murmeln, brummeln
+myth|Mythos
+naked|nackt
+nasty|gemein, scheußlich
+navigate|navigieren
+navigation|Navigation
+necessity|Notwendigkeit
+negotiate|verhandeln
+negotiation|Verhandlung
+nerve|Nerv, Mut
+neutral|neutral
+nevertheless|dennoch
+nightmare|Albtraum
+norm|Norm
+notion|Vorstellung
+nowadays|heutzutage
+numerous|zahlreich
+nutrition|Ernährung
+obedient|gehorsam
+obey|gehorchen
+objective|Ziel
+obligation|Pflicht
+obscure|unklar, unbekannt
+observation|Beobachtung
+observe|beobachten
+obstacle|Hindernis
+obstruct|behindern
+obtain|erhalten
+occupation|Beruf, Besetzung
+occupy|besetzen
+offence|Straftat, Kränkung
+offend|beleidigen
+offset|ausgleichen
+omit|auslassen
+ongoing|laufend
+operate|bedienen, funktionieren
+opponent|Gegner
+oppose|ablehnen
+oppress|unterdrücken
+optimistic|optimistisch
+orbit|Umlaufbahn
+orchestra|Orchester
+organ|Organ
+organic|organisch, Bio-
+organism|Organismus

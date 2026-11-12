@@ -23,6 +23,8 @@ flutter:
     - assets/deck/en/
     - assets/deck/es/
     - assets/deck/fr/
+    - assets/deck/de/
+    - assets/deck/pt/
     - assets/realm/
     - assets/legal/
   fonts:

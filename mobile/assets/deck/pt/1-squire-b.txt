@@ -1,0 +1,355 @@
+# Verbarium — Portuguese meanings for 1-squire-b.txt: word|meaning
+probably|provavelmente
+problem|problema
+process|processo
+produce|produzir
+product|produto
+professional|profissional
+profile|perfil
+progress|progresso
+project|projeto
+promise|prometer
+pronounce|pronunciar
+protect|proteger
+provide|fornecer
+public|público
+publish|publicar
+pull|puxar
+purpose|propósito
+push|empurrar
+quality|qualidade
+quantity|quantidade
+quarter|quarto
+queen|rainha
+question|pergunta
+questionable|questionável
+quick|rápido
+quiet|quieto, silencioso
+quite|bastante
+race|corrida
+railway|ferrovia
+rain|chuva
+raise|levantar, aumentar
+rate|taxa, ritmo
+rather|bastante, de preferência
+reach|alcançar, chegar a
+react|reagir
+ready|pronto
+real|real, verdadeiro
+realise|perceber
+reason|razão, motivo
+receive|receber
+recent|recente
+reception|recepção
+recipe|receita
+recognize|reconhecer
+recommend|recomendar
+record|gravar, registrar
+reduce|reduzir
+refer|referir-se
+refuse|recusar-se
+region|região
+regular|regular, habitual
+relationship|relação, relacionamento
+relax|relaxar
+remember|lembrar
+remove|remover, tirar
+repair|consertar
+repeat|repetir
+replace|substituir
+reply|responder
+report|relatório
+request|pedido, solicitação
+research|pesquisa
+respond|responder
+rest|descansar
+restaurant|restaurante
+restless|inquieto
+result|resultado
+return|voltar, devolver
+review|resenha, revisão
+rice|arroz
+rich|rico
+ride|andar de, montar
+ring|tocar, ligar
+river|rio
+road|estrada
+rock|rocha
+role|papel
+roof|telhado
+round|redondo
+route|rota
+routine|rotina
+rude|grosseiro, mal-educado
+rule|regra
+sad|triste
+safe|seguro
+sail|navegar
+salary|salário
+sale|venda, liquidação
+salt|sal
+same|mesmo
+save|economizar, salvar
+scared|assustado
+scene|cena
+schedule|horário, cronograma
+science|ciência
+score|pontuação
+screen|tela
+sea|mar
+search|procurar
+season|estação, temporada
+seat|assento
+second|segundo
+secret|segredo
+secretary|secretário
+section|seção
+seem|parecer
+sell|vender
+send|enviar
+sense|sentido
+sentence|frase
+separate|separado
+series|série
+serious|sério, grave
+serve|servir
+service|serviço
+several|vários
+shake|sacudir, agitar
+shape|forma
+share|compartilhar
+sheet|folha, lençol
+ship|navio
+shirt|camisa
+shop|loja
+short|curto, baixo
+shoulder|ombro
+shout|gritar
+show|mostrar
+shower|chuveiro, pancada de chuva
+shut|fechar
+sick|doente, enjoado
+side|lado
+sign|sinal, placa
+silver|prata
+similar|parecido, semelhante
+simple|simples
+since|desde
+sing|cantar
+single|único, solteiro
+site|local
+situation|situação
+size|tamanho
+skill|habilidade
+skin|pele
+sky|céu
+sleep|dormir
+slow|lento
+smart|esperto, elegante
+smell|cheirar
+smile|sorrir
+smoke|fumaça
+snake|cobra
+snow|neve
+soap|sabonete
+social|social
+society|sociedade
+sock|meia
+soft|macio, mole
+soldier|soldado
+solution|solução
+solve|resolver
+sometimes|às vezes
+somewhere|em algum lugar
+song|canção
+soon|logo
+sorry|arrependido, desculpe
+sort|tipo
+sound|som
+soup|sopa
+source|fonte
+south|sul
+space|espaço
+speak|falar
+special|especial
+specific|específico
+speech|discurso
+speed|velocidade
+spell|soletrar
+spend|gastar, passar (tempo)
+spoon|colher
+sport|esporte
+spring|primavera
+square|quadrado, praça
+stage|palco, etapa
+stair|degrau
+stamp|selo
+stand|ficar de pé
+star|estrela
+start|começar
+state|estado
+statement|declaração
+station|estação
+stay|ficar, hospedar-se
+steal|roubar
+step|passo
+still|ainda
+stomach|estômago
+stone|pedra
+stop|parar
+store|guardar, armazenar
+storm|tempestade
+story|história
+straight|reto
+strange|estranho
+strategy|estratégia
+street|rua
+stress|estresse, pressão
+strong|forte
+structure|estrutura
+student|estudante
+study|estudar
+stupid|burro, estúpido
+style|estilo
+subject|matéria, assunto
+succeed|ter sucesso
+success|sucesso
+sugar|açúcar
+suggest|sugerir, indicar
+suit|ficar bem, convir
+summer|verão
+support|apoiar
+suppose|supor
+sure|certo, seguro
+surprise|surpresa
+survey|pesquisa, levantamento
+sweet|doce
+swim|nadar
+symbol|símbolo
+system|sistema
+table|mesa
+talk|conversar, falar
+tall|alto
+target|alvo, meta
+task|tarefa
+taste|provar, ter gosto de
+teach|ensinar
+team|equipe, time
+technology|tecnologia
+temperature|temperatura
+term|semestre, termo
+terrible|terrível
+test|teste, prova
+thank|agradecer
+theatre|teatro
+thick|grosso
+thief|ladrão
+thin|magro, fino
+thirsty|com sede
+thought|pensamento
+through|através de
+throw|jogar, atirar
+ticket|passagem, ingresso
+tidy|arrumado
+tie|amarrar
+tip|ponta, dica, gorjeta
+tired|cansado
+title|título
+together|juntos
+tool|ferramenta
+tooth|dente
+top|topo, parte de cima
+topic|tema, assunto
+touch|tocar
+tour|turnê, passeio
+tourist|turista
+towards|em direção a
+towel|toalha
+tower|torre
+town|cidade
+toy|brinquedo
+track|rastro, trilha
+tradition|tradição
+traditional|tradicional
+train|treinar
+transport|transporte
+tree|árvore
+trip|viagem, passeio
+trouble|problema, dificuldade
+trousers|calça
+true|verdadeiro
+try|tentar
+turn|virar
+twice|duas vezes
+twin|gêmeo
+type|tipo
+typical|típico
+umbrella|guarda-chuva
+uncle|tio
+understand|entender
+uniform|uniforme
+unit|unidade
+until|até
+unusual|incomum
+upstairs|lá em cima
+use|usar
+useful|útil
+usual|habitual
+usually|normalmente
+valley|vale
+van|van, furgão
+variety|variedade
+vegetable|legume, verdura
+vehicle|veículo
+view|opinião, vista
+village|aldeia, vilarejo
+virus|vírus
+visit|visitar
+visitor|visitante
+voice|voz
+wait|esperar
+wake|acordar
+walk|caminhar, andar
+wall|parede, muro
+war|guerra
+warm|quente, morno
+wary|desconfiado, cauteloso
+wash|lavar
+watch|assistir, observar
+wave|onda
+weak|fraco
+wear|usar, vestir
+weather|tempo
+wedding|casamento
+week|semana
+weekend|fim de semana
+weight|peso
+welcome|dar as boas-vindas
+west|oeste
+wet|molhado
+wheel|roda
+while|momento, enquanto
+whole|inteiro
+wide|largo
+wife|esposa
+wild|selvagem
+win|ganhar, vencer
+wind|vento
+window|janela
+winter|inverno
+wish|desejar
+without|sem
+wonderful|maravilhoso
+wood|madeira
+word|palavra
+work|trabalhar
+world|mundo
+worry|preocupar-se
+worse|pior
+write|escrever
+wrong|errado
+yard|quintal, pátio
+year|ano
+yet|ainda, já
+young|jovem
+zero|zero

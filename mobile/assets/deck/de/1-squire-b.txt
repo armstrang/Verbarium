@@ -1,0 +1,355 @@
+# Verbarium — German meanings for 1-squire-b.txt: word|meaning
+probably|wahrscheinlich
+problem|Problem
+process|Prozess
+produce|herstellen
+product|Produkt
+professional|beruflich, professionell
+profile|Profil
+progress|Fortschritt
+project|Projekt
+promise|versprechen
+pronounce|aussprechen
+protect|schützen
+provide|bereitstellen
+public|öffentlich
+publish|veröffentlichen
+pull|ziehen
+purpose|Zweck
+push|schieben, drücken
+quality|Qualität
+quantity|Menge
+quarter|Viertel
+queen|Königin
+question|Frage
+questionable|fragwürdig
+quick|schnell
+quiet|ruhig, leise
+quite|ziemlich
+race|Rennen
+railway|Eisenbahn
+rain|Regen
+raise|heben, erhöhen
+rate|Rate, Tempo
+rather|ziemlich, eher
+reach|erreichen
+react|reagieren
+ready|bereit, fertig
+real|echt, wirklich
+realise|erkennen, merken
+reason|Grund
+receive|erhalten
+recent|neu, jüngst
+reception|Empfang
+recipe|Rezept
+recognize|erkennen
+recommend|empfehlen
+record|aufnehmen, aufzeichnen
+reduce|verringern
+refer|sich beziehen
+refuse|ablehnen, sich weigern
+region|Region
+regular|regelmäßig
+relationship|Beziehung
+relax|sich entspannen
+remember|sich erinnern
+remove|entfernen
+repair|reparieren
+repeat|wiederholen
+replace|ersetzen
+reply|antworten
+report|Bericht
+request|Bitte, Anfrage
+research|Forschung
+respond|antworten, reagieren
+rest|sich ausruhen
+restaurant|Restaurant
+restless|unruhig
+result|Ergebnis
+return|zurückkehren, zurückgeben
+review|Rezension, Überprüfung
+rice|Reis
+rich|reich
+ride|reiten, fahren
+ring|klingeln, anrufen
+river|Fluss
+road|Straße
+rock|Fels
+role|Rolle
+roof|Dach
+round|rund
+route|Strecke, Route
+routine|Routine
+rude|unhöflich
+rule|Regel
+sad|traurig
+safe|sicher
+sail|segeln
+salary|Gehalt
+sale|Verkauf, Ausverkauf
+salt|Salz
+same|gleich
+save|sparen, retten
+scared|ängstlich
+scene|Szene
+schedule|Zeitplan
+science|Wissenschaft
+score|Punktzahl
+screen|Bildschirm
+sea|Meer
+search|suchen
+season|Jahreszeit, Saison
+seat|Sitz
+second|Sekunde
+secret|Geheimnis
+secretary|Sekretär
+section|Abschnitt
+seem|scheinen
+sell|verkaufen
+send|schicken
+sense|Sinn
+sentence|Satz
+separate|getrennt
+series|Reihe, Serie
+serious|ernst, schwer
+serve|dienen, servieren
+service|Dienst
+several|mehrere
+shake|schütteln
+shape|Form
+share|teilen
+sheet|Blatt, Laken
+ship|Schiff
+shirt|Hemd
+shop|Laden
+short|kurz, klein
+shoulder|Schulter
+shout|schreien
+show|zeigen
+shower|Dusche, Schauer
+shut|schließen
+sick|krank, übel
+side|Seite
+sign|Zeichen, Schild
+silver|Silber
+similar|ähnlich
+simple|einfach
+since|seit
+sing|singen
+single|einzig, ledig
+site|Ort, Stelle
+situation|Lage
+size|Größe
+skill|Fähigkeit
+skin|Haut
+sky|Himmel
+sleep|schlafen
+slow|langsam
+smart|klug, schick
+smell|riechen
+smile|lächeln
+smoke|Rauch
+snake|Schlange
+snow|Schnee
+soap|Seife
+social|sozial
+society|Gesellschaft
+sock|Socke
+soft|weich
+soldier|Soldat
+solution|Lösung
+solve|lösen
+sometimes|manchmal
+somewhere|irgendwo
+song|Lied
+soon|bald
+sorry|leid, bedauernd
+sort|Art, Sorte
+sound|Geräusch, Klang
+soup|Suppe
+source|Quelle
+south|Süden
+space|Raum, Platz
+speak|sprechen
+special|besonders
+specific|bestimmt, spezifisch
+speech|Rede
+speed|Geschwindigkeit
+spell|buchstabieren
+spend|ausgeben, verbringen
+spoon|Löffel
+sport|Sport
+spring|Frühling
+square|Quadrat, Platz
+stage|Bühne, Phase
+stair|Stufe
+stamp|Briefmarke
+stand|stehen
+star|Stern
+start|anfangen
+state|Staat, Zustand
+statement|Aussage
+station|Bahnhof
+stay|bleiben, übernachten
+steal|stehlen
+step|Schritt
+still|noch
+stomach|Magen
+stone|Stein
+stop|anhalten
+store|lagern, aufbewahren
+storm|Sturm
+story|Geschichte
+straight|gerade
+strange|seltsam
+strategy|Strategie
+street|Straße
+stress|Stress, Druck
+strong|stark
+structure|Aufbau, Struktur
+student|Student, Schüler
+study|lernen, studieren
+stupid|dumm
+style|Stil
+subject|Fach, Thema
+succeed|Erfolg haben
+success|Erfolg
+sugar|Zucker
+suggest|vorschlagen, nahelegen
+suit|passen, stehen
+summer|Sommer
+support|unterstützen
+suppose|annehmen
+sure|sicher
+surprise|Überraschung
+survey|Umfrage
+sweet|süß
+swim|schwimmen
+symbol|Symbol
+system|System
+table|Tisch
+talk|reden
+tall|groß
+target|Ziel
+task|Aufgabe
+taste|probieren, schmecken
+teach|unterrichten
+team|Mannschaft, Team
+technology|Technik
+temperature|Temperatur
+term|Semester, Begriff
+terrible|schrecklich
+test|Test, Prüfung
+thank|danken
+theatre|Theater
+thick|dick
+thief|Dieb
+thin|dünn
+thirsty|durstig
+thought|Gedanke
+through|durch
+throw|werfen
+ticket|Fahrkarte, Eintrittskarte
+tidy|ordentlich
+tie|binden
+tip|Spitze, Tipp, Trinkgeld
+tired|müde
+title|Titel
+together|zusammen
+tool|Werkzeug
+tooth|Zahn
+top|Spitze, Oberseite
+topic|Thema
+touch|berühren
+tour|Tour, Rundgang
+tourist|Tourist
+towards|auf ... zu, gegenüber
+towel|Handtuch
+tower|Turm
+town|Stadt
+toy|Spielzeug
+track|Spur, Pfad
+tradition|Tradition
+traditional|traditionell
+train|trainieren
+transport|Verkehr, Beförderung
+tree|Baum
+trip|Ausflug, Reise
+trouble|Ärger, Schwierigkeit
+trousers|Hose
+true|wahr
+try|versuchen
+turn|drehen, abbiegen
+twice|zweimal
+twin|Zwilling
+type|Art, Typ
+typical|typisch
+umbrella|Regenschirm
+uncle|Onkel
+understand|verstehen
+uniform|einheitlich
+unit|Einheit
+until|bis
+unusual|ungewöhnlich
+upstairs|oben
+use|benutzen
+useful|nützlich
+usual|üblich
+usually|normalerweise
+valley|Tal
+van|Lieferwagen
+variety|Vielfalt
+vegetable|Gemüse
+vehicle|Fahrzeug
+view|Meinung, Aussicht
+village|Dorf
+virus|Virus
+visit|besuchen
+visitor|Besucher
+voice|Stimme
+wait|warten
+wake|aufwachen, wecken
+walk|gehen, spazieren
+wall|Wand, Mauer
+war|Krieg
+warm|warm
+wary|vorsichtig, misstrauisch
+wash|waschen
+watch|ansehen, beobachten
+wave|Welle
+weak|schwach
+wear|tragen
+weather|Wetter
+wedding|Hochzeit
+week|Woche
+weekend|Wochenende
+weight|Gewicht
+welcome|willkommen heißen
+west|Westen
+wet|nass
+wheel|Rad
+while|Weile, während
+whole|ganz
+wide|breit
+wife|Ehefrau
+wild|wild
+win|gewinnen
+wind|Wind
+window|Fenster
+winter|Winter
+wish|wünschen
+without|ohne
+wonderful|wunderbar
+wood|Holz
+word|Wort
+work|arbeiten
+world|Welt
+worry|sich sorgen
+worse|schlechter
+write|schreiben
+wrong|falsch
+yard|Hof
+year|Jahr
+yet|noch, schon
+young|jung
+zero|Null

@@ -1,0 +1,355 @@
+# Verbarium — German meanings for 5-duke-b.txt: word|meaning
+mistrust|Misstrauen
+moderation|Mäßigung
+modicum|ein Mindestmaß
+mollify|besänftigen
+momentous|bedeutsam
+morass|Sumpf, Wirrwarr
+morose|mürrisch
+motto|Leitspruch
+muddle|Durcheinander
+mural|Wandbild
+murky|trüb
+mutiny|Meuterei
+myopic|kurzsichtig
+narcotic|Rauschmittel
+nascent|entstehend
+negate|aufheben
+negligible|unerheblich
+nettle|reizen
+neurotic|neurotisch
+nimble|flink
+nocturnal|nächtlich
+nomad|Nomade
+nonchalant|lässig
+nonplussed|verdutzt
+noxious|schädlich
+nuance|Nuance
+nullify|aufheben
+obdurate|verstockt
+obituary|Nachruf
+oblique|indirekt, schräg
+obliterate|auslöschen
+oblivious|ahnungslos
+obsolete|veraltet
+obstinate|starrsinnig
+obtrusive|aufdringlich
+odious|widerwärtig
+omen|Vorzeichen
+onerous|beschwerlich
+onslaught|Ansturm
+opaque|undurchsichtig
+opine|meinen
+optimum|optimal
+opulent|üppig
+ordinance|Verordnung
+ornate|verziert
+ostentatious|protzig
+ostracize|ächten
+outburst|Ausbruch
+outcast|Ausgestoßener
+outcry|Aufschrei
+outdated|veraltet
+outnumber|zahlenmäßig übertreffen
+outpost|Außenposten
+outspoken|freimütig
+ovation|Ovation
+overboard|über Bord
+overdue|überfällig
+overload|überlasten
+overpower|überwältigen
+overrun|überrennen, überschreiten
+oversight|Versehen, Aufsicht
+overture|Ouvertüre, Annäherung
+overwrought|überreizt
+pageant|Festzug
+painstaking|sorgfältig
+palatable|schmackhaft, annehmbar
+pallid|bleich
+palpable|spürbar
+paltry|kläglich
+panorama|Panorama
+parable|Gleichnis
+parch|ausdörren
+parchment|Pergament
+parity|Gleichheit
+parry|parieren
+paternal|väterlich
+patronize|herablassend behandeln
+pedigree|Stammbaum
+penal|Straf-
+penchant|Vorliebe
+pendulum|Pendel
+penitent|reuig
+perceptive|scharfsinnig
+perilous|gefährlich
+perjury|Meineid
+permissible|zulässig
+pernicious|verderblich
+perplex|verwirren
+persevere|durchhalten
+persona|öffentliches Bild
+pertain|betreffen
+pertinent|zutreffend
+perturb|beunruhigen
+peruse|durchsehen
+pervade|durchdringen
+pessimism|Pessimismus
+pessimistic|pessimistisch
+phenomenal|phänomenal
+phobia|Phobie
+picturesque|malerisch
+pinnacle|Gipfel
+pious|fromm
+pique|wecken, kränken
+piracy|Piraterie
+pivotal|zentral
+placate|beschwichtigen
+placid|ruhig
+plaintive|klagend
+plethora|Fülle
+plucky|beherzt
+plunder|plündern
+poignant|ergreifend
+polemic|Polemik
+pollinate|bestäuben
+pomp|Prunk
+ponderous|schwerfällig
+porous|porös
+portend|ankündigen
+postulate|postulieren
+potency|Wirksamkeit
+pounce|sich stürzen
+pragmatism|Pragmatismus
+prairie|Prärie
+prattle|plappern
+precept|Grundsatz
+precinct|Bezirk
+precipitous|steil, übereilt
+predicament|Zwangslage
+predominate|überwiegen
+preen|sich putzen
+preface|Vorwort
+prehistoric|vorgeschichtlich
+preposterous|absurd
+prerogative|Vorrecht
+presumptuous|anmaßend
+pretext|Vorwand
+prim|spröde
+primate|Primat
+pristine|unberührt
+proactive|vorausschauend
+prodigious|gewaltig
+prodigy|Wunderkind
+profane|weltlich, lästerlich
+profess|bekunden
+proficient|versiert
+profuse|überreichlich
+prolific|produktiv
+promulgate|verkünden
+propensity|Neigung
+prophecy|Prophezeiung
+propitious|günstig
+protracted|langwierig
+protrude|hervorstehen
+proverb|Sprichwort
+prowess|Können
+prowl|umherschleichen
+proxy|Stellvertreter
+puberty|Pubertät
+pulp|Fruchtfleisch, Brei
+pungent|beißend
+punitive|Straf-
+puny|schmächtig
+quaint|urig
+qualm|Bedenken
+quandary|Dilemma
+quarantine|Quarantäne
+quell|niederschlagen
+querulous|nörgelnd
+quibble|kleinlich kritisieren
+quintessential|typisch, vollendet
+quip|witzige Bemerkung
+rampage|Randale
+rampant|ungezügelt
+rankle|nagen
+ransom|Lösegeld
+rapport|gutes Verhältnis
+rapture|Entzücken
+raucous|rau, laut
+ravage|verwüsten
+rebuff|zurückweisen
+rebuke|tadeln
+rebut|widerlegen
+recapture|zurückerobern
+recline|sich zurücklehnen
+reclusive|zurückgezogen
+recourse|Rückgriff
+recrimination|Gegenbeschuldigung
+rectify|berichtigen
+redoubtable|gefürchtet
+redress|Wiedergutmachung
+refute|widerlegen
+regal|königlich
+rejoice|sich freuen
+relapse|Rückfall
+remiss|nachlässig
+remission|Erlass, Remission
+remorse|Reue
+rendition|Darbietung
+repatriate|zurückführen
+repercussion|Auswirkung
+repetitive|eintönig
+replenish|auffüllen
+replica|Nachbildung
+repose|Ruhe
+reprieve|Aufschub
+reprimand|rügen
+reprisal|Vergeltung
+reproach|Vorwurf
+reprove|tadeln
+reptile|Reptil
+repudiate|zurückweisen
+rescind|widerrufen
+resolute|entschlossen
+resonate|nachklingen
+respite|Atempause
+resplendent|glänzend
+resurgence|Wiederaufleben
+retinue|Gefolge
+retract|zurücknehmen
+retribution|Vergeltung
+revoke|widerrufen
+rife|weit verbreitet
+rift|Riss
+righteous|rechtschaffen
+rile|ärgern
+rodent|Nagetier
+rout|vernichtende Niederlage
+rudimentary|elementar
+ruminate|grübeln
+rupture|Bruch
+rustic|ländlich
+sacrosanct|unantastbar
+sallow|fahl
+sanctimonious|scheinheilig
+sardonic|höhnisch
+sate|stillen
+scathing|vernichtend
+scoff|spotten
+scourge|Geißel
+scrupulous|gewissenhaft
+scrutinize|genau prüfen
+scuttle|versenken, huschen
+secluded|abgeschieden
+sedate|gesetzt
+seethe|kochen vor Wut
+sequel|Fortsetzung
+shirk|sich drücken
+shun|meiden
+skirmish|Gefecht
+slander|Verleumdung
+slovenly|schlampig
+sluggish|träge
+smug|selbstgefällig
+snub|brüskieren
+sojourn|Aufenthalt
+solace|Trost
+sombre|düster
+sporadic|vereinzelt
+spurious|unecht
+spurn|verschmähen
+squalid|verwahrlost
+squander|verschwenden
+stagnant|stehend
+stagnate|stagnieren
+staunch|treu, fest
+steadfast|standhaft
+stigma|Stigma
+stoic|stoisch
+strenuous|anstrengend
+strident|schrill
+strife|Zwietracht
+stupor|Betäubung
+suave|weltgewandt
+subjugate|unterjochen
+substantiate|belegen
+subterfuge|List
+succinct|prägnant
+sullen|verdrossen
+sully|beflecken
+sumptuous|üppig
+superfluous|überflüssig
+supersede|ablösen
+supplant|verdrängen
+surly|mürrisch
+surmise|vermuten
+surreptitious|heimlich
+swagger|stolzieren
+tacit|stillschweigend
+taciturn|wortkarg
+tantamount|gleichbedeutend
+tarnish|trüben
+tawdry|billig, geschmacklos
+tedious|langweilig
+temperance|Mäßigkeit
+tenacious|zäh
+tenacity|Hartnäckigkeit
+tenuous|dünn, schwach
+tepid|lauwarm
+terse|knapp
+throng|Menge
+timorous|ängstlich
+tirade|Tirade
+toil|schuften
+torrid|glühend heiß
+tractable|fügsam
+trajectory|Flugbahn, Verlauf
+transgress|überschreiten
+travesty|Zerrbild
+trepidation|Beklommenheit
+trite|abgedroschen
+truant|Schulschwänzer
+truncate|kürzen
+tumult|Tumult
+turbulent|stürmisch
+tutelage|Anleitung
+unassuming|bescheiden
+uncanny|unheimlich
+underscore|unterstreichen
+unkempt|ungepflegt
+unruly|widerspenstig
+unscathed|unversehrt
+untenable|unhaltbar
+unwieldy|unhandlich
+upshot|Ergebnis
+urbane|weltmännisch
+usurp|an sich reißen
+vagary|Laune
+valour|Tapferkeit
+vanquish|bezwingen
+veer|ausscheren
+vehement|heftig
+veneer|Furnier, Anstrich
+venerable|ehrwürdig
+verve|Schwung
+vestige|Überbleibsel
+vex|ärgern
+vie|wetteifern
+vindicate|rechtfertigen
+vindictive|rachsüchtig
+virulent|bösartig
+vociferous|lautstark
+waft|wehen
+wallow|sich suhlen
+watershed|Wendepunkt
+whet|anregen
+whim|Laune
+wily|gerissen
+wistful|wehmütig
+wizened|verhutzelt
+wrangle|streiten
+wrath|Zorn
+wrest|entreißen
+zenith|Zenit
+zest|Begeisterung

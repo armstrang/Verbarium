@@ -1,0 +1,514 @@
+# Verbarium — Portuguese meanings for toefl.txt: word|meaning
+campus|campus universitário
+semester|semestre
+tuition|mensalidade
+dormitory|alojamento estudantil
+professor|professor
+assignment|tarefa, trabalho
+deadline|prazo
+quiz|teste rápido
+freshman|calouro
+grade|nota
+enroll|matricular-se
+laboratory|laboratório
+textbook|livro didático
+attendance|frequência
+credit|crédito (acadêmico)
+syllabus|ementa
+prerequisite|pré-requisito
+transcript|histórico escolar
+faculty|corpo docente
+seminar|seminário
+scholarship|bolsa de estudos
+undergraduate|estudante de graduação
+graduate|formar-se
+internship|estágio
+advisor|orientador
+elective|disciplina optativa
+midterm|prova do meio do semestre
+registrar|secretaria acadêmica
+plagiarism|plágio
+excerpt|trecho
+sophomore|aluno do segundo ano
+fieldwork|trabalho de campo
+thesis|tese, monografia
+curriculum|currículo
+dissertation|tese de doutorado
+tenure|estabilidade
+citation|citação
+peer|colega, par
+stipend|bolsa, auxílio
+sabbatical|ano sabático
+accreditation|credenciamento
+interdisciplinary|interdisciplinar
+colloquium|colóquio
+classmate|colega de classe
+roommate|colega de quarto
+cafeteria|refeitório
+notebook|caderno
+backpack|mochila
+handout|apostila
+homework|lição de casa
+calculator|calculadora
+gym|academia
+counselor|orientador
+librarian|bibliotecário
+presentation|apresentação
+diploma|diploma
+bookstore|livraria
+laptop|notebook
+classroom|sala de aula
+coursework|trabalhos do curso
+bibliography|bibliografia
+workload|carga de trabalho
+extracurricular|extracurricular
+alumnus|ex-aluno
+commencement|cerimônia de formatura
+practicum|estágio prático
+proctor|fiscal de prova
+rubric|rubrica
+tutorial|tutoria
+enrollment|matrícula
+postgraduate|de pós-graduação
+doctorate|doutorado
+auditorium|auditório
+paraphrase|parafrasear
+footnote|nota de rodapé
+appendix|apêndice
+ecosystem|ecossistema
+photosynthesis|fotossíntese
+metabolism|metabolismo
+precipitation|precipitação
+evaporation|evaporação
+irrigation|irrigação
+asteroid|asteroide
+artery|artéria
+hormone|hormônio
+antibiotic|antibiótico
+herbivore|herbívoro
+carnivore|carnívoro
+pollen|pólen
+settler|colono
+composer|compositor
+playwright|dramaturgo
+sculptor|escultor
+satire|sátira
+symphony|sinfonia
+anthropology|antropologia
+sociology|sociologia
+chromosome|cromossomo
+neuron|neurônio
+enzyme|enzima
+tectonic|tectônico
+condensation|condensação
+equinox|equinócio
+nebula|nebulosa
+vertebrate|vertebrado
+symbiosis|simbiose
+stratum|estrato
+magma|magma
+glacial|glacial
+aquifer|aquífero
+topography|topografia
+archipelago|arquipélago
+nomadic|nômade
+suffrage|sufrágio
+homestead|propriedade rural
+impressionism|impressionismo
+fresco|afresco
+stanza|estrofe
+paleontology|paleontologia
+hypothesize|levantar a hipótese
+algae|algas
+amphibian|anfíbio
+bacterium|bactéria
+blizzard|nevasca
+bronze|bronze
+burrow|toca
+calcium|cálcio
+circulation|circulação
+comet|cometa
+coral|coral
+crater|cratera
+crust|crosta
+crystal|cristal
+delta|delta
+dinosaur|dinossauro
+dune|duna
+electron|elétron
+evolution|evolução
+fertilizer|fertilizante
+fungus|fungo
+genetic|genético
+humidity|umidade
+hydrogen|hidrogênio
+iceberg|iceberg
+lava|lava
+lunar|lunar
+mold|mofo
+nitrogen|nitrogênio
+oasis|oásis
+ozone|ozônio
+prism|prisma
+rainforest|floresta tropical
+reef|recife
+swamp|pântano
+telescope|telescópio
+textile|têxtil
+vapor|vapor
+vegetation|vegetação
+wetland|área úmida
+canal|canal
+railroad|ferrovia
+ranch|rancho
+settlement|povoado, assentamento
+canvas|tela
+melody|melodia
+opera|ópera
+bulletin|boletim, aviso
+dean|reitor de faculdade
+dining|refeitório, refeição
+incomplete|nota incompleta
+lecturer|professor universitário
+bladder|bexiga
+cactus|cacto
+freshwater|de água doce
+grassland|campo, pradaria
+jellyfish|água-viva
+marble|mármore
+quartz|quartzo
+radar|radar
+seabed|fundo do mar
+seaweed|alga marinha
+seedling|muda
+thunderstorm|tempestade com raios
+tornado|tornado
+whale|baleia
+yolk|gema
+appendage|apêndice
+arid|árido
+axis|eixo
+biome|bioma
+botany|botânica
+canopy|dossel
+carbohydrate|carboidrato
+chlorophyll|clorofila
+chronology|cronologia
+cognition|cognição
+colonist|colono
+colonize|colonizar
+convection|convecção
+cyclone|ciclone
+deciduous|caducifólio
+digestion|digestão
+ecologist|ecólogo
+estuary|estuário
+evaporate|evaporar
+fauna|fauna
+geologist|geólogo
+geyser|gêiser
+gill|brânquia
+glucose|glicose
+gravitational|gravitacional
+hibernation|hibernação
+ion|íon
+lagoon|lagoa
+larva|larva
+linguistics|linguística
+mantle|manto
+membrane|membrana
+meteorite|meteorito
+mutation|mutação
+nectar|néctar
+novelist|romancista
+petroleum|petróleo
+pigment|pigmento
+planetary|planetário
+plankton|plâncton
+pollination|polinização
+predation|predação
+pulley|polia
+respiration|respiração
+runoff|escoamento superficial
+savanna|savana
+scavenger|necrófago
+shrub|arbusto
+slavery|escravidão
+solstice|solstício
+specimen|espécime, amostra
+sulfur|enxofre
+temperate|temperado
+terrain|terreno
+thermal|térmico
+tidal|de maré
+toxin|toxina
+tremor|tremor
+tributary|afluente
+tundra|tundra
+turbine|turbina
+typhoon|tufão
+ultraviolet|ultravioleta
+venom|veneno
+volcanic|vulcânico
+voltage|voltagem
+wavelength|comprimento de onda
+zoology|zoologia
+archaeologist|arqueólogo
+bankruptcy|falência
+plantation|plantação
+shareholder|acionista
+steamboat|barco a vapor
+telegraph|telégrafo
+embroidery|bordado
+improvisation|improvisação
+quartet|quarteto
+realism|realismo
+sonnet|soneto
+tempo|andamento
+extension|prorrogação
+honors|distinção acadêmica
+residence|residência
+waitlist|lista de espera
+aerosol|aerossol
+antarctic|antártico
+aphid|pulgão
+arctic|ártico
+auditory|auditivo
+aurora|aurora (polar)
+bedrock|rocha-mãe
+biologist|biólogo
+bison|bisão
+bog|turfeira
+caribou|caribu
+cartilage|cartilagem
+cereal|cereal
+cicada|cigarra
+conductor|condutor
+conifer|conífera
+cosmic|cósmico
+decomposer|decompositor
+deforest|desmatar
+downstream|rio abaixo
+elk|alce
+emission|emissão
+floodplain|planície de inundação
+foraging|busca de alimento
+fossilize|fossilizar
+granary|celeiro
+groundwater|água subterrânea
+hatchling|filhote recém-nascido
+hyena|hiena
+infrared|infravermelho
+kiln|forno (de cerâmica)
+krill|krill
+magnetism|magnetismo
+mammoth|mamute
+marrow|medula
+meltwater|água de degelo
+mesa|planalto
+metamorphosis|metamorfose
+meteorology|meteorologia
+methane|metano
+migratory|migratório
+millennium|milênio
+omnivore|onívoro
+orchid|orquídea
+oxidation|oxidação
+pancreas|pâncreas
+pelt|pele (com pelo)
+photon|fóton
+physiology|fisiologia
+plumage|plumagem
+pollinator|polinizador
+potassium|potássio
+pupa|pupa
+radioactive|radioativo
+rainfall|chuva, precipitação
+salamander|salamandra
+sandstone|arenito
+silica|sílica
+sinkhole|dolina
+slate|ardósia
+snout|focinho
+sonar|sonar
+spawn|desovar
+stamen|estame
+starch|amido
+steppe|estepe
+succulent|suculenta
+sunspot|mancha solar
+tendril|gavinha
+terrestrial|terrestre
+topsoil|camada superficial do solo
+tuber|tubérculo
+upstream|rio acima
+warbler|toutinegra
+weathering|intemperismo
+atoll|atol
+basalt|basalto
+biomass|biomassa
+bipedal|bípede
+capillary|capilar
+carbonate|carbonato
+cartography|cartografia
+cellulose|celulose
+cortex|córtex
+deposition|deposição
+exoskeleton|exoesqueleto
+filament|filamento
+heredity|hereditariedade
+hieroglyph|hieróglifo
+igneous|ígneo
+invertebrate|invertebrado
+isotope|isótopo
+kinetic|cinético
+lichen|líquen
+marsupial|marsupial
+microorganism|microrganismo
+mitosis|mitose
+mollusk|molusco
+osmosis|osmose
+protozoa|protozoários
+saline|salino
+salinity|salinidade
+secrete|secretar
+sedimentary|sedimentar
+seismic|sísmico
+shale|xisto
+silt|lodo
+spore|esporo
+strata|estratos
+subsoil|subsolo
+supernova|supernova
+transpiration|transpiração
+vertebra|vértebra
+aesthetics|estética
+deflation|deflação
+homesteader|colono
+industrialization|industrialização
+acoustics|acústica
+aria|ária
+choreography|coreografia
+concerto|concerto
+engraving|gravura
+etching|água-forte
+romanticism|romantismo
+tapestry|tapeçaria
+woodcut|xilogravura
+deferral|adiamento
+plagiarize|plagiar
+sorority|fraternidade feminina
+abiotic|abiótico
+aeration|aeração
+alluvial|aluvial
+amino|amino
+amplitude|amplitude
+anaerobic|anaeróbico
+anther|antera
+arthropod|artrópode
+axon|axônio
+biochemistry|bioquímica
+bioluminescence|bioluminescência
+blubber|gordura de baleia
+brackish|salobro
+buoyancy|flutuabilidade
+caldera|caldeira
+carapace|carapaça
+carnivorous|carnívoro
+cephalopod|cefalópode
+chloroplast|cloroplasto
+cilia|cílios
+collagen|colágeno
+cosmology|cosmologia
+crustacean|crustáceo
+cytoplasm|citoplasma
+decibel|decibel
+dendrite|dendrito
+desalination|dessalinização
+detritus|detritos
+dormancy|dormência
+echolocation|ecolocalização
+ectotherm|ectotérmico
+endotherm|endotérmico
+entomology|entomologia
+epidermis|epiderme
+exoplanet|exoplaneta
+fermentation|fermentação
+flagellum|flagelo
+fluorescence|fluorescência
+gastropod|gastrópode
+geneticist|geneticista
+gestation|gestação
+graphite|grafite
+gypsum|gesso
+hemoglobin|hemoglobina
+hominid|hominídeo
+humus|húmus
+hydrology|hidrologia
+icecap|calota de gelo
+incisor|incisivo
+insectivore|insetívoro
+interglacial|interglacial
+intertidal|entremarés
+keratin|queratina
+lemur|lêmure
+luminosity|luminosidade
+lymph|linfa
+mastodon|mastodonte
+metamorphic|metamórfico
+microclimate|microclima
+mimicry|mimetismo
+moraine|morena
+morphology|morfologia
+mudstone|argilito
+neolithic|neolítico
+nitrate|nitrato
+obsidian|obsidiana
+ocher|ocre
+organelle|organela
+ornithology|ornitologia
+outcrop|afloramento
+paleolithic|paleolítico
+parasitic|parasita
+permafrost|permafrost
+petrify|petrificar
+phylum|filo
+pistil|pistilo
+placenta|placenta
+polyp|pólipo
+raptor|ave de rapina
+receptor|receptor
+schist|xisto
+semiarid|semiárido
+subduction|subducção
+symbiotic|simbiótico
+synapse|sinapse
+taxonomy|taxonomia
+thorax|tórax
+trilobite|trilobita
+vacuole|vacúolo
+vascular|vascular
+zooplankton|zooplâncton
+cuneiform|escrita cuneiforme
+homeostasis|homeostase
+stalactite|estalactite
+mercantile|mercantil
+lithograph|litografia
+provost|vice-reitor acadêmico
+astrophysics|astrofísica
+catastrophism|catastrofismo
+codex|códice
+fission|fissão
+gneiss|gnaisse
+hydrothermal|hidrotermal
+lignin|lignina
+loess|loess
+lodestone|magnetita
+magnetosphere|magnetosfera
+midden|monte de lixo pré-histórico
+mycelium|micélio
+phloem|floema
+pterosaur|pterossauro
+redshift|desvio para o vermelho
+stomata|estômatos
+xylem|xilema

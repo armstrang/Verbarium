@@ -614,6 +614,8 @@ void main() {
   for (final (code, cont, tabs, prefix) in const [
     ('es', 'Seguir aprendiendo', ['Personaje', 'Crónica', 'Ajustes'], '75-es'),
     ('fr', 'Continuer d’apprendre', ['Personnage', 'Chronique', 'Réglages'], '76-fr'),
+    ('de', 'Weiterlernen', ['Figur', 'Chronik', 'Einstellungen'], '77-de'),
+    ('pt', 'Continuar aprendendo', ['Personagem', 'Crônica', 'Configurações'], '78-pt'),
   ]) {
     testWidgets('learning through $code: the app speaks it and a meaning is in it', (tester) async {
       phone(tester);
@@ -636,9 +638,17 @@ void main() {
       await beat(tester, 900);
       await shot(tester, '$prefix-chronicle');
       final w = app.deck.byId['tide']!;
-      expect(w.gloss, code == 'es' ? 'marea' : 'marée');
+      expect(w.gloss, const {'es': 'marea', 'fr': 'marée', 'de': 'Gezeiten', 'pt': 'maré'}[code]);
       final c = app.deck.collocs.first;
-      expect(c.gloss, code == 'es' ? 'tomar una decisión' : 'prendre une décision');
+      expect(
+        c.gloss,
+        const {
+          'es': 'tomar una decisión',
+          'fr': 'prendre une décision',
+          'de': 'eine Entscheidung treffen',
+          'pt': 'tomar uma decisão',
+        }[code],
+      );
       await tester.pump(const Duration(seconds: 1));
     });
   }

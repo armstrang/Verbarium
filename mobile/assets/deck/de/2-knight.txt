@@ -1,0 +1,569 @@
+# Verbarium — German meanings for 2-knight.txt: word|meaning
+academic|akademisch
+access|Zugang
+accommodation|Unterkunft
+account|Bericht, Erklärung
+achievement|Leistung
+addict|Süchtiger
+addition|Hinzufügung, Zusatz
+administration|Verwaltung
+admire|bewundern
+admit|zugeben
+affirm|bekräftigen
+afford|sich leisten
+agent|Agent, Vertreter
+agreement|Vereinbarung
+ahead|voraus
+aim|Ziel
+alarm|Alarm
+alcohol|Alkohol
+ambition|Ehrgeiz
+amuse|belustigen
+analysis|Analyse
+announce|ankündigen
+annoy|ärgern, nerven
+apart|getrennt, auseinander
+apologize|sich entschuldigen
+application|Bewerbung, Anwendung
+appointment|Termin
+appreciate|schätzen, dankbar sein
+approximate|ungefähr
+archaeology|Archäologie
+arrest|verhaften
+assist|helfen
+atmosphere|Atmosphäre, Stimmung
+attach|anhängen, befestigen
+attitude|Einstellung
+attract|anziehen
+attraction|Anziehung, Attraktion
+authority|Autorität, Behörde
+automatic|automatisch
+awake|wach
+aware|bewusst
+backward|rückwärts, zurückgeblieben
+baggage|Gepäck
+bake|backen
+balance|Gleichgewicht
+ban|verbieten
+banish|verbannen
+base|stützen auf
+basic|grundlegend
+basis|Grundlage
+battery|Batterie
+battle|Schlacht
+beauty|Schönheit
+belief|Glaube, Überzeugung
+bend|biegen, sich beugen
+bite|beißen
+bloom|blühen
+bomb|Bombe
+border|Grenze
+bother|stören
+branch|Ast, Filiale
+brand|Marke
+brandish|schwingen
+brave|mutig
+breath|Atem
+breathe|atmen
+bureau|Büro, Amt
+bury|begraben
+calm|ruhig
+campaign|Kampagne
+candidate|Kandidat
+captain|Kapitän
+careless|nachlässig
+category|Kategorie
+central|zentral
+ceremony|Zeremonie
+chain|Kette
+challenge|Herausforderung
+champion|Meister, Sieger
+channel|Kanal
+chapter|Kapitel
+charge|berechnen, verlangen
+cheat|schummeln, betrügen
+cheerful|fröhlich
+chemical|Chemikalie
+childhood|Kindheit
+claim|behaupten
+clause|Klausel, Satzteil
+client|Kunde, Mandant
+cloth|Stoff
+clue|Hinweis
+coal|Kohle
+coin|Münze
+collection|Sammlung
+combine|verbinden
+commercial|kommerziell
+commit|sich verpflichten, begehen
+comparison|Vergleich
+competitive|wettbewerbsfähig
+complaint|Beschwerde
+complex|komplex
+concentrate|sich konzentrieren
+conclude|schließen, folgern
+confident|selbstsicher
+confirm|bestätigen
+confuse|verwirren
+connection|Verbindung
+consequence|Folge
+consist|bestehen (aus)
+constrain|einschränken
+consume|verbrauchen
+consumer|Verbraucher
+contact|Kontakt
+container|Behälter
+content|Inhalt
+continuous|ständig
+contradict|widersprechen
+contrast|Gegensatz
+convenient|praktisch, günstig
+convince|überzeugen
+cottage|Häuschen
+cotton|Baumwolle
+counsel|Rat, Anwalt
+countryside|Land, Landschaft
+court|Gericht
+cruel|grausam
+cultural|kulturell
+currency|Währung
+current|aktuell
+custom|Brauch
+damage|Schaden
+damp|feucht
+decade|Jahrzehnt
+decorate|schmücken
+dedicate|widmen
+define|definieren
+definite|eindeutig
+definition|Definition
+deliver|liefern
+departure|Abfahrt
+depress|deprimieren
+despite|trotz
+destination|Ziel, Reiseziel
+determine|bestimmen
+development|Entwicklung
+diagram|Diagramm
+difficulty|Schwierigkeit
+disadvantage|Nachteil
+disappointed|enttäuscht
+discount|Rabatt
+discreet|diskret
+discriminate|diskriminieren, unterscheiden
+disgust|Ekel
+dislike|nicht mögen
+district|Bezirk
+divide|teilen
+documentary|Dokumentarfilm
+donate|spenden
+doubt|Zweifel
+doubtful|zweifelhaft
+due|fällig, erwartet
+dust|Staub
+duty|Pflicht
+earthquake|Erdbeben
+economic|wirtschaftlich
+economy|Wirtschaft
+edge|Rand, Kante
+editor|Redakteur
+educate|bilden, erziehen
+effective|wirksam
+effort|Mühe, Anstrengung
+election|Wahl
+element|Element
+embarrass|in Verlegenheit bringen
+embarrassed|verlegen
+emergency|Notfall
+emit|ausstoßen
+emotion|Gefühl
+encourage|ermutigen
+enemy|Feind
+entertain|unterhalten
+entertainment|Unterhaltung
+entrance|Eingang
+entry|Eintritt, Eintrag
+environmental|Umwelt-
+episode|Folge
+equal|gleich
+escape|fliehen
+essential|wesentlich
+eventually|schließlich
+examine|untersuchen
+exchange|austauschen
+excitement|Aufregung
+exhaust|erschöpfen
+exhibition|Ausstellung
+exit|Ausgang
+expand|erweitern, sich ausdehnen
+expedition|Expedition
+explode|explodieren
+explore|erkunden
+explosion|Explosion
+export|exportieren
+faint|schwach, matt
+familiar|vertraut
+fancy|schick, edel
+fascinate|faszinieren
+fasten|befestigen, anschnallen
+favour|Gefallen
+federal|Bundes-
+fence|Zaun
+fertile|fruchtbar
+fetch|holen
+file|Datei, Akte
+financial|finanziell
+flag|Flagge
+flagship|Flaggschiff, Aushängeschild
+flavour|Geschmack
+flood|Hochwasser
+flour|Mehl
+flow|fließen
+fold|falten
+folk|Volks-
+force|Kraft, Gewalt
+frame|Rahmen
+freeze|frieren, einfrieren
+frighten|erschrecken
+frost|Frost
+frustrate|frustrieren
+fuel|Brennstoff
+function|Funktion
+fur|Fell
+fury|Wut
+garage|Garage, Werkstatt
+gather|sammeln, sich versammeln
+generation|Generation
+generous|großzügig
+gentle|sanft
+giant|riesig
+glad|froh
+global|weltweit
+glove|Handschuh
+glow|glühen, leuchten
+goods|Waren
+gradual|allmählich
+grain|Korn, Getreide
+grateful|dankbar
+growth|Wachstum
+guard|Wache
+guilty|schuldig
+hang|hängen
+harbour|Hafen
+hardly|kaum
+headline|Schlagzeile
+heap|Haufen
+hedge|Hecke
+highlight|hervorheben
+hire|einstellen, mieten
+historic|historisch
+honest|ehrlich
+horrible|schrecklich
+horror|Entsetzen
+host|Gastgeber
+hunt|jagen
+hurry|sich beeilen
+identity|Identität
+ignore|ignorieren
+illegal|illegal
+imaginary|eingebildet, erfunden
+immediate|sofortig
+immigrant|Einwanderer
+impact|Auswirkung
+imperial|kaiserlich
+implicate|verwickeln
+import|einführen
+impression|Eindruck
+impressive|beeindruckend
+improvement|Verbesserung
+indeed|tatsächlich
+indicate|anzeigen, hinweisen
+indoor|Innen-
+inflate|aufblasen
+influence|Einfluss
+ingredient|Zutat
+inhabit|bewohnen
+injure|verletzen
+innocent|unschuldig
+innovate|neue Wege gehen
+inquire|sich erkundigen
+intelligence|Intelligenz
+intend|beabsichtigen
+intention|Absicht
+invest|investieren
+investigate|untersuchen
+iron|Eisen
+issue|Angelegenheit, Problem
+jaw|Kiefer
+journal|Zeitschrift, Tagebuch
+judge|Richter
+keen|begeistert, eifrig
+kick|treten
+knit|stricken
+label|Etikett
+lack|Mangel
+layer|Schicht
+layman|Laie
+leaf|Blatt
+lease|Mietvertrag
+leather|Leder
+legal|gesetzlich, legal
+legislate|Gesetze erlassen
+length|Länge
+liberate|befreien
+lid|Deckel
+limit|Grenze
+liquid|Flüssigkeit
+literal|wörtlich
+literature|Literatur
+lodge|einreichen, wohnen
+lonely|einsam
+loss|Verlust
+lump|Klumpen, Beule
+luxury|Luxus
+mad|verrückt, wütend
+magnet|Magnet
+management|Leitung, Verwaltung
+manual|Hand-, manuell
+marvel|staunen
+match|Spiel
+meanwhile|inzwischen
+measure|messen
+medium|mittlere
+mental|geistig, psychisch
+mess|Durcheinander
+migrate|wandern, ziehen
+mild|mild
+mix|mischen
+mixture|Mischung
+molecule|Molekül
+mood|Stimmung
+mortal|sterblich
+mud|Schlamm
+murder|Mord
+muscle|Muskel
+mystery|Rätsel, Geheimnis
+nail|Nagel
+narrate|erzählen
+narrative|Erzählung
+nation|Nation
+native|einheimisch
+neat|ordentlich
+needle|Nadel
+net|Netz
+nuclear|Kern-, Atom-
+obvious|offensichtlich
+occasion|Anlass, Gelegenheit
+occur|vorkommen, geschehen
+odd|seltsam, ungerade
+official|offiziell
+operation|Operation, Betrieb
+outdoor|im Freien
+overflow|überlaufen
+package|Paket
+pale|blass
+participate|teilnehmen
+passion|Leidenschaft
+path|Pfad
+pavement|Gehweg
+peaceful|friedlich
+performance|Leistung, Aufführung
+persuade|überreden
+pipe|Rohr
+pleasant|angenehm
+pleasure|Vergnügen
+plenty|reichlich
+plot|Handlung, Grundstück
+poem|Gedicht
+poetry|Dichtung
+poison|Gift
+poisonous|giftig
+policy|Politik, Richtlinie
+polish|polieren
+political|politisch
+politician|Politiker
+politics|Politik
+pollute|verschmutzen
+port|Hafen
+portrait|Porträt
+pour|gießen, einschenken
+poverty|Armut
+powder|Pulver
+powerful|mächtig
+practical|praktisch
+pray|beten
+press|drücken
+pressure|Druck
+pretend|so tun als ob
+previous|vorherig
+priest|Priester
+primary|hauptsächlich, Grund-
+prince|Prinz
+principal|wichtigste
+private|privat
+profession|Beruf
+profit|Gewinn
+promote|fördern
+proper|richtig, angemessen
+property|Eigentum, Grundstück
+prosper|gedeihen
+protest|Protest
+proud|stolz
+prove|beweisen
+punish|bestrafen
+qualification|Abschluss, Qualifikation
+qualify|sich qualifizieren
+queue|Schlange
+quit|aufhören, kündigen
+quotation|Zitat, Angebot
+quote|zitieren
+radiate|ausstrahlen
+range|Spanne, Auswahl
+rare|selten
+rarely|selten
+reaction|Reaktion
+reality|Wirklichkeit
+receipt|Quittung
+reference|Bezug, Verweis
+reflect|widerspiegeln
+reject|ablehnen
+relate|in Beziehung setzen
+relation|Beziehung
+relative|Verwandter
+release|freilassen, veröffentlichen
+reliable|zuverlässig
+religion|Religion
+religious|religiös
+remain|bleiben
+remind|erinnern
+remote|abgelegen
+rent|mieten
+represent|vertreten, darstellen
+require|erfordern
+reservation|Reservierung
+resource|Ressource
+resourceful|einfallsreich
+respect|Respekt
+responsibility|Verantwortung
+responsible|verantwortlich
+restrain|zurückhalten
+retire|in Rente gehen
+revise|überarbeiten, wiederholen
+risk|Risiko
+roar|brüllen
+romantic|romantisch
+rope|Seil
+rot|verrotten
+rough|rau
+row|Reihe
+royal|königlich
+safeguard|schützen
+safety|Sicherheit
+sample|Probe
+sand|Sand
+scatter|verstreuen
+scientific|wissenschaftlich
+sculpture|Skulptur
+security|Sicherheit
+seed|Samen
+sensible|vernünftig
+servant|Diener
+setback|Rückschlag
+sew|nähen
+sharp|scharf
+shelf|Regal
+shell|Muschel, Schale
+shift|Wechsel, Schicht
+shine|scheinen, glänzen
+shoot|schießen
+shy|schüchtern
+sight|Anblick, Sehkraft
+signal|Signal
+silent|still
+silly|albern
+simultaneous|gleichzeitig
+sink|sinken
+slave|Sklave
+slice|Scheibe
+smooth|glatt
+soil|Erde, Boden
+solid|fest
+sore|wund, schmerzend
+sovereign|souverän
+spicy|scharf
+spirit|Geist, Mut
+spot|Fleck, Stelle
+spread|sich ausbreiten
+staff|Personal
+standard|Norm, Niveau
+statistic|Statistik
+statue|Statue
+statute|Gesetz, Satzung
+stick|Stock
+stranger|Fremder
+strength|Stärke
+string|Schnur
+substance|Stoff, Substanz
+sudden|plötzlich
+suffer|leiden
+suitable|geeignet
+summary|Zusammenfassung
+sunny|sonnig
+supply|Versorgung
+surface|Oberfläche
+survive|überleben
+sweat|Schweiß
+swell|anschwellen
+switch|wechseln
+symptom|Symptom
+tail|Schwanz
+talent|Talent
+tax|Steuer
+technical|technisch
+technique|Technik
+tend|neigen zu
+tent|Zelt
+theme|Thema
+theory|Theorie
+though|obwohl
+thrill|Nervenkitzel
+throat|Hals, Kehle
+tight|eng, fest
+tiny|winzig
+tongue|Zunge
+total|Gesamtsumme
+trade|Handel
+translate|übersetzen
+treat|behandeln
+treatment|Behandlung
+trend|Trend
+trick|Trick
+truth|Wahrheit
+tube|Röhre
+ugly|hässlich
+underlie|zugrunde liegen
+unemployed|arbeitslos
+union|Gewerkschaft, Union
+unless|es sei denn
+upset|aufgebracht, gekränkt
+valuable|wertvoll
+value|Wert
+various|verschiedene
+version|Version
+victim|Opfer
+violent|gewalttätig
+volunteer|Freiwilliger
+vote|wählen, abstimmen
+warn|warnen
+waste|verschwenden
+weapon|Waffe
+weigh|wiegen
+whether|ob
+whistle|pfeifen
+wicked|böse
+wing|Flügel
+within|innerhalb
+wonder|sich fragen
+wool|Wolle
+worth|wert
+youth|Jugend

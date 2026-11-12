@@ -1,0 +1,701 @@
+# Verbarium — German meanings for 1-squire.txt: word|meaning
+ability|Fähigkeit
+abroad|im Ausland
+accept|annehmen, akzeptieren
+accident|Unfall
+achieve|erreichen
+act|handeln
+action|Handlung, Tat
+active|aktiv
+activity|Aktivität
+add|hinzufügen
+address|Adresse
+adult|Erwachsener
+advantage|Vorteil
+adventure|Abenteuer
+advertise|werben
+advice|Rat
+affect|beeinflussen
+afraid|ängstlich
+age|Alter
+agree|zustimmen
+air|Luft
+airport|Flughafen
+alive|lebendig
+allow|erlauben
+alone|allein
+alternative|Alternative
+although|obwohl
+amaze|erstaunen
+amazing|erstaunlich
+among|unter, zwischen
+amount|Menge
+analyse|analysieren
+ancient|uralt, antik
+angry|wütend
+animal|Tier
+answer|antworten
+apartment|Wohnung
+appear|erscheinen
+appearance|Aussehen
+apply|sich bewerben
+architect|Architekt
+architecture|Architektur
+area|Gebiet, Bereich
+argue|streiten, argumentieren
+argument|Streit, Argument
+army|Armee
+arrange|ordnen, organisieren
+arrangement|Anordnung, Vereinbarung
+arrive|ankommen
+artful|listig
+article|Artikel
+artist|Künstler
+asleep|schlafend
+athlete|Sportler
+attack|angreifen
+attend|besuchen, teilnehmen
+attention|Aufmerksamkeit
+attractive|attraktiv
+audience|Publikum
+author|Autor
+autumn|Herbst
+available|verfügbar
+average|durchschnittlich
+avoid|vermeiden
+award|Preis, Auszeichnung
+awful|furchtbar
+backbone|Rückgrat
+background|Hintergrund, Herkunft
+bank|Bank
+beach|Strand
+bear|ertragen
+beat|schlagen, besiegen
+behave|sich benehmen
+behind|hinter
+believe|glauben
+belong|gehören
+below|unter
+benefit|Nutzen, Vorteil
+bill|Rechnung
+biology|Biologie
+birth|Geburt
+blank|leer
+block|blockieren
+blood|Blut
+blow|blasen, wehen
+board|Brett, Tafel
+boil|kochen, sieden
+bone|Knochen
+bored|gelangweilt
+boring|langweilig
+borrow|leihen, borgen
+boss|Chef
+bottom|Boden, unterer Teil
+brain|Gehirn
+breadth|Breite
+break|brechen, kaputt machen
+bridge|Brücke
+bright|hell, klug
+brilliant|glänzend, genial
+bring|bringen
+build|bauen
+burn|brennen, verbrennen
+business|Geschäft, Firma
+busy|beschäftigt
+camera|Kamera
+camp|Lager
+capital|Hauptstadt
+care|sich kümmern, wichtig sein
+career|Laufbahn, Karriere
+careful|vorsichtig, sorgfältig
+carry|tragen
+case|Fall
+cash|Bargeld
+castle|Burg, Schloss
+catch|fangen
+cause|Ursache
+celebrate|feiern
+celebrity|Berühmtheit
+cell|Zelle
+century|Jahrhundert
+certain|sicher, gewiss
+chance|Chance, Möglichkeit
+change|ändern
+character|Charakter, Figur
+charity|Wohltätigkeit
+chart|Diagramm
+cheap|billig
+check|prüfen
+chip|Splitter, Pommes
+choice|Wahl
+choose|wählen
+clear|klar
+clever|klug
+climate|Klima
+climb|klettern, steigen
+close|schließen
+clothes|Kleidung
+cloud|Wolke
+coach|Trainer
+coast|Küste
+code|Code
+colleague|Kollege
+collect|sammeln
+college|Hochschule
+colour|Farbe
+column|Spalte, Säule
+comedy|Komödie
+comely|hübsch
+comfortable|bequem
+comment|Kommentar
+common|üblich, gemeinsam
+communicate|kommunizieren
+community|Gemeinschaft
+company|Firma
+compare|vergleichen
+compete|konkurrieren
+competition|Wettbewerb
+complain|sich beschweren
+complete|vervollständigen
+computer|Computer
+concert|Konzert
+concerted|gemeinsam, abgestimmt
+condition|Zustand, Bedingung
+conference|Konferenz
+connect|verbinden
+consider|bedenken, erwägen
+contain|enthalten
+context|Zusammenhang
+continent|Kontinent
+continue|fortsetzen
+control|kontrollieren
+conversation|Gespräch
+cook|kochen
+cool|kühl
+copy|kopieren
+corner|Ecke
+cornerstone|Grundstein, Eckpfeiler
+correct|richtig
+cost|kosten
+count|zählen
+country|Land
+couple|Paar
+course|Kurs
+cover|bedecken
+cower|kauern, sich ducken
+crazy|verrückt
+cream|Sahne, Creme
+create|erschaffen
+criminal|Verbrecher
+cross|überqueren
+crowd|Menge
+cry|weinen
+culture|Kultur
+cup|Tasse
+customer|Kunde
+cut|schneiden
+cutback|Kürzung
+cycle|Rad fahren
+daily|täglich
+danger|Gefahr
+dangerous|gefährlich
+dark|dunkel
+data|Daten
+date|Datum
+dead|tot
+deal|sich befassen mit
+dear|lieb, teuer
+dearth|Mangel
+death|Tod
+decide|entscheiden
+decision|Entscheidung
+deep|tief
+degree|Studienabschluss
+delicious|lecker
+department|Abteilung
+depend|abhängen
+dependable|zuverlässig
+describe|beschreiben
+desert|Wüste
+design|entwerfen
+desk|Schreibtisch
+destroy|zerstören
+detail|Einzelheit
+detective|Detektiv
+develop|entwickeln
+device|Gerät
+dialogue|Dialog
+dictionary|Wörterbuch
+die|sterben
+difference|Unterschied
+different|verschieden
+difficult|schwierig
+digital|digital
+dinner|Abendessen
+direct|direkt
+direction|Richtung
+dirty|schmutzig
+disagree|nicht zustimmen
+disappear|verschwinden
+disaster|Katastrophe
+discover|entdecken
+discuss|besprechen
+disease|Krankheit
+dish|Gericht, Schüssel
+distance|Entfernung
+document|Dokument
+downfall|Untergang, Sturz
+downstairs|unten
+downturn|Abschwung
+drama|Drama
+draw|zeichnen
+dream|Traum
+dress|sich anziehen
+drink|trinken
+drive|fahren
+drop|fallen lassen, sinken
+drug|Medikament, Droge
+dry|trocken
+during|während
+early|früh
+earmark|vorsehen, bestimmen
+earn|verdienen
+earth|Erde
+east|Osten
+easy|leicht
+education|Bildung
+effect|Wirkung
+electric|elektrisch
+electricity|Strom
+electronic|elektronisch
+else|sonst, andere
+employ|beschäftigen
+employee|Angestellter
+employer|Arbeitgeber
+empty|leer
+end|enden, beenden
+energy|Energie
+engine|Motor
+engineer|Ingenieur
+enjoy|genießen
+enormous|riesig
+enough|genug
+enter|eintreten
+environment|Umwelt
+equipment|Ausrüstung
+error|Fehler
+especially|besonders
+essay|Aufsatz
+even|sogar
+evening|Abend
+event|Ereignis
+ever|jemals
+everywhere|überall
+evidence|Beweise
+exact|genau
+exacting|anspruchsvoll
+exam|Prüfung
+example|Beispiel
+excellent|ausgezeichnet
+except|außer
+excited|aufgeregt, begeistert
+exercise|Übung
+exist|existieren
+expect|erwarten
+expensive|teuer
+experience|Erfahrung
+experiment|Experiment
+expert|Experte
+explain|erklären
+express|ausdrücken
+expression|Ausdruck
+extra|zusätzlich
+extreme|extrem
+fact|Tatsache
+factor|Faktor
+factory|Fabrik
+fail|scheitern, durchfallen
+fair|gerecht
+fallout|Folgen
+false|falsch
+famous|berühmt
+far|weit
+farm|Bauernhof
+fashion|Mode
+fat|Fett
+favourite|Lieblings-
+fear|Angst
+feature|Merkmal
+feed|füttern
+feel|fühlen
+female|weiblich
+festival|Fest
+fever|Fieber
+few|wenige
+fiction|Fiktion, Belletristik
+field|Feld
+fight|kämpfen
+figure|Zahl, Gestalt
+fill|füllen
+final|letzte, endgültig
+finally|endlich
+find|finden
+fine|gut, fein
+finger|Finger
+finish|beenden
+fire|Feuer, Brand
+fit|passen
+fix|reparieren
+flat|flach
+flight|Flug
+floor|Fußboden
+fly|fliegen
+focus|sich konzentrieren
+follow|folgen
+foreign|ausländisch, fremd
+forest|Wald
+forget|vergessen
+fork|Gabel
+form|Formular, Form
+formal|förmlich
+forward|vorwärts
+free|frei, kostenlos
+fresh|frisch
+friendly|freundlich
+front|Vorderseite
+fruit|Obst
+full|voll
+fun|Spaß
+funny|lustig
+furniture|Möbel
+further|weiter
+future|Zukunft
+gallery|Galerie
+game|Spiel
+gap|Lücke
+garden|Garten
+gate|Tor
+gateway|Tor, Zugang
+general|allgemein
+geography|Erdkunde
+gift|Geschenk
+glass|Glas
+goal|Ziel
+government|Regierung
+grass|Gras
+great|großartig, groß
+greet|begrüßen
+ground|Boden
+grounds|Gründe
+group|Gruppe
+grow|wachsen, anbauen
+guess|raten
+guest|Gast
+guide|Führer
+habit|Gewohnheit
+half|Hälfte
+hall|Saal, Flur
+happen|geschehen
+hard|hart, schwer
+hardship|Not, Härte
+hardy|robust, widerstandsfähig
+hate|hassen
+headache|Kopfschmerzen
+heady|berauschend
+health|Gesundheit
+healthy|gesund
+heart|Herz
+heat|Hitze
+heavy|schwer
+height|Höhe, Größe
+helpful|hilfreich
+hero|Held
+hide|verstecken
+hill|Hügel
+history|Geschichte
+hit|schlagen, treffen
+hobby|Hobby
+hold|halten
+hole|Loch
+holiday|Urlaub, Ferien
+hope|hoffen
+hospital|Krankenhaus
+huge|riesig
+human|menschlich
+hungry|hungrig
+hurt|verletzen, wehtun
+ice|Eis
+idea|Idee
+ideal|ideal
+identify|erkennen, bestimmen
+ill|krank
+illness|Krankheit
+image|Bild
+imagine|sich vorstellen
+immediately|sofort
+important|wichtig
+impossible|unmöglich
+improve|verbessern
+include|einschließen
+increase|steigern, zunehmen
+incredible|unglaublich
+independent|unabhängig
+individual|Einzelperson
+industry|Industrie
+information|Information
+injury|Verletzung
+insect|Insekt
+inside|in, innerhalb
+instead|stattdessen
+instruction|Anweisung
+instrument|Instrument
+intelligent|intelligent
+interest|Interesse
+interesting|interessant
+international|international
+interview|Interview, Vorstellungsgespräch
+introduce|vorstellen
+invent|erfinden
+invention|Erfindung
+invite|einladen
+involve|beinhalten, beteiligen
+island|Insel
+item|Gegenstand, Punkt
+jam|Stau, Marmelade
+jewellery|Schmuck
+job|Arbeit, Stelle
+join|beitreten
+joke|Witz
+journalist|Journalist
+journey|Reise
+juice|Saft
+jump|springen
+keep|behalten
+key|Schlüssel
+kill|töten
+kind|freundlich, nett
+kitchen|Küche
+knee|Knie
+knife|Messer
+knock|klopfen
+knowledge|Wissen
+lake|See
+lamp|Lampe
+land|Land
+language|Sprache
+large|groß
+last|dauern
+late|spät
+laugh|lachen
+law|Gesetz
+lawyer|Anwalt
+lazy|faul
+lead|führen
+leader|Anführer
+learn|lernen
+least|am wenigsten
+leave|verlassen, gehen
+lecture|Vorlesung
+lend|leihen
+lesson|Lektion
+letter|Brief, Buchstabe
+level|Stufe, Niveau
+library|Bibliothek
+lie|liegen, lügen
+lifestyle|Lebensstil
+lift|heben
+light|Licht
+likely|wahrscheinlich
+line|Linie, Reihe
+link|Verbindung
+list|Liste
+listless|lustlos
+local|örtlich
+lock|abschließen
+look|schauen, aussehen
+lose|verlieren
+loud|laut
+lovely|schön, reizend
+low|niedrig
+luck|Glück
+lunch|Mittagessen
+machine|Maschine
+magazine|Zeitschrift
+mail|Post
+main|Haupt-
+major|bedeutend
+male|männlich
+manage|leiten, schaffen
+manner|Art, Weise
+map|Karte
+mark|Zeichen, Note
+market|Markt
+marry|heiraten
+material|Material
+matter|wichtig sein
+meal|Mahlzeit
+mean|bedeuten
+meaning|Bedeutung
+meat|Fleisch
+media|Medien
+medicine|Medizin
+meet|treffen, kennenlernen
+meeting|Besprechung
+member|Mitglied
+memory|Gedächtnis, Erinnerung
+mention|erwähnen
+message|Nachricht
+metal|Metall
+method|Methode
+middle|Mitte
+milestone|Meilenstein
+mind|Geist, Verstand
+mirror|Spiegel
+miss|verpassen, vermissen
+mistake|Fehler
+mobile|beweglich, mobil
+model|Modell
+modern|modern
+moment|Augenblick
+money|Geld
+month|Monat
+moon|Mond
+mostly|meistens
+mountain|Berg
+mouth|Mund
+move|bewegen, umziehen
+movement|Bewegung
+museum|Museum
+music|Musik
+narrow|eng, schmal
+natural|natürlich
+nature|Natur
+near|nahe bei
+nearly|fast
+necessary|notwendig
+neck|Hals
+need|brauchen
+needy|bedürftig
+negative|negativ
+neighbour|Nachbar
+neighbouring|benachbart
+neither|auch nicht, keiner von beiden
+nervous|nervös
+network|Netz
+news|Nachrichten
+newspaper|Zeitung
+nice|nett, schön
+noise|Lärm
+noisy|laut
+none|keiner
+normal|normal
+north|Norden
+nose|Nase
+note|Notiz
+nothing|nichts
+notice|bemerken
+novel|Roman
+number|Zahl, Nummer
+nurse|Krankenpfleger
+object|Gegenstand
+ocean|Ozean
+offer|anbieten
+office|Büro
+officer|Beamter, Offizier
+often|oft
+oil|Öl
+once|einmal, einst
+onion|Zwiebel
+only|nur
+open|öffnen
+opinion|Meinung
+opportunity|Gelegenheit
+opposite|gegenüber, entgegengesetzt
+option|Möglichkeit
+orange|Orange
+order|bestellen, befehlen
+ordinary|gewöhnlich
+organize|organisieren
+original|ursprünglich
+outside|außerhalb
+outward|äußerlich
+oven|Ofen
+overseas|im Ausland, in Übersee
+own|besitzen
+owner|Besitzer
+pack|packen
+page|Seite
+pain|Schmerz
+paint|malen, streichen
+pair|Paar
+palace|Palast
+paper|Papier
+paragraph|Absatz
+pardon|verzeihen
+parent|Elternteil
+park|parken
+part|Teil
+particular|bestimmt, besonders
+partner|Partner
+party|Party, Partei
+pass|bestehen, vorbeigehen
+passenger|Fahrgast
+passport|Reisepass
+past|Vergangenheit
+patient|geduldig
+pattern|Muster
+pay|bezahlen
+peace|Frieden
+perfect|perfekt
+perform|ausführen, auftreten
+perhaps|vielleicht
+period|Zeitraum
+perish|umkommen
+person|Person
+personal|persönlich
+personality|Persönlichkeit
+pet|Haustier
+petrol|Benzin
+photograph|Foto
+phrase|Redewendung
+physical|körperlich
+pick|wählen, pflücken
+picture|Bild
+piece|Stück
+pilot|Pilot
+place|Ort
+plan|planen
+plant|Pflanze
+plastic|Plastik
+plate|Teller
+platform|Bahnsteig
+pleased|zufrieden
+pocket|Tasche
+point|Punkt
+police|Polizei
+polite|höflich
+pollution|Verschmutzung
+poor|arm, schlecht
+popular|beliebt
+population|Bevölkerung
+position|Position, Lage
+positive|positiv
+possession|Besitz
+possible|möglich
+post|verschicken
+power|Macht, Kraft, Strom
+practice|Übung, Praxis
+predict|vorhersagen
+prefer|vorziehen
+preferable|vorzuziehen
+prepare|vorbereiten
+present|Geschenk, Gegenwart
+presentable|vorzeigbar
+president|Präsident
+pretty|hübsch
+prevent|verhindern
+price|Preis
+print|drucken
+prison|Gefängnis
+prize|Preis

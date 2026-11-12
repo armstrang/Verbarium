@@ -1,0 +1,354 @@
+# Verbarium — German meanings for 3-baron-b.txt: word|meaning
+origin|Ursprung
+orthodox|orthodox, herkömmlich
+otherwise|sonst
+outcome|Ergebnis
+outfit|Outfit, Kleidung
+outline|Umriss, Gliederung
+output|Leistung, Produktion
+outstanding|hervorragend
+overall|gesamt
+overcome|überwinden
+overhead|oben, über dem Kopf
+overlap|sich überschneiden
+owe|schulden
+oxygen|Sauerstoff
+pace|Tempo
+palm|Handfläche, Palme
+panel|Tafel, Jury
+panic|Panik
+parade|Umzug, Parade
+paradox|Paradox
+parallel|parallel
+parliament|Parlament
+particle|Teilchen
+passage|Durchgang, Textstelle
+passionate|leidenschaftlich
+patience|Geduld
+patriot|Patriot
+pause|innehalten
+penalty|Strafe
+penetrate|durchdringen
+pension|Rente
+perceive|wahrnehmen
+perception|Wahrnehmung
+permanent|dauerhaft
+permit|erlauben
+perspective|Sichtweise
+phase|Phase
+phenomenon|Phänomen
+philosophy|Philosophie
+pile|Stapel
+pilgrim|Pilger
+pill|Tablette
+pitch|Spielfeld, Tonhöhe
+pity|Mitleid, Schade
+plague|Seuche, Plage
+plain|schlicht
+plaintiff|Kläger
+plural|Mehrzahl-
+polar|Polar-
+portion|Anteil, Portion
+pose|darstellen (Gefahr)
+possess|besitzen
+potential|Potenzial
+pottery|Töpferwaren
+praise|loben
+precede|vorausgehen
+precious|kostbar
+precise|genau
+predictable|vorhersehbar
+predominant|vorherrschend
+preference|Vorliebe
+pregnant|schwanger
+preoccupy|beschäftigen, Sorgen machen
+preparation|Vorbereitung
+presence|Anwesenheit
+preserve|bewahren
+prestige|Ansehen
+prevalent|verbreitet
+pride|Stolz
+primarily|hauptsächlich
+prime|wichtigste
+primitive|primitiv
+principle|Prinzip
+priority|Vorrang
+privacy|Privatsphäre
+procedure|Verfahren
+proceed|fortfahren
+progressive|fortschrittlich
+prohibit|verbieten
+prolong|verlängern
+prolonged|langwierig
+promising|vielversprechend
+promotion|Beförderung, Werbung
+prompt|umgehend
+proof|Beweis
+prop|stützen
+proportion|Anteil
+propose|vorschlagen
+prospect|Aussicht
+protein|Eiweiß
+psychology|Psychologie
+publicity|Publicity, Werbung
+punctual|pünktlich
+pupil|Schüler
+purchase|kaufen
+pure|rein
+pursue|verfolgen
+pursuit|Streben, Verfolgung
+puzzle|Rätsel
+questionnaire|Fragebogen
+racial|Rassen-
+radiation|Strahlung
+random|zufällig
+rank|Rang
+rapid|schnell
+rattle|klappern, verunsichern
+raw|roh
+realistic|realistisch
+reasonable|vernünftig
+rebuild|wieder aufbauen
+recall|sich erinnern
+recession|Rezession
+reckon|meinen, schätzen
+reconcile|versöhnen
+recover|sich erholen
+recreation|Erholung
+recruit|anwerben
+recur|wiederkehren
+refine|verfeinern
+refresh|erfrischen
+refugee|Flüchtling
+regard|betrachten
+regarding|bezüglich
+register|sich anmelden
+regress|zurückfallen
+regret|bedauern
+regrettable|bedauerlich
+regulate|regeln
+regulation|Vorschrift
+rehabilitate|wiederherstellen, rehabilitieren
+rehearse|proben
+reinforce|verstärken
+relevant|relevant
+relief|Erleichterung, Hilfe
+relieve|lindern
+rely|sich verlassen
+remark|Bemerkung
+remarkable|bemerkenswert
+repay|zurückzahlen
+representative|Vertreter
+repress|unterdrücken
+reputation|Ruf
+rescue|retten
+resent|übel nehmen
+resentment|Groll
+resident|Bewohner
+resign|zurücktreten
+resist|widerstehen
+resolution|Beschluss, Vorsatz
+resolve|lösen
+resort|Ferienort
+restore|wiederherstellen
+restrict|beschränken
+retail|Einzelhandel
+retain|behalten
+reveal|enthüllen
+revenue|Einnahmen
+revision|Überarbeitung
+revolution|Revolution
+reward|Belohnung
+rhythm|Rhythmus
+rid|befreien (von)
+ridiculous|lächerlich
+rigid|starr
+rigour|Strenge
+rival|Rivale
+rob|ausrauben
+root|Wurzel
+rub|reiben
+ruin|ruinieren
+rumour|Gerücht
+rural|ländlich
+rush|eilen
+satellite|Satellit
+satisfaction|Zufriedenheit
+satisfied|zufrieden
+satisfy|zufriedenstellen
+scale|Maßstab
+scandal|Skandal
+scarce|knapp
+scenario|Szenario
+scheme|Plan, Programm
+scholar|Gelehrter
+scratch|kratzen
+scream|schreien
+sector|Sektor
+secure|sicher
+seek|suchen
+select|auswählen
+senior|älter, leitend
+sensitive|empfindlich
+sequence|Abfolge
+session|Sitzung
+settle|sich niederlassen, regeln
+severe|schwer, streng
+shade|Schatten
+shadow|Schatten
+shallow|seicht
+shame|Scham, Schande
+shelter|Schutz, Unterkunft
+shock|Schock
+shore|Ufer
+shortage|Mangel
+sibling|Geschwister
+signature|Unterschrift
+significant|bedeutend
+silence|Stille
+sincere|aufrichtig
+slide|rutschen
+slight|leicht, gering
+slip|ausrutschen
+slope|Hang
+solar|Sonnen-
+sophisticated|raffiniert, hochentwickelt
+soul|Seele
+spacious|geräumig
+spare|Ersatz-, frei
+species|Art
+spectacular|spektakulär
+speculate|spekulieren
+spill|verschütten
+spite|trotz (in spite of)
+split|spalten, teilen
+spoil|verderben, verwöhnen
+sponsor|Sponsor
+spontaneous|spontan
+stable|stabil
+stance|Haltung
+stare|starren
+starve|verhungern
+status|Status
+steady|stetig
+steam|Dampf
+steel|Stahl
+steep|steil
+stimulate|anregen
+stock|Vorrat, Aktien
+stream|Bach
+stretch|dehnen
+strict|streng
+strike|schlagen, streiken
+struggle|kämpfen, sich abmühen
+submit|einreichen
+subordinate|untergeordnet
+subsequent|nachfolgend
+subsidiary|Tochtergesellschaft
+suburb|Vorort
+sufficient|ausreichend
+sum|Summe
+supper|Abendessen
+surgeon|Chirurg
+surgery|Operation
+surround|umgeben
+suspect|vermuten
+suspend|aussetzen, suspendieren
+sustainable|nachhaltig
+swallow|schlucken
+swear|schwören, fluchen
+sweep|fegen
+swift|schnell
+sympathy|Mitgefühl
+tackle|angehen
+tale|Erzählung
+tap|Wasserhahn
+tear|zerreißen
+temple|Tempel
+temporary|vorübergehend
+tendency|Neigung
+tension|Spannung
+territory|Gebiet
+terror|Schrecken
+therapy|Therapie
+thorough|gründlich
+threat|Drohung, Bedrohung
+threaten|drohen
+thunder|Donner
+tissue|Gewebe, Taschentuch
+tone|Ton
+tough|hart, zäh
+tournament|Turnier
+trace|verfolgen
+tragedy|Tragödie
+trait|Zug, Eigenschaft
+transfer|übertragen
+transform|verwandeln
+transition|Übergang
+transmit|übertragen
+trap|Falle
+treasure|Schatz
+tremble|zittern
+trial|Prozess, Versuch
+tribe|Stamm
+trigger|auslösen
+troop|Truppe
+tropical|tropisch
+trust|vertrauen
+tune|Melodie
+tunnel|Tunnel
+tutor|Nachhilfelehrer
+ultimate|endgültig, höchste
+undergo|durchmachen
+undertake|unternehmen
+undertaking|Vorhaben
+unique|einzigartig
+unite|vereinen
+universe|Universum
+upper|obere
+urban|städtisch
+urge|drängen
+urgent|dringend
+utter|völlig
+valid|gültig
+validate|bestätigen
+vary|variieren
+vast|riesig
+vendor|Verkäufer
+venue|Veranstaltungsort
+via|über
+victory|Sieg
+vigorous|kräftig
+violence|Gewalt
+virtually|praktisch
+visible|sichtbar
+vision|Vision, Sehkraft
+visual|visuell
+vital|lebenswichtig
+vivid|lebhaft
+vocation|Berufung
+volcano|Vulkan
+volume|Umfang, Band
+voluntary|freiwillig
+wage|Lohn
+wagon|Wagen
+wander|umherwandern
+wealth|Reichtum
+welfare|Wohlergehen
+whereas|während
+whisper|flüstern
+widespread|weit verbreitet
+wildlife|Tierwelt
+willing|bereit
+wire|Draht
+wisdom|Weisheit
+wise|weise
+withdraw|zurückziehen
+witness|Zeuge
+workforce|Belegschaft
+workshop|Werkstatt
+wound|Wunde
+wrap|einwickeln
+wreck|Wrack
+wrist|Handgelenk
+zone|Zone

@@ -1,0 +1,85 @@
+# Verbarium — German meanings for collocations.txt: phrase with [answer]|meaning
+[make] a decision|eine Entscheidung treffen
+[do] homework|Hausaufgaben machen
+[take] a photo|ein Foto machen
+[make] a mistake|einen Fehler machen
+[have] a shower|duschen
+[pay] attention|aufpassen
+[catch] a cold|sich erkälten
+[keep] a promise|ein Versprechen halten
+[tell] the truth|die Wahrheit sagen
+[save] time|Zeit sparen
+[heavy] rain|starker Regen
+[strong] wind|starker Wind
+[fast] food|Fast Food
+depend [on] the weather|vom Wetter abhängen
+interested [in] science|an Wissenschaft interessiert
+good [at] maths|gut in Mathe
+listen [to] music|Musik hören
+arrive [at] the station|am Bahnhof ankommen
+[make] progress|Fortschritte machen
+[take] a break|eine Pause machen
+[conduct] research|Forschung betreiben
+[raise] awareness|Bewusstsein schaffen
+[meet] a deadline|eine Frist einhalten
+[draw] a conclusion|einen Schluss ziehen
+[gain] experience|Erfahrung sammeln
+[play] a role|eine Rolle spielen
+[pose] a threat|eine Bedrohung darstellen
+[reach] an agreement|eine Einigung erzielen
+[set] a goal|ein Ziel setzen
+[take] responsibility|Verantwortung übernehmen
+[run] a business|ein Geschäft führen
+[commit] a crime|ein Verbrechen begehen
+a [sharp] rise|ein starker Anstieg
+a [steady] decline|ein stetiger Rückgang
+[highly] likely|sehr wahrscheinlich
+[deeply] concerned|zutiefst besorgt
+[widely] used|weit verbreitet
+contribute [to] the debate|zur Debatte beitragen
+result [in] delays|zu Verzögerungen führen
+aware [of] the risks|sich der Risiken bewusst
+responsible [for] the error|für den Fehler verantwortlich
+rely [on] imports|auf Importe angewiesen sein
+an increase [in] prices|ein Preisanstieg
+the reason [for] the delay|der Grund für die Verspätung
+[have] an impact|eine Wirkung haben
+[address] an issue|ein Problem angehen
+[exert] pressure|Druck ausüben
+[implement] a policy|eine Maßnahme umsetzen
+[undergo] surgery|sich einer Operation unterziehen
+[yield] results|Ergebnisse bringen
+[bear] the cost|die Kosten tragen
+[strike] a balance|ein Gleichgewicht finden
+[lodge] a complaint|eine Beschwerde einreichen
+[shed] light on the cause|Licht auf die Ursache werfen
+[mounting] evidence|wachsende Beweise
+a [compelling] argument|ein überzeugendes Argument
+a [marked] improvement|eine deutliche Verbesserung
+[bitterly] disappointed|bitter enttäuscht
+[inextricably] linked|untrennbar verbunden
+comply [with] the rules|die Regeln einhalten
+adhere [to] the plan|sich an den Plan halten
+prone [to] errors|fehleranfällig
+devoid [of] meaning|ohne jeden Sinn
+[in] accordance with the law|im Einklang mit dem Gesetz
+[at] the expense of quality|auf Kosten der Qualität
+[on] the verge of collapse|am Rande des Zusammenbruchs
+[curb] inflation|die Inflation eindämmen
+[foster] innovation|Innovation fördern
+[stifle] debate|eine Debatte ersticken
+[wield] influence|Einfluss ausüben
+[dispel] a myth|einen Mythos widerlegen
+[levy] a tax|eine Steuer erheben
+a [resounding] success|ein durchschlagender Erfolg
+a [foregone] conclusion|eine ausgemachte Sache
+[sweeping] reforms|weitreichende Reformen
+[scant] regard|wenig Rücksicht
+[vested] interests|Eigeninteressen
+[mete] out punishment|eine Strafe verhängen
+[eke] out a living|sich mühsam durchschlagen
+[hazard] a guess|eine Vermutung wagen
+[wreak] havoc|Chaos anrichten
+a [moot] point|eine strittige Frage
+[abject] poverty|bittere Armut
+[bated] breath|angehaltener Atem

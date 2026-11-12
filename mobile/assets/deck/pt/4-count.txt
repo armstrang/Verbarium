@@ -1,0 +1,701 @@
+# Verbarium — Portuguese meanings for 4-count.txt: word|meaning
+abide|cumprir (abide by)
+abolish|abolir
+abolition|abolição
+abound|abundar
+absence|ausência
+abstraction|abstração
+absurd|absurdo
+abundance|abundância
+abuse|abuso
+accelerate|acelerar
+accessible|acessível
+accessory|acessório
+acclaim|aclamação
+acclimatize|aclimatar-se
+accord|acordo
+accordingly|em conformidade
+accountability|prestação de contas
+accountable|responsável
+accrue|acumular-se
+accumulate|acumular
+accumulation|acúmulo
+accusation|acusação
+acquisition|aquisição
+acquit|absolver
+activism|ativismo
+acute|agudo
+adaptation|adaptação
+adhere|aderir, cumprir
+adherence|adesão, cumprimento
+adjacent|adjacente
+adjoin|confinar com
+administer|administrar
+admirable|admirável
+admission|admissão, entrada
+admittedly|é verdade que
+adolescence|adolescência
+adolescent|adolescente
+adorn|adornar
+advent|chegada, advento
+adversary|adversário
+adverse|adverso
+advisory|consultivo
+advocacy|defesa, apoio
+advocate|defender
+aerial|aéreo
+aesthetic|estético
+affection|afeto
+affinity|afinidade
+affirmative|afirmativo
+affliction|aflição, mal
+affluent|abastado
+aftermath|consequências
+aggravate|agravar
+aggregate|total, agregado
+aggression|agressão
+agility|agilidade
+agitate|agitar, inquietar
+ailment|enfermidade
+albeit|embora
+alert|alerta, atento
+alienate|afastar, alienar
+align|alinhar
+alignment|alinhamento
+alike|igualmente
+allegation|alegação, acusação
+allege|alegar
+allegedly|supostamente
+allegiance|lealdade
+alleviate|aliviar
+alliance|aliança
+allocate|alocar
+allot|atribuir
+allowance|subsídio, mesada
+ally|aliado
+aloud|em voz alta
+alteration|alteração
+altitude|altitude
+amateur|amador
+ambassador|embaixador
+ambiguity|ambiguidade
+ambivalent|ambivalente
+amend|emendar
+amenity|comodidade
+amid|em meio a
+amnesty|anistia
+ample|amplo, suficiente
+amplify|amplificar
+analogous|análogo
+analogy|analogia
+anarchy|anarquia
+anatomy|anatomia
+anecdote|anedota
+anguish|angústia
+annex|anexar
+anomaly|anomalia
+anonymous|anônimo
+antiquity|antiguidade
+apathetic|apático
+appalling|terrível, chocante
+apparatus|aparelho
+appetite|apetite
+applaud|aplaudir
+appliance|eletrodoméstico
+applicable|aplicável
+appoint|nomear
+appraisal|avaliação
+apprehend|prender, compreender
+apprehension|apreensão
+apprentice|aprendiz
+arbitrary|arbitrário
+arbitrate|arbitrar
+arbitration|arbitragem
+archive|arquivo
+arena|arena
+aristocrat|aristocrata
+aroma|aroma
+array|conjunto, série
+artefact|artefato
+articulate|articular, expressar
+artisan|artesão
+ascend|subir
+ascent|subida
+ascertain|averiguar
+ascribe|atribuir
+aspirant|aspirante
+aspiration|aspiração
+aspire|aspirar
+assail|atacar
+assassinate|assassinar
+assault|agressão, assalto
+assemble|montar, reunir-se
+assembly|assembleia, montagem
+assert|afirmar
+assertion|afirmação
+assimilate|assimilar
+assortment|sortimento
+assurance|garantia
+asylum|asilo
+atrocity|atrocidade
+attain|alcançar
+attainment|realização
+attentive|atento
+attribute|atribuir
+audible|audível
+audit|auditoria
+augment|aumentar
+austere|austero
+austerity|austeridade
+authentic|autêntico
+authoritarian|autoritário
+authoritative|confiável, abalizado
+authorize|autorizar
+autonomy|autonomia
+aversion|aversão
+avert|evitar
+aviation|aviação
+await|aguardar
+backdrop|pano de fundo
+backlash|reação negativa
+baffle|desconcertar
+bait|isca
+ballot|votação
+bane|maldição, ruína
+bare|nu, despido
+barren|árido, estéril
+bay|baía
+beam|raio, viga
+beforehand|de antemão
+behalf|em nome de (on behalf of)
+bemoan|lamentar
+benchmark|referência
+beneath|debaixo de
+beneficiary|beneficiário
+benevolent|benevolente
+benign|benigno
+betray|trair
+bewilder|desnortear
+bigotry|intolerância
+bilateral|bilateral
+bind|amarrar, obrigar
+binding|vinculativo
+biography|biografia
+bizarre|bizarro
+blasphemy|blasfêmia
+blast|explosão
+blatant|descarado
+bleak|sombrio
+bleed|sangrar
+blend|misturar
+bless|abençoar
+blockade|bloqueio
+blueprint|planta, projeto
+blunt|cego, direto
+boast|gabar-se
+bolster|reforçar
+bombard|bombardear
+bondage|servidão
+boom|boom, auge
+bounce|quicar
+boundary|limite
+boycott|boicotar
+brace|preparar-se
+breach|violação
+breakdown|pane, detalhamento
+breakthrough|avanço decisivo
+breed|criar, reproduzir-se
+brink|beira
+bristle|eriçar-se
+brochure|folheto
+browse|folhear, navegar
+brutal|brutal
+buffer|amortecedor
+bulk|maior parte
+bulky|volumoso
+bulwark|baluarte
+buoy|animar, sustentar
+burden|fardo
+burdensome|oneroso
+bureaucracy|burocracia
+burst|estourar
+bypass|contornar
+cabinet|armário, gabinete
+calibre|calibre, nível
+canon|cânone
+canvass|fazer campanha, sondar
+capability|capacidade
+capitalism|capitalismo
+captive|cativo
+cardinal|fundamental
+cargo|carga
+cartel|cartel
+carve|esculpir, entalhar
+cascade|cascata
+casualty|vítima, baixa
+cataclysm|cataclismo
+catalyst|catalisador
+catastrophe|catástrofe
+cater|atender
+cattle|gado
+causal|causal
+caution|cautela
+cautious|cauteloso
+cavalry|cavalaria
+cease|cessar
+cemetery|cemitério
+centralize|centralizar
+ceramic|cerâmico
+chaos|caos
+charisma|carisma
+charm|charme
+charter|carta, estatuto
+choreograph|coreografar
+chronic|crônico
+chronological|cronológico
+circulate|circular
+civic|cívico
+civilian|civil
+clamour|clamor
+clarity|clareza
+clash|choque, confronto
+clergy|clero
+climax|clímax
+cling|agarrar-se
+coalition|coalizão
+coarse|grosso, áspero
+coerce|coagir
+cognitive|cognitivo
+cohort|coorte
+coincide|coincidir
+collaborate|colaborar
+collaborative|colaborativo
+collective|coletivo
+collision|colisão
+colloquial|coloquial
+colonial|colonial
+combat|combater
+commemorate|comemorar, homenagear
+commemoration|comemoração
+commence|começar
+commend|elogiar
+commentary|comentário
+commerce|comércio
+commodity|mercadoria, matéria-prima
+commonplace|corriqueiro
+communal|comunitário
+companion|companheiro
+compartment|compartimento
+compassion|compaixão
+compatriot|compatriota
+compel|obrigar
+compelling|convincente
+compendium|compêndio
+compensate|compensar
+compensation|compensação
+competence|competência
+competent|competente
+compile|compilar
+complacent|acomodado, complacente
+complement|complementar
+complementary|complementar
+complexity|complexidade
+compliance|conformidade
+complication|complicação
+comply|cumprir
+composition|composição
+comprehension|compreensão
+compromise|acordo, meio-termo
+comrade|camarada
+conceal|ocultar
+concede|conceder, admitir
+conceit|vaidade
+conceivable|concebível
+conceive|conceber
+conception|concepção
+conceptual|conceitual
+concession|concessão
+concurrent|simultâneo
+condemn|condenar
+condemnation|condenação
+condense|condensar
+confederate|aliado, cúmplice
+confer|conceder, deliberar
+configuration|configuração
+confine|limitar
+confinement|confinamento
+confiscate|confiscar
+conflagration|incêndio
+confluence|confluência
+conformity|conformidade
+confront|enfrentar
+conjunction|conjunção
+conjure|evocar, fazer surgir
+connotation|conotação
+conquer|conquistar
+conquest|conquista
+conscience|consciência (moral)
+consecutive|consecutivo
+consensus|consenso
+consent|consentimento
+consolation|consolo
+consolidate|consolidar
+consortium|consórcio
+conspicuous|chamativo
+constituent|componente, eleitor
+constitute|constituir
+constitution|constituição
+constitutional|constitucional
+constraint|restrição
+construe|interpretar
+contemplate|contemplar, considerar
+contemplation|contemplação
+contempt|desprezo
+contend|sustentar, competir
+contender|concorrente
+contention|disputa, argumento
+contentious|polêmico
+contingency|contingência
+continuity|continuidade
+contour|contorno
+contraband|contrabando
+contraption|engenhoca
+contrary|contrário
+convalescence|convalescença
+convene|convocar, reunir-se
+converge|convergir
+convergence|convergência
+conversely|inversamente
+conversion|conversão
+convict|condenar
+conviction|convicção, condenação
+convoy|comboio
+cooperate|cooperar
+coordinate|coordenar
+copyright|direitos autorais
+corpus|corpus
+correlate|correlacionar
+correlation|correlação
+correspond|corresponder
+correspondence|correspondência
+corrosion|corrosão
+corrupt|corrupto
+counterpart|homólogo
+covenant|pacto, convênio
+covert|secreto, encoberto
+craftsmanship|perícia artesanal
+crawl|engatinhar, rastejar
+credential|credencial
+credibility|credibilidade
+credible|crível
+cripple|paralisar
+crossroads|encruzilhada
+crucible|cadinho
+crude|rudimentar, cru
+crusade|cruzada
+crush|esmagar
+crystallize|cristalizar
+cuisine|culinária
+culminate|culminar
+culmination|culminação
+cultivate|cultivar
+cumulative|cumulativo
+curator|curador
+curb|conter, frear
+curtail|reduzir
+customary|habitual
+cynical|cínico
+dampen|umedecer, abafar
+daunt|intimidar
+daunting|assustador
+dawn|amanhecer
+dazzle|deslumbrar
+debase|degradar
+debris|escombros
+debut|estreia
+decadent|decadente
+deceive|enganar
+deception|engano
+decisive|decisivo
+decree|decreto
+deem|considerar
+deface|desfigurar, pichar
+defamation|difamação
+default|inadimplência
+defect|defeito
+defection|deserção
+deficiency|deficiência, carência
+deficit|déficit
+deflect|desviar
+defraud|fraudar
+defy|desafiar
+degenerate|degenerar
+degrade|degradar
+deity|divindade
+dejected|abatido
+delegate|delegado
+delegation|delegação
+deliberation|deliberação
+delicate|delicado
+delinquent|delinquente juvenil
+delirious|delirante
+delusion|delírio, ilusão
+demise|fim, morte
+demolish|demolir
+denial|negação
+denomination|denominação
+denote|denotar
+denounce|denunciar
+dense|denso
+density|densidade
+depict|retratar
+depiction|representação
+deplete|esgotar
+deplorable|deplorável
+deploy|mobilizar, empregar
+deport|deportar
+depot|depósito
+deprive|privar
+deputy|vice, adjunto
+deregulate|desregulamentar
+deride|ridicularizar
+derogatory|depreciativo
+descend|descer
+descendant|descendente
+descent|descida, ascendência
+desecrate|profanar
+designate|designar
+despise|desprezar
+detain|deter
+detention|detenção
+deteriorate|deteriorar-se
+deterrence|dissuasão
+devalue|desvalorizar
+devastate|devastar
+deviate|desviar-se
+deviation|desvio
+devil|diabo
+devise|conceber, bolar
+diagnose|diagnosticar
+diagnosis|diagnóstico
+diagnostic|diagnóstico
+dialect|dialeto
+dictate|ditar
+dictator|ditador
+differentiate|diferenciar
+diffuse|difundir
+diffusion|difusão
+dignity|dignidade
+dilemma|dilema
+diligence|diligência
+diligent|diligente
+dilute|diluir
+dimension|dimensão
+diminish|diminuir
+diplomacy|diplomacia
+diplomat|diplomata
+dire|grave, terrível
+directive|diretiva
+disarm|desarmar
+disbelief|incredulidade
+discard|descartar
+discern|discernir
+discharge|dar alta, descarregar
+disciple|discípulo
+disclose|revelar
+disclosure|revelação
+discontent|descontentamento
+discourse|discurso
+discredit|desacreditar
+discrepancy|discrepância
+discrete|distinto, separado
+discretion|discrição, critério
+disdain|desdém
+disgrace|desonra
+disillusion|desiludir
+disintegrate|desintegrar-se
+dismal|lúgubre, péssimo
+dismantle|desmontar
+dismay|consternação
+disobey|desobedecer
+disorient|desorientar
+disparity|disparidade
+dispatch|despachar, enviar
+dispense|distribuir, dispensar
+dispersal|dispersão
+displace|deslocar
+displacement|deslocamento
+disposal|descarte
+dispose|desfazer-se de
+disposition|temperamento
+disproportionate|desproporcional
+dispute|disputa
+disqualify|desclassificar
+disregard|desconsiderar
+disrepute|descrédito
+disrupt|perturbar
+dissatisfaction|insatisfação
+disseminate|disseminar
+dissent|dissidência
+dissident|dissidente
+dissolve|dissolver
+distil|destilar
+distinction|distinção
+distinctive|característico
+distort|distorcer
+distress|angústia
+diversify|diversificar
+divert|desviar
+divine|divino
+docile|dócil
+doctrine|doutrina
+domain|domínio, área
+donor|doador
+dosage|dosagem
+dose|dose
+drain|esvaziar, drenar
+drastic|drástico
+drift|ficar à deriva
+drown|afogar-se
+drudgery|trabalho penoso
+dual|duplo
+dubious|duvidoso
+duplicate|duplicar
+durable|durável
+dwindle|minguar
+dynasty|dinastia
+eager|ansioso, desejoso
+earnest|sério, sincero
+earnings|rendimentos
+ease|aliviar
+eccentric|excêntrico
+eclipse|eclipse
+ecology|ecologia
+efficacy|eficácia
+effigy|efígie
+elaborate|detalhar
+elasticity|elasticidade
+electoral|eleitoral
+electorate|eleitorado
+elegance|elegância
+elevate|elevar
+elevation|elevação, altitude
+elicit|provocar, obter
+eligible|elegível
+elimination|eliminação
+elite|elite
+eloquent|eloquente
+elusive|esquivo
+emanate|emanar
+embargo|embargo
+embark|embarcar, empreender
+embassy|embaixada
+embed|incorporar, embutir
+embezzle|desviar (dinheiro)
+embody|encarnar
+embryo|embrião
+emigrate|emigrar
+eminence|eminência
+eminent|eminente
+emissary|emissário
+empathize|ter empatia
+empathy|empatia
+emphatic|enfático
+empirical|empírico
+empower|capacitar
+emulate|imitar, emular
+enact|promulgar
+enactment|promulgação
+enchant|encantar
+encode|codificar
+encompass|abranger
+endeavor|empenho, esforço
+endorse|apoiar, endossar
+endorsement|apoio, endosso
+endurance|resistência
+endure|suportar, perdurar
+enforce|fazer cumprir
+enforcement|aplicação (da lei)
+engrave|gravar
+enlist|alistar-se, recorrer a
+enormity|enormidade, gravidade
+enrage|enfurecer
+enrich|enriquecer
+ensemble|conjunto
+ensue|seguir-se
+entail|implicar, acarretar
+entangle|enredar
+enterprise|empresa
+enthral|cativar
+entice|atrair, tentar
+entitle|dar direito
+entity|entidade
+entrenched|arraigado
+entrust|confiar
+epic|epopeia
+epidemic|epidemia
+equality|igualdade
+equate|equiparar
+equation|equação
+equestrian|equestre
+equilibrium|equilíbrio
+equitable|equitativo
+equivocal|equívoco, ambíguo
+eradicate|erradicar
+eradication|erradicação
+erect|erguer
+erode|erodir
+erosion|erosão
+eruption|erupção
+escalate|intensificar-se
+essence|essência
+esteem|estima
+eternal|eterno
+evacuate|evacuar
+evacuation|evacuação
+evade|evitar, escapar de
+evict|despejar
+evoke|evocar
+exacerbate|agravar
+exaggerate|exagerar
+exasperate|exasperar
+excavation|escavação
+excel|sobressair
+exceptional|excepcional
+excess|excesso
+excise|imposto especial
+exclusion|exclusão
+exclusive|exclusivo
+excursion|excursão
+execute|executar
+execution|execução
+exemplary|exemplar
+exemplify|exemplificar
+exemption|isenção
+exert|exercer
+exertion|esforço
+exhilarate|euforizar, estimular
+exile|exílio
+expanse|extensão
+expectancy|expectativa (de vida)
+expel|expulsar
+expenditure|despesa
+experimental|experimental
+expire|vencer, expirar
+expiry|vencimento
+explanatory|explicativo
+explicit|explícito
+exploitation|exploração
+exquisite|requintado
+extermination|extermínio
+extinct|extinto
+extinction|extinção
+extravagant|extravagante
+extremist|extremista
+exuberance|exuberância
+fabricate|inventar, falsificar
+facet|faceta
+facilitate|facilitar
+faction|facção
+fade|desvanecer
+falter|vacilar

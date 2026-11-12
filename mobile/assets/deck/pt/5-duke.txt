@@ -1,0 +1,701 @@
+# Verbarium — Portuguese meanings for 5-duke.txt: word|meaning
+abase|rebaixar-se
+abate|diminuir, amainar
+abbreviate|abreviar
+abdicate|abdicar
+aberrant|aberrante
+aberration|aberração
+abeyance|suspensão
+abhor|abominar
+abominable|abominável
+abrasive|abrasivo, áspero
+abridge|resumir
+absolve|absolver
+abstain|abster-se
+abstinence|abstinência
+accede|aceder
+accentuate|acentuar
+accession|ascensão ao trono, adesão
+accolade|honraria
+accomplice|cúmplice
+accost|abordar
+accretion|acúmulo
+acquiesce|consentir
+acrimony|acrimônia
+acuity|acuidade
+adamant|irredutível
+adept|hábil
+adhesive|adesivo
+adjourn|adiar
+adjudicate|julgar
+adjunct|complemento
+admonish|admoestar
+admonition|admoestação
+adulterate|adulterar
+adversity|adversidade
+aegis|égide
+affable|afável
+affront|afronta
+aggrandize|engrandecer
+aggrieved|ofendido
+agile|ágil
+agrarian|agrário
+alchemy|alquimia
+allay|acalmar
+allegory|alegoria
+allude|aludir
+allure|atrativo
+aloof|distante
+altruistic|altruísta
+amalgamate|fundir
+amass|acumular
+ameliorate|melhorar
+amenable|receptivo
+amiable|amável
+amicable|amigável
+amity|amizade
+amorphous|amorfo
+animosity|animosidade
+annotate|anotar
+annul|anular
+anomalous|anômalo
+antagonist|antagonista
+antagonize|hostilizar
+antecedent|antecedente
+anthology|antologia
+antiquated|antiquado
+apathy|apatia
+apex|ápice
+apparel|vestuário
+appease|apaziguar
+apprise|informar
+aptitude|aptidão
+arable|cultivável
+arbiter|árbitro
+archaic|arcaico
+ardent|fervoroso
+arduous|árduo
+aristocracy|aristocracia
+armament|armamento
+askew|torto
+assent|assentimento
+assuage|aliviar
+astute|astuto
+atone|expiar
+attenuate|atenuar
+attest|atestar
+attire|traje
+attrition|desgaste
+audacious|audacioso
+autocrat|autocrata
+auxiliary|auxiliar
+avalanche|avalanche
+avenge|vingar
+avid|ávido
+avow|declarar, reconhecer
+awry|errado, torto
+backfire|sair pela culatra
+backlog|acúmulo de pendências
+balk|resistir
+ballad|balada
+banal|banal
+barbaric|bárbaro
+barometer|barômetro
+barrage|bombardeio, enxurrada
+barricade|barricada
+barter|trocar, permutar
+bask|aquecer-se, deleitar-se
+bastion|bastião
+beacon|farol
+befall|acontecer a
+belated|tardio
+beleaguer|cercar, assediar
+belie|desmentir, disfarçar
+belligerent|beligerante
+bemused|perplexo
+benefactor|benfeitor
+bequeath|legar
+bequest|legado
+berate|repreender
+bereaved|enlutado
+bereft|privado de
+beset|assolar
+besiege|sitiar
+bestow|conceder
+blemish|mancha, defeito
+blight|praga, flagelo
+blithe|despreocupado
+blunder|gafe
+boisterous|barulhento
+bounty|recompensa, fartura
+bravado|bravata
+brazen|descarado
+brevity|brevidade
+brittle|quebradiço
+broach|tocar no assunto
+brunt|peso principal
+buoyant|otimista, flutuante
+burgeon|florescer
+buttress|escorar
+cadence|cadência
+calamity|calamidade
+calibrate|calibrar
+callous|insensível
+callow|inexperiente
+camouflage|camuflagem
+candid|franco
+canny|astuto
+capitulate|capitular
+captivate|cativar
+caricature|caricatura
+carnage|carnificina
+carp|reclamar de bobagens
+categorical|categórico
+caustic|cáustico
+caveat|ressalva
+cede|ceder
+celestial|celestial
+censure|censurar
+cessation|cessação
+chagrin|desgosto
+chasm|abismo
+chastise|castigar
+chide|repreender
+chivalry|cavalheirismo
+churlish|grosseiro
+circumference|circunferência
+circumspect|prudente
+circumvent|contornar
+citadel|cidadela
+clamber|escalar
+clandestine|clandestino
+clemency|clemência
+clientele|clientela
+clot|coágulo
+cloying|enjoativo
+coalesce|fundir-se
+coax|persuadir com jeito
+coddle|mimar
+coexist|coexistir
+cognate|cognato, afim
+cohesion|coesão
+cohesive|coeso
+collateral|garantia
+collude|conluiar-se
+collusion|conluio
+colossal|colossal
+combustion|combustão
+commiserate|compadecer-se
+commune|comuna
+complacency|complacência
+complexion|tez
+complicity|cumplicidade
+composure|compostura
+compulsion|compulsão, obrigação
+compunction|remorso
+conciliate|conciliar
+concise|conciso
+concoct|inventar, preparar
+concomitant|concomitante
+concur|concordar
+condescend|condescender
+condescension|condescendência
+condolence|condolências
+condone|tolerar
+conducive|propício
+conduit|conduto
+confound|confundir
+congenial|agradável
+congruent|congruente
+conjecture|conjectura
+connive|conspirar
+connoisseur|conhecedor
+conscientious|consciencioso
+conscript|recruta
+consecrate|consagrar
+conservatory|conservatório, estufa
+consign|consignar, entregar
+constellation|constelação
+consternation|consternação
+constrict|constringir
+consul|cônsul
+consummate|consumado
+contagious|contagioso
+contravene|infringir
+contrition|contrição
+contrive|engendrar, conseguir
+convoluted|complicado
+copious|copioso
+cordial|cordial
+cordon|cordão
+coronation|coroação
+corroborate|corroborar
+cosmopolitan|cosmopolita
+coterie|panelinha
+countenance|aprovar, tolerar
+counteract|neutralizar
+counterfeit|falsificado
+courier|mensageiro
+covet|cobiçar
+crass|grosseiro
+craven|covarde
+credence|crédito
+credulity|credulidade
+creed|credo
+crevice|fenda
+crux|cerne
+culpable|culpado
+culprit|culpado
+cumbersome|incômodo, pesado
+curfew|toque de recolher
+cursory|superficial
+curt|ríspido
+custodian|guardião
+dabble|experimentar
+dally|demorar-se
+dawdle|enrolar
+deadlock|impasse
+debacle|desastre
+debilitate|debilitar
+debit|débito
+debunk|desmascarar
+deceit|engano
+decimate|dizimar
+decipher|decifrar
+decompose|decompor-se
+decorous|decoroso
+decoy|chamariz
+decry|condenar
+deduce|deduzir
+defame|difamar
+deference|deferência
+defiance|desafio
+defiant|desafiador
+deflate|esvaziar
+deft|hábil
+defunct|extinto
+dehydrate|desidratar
+deign|dignar-se
+delectable|delicioso
+delineate|delinear
+deluge|dilúvio
+delve|aprofundar-se
+demarcate|demarcar
+demean|rebaixar
+demeanour|comportamento, porte
+demote|rebaixar
+demure|recatado
+denigrate|denegrir
+deplore|deplorar
+depose|depor
+deprecate|desaprovar
+depreciate|desvalorizar
+derelict|abandonado
+desolate|desolado
+despoil|saquear
+despondent|desanimado
+despot|déspota
+destabilize|desestabilizar
+destitute|indigente
+detest|detestar
+detonate|detonar
+detour|desvio
+detrimental|prejudicial
+devoid|desprovido
+devour|devorar
+devout|devoto
+dexterity|destreza
+dichotomy|dicotomia
+dictum|máxima
+dignitary|dignitário
+digress|divagar
+dilapidated|em ruínas
+diminutive|diminuto
+disarray|desordem
+disband|dissolver
+disclaimer|isenção de responsabilidade
+discomfit|desconcertar
+disconsolate|desconsolado
+discord|discórdia
+disgruntled|descontente
+dishearten|desanimar
+dishevelled|desgrenhado
+dislodge|desalojar
+disparage|menosprezar
+disparate|díspar
+dispassionate|imparcial
+dispel|dissipar
+disprove|refutar
+disquiet|inquietação
+dissect|dissecar
+dissipate|dissipar-se
+dissolute|devasso
+dissonance|dissonância
+dissuade|dissuadir
+distraught|transtornado
+dither|hesitar
+divergent|divergente
+divulge|divulgar
+dogma|dogma
+dogmatic|dogmático
+doleful|lamentoso
+domesticate|domesticar
+dominion|domínio
+dormant|adormecido, inativo
+dour|carrancudo
+dreary|monótono, sombrio
+droll|engraçado
+dupe|enganar
+duress|coação
+eavesdrop|escutar às escondidas
+ebb|refluir, diminuir
+eclectic|eclético
+edible|comestível
+edifice|edifício
+edify|edificar
+efface|apagar
+effusive|efusivo
+egalitarian|igualitário
+egress|saída
+elapse|decorrer
+elated|eufórico
+elucidate|elucidar
+elude|escapar de
+emancipate|emancipar
+embellish|enfeitar
+emblem|emblema
+embroil|envolver
+enclave|enclave
+encroach|invadir
+encumber|estorvar
+endemic|endêmico
+engender|gerar
+engross|absorver
+engulf|engolir
+enigma|enigma
+enigmatic|enigmático
+enmity|inimizade
+ensconce|instalar-se
+enslave|escravizar
+entourage|comitiva
+entrant|participante
+entreat|suplicar
+enumerate|enumerar
+envious|invejoso
+envisage|prever, imaginar
+envoy|enviado
+ephemeral|efêmero
+epitome|epítome
+epitomize|personificar
+epoch|época
+equable|equilibrado
+equanimity|equanimidade
+equator|equador
+errand|recado
+erratic|errático
+erroneous|errôneo
+eschew|evitar
+esoteric|esotérico
+espionage|espionagem
+espouse|abraçar, adotar
+estrange|afastar
+ethos|ethos, valores
+etiquette|etiqueta
+euphemism|eufemismo
+evasive|evasivo
+evince|demonstrar
+exalt|exaltar
+excoriate|criticar duramente
+exhale|expirar
+exhaustive|exaustivo
+exhort|exortar
+exhume|exumar
+exodus|êxodo
+exorbitant|exorbitante
+expatriate|expatriado
+expedient|conveniente
+expedite|agilizar
+expend|gastar
+exponent|defensor, expoente
+exponential|exponencial
+exposition|exposição
+expulsion|expulsão
+extant|existente
+extinguish|extinguir
+extol|exaltar
+extort|extorquir
+extradite|extraditar
+extrapolate|extrapolar
+exuberant|exuberante
+exude|exalar
+fable|fábula
+facade|fachada
+facile|simplista
+fallacy|falácia
+fallible|falível
+fallow|em pousio
+fanfare|fanfarra, alarde
+farce|farsa
+fathom|compreender
+fawn|bajular
+feign|fingir
+felony|crime grave
+ferment|fermentar
+ferocious|feroz
+fervent|fervoroso
+fervour|fervor
+fester|infeccionar
+fetter|acorrentar
+feud|rixa
+feudal|feudal
+fiasco|fiasco
+fiat|decreto
+fickle|volúvel
+figurative|figurado
+finale|final
+finesse|delicadeza, habilidade
+flagrant|flagrante
+flair|talento, faro
+flamboyant|extravagante
+flaunt|ostentar
+fledgling|incipiente
+flimsy|frágil
+flinch|estremecer
+flounder|debater-se, atrapalhar-se
+flout|desrespeitar abertamente
+flurry|agitação
+folklore|folclore
+forage|buscar alimento
+foray|incursão
+forbidding|ameaçador
+foreseeable|previsível
+foresight|previdência
+forestall|antecipar-se a
+forfeit|perder (direito)
+forlorn|desamparado
+formative|formativo
+forsake|abandonar
+forthright|franco
+fortitude|fortaleza
+fraternity|fraternidade
+fraudulent|fraudulento
+fraught|cheio de (perigos)
+frenetic|frenético
+frivolous|frívolo
+frolic|brincar
+fugitive|fugitivo
+furnace|fornalha
+furore|furor
+furtive|furtivo
+gadget|engenhoca
+gaffe|gafe
+gainsay|contradizer
+gallant|galante
+galvanize|galvanizar
+gambit|estratagema
+garish|berrante
+garner|angariar
+gaunt|esquelético
+genealogy|genealogia
+genial|cordial
+germinate|germinar
+ghetto|gueto
+giddy|tonto, eufórico
+gimmick|truque
+glean|coletar
+glib|superficial
+glut|excesso
+goad|incitar
+gorge|desfiladeiro
+gouge|arrancar
+grandeur|grandeza
+grapple|lidar
+gratuitous|gratuito, injustificado
+gregarious|sociável
+grovel|rastejar
+guile|astúcia
+guise|aparência
+gullible|ingênuo
+gust|rajada
+habitual|habitual
+haggard|abatido
+hallmark|marca registrada
+hallowed|sagrado
+hamlet|lugarejo
+haphazard|aleatório
+hapless|infeliz
+harbinger|prenúncio
+harrowing|angustiante
+haughty|arrogante
+havoc|estrago
+headway|progresso
+hectic|agitado
+hedonism|hedonismo
+hefty|considerável
+heinous|hediondo
+helm|leme
+hereditary|hereditário
+heresy|heresia
+heretic|herege
+hermit|eremita
+heyday|auge
+hiatus|pausa
+hoard|acumular
+hoax|farsa, boato
+homage|homenagem
+horde|horda
+hospitable|hospitaleiro
+hubris|arrogância
+humdrum|monótono
+humility|humildade
+hypocrisy|hipocrisia
+hypocrite|hipócrita
+hysteria|histeria
+idiom|expressão idiomática
+idyllic|idílico
+illicit|ilícito
+illustrious|ilustre
+immaculate|imaculado
+immutable|imutável
+impartial|imparcial
+impasse|impasse
+impassive|impassível
+impeccable|impecável
+imperil|pôr em perigo
+impersonal|impessoal
+impetuous|impetuoso
+impinge|afetar, invadir
+implausible|inverossímil
+implore|implorar
+importune|importunar
+impromptu|improvisado
+impudent|insolente
+inane|tolo
+inaugural|inaugural
+incandescent|incandescente, furioso
+incense|enfurecer
+inception|início
+incessant|incessante
+incisive|incisivo
+incite|incitar
+incongruous|incongruente
+incredulous|incrédulo
+indebted|em dívida
+indelible|indelével
+indomitable|indomável
+inept|inepto
+inert|inerte
+inertia|inércia
+inexorable|inexorável
+inexplicable|inexplicável
+infallible|infalível
+infatuated|apaixonado, encantado
+infest|infestar
+infirm|enfermo
+infirmary|enfermaria
+infuriate|enfurecer
+ingenious|engenhoso
+ingenuity|engenhosidade
+ingest|ingerir
+ingrained|arraigado
+ingratiate|insinuar-se
+inimical|prejudicial, hostil
+inkling|suspeita, ideia
+innate|inato
+innocuous|inofensivo
+innuendo|insinuação
+innumerable|inúmeros
+inquisitive|curioso
+inroad|avanço
+insatiable|insaciável
+inseparable|inseparável
+insidious|insidioso
+insinuate|insinuar
+insolvent|insolvente
+insomnia|insônia
+instigate|instigar
+instil|incutir
+insuperable|insuperável
+insurmountable|intransponível
+interject|interpor
+interloper|intruso
+interlude|intervalo
+intermediary|intermediário
+interminable|interminável
+intoxicate|embriagar
+intractable|intratável
+intrepid|intrépido
+inundate|inundar
+invalid|inválido, nulo
+inveigh|investir contra
+invigorate|revigorar
+irate|irado
+irk|irritar
+irrevocable|irrevogável
+itinerary|itinerário
+jaded|cansado, enjoado
+jargon|jargão
+jaunty|despreocupado
+jeopardize|pôr em risco
+jibe|alfinetada
+jocular|jocoso
+jostle|empurrar
+jubilant|jubiloso
+jubilee|jubileu
+judicious|criterioso
+juncture|conjuntura
+juxtapose|justapor
+kernel|núcleo, grão
+kindle|acender
+kindred|afim
+knack|jeito, dom
+laborious|trabalhoso
+labyrinth|labirinto
+lacklustre|sem brilho
+lampoon|satirizar
+languid|lânguido
+languish|definhar
+laud|louvar
+lax|frouxo
+legible|legível
+lenient|indulgente
+lionize|exaltar
+litany|ladainha
+lithe|ágil, flexível
+livelihood|sustento
+livid|lívido, furioso
+lofty|elevado, nobre
+longevity|longevidade
+loophole|brecha
+lucid|lúcido
+lull|calmaria
+lurid|chocante, berrante
+magnate|magnata
+majestic|majestoso
+malaise|mal-estar
+malevolent|malévolo
+malfunction|defeito, pane
+malice|malícia
+malicious|malicioso
+malnutrition|desnutrição
+manifesto|manifesto
+mar|estragar
+maverick|inconformista
+maxim|máxima
+meagre|escasso
+meander|serpentear
+meddle|intrometer-se
+mediocre|medíocre
+meek|manso
+mercenary|mercenário
+metropolis|metrópole
+mettle|fibra, coragem
+microbe|micróbio
+mire|atolar
+misconception|equívoco
+misfortune|desgraça
+misgiving|receio
+misguided|equivocado
+mishap|contratempo
+misnomer|nome inadequado
+misplace|extraviar

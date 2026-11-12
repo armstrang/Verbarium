@@ -1,0 +1,701 @@
+# Verbarium — Portuguese meanings for 4-count-b.txt: word|meaning
+famine|fome (coletiva)
+famished|faminto
+fanatic|fanático
+fatal|fatal
+fate|destino
+fatigue|cansaço
+feasibility|viabilidade
+feasible|viável
+feast|banquete
+feat|façanha
+federation|federação
+feeble|fraco
+fertility|fertilidade
+fertilize|fertilizar
+fidelity|fidelidade
+fierce|feroz
+filter|filtrar
+finite|finito
+fixture|instalação fixa, partida
+flammable|inflamável
+flatter|bajular, lisonjear
+flaw|falha, defeito
+flee|fugir
+fleet|frota
+fleeting|passageiro, fugaz
+flesh|carne
+flora|flora
+flourish|florescer, prosperar
+fluctuate|oscilar
+fluent|fluente
+fluid|fluido
+foil|frustrar
+footage|imagens, filmagem
+foreboding|mau pressentimento
+forefront|vanguarda
+foreground|primeiro plano
+foremost|principal
+forensic|forense
+forge|forjar
+forgery|falsificação
+forgo|abrir mão de
+formality|formalidade
+formidable|formidável, temível
+formula|fórmula
+formulate|formular
+forthcoming|próximo
+fortify|fortificar
+fortress|fortaleza
+foster|promover, fomentar
+fragile|frágil
+fragrance|fragrância
+frail|frágil, debilitado
+franchise|franquia
+frantic|frenético
+freelance|autônomo, freelancer
+freight|carga, frete
+frenzy|frenesi
+friction|atrito
+frugal|frugal, econômico
+fruition|concretização
+fumble|tatear
+functional|funcional
+funeral|funeral
+fusion|fusão
+futile|inútil
+futility|inutilidade
+gall|atrevimento
+garment|peça de roupa
+garrison|guarnição
+gaze|fitar
+gear|equipamento, marcha
+generalization|generalização
+generic|genérico
+generosity|generosidade
+genesis|gênese
+genocide|genocídio
+gentry|pequena nobreza
+gigantic|gigantesco
+gist|essência
+glacier|geleira
+glance|dar uma olhada
+glaze|esmalte, cobertura
+glimpse|vislumbre
+glitter|cintilar
+glory|glória
+glossary|glossário
+governance|governança
+grace|graça, elegância
+graft|corrupção, enxerto
+granite|granito
+grasp|agarrar, compreender
+grate|ralar, irritar
+gratify|agradar
+gratitude|gratidão
+grave|túmulo
+gravity|gravidade
+grid|grade, rede
+grief|luto, dor
+grievance|queixa, agravo
+grind|moer
+grip|aperto
+groan|gemer
+groove|sulco
+gross|bruto, nojento
+grudging|relutante
+gruelling|exaustivo
+grumble|resmungar
+guerrilla|guerrilheiro
+guidance|orientação
+guild|guilda, corporação
+guilt|culpa
+hail|aclamar
+hallucination|alucinação
+halt|parar, deter
+hamper|atrapalhar
+handicraft|artesanato
+harmonize|harmonizar
+harmony|harmonia
+harness|aproveitar
+harsh|duro, severo
+harvest|colheita
+hasten|apressar
+hatred|ódio
+haunt|assombrar
+haven|refúgio
+hazard|perigo
+hazardous|perigoso
+hearsay|boatos
+heed|dar ouvidos a
+hegemony|hegemonia
+heighten|aumentar
+heirloom|relíquia de família
+hemisphere|hemisfério
+herald|anunciar
+herbal|de ervas
+heritage|patrimônio
+heroic|heroico
+hibernate|hibernar
+hierarchy|hierarquia
+highland|das terras altas
+hijack|sequestrar (veículo)
+hinder|dificultar
+hindrance|estorvo
+hindsight|retrospectiva
+hinge|depender de
+hint|dica, indireta
+hinterland|interior
+homeland|pátria
+homicide|homicídio
+homogeneous|homogêneo
+honorary|honorário
+horizon|horizonte
+horrific|horrível
+hospitality|hospitalidade
+hostage|refém
+hostile|hostil
+hostility|hostilidade
+hover|pairar
+hub|centro, polo
+hue|matiz, tom
+humane|humano, humanitário
+humanitarian|humanitário
+humble|humilde
+humid|úmido
+hurdle|obstáculo
+hurl|arremessar
+hygiene|higiene
+hymn|hino
+hype|badalação
+hypothetical|hipotético
+ideological|ideológico
+ideology|ideologia
+ignite|acender
+ignorance|ignorância
+ignorant|ignorante
+illiterate|analfabeto
+imbalance|desequilíbrio
+immaterial|irrelevante
+immense|imenso
+immerse|mergulhar
+imminent|iminente
+immortal|imortal
+immunity|imunidade
+impassioned|apaixonado
+impeach|destituir
+impede|impedir
+impending|iminente
+imperative|imperativo
+impertinent|impertinente
+impetus|impulso
+implant|implantar
+impound|apreender
+impoverish|empobrecer
+impractical|pouco prático
+imprint|marca, impressão
+imprison|aprisionar
+improbable|improvável
+improvise|improvisar
+inaccessible|inacessível
+inadequate|inadequado
+inadvertent|involuntário
+inadvertently|sem querer
+inanimate|inanimado
+inaugurate|inaugurar
+incapable|incapaz
+incarnate|encarnado
+incidence|incidência
+incidental|secundário
+incision|incisão
+inclination|inclinação
+inclusive|inclusivo
+incoherent|incoerente
+incompatible|incompatível
+incompetent|incompetente
+inconclusive|inconclusivo
+inconsistent|inconsistente
+increment|incremento
+incubate|incubar
+incumbent|titular
+incur|incorrer em
+indecisive|indeciso
+indefinite|indefinido
+indicator|indicador
+indict|indiciar
+indictment|acusação formal
+indigenous|indígena, nativo
+indignant|indignado
+indignation|indignação
+indiscriminate|indiscriminado
+indispensable|indispensável
+indisputable|indiscutível
+indistinct|indistinto
+induce|induzir
+induction|posse, indução
+indulge|mimar, permitir-se
+indulgent|indulgente
+industrious|trabalhador
+inequality|desigualdade
+infamous|infame
+infant|bebê
+infantry|infantaria
+infect|infectar
+inference|inferência
+inferior|inferior
+infiltrate|infiltrar-se
+inflexible|inflexível
+inflict|infligir
+influx|afluxo
+informative|informativo
+infringe|infringir
+infuse|infundir
+inhale|inalar
+inherent|inerente
+inheritance|herança
+inhibit|inibir
+inhospitable|inóspito
+inhumane|desumano
+initiate|iniciar
+initiation|iniciação
+inject|injetar
+injunction|liminar
+injustice|injustiça
+inland|do interior
+inmate|detento
+insane|insano, louco
+inscription|inscrição
+insecure|inseguro
+insignificant|insignificante
+insistence|insistência
+insofar|na medida em que (insofar as)
+insoluble|insolúvel
+inspect|inspecionar
+inspection|inspeção
+inspiration|inspiração
+instability|instabilidade
+instantaneous|instantâneo
+instinct|instinto
+instruct|instruir, ordenar
+instrumental|fundamental, decisivo
+insufficient|insuficiente
+insular|fechado, isolado
+insult|insultar
+insurgent|insurgente
+intact|intacto
+intake|ingestão
+intangible|intangível
+integral|integral, essencial
+integration|integração
+integrity|integridade
+intelligible|inteligível
+intensify|intensificar
+intensive|intensivo
+intent|intenção
+intercept|interceptar
+interchangeable|intercambiável
+interfere|interferir
+interim|interino, provisório
+interior|interior
+intermediate|intermediário
+intermittent|intermitente
+intern|estagiário
+interrogate|interrogar
+intersect|cruzar-se
+intertwine|entrelaçar-se
+intervene|intervir
+intervention|intervenção
+intimate|íntimo
+intolerable|intolerável
+intricate|intrincado
+intrinsic|intrínseco
+introvert|introvertido
+intrude|intrometer-se
+intuition|intuição
+intuitive|intuitivo
+invaluable|inestimável
+invariably|invariavelmente
+inventory|inventário
+invincible|invencível
+invisible|invisível
+invoke|invocar
+involuntary|involuntário
+ironic|irônico
+irony|ironia
+irrational|irracional
+irregular|irregular
+irrelevant|irrelevante
+irreparable|irreparável
+irresistible|irresistível
+irrespective|independentemente de
+irreversible|irreversível
+irrigate|irrigar
+irritable|irritável
+jealous|ciumento, invejoso
+jeopardy|perigo
+judicial|judicial
+judiciary|poder judiciário
+jurisdiction|jurisdição
+kidnap|sequestrar
+kingdom|reino
+kinship|parentesco
+lament|lamentar
+landlord|senhorio
+landmark|marco, ponto de referência
+lap|colo, volta
+lapse|lapso, intervalo
+laser|laser
+latent|latente
+latitude|latitude, liberdade
+latter|este último
+lavish|luxuoso, generoso
+lawn|gramado
+lawsuit|processo judicial
+layout|disposição, layout
+leak|vazar
+leap|saltar
+leeway|margem
+legacy|legado
+legion|legião
+legislation|legislação
+legislature|poder legislativo
+legitimacy|legitimidade
+legitimate|legítimo
+lethal|letal
+leverage|influência
+liability|responsabilidade, ônus
+liable|responsável, propenso
+liaison|ligação
+liberal|liberal
+liberty|liberdade
+lightning|relâmpago
+likelihood|probabilidade
+limb|membro
+limestone|calcário
+lineage|linhagem
+linear|linear
+linger|demorar-se
+liquidate|liquidar
+literacy|alfabetização
+litigation|litígio
+loathe|detestar
+lobby|fazer lobby
+locomotive|locomotiva
+logic|lógica
+logistics|logística
+longitude|longitude
+loom|pairar, ameaçar
+lucrative|lucrativo
+luggage|bagagem
+lure|atrair
+lush|exuberante
+lyrical|lírico
+magistrate|magistrado
+magnify|ampliar
+magnitude|magnitude
+mainland|continente
+mainstream|convencional, dominante
+makeup|maquiagem, composição
+malady|mal, doença
+malign|difamar
+mandate|mandato
+mandatory|obrigatório
+manifest|manifestar
+manipulate|manipular
+mankind|humanidade
+manoeuvre|manobra
+mansion|mansão
+manuscript|manuscrito
+marginal|marginal
+marine|marinho
+maritime|marítimo
+masculine|masculino
+masterpiece|obra-prima
+materialize|concretizar-se
+maternal|materno
+mature|maduro
+medieval|medieval
+meditate|meditar
+melancholy|melancolia
+memoir|memórias
+memorandum|memorando
+memorial|memorial
+menace|ameaça
+menial|subalterno, braçal
+mentor|mentor
+merchant|comerciante
+mercy|misericórdia
+mere|mero
+merge|fundir-se
+merger|fusão
+merit|mérito
+meteor|meteoro
+methodology|metodologia
+meticulous|meticuloso
+midst|meio
+migrant|migrante
+migration|migração
+militant|militante
+mill|moinho, fábrica
+mimic|imitar
+mingle|misturar-se
+miniature|em miniatura
+minimal|mínimo
+minimize|minimizar
+ministry|ministério
+miracle|milagre
+miraculous|milagroso
+mischief|travessura
+misery|miséria
+misinterpret|interpretar mal
+misuse|mau uso
+mitigate|atenuar
+moan|gemer, reclamar
+mobility|mobilidade
+mobilize|mobilizar
+moderate|moderado
+modernize|modernizar
+modification|modificação
+moist|úmido
+momentary|momentâneo
+momentum|impulso
+monastery|mosteiro
+monopoly|monopólio
+monotonous|monótono
+monsoon|monção
+monstrous|monstruoso
+monumental|monumental
+morale|moral (ânimo)
+morality|moralidade
+morbid|mórbido
+mortality|mortalidade
+mosaic|mosaico
+motif|motivo
+motive|motivo
+mound|monte
+mundane|corriqueiro
+municipal|municipal
+muse|refletir
+muster|reunir
+mutual|mútuo
+myriad|inúmeros
+mystical|místico
+mythology|mitologia
+naive|ingênuo
+narrator|narrador
+nationalism|nacionalismo
+nationwide|nacional
+nausea|náusea
+naval|naval
+necessitate|exigir
+neglect|negligenciar
+negligence|negligência
+negligent|negligente
+nest|ninho
+neutrality|neutralidade
+newcomer|recém-chegado
+niche|nicho
+nobility|nobreza
+noble|nobre
+nominal|nominal, simbólico
+nominate|indicar, nomear
+nomination|indicação
+nonetheless|no entanto
+nonsense|bobagem
+nostalgia|nostalgia
+notable|notável
+notation|notação
+noteworthy|digno de nota
+notify|notificar
+notorious|notório
+notwithstanding|apesar de
+nourish|nutrir
+novelty|novidade
+nucleus|núcleo
+nuisance|incômodo
+numb|dormente
+numerical|numérico
+nursery|creche, viveiro
+nurture|criar, cultivar
+nutrient|nutriente
+oath|juramento
+obedience|obediência
+obese|obeso
+objection|objeção
+objectivity|objetividade
+oblige|obrigar
+obscene|obsceno
+obscurity|obscuridade, anonimato
+observatory|observatório
+obsess|obcecar
+obsession|obsessão
+occasional|ocasional
+occupant|ocupante
+occupational|ocupacional
+occurrence|ocorrência
+offspring|prole
+olfactory|olfativo
+ominous|sinistro
+omission|omissão
+onset|início
+operational|operacional
+opportune|oportuno
+oppression|opressão
+opt|optar
+optical|óptico
+optimal|ideal, ótimo
+optimism|otimismo
+oral|oral
+oration|discurso solene
+orchard|pomar
+ordeal|provação
+ore|minério
+orient|orientar
+orientation|orientação
+originate|originar-se
+ornament|enfeite
+orphan|órfão
+ostensible|aparente
+oust|destituir
+outbreak|surto
+outgoing|extrovertido, que está saindo
+outlaw|proibir
+outlet|saída, ponto de venda
+outlook|perspectiva
+outrage|indignação
+outrageous|escandaloso
+outright|total, aberto
+outset|início
+outweigh|superar
+overcast|nublado
+overhaul|revisar
+overhear|ouvir por acaso
+overlook|ignorar, dar vista para
+override|anular, prevalecer
+oversee|supervisionar
+overt|explícito
+overtake|ultrapassar
+overthrow|derrubar
+overturn|virar, anular
+overview|visão geral
+overwhelm|sobrecarregar
+pacify|pacificar
+pact|pacto
+pad|almofada, bloco
+pamphlet|panfleto
+pandemic|pandemia
+paradigm|paradigma
+paradise|paraíso
+paralyse|paralisar
+parameter|parâmetro
+paramount|primordial
+parasite|parasita
+parcel|pacote
+parish|paróquia
+parody|paródia
+partial|parcial
+partisan|partidário
+partition|divisória
+passive|passivo
+pastoral|pastoril, rural
+pasture|pasto
+patent|patente
+pathetic|patético
+patriotic|patriótico
+patrol|patrulhar
+patron|mecenas, cliente
+patronage|patrocínio
+payroll|folha de pagamento
+peasant|camponês
+pebble|seixo
+peculiar|peculiar
+peninsula|península
+pensive|pensativo
+perch|empoleirar-se
+perennial|perene
+peril|perigo
+perimeter|perímetro
+periodic|periódico
+peripheral|periférico
+perpetrate|perpetrar
+perpetual|perpétuo
+perpetuate|perpetuar
+persecute|perseguir
+perseverance|perseverança
+persist|persistir
+persistent|persistente
+personnel|pessoal
+persuasion|persuasão
+persuasive|persuasivo
+pervasive|onipresente
+pest|praga
+pesticide|pesticida
+petition|petição, abaixo-assinado
+petty|mesquinho
+pharmacy|farmácia
+philanthropist|filantropo
+philanthropy|filantropia
+physician|médico
+pierce|perfurar
+pilgrimage|peregrinação
+pillar|pilar
+pinpoint|identificar com precisão
+pioneer|pioneiro
+pivot|eixo
+plausible|plausível
+plea|apelo
+plead|implorar, declarar-se
+pledge|prometer
+plentiful|abundante
+pliable|flexível
+plight|situação difícil
+plough|arar
+pluck|arrancar, depenar
+plumb|sondar
+plunge|mergulhar, despencar
+poise|equilíbrio, compostura
+polarize|polarizar
+pole|poste, polo
+poll|pesquisa
+ponder|ponderar
+populate|povoar
+populous|populoso
+portable|portátil
+portfolio|portfólio, carteira
+portray|retratar
+posterity|posteridade
+postpone|adiar
+posture|postura
+potent|potente
+practitioner|profissional
+pragmatic|pragmático
+preach|pregar
+preamble|preâmbulo
+precarious|precário
+precaution|precaução
+precedent|precedente
+precipitate|precipitar
+precision|precisão
+preclude|impedir
+predator|predador
+predecessor|antecessor
+predominantly|predominantemente
+prejudice|preconceito
+preliminary|preliminar
+premature|prematuro
+premiere|estreia
+premise|premissa
+premium|prêmio, ágio
+prescribe|receitar
+prescription|receita médica
+preside|presidir
+prestigious|prestigiado
+presumably|presumivelmente
+presume|presumir
+pretence|fingimento
+prevail|prevalecer
+prevalence|prevalência
+preventive|preventivo
+prey|presa
+privilege|privilégio
+probation|liberdade condicional, período de experiência
