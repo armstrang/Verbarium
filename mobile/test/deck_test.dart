@@ -138,4 +138,31 @@ void formsAndChips() {
     lang.code = 'id';
     glosses.remove('tide');
   });
+
+  group('kingdoms of other languages', () {
+    final files = Directory('assets/realm').listSync().whereType<File>().where((f) => f.path.endsWith('.txt')).toList()
+      ..sort((a, b) => a.path.compareTo(b.path));
+    for (final lang in ['de', 'es', 'fr', 'pt']) {
+      test('$lang: every title has its words, each with one gap and a form to type', () {
+        final words = <Word>[];
+        for (final f in files) {
+          final n = int.parse(f.uri.pathSegments.last[0]);
+          words.addAll(Deck.parseRealm(f.readAsStringSync(), lang, n <= 2 ? 1 : n - 1));
+        }
+        final d = Deck(words);
+        for (var t = 1; t <= Deck.tiers; t++) {
+          expect(d.tier(t).length, greaterThan(400), reason: '$lang tier $t');
+        }
+        expect(words.length, greaterThan(7000));
+        for (final w in words) {
+          expect('___'.allMatches(w.sentence).length, 1, reason: w.id);
+          expect(w.forms.single.trim(), isNotEmpty, reason: w.id);
+          expect(w.sentence.contains('['), isFalse, reason: w.id);
+          expect(w.accepts(w.forms.single.toUpperCase()), isTrue, reason: 'typing ignores case: ${w.id}');
+        }
+        expect(words.map((w) => w.id).toSet().length, d.byId.length);
+        expect(transOf(words.first.id), isNotEmpty);
+      });
+    }
+  });
 }

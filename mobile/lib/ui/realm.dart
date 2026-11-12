@@ -36,19 +36,29 @@ class RealmTab extends StatelessWidget {
     final e = app.engine;
     final rank = e.rank;
     final shares = [for (var t = 1; t <= Deck.tiers; t++) e.stat(t).share];
+    final k = app.kingdom;
     return TabBody(
       children: [
-        Label(tr('Negerimu', 'Your realm', 'Tu reino', 'Ton royaume')),
+        Label('${k.name} · ${k.language}'),
         const SizedBox(height: 6),
         Text(
-          tr(
-            '${rankNames[rank]} di bawah panji ${bannerName(app.banner)}',
-            '${rankNames[rank]} under the banner of ${bannerName(app.banner)}',
-            '${rankNames[rank]} bajo el estandarte de ${bannerName(app.banner)}',
-            '${rankNames[rank]} sous la bannière de ${bannerName(app.banner)}',
-          ),
+          k.code == 'en'
+              ? tr(
+                  '${rankNames[rank]} di bawah panji ${bannerName(app.banner)}',
+                  '${rankNames[rank]} under the banner of ${bannerName(app.banner)}',
+                  '${rankNames[rank]} bajo el estandarte de ${bannerName(app.banner)}',
+                  '${rankNames[rank]} sous la bannière de ${bannerName(app.banner)}',
+                )
+              : tr(
+                  '${rankNames[rank]} di ${k.name}',
+                  '${rankNames[rank]} of ${k.name}',
+                  '${rankNames[rank]} de ${k.name}',
+                  '${rankNames[rank]} de ${k.name}',
+                ),
           style: T.display(31, pal.ink),
         ),
+        const SizedBox(height: 14),
+        const _Kingdoms(),
         const SizedBox(height: 16),
         Rise(
           child: _World(rank: rank, shares: shares),
@@ -57,7 +67,7 @@ class RealmTab extends StatelessWidget {
         const FightCard(),
         const SizedBox(height: 20),
         const Rule(),
-        for (var r = 0; r <= Engine.maxRank; r++) _Rung(r, rank, app.banner),
+        for (var r = 0; r <= Engine.maxRank; r++) _Rung(r, rank, k.code == 'en' ? app.banner : ''),
         const SizedBox(height: 12),
         Text(
           tr(
@@ -90,6 +100,140 @@ class RealmTab extends StatelessWidget {
       ],
     );
   }
+}
+
+/// The five kingdoms, one per language; tapping one goes there, with its own title, character and chronicle.
+class _Kingdoms extends StatelessWidget {
+  const _Kingdoms();
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final app = App.I;
+    return Column(
+      children: [
+        for (final k in Kingdom.all)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8),
+            child: Press(
+              label: k.name,
+              onTap: () => app.chooseRealm(k.code),
+              child: Builder(
+                builder: (context) {
+                  final here = k.code == app.realm;
+                  final st = app.standing(k.code);
+                  return Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+                    decoration: BoxDecoration(
+                      color: pal.field,
+                      border: Border.all(color: here ? Color(k.tint) : pal.line, width: here ? 2 : 1),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Row(
+                      children: [
+                        CustomPaint(size: const Size(26, 30), painter: _KingdomShield(Color(k.tint), k.charge)),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(k.name, style: T.display(19, pal.ink)),
+                              Text(
+                                st.seen == 0
+                                    ? '${k.language} · ${tr('belum dimulai', 'not started', 'sin empezar', 'pas commencé')}'
+                                    : '${k.language} · ${rankNames[st.rank]} · ${tr('${st.seen} kata', '${st.seen} words', '${st.seen} palabras', '${st.seen} mots')}',
+                                style: T.body(14, pal.muted),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Text(
+                          here
+                              ? tr('Di sini', 'Here', 'Aquí', 'Ici')
+                              : (st.seen == 0
+                                    ? tr('Masuk', 'Enter', 'Entrar', 'Entrer')
+                                    : tr('Lanjut', 'Go on', 'Seguir', 'Continuer')),
+                          style: T.body(14, here ? pal.ink : pal.muted, w: here ? FontWeight.w700 : FontWeight.w400),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+/// a kingdom's arms: its colour and a mark of its own (a cross, a peak, a sun, a flame, waves)
+class _KingdomShield extends CustomPainter {
+  final Color field;
+  final int charge;
+  _KingdomShield(this.field, this.charge);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    final path = Path()
+      ..moveTo(1, 1)
+      ..lineTo(w - 1, 1)
+      ..lineTo(w - 1, h * 0.48)
+      ..quadraticBezierTo(w - 1, h * 0.86, w / 2, h - 1)
+      ..quadraticBezierTo(1, h * 0.86, 1, h * 0.48)
+      ..close();
+    canvas.drawPath(path, Paint()..color = field);
+    final mark = Paint()
+      ..color = const Color(0xFFFCFBF7)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = w * 0.09;
+    switch (charge) {
+      case 0: // a cross
+        canvas.drawLine(Offset(w / 2, h * 0.16), Offset(w / 2, h * 0.72), mark);
+        canvas.drawLine(Offset(w * 0.28, h * 0.32), Offset(w * 0.72, h * 0.32), mark);
+      case 1: // a peak
+        canvas.drawPath(
+          Path()
+            ..moveTo(w * 0.22, h * 0.66)
+            ..lineTo(w * 0.5, h * 0.24)
+            ..lineTo(w * 0.78, h * 0.66)
+            ..close(),
+          Paint()..color = const Color(0xFFEAE6DA),
+        );
+      case 2: // a sun
+        canvas.drawCircle(Offset(w / 2, h * 0.43), w * 0.18, Paint()..color = const Color(0xFFD9B861));
+      case 3: // a flame
+        canvas.drawPath(
+          Path()
+            ..moveTo(w / 2, h * 0.18)
+            ..quadraticBezierTo(w * 0.24, h * 0.42, w / 2, h * 0.58)
+            ..quadraticBezierTo(w * 0.76, h * 0.42, w / 2, h * 0.18),
+          mark,
+        );
+        canvas.drawLine(Offset(w * 0.28, h * 0.68), Offset(w * 0.72, h * 0.68), mark);
+      default: // waves
+        for (final y in [0.36, 0.56]) {
+          canvas.drawPath(
+            Path()
+              ..moveTo(w * 0.18, h * y)
+              ..quadraticBezierTo(w * 0.34, h * (y - 0.1), w * 0.5, h * y)
+              ..quadraticBezierTo(w * 0.66, h * (y + 0.1), w * 0.82, h * y),
+            mark,
+          );
+        }
+    }
+    canvas.drawPath(
+      path,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1.4
+        ..color = const Color(0xFF1C1B19),
+    );
+  }
+
+  @override
+  bool shouldRepaint(_KingdomShield old) => old.field != field || old.charge != charge;
 }
 
 /// The map with life on it: the hero walks in from the land already held and stops before the one being won,
@@ -173,7 +317,10 @@ class _Rung extends StatelessWidget {
               : (r == rank + 1
                     ? tr('Berikutnya', 'Next', 'Siguiente', 'Suivant')
                     : tr('Belum terbuka', 'Not open yet', 'Aún cerrado', 'Pas encore ouvert')));
-    final score = banner == 'ielts'
+    // a kingdom of another language has no TOEFL or IELTS: its titles stand for CEFR alone
+    final score = banner.isEmpty || info.ielts == '–'
+        ? ''
+        : banner == 'ielts'
         ? 'IELTS ${below(info.ielts)}'
         : tr(
             'TOEFL iBT ${below(info.toefl)} (skala lama ${below(info.toeflOld)})',
@@ -202,7 +349,7 @@ class _Rung extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 2),
-                Text('$score · CEFR ${info.cefr}', style: T.body(15, pal.muted)),
+                Text('${score.isEmpty ? '' : '$score · '}CEFR ${info.cefr}', style: T.body(15, pal.muted)),
               ],
             ),
           ),
@@ -226,7 +373,7 @@ class _MapPainter extends CustomPainter {
     [Offset(98, 122), Offset(120, 66), Offset(176, 78), Offset(170, 150), Offset(92, 190)],
     [Offset(176, 78), Offset(206, 26), Offset(262, 40), Offset(250, 118), Offset(170, 150)],
     // the March, the Count's border land, low under the town
-    [Offset(92, 190), Offset(170, 150), Offset(180, 200), Offset(112, 208)],
+    [Offset(92, 190), Offset(170, 150), Offset(180, 200), Offset(100, 206)],
     [Offset(170, 150), Offset(250, 118), Offset(292, 150), Offset(262, 200), Offset(180, 200)],
     [Offset(262, 40), Offset(326, 30), Offset(330, 132), Offset(292, 150), Offset(250, 118)],
   ];
@@ -234,7 +381,7 @@ class _MapPainter extends CustomPainter {
     Offset(54, 152),
     Offset(134, 124),
     Offset(214, 84),
-    Offset(140, 188),
+    Offset(134, 174),
     Offset(226, 164),
     Offset(292, 86),
   ];

@@ -47,10 +47,19 @@ class Word {
   bool get inflected => gap.isNotEmpty;
   List<String> get wanted => gap.isEmpty ? forms : gap;
   String answer(bool british) => british && wanted.length > 1 ? wanted[1] : wanted[0];
-  bool accepts(String typed) => wanted.contains(typed.trim().toLowerCase());
+  bool accepts(String typed) {
+    final t = typed.trim().toLowerCase();
+    return wanted.any((f) => f.toLowerCase() == t);
+  }
 
   /// the right word in the wrong form: the headword typed where another form is wanted
-  bool wrongForm(String typed) => inflected && forms.contains(typed.trim().toLowerCase());
+  bool wrongForm(String typed) {
+    final t = typed.trim().toLowerCase();
+    return inflected && forms.any((f) => f.toLowerCase() == t);
+  }
+
+  /// the sentence in the language the learner learns through (kingdoms of other languages only; empty otherwise)
+  String get trans => transOf(id);
 
   /// the sentence before and after the gap
   List<String> get parts {
@@ -90,6 +99,42 @@ String glossOf(String id, String def, String meaning) {
     if (g.isNotEmpty) return g;
   }
   return code != 'id' && def.isNotEmpty ? def : meaning;
+}
+
+/// The sentence of a kingdom's word in the languages it is learned through, keyed by word id: Indonesian, English,
+/// Spanish, French (empty where it is the language being learned)
+final sentences = <String, List<String>>{};
+
+String transOf(String id) {
+  final s = sentences[id];
+  if (s == null) return '';
+  final t =
+      s[switch (code) {
+        'id' => 0,
+        'es' => 2,
+        'fr' => 3,
+        _ => 1,
+      }];
+  return t.isNotEmpty ? t : s[1];
+}
+
+/// A kingdom of another language, with its own road from Peasant to King. Aldmere is English (the main deck).
+class Kingdom {
+  final String code, name, language;
+  final int tint, charge;
+
+  /// the letters a phone keyboard may not offer at once, as buttons under the gap
+  final List<String> letters;
+  const Kingdom(this.code, this.name, this.language, this.tint, this.charge, this.letters);
+
+  static const all = [
+    Kingdom('en', 'Aldmere', 'English', 0xFF1F3F73, 0, []),
+    Kingdom('de', 'Grauwacht', 'Deutsch', 0xFF5C574D, 1, ['ä', 'ö', 'ü', 'ß']),
+    Kingdom('es', 'Valdoro', 'Español', 0xFF8E1B16, 2, ['á', 'é', 'í', 'ó', 'ú', 'ñ', 'ü']),
+    Kingdom('fr', 'Beaumarais', 'Français', 0xFF5A2A6B, 3, ['é', 'è', 'ê', 'à', 'ç', 'ô', 'î', 'û', 'ë', 'œ']),
+    Kingdom('pt', 'Alvamar', 'Português', 0xFF2F5D3A, 4, ['ã', 'õ', 'á', 'é', 'ê', 'ó', 'ô', 'í', 'ú', 'ç']),
+  ];
+  static Kingdom of(String code) => all.firstWhere((k) => k.code == code, orElse: () => all[0]);
 }
 
 class Deck {
@@ -163,6 +208,56 @@ class Deck {
       parseCollocs(await rootBundle.loadString('assets/deck/collocations.txt')),
       banner,
     );
+  }
+
+  /// The deck of a kingdom of another language, from `assets/realm/`: one line per word with every language in it
+  /// (`pos|id|en|es|fr|de|pt|` and the sentence in each, the taught form in brackets). A field starting with `~`
+  /// only glosses: that language does not teach the word. Files 1-peasant (A1) and 2-squire (A2) both lead to the
+  /// Squire, as in Aldmere; the rest follow one title each.
+  static Future<Deck> loadRealm(String lang) async {
+    final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
+    final files = manifest.listAssets().where((a) => RegExp(r'^assets/realm/[1-7]-[^/]+$').hasMatch(a)).toList()
+      ..sort();
+    final words = <Word>[];
+    for (final f in files) {
+      final n = int.parse(f.split('/').last[0]);
+      words.addAll(parseRealm(await rootBundle.loadString(f), lang, n <= 2 ? 1 : n - 1));
+    }
+    final seen = <String>{};
+    words.retainWhere((w) => seen.add(w.id));
+    return Deck(words, const [], '');
+  }
+
+  static List<Word> parseRealm(String text, String lang, int tier) {
+    const cols = {'es': 3, 'fr': 4, 'de': 5, 'pt': 6};
+    final col = cols[lang]!;
+    String plain(String s) => s.replaceAll('[', '').replaceAll(']', '').replaceAll('~', '').trim();
+    final out = <Word>[];
+    for (final raw in text.split('\n')) {
+      final line = raw.trim();
+      if (line.isEmpty || line.startsWith('#')) continue;
+      final f = line.split('|');
+      if (f.length != 13 || f[col].startsWith('~')) continue;
+      final sent = f[col + 6];
+      final m = RegExp(r'\[([^\]]+)\]').firstMatch(sent);
+      if (m == null) continue;
+      final id = f[col].trim();
+      sentences[id] = [plain(f[7]), plain(f[8]), lang == 'es' ? '' : plain(f[9]), lang == 'fr' ? '' : plain(f[10])];
+      glosses[id] = [lang == 'es' ? '' : plain(f[3]), lang == 'fr' ? '' : plain(f[4])];
+      out.add(
+        Word(
+          id,
+          [m.group(1)!.trim()],
+          f[0],
+          plain(f[1]),
+          sent.replaceFirst(m.group(0)!, '___'),
+          tier,
+          const [],
+          plain(f[2]),
+        ),
+      );
+    }
+    return out;
   }
 
   /// `word|definition` lines

@@ -677,6 +677,38 @@ void main() {
     expect(app.engine.stat(1).solid, solid, reason: 'the words of the first banner were not forgotten');
   });
 
+  testWidgets('another kingdom: Grauwacht has its own road, the sentence in Indonesian and the letters to type', (
+    tester,
+  ) async {
+    phone(tester);
+    final app = await learner(tester, rank: 2);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await tester.tap(find.text('Negeri'));
+    await beat(tester, 700);
+    expect(find.text('Grauwacht'), findsOneWidget);
+    await tester.runAsync(() => app.chooseRealm('de'));
+    await beat(tester, 700);
+    expect(app.engine.rank, 0, reason: 'a new kingdom starts from the fields');
+    expect(app.root.integer('rank'), 2, reason: 'Aldmere keeps its title');
+    expect(find.textContaining('Peasant di Grauwacht'), findsOneWidget);
+    await shot(tester, '70-negeri-grauwacht');
+    await tester.tap(find.text('Hari ini'));
+    await beat(tester, 700);
+    await tester.tap(find.text('Mulai belajar'));
+    await beat(tester, 900);
+    await untilGap(tester);
+    expect(find.text('ä'), findsOneWidget);
+    expect(app.deck.byId[RunScreen.probeId]?.trans, isNotEmpty);
+    await shot(tester, '71-celah-grauwacht');
+    await tester.enterText(find.byKey(const ValueKey('gap-field')), RunScreen.probe.toUpperCase());
+    await tester.tap(find.text('Periksa'));
+    await beat(tester, 500);
+    expect(app.engine.seenTotal, greaterThan(0));
+    await tester.pump(const Duration(seconds: 3));
+    await beat(tester);
+  });
+
   testWidgets('every foe on its own ground, for looking at', (tester) async {
     phone(tester, w: 420, h: 760);
     await learner(tester);

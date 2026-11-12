@@ -44,6 +44,9 @@ class RunScreen extends StatefulWidget {
   @visibleForTesting
   static String probe = '';
 
+  /// for tests: the id of the word on the card
+  static String probeId = '';
+
   final RunKind kind;
   final int tier;
   final int extraFresh;
@@ -190,6 +193,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
       _pool = [..._target, ...extra]..shuffle(r);
       _placed = [];
     }
+    RunScreen.probeId = it.w?.id ?? '';
     RunScreen.probe = it.c != null
         ? it.c!.correct
         : (it.quiz == Quiz.choice
@@ -884,10 +888,34 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             ],
           ),
         ),
+        // a kingdom of another language: the whole sentence in the learner's own, and the letters to type with
+        if (w.trans.isNotEmpty) ...[
+          const SizedBox(height: 6),
+          Text(w.trans, style: T.body(16.5, pal.muted, height: 1.4)),
+        ],
+        if (typing && App.I.kingdom.letters.isNotEmpty) ...[
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [for (final c in App.I.kingdom.letters) _LetterKey(c, onTap: () => _typeLetter(c))],
+          ),
+        ],
         const SizedBox(height: 12),
         _noteLine(note),
       ],
     );
+  }
+
+  void _typeLetter(String c) {
+    final v = _input.value;
+    final sel = v.selection.isValid ? v.selection : TextSelection.collapsed(offset: v.text.length);
+    final text = v.text.replaceRange(sel.start, sel.end, c);
+    _input.value = TextEditingValue(
+      text: text,
+      selection: TextSelection.collapsed(offset: sel.start + c.length),
+    );
+    _focus.requestFocus();
   }
 
   Widget _heading(String text) {
@@ -1535,6 +1563,33 @@ class _Hp extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// a letter the keyboard may hide (ä, ñ, ç …), pressed into the gap
+class _LetterKey extends StatelessWidget {
+  final String letter;
+  final VoidCallback onTap;
+  const _LetterKey(this.letter, {required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    return Press(
+      onTap: onTap,
+      label: letter,
+      child: Container(
+        width: 48,
+        height: 48,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: pal.deep,
+          border: Border.all(color: pal.line),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: Text(letter, style: T.body(19, pal.ink)),
       ),
     );
   }

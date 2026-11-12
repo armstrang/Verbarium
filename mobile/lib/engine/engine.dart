@@ -510,14 +510,16 @@ class Engine {
     return pass;
   }
 
-  /// start again from nothing (Settings)
+  /// start again from nothing in this kingdom (Settings); the other kingdoms keep their road
   void reset() {
     _mem.clear();
     final set = store.map('set');
+    final realms = store.data['realms'];
     store.data
       ..clear()
       ..['v'] = Store.schema
       ..['set'] = set;
+    if (realms != null) store.data['realms'] = realms;
     store.flush();
   }
 }

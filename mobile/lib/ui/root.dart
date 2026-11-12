@@ -869,7 +869,7 @@ class Today extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      '${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''} · Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'}',
+                      '${App.I.realm == 'en' ? '' : '${App.I.kingdom.name} · '}${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''} · Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'}',
                       style: T.body(15, pal.ink, w: FontWeight.w500),
                     ),
                     Text(

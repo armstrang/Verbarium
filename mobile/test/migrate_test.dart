@@ -62,4 +62,21 @@ void main() {
     final again = Store(MemoryBackend((s.backend as MemoryBackend).text));
     expect(again.integer('rank'), 3);
   });
+
+  test('a kingdom keeps its own road under realms, shares the settings, and saves through the whole store', () {
+    final b = MemoryBackend();
+    final s = Store(b);
+    s.map('set')['lang'] = 'en';
+    s.set('rank', 3);
+    final de = s.realm('de');
+    expect(de.integer('rank'), 0);
+    expect(de.map('set')['lang'], 'en');
+    de.set('rank', 1);
+    de.map('mem')['der Abakus (-se)'] = [3.0, 0, 1, 0, 0, 1];
+    de.flush();
+    final again = Store(MemoryBackend(b.text));
+    expect(again.integer('rank'), 3);
+    expect(again.realm('de').integer('rank'), 1);
+    expect(again.realm('de').map('mem'), contains('der Abakus (-se)'));
+  });
 }

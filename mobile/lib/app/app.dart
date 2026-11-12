@@ -17,13 +17,15 @@ import 'native.dart';
 class App extends ChangeNotifier {
   static late App I;
 
-  final Store store;
+  /// the whole save; [store] is the part of the kingdom being played (the same object in Aldmere)
+  final Store root;
+  Store store;
   final int Function()? clock;
   late Deck deck;
   late Engine engine;
   late Game game;
 
-  App._(this.store, this.clock);
+  App._(this.root, this.clock) : store = root;
 
   /// counts every change; [Look] carries it, so whatever draws from the app's state is redrawn
   int stamp = 0;
@@ -56,15 +58,44 @@ class App extends ChangeNotifier {
       _set['lang'] = const ['id', 'en', 'es', 'fr'].contains(p) ? p : 'en';
     }
     lang.code = langCode;
-    deck = await Deck.load(banner.isEmpty ? 'toefl' : banner);
+    final k = realm;
+    if (k == 'en') {
+      store = root;
+      deck = await Deck.load(banner.isEmpty ? 'toefl' : banner);
+    } else {
+      store = root.realm(k);
+      deck = await Deck.loadRealm(k);
+    }
     engine = Engine(store, deck, clock: clock);
     game = Game(store, engine);
   }
 
-  Map<String, dynamic> get _set => store.map('set');
+  Map<String, dynamic> get _set => root.map('set');
 
   String get banner => _set['banner'] as String? ?? '';
-  bool get british => banner == 'ielts';
+  bool get british => realm == 'en' && banner == 'ielts';
+
+  /// the kingdom being played: 'en' Aldmere, or 'de', 'es', 'fr', 'pt'
+  String get realm => Kingdom.all.any((k) => k.code == _set['realm']) ? _set['realm'] as String : 'en';
+  Kingdom get kingdom => Kingdom.of(realm);
+
+  /// where another kingdom stands without loading it: the title held and the words met
+  ({int rank, int seen}) standing(String code) {
+    final m = code == 'en' ? root.data : (root.map('realms')[code] as Map<String, dynamic>? ?? const {});
+    final mem = m['mem'];
+    return (rank: ((m['rank'] as num?)?.toInt() ?? 0).clamp(0, Engine.maxRank), seen: mem is Map ? mem.length : 0);
+  }
+
+  /// go to another kingdom: its own deck, title, character and chronicle
+  Future<void> chooseRealm(String code) async {
+    if (code == realm) return;
+    _set['realm'] = code;
+    root.flush();
+    await _load();
+    engine.checkDemotion();
+    syncMusic();
+    notifyListeners();
+  }
 
   /// the language the learner learns through: 'id', 'en' (monolingual), 'es' or 'fr'
   String get langCode => switch (_set['lang']) {
@@ -95,7 +126,7 @@ class App extends ChangeNotifier {
 
   void put(String key, Object value) {
     _set[key] = value;
-    store.touch();
+    root.touch();
     if (key == 'music' || key == 'musicVol') syncMusic();
     if (key == 'lang') lang.code = langCode;
     notifyListeners();
@@ -103,14 +134,14 @@ class App extends ChangeNotifier {
 
   Future<void> chooseBanner(String b) async {
     _set['banner'] = b;
-    store.touch();
+    root.touch();
     await _load();
     notifyListeners();
   }
 
   void finishOnboarding() {
     _set['onb'] = 1;
-    store.flush();
+    root.flush();
     notifyListeners();
   }
 

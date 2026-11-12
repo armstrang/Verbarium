@@ -16,6 +16,8 @@
 ///   ease, ret   the learner's own memory growth factor and the answers it is tuned from
 ///   er     {word id: last kind of slip}  ·  placed  1 after placement
 ///   game   everything of the game layer (engine/game.dart): xp, gear, quests, feats, figures
+///   realms {de, es, fr, pt: one kingdom of another language each, with the same keys again (mem, log, rank, ev,
+///          game, …) but without set: the settings are shared}. English (Aldmere) keeps the top-level keys.
 library;
 
 import 'dart:async';
@@ -69,7 +71,21 @@ class Store {
   Map<String, dynamic> data = {};
   Timer? _timer;
 
-  Store(this.backend) {
+  /// set for the store of one kingdom: its keys live inside the parent's `realms`, and it saves through the parent
+  final Store? _parent;
+
+  Store._child(Store parent, this.data) : backend = parent.backend, _parent = parent;
+
+  /// the store of the kingdom of [code] ('de', 'es', 'fr', 'pt'), kept under `realms`
+  Store realm(String code) {
+    final all = map('realms');
+    final m = all[code];
+    final d = m is Map<String, dynamic> ? m : <String, dynamic>{'v': schema};
+    all[code] = d;
+    return Store._child(this, d);
+  }
+
+  Store(this.backend) : _parent = null {
     final text = backend.load();
     if (text != null) {
       try {
@@ -138,6 +154,8 @@ class Store {
   };
 
   Map<String, dynamic> map(String key) {
+    // every kingdom shares the settings
+    if (key == 'set' && _parent != null) return _parent.map('set');
     final v = data[key];
     if (v is Map<String, dynamic>) return v;
     final m = <String, dynamic>{};
@@ -165,11 +183,13 @@ class Store {
 
   /// write soon (changes of one moment go out together)
   void touch() {
+    if (_parent != null) return _parent.touch();
     _timer?.cancel();
     _timer = Timer(const Duration(milliseconds: 400), flush);
   }
 
   void flush() {
+    if (_parent != null) return _parent.flush();
     _timer?.cancel();
     _timer = null;
     backend.save(json.encode(data));
