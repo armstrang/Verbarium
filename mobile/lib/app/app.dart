@@ -55,9 +55,10 @@ class App extends ChangeNotifier {
   Future<void> _load() async {
     if (!onboarded && _set['lang'] == null) {
       final p = phoneLanguage();
-      _set['lang'] = const ['id', 'en', 'es', 'fr'].contains(p) ? p : 'en';
+      _set['lang'] = const ['id', 'en', 'es', 'fr', 'de', 'pt'].contains(p) ? p : 'en';
     }
     lang.code = langCode;
+    lang.via = via;
     final k = realm;
     if (k == 'en') {
       store = root;
@@ -97,13 +98,28 @@ class App extends ChangeNotifier {
     notifyListeners();
   }
 
-  /// the language the learner learns through: 'id', 'en' (monolingual), 'es' or 'fr'
+  /// the language the learner learns through, the same in every kingdom: 'id', 'en' (monolingual in Aldmere), 'es',
+  /// 'fr', 'de' or 'pt'
   String get langCode => switch (_set['lang']) {
     'en' => 'en',
     'es' => 'es',
     'fr' => 'fr',
+    'de' => 'de',
+    'pt' => 'pt',
     _ => 'id',
   };
+
+  /// a kingdom whose own language is the learning language cannot explain itself: its meanings are shown in another
+  /// language, chosen once per kingdom (`set.via`), English until then
+  bool get clash => realm != 'en' && realm == langCode;
+  bool get viaChosen => (_set['via'] as Map?)?[realm] != null;
+  String get via => clash ? ((_set['via'] as Map?)?[realm] as String? ?? 'en') : '';
+  void chooseVia(String c) {
+    final m = Map<String, dynamic>.from(_set['via'] as Map? ?? const {});
+    m[realm] = c;
+    put('via', m);
+  }
+
   bool get english => langCode == 'en';
   bool get onboarded => _set['onb'] == 1;
   int get perDay => engine.perDay;
@@ -128,7 +144,10 @@ class App extends ChangeNotifier {
     _set[key] = value;
     root.touch();
     if (key == 'music' || key == 'musicVol') syncMusic();
-    if (key == 'lang') lang.code = langCode;
+    if (key == 'lang' || key == 'via') {
+      lang.code = langCode;
+      lang.via = via;
+    }
     notifyListeners();
   }
 

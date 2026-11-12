@@ -13,8 +13,8 @@ import '../app/lang.dart';
 class Lore {
   final String _quote, _quoteEn, _story, _storyEn, _nature, _natureEn, _past, _pastEn, _drive, _driveEn;
 
-  /// Spanish and French, each in order: quote, story, nature, past, drive
-  final List<String> _es, _fr;
+  /// Spanish, French, German and Portuguese, each in order: quote, story, nature, past, drive
+  final List<String> _es, _fr, _de, _pt;
   const Lore(
     this._quote,
     this._quoteEn,
@@ -28,9 +28,11 @@ class Lore {
     this._driveEn,
     this._es,
     this._fr,
+    this._de,
+    this._pt,
   );
 
-  String _t(String id, String en, int i) => tr(id, en, _es[i], _fr[i]);
+  String _t(String id, String en, int i) => tr(id, en, _es[i], _fr[i], _de[i], _pt[i]);
   String get quote => _t(_quote, _quoteEn, 0);
   String get story => _t(_story, _storyEn, 1);
   String get nature => _t(_nature, _natureEn, 2);
@@ -51,6 +53,8 @@ class Lore {
     _driveEn,
     ..._es,
     ..._fr,
+    ..._de,
+    ..._pt,
   ];
 }
 
@@ -63,6 +67,8 @@ class LoreBook {
         "spoken, and the Great Chronicle records every word you hold.",
     'En Verbarium, todo perdura mientras se recuerde su nombre. La Niebla del Olvido borra lo que ya nadie nombra, y la Gran Crónica registra cada palabra que dominas.',
     'À Verbarium, tout dure tant que son nom est retenu. Le Brouillard de l’Oubli efface ce que plus personne ne nomme, et la Grande Chronique consigne chaque mot que tu maîtrises.',
+    'In Verbarium besteht alles nur so lange, wie man sich an seinen Namen erinnert. Der Nebel des Vergessens lässt verblassen, was nicht mehr gesprochen wird, und die Große Chronik verzeichnet jedes Wort, das du hältst.',
+    'Em Verbarium, tudo dura enquanto seu nome for lembrado. A Névoa do Esquecimento apaga o que já não se diz, e a Grande Crônica registra cada palavra que você guarda.',
   );
 
   /// the seven titles, Peasant to King, each with its realm
@@ -94,6 +100,20 @@ class LoreBook {
         "Un enfant des champs dont les parents ne savent pas lire. Un jour, il trouve une page déchirée de la Chronique et comprend que le village s’efface.",
         "Tenir bon, et empêcher les petites choses qu’il aime de disparaître.",
       ],
+      [
+        "Der Himmel ist so weit, und ich bin so klein.",
+        "Ein Dorf am Waldrand, wo die Namen langsam vergessen werden. Hier schreibt niemand etwas auf, darum liegt der Nebel am dichtesten. Das Leben ist friedlich, doch eine einzige Missernte oder eine Räuberbande könnte alles auslöschen.",
+        "Schlicht, fleißig, geduldig und bescheiden. Fürchtet die Starken, aber ohne Bitterkeit.",
+        "Ein Kind vom Feld, dessen Eltern nicht lesen können. Eines Tages findet es eine zerrissene Seite der Chronik und sieht, dass das Dorf verblasst.",
+        "Durchhalten und die kleinen Dinge, die es liebt, vor dem Verschwinden bewahren.",
+      ],
+      [
+        "O céu é tão vasto, e eu sou tão pequeno.",
+        "Uma aldeia na beira da floresta, onde os nomes começam a ser esquecidos. Aqui ninguém escreve nada, por isso a Névoa é mais espessa. A vida é tranquila, mas uma colheita perdida ou um bando de ladrões bastaria para apagar tudo.",
+        "Simples, trabalhador, paciente e humilde. Teme os fortes, mas sem amargura.",
+        "Uma criança do campo cujos pais não sabem ler. Um dia encontra uma página rasgada da Crônica e vê que a aldeia está sumindo.",
+        "Resistir, e impedir que as pequenas coisas que ama desapareçam.",
+      ],
     ),
     Lore(
       "Aku melayani, supaya suatu hari layak dilayani.",
@@ -121,6 +141,20 @@ class LoreBook {
         "Ardent, curieux et prompt à apprendre, mais gauche et souvent hésitant.",
         "Il a quitté le village pour servir un chevalier : porter l’écu, soigner le cheval, apprendre à lire les enseignes de la ville.",
         "Prouver qu’un enfant des champs en est capable, et devenir en secret comme le chevalier qu’il sert.",
+      ],
+      [
+        "Ich diene, damit ich eines Tages verdiene, dass man mir dient.",
+        "Eine belebte Stadt: Märkte, Steinstraßen, Turmglocken. Die Welt ist plötzlich viel größer. Hier siehst du zum ersten Mal Mächtige aus der Nähe und fragst dich zum ersten Mal, ob du zu ihnen gehörst.",
+        "Eifrig, neugierig und schnell im Lernen, aber unbeholfen und oft unsicher.",
+        "Hat das Dorf verlassen, um einem Ritter zu dienen: den Schild tragen, das Pferd versorgen, die Schilder der Stadt lesen lernen.",
+        "Beweisen, dass auch ein Kind vom Feld es schaffen kann, und heimlich so werden wie der Ritter, dem es dient.",
+      ],
+      [
+        "Eu sirvo, para um dia merecer ser servido.",
+        "Uma cidade movimentada: mercados, ruas de pedra, sinos na torre. De repente o mundo fica muito maior. Aqui você vê os poderosos de perto pela primeira vez, e pela primeira vez se pergunta se tem lugar entre eles.",
+        "Animado, curioso e rápido para aprender, mas desajeitado e muitas vezes inseguro.",
+        "Deixou a aldeia para servir a um cavaleiro: carregar o escudo, cuidar do cavalo, aprender a ler as placas da cidade.",
+        "Provar que uma criança do campo também consegue, e em segredo ficar como o cavaleiro a quem serve.",
       ],
     ),
     Lore(
@@ -150,6 +184,20 @@ class LoreBook {
         "Il a prêté serment devant un roi lointain. Depuis, aucun pas n’a été seulement le sien.",
         "Protéger les faibles, l’enfant qu’il a été, et tenir son serment, si lourd soit-il.",
       ],
+      [
+        "Mein Schwert gehört nicht mir. Es gehört meinem Eid.",
+        "Eine kalte Steinburg, Drill im Morgengrauen, Banner an den Mauern. Man kennt dich als Beschützer, doch du weißt, dass du nur das Werkzeug eines Throns bist, den du nie aus der Nähe gesehen hast. Der Schatten des Königs liegt immer über dir.",
+        "Tapfer, diszipliniert und treu. Unter der Rüstung liegt Müdigkeit und eine Frage: Für wen kämpfe ich wirklich?",
+        "Hat vor einem fernen König einen Eid geschworen. Seitdem gehört kein Schritt mehr nur ihm selbst.",
+        "Die Schwachen schützen, das Kind, das er einmal war, und den Eid halten, wie schwer er auch wiegt.",
+      ],
+      [
+        "Minha espada não é minha. Pertence ao meu juramento.",
+        "Um castelo frio de pedra, treinos ao amanhecer, estandartes nas muralhas. Todos conhecem você como protetor, mas você sabe que é só a ferramenta de um trono que nunca viu de perto. A sombra do rei está sempre acima de você.",
+        "Corajoso, disciplinado e leal. Sob a armadura há cansaço e uma pergunta: por quem eu luto de verdade?",
+        "Fez um juramento diante de um rei distante. Desde então, nenhum passo foi só seu.",
+        "Proteger os fracos, a criança que um dia foi, e cumprir o juramento por mais pesado que seja.",
+      ],
     ),
     Lore(
       "Dulu aku menunggu perintah. Kini setiap keputusanku menimpa orang lain.",
@@ -178,6 +226,20 @@ class LoreBook {
         "Il se souvient de son village natal, gouverné désormais par d’autres. Certains de ces souvenirs se perdent déjà dans le Brouillard.",
         "Gouverner avec justice, et ne jamais oublier d’où il vient.",
       ],
+      [
+        "Einst wartete ich auf Befehle. Jetzt fällt jede meiner Entscheidungen auf andere.",
+        "Ein Ratssaal voller Kerzen, Karten auf dem Tisch, Flüstern in den Gängen. Warm vor Macht, kalt vor Misstrauen. Zum ersten Mal hast du eigenes Land und eigene Leute, und zum ersten Mal fühlst du dich allein.",
+        "Klug, berechnend, standhaft und zunehmend einsam.",
+        "Erinnert sich an das Heimatdorf, das jetzt andere regieren. Manche dieser Erinnerungen verblassen schon im Nebel.",
+        "Gerecht herrschen und nie vergessen, woher er kommt.",
+      ],
+      [
+        "Antes eu esperava ordens. Agora cada escolha minha recai sobre outra pessoa.",
+        "Um salão de conselho cheio de velas, mapas na mesa, sussurros nos corredores. Quente de poder, frio de desconfiança. Pela primeira vez você tem terra e gente suas, e pela primeira vez se sente sozinho.",
+        "Esperto, calculista, firme e cada vez mais solitário.",
+        "Lembra da aldeia natal, agora governada por outros. Algumas dessas lembranças já se apagam na Névoa.",
+        "Governar com justiça e nunca esquecer de onde veio.",
+      ],
     ),
     Lore(
       "Di perbatasan, setiap nama yang lupa disebut adalah tanah yang hilang.",
@@ -203,6 +265,20 @@ class LoreBook {
         "Vigilant, têtu et sans sommeil. Doux seulement avec ceux qu’il protège.",
         "A vu un village de la frontière disparaître en une seule saison parce que plus personne ne disait son nom.",
         "Retenir le Brouillard à la frontière, et ne jamais devenir comme le Count maudit.",
+      ],
+      [
+        "An der Grenze ist jeder ungesagte Name verlorenes Land.",
+        "Eine Grenzfeste am Rand des Nebels des Vergessens, wo der Nebel am dichtesten an die Mauern drängt. Du bist nicht mehr Herr eines behaglichen Saals; du hütest eine Grenze und musst jede Nacht den Namen jedes Dorfes sagen. Jenseits des Nebels steht der Schatten eines Grafen, der einst aufhörte, sich zu erinnern.",
+        "Wachsam, stur und schlaflos. Sanft nur zu denen, die er schützt.",
+        "Sah ein Grenzdorf in einer einzigen Jahreszeit verschwinden, weil niemand mehr seinen Namen sagte.",
+        "Den Nebel an der Grenze halten und nie wie der verfluchte Graf werden.",
+      ],
+      [
+        "Na fronteira, cada nome não dito é terra perdida.",
+        "Um forte de fronteira na beira da Névoa do Esquecimento, onde a névoa aperta mais contra as muralhas. Você já não é senhor de um salão confortável; guarda uma fronteira e precisa dizer o nome de cada aldeia todas as noites. Além da névoa está a sombra de um Conde que um dia parou de lembrar.",
+        "Vigilante, teimoso e insone. Gentil só com quem protege.",
+        "Viu uma aldeia da fronteira sumir numa única estação porque ninguém dizia mais o seu nome.",
+        "Segurar a Névoa na fronteira e nunca ficar como o Conde amaldiçoado.",
       ],
     ),
     Lore(
@@ -232,6 +308,20 @@ class LoreBook {
         "Il ne combat plus le Brouillard avec colère, mais avec la fidélité de redire les noms, encore et encore.",
         "Garder la mémoire vivante, et se demander s’il est digne de porter un royaume.",
       ],
+      [
+        "Ich habe mir tausend Namen gemerkt. Wie viele Gesichter habe ich vergessen?",
+        "Eine Sternennacht in einem hohen Turm. Die Zeit scheint langsamer zu werden. Die Menschen deiner frühen Tage sind alt geworden oder fort, und du stehst einen Schritt vor dem Thron. Hier lernst du, dass Erinnern eine Art zu lieben ist.",
+        "Weise, ruhig und nachdenklich, mit einem stillen Gefühl des Verlusts.",
+        "Kämpft nicht mehr mit Zorn gegen den Nebel, sondern mit der Treue, die Namen wieder und wieder zu sagen.",
+        "Die Erinnerung lebendig halten und sich fragen, ob er würdig ist, ein Königreich zu tragen.",
+      ],
+      [
+        "Lembrei mil nomes. Quantos rostos esqueci?",
+        "Uma noite estrelada numa torre alta. O tempo parece andar devagar. As pessoas dos seus primeiros dias envelheceram ou partiram, e você está a um passo do trono. Aqui você aprende que lembrar é um jeito de amar.",
+        "Sábio, calmo e reflexivo, com uma sensação quieta de perda.",
+        "Já não luta contra a Névoa com raiva, mas com a fidelidade de dizer os nomes de novo e de novo.",
+        "Manter a memória viva e perguntar se é digno de carregar um reino.",
+      ],
     ),
     Lore(
       "Mahkota ini berat bukan karena emasnya, tapi karena semua nama yang kini bergantung padaku.",
@@ -259,6 +349,20 @@ class LoreBook {
         "Majestueux, calme et plein de compassion. Seul au sommet, mais pas froid.",
         "Toujours l’enfant des champs qui craignait jadis les brigands. Il n’a jamais oublié d’où il venait.",
         "Laisser quelque chose derrière lui : un royaume dont on se souvient, et un chemin que le prochain enfant des champs pourra gravir.",
+      ],
+      [
+        "Diese Krone ist nicht wegen ihres Goldes schwer, sondern wegen all der Namen, die jetzt von mir abhängen.",
+        "Ein großer Thronsaal im Licht hoher Fenster. Die Große Chronik wird jetzt in deinem Namen geschrieben, und das ganze Königreich besteht, weil du die Namen weiter sagst. Am Ende des Weges kehrst du in dein Heimatdorf zurück. Es ist noch da.",
+        "Majestätisch, ruhig und voller Mitgefühl. Allein an der Spitze, aber nicht kalt.",
+        "Noch immer das Kind vom Feld, das einst Räuber fürchtete. Es hat nie vergessen, woher es kommt.",
+        "Etwas hinterlassen: ein Königreich, an das man sich erinnert, und einen Weg, den das nächste Kind vom Feld hinaufsteigen kann.",
+      ],
+      [
+        "Esta coroa não pesa pelo ouro, mas por todos os nomes que agora dependem de mim.",
+        "Um grande salão do trono iluminado por janelas altas. A Grande Crônica agora é escrita em seu nome, e o reino inteiro dura porque você continua dizendo os nomes. No fim da estrada você volta à aldeia natal. Ela ainda está lá.",
+        "Majestoso, calmo e cheio de compaixão. Sozinho no topo, mas não frio.",
+        "Ainda a criança do campo que um dia temia ladrões. Nunca esqueceu de onde veio.",
+        "Deixar algo: um reino que é lembrado, e uma estrada que a próxima criança do campo possa subir.",
       ],
     ),
   ];
@@ -296,6 +400,20 @@ class LoreBook {
         "Autrefois, il maniait la houe aux champs avec le même rythme chaque jour. Aujourd’hui, la houe est devenue épée.",
         "Que chaque coup porte juste, car une seule erreur pourrait blesser quelqu’un qu’il protège.",
       ],
+      [
+        "Ein Hieb, ein Treffer.",
+        "Ein junger Soldat, der lernt, dass Genauigkeit mehr zählt als Kraft. Er schlägt Hunderte Male im Burghof zu, bis jeder Hieb auf dieselbe Linie fällt. Die Veteranen werden aufmerksam, nicht weil er stark ist, sondern weil er nie danebenschlägt.",
+        "Ehrlich, gerade und abgeneigt, Kraft zu verschwenden.",
+        "Schwang einst jeden Tag im selben Takt die Hacke auf dem Feld. Jetzt ist die Hacke ein Schwert geworden.",
+        "Will, dass jeder Hieb sitzt, denn ein Fehler könnte jemanden verletzen, den er schützt.",
+      ],
+      [
+        "Um golpe, uma marca.",
+        "Um soldado jovem aprendendo que precisão vale mais que força. Golpeia centenas de vezes no pátio do castelo até cada corte cair na mesma linha. Os veteranos começam a reparar, não porque é forte, mas porque nunca erra.",
+        "Honesto, direto e avesso a desperdiçar esforço.",
+        "Antes manejava a enxada no campo com o mesmo ritmo todo dia. Agora a enxada virou espada.",
+        "Quer que cada golpe acerte, porque um erro pode ferir alguém que protege.",
+      ],
     ),
     'duelist': Lore(
       "Lawan yang setara adalah guru terbaik.",
@@ -321,6 +439,20 @@ class LoreBook {
         "Vif, sûr de lui, un peu fier, mais respectueux de ses adversaires.",
         "Il a appris d’une première défaite face à un vieux chevalier devenu son maître.",
         "Chercher des adversaires qui le rendent meilleur.",
+      ],
+      [
+        "Ein ebenbürtiger Gegner ist der beste Lehrer.",
+        "Ein Schwertkämpfer, der auf dem Marktplatz Zweikämpfe sucht. Jede Niederlage wird aufgeschrieben, der Name jedes Gegners behalten. In der Stadt sagt man bald, wer gegen ihn kämpft, geht als besserer Kämpfer nach Hause.",
+        "Schnell, selbstsicher, ein wenig stolz, aber respektvoll gegenüber Gegnern.",
+        "Lernte aus einer ersten Niederlage gegen einen alten Ritter, der sein Lehrer wurde.",
+        "Sucht Gegner, die ihn besser machen.",
+      ],
+      [
+        "Um adversário à altura é o melhor professor.",
+        "Um espadachim que busca duelos na praça da cidade. Cada derrota é anotada, o nome de cada adversário lembrado. Na cidade começam a dizer que quem luta com ele volta para casa lutando melhor.",
+        "Rápido, confiante, um pouco orgulhoso, mas respeitoso com os adversários.",
+        "Aprendeu com uma primeira derrota diante de um velho cavaleiro que virou seu mestre.",
+        "Busca adversários que o façam melhor.",
       ],
     ),
     'crusader': Lore(
@@ -348,6 +480,20 @@ class LoreBook {
         "Il a vu son village pillé et a juré de ne plus jamais rester sans rien faire.",
         "Protéger les faibles, quoi qu’il en coûte.",
       ],
+      [
+        "Ich kämpfe nicht, um zu siegen, sondern für die, die nicht kämpfen können.",
+        "Ein gepanzerter Kämpfer, der den Glauben so fest hält wie das Schwert. Wird ein Dorf angegriffen, geht er vorne; auf dem Heimweg hinten, damit niemand zurückbleibt. Seine Rüstung ist voller Dellen, die er nie ausbessert, denn jede Delle ist ein gerettetes Leben.",
+        "Geduldig, beständig und stur im Guten.",
+        "Sah einst, wie sein Dorf überfallen wurde, und schwor, nie wieder tatenlos zuzusehen.",
+        "Die Schwachen schützen, um jeden Preis.",
+      ],
+      [
+        "Não luto para vencer, mas por quem não pode lutar.",
+        "Um guerreiro de armadura que segura a fé tão firme quanto a espada. Vai na frente quando aldeias são atacadas, e atrás no caminho de volta, para ninguém ficar para trás. A armadura está cheia de amassados que nunca conserta, porque cada amassado é uma vida salva.",
+        "Paciente, constante e teimoso em fazer o bem.",
+        "Viu um dia sua aldeia ser saqueada e jurou nunca mais ficar parado.",
+        "Proteger os fracos, custe o que custar.",
+      ],
     ),
     'blademaster': Lore(
       "Seribu jam latihan untuk satu detik yang sempurna.",
@@ -373,6 +519,20 @@ class LoreBook {
         "Calme, silencieux, presque sans ego.",
         "Il s’est entraîné chaque aube pendant des années, sans personne pour le voir.",
         "Chercher la perfection, pas les louanges.",
+      ],
+      [
+        "Tausend Stunden Übung für eine vollkommene Sekunde.",
+        "Ein Schwertmeister, der seinem Weg treu blieb, bis sich die Klinge wie ein Teil des Körpers anfühlte. Seine Bewegungen sind so ruhig, dass Gegner oft nicht merken, dass der Kampf vorbei ist. Er spricht selten, und wenn, dann lehrt er nur eines: Wiederhole es, bis es stimmt.",
+        "Ruhig, still, fast ohne Ego.",
+        "Übte jahrelang jeden Morgen, ohne dass jemand zusah.",
+        "Sucht Vollkommenheit, nicht Lob.",
+      ],
+      [
+        "Mil horas de treino por um segundo perfeito.",
+        "Um mestre da espada que seguiu no caminho até a lâmina parecer parte do corpo. Seus movimentos são tão calmos que os adversários muitas vezes nem notam que a luta acabou. Fala pouco, e quando fala ensina uma só coisa: repita até ficar certo.",
+        "Calmo, quieto, quase sem ego.",
+        "Treinou todo amanhecer durante anos, sem ninguém olhando.",
+        "Busca a perfeição, não o elogio.",
       ],
     ),
     'paladin': Lore(
@@ -400,6 +560,20 @@ class LoreBook {
         "Un Crusader resté fidèle à son serment si longtemps que celui-ci est devenu lumière.",
         "Être un protecteur qui donne de l’espoir.",
       ],
+      [
+        "Sei ein Licht, und sei es nur für einen Menschen.",
+        "Ein heiliger Ritter, dessen Rüstung wie die Morgendämmerung leuchtet. Wo er ankommt, wagen sich die Menschen wieder aus ihren Häusern und sagen Namen, die sie fast vergessen hatten. Er weiß, dass sein Licht nicht den ganzen Nebel vertreiben kann, also erhellt er einen Weg nach dem anderen.",
+        "Warm, standhaft und opferbereit.",
+        "Ein Crusader, der seinen Eid so lange hielt, bis er zu Licht wurde.",
+        "Will ein Beschützer sein, der Hoffnung schenkt.",
+      ],
+      [
+        "Seja uma luz, nem que seja para uma só pessoa.",
+        "Um cavaleiro sagrado cuja armadura brilha como a aurora. Onde ele chega, as pessoas voltam a sair de casa e a dizer nomes que quase tinham esquecido. Sabe que sua luz não afasta a Névoa inteira, então ilumina uma estrada de cada vez.",
+        "Caloroso, firme e disposto ao sacrifício.",
+        "Um Crusader que manteve o juramento por tanto tempo que ele virou luz.",
+        "Quer ser um protetor que dá esperança.",
+      ],
     ),
     'spellblade': Lore(
       "Pedang dan kata adalah satu tangan.",
@@ -425,6 +599,20 @@ class LoreBook {
         "Équilibré, curieux, et peu enclin à choisir une seule voie.",
         "Il a appris l’épée d’un chevalier et les mots d’un scribe la même saison.",
         "Prouver que le corps et l’esprit peuvent être aussi forts l’un que l’autre.",
+      ],
+      [
+        "Schwert und Wort sind eine Hand.",
+        "Ein Kämpfer, der die Magie der Wörter in die Klinge lenkt. Jedes Wort, das er beim Schlag spricht, lässt das Schwert kurz aufleuchten. Ritter finden, er liest zu viel, Magier finden, er kämpft zu viel, und heimlich genießt er beides.",
+        "Ausgeglichen, neugierig und nicht bereit, nur einen Weg zu wählen.",
+        "Lernte im selben Jahr das Schwert von einem Ritter und die Wörter von einem Schreiber.",
+        "Will beweisen, dass Körper und Geist gleich stark sein können.",
+      ],
+      [
+        "Espada e palavra são uma só mão.",
+        "Um guerreiro que canaliza a magia das palavras para a lâmina. Cada palavra dita no golpe faz a espada brilhar por um instante. Os cavaleiros acham que ele lê demais, os magos acham que luta demais, e em segredo ele gosta das duas coisas.",
+        "Equilibrado, curioso e sem vontade de escolher um só caminho.",
+        "Aprendeu a espada com um cavaleiro e as palavras com um escriba na mesma estação.",
+        "Quer provar que corpo e mente podem ser igualmente fortes.",
       ],
     ),
     'champion': Lore(
@@ -452,6 +640,20 @@ class LoreBook {
         "Il a remporté le grand tournoi du royaume et n’a plus jamais pu être quelqu’un d’ordinaire.",
         "Ne pas décevoir ceux qui croient en lui.",
       ],
+      [
+        "Sie jubeln nicht mir zu, sondern der Hoffnung, die ich trage.",
+        "Ein Kämpfer, der in jedem Reich gefeiert wird. Kinder ahmen nach, wie er das Schwert hält, und Dichter schreiben Lieder über ihn. Doch nachts, allein, übt er noch immer wie ein junger Soldat, der Angst hat zu versagen.",
+        "Kühn, mitreißend und beschwert von den Hoffnungen anderer.",
+        "Gewann das große Turnier des Königreichs und konnte danach nie wieder gewöhnlich sein.",
+        "Die nicht enttäuschen, die an ihn glauben.",
+      ],
+      [
+        "Não aplaudem a mim, mas à esperança que carrego.",
+        "Um guerreiro aclamado em todos os reinos. As crianças imitam o jeito como segura a espada, e os poetas escrevem canções sobre ele. Mas à noite, sozinho, ainda treina como um soldado jovem com medo de falhar.",
+        "Ousado, inspirador e carregado das esperanças dos outros.",
+        "Venceu o grande torneio do reino e nunca mais pôde ser comum.",
+        "Não decepcionar quem acredita nele.",
+      ],
     ),
     'inquisitor': Lore(
       "Dusta adalah kabut. Aku membawa angin.",
@@ -478,6 +680,20 @@ class LoreBook {
         "Il a été trompé un jour par la personne en qui il avait le plus confiance.",
         "Ne laisser aucun mensonge se glisser dans la Chronique.",
       ],
+      [
+        "Eine Lüge ist Nebel. Ich bringe den Wind.",
+        "Ein kühler Wahrheitssucher, den man nicht belügen kann. Er liest jede Seite der Chronik neu und sucht nach einem Wort, das mit einer Lüge geschrieben wurde. Viele fürchten ihn, doch niemand kann ihn ungerecht nennen.",
+        "Scharf, misstrauisch und gerecht bis zur Härte.",
+        "Wurde einst von dem Menschen getäuscht, dem er am meisten vertraute.",
+        "Keine Lüge in die Chronik schlüpfen lassen.",
+      ],
+      [
+        "Uma mentira é névoa. Eu trago o vento.",
+        "Um buscador frio da verdade, impossível de enganar. Relê cada página da Crônica procurando uma palavra escrita com mentira. Muitos o temem, mas ninguém pode chamá-lo de injusto.",
+        "Afiado, desconfiado e justo a ponto de parecer duro.",
+        "Foi enganado um dia pela pessoa em quem mais confiava.",
+        "Não deixar nenhuma mentira entrar na Crônica.",
+      ],
     ),
     'sovereign': Lore(
       "Aku memimpin dengan teladan, bukan perintah.",
@@ -503,6 +719,20 @@ class LoreBook {
         "Majestueux, calme et inébranlable.",
         "Il a fait chaque pas des champs au trône sans prendre de raccourci.",
         "Être la mesure du juste pour tout le royaume.",
+      ],
+      [
+        "Ich führe durch Vorbild, nicht durch Befehl.",
+        "Der Genaueste auf dem ganzen Weg. Das Schwert wird jetzt selten gezogen, denn die Worte genügen. Ritter stehen gerader, wenn er vorbeigeht, nicht aus Furcht, sondern weil sie es wert sein wollen, gesehen zu werden.",
+        "Majestätisch, ruhig und unerschütterlich.",
+        "Ging jeden Schritt vom Feld bis zum Thron ohne Abkürzung.",
+        "Das Maß dessen sein, was im ganzen Reich richtig ist.",
+      ],
+      [
+        "Lidero pelo exemplo, não pela ordem.",
+        "O mais exato o caminho todo. A espada agora raramente sai da bainha, porque as palavras bastam. Os cavaleiros ficam mais retos quando ele passa, não por medo, mas porque querem ser dignos de serem vistos.",
+        "Majestoso, calmo e inabalável.",
+        "Percorreu cada passo do campo ao trono sem atalho.",
+        "Ser a medida do que é certo para todo o reino.",
       ],
     ),
 
@@ -532,6 +762,20 @@ class LoreBook {
         "Il a grandi en courant dans la forêt et en connaît chaque sentier.",
         "Voir le monde avant tout le monde.",
       ],
+      [
+        "Wer zuerst sieht, überlebt zuerst.",
+        "Ein flinker Späher, schneller als der Zweifel. Er erreicht das nächste Dorf immer vor der schlechten Nachricht. Die Soldaten lernen, seinen Schritten zu trauen: Wenn er rennt, rennen alle.",
+        "Wendig, wachsam, ungeduldig.",
+        "Wuchs im Wald rennend auf und kennt jeden Pfad.",
+        "Will die Welt vor allen anderen sehen.",
+      ],
+      [
+        "Quem vê primeiro sobrevive primeiro.",
+        "Um batedor ágil que se move mais rápido que a dúvida. Sempre chega à próxima aldeia antes da má notícia. Os soldados aprendem a confiar nos seus passos: quando ele corre, todos correm.",
+        "Ágil, atento e impaciente.",
+        "Cresceu correndo na floresta e conhece cada trilha.",
+        "Quer ver o mundo antes de todos.",
+      ],
     ),
     'ranger': Lore(
       "Hutan tidak pernah berbohong.",
@@ -557,6 +801,20 @@ class LoreBook {
         "Calme, fidèle à la nature et silencieux.",
         "Il vit parmi les arbres et a appris à viser auprès des vieux chasseurs.",
         "Protéger la forêt du Brouillard et des avides.",
+      ],
+      [
+        "Der Wald lügt nie.",
+        "Ein Hüter der Wälder, der selten danebenschießt. Er kennt jeden Baum am Rauschen seiner Blätter und jede Spur daran, wie tief der Boden eingedrückt ist. In seinen Wald wagt sich der Nebel nie zu tief.",
+        "Ruhig, der Natur treu und still.",
+        "Lebt unter den Bäumen und lernte das Zielen von alten Jägern.",
+        "Den Wald vor dem Nebel und vor den Gierigen schützen.",
+      ],
+      [
+        "A floresta nunca mente.",
+        "Um guardião dos bosques que raramente erra. Conhece cada árvore pelo som das folhas e cada rastro pela fundura da marca no chão. Na floresta dele, a Névoa nunca ousa entrar fundo demais.",
+        "Calmo, fiel à natureza e quieto.",
+        "Vive entre as árvores e aprendeu a mirar com velhos caçadores.",
+        "Proteger a floresta da Névoa e dos gananciosos.",
       ],
     ),
     'rogue': Lore(
@@ -584,6 +842,20 @@ class LoreBook {
         "Il a grandi dans les ruelles de la ville en apprenant à survivre seul.",
         "Survivre, et protéger en silence les enfants des rues.",
       ],
+      [
+        "Vertrauen ist teuer. Ich kann es mir noch nicht leisten.",
+        "Ein Schleicher, der auf Gedächtnis und langen Atem setzt. Er kennt jede Gasse, jedes unverschlossene Fenster, das Gesicht jeder Nachtwache. Man hält ihn für eigennützig, doch die Hälfte dessen, was er nimmt, landet in den Händen der Straßenkinder.",
+        "Gerissen, zynisch, mit verborgenem Herzen.",
+        "Wuchs in den Gassen der Stadt auf und lernte, allein zu überleben.",
+        "Überleben und still die Straßenkinder schützen.",
+      ],
+      [
+        "Confiança é cara. Ainda não posso pagar.",
+        "Um furtivo que se apoia na memória e no fôlego longo. Conhece cada beco, cada janela sem tranca, o rosto de cada guarda noturno. Acham que só pensa em si, mas metade do que pega acaba nas mãos das crianças de rua.",
+        "Astuto, cínico e de coração escondido.",
+        "Cresceu nos becos da cidade, aprendendo a sobreviver sozinho.",
+        "Sobreviver, e em silêncio proteger as crianças de rua.",
+      ],
     ),
     'marksman': Lore(
       "Satu tembakan, satu kepastian.",
@@ -609,6 +881,20 @@ class LoreBook {
         "Calme, précis, il cligne à peine des yeux.",
         "Un Ranger resté sur la voie jusqu’à ce que son arc ne manque plus jamais.",
         "Ne gaspiller aucune flèche.",
+      ],
+      [
+        "Ein Schuss, eine Gewissheit.",
+        "Ein Scharfschütze, der geduldig auf den richtigen Moment wartet. Er kann stundenlang reglos auf einem Turm ausharren. Wenn der Pfeil endlich fliegt, scheint das ganze Feld den Atem anzuhalten.",
+        "Ruhig, präzise, kaum blinzelnd.",
+        "Ein Ranger, der seinem Weg treu blieb, bis der Bogen nie mehr fehlte.",
+        "Keinen einzigen Pfeil verschwenden.",
+      ],
+      [
+        "Um tiro, uma certeza.",
+        "Um atirador que espera com paciência o momento certo. Fica horas numa torre sem se mexer. Quando a flecha enfim voa, o campo inteiro parece prender a respiração.",
+        "Calmo, preciso, quase sem piscar.",
+        "Um Ranger que seguiu no caminho até o arco nunca mais errar.",
+        "Não desperdiçar uma única flecha.",
       ],
     ),
     'nightblade': Lore(
@@ -636,6 +922,20 @@ class LoreBook {
         "Un Rogue qui a choisi de protéger plutôt que de voler.",
         "Protéger les gens d’une obscurité qu’ils ne remarquent jamais.",
       ],
+      [
+        "Ich schütze von Orten aus, die du nicht siehst.",
+        "Ein Schatten, der sich nachts bewegt. Er hält eine Gefahr auf, bevor jemand von ihr weiß, und verschwindet, bevor jemand Danke sagen kann. Seine einzige Spur ist ein ruhiger Morgen.",
+        "Schweigsam, treu und einzelgängerisch.",
+        "Ein Rogue, der lieber hütet als stiehlt.",
+        "Die Menschen vor einer Dunkelheit schützen, die sie nie bemerken.",
+      ],
+      [
+        "Protejo de lugares que você não vê.",
+        "Uma sombra que se move à noite. Detém um perigo antes que alguém saiba que ele existe, e some antes que alguém possa agradecer. Seu único rastro é uma manhã tranquila.",
+        "Silencioso, leal e solitário.",
+        "Um Rogue que escolheu guardar em vez de roubar.",
+        "Proteger as pessoas de uma escuridão que elas nunca notam.",
+      ],
     ),
     'trickster': Lore(
       "Kenapa memukul kalau bisa membuat lawan tersandung?",
@@ -661,6 +961,20 @@ class LoreBook {
         "Espiègle, drôle et imprévisible.",
         "Ancien artiste de rue, il a appris à lire les visages.",
         "Rendre un monde lourd un peu plus léger.",
+      ],
+      [
+        "Warum zuschlagen, wenn man sie stolpern lassen kann?",
+        "Der Schlaue, der mit Witz statt Muskeln gewinnt. Er lässt Feinde über ihre eigenen Worte stolpern und lacht am lautesten, wenn ein Plan aufgeht. Hinter all den Späßen weiß er immer genau, wer im Raum traurig ist.",
+        "Verschmitzt, lustig und unberechenbar.",
+        "Einst ein Straßenkünstler, der lernte, Gesichter zu lesen.",
+        "Eine schwere Welt ein wenig leichter machen.",
+      ],
+      [
+        "Para que golpear se dá para fazê-los tropeçar?",
+        "O esperto que vence com astúcia, não com músculo. Faz os inimigos tropeçarem nas próprias palavras e ri mais alto quando um plano dá certo. Por trás das piadas, sempre sabe exatamente quem na sala está triste.",
+        "Travesso, engraçado e imprevisível.",
+        "Foi artista de rua e aprendeu a ler rostos.",
+        "Deixar um mundo pesado um pouco mais leve.",
       ],
     ),
     'windrunner': Lore(
@@ -688,6 +1002,20 @@ class LoreBook {
         "Il porte les messages de la Chronique aux villages lointains avant que le Brouillard ne les prenne.",
         "Qu’aucun lieu ne soit rappelé trop tard.",
       ],
+      [
+        "Kein Weg ist zu weit.",
+        "Ein Läufer, der wie vom Wind von Reich zu Reich getragen scheint. Er bringt Seiten der Chronik in die fernsten Dörfer, bevor der Nebel sie verschlucken kann. In jedem Dorf warten Kinder am Tor und raten, aus welcher Richtung der Wind kommen wird.",
+        "Frei, fröhlich und rastlos.",
+        "Bringt Botschaften der Chronik in ferne Dörfer, bevor der Nebel sie holt.",
+        "Damit kein Ort zu spät erinnert wird.",
+      ],
+      [
+        "Nenhuma distância é longe demais.",
+        "Um corredor que parece levado pelo vento de reino em reino. Leva páginas da Crônica às aldeias mais distantes antes que a Névoa as engula. Em cada aldeia, as crianças esperam no portão, tentando adivinhar de que lado o vento virá.",
+        "Livre, alegre e inquieto.",
+        "Leva mensagens da Crônica a aldeias distantes antes que a Névoa as leve.",
+        "Para que nenhum lugar seja lembrado tarde demais.",
+      ],
     ),
     'phantom': Lore(
       "Kau tak melihatku, tapi aku sudah memikirkanmu.",
@@ -714,6 +1042,20 @@ class LoreBook {
         "Il a appris à disparaître dans un palais plein d’intrigues.",
         "Démasquer les sombres desseins avant qu’ils ne se réalisent.",
       ],
+      [
+        "Du siehst mich nicht, aber ich habe schon an dich gedacht.",
+        "Eine fast unsichtbare Gestalt, deren Geist immer einen Schritt voraus ist. Er hört eine Verschwörung im Palast, bevor sie ganz ausgesprochen ist. Wenn Verräter losschlagen, finden sie die Tür immer schon verschlossen.",
+        "Außen kalt, innen berechnend.",
+        "Lernte in einem Palast voller Intrigen zu verschwinden.",
+        "Dunkle Pläne aufdecken, bevor sie geschehen.",
+      ],
+      [
+        "Você não me vê, mas eu já pensei em você.",
+        "Uma figura quase invisível cuja mente está sempre um passo à frente. Ouve uma conspiração no palácio antes mesmo de ela ser dita por inteiro. Quando os traidores agem, sempre encontram a porta já trancada.",
+        "Frio por fora, calculista por dentro.",
+        "Aprendeu a desaparecer num palácio cheio de intrigas.",
+        "Descobrir planos sombrios antes que aconteçam.",
+      ],
     ),
     'conqueror': Lore(
       "Setiap negeri yang kubuka adalah negeri yang tak akan dilupakan.",
@@ -739,6 +1081,20 @@ class LoreBook {
         "Audacieux, bruyant et infatigable.",
         "Il a couru des champs au trône sans jamais s’arrêter longtemps.",
         "Ouvrir la route à ceux qui suivent.",
+      ],
+      [
+        "Jedes Reich, das ich öffne, ist ein Reich, das nicht vergessen wird.",
+        "Der Schnellste auf dem ganzen Weg, Öffner neuer Reiche. Hinter ihm tragen Straßen, die einst im Nebel lagen, jetzt Karren und Händler. Er blickt selten zurück, doch er weiß genau, wie viele jetzt gehen können, weil er zuerst lief.",
+        "Kühn, laut und unermüdlich.",
+        "Lief vom Feld bis zum Thron, ohne je lange anzuhalten.",
+        "Den Weg für die öffnen, die nachkommen.",
+      ],
+      [
+        "Cada reino que eu abro é um reino que não será esquecido.",
+        "O mais rápido o caminho todo, abridor de novos reinos. Atrás dele, estradas antes cobertas de névoa agora levam carroças e mercadores. Raramente olha para trás, mas sabe exatamente quantos podem andar agora porque ele correu primeiro.",
+        "Ousado, barulhento e incansável.",
+        "Correu do campo ao trono sem nunca parar por muito tempo.",
+        "Abrir a estrada para quem vem atrás.",
       ],
     ),
 
@@ -768,6 +1124,20 @@ class LoreBook {
         "Le premier du village à savoir lire une page de la Chronique.",
         "Que plus aucun nom ne se perde.",
       ],
+      [
+        "Solange es geschrieben steht, geht es nicht verloren.",
+        "Ein Schreiber, dessen Gedächtnis am längsten hält. Jede Nacht schreibt er fast verlorene Wörter eines nach dem anderen auf eine saubere Seite ab. Sein kleiner Schrank birgt jetzt mehr Namen als das ganze Dorf.",
+        "Fleißig, sorgfältig und still.",
+        "Der Erste im Dorf, der eine Seite der Chronik lesen konnte.",
+        "Dass keine Namen mehr verloren gehen.",
+      ],
+      [
+        "Enquanto estiver escrito, não se perderá.",
+        "Um escriba cuja memória é a que mais dura. Toda noite copia, uma a uma, palavras quase perdidas numa página limpa. Seu pequeno armário guarda hoje mais nomes que a aldeia inteira.",
+        "Dedicado, cuidadoso e quieto.",
+        "O primeiro da aldeia que conseguiu ler uma página da Crônica.",
+        "Que nenhum nome se perca mais.",
+      ],
     ),
     'mage': Lore(
       "Setiap kata menyimpan kekuatan, kalau kau tahu cara menyebutnya.",
@@ -793,6 +1163,20 @@ class LoreBook {
         "Curieux, brillant et parfois imprudent.",
         "Un Scribe qui, une nuit, a lu un mot et l’a vu briller.",
         "Comprendre le secret des mots.",
+      ],
+      [
+        "Jedes Wort birgt Kraft, wenn man weiß, wie man es sagt.",
+        "Ein junger Magier, der entdeckte, dass Wörter hell brennen können. Noch spricht er oft falsch aus, und manchmal versengt der Saum seiner Robe. Doch jedes Wort, das er zum Leuchten bringt, erhellt einen dunklen Winkel der Welt.",
+        "Neugierig, aufgeweckt und manchmal leichtsinnig.",
+        "Ein Scribe, der eines Nachts ein Wort las und es aufleuchten sah.",
+        "Das Geheimnis der Wörter verstehen.",
+      ],
+      [
+        "Cada palavra tem poder, se você souber dizê-la.",
+        "Um mago jovem que descobriu que as palavras podem arder com força. Ainda pronuncia errado muitas vezes, e às vezes a barra do manto chamusca. Mas cada palavra que consegue acender ilumina um canto escuro do mundo.",
+        "Curioso, brilhante e às vezes imprudente.",
+        "Um Scribe que leu uma palavra certa noite e a viu brilhar.",
+        "Entender o segredo das palavras.",
       ],
     ),
     'cleric': Lore(
@@ -820,6 +1204,20 @@ class LoreBook {
         "Il a soigné les anciens du village qui oubliaient le nom de leurs propres enfants.",
         "Être là pour les autres.",
       ],
+      [
+        "Ich komme jeden Tag, denn Wunden ruhen nicht.",
+        "Ein Heiler, der nie fernbleibt. Jeden Morgen klopft er an dieselben Türen, setzt sich zu den Alten und sagt die Namen ihrer Kinder, einen nach dem anderen. Langsam beginnen die vergesslichen Gesichter wieder zu lächeln.",
+        "Sanft, geduldig und verlässlich.",
+        "Pflegte die Alten im Dorf, die die Namen ihrer eigenen Kinder vergaßen.",
+        "Für andere da sein.",
+      ],
+      [
+        "Venho todo dia, porque as feridas não descansam.",
+        "Um curandeiro que nunca se ausenta. Toda manhã bate nas mesmas portas, senta ao lado dos velhos e diz os nomes dos filhos deles, um por um. Aos poucos, os rostos esquecidos voltam a sorrir.",
+        "Gentil, paciente e confiável.",
+        "Cuidava dos velhos da aldeia que esqueciam os nomes dos próprios filhos.",
+        "Estar presente para os outros.",
+      ],
     ),
     'wizard': Lore(
       "Ilmu yang dalam berbicara pelan.",
@@ -845,6 +1243,20 @@ class LoreBook {
         "Sage, patient et un peu solitaire.",
         "Il a passé des années dans une tour, entre livres et étoiles.",
         "Empêcher que l’art des mots soit mal employé.",
+      ],
+      [
+        "Tiefes Wissen spricht leise.",
+        "Ein Magier, der seinem Weg treu blieb, bis seine Kunst tief und ruhig wurde. Er muss nicht mehr rufen, um ein Wort leuchten zu lassen; ein Flüstern genügt. Schüler kommen von weit her, und die erste Lektion ist immer dieselbe: Zuerst zuhören.",
+        "Weise, geduldig und ein wenig einsam.",
+        "Verbrachte Jahre in einem Turm mit Büchern und Sternen.",
+        "Die Kunst der Wörter vor Missbrauch bewahren.",
+      ],
+      [
+        "O saber profundo fala baixo.",
+        "Um mago que seguiu no caminho até seu ofício ficar fundo e calmo. Já não precisa gritar para fazer uma palavra brilhar; um sussurro basta. Alunos vêm de longe, e a primeira lição é sempre a mesma: primeiro escute.",
+        "Sábio, paciente e um pouco solitário.",
+        "Passou anos numa torre com livros e estrelas.",
+        "Proteger o ofício das palavras do mau uso.",
       ],
     ),
     'bishop': Lore(
@@ -872,6 +1284,20 @@ class LoreBook {
         "Un Cleric si fidèle qu’on lui a confié toute une communauté.",
         "Que les noms continuent d’être dits, ensemble.",
       ],
+      [
+        "Ein Gebet ist Erinnerung, gemeinsam gesprochen.",
+        "Ein Hüter des Glaubens und der gemeinsamen Erinnerung. Jede Woche versammelt er die Menschen, um die Namen der Gegangenen zu sprechen, damit keiner an den Nebel verloren geht. Seine Stimme ist nicht laut, doch der ganze Saal spricht ihm nach.",
+        "Feierlich, warm und mit den Lasten vieler beladen.",
+        "Ein Cleric, so treu, dass man ihm eine ganze Gemeinde anvertraut.",
+        "Die Namen gemeinsam ausgesprochen halten.",
+      ],
+      [
+        "Uma oração é memória dita em conjunto.",
+        "Um guardião da fé e da memória compartilhada. Toda semana reúne as pessoas para dizer os nomes dos que se foram, para que nenhum se perca na Névoa. Sua voz não é alta, mas o salão inteiro a repete.",
+        "Solene, caloroso e carregando o peso de muitos.",
+        "Um Cleric fiel o bastante para que lhe confiem uma congregação inteira.",
+        "Manter os nomes ditos, juntos.",
+      ],
     ),
     'enchanter': Lore(
       "Aku menulis mantra ke dalam benda, agar ia ingat sendiri.",
@@ -897,6 +1323,20 @@ class LoreBook {
         "Créatif, minutieux et plein d’émerveillement.",
         "Il a appris d’un artisan de la ville à graver des lettres dans le bois et le métal.",
         "Fabriquer des choses qui ne peuvent pas être oubliées.",
+      ],
+      [
+        "Ich schreibe Zauber in die Dinge, damit sie sich selbst erinnern.",
+        "Feder und Magie sind in seiner Hand gleich stark. Er ritzt Buchstaben in Türen, Ringe und Ackergerät, damit sich diese Dinge selbst an die Namen ihrer Besitzer erinnern. In seinem Dorf geht nie wieder etwas spurlos verloren.",
+        "Schöpferisch, gewissenhaft und voller Staunen.",
+        "Lernte bei einem Handwerker der Stadt, Buchstaben in Holz und Metall zu ritzen.",
+        "Dinge schaffen, die nicht vergessen werden können.",
+      ],
+      [
+        "Escrevo feitiços nas coisas, para que elas lembrem sozinhas.",
+        "Pena e magia são igualmente fortes na sua mão. Grava letras em portas, anéis e ferramentas do campo, para que essas coisas lembrem sozinhas o nome dos donos. Na aldeia dele, nada mais se perde sem deixar rastro.",
+        "Criativo, minucioso e cheio de encanto.",
+        "Aprendeu com um artesão da cidade a gravar letras em madeira e metal.",
+        "Fazer coisas que não possam ser esquecidas.",
       ],
     ),
     'battlemage': Lore(
@@ -924,6 +1364,20 @@ class LoreBook {
         "Il a quitté la tour quand le royaume a été attaqué.",
         "Se servir du savoir pour protéger.",
       ],
+      [
+        "Wissen, das niemanden schützt, ist nur Zierde.",
+        "Ein Magier, der aufs Schlachtfeld hinabsteigt. Wenn die anderen Türme ihre Türen schließen, geht er hinaus, ein Buch in der einen Hand, einen Stab in der anderen. Die Soldaten lernen, dass ein einziges richtiges Wort der beste Schild sein kann.",
+        "Tapfer, standhaft und praktisch.",
+        "Verließ den Turm, als das Reich angegriffen wurde.",
+        "Wissen nutzen, um zu schützen.",
+      ],
+      [
+        "Saber que não protege ninguém é só enfeite.",
+        "Um mago que desce ao campo de batalha. Quando as outras torres fecham as portas, ele sai com um livro numa mão e um cajado na outra. Os soldados aprendem que uma palavra certa pode ser o melhor escudo.",
+        "Corajoso, firme e prático.",
+        "Saiu da torre quando o reino foi atacado.",
+        "Usar o saber para proteger.",
+      ],
     ),
     'archmage': Lore(
       "Setiap pengetahuan punya harga. Aku sudah membayar banyak.",
@@ -950,6 +1404,20 @@ class LoreBook {
         "Il a perdu beaucoup d’amis au fil de longues années d’étude.",
         "Garder en équilibre le savoir et la sagesse.",
       ],
+      [
+        "Alles Wissen hat seinen Preis. Ich habe viel bezahlt.",
+        "Ein Meister der Kunst der Wörter. Ein einziger Satz von ihm kann einen Sturm aufhalten, doch öfter nutzt er ihn, um einen verängstigten Schüler zu beruhigen. Hinter der Macht bewahrt er eine lange Liste von Freunden, die er nicht retten konnte.",
+        "Ruhig, tief und gebieterisch.",
+        "Verlor in langen Jahren des Studiums viele Freunde.",
+        "Wissen und Weisheit im Gleichgewicht halten.",
+      ],
+      [
+        "Todo saber tem um preço. Eu paguei muito.",
+        "Um mestre do ofício das palavras. Uma frase sua pode segurar uma tempestade, mas ele a usa mais para acalmar um aluno assustado. Por trás do poder, guarda uma longa lista de amigos que não conseguiu salvar.",
+        "Calmo, profundo e imponente.",
+        "Perdeu muitos amigos em longos anos de estudo.",
+        "Manter saber e sabedoria em equilíbrio.",
+      ],
     ),
     'sage': Lore(
       "Aku menulis agar kalian tak perlu mengingat sendirian.",
@@ -975,6 +1443,20 @@ class LoreBook {
         "Sage, discret et aimant.",
         "Il fut jadis l’enfant qui trouva une page déchirée de la Chronique.",
         "Garder la mémoire de tout le royaume.",
+      ],
+      [
+        "Ich schreibe, damit du dich nicht allein erinnern musst.",
+        "Sein Gedächtnis reichte den ganzen Weg am tiefsten. Jetzt hütet er die Große Chronik. Jede Nacht schlägt er die Seite auf, die einst zerrissen war und nun wieder ganz ist, und lächelt dem Kind vom Feld zu, das sie fand.",
+        "Weise, still und liebevoll.",
+        "War einst das Kind, das eine zerrissene Seite der Chronik fand.",
+        "Das Gedächtnis des ganzen Königreichs bewahren.",
+      ],
+      [
+        "Escrevo para que você não precise lembrar sozinho.",
+        "Sua memória foi a mais profunda o caminho todo. Agora guarda a Grande Crônica. Toda noite abre a página que um dia esteve rasgada, inteira de novo, e sorri para a criança do campo que a encontrou.",
+        "Sábio, quieto e amoroso.",
+        "Foi um dia a criança que encontrou uma página rasgada da Crônica.",
+        "Guardar a memória do reino inteiro.",
       ],
     ),
 
@@ -1004,6 +1486,20 @@ class LoreBook {
         "Il garde la porte du village depuis l’enfance, aux côtés de son père.",
         "Être présent, jour après jour.",
       ],
+      [
+        "Ich bin jeden Tag hier. Das ist mein Eid.",
+        "Ein Torwächter, der nie fehlt. Regen, Schnee oder Festtag, bei Sonnenaufgang steht er immer am selben Platz. Händler sagen, sie wissen, dass sie zu Hause sind, wenn sie diese Gestalt am Tor sehen.",
+        "Treu, ruhig und verlässlich.",
+        "Bewachte das Dorftor schon als Kind, an der Seite seines Vaters.",
+        "Da sein, Tag für Tag.",
+      ],
+      [
+        "Estou aqui todo dia. Esse é o meu juramento.",
+        "Um guardião do portão que nunca falta. Chuva, neve ou dia de festa, ao nascer do sol ele está sempre no mesmo lugar. Os mercadores dizem que sabem que chegaram em casa quando veem aquela figura no portão.",
+        "Leal, calmo e confiável.",
+        "Guarda o portão da aldeia desde criança, ao lado do pai.",
+        "Estar presente, dia após dia.",
+      ],
     ),
     'guardian': Lore(
       "Selama aku berdiri, kalian aman.",
@@ -1029,6 +1525,20 @@ class LoreBook {
         "Constant, prêt et humble.",
         "Un Sentinel qui, pour la première fois, a reçu un coup à la place d’un inconnu.",
         "Se tenir entre le danger et ceux qu’il protège.",
+      ],
+      [
+        "Solange ich stehe, bist du sicher.",
+        "Ein Schild für andere. Er schlägt nie als Erster zu, und doch ist noch nie jemand an ihm vorbeigekommen. Hinter diesem Schild lernen die Menschen, dass man auch Sicherheit weitergeben kann.",
+        "Standfest, bereit und bescheiden.",
+        "Ein Sentinel, der zum ersten Mal einen Hieb für einen Fremden einsteckte.",
+        "Zwischen der Gefahr und denen stehen, die er schützt.",
+      ],
+      [
+        "Enquanto eu estiver de pé, você está seguro.",
+        "Um escudo para os outros. Nunca ataca primeiro, mas ninguém jamais passou por ele. Atrás desse escudo, as pessoas aprendem que a sensação de segurança também se passa adiante.",
+        "Firme, pronto e humilde.",
+        "Um Sentinel que pela primeira vez levou um golpe por um estranho.",
+        "Ficar entre o perigo e quem protege.",
       ],
     ),
     'monk': Lore(
@@ -1056,6 +1566,20 @@ class LoreBook {
         "Il a étudié dans un monastère de montagne, apprenant par cœur un livre après l’autre.",
         "Trouver l’équilibre.",
       ],
+      [
+        "Schweigen ist auch eine Antwort.",
+        "Ein Mönch, dessen Körper und Gedächtnis ruhig sind. Er kann in einer Jahreszeit ein ganzes Buch auswendig lernen und es dann lehren, ohne eine Seite aufzuschlagen. Wenn andere in Panik geraten, atmet er lang ein und hört zu.",
+        "Geduldig, schlicht und tief.",
+        "Lernte in einem Bergkloster Buch um Buch auswendig.",
+        "Das Gleichgewicht finden.",
+      ],
+      [
+        "O silêncio também é uma resposta.",
+        "Um monge de corpo e memória calmos. Consegue decorar um livro inteiro numa estação e depois ensiná-lo sem abrir uma única página. Quando os outros entram em pânico, ele respira fundo e escuta.",
+        "Paciente, simples e profundo.",
+        "Estudou num mosteiro da montanha, decorando livro após livro.",
+        "Encontrar o equilíbrio.",
+      ],
     ),
     'warden': Lore(
       "Aku mengenal setiap jengkal tanah ini.",
@@ -1081,6 +1605,20 @@ class LoreBook {
         "Vigilant, endurci et fidèle à sa terre.",
         "Un Guardian envoyé à la frontière qui a choisi d’y rester.",
         "Empêcher que le bord du royaume soit englouti par le Brouillard.",
+      ],
+      [
+        "Ich kenne jeden Fußbreit dieses Landes.",
+        "Ein treuer Hüter der Grenze. Er kennt jeden Stein, jeden Bach, jede Stelle, an der der Nebel gewöhnlich hereinkriecht. Wenn andere Reiche ihre Ränder verlieren, bleibt seiner klar auf der Karte gezeichnet.",
+        "Wachsam, zäh und dem Land treu.",
+        "Ein Guardian, an die Grenze geschickt, der beschloss zu bleiben.",
+        "Den Rand des Reiches davor bewahren, vom Nebel verschluckt zu werden.",
+      ],
+      [
+        "Conheço cada palmo desta terra.",
+        "Um guardião fiel da fronteira. Conhece cada pedra, cada riacho, cada lugar por onde a Névoa costuma entrar. Quando outros reinos perdem as bordas, a do seu reino continua bem traçada no mapa.",
+        "Vigilante, resistente e fiel à terra.",
+        "Um Guardian mandado para a fronteira que escolheu ficar.",
+        "Impedir que a borda do reino seja engolida pela Névoa.",
       ],
     ),
     'mystic': Lore(
@@ -1108,6 +1646,20 @@ class LoreBook {
         "Un Monk qui a médité des années jusqu’à entendre les noms sur le point de s’effacer.",
         "Sauver les noms au bord de l’oubli.",
       ],
+      [
+        "Hör zu. Die Welt spricht.",
+        "Ein Mystiker, der die Stimme der Welt hört. Er hört das Flüstern eines Namens, der gleich verschwindet, so leise wie ein fallendes Blatt. Die Menschen bringen alte Dinge, und er sagt, wem sie einst gehörten.",
+        "Ruhig, geduldig und ein wenig seltsam.",
+        "Ein Monk, der jahrelang meditierte, bis er Namen hören konnte, die gleich verschwinden.",
+        "Namen am Rand des Vergessens retten.",
+      ],
+      [
+        "Escute. O mundo está falando.",
+        "Um místico que ouve a voz do mundo. Escuta o sussurro de um nome prestes a sumir, leve como uma folha que cai. As pessoas trazem coisas antigas, e ele diz quem foi o dono.",
+        "Calmo, paciente e um pouco estranho.",
+        "Um Monk que meditou por anos até conseguir ouvir nomes prestes a sumir.",
+        "Salvar nomes à beira do esquecimento.",
+      ],
     ),
     'runekeeper': Lore(
       "Batu mengingat lebih lama dari manusia.",
@@ -1133,6 +1685,20 @@ class LoreBook {
         "Appliqué, savant et obstiné.",
         "Il a trouvé des runes que le Brouillard n’a jamais touchées.",
         "Graver ce qui compte pour que cela dure.",
+      ],
+      [
+        "Stein erinnert sich länger als Menschen.",
+        "Ein Hüter uralter Schrift auf alten Steinen. Er zieht durch Höhlen und Ruinen, um Runen abzuschreiben, die der Nebel nie berührt hat. In seiner Werkstatt werden wichtige Wörter neu in Stein gehauen, damit sie länger halten als jeder, der sich an sie erinnert.",
+        "Fleißig, gelehrt und stur.",
+        "Fand Runen, die der Nebel nie berührt hat.",
+        "Das Wichtige so hauen, dass es bleibt.",
+      ],
+      [
+        "A pedra lembra por mais tempo que as pessoas.",
+        "Um guardião da escrita antiga em pedras velhas. Viaja por cavernas e ruínas para copiar runas que a Névoa nunca tocou. Na oficina dele, palavras importantes são gravadas de novo em pedra nova, para durar mais que qualquer um que as lembre.",
+        "Dedicado, erudito e teimoso.",
+        "Encontrou runas que a Névoa nunca tocou.",
+        "Gravar o que importa para que dure.",
       ],
     ),
     'ironclad': Lore(
@@ -1160,6 +1726,20 @@ class LoreBook {
         "Il a passé des années à garder le rempart du château, en toute saison.",
         "Être un abri pour tous.",
       ],
+      [
+        "Ich weiche nicht. Der Nebel muss weichen.",
+        "Eine wandelnde Festung. Wenn der Nebel heranwalzt, steht er mitten auf der Straße und rührt sich keinen Zoll. Die Menschen suchen Schutz hinter ihm, und am Morgen erinnern sie sich noch an die Namen der anderen.",
+        "Unerschütterlich, still und zutiefst treu.",
+        "Bewachte jahrelang die Burgmauer durch alle Jahreszeiten.",
+        "Ein Schutz für alle sein.",
+      ],
+      [
+        "Eu não me movo. É a Névoa que tem de ceder.",
+        "Uma fortaleza que anda. Quando a Névoa avança, ele fica no meio da estrada e não se mexe um centímetro. As pessoas se abrigam atrás dele, e de manhã ainda lembram os nomes umas das outras.",
+        "Inabalável, quieto e profundamente leal.",
+        "Passou anos guardando a muralha do castelo em todas as estações.",
+        "Ser abrigo para todos.",
+      ],
     ),
     'elder': Lore(
       "Anak muda berlari. Orang tua tahu arah.",
@@ -1186,6 +1766,20 @@ class LoreBook {
         "Il a vu trois rois monter sur le trône.",
         "Transmettre la mémoire aux jeunes.",
       ],
+      [
+        "Die Jungen rennen. Die Alten kennen den Weg.",
+        "Ein weiser Ältester, dessen Geduld eine Lektion ist. Kinder sitzen jeden Abend im Kreis vor ihm, um dieselbe Geschichte zu hören, und jedes Mal finden sie etwas Neues darin. Er weiß, dass eine wiedererzählte Geschichte die älteste Waffe gegen das Vergessen ist.",
+        "Warm, geduldig und voller Geschichten.",
+        "Hat drei Könige den Thron besteigen sehen.",
+        "Die Erinnerung an die Jungen weitergeben.",
+      ],
+      [
+        "Os jovens correm. Os velhos conhecem o caminho.",
+        "Um ancião sábio cuja paciência é uma lição. As crianças sentam em roda diante dele todo fim de tarde para ouvir a mesma história, e a cada vez encontram algo novo nela. Ele sabe que uma história contada de novo é o jeito mais antigo de lutar contra o esquecimento.",
+        "Caloroso, paciente e cheio de histórias.",
+        "Já viu três reis subirem ao trono.",
+        "Passar a memória aos jovens.",
+      ],
     ),
     'paragon': Lore(
       "Aku hanya datang setiap hari. Ternyata itu cukup untuk sebuah kerajaan.",
@@ -1211,6 +1805,20 @@ class LoreBook {
         "Constant, humble et rassurant.",
         "Jamais le plus rapide ni le plus malin, mais jamais arrêté.",
         "Montrer qu’une petite fidélité peut soutenir le monde.",
+      ],
+      [
+        "Ich kam nur jeden Tag. Es stellte sich heraus, dass das für ein Königreich reicht.",
+        "Der Treueste auf dem ganzen Weg, ein Vorbild für das ganze Reich. Er war nie der Schnellste oder Klügste und tat nie so. Doch wenn das Reich wankt, suchen die Menschen zuerst ihn, denn er ist immer da.",
+        "Beständig, bescheiden und beruhigend.",
+        "Nie der Schnellste oder Klügste, aber hörte nie auf.",
+        "Zeigen, dass kleine Treue die Welt tragen kann.",
+      ],
+      [
+        "Eu só vim todo dia. No fim, isso bastou para um reino.",
+        "O mais fiel o caminho todo, exemplo para o reino inteiro. Nunca foi o mais rápido nem o mais esperto, e nunca fingiu ser. Mas quando o reino vacila, as pessoas o procuram primeiro, porque ele está sempre lá.",
+        "Constante, humilde e tranquilizador.",
+        "Nunca o mais rápido nem o mais esperto, mas nunca parou.",
+        "Mostrar que uma pequena fidelidade pode sustentar o mundo.",
       ],
     ),
 
@@ -1240,6 +1848,20 @@ class LoreBook {
         "Il travaille le jour et étudie à la lueur d’une bougie.",
         "Garder la mémoire éveillée pendant que le monde dort.",
       ],
+      [
+        "Während alle schlafen, halte ich mit den Wörtern Wache.",
+        "Der, der lernt, während andere schlafen. Seine Kerze ist um Mitternacht das einzige Licht in der Straße. Die Nachtwachen nicken diesem Fenster inzwischen zu, als grüßten sie einen Kameraden.",
+        "Still, fleißig, die Einsamkeit selbst gewählt.",
+        "Arbeitet am Tag und lernt bei Kerzenlicht.",
+        "Die Erinnerung wach halten, während die Welt schläft.",
+      ],
+      [
+        "Enquanto todos dormem, eu vigio com as palavras.",
+        "Aquele que aprende enquanto os outros dormem. Sua vela é a única luz da rua à meia-noite. Os guardas noturnos já se acostumaram a acenar para aquela janela, como quem cumprimenta um colega de vigia.",
+        "Quieto, dedicado, escolhe a própria solidão.",
+        "Trabalha de dia e estuda à luz de vela.",
+        "Manter a memória acordada enquanto o mundo dorme.",
+      ],
     ),
     'berserker': Lore(
       "Selama rantai ini tak putus, aku tak akan berhenti.",
@@ -1265,6 +1887,20 @@ class LoreBook {
         "Fougueux, obstiné et plein d’élan.",
         "Il a failli abandonner un jour, puis a décidé de ne plus jamais s’arrêter.",
         "Continuer.",
+      ],
+      [
+        "Solange die Kette hält, höre ich nicht auf.",
+        "Eine sehr lange Kette von Antworten, nie gerissen. Hat er einmal angefangen, hört er nicht auf, bis ihm der Atem ausgeht und das letzte Wort sitzt. Gegner lernen, dass Warten auf seine Müdigkeit ein Plan ist, der immer verliert.",
+        "Feurig, stur und voller Antrieb.",
+        "Hätte einmal fast aufgegeben und beschloss dann, nie wieder aufzuhören.",
+        "Weitermachen.",
+      ],
+      [
+        "Enquanto a corrente aguentar, não vou parar.",
+        "Uma corrente muito longa de respostas, nunca partida. Quando começa, não para até o fôlego acabar e a última palavra se encaixar. Os adversários aprendem que esperar que ele se canse é um plano que sempre perde.",
+        "Ardente, teimoso e cheio de garra.",
+        "Um dia quase desistiu, e então decidiu nunca mais parar.",
+        "Seguir em frente.",
       ],
     ),
     'lexicon': Lore(
@@ -1292,6 +1928,20 @@ class LoreBook {
         "Il a juré de garder une lettre pour qu’aucun de ses mots ne se perde.",
         "Finir ce qui a été commencé.",
       ],
+      [
+        "Ein Buchstabe, bis zum letzten Wort.",
+        "Der Hüter eines Buchstabens, bis zu dessen letztem Wort. Er kennt jedes Wort, das mit diesem Buchstaben beginnt, auch die, die lange niemand mehr gesagt hat. Solange er lebt, verliert der Buchstabe kein einziges Wort.",
+        "Fleißig bis zur Besessenheit, sorgfältig und treu.",
+        "Schwor, einen Buchstaben zu hüten, damit keines seiner Wörter verloren geht.",
+        "Vollenden, was begonnen wurde.",
+      ],
+      [
+        "Uma letra, até a última palavra.",
+        "O guardião de uma letra, até a sua última palavra. Conhece cada palavra que começa com ela, até as que ninguém diz há muito tempo. Enquanto ele viver, a letra não perderá uma única palavra.",
+        "Dedicado até a obsessão, cuidadoso e leal.",
+        "Jurou guardar uma letra para que nenhuma de suas palavras se perdesse.",
+        "Terminar o que foi começado.",
+      ],
     ),
     'oracle': Lore(
       "Aku melihatnya sebelum terjadi.",
@@ -1317,6 +1967,20 @@ class LoreBook {
         "Calme, perspicace et mystérieux.",
         "Il a affronté l’ombre d’un titre sans flancher une seule fois.",
         "Voir le bon chemin avant les autres.",
+      ],
+      [
+        "Ich sah es, bevor es geschah.",
+        "Der, der einen Boss ohne eine einzige falsche Antwort fällte. Er sieht jeden Hieb, bevor er geführt wird, jedes Wort, bevor es gefragt wird. Man nennt ihn einen Seher, doch er gibt nur länger acht als alle anderen.",
+        "Ruhig, scharfsinnig und geheimnisvoll.",
+        "Stellte sich dem Schatten eines Titels und wankte kein einziges Mal.",
+        "Den richtigen Weg vor den anderen sehen.",
+      ],
+      [
+        "Eu vi antes de acontecer.",
+        "Aquele que derrubou um boss sem uma única resposta errada. Vê cada golpe antes de ser dado, cada palavra antes de ser pedida. Chamam-no de vidente, mas ele só presta atenção por mais tempo que os outros.",
+        "Calmo, perspicaz e misterioso.",
+        "Enfrentou a sombra de um título e não vacilou uma única vez.",
+        "Ver o caminho certo antes dos outros.",
       ],
     ),
     'chronomancer': Lore(
@@ -1344,6 +2008,20 @@ class LoreBook {
         "Il répondait si vite que les secondes semblaient s’arrêter.",
         "Reprendre du temps au Brouillard.",
       ],
+      [
+        "Für die, die schnell genug sind, wird die Zeit selbst langsamer.",
+        "Ein Meister der Sekunden. Seine Antworten kommen so schnell, dass die Sekunden stillzustehen und zu warten scheinen. Er glaubt, dass dem Nebel abgerungene Zeit jemand anderem geschenkt werden kann.",
+        "Schnell, konzentriert und ein wenig ungeduldig.",
+        "Antwortete so schnell, dass die Sekunden stillzustehen schienen.",
+        "Dem Nebel Zeit abringen.",
+      ],
+      [
+        "Para quem é rápido o bastante, o próprio tempo desacelera.",
+        "Um mestre dos segundos. Suas respostas vêm tão rápido que os segundos parecem parar e esperar. Ele acredita que o tempo tirado da Névoa pode ser dado a outra pessoa.",
+        "Rápido, concentrado e um pouco impaciente.",
+        "Respondia tão depressa que os segundos pareciam parar.",
+        "Tomar tempo de volta da Névoa.",
+      ],
     ),
     'polymath': Lore(
       "Pedang, panah, pena, dan perisai. Aku membawa semuanya.",
@@ -1369,6 +2047,20 @@ class LoreBook {
         "Équilibré, humble et capable en tout.",
         "Il a parcouru chaque voie un peu à la fois sans jamais en choisir une.",
         "Montrer que toutes les routes peuvent n’en faire qu’une.",
+      ],
+      [
+        "Schwert, Bogen, Feder und Schild. Ich trage sie alle.",
+        "Vier Seiten, gleich stark. Am Morgen schärft er das Schwert, mittags jagt er, abends schreibt er, und nachts hält er Wache. Er beweist, dass nicht jeder nur einen Weg wählen muss.",
+        "Ausgeglichen, bescheiden und in allem fähig.",
+        "Ging jeden Weg ein Stück, ohne je einen zu wählen.",
+        "Zeigen, dass jeder Weg zu einem werden kann.",
+      ],
+      [
+        "Espada, arco, pena e escudo. Carrego todos.",
+        "Quatro lados igualmente fortes. De manhã afia a espada, ao meio-dia caça, à tarde escreve e à noite vigia. Prova que nem todo mundo precisa escolher um só caminho.",
+        "Equilibrado, humilde e capaz em tudo.",
+        "Percorreu cada caminho um pouco, sem nunca escolher um.",
+        "Mostrar que todos os caminhos podem virar um só.",
       ],
     ),
     'justicar': Lore(
@@ -1396,6 +2088,20 @@ class LoreBook {
         "Il a mal jugé une seule affaire, une fois, et ne se l’est jamais pardonné.",
         "Que personne ne soit plus jamais puni pour un mot mal placé.",
       ],
+      [
+        "Das richtige Wort braucht keine laute Stimme.",
+        "Ein wandernder Richter aus der Linie der Blade, der noch immer die Genauigkeit über alles stellt. Er wägt jedes Wort, wie er einen Fall wägen würde, und urteilt nie, bevor er sicher ist. An der Grenze ist seine Gerechtigkeit eine Mauer, fester als Stein.",
+        "Gerecht, gewissenhaft und schwer zu beirren.",
+        "Urteilte einmal in einem einzigen Fall falsch und hat sich das nie verziehen.",
+        "Dass nie wieder jemand für ein falsch gesetztes Wort bestraft wird.",
+      ],
+      [
+        "A palavra certa não precisa de voz alta.",
+        "Um juiz andarilho da linha Blade que ainda põe a exatidão acima de tudo. Pesa cada palavra como pesaria um processo e nunca julga antes de ter certeza. Na fronteira, sua justiça é uma muralha mais firme que pedra.",
+        "Justo, minucioso e difícil de convencer.",
+        "Julgou errado uma única vez e nunca se perdoou.",
+        "Que ninguém mais seja punido por uma palavra mal colocada.",
+      ],
     ),
     'warlord': Lore(
       "Pedang yang tepat tak cukup. Aku butuh pasukan.",
@@ -1421,6 +2127,20 @@ class LoreBook {
         "Décidé, audacieux et prompt à lire le terrain.",
         "A perdu un poste frontière pour avoir trop attendu d’être sûr.",
         "Bouger le premier, avant que le Brouillard ne le puisse.",
+      ],
+      [
+        "Eine treffsichere Klinge reicht nicht. Ich brauche ein Heer.",
+        "Ein Blade, der lernte, dass Genauigkeit allein den Nebel nicht aufhält. Jetzt führt er mit Tempo, Gedächtnis oder Treue, mit dem, was in ihm am stärksten ist. Seine Schar ist klein, aber sie weicht nie zurück.",
+        "Entschlossen, kühn und schnell darin, das Feld zu lesen.",
+        "Verlor einen Grenzposten, weil er zu lange auf Gewissheit wartete.",
+        "Zuerst handeln, bevor der Nebel es kann.",
+      ],
+      [
+        "Uma lâmina certeira não basta. Preciso de um exército.",
+        "Um Blade que aprendeu que só exatidão não segura a Névoa. Agora lidera com rapidez, memória ou fidelidade, o que nele for mais forte. Sua tropa é pequena, mas nunca recua.",
+        "Decidido, ousado e rápido para ler o campo.",
+        "Perdeu um posto de fronteira por esperar demais pela certeza.",
+        "Agir primeiro, antes que a Névoa possa.",
       ],
     ),
     'pathfinder': Lore(
@@ -1448,6 +2168,20 @@ class LoreBook {
         "S’est un jour perdu trois jours dans le Brouillard et n’est revenu que parce qu’il se souvenait d’un nom.",
         "Que personne ne se perde plus jamais comme il s’est perdu.",
       ],
+      [
+        "Jeder Weg, an den ich mich erinnere, ist für jemand anderen ein Heimweg.",
+        "Ein Entdecker aus der Linie der Scout, der noch immer der Schnellste von allen ist. Er geht als Erster in den Nebel und markiert den Weg mit Namen, damit andere folgen können. Es gibt keine Karte der Grenze, die seine Hand nicht berührt hat.",
+        "Flink, neugierig und rastlos.",
+        "Verirrte sich einst drei Tage im Nebel und kam nur zurück, weil er sich an einen Namen erinnerte.",
+        "Dass sich niemand je so verirrt wie er damals.",
+      ],
+      [
+        "Cada caminho que lembro é o caminho de volta de outra pessoa.",
+        "Um explorador da linha Scout que ainda é o mais rápido de todos. Entra primeiro na Névoa e marca o caminho com nomes, para que outros possam seguir. Não há mapa da fronteira que sua mão não tenha tocado.",
+        "Ágil, curioso e inquieto.",
+        "Perdeu-se três dias na Névoa e só voltou porque lembrou um nome.",
+        "Que ninguém mais se perca como ele um dia.",
+      ],
     ),
     'assassin': Lore(
       "Kabut tidak melihatku datang.",
@@ -1473,6 +2207,20 @@ class LoreBook {
         "Silencieux, patient et redoutable.",
         "Il était le coureur le plus rapide du village, jusqu’à apprendre que la vitesse rend imprudent.",
         "Frapper une fois, et juste.",
+      ],
+      [
+        "Der Nebel sieht mich nicht kommen.",
+        "Ein Scout, den jetzt eine andere Seite führt: tiefes Gedächtnis oder kalte Geduld. Er rennt nicht mehr; er wartet und schlägt dann einmal zu. An der Grenze flüstert man seinen Namen, doch wenige haben sein Gesicht gesehen.",
+        "Schweigsam, geduldig und tödlich.",
+        "War einst der schnellste Läufer des Dorfes, bis er lernte, dass Tempo leichtsinnig machen kann.",
+        "Einmal zuschlagen, und treffen.",
+      ],
+      [
+        "A Névoa não me vê chegar.",
+        "Um Scout agora guiado por outro lado: memória profunda ou uma paciência fria. Já não corre; espera, e então ataca uma vez. Na fronteira sussurram seu nome, mas poucos viram seu rosto.",
+        "Silencioso, paciente e letal.",
+        "Foi o corredor mais rápido da aldeia, até aprender que a pressa pode deixar você descuidado.",
+        "Atacar uma vez, e certeiro.",
       ],
     ),
     'loremaster': Lore(
@@ -1500,6 +2248,20 @@ class LoreBook {
         "A trouvé une bibliothèque dont la moitié des livres avaient été vidés par le Brouillard.",
         "Qu’aucun livre ne redevienne jamais blanc.",
       ],
+      [
+        "Ich bewahre, was ihr anderen vergesst.",
+        "Ein Hüter des Wissens aus der Linie der Scribe, dessen Gedächtnis noch immer am tiefsten reicht. Im Turm der Feste schreibt er jede Nacht die Namen der Grenzdörfer ab, einen nach dem anderen. Solange er schreibt, bleibt der Nebel am Fuß der Mauer stehen.",
+        "Fleißig, still und sorgfältig bis zum letzten Buchstaben.",
+        "Fand eine Bibliothek, deren Bücher zur Hälfte vom Nebel geleert waren.",
+        "Dass nie wieder ein Buch leer wird.",
+      ],
+      [
+        "Guardo o que vocês esquecem.",
+        "Um guardião do saber da linha Scribe cuja memória ainda é a mais profunda. Na torre do forte copia toda noite os nomes das aldeias da fronteira, um por um. Enquanto ele escreve, a Névoa para ao pé da muralha.",
+        "Dedicado, quieto e cuidadoso até a última letra.",
+        "Encontrou uma biblioteca com metade dos livros esvaziados pela Névoa.",
+        "Que nenhum livro volte a ficar em branco.",
+      ],
     ),
     'alchemist': Lore(
       "Kata, seperti logam, bisa diubah oleh api yang sabar.",
@@ -1525,6 +2287,20 @@ class LoreBook {
         "Curieux, prêt à essayer, et un peu téméraire.",
         "A fait sauter son premier atelier, et en a appris plus que dans n’importe quel livre.",
         "Trouver un mot qui dure pour toujours.",
+      ],
+      [
+        "Wörter lassen sich wie Metalle von einem geduldigen Feuer verwandeln.",
+        "Ein Scribe, den jetzt eine andere Seite führt: Tempo, Genauigkeit oder Beständigkeit. Er mischt, was er erinnert, mit dem, was er gerade gelernt hat, und aus dieser Mischung entstehen Wörter, die der Nebel nicht fressen kann. Der Rauch seiner Werkstatt riecht nach dem ersten Regen.",
+        "Neugierig, experimentierfreudig und ein wenig leichtsinnig.",
+        "Sprengte seine erste Werkstatt in die Luft und lernte daraus mehr als aus jedem Buch.",
+        "Ein Wort finden, das für immer hält.",
+      ],
+      [
+        "As palavras, como os metais, podem ser mudadas por um fogo paciente.",
+        "Um Scribe agora guiado por outro lado: rapidez, exatidão ou constância. Mistura o que lembra com o que acabou de aprender, e dessa mistura saem palavras que a Névoa não consegue comer. A fumaça da sua oficina cheira à primeira chuva.",
+        "Curioso, disposto a experimentar e um pouco imprudente.",
+        "Explodiu sua primeira oficina, e aprendeu mais com isso do que com qualquer livro.",
+        "Encontrar uma palavra que dure para sempre.",
       ],
     ),
     'bulwark': Lore(
@@ -1552,6 +2328,20 @@ class LoreBook {
         "N’a pas manqué un seul jour depuis son premier jour de garde.",
         "Être l’endroit qui est toujours là, où revenir.",
       ],
+      [
+        "Ich weiche nicht. Dafür bin ich da.",
+        "Ein lebender Schild aus der Linie der Sentinel, der noch immer der Treueste ist. Jeden Tag steht er am Tor der Feste, bei Regen oder Sturm, und sagt dieselben Namen mit derselben Stimme. Der Nebel hat längst aufgegeben, an ihm vorbeizukommen.",
+        "Standhaft, ruhig und unermüdlich.",
+        "Hat seit seinem ersten Wachtag keinen einzigen Tag gefehlt.",
+        "Der Ort sein, zu dem man immer zurückkehren kann.",
+      ],
+      [
+        "Eu não me movo. É para isso que existo.",
+        "Um escudo vivo da linha Sentinel que ainda é o mais fiel. Fica todo dia no portão do forte, com chuva ou tempestade, dizendo os mesmos nomes com a mesma voz. A Névoa desistiu há muito de passar por ele.",
+        "Firme, calmo e incansável.",
+        "Não faltou um único dia desde o primeiro dia de vigia.",
+        "Ser o lugar que está sempre lá para quem volta.",
+      ],
     ),
     'templar': Lore(
       "Kesetiaanku kini punya pedang.",
@@ -1578,6 +2368,20 @@ class LoreBook {
         "S’est lassé d’attendre à la porte pendant que les villages du dehors disparaissaient.",
         "Reprendre chaque nom que le Brouillard a pris.",
       ],
+      [
+        "Meine Treue trägt jetzt ein Schwert.",
+        "Ein Sentinel, den jetzt eine andere Seite führt: Genauigkeit, Tempo oder Gedächtnis. Er verbindet den Eid der Wache mit einer neuen Fertigkeit und zieht über die Mauer hinaus, um verlorene Dörfer zurückzugewinnen. Sein Banner ist rot und an der ganzen Grenze bekannt.",
+        "Eifrig, grundsatztreu und ein wenig hart.",
+        "Wurde es leid, nur am Tor zu warten, während draußen Dörfer verschwanden.",
+        "Jeden Namen zurückgewinnen, den der Nebel genommen hat.",
+      ],
+      [
+        "Minha fidelidade agora carrega uma espada.",
+        "Um Sentinel agora guiado por outro lado: exatidão, rapidez ou memória. Une o juramento da vigia a uma nova habilidade e marcha além da muralha para reconquistar aldeias perdidas. Seu estandarte é vermelho e conhecido em toda a fronteira.",
+        "Fervoroso, de princípios e um pouco duro.",
+        "Cansou de só esperar no portão enquanto as aldeias lá fora sumiam.",
+        "Reconquistar cada nome que a Névoa levou.",
+      ],
     ),
     'archivist': Lore(
       "Tiga puluh kata, tiga puluh benar. Kronik tak pernah salah catat.",
@@ -1603,6 +2407,20 @@ class LoreBook {
         "Précis, patient et un peu mystérieux.",
         "A trouvé un jour un nom mal écrit dans la Chronique, et a passé un an à le corriger.",
         "Que pas une lettre ne se perde.",
+      ],
+      [
+        "Dreißig Wörter, dreißig richtig. Die Chronik verzeichnet nie etwas falsch.",
+        "Ein geheimer Titel für den, der die Krönungsprüfung des Count ohne einen einzigen Fehler bestand. Die Große Chronik selbst rief ihn ins Archiv unter der Feste, wo die ältesten Namen verwahrt werden. Seitdem verzeichnet er nicht mehr nur; er sorgt dafür, dass sich das Verzeichnete nie ändert.",
+        "Genau, geduldig und ein wenig geheimnisvoll.",
+        "Fand einst einen falsch geschriebenen Namen in der Chronik und brauchte ein Jahr, um ihn zu berichtigen.",
+        "Kein Buchstabe darf verloren gehen.",
+      ],
+      [
+        "Trinta palavras, trinta certas. A Crônica nunca registra errado.",
+        "Um título secreto para quem superou a prova de coroação do Count sem um único erro. A própria Grande Crônica o chamou ao arquivo sob o forte, onde ficam os nomes mais antigos. Desde então ele não só registra; garante que o registro nunca mude.",
+        "Preciso, paciente e um pouco misterioso.",
+        "Encontrou um dia um nome escrito errado na Crônica e levou um ano para corrigi-lo.",
+        "Nem uma letra pode se perder.",
       ],
     ),
   };

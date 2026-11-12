@@ -20,7 +20,7 @@ and even then confirm first what will change and wait for his yes. Everything el
 | `mobile/lib/engine/game.dart` | `Game`: experience and level, combo, figures, quests, feats, gear, enemies, advice, the build (`bp`) and the path of jobs. Never changes memory or rank |
 | `mobile/lib/engine/lore.dart` | `LoreBook`: the lore of every title and job (quote, story, nature, background, drive) in both languages, from the document "Kitab Lore Verbarium"; shown only by `ui/lore.dart` (the introduction after a coronation, closed by its button, and the story page when the hero is tapped in Karakter) |
 | `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (45 on the map + 7 hidden; the Count's tier asks whether the build still leads with the line's own side), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
-| `mobile/lib/app/lang.dart`, `l10n.dart` | `code` ('id', 'en', 'es', 'fr') and `tr(id, en, es, fr)`: every text is written in all four languages where it is used; data written only in English (gear, enemies, feats, job hints) gets its Spanish and French from `l10n.dart` through `tx(en)` |
+| `mobile/lib/app/lang.dart`, `l10n.dart` | `code` ('id', 'en', 'es', 'fr', 'de', 'pt') and `tr(id, en, es, fr, de, pt)`: every text is written in all six languages where it is used; data written only in English (gear, enemies, feats, job hints) gets the other four from `l10n.dart` through `tx(en)`. The learning language is universal (every kingdom); where it is the kingdom's own language, `via` (`set.via`, chosen once per kingdom on its banner, English by default) gives the language of meanings |
 | `mobile/lib/data/` | `store.dart` (one JSON document, keys listed at the top — never rename), `deck.dart` (also `Kingdom`: the five kingdoms, their arms and the letters offered under the gap) |
 | `mobile/lib/app/` | `app.dart` (`App`: settings, sound, `stamp`), `native.dart` (channel `verbarium/native`) |
 | `mobile/lib/ui/` | `theme.dart` (`Pal`, `Look`, `T`, `Dur`), `widgets.dart` (paper, buttons, `Shield`, `Seal`), `root.dart` (app, opening, first run, tabs, Today), `run.dart` (learning, trials and fights: gap, build, choice, the arena), `pixel.dart` (sprites as letter grids, `HeroSprite`, `EnemySprite`), `hero.dart` (Karakter), `coronation.dart`, `realm.dart`, `chronicle.dart`, `settings.dart` |
@@ -48,8 +48,8 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
   headword fits it in the form given. Run `check_deck.py` after edits.
 - **Score ranges** only from the test owners' own CEFR alignments; update `docs/riset-skor.md`, `Engine.ranks`
   and `SourcesPage` together. A title is "kosakata setara …", never a promised score.
-- **Four languages**: Indonesian, English, Spanish and French (`set.lang`: id, en, es, fr). A new text goes in as
-  `tr('…', '…', '…', '…')` (French with ’, never '); names of titles and jobs stay English in every language. A
+- **Six languages**: Indonesian, English, Spanish, French, German and Portuguese (`set.lang`: id, en, es, fr, de, pt).
+  A new text goes in as `tr('…', '…', '…', '…', '…', '…')` (French with ’, never '); names of titles and jobs stay English in every language. A
   definition never uses the word it explains. `docs/privasi.md` and Pengaturan → Privasi say the same thing.
 - **Jobs** are decided by the build at a coronation (`Game.onPromotion`); there is no way to pick or change one,
   and a perk may never touch memory, rank or a coronation trial.

@@ -543,7 +543,7 @@ Future<bool> confirm(
               const SizedBox(height: 18),
               InkButton(yes, onTap: () => Navigator.of(ctx).pop(true)),
               GhostButton(
-                no ?? tr('Batal', 'Cancel', 'Cancelar', 'Annuler'),
+                no ?? tr('Batal', 'Cancel', 'Cancelar', 'Annuler', 'Abbrechen', 'Cancelar'),
                 onTap: () => Navigator.of(ctx).pop(false),
               ),
             ],

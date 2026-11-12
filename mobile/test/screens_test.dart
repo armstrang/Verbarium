@@ -18,6 +18,7 @@ import 'package:verbarium/ui/root.dart';
 import 'package:verbarium/ui/run.dart';
 import 'package:verbarium/ui/settings.dart';
 import 'package:verbarium/ui/theme.dart';
+import 'package:verbarium/ui/banner.dart';
 import 'package:verbarium/ui/world.dart';
 
 final now = DateTime(2026, 11, 10, 9).millisecondsSinceEpoch;
@@ -189,7 +190,14 @@ void main() {
     await fonts();
   });
 
-  for (final (phone, want) in const [('es', 'es'), ('fr', 'fr'), ('ja', 'en'), ('id', 'id')]) {
+  for (final (phone, want) in const [
+    ('es', 'es'),
+    ('fr', 'fr'),
+    ('de', 'de'),
+    ('pt', 'pt'),
+    ('ja', 'en'),
+    ('id', 'id'),
+  ]) {
     testWidgets('a new learner starts in the phone language ($phone -> $want)', (tester) async {
       App.phoneLanguage = () => phone;
       final app = (await tester.runAsync(() => App.boot(backend: MemoryBackend())))!;
@@ -751,6 +759,54 @@ void main() {
     expect(app.engine.seenTotal, greaterThan(0));
     await tester.pump(const Duration(seconds: 3));
     await beat(tester);
+  });
+
+  testWidgets('a kingdom\'s banner names an exam; a kingdom learned in its own language asks how to explain it', (
+    tester,
+  ) async {
+    phone(tester);
+    final app = await learner(tester, rank: 1);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await tester.tap(find.text('Negeri'));
+    await beat(tester, 700);
+    await tester.runAsync(() => app.chooseRealm('de'));
+    await tester.tap(find.text('Grauwacht'));
+    await beat(tester, 2500);
+    expect(find.byType(KingdomScreen), findsOneWidget);
+    expect(find.text('UJIAN YANG BISA JADI TUJUAN'), findsNothing, reason: 'no question in Indonesian');
+    await tester.tap(find.byType(BannerPill));
+    await beat(tester, 600);
+    expect(find.text('UJIAN YANG BISA JADI TUJUAN'), findsOneWidget);
+    expect(find.textContaining('Goethe-Zertifikat'), findsOneWidget);
+    await shot(tester, '84-panji-grauwacht');
+    await tester.tap(find.text('Tutup'));
+    await beat(tester, 600);
+    await tester.tap(find.text('Peta'));
+    await beat(tester, 900);
+    // Spanish learned through Spanish: Valdoro asks once which language explains it
+    app.put('lang', 'es');
+    await tester.runAsync(() => app.chooseRealm('es'));
+    await beat(tester, 600);
+    await tester.tap(find.text('Valdoro'));
+    await beat(tester, 2500);
+    expect(app.clash, isTrue);
+    expect(find.text('LOS SIGNIFICADOS SE MUESTRAN EN'), findsOneWidget);
+    expect(find.textContaining('DELE'), findsOneWidget);
+    for (var i = 0; i < 10; i++) {
+      await tester.pump(const Duration(milliseconds: 300));
+    }
+    await shot(tester, '85-panji-valdoro');
+    await tester.tap(find.text('Deutsch'));
+    await beat(tester, 400);
+    expect(app.via, 'de');
+    final w = app.deck.words.first;
+    expect(w.gloss, isNot(w.def), reason: 'the meaning is now German, not the English definition');
+    await tester.tap(find.text('Cerrar'));
+    await beat(tester, 600);
+    expect(find.text('LOS SIGNIFICADOS SE MUESTRAN EN'), findsNothing, reason: 'asked only once');
+    app.put('lang', 'id');
+    await tester.pump(const Duration(seconds: 2));
   });
 
   testWidgets('every foe on its own ground, for looking at', (tester) async {

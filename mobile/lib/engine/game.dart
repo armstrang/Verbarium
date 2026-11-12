@@ -23,8 +23,22 @@ class Gear {
   const Gear(this.id, this.slot, this._id, this._en, this._fromId, this._fromEn, this.tone);
   String get name => tr(_id, _en);
   String get from => _fromId.isEmpty
-      ? tr('Bekal awal', 'What you set out with', 'Con lo que partiste', 'Ce avec quoi tu es parti')
-      : tr('Rampasan dari $_fromId', 'Taken from the $_fromEn', 'Botín: ${tx(_fromEn)}', 'Butin : ${tx(_fromEn)}');
+      ? tr(
+          'Bekal awal',
+          'What you set out with',
+          'Con lo que partiste',
+          'Ce avec quoi tu es parti',
+          'Womit du aufgebrochen bist',
+          'Com o que você partiu',
+        )
+      : tr(
+          'Rampasan dari $_fromId',
+          'Taken from the $_fromEn',
+          'Botín: ${tx(_fromEn)}',
+          'Butin : ${tx(_fromEn)}',
+          'Erbeutet von: $_fromEn',
+          'Tomado de: $_fromEn',
+        );
 }
 
 class Feat {
@@ -59,48 +73,69 @@ class Quest {
 
   /// said in the language that is on now, so a quest made yesterday in another language still reads right
   String get text => switch (id) {
-    'rev' => tr('Ulang $goal kata', 'Review $goal words', 'Repasa $goal palabras', 'Révise $goal mots'),
+    'rev' => tr(
+      'Ulang $goal kata',
+      'Review $goal words',
+      'Repasa $goal palabras',
+      'Révise $goal mots',
+      'Wiederhole $goal Wörter',
+      'Revise $goal palavras',
+    ),
     'new' => tr(
       'Pelajari $goal kata baru',
       'Learn $goal new words',
       'Aprende $goal palabras nuevas',
       'Apprends $goal nouveaux mots',
+      'Lerne $goal neue Wörter',
+      'Aprenda $goal palavras novas',
     ),
     'weak' => tr(
       'Rebut kembali $goal kata yang pernah kamu lupa',
       'Win back $goal words you once forgot',
       'Recupera $goal palabras que olvidaste',
       'Reconquiers $goal mots oubliés',
+      'Hol $goal Wörter zurück, die du einmal vergessen hast',
+      'Recupere $goal palavras que você esqueceu',
     ),
     'clean' => tr(
       'Isi $goal celah tanpa bantuan',
       'Fill $goal gaps without help',
       'Completa $goal huecos sin ayuda',
       'Remplis $goal trous sans aide',
+      'Fülle $goal Lücken ohne Hilfe',
+      'Preencha $goal lacunas sem ajuda',
     ),
     'combo' => tr(
       'Raih combo $goal',
       'Reach a combo of $goal',
       'Llega a un combo de $goal',
       'Atteins un combo de $goal',
+      'Erreiche eine Kombo von $goal',
+      'Chegue a um combo de $goal',
     ),
     'fast' => tr(
       'Jawab $goal celah di bawah enam detik',
       'Answer $goal gaps in under six seconds',
       'Responde $goal huecos en menos de seis segundos',
       'Réponds à $goal trous en moins de six secondes',
+      'Beantworte $goal Lücken in unter sechs Sekunden',
+      'Responda $goal lacunas em menos de seis segundos',
     ),
     'days5' => tr(
       'Belajar $goal hari dalam minggu ini',
       'Study on $goal days this week',
       'Estudia $goal días esta semana',
       'Étudie $goal jours cette semaine',
+      'Lerne diese Woche an $goal Tagen',
+      'Estude em $goal dias nesta semana',
     ),
     _ => tr(
       'Jawab $goal pertanyaan',
       'Answer $goal questions',
       'Responde $goal preguntas',
       'Réponds à $goal questions',
+      'Beantworte $goal Fragen',
+      'Responda $goal perguntas',
     ),
   };
   Map<String, dynamic> toJson() => {'id': id, 'g': goal, 'x': xp, 'p': prog, 'c': claimed ? 1 : 0};
@@ -553,6 +588,8 @@ class Game {
             'Quest done: ${q.text}',
             'Misión cumplida: ${q.text}',
             'Quête accomplie : ${q.text}',
+            'Aufgabe erfüllt: ${q.text}',
+            'Missão cumprida: ${q.text}',
           ),
         );
       }
@@ -578,8 +615,14 @@ class Game {
     return Reward(gain, combo, false, up, up ? [_levelNews] : const []);
   }
 
-  String get _levelNews =>
-      tr('Naik ke level $level', 'Level $level reached', 'Nivel $level alcanzado', 'Niveau $level atteint');
+  String get _levelNews => tr(
+    'Naik ke level $level',
+    'Level $level reached',
+    'Nivel $level alcanzado',
+    'Niveau $level atteint',
+    'Stufe $level erreicht',
+    'Nível $level alcançado',
+  );
 
   // ---------------------------------------------------------------- figures (0..100)
 
@@ -682,7 +725,18 @@ class Game {
         ? _bossDrops[min(_bossDrops.length - 1, rankBefore)]
         : _subDrops[min(_subDrops.length - 1, rankBefore * 2 + stageBefore)];
     final it = _grant(id);
-    if (it != null) news.add(tr('Rampasan: ${it.name}', 'Loot: ${it.name}', 'Botín: ${it.name}', 'Butin : ${it.name}'));
+    if (it != null) {
+      news.add(
+        tr(
+          'Rampasan: ${it.name}',
+          'Loot: ${it.name}',
+          'Botín: ${it.name}',
+          'Butin : ${it.name}',
+          'Beute: ${it.name}',
+          'Espólio: ${it.name}',
+        ),
+      );
+    }
     if (boss) news.addAll(_feat('boss1'));
     if (boss && flawless) news.addAll(_feat('perfect'));
     store.touch();
@@ -694,7 +748,7 @@ class Game {
     if (f.contains(id)) return const [];
     f.add(id);
     final name = feats.firstWhere((x) => x.id == id).name;
-    return [tr('Pencapaian: $name', 'Feat: $name', 'Hazaña: $name', 'Exploit : $name')];
+    return [tr('Pencapaian: $name', 'Feat: $name', 'Hazaña: $name', 'Exploit : $name', 'Tat: $name', 'Feito: $name')];
   }
 
   // ---------------------------------------------------------------- the build and the jobs
@@ -812,6 +866,8 @@ class Game {
         'A new path: ${got.name}',
         'Un nuevo camino: ${got.name}',
         'Une nouvelle voie : ${got.name}',
+        'Ein neuer Weg: ${got.name}',
+        'Um novo caminho: ${got.name}',
       ),
       got.perk.text,
     ];
@@ -860,7 +916,9 @@ class Game {
       if (ok && !f.contains(id)) {
         f.add(id);
         final name = feats.firstWhere((x) => x.id == id).name;
-        news.add(tr('Pencapaian: $name', 'Feat: $name', 'Hazaña: $name', 'Exploit : $name'));
+        news.add(
+          tr('Pencapaian: $name', 'Feat: $name', 'Hazaña: $name', 'Exploit : $name', 'Tat: $name', 'Feito: $name'),
+        );
       }
     });
     return news;
@@ -963,30 +1021,40 @@ class Game {
         'Your spelling is often one letter off. Slow down a little on long words.',
         'A menudo fallas por una letra. Ve un poco más despacio con las palabras largas.',
         'Ton orthographe dérape souvent d’une lettre. Ralentis un peu sur les mots longs.',
+        'Deine Schreibung liegt oft um einen Buchstaben daneben. Nimm dir bei langen Wörtern etwas mehr Zeit.',
+        'Sua grafia costuma errar por uma letra. Vá um pouco mais devagar nas palavras longas.',
       ),
       'f': tr(
         'Artinya sudah kamu pegang, bentuk katanya yang sering meleset. Perhatikan kata sebelum celah.',
         'You have the meaning; it is the form of the word that slips. Look at the words before the gap.',
         'Ya sabes el significado; lo que se escapa es la forma. Mira las palabras antes del hueco.',
         'Tu connais le sens ; c’est la forme du mot qui t’échappe. Regarde les mots avant le trou.',
+        'Die Bedeutung sitzt, die Form des Wortes rutscht. Sieh dir die Wörter vor der Lücke an.',
+        'O sentido você tem; é a forma da palavra que escapa. Olhe as palavras antes da lacuna.',
       ),
       'm': tr(
         'Banyak arti yang belum melekat. Ulangi dulu sebelum menambah kata baru.',
         'Many meanings have not settled yet. Review before taking on new words.',
         'Muchos significados aún no se han asentado. Repasa antes de aprender palabras nuevas.',
         'Beaucoup de sens ne sont pas encore ancrés. Révise avant d’aborder de nouveaux mots.',
+        'Viele Bedeutungen sitzen noch nicht. Wiederhole, bevor du neue Wörter angehst.',
+        'Muitos sentidos ainda não se firmaram. Revise antes de pegar palavras novas.',
       ),
       'o': tr(
         'Susunan kalimatmu masih goyah. Kalimat pendek akan lebih sering muncul untuk disusun.',
         'Your word order still wavers. Short sentences will come up more often to be built.',
         'El orden de las palabras aún vacila. Aparecerán más frases cortas para construir.',
         'L’ordre des mots hésite encore. Des phrases courtes à construire reviendront plus souvent.',
+        'Deine Wortstellung schwankt noch. Kurze Sätze kommen öfter zum Bauen.',
+        'Sua ordem das palavras ainda vacila. Frases curtas vão aparecer mais vezes para montar.',
       ),
       'c': tr(
         'Pasangan kata (kolokasi) perlu diasah. Kartu kolokasi akan lebih sering muncul.',
         'Partner words (collocations) need work. Collocation cards will come up more often.',
         'Las palabras compañeras (colocaciones) necesitan trabajo. Aparecerán más a menudo.',
         'Les mots compagnons (collocations) demandent du travail. Ils reviendront plus souvent.',
+        'Partnerwörter (Kollokationen) brauchen Übung. Kollokationskarten kommen öfter.',
+        'As palavras parceiras (colocações) precisam de treino. Os cartões de colocação vão aparecer mais vezes.',
       ),
     };
     String? worst;
@@ -1021,6 +1089,8 @@ class Game {
           'Your title wavers. Defend it before anything else.',
           'Tu título se tambalea. Defiéndelo antes que nada.',
           'Ton titre vacille. Défends-le avant toute chose.',
+          'Dein Titel wankt. Verteidige ihn vor allem anderen.',
+          'Seu título vacila. Defenda-o antes de qualquer coisa.',
         ),
       );
     } else if (en != null && fightOpen) {
@@ -1030,6 +1100,8 @@ class Game {
           'The ${en.name} can be fought now. Your chance of winning is about ${winChance()}%.',
           'Ya puedes enfrentarte a ${en.name}. Tu probabilidad de ganar ronda el ${winChance()} %.',
           'Tu peux affronter ${en.name}. Tes chances de victoire sont d’environ ${winChance()} %.',
+          'Gegen ${en.name} kannst du jetzt kämpfen. Deine Siegchance liegt bei etwa ${winChance()} %.',
+          'Já dá para lutar contra ${en.name}. Sua chance de vencer é de cerca de ${winChance()}%.',
         ),
       );
     }
@@ -1040,6 +1112,8 @@ class Game {
           'Start with ${p.reviews} reviews, then ${p.fresh} new words.',
           'Empieza con ${p.reviews} repasos y luego ${p.fresh} palabras nuevas.',
           'Commence par ${p.reviews} révisions, puis ${p.fresh} nouveaux mots.',
+          'Beginne mit ${p.reviews} Wiederholungen, dann ${p.fresh} neue Wörter.',
+          'Comece com ${p.reviews} revisões, depois ${p.fresh} palavras novas.',
         ),
       );
     } else if (p.reviews > 0) {
@@ -1049,6 +1123,8 @@ class Game {
           '${p.reviews} words are waiting for review.',
           '${p.reviews} palabras esperan repaso.',
           '${p.reviews} mots attendent une révision.',
+          '${p.reviews} Wörter warten auf Wiederholung.',
+          '${p.reviews} palavras esperam revisão.',
         ),
       );
     } else if (p.fresh > 0) {
@@ -1058,6 +1134,8 @@ class Game {
           'Nothing to review. A good time for ${p.fresh} new words.',
           'Nada que repasar. Buen momento para ${p.fresh} palabras nuevas.',
           'Rien à réviser. Bon moment pour ${p.fresh} nouveaux mots.',
+          'Nichts zu wiederholen. Eine gute Zeit für ${p.fresh} neue Wörter.',
+          'Nada para revisar. Boa hora para ${p.fresh} palavras novas.',
         ),
       );
     }
@@ -1072,6 +1150,8 @@ class Game {
           'Your build leans to ${statNames[o[0]]} (${(s[o[0]] * 100).round()}%), then ${statNames[o[1]]}.',
           'Tu estilo se inclina hacia ${statNames[o[0]]} (${(s[o[0]] * 100).round()} %), luego ${statNames[o[1]]}.',
           'Ton style penche vers ${statNames[o[0]]} (${(s[o[0]] * 100).round()} %), puis ${statNames[o[1]]}.',
+          'Dein Build neigt zu ${statNames[o[0]]} (${(s[o[0]] * 100).round()} %), dann ${statNames[o[1]]}.',
+          'Seu build pende para ${statNames[o[0]]} (${(s[o[0]] * 100).round()}%), depois ${statNames[o[1]]}.',
         ),
       );
     }
@@ -1082,6 +1162,8 @@ class Game {
           'All of today\'s tasks are done. Come back tomorrow.',
           'Todas las tareas de hoy están hechas. Vuelve mañana.',
           'Toutes les tâches du jour sont faites. Reviens demain.',
+          'Alle Aufgaben für heute sind erledigt. Komm morgen wieder.',
+          'Todas as tarefas de hoje estão feitas. Volte amanhã.',
         ),
       );
     }

@@ -86,35 +86,31 @@ class Colloc {
   String get gloss => glossOf(id, def, meaning);
 }
 
-/// Spanish and French meanings, from `assets/deck/es/` and `assets/deck/fr/` (`word|meaning`; for collocations
-/// `phrase with [answer]|meaning`), keyed by word id or collocation id: [Spanish, French]
+/// Spanish, French, German and Portuguese meanings, from `assets/deck/es/`, `fr/`, `de/` and `pt/` (`word|meaning`;
+/// for collocations `phrase with [answer]|meaning`), keyed by word id or collocation id: [es, fr, de, pt]
 final glosses = <String, List<String>>{};
 
-/// what a word means in the language that is on: Indonesian meaning, English definition, or the Spanish or French
-/// meaning (the English definition stands in while one is missing)
-String glossOf(String id, String def, String meaning) {
-  final i = foreign;
+/// what a word means in the language meanings are shown in ([meaning]): Indonesian meaning, English definition, or
+/// the Spanish, French, German or Portuguese meaning (the English definition stands in while one is missing)
+String glossOf(String id, String def, String indonesian) {
+  final m = meaning;
+  final i = fourOf(m);
   if (i >= 0) {
-    final g = glosses[id]?[i] ?? '';
-    if (g.isNotEmpty) return g;
+    final g = glosses[id];
+    if (g != null && i < g.length && g[i].isNotEmpty) return g[i];
   }
-  return code != 'id' && def.isNotEmpty ? def : meaning;
+  return m != 'id' && def.isNotEmpty ? def : indonesian;
 }
 
 /// The sentence of a kingdom's word in the languages it is learned through, keyed by word id: Indonesian, English,
-/// Spanish, French (empty where it is the language being learned)
+/// Spanish, French, German, Portuguese (empty where it is the language being learned)
 final sentences = <String, List<String>>{};
 
 String transOf(String id) {
   final s = sentences[id];
   if (s == null) return '';
-  final t =
-      s[switch (code) {
-        'id' => 0,
-        'es' => 2,
-        'fr' => 3,
-        _ => 1,
-      }];
+  final m = meaning;
+  final t = s[m == 'id' ? 0 : (fourOf(m) < 0 ? 1 : 2 + fourOf(m))];
   return t.isNotEmpty ? t : s[1];
 }
 
@@ -194,13 +190,13 @@ class Deck {
       defs.addAll(parseDefs(await rootBundle.loadString(f)));
     }
     glosses.clear();
-    for (final (i, l) in const [(0, 'es'), (1, 'fr')]) {
+    for (final (i, l) in const [(0, 'es'), (1, 'fr'), (2, 'de'), (3, 'pt')]) {
       for (final f in all.where((a) => a.startsWith('assets/deck/$l/'))) {
         final text = await rootBundle.loadString(f);
         final m = f.endsWith('/collocations.txt')
             ? parseDefs(text).map((k, v) => MapEntry('c:${k.replaceAll('[', '').replaceAll(']', '')}', v))
             : parseDefs(text);
-        m.forEach((k, v) => (glosses[k] ??= ['', ''])[i] = v);
+        m.forEach((k, v) => (glosses[k] ??= ['', '', '', ''])[i] = v);
       }
     }
     return Deck(
@@ -242,8 +238,10 @@ class Deck {
       final m = RegExp(r'\[([^\]]+)\]').firstMatch(sent);
       if (m == null) continue;
       final id = f[col].trim();
-      sentences[id] = [plain(f[7]), plain(f[8]), lang == 'es' ? '' : plain(f[9]), lang == 'fr' ? '' : plain(f[10])];
-      glosses[id] = [lang == 'es' ? '' : plain(f[3]), lang == 'fr' ? '' : plain(f[4])];
+      // every language's sentence and word, but not the one being learned
+      String other(int i, String l) => lang == l ? '' : plain(f[i]);
+      sentences[id] = [plain(f[7]), plain(f[8]), other(9, 'es'), other(10, 'fr'), other(11, 'de'), other(12, 'pt')];
+      glosses[id] = [other(3, 'es'), other(4, 'fr'), other(5, 'de'), other(6, 'pt')];
       out.add(
         Word(
           id,

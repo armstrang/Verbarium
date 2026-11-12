@@ -40,6 +40,8 @@ String below(String s) => s.startsWith('<')
         'below ${s.substring(1)}',
         'por debajo de ${s.substring(1)}',
         'en dessous de ${s.substring(1)}',
+        'unter ${s.substring(1)}',
+        'abaixo de ${s.substring(1)}',
       )
     : s;
 
@@ -224,6 +226,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                       'TOEFL & IELTS vocabulary',
                       'Vocabulario de TOEFL e IELTS',
                       'Vocabulaire du TOEFL et de l’IELTS',
+                      'Wortschatz für TOEFL & IELTS',
+                      'Vocabulário de TOEFL e IELTS',
                     ),
                   ),
                 ),
@@ -284,7 +288,14 @@ class _OnboardingState extends State<Onboarding> {
                 runSpacing: 8,
                 alignment: WrapAlignment.center,
                 children: [
-                  for (final l in const [('id', 'Indonesia'), ('en', 'English'), ('es', 'Español'), ('fr', 'Français')])
+                  for (final l in const [
+                    ('id', 'Indonesia'),
+                    ('en', 'English'),
+                    ('es', 'Español'),
+                    ('fr', 'Français'),
+                    ('de', 'Deutsch'),
+                    ('pt', 'Português'),
+                  ])
                     Padding(
                       padding: const EdgeInsets.only(right: 8),
                       child: Press(
@@ -313,10 +324,17 @@ class _OnboardingState extends State<Onboarding> {
                 ],
               ),
               const SizedBox(height: 16),
-              Label(tr('Selamat datang', 'Welcome', 'Bienvenido', 'Bienvenue')),
+              Label(tr('Selamat datang', 'Welcome', 'Bienvenido', 'Bienvenue', 'Willkommen', 'Bem-vindo')),
               const SizedBox(height: 8),
               Text(
-                tr('Pilih panjimu', 'Choose your banner', 'Elige tu estandarte', 'Choisis ta bannière'),
+                tr(
+                  'Pilih panjimu',
+                  'Choose your banner',
+                  'Elige tu estandarte',
+                  'Choisis ta bannière',
+                  'Wähle dein Banner',
+                  'Escolha seu estandarte',
+                ),
                 style: T.display(38, pal.ink),
               ),
               const SizedBox(height: 10),
@@ -326,6 +344,8 @@ class _OnboardingState extends State<Onboarding> {
                   'Words and spelling follow the test you are heading for. You can change it at any time.',
                   'Las palabras y la ortografía siguen el examen al que te diriges. Puedes cambiarlo cuando quieras.',
                   'Les mots et l’orthographe suivent le test que tu vises. Tu peux le changer quand tu veux.',
+                  'Wörter und Schreibung folgen der Prüfung, die du anstrebst. Du kannst es jederzeit ändern.',
+                  'As palavras e a grafia seguem a prova que você vai fazer. Dá para mudar a qualquer momento.',
                 ),
                 style: T.body(17.5, pal.muted),
               ),
@@ -343,6 +363,8 @@ class _OnboardingState extends State<Onboarding> {
                           'Words of campus and lectures. American spelling.',
                           'Palabras del campus y de las clases. Ortografía estadounidense.',
                           'Mots du campus et des cours. Orthographe américaine.',
+                          'Wörter aus Campus und Vorlesung. Amerikanische Schreibung.',
+                          'Palavras de campus e aulas. Grafia americana.',
                         ),
                         _banner == 'toefl',
                         () => setState(() => _banner = 'toefl'),
@@ -358,6 +380,8 @@ class _OnboardingState extends State<Onboarding> {
                           'Words of essay topics and charts. British spelling.',
                           'Palabras de redacciones y gráficos. Ortografía británica.',
                           'Mots des rédactions et des graphiques. Orthographe britannique.',
+                          'Wörter aus Aufsatzthemen und Diagrammen. Britische Schreibung.',
+                          'Palavras de temas de redação e gráficos. Grafia britânica.',
                         ),
                         _banner == 'ielts',
                         () => setState(() => _banner = 'ielts'),
@@ -367,7 +391,10 @@ class _OnboardingState extends State<Onboarding> {
                 ),
               ),
               const Spacer(),
-              InkButton(tr('Lanjut', 'Continue', 'Continuar', 'Continuer'), onTap: _banner.isEmpty ? null : _next),
+              InkButton(
+                tr('Lanjut', 'Continue', 'Continuar', 'Continuer', 'Weiter', 'Continuar'),
+                onTap: _banner.isEmpty ? null : _next,
+              ),
             ],
           )
         : Column(
@@ -381,11 +408,20 @@ class _OnboardingState extends State<Onboarding> {
                   'Banner ${bannerName(_banner)}',
                   'Estandarte ${bannerName(_banner)}',
                   'Bannière ${bannerName(_banner)}',
+                  'Banner ${bannerName(_banner)}',
+                  'Estandarte ${bannerName(_banner)}',
                 ),
               ),
               const SizedBox(height: 8),
               Text(
-                tr('Dari mana kamu mulai?', 'Where do you start?', '¿Por dónde empiezas?', 'Par où commences-tu ?'),
+                tr(
+                  'Dari mana kamu mulai?',
+                  'Where do you start?',
+                  '¿Por dónde empiezas?',
+                  'Par où commences-tu ?',
+                  'Wo fängst du an?',
+                  'Por onde você começa?',
+                ),
                 style: T.display(38, pal.ink),
               ),
               const SizedBox(height: 10),
@@ -395,6 +431,8 @@ class _OnboardingState extends State<Onboarding> {
                   'Everyone starts as a Peasant. If your vocabulary is already far along, the placement test can raise you at once, as high as Baron.',
                   'Todos empiezan como Peasant. Si tu vocabulario ya va avanzado, la prueba de nivel puede subirte enseguida, hasta Baron.',
                   'Tout le monde commence en Peasant. Si ton vocabulaire est déjà avancé, le test de niveau peut te faire monter tout de suite, jusqu’à Baron.',
+                  'Alle beginnen als Peasant. Ist dein Wortschatz schon weit, kann dich der Einstufungstest sofort aufsteigen lassen, bis zum Baron.',
+                  'Todos começam como Peasant. Se seu vocabulário já vai longe, o teste de nivelamento pode subir você na hora, até Baron.',
                 ),
                 style: T.body(17.5, pal.muted),
               ),
@@ -418,6 +456,8 @@ class _OnboardingState extends State<Onboarding> {
                   'Take the placement test',
                   'Hacer la prueba de nivel',
                   'Passer le test de niveau',
+                  'Einstufungstest machen',
+                  'Fazer o teste de nivelamento',
                 ),
                 onTap: _placement,
               ),
@@ -429,13 +469,22 @@ class _OnboardingState extends State<Onboarding> {
                     'Up to 24 words, about five minutes',
                     'Hasta 24 palabras, unos cinco minutos',
                     'Jusqu’à 24 mots, environ cinq minutes',
+                    'Bis zu 24 Wörter, etwa fünf Minuten',
+                    'Até 24 palavras, uns cinco minutos',
                   ),
                   style: T.body(15, pal.muted),
                 ),
               ),
               const SizedBox(height: 6),
               GhostButton(
-                tr('Mulai sebagai Peasant', 'Start as a Peasant', 'Empezar como Peasant', 'Commencer en Peasant'),
+                tr(
+                  'Mulai sebagai Peasant',
+                  'Start as a Peasant',
+                  'Empezar como Peasant',
+                  'Commencer en Peasant',
+                  'Als Peasant beginnen',
+                  'Começar como Peasant',
+                ),
                 onTap: App.I.finishOnboarding,
               ),
             ],
@@ -458,7 +507,14 @@ class _BannerCard extends StatelessWidget {
     final tint = pal.tincture(id == 'toefl' ? 3 : 2);
     return Press(
       onTap: onTap,
-      label: tr('Panji $title', 'Banner $title', 'Estandarte $title', 'Bannière $title'),
+      label: tr(
+        'Panji $title',
+        'Banner $title',
+        'Estandarte $title',
+        'Bannière $title',
+        'Banner $title',
+        'Estandarte $title',
+      ),
       child: Semantics(
         selected: chosen,
         child: AnimatedContainer(
@@ -527,10 +583,10 @@ class _ShellState extends State<Shell> {
     final look = Look.of(context);
     final pal = look.pal;
     final names = [
-      tr('Hari ini', 'Today', 'Hoy', 'Aujourd’hui'),
-      tr('Negeri', 'Realm', 'Reino', 'Royaume'),
-      tr('Karakter', 'Character', 'Personaje', 'Personnage'),
-      tr('Kronik', 'Chronicle', 'Crónica', 'Chronique'),
+      tr('Hari ini', 'Today', 'Hoy', 'Aujourd’hui', 'Heute', 'Hoje'),
+      tr('Negeri', 'Realm', 'Reino', 'Royaume', 'Reich', 'Reino'),
+      tr('Karakter', 'Character', 'Personaje', 'Personnage', 'Figur', 'Personagem'),
+      tr('Kronik', 'Chronicle', 'Crónica', 'Chronique', 'Chronik', 'Crônica'),
     ];
     const icons = [Icons.edit_outlined, Icons.map_outlined, Icons.shield_outlined, Icons.menu_book_outlined];
     final pages = [const Today(), const RealmWorld(), const HeroTab(), const ChronicleTab()];
@@ -652,14 +708,30 @@ class FightCard extends StatelessWidget {
     final rank = e.rank;
     if (e.shaky) {
       return Notice(
-        title: tr('Gelarmu goyah', 'Your title wavers', 'Tu título se tambalea', 'Ton titre vacille'),
+        title: tr(
+          'Gelarmu goyah',
+          'Your title wavers',
+          'Tu título se tambalea',
+          'Ton titre vacille',
+          'Dein Titel wankt',
+          'Seu título vacila',
+        ),
         text: tr(
           'Kata dari ranah yang sudah kamu kuasai banyak yang lepas. Pertahankan gelar ${rankNames[rank]} dalam ${e.shakyDaysLeft} hari, atau gelar turun.',
           'Many words from the lands you already hold have slipped. Defend the title of ${rankNames[rank]} within ${e.shakyDaysLeft} days, or it is lost.',
           'Muchas palabras de las tierras que ya dominas se han escapado. Defiende el título de ${rankNames[rank]} en ${e.shakyDaysLeft} días o lo perderás.',
           'Beaucoup de mots des terres que tu tiens t’ont échappé. Défends le titre de ${rankNames[rank]} dans les ${e.shakyDaysLeft} jours, sinon il est perdu.',
+          'Viele Wörter aus deinen Ländern sind dir entglitten. Verteidige den Titel ${rankNames[rank]} innerhalb von ${e.shakyDaysLeft} Tagen, sonst ist er verloren.',
+          'Muitas palavras das terras que você já tem escaparam. Defenda o título de ${rankNames[rank]} em até ${e.shakyDaysLeft} dias, ou ele será perdido.',
         ),
-        action: tr('Pertahankan gelar', 'Defend the title', 'Defender el título', 'Défendre le titre'),
+        action: tr(
+          'Pertahankan gelar',
+          'Defend the title',
+          'Defender el título',
+          'Défendre le titre',
+          'Titel verteidigen',
+          'Defender o título',
+        ),
         strong: true,
         onTap: () => runFrom(context, RunScreen(kind: RunKind.defence, tier: rank)),
       );
@@ -667,12 +739,21 @@ class FightCard extends StatelessWidget {
     final en = g.enemy;
     if (en == null) {
       return Notice(
-        title: tr('Takhta di tanganmu', 'The throne is yours', 'El trono es tuyo', 'Le trône est à toi'),
+        title: tr(
+          'Takhta di tanganmu',
+          'The throne is yours',
+          'El trono es tuyo',
+          'Le trône est à toi',
+          'Der Thron gehört dir',
+          'O trono é seu',
+        ),
         text: tr(
           'Tidak ada lawan di atas King. Jaga kata-katamu tetap kukuh.',
           'There is no foe above a King. Keep your words solid.',
           'No hay enemigo por encima de un King. Mantén firmes tus palabras.',
           'Aucun ennemi au-dessus d’un King. Garde tes mots bien ancrés.',
+          'Über einem King gibt es keinen Gegner. Halte deine Wörter fest.',
+          'Não há inimigo acima de um King. Mantenha suas palavras firmes.',
         ),
       );
     }
@@ -709,12 +790,16 @@ class FightCard extends StatelessWidget {
                                 'Boss · on the way to ${rankNames[next]}',
                                 'Jefe · camino a ${rankNames[next]}',
                                 'Boss · en route vers ${rankNames[next]}',
+                                'Boss · auf dem Weg zum ${rankNames[next]}',
+                                'Boss · a caminho de ${rankNames[next]}',
                               )
                             : tr(
                                 'Penjaga jalan · tingkat ${stageName(e.stage)}',
                                 'Guard of the road · stage ${stageName(e.stage)}',
                                 'Guardián del camino · etapa ${stageName(e.stage)}',
                                 'Gardien de la route · étape ${stageName(e.stage)}',
+                                'Wächter der Straße · Stufe ${stageName(e.stage)}',
+                                'Guardião da estrada · etapa ${stageName(e.stage)}',
                               ),
                       ),
                       const SizedBox(height: 2),
@@ -737,18 +822,29 @@ class FightCard extends StatelessWidget {
                         '${Engine.trialSize} words, ${Engine.trialSeconds} seconds each, no hints. It falls at ${Engine.trialPass} blows; you lose at the fifth blow that misses. Once half its life is gone it rages: ${Engine.rageCut} seconds fewer per word.',
                         '${Engine.trialSize} palabras, ${Engine.trialSeconds} segundos cada una, sin pistas. Cae con ${Engine.trialPass} golpes; pierdes al quinto golpe fallado. Cuando pierde la mitad de su vida se enfurece: ${Engine.rageCut} segundos menos por palabra.',
                         '${Engine.trialSize} mots, ${Engine.trialSeconds} secondes chacun, sans indice. Il tombe après ${Engine.trialPass} coups ; tu perds au cinquième coup manqué. Une fois la moitié de sa vie perdue, il entre en fureur : ${Engine.rageCut} secondes de moins par mot.',
+                        '${Engine.trialSize} Wörter, je ${Engine.trialSeconds} Sekunden, keine Hilfen. Er fällt nach ${Engine.trialPass} Hieben; du verlierst beim fünften Fehlschlag. Ist die Hälfte seines Lebens weg, rast er: ${Engine.rageCut} Sekunden weniger pro Wort.',
+                        '${Engine.trialSize} palavras, ${Engine.trialSeconds} segundos cada, sem dicas. Ele cai com ${Engine.trialPass} golpes; você perde no quinto golpe errado. Quando perde metade da vida, fica furioso: ${Engine.rageCut} segundos a menos por palavra.',
                       )
                     : tr(
                         '${Engine.subSize} kata, ${Engine.trialSeconds + g.perk('subTime')} detik tiap kata. Tumbang pada ${Engine.subPass} pukulan; kamu punya ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} nyawa.',
                         '${Engine.subSize} words, ${Engine.trialSeconds + g.perk('subTime')} seconds each. It falls at ${Engine.subPass} blows; you have ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} lives.',
                         '${Engine.subSize} palabras, ${Engine.trialSeconds + g.perk('subTime')} segundos cada una. Cae con ${Engine.subPass} golpes; tienes ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} vidas.',
                         '${Engine.subSize} mots, ${Engine.trialSeconds + g.perk('subTime')} secondes chacun. Il tombe après ${Engine.subPass} coups ; tu as ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} vies.',
+                        '${Engine.subSize} Wörter, je ${Engine.trialSeconds + g.perk('subTime')} Sekunden. Er fällt nach ${Engine.subPass} Hieben; du hast ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} Leben.',
+                        '${Engine.subSize} palavras, ${Engine.trialSeconds + g.perk('subTime')} segundos cada. Ele cai com ${Engine.subPass} golpes; você tem ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} vidas.',
                       ),
                 style: T.body(15.5, pal.muted, height: 1.4),
               ),
               const SizedBox(height: 12),
               InkButton(
-                tr('Lawan ${en.name}', 'Fight the ${en.name}', 'Enfrentar a ${en.name}', 'Affronter ${en.name}'),
+                tr(
+                  'Lawan ${en.name}',
+                  'Fight the ${en.name}',
+                  'Enfrentar a ${en.name}',
+                  'Affronter ${en.name}',
+                  'Gegen ${en.name} kämpfen',
+                  'Lutar contra ${en.name}',
+                ),
                 outline: true,
                 onTap: () => runFrom(context, RunScreen(kind: en.boss ? RunKind.trial : RunKind.sub, tier: next)),
               ),
@@ -758,12 +854,21 @@ class FightCard extends StatelessWidget {
                   Expanded(
                     child: Text(
                       cooling
-                          ? tr('Memulihkan diri', 'Recovering', 'Recuperándose', 'En récupération')
+                          ? tr(
+                              'Memulihkan diri',
+                              'Recovering',
+                              'Recuperándose',
+                              'En récupération',
+                              'Erholt sich',
+                              'Recuperando-se',
+                            )
                           : tr(
                               'Belum bisa dilawan',
                               'Cannot be fought yet',
                               'Aún no se puede enfrentar',
                               'Pas encore affrontable',
+                              'Noch nicht bekämpfbar',
+                              'Ainda não dá para lutar',
                             ),
                       style: T.body(16, pal.ink, w: FontWeight.w500),
                     ),
@@ -774,6 +879,8 @@ class FightCard extends StatelessWidget {
                       '${st.solid} of $need solid words',
                       '${st.solid} de $need palabras firmes',
                       '${st.solid} mots ancrés sur $need',
+                      '${st.solid} von $need gefestigten Wörtern',
+                      '${st.solid} de $need palavras firmes',
                     ),
                     style: T.body(15, pal.muted),
                   ),
@@ -790,18 +897,24 @@ class FightCard extends StatelessWidget {
                               'The boss can be fought again tomorrow.',
                               'Podrás volver a enfrentarte al jefe mañana.',
                               'Tu pourras affronter le boss à nouveau demain.',
+                              'Gegen den Boss kannst du morgen wieder kämpfen.',
+                              'Dá para lutar contra o boss de novo amanhã.',
                             )
                           : tr(
                               'Musuh ini bisa dilawan lagi dalam beberapa jam.',
                               'This foe can be fought again in a few hours.',
                               'Podrás volver a enfrentarte a este enemigo en unas horas.',
                               'Tu pourras affronter cet ennemi à nouveau dans quelques heures.',
+                              'Gegen diesen Gegner kannst du in ein paar Stunden wieder kämpfen.',
+                              'Dá para lutar contra este inimigo de novo em algumas horas.',
                             ))
                     : tr(
                         'Kata menjadi kukuh setelah kamu mengingatnya lebih dari seminggu lewat celah kalimat.',
                         'A word becomes solid once you have remembered it for more than a week through the gap in a sentence.',
                         'Una palabra se vuelve firme cuando la recuerdas más de una semana a través del hueco de una frase.',
                         'Un mot devient ancré quand tu t’en souviens plus d’une semaine grâce au trou d’une phrase.',
+                        'Ein Wort ist gefestigt, wenn du es länger als eine Woche über die Lücke im Satz behalten hast.',
+                        'Uma palavra fica firme quando você a lembra por mais de uma semana pela lacuna de uma frase.',
                       ),
                 style: T.body(15, pal.muted, height: 1.4),
               ),
@@ -836,7 +949,12 @@ class Today extends StatelessWidget {
       children: [
         Row(
           children: [
-            Expanded(child: Text(tr('Hari ini', 'Today', 'Hoy', 'Aujourd’hui'), style: T.display(30, pal.ink))),
+            Expanded(
+              child: Text(
+                tr('Hari ini', 'Today', 'Hoy', 'Aujourd’hui', 'Heute', 'Hoje'),
+                style: T.display(30, pal.ink),
+              ),
+            ),
             if (e.streak > 0)
               Padding(
                 padding: const EdgeInsets.only(right: 4),
@@ -846,13 +964,15 @@ class Today extends StatelessWidget {
                     '${e.streak}-day streak',
                     'Racha de ${e.streak} días',
                     'Série de ${e.streak} jours',
+                    '${e.streak} Tage in Folge',
+                    '${e.streak} dias seguidos',
                   ),
                   style: T.body(15, pal.gold, w: FontWeight.w700),
                 ),
               ),
             Press(
               onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SettingsPage())),
-              label: tr('Pengaturan', 'Settings', 'Ajustes', 'Réglages'),
+              label: tr('Pengaturan', 'Settings', 'Ajustes', 'Réglages', 'Einstellungen', 'Configurações'),
               child: SizedBox(width: 48, height: 48, child: Icon(Icons.tune, color: pal.ink, size: 24)),
             ),
           ],
@@ -897,7 +1017,7 @@ class Today extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        '${App.I.realm == 'en' ? '' : '${App.I.kingdom.name} · '}${rank < Engine.maxRank ? '${tr('tingkat', 'stage', 'etapa', 'étape')} ${stageName(e.stage)} · ' : ''}Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'}',
+                        '${App.I.realm == 'en' ? '' : '${App.I.kingdom.name} · '}${rank < Engine.maxRank ? '${tr('tingkat', 'stage', 'etapa', 'étape', 'Stufe', 'etapa')} ${stageName(e.stage)} · ' : ''}Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'}',
                         style: T.body(14.5, pal.ink, w: FontWeight.w500),
                       ),
                       Text(
@@ -906,6 +1026,8 @@ class Today extends StatelessWidget {
                           'Vocabulary on a par with ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
                           'Vocabulario equivalente a ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
                           'Vocabulaire équivalent à ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
+                          'Wortschatz auf dem Niveau von ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
+                          'Vocabulário no nível de ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
                         ),
                         style: T.body(14, pal.muted),
                       ),
@@ -916,6 +1038,8 @@ class Today extends StatelessWidget {
                           '${g.toNext} XP to level ${g.level + 1}',
                           '${g.toNext} XP para el nivel ${g.level + 1}',
                           '${g.toNext} XP avant le niveau ${g.level + 1}',
+                          '${g.toNext} XP bis Stufe ${g.level + 1}',
+                          '${g.toNext} XP até o nível ${g.level + 1}',
                         ),
                         child: Bar(g.levelShare, height: 6),
                       ),
@@ -926,6 +1050,8 @@ class Today extends StatelessWidget {
                           '${g.toNext} XP to level ${g.level + 1}',
                           '${g.toNext} XP para el nivel ${g.level + 1}',
                           '${g.toNext} XP avant le niveau ${g.level + 1}',
+                          '${g.toNext} XP bis Stufe ${g.level + 1}',
+                          '${g.toNext} XP até o nível ${g.level + 1}',
                         ),
                         style: T.body(12.5, pal.muted),
                       ),
@@ -943,11 +1069,17 @@ class Today extends StatelessWidget {
           delay: const Duration(milliseconds: 60),
           child: Row(
             children: [
-              _Tile(plan.reviews, tr('ulang', 'to review', 'por repasar', 'à réviser')),
+              _Tile(
+                plan.reviews,
+                tr('ulang', 'to review', 'por repasar', 'à réviser', 'zu wiederholen', 'para revisar'),
+              ),
               const SizedBox(width: 8),
-              _Tile(plan.fresh, tr('kata baru', 'new words', 'palabras nuevas', 'nouveaux mots')),
+              _Tile(
+                plan.fresh,
+                tr('kata baru', 'new words', 'palabras nuevas', 'nouveaux mots', 'neue Wörter', 'palavras novas'),
+              ),
               const SizedBox(width: 8),
-              _Tile(e.solidTotal, tr('kukuh', 'solid', 'firmes', 'ancrés')),
+              _Tile(e.solidTotal, tr('kukuh', 'solid', 'firmes', 'ancrés', 'gefestigt', 'firmes')),
             ],
           ),
         ),
@@ -955,8 +1087,22 @@ class Today extends StatelessWidget {
         if (!plan.empty)
           InkButton(
             plan.doneToday > 0
-                ? tr('Lanjut belajar', 'Continue learning', 'Seguir aprendiendo', 'Continuer d’apprendre')
-                : tr('Mulai belajar', 'Start learning', 'Empezar a aprender', 'Commencer à apprendre'),
+                ? tr(
+                    'Lanjut belajar',
+                    'Continue learning',
+                    'Seguir aprendiendo',
+                    'Continuer d’apprendre',
+                    'Weiterlernen',
+                    'Continuar aprendendo',
+                  )
+                : tr(
+                    'Mulai belajar',
+                    'Start learning',
+                    'Empezar a aprender',
+                    'Commencer à apprendre',
+                    'Lernen beginnen',
+                    'Começar a aprender',
+                  ),
             onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn)),
           )
         else ...[
@@ -967,12 +1113,16 @@ class Today extends StatelessWidget {
                     'Noted. Today\'s tasks are done.',
                     'Anotado. Las tareas de hoy están hechas.',
                     'Noté. Les tâches du jour sont faites.',
+                    'Verzeichnet. Die Aufgaben für heute sind erledigt.',
+                    'Registrado. As tarefas de hoje estão feitas.',
                   )
                 : tr(
                     'Belum ada yang perlu diulang hari ini.',
                     'Nothing needs review today.',
                     'Hoy no hay nada que repasar.',
                     'Rien à réviser aujourd’hui.',
+                    'Heute ist nichts zu wiederholen.',
+                    'Nada precisa de revisão hoje.',
                   ),
             style: T.display(22, pal.ink, italic: true),
           ),
@@ -984,6 +1134,8 @@ class Today extends StatelessWidget {
                 'Add $moreFresh new words',
                 'Añadir $moreFresh palabras nuevas',
                 'Ajouter $moreFresh nouveaux mots',
+                '$moreFresh neue Wörter hinzufügen',
+                'Adicionar $moreFresh palavras novas',
               ),
               outline: true,
               onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn, extraFresh: 10)),
@@ -1014,6 +1166,8 @@ class Today extends StatelessWidget {
                             'The road to ${rankNames[next]} · ${(road.share * 100).round()}% of words solid',
                             'Camino a ${rankNames[next]} · ${(road.share * 100).round()}% de palabras firmes',
                             'Route vers ${rankNames[next]} · ${(road.share * 100).round()} % de mots ancrés',
+                            'Der Weg zum ${rankNames[next]} · ${(road.share * 100).round()} % der Wörter gefestigt',
+                            'O caminho até ${rankNames[next]} · ${(road.share * 100).round()}% das palavras firmes',
                           ),
                           style: T.body(14.5, pal.ink, w: FontWeight.w500),
                         ),
@@ -1029,6 +1183,8 @@ class Today extends StatelessWidget {
                       'The coronation trial opens at ${(Engine.openShare * 100).round()}%.',
                       'La prueba de coronación se abre al ${(Engine.openShare * 100).round()} %.',
                       'L’épreuve du couronnement s’ouvre à ${(Engine.openShare * 100).round()} %.',
+                      'Die Krönungsprüfung öffnet sich bei ${(Engine.openShare * 100).round()} %.',
+                      'A prova de coroação abre em ${(Engine.openShare * 100).round()}%.',
                     ),
                     style: T.body(13, pal.muted),
                   ),
@@ -1040,7 +1196,16 @@ class Today extends StatelessWidget {
         const SizedBox(height: 18),
         const FightCard(),
         const SizedBox(height: 20),
-        Label(tr('Quest hari ini', 'Today\'s quests', 'Misiones de hoy', 'Quêtes du jour')),
+        Label(
+          tr(
+            'Quest hari ini',
+            'Today\'s quests',
+            'Misiones de hoy',
+            'Quêtes du jour',
+            'Aufgaben für heute',
+            'Missões de hoje',
+          ),
+        ),
         const SizedBox(height: 4),
         for (final (i, q) in quests.indexed)
           Rise(
@@ -1062,7 +1227,14 @@ class Today extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        tr('Saran hari ini', 'Advice for today', 'Consejo de hoy', 'Conseil du jour'),
+                        tr(
+                          'Saran hari ini',
+                          'Advice for today',
+                          'Consejo de hoy',
+                          'Conseil du jour',
+                          'Rat für heute',
+                          'Conselho de hoje',
+                        ),
                         style: T.body(14.5, pal.ink, w: FontWeight.w700),
                       ),
                       for (final a in advice)
@@ -1214,6 +1386,8 @@ class QuestRow extends StatelessWidget {
                     'Take +${App.I.game.questXp(q)}',
                     'Cobrar +${App.I.game.questXp(q)}',
                     'Prendre +${App.I.game.questXp(q)}',
+                    '+${App.I.game.questXp(q)} nehmen',
+                    'Pegar +${App.I.game.questXp(q)}',
                   ),
                   style: T.body(15.5, pal.onAccent, w: FontWeight.w700),
                 ),
@@ -1223,7 +1397,9 @@ class QuestRow extends StatelessWidget {
             SizedBox(
               width: 74,
               child: Text(
-                q.claimed ? tr('Diambil', 'Taken', 'Cobrado', 'Pris') : '+${App.I.game.questXp(q)} XP',
+                q.claimed
+                    ? tr('Diambil', 'Taken', 'Cobrado', 'Pris', 'Genommen', 'Pego')
+                    : '+${App.I.game.questXp(q)} XP',
                 textAlign: TextAlign.right,
                 style: T.body(14.5, pal.muted),
               ),

@@ -328,7 +328,11 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       _marks.add(true);
       _flashBad = false;
       _flash.forward(from: 0);
-      _blow(HeroPose.attack, crit ? tr('KRITIS!', 'CRITICAL!', '¡CRÍTICO!', 'CRITIQUE !') : '−1', true);
+      _blow(
+        HeroPose.attack,
+        crit ? tr('KRITIS!', 'CRITICAL!', '¡CRÍTICO!', 'CRITIQUE !', 'KRITISCH!', 'CRÍTICO!') : '−1',
+        true,
+      );
       if (calmBefore && _rage) {
         _clock.duration = Duration(seconds: _seconds);
         App.I.sfx('crit');
@@ -487,38 +491,76 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     final leave = await confirm(
       context,
       title: _fight
-          ? tr('Lari dari pertarungan?', 'Flee the fight?', '¿Huir del combate?', 'Fuir le combat ?')
-          : tr('Tinggalkan ujian?', 'Leave the test?', '¿Salir de la prueba?', 'Quitter le test ?'),
+          ? tr(
+              'Lari dari pertarungan?',
+              'Flee the fight?',
+              '¿Huir del combate?',
+              'Fuir le combat ?',
+              'Aus dem Kampf fliehen?',
+              'Fugir da luta?',
+            )
+          : tr(
+              'Tinggalkan ujian?',
+              'Leave the test?',
+              '¿Salir de la prueba?',
+              'Quitter le test ?',
+              'Den Test verlassen?',
+              'Sair do teste?',
+            ),
       text: switch (_kind) {
         RunKind.trial => tr(
           'Lari setelah lima kata dihitung kalah, dan boss baru bisa dilawan lagi besok.',
           'Fleeing after five words counts as a defeat, and the boss can only be fought again tomorrow.',
           'Huir después de cinco palabras cuenta como derrota, y el jefe solo se podrá enfrentar de nuevo mañana.',
           'Fuir après cinq mots compte comme une défaite, et le boss ne pourra être affronté à nouveau que demain.',
+          'Flucht nach fünf Wörtern zählt als Niederlage, und gegen den Boss kannst du erst morgen wieder kämpfen.',
+          'Fugir depois de cinco palavras conta como derrota, e só dá para lutar contra o boss de novo amanhã.',
         ),
         RunKind.sub => tr(
           'Lari setelah lima kata dihitung kalah, dan musuh ini baru bisa dilawan lagi empat jam kemudian.',
           'Fleeing after five words counts as a defeat, and this foe can only be fought again four hours later.',
           'Huir después de cinco palabras cuenta como derrota, y este enemigo solo se podrá enfrentar de nuevo dentro de cuatro horas.',
           'Fuir après cinq mots compte comme une défaite, et cet ennemi ne pourra être affronté à nouveau que dans quatre heures.',
+          'Flucht nach fünf Wörtern zählt als Niederlage, und gegen diesen Gegner kannst du erst in vier Stunden wieder kämpfen.',
+          'Fugir depois de cinco palavras conta como derrota, e só dá para lutar contra este inimigo de novo daqui a quatro horas.',
         ),
         RunKind.placement => tr(
           'Gelarmu ditetapkan dari ranah yang sudah kamu lewati sejauh ini.',
           'Your title is set from the lands you have passed so far.',
           'Tu título se fija según las tierras que hayas superado hasta ahora.',
           'Ton titre est fixé d’après les terres franchies jusqu’ici.',
+          'Dein Titel richtet sich nach den Ländern, die du bisher geschafft hast.',
+          'Seu título é definido pelas terras que você superou até agora.',
         ),
         _ => tr(
           'Gelarmu tetap goyah sampai ujian ini kamu selesaikan.',
           'Your title keeps wavering until you finish this test.',
           'Tu título seguirá tambaleándose hasta que termines esta prueba.',
           'Ton titre vacillera tant que tu n’auras pas fini ce test.',
+          'Dein Titel wankt weiter, bis du diesen Test beendest.',
+          'Seu título continua vacilando até você terminar este teste.',
         ),
       },
-      yes: _fight ? tr('Lari', 'Flee', 'Huir', 'Fuir') : tr('Tinggalkan', 'Leave', 'Salir', 'Quitter'),
+      yes: _fight
+          ? tr('Lari', 'Flee', 'Huir', 'Fuir', 'Fliehen', 'Fugir')
+          : tr('Tinggalkan', 'Leave', 'Salir', 'Quitter', 'Verlassen', 'Sair'),
       no: _fight
-          ? tr('Terus bertarung', 'Keep fighting', 'Seguir luchando', 'Continuer le combat')
-          : tr('Lanjut ujian', 'Go on with the test', 'Seguir con la prueba', 'Poursuivre le test'),
+          ? tr(
+              'Terus bertarung',
+              'Keep fighting',
+              'Seguir luchando',
+              'Continuer le combat',
+              'Weiterkämpfen',
+              'Continuar lutando',
+            )
+          : tr(
+              'Lanjut ujian',
+              'Go on with the test',
+              'Seguir con la prueba',
+              'Poursuivre le test',
+              'Mit dem Test weitermachen',
+              'Seguir com o teste',
+            ),
     );
     if (!leave || !mounted) return;
     if (_kind == RunKind.trial && _done >= 5) {
@@ -561,7 +603,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
           children: [
             Press(
               onTap: _close,
-              label: tr('Tutup', 'Close', 'Cerrar', 'Fermer'),
+              label: tr('Tutup', 'Close', 'Cerrar', 'Fermer', 'Schließen', 'Fechar'),
               child: SizedBox(width: 48, height: 48, child: Icon(Icons.close, color: pal.ink, size: 24)),
             ),
             Expanded(child: _fight ? _Tally(_marks, _q.length, _i) : Bar(_done / total, height: 3)),
@@ -579,6 +621,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                       '${_done + 1} of $total',
                       '${_done + 1} de $total',
                       '${_done + 1} sur $total',
+                      '${_done + 1} von $total',
+                      '${_done + 1} de $total',
                     ),
               style: T.body(15.5, pal.muted),
             ),
@@ -635,8 +679,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
               children: [
                 InkButton(
                   _phase == _Phase.shown
-                      ? tr('Lanjut', 'Continue', 'Continuar', 'Continuer')
-                      : tr('Periksa', 'Check', 'Comprobar', 'Vérifier'),
+                      ? tr('Lanjut', 'Continue', 'Continuar', 'Continuer', 'Weiter', 'Continuar')
+                      : tr('Periksa', 'Check', 'Comprobar', 'Vérifier', 'Prüfen', 'Conferir'),
                   onTap: busy || (it.quiz == Quiz.build && _placed.length < _target.length) ? null : _check,
                   sound: false,
                 ),
@@ -650,8 +694,17 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                               'I don\'t know, show me',
                               'No lo sé, muéstramelo',
                               'Je ne sais pas, montre-moi',
+                              'Weiß ich nicht, zeig es mir',
+                              'Não sei, me mostre',
                             )
-                          : tr('Belum tahu', 'I don\'t know', 'No lo sé', 'Je ne sais pas'),
+                          : tr(
+                              'Belum tahu',
+                              'I don\'t know',
+                              'No lo sé',
+                              'Je ne sais pas',
+                              'Weiß ich nicht',
+                              'Não sei',
+                            ),
                       onTap: _phase == _Phase.ask || _phase == _Phase.near ? () => _wrong('m') : null,
                     ),
                   ),
@@ -672,7 +725,14 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       builder: (context, _) {
         final left = (_seconds * (1 - _clock.value)).ceil();
         return Semantics(
-          label: tr('Sisa waktu $left detik', '$left seconds left', 'Quedan $left segundos', 'Encore $left secondes'),
+          label: tr(
+            'Sisa waktu $left detik',
+            '$left seconds left',
+            'Quedan $left segundos',
+            'Encore $left secondes',
+            'Noch $left Sekunden',
+            'Faltam $left segundos',
+          ),
           child: ExcludeSemantics(
             child: SizedBox(
               width: 42,
@@ -705,17 +765,21 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
               'ENRAGED · −${Engine.rageCut} s',
               'FURIA · −${Engine.rageCut} s',
               'FUREUR · −${Engine.rageCut} s',
+              'RASEND · −${Engine.rageCut} s',
+              'FURIOSO · −${Engine.rageCut} s',
             )
           : tr(
               'Di bawah separuh: murka · −${Engine.rageCut} detik',
               'Below half: enraged · −${Engine.rageCut} s',
               'Por debajo de la mitad: furia · −${Engine.rageCut} s',
               'Sous la moitié : fureur · −${Engine.rageCut} s',
+              'Unter der Hälfte: rasend · −${Engine.rageCut} s',
+              'Abaixo da metade: furioso · −${Engine.rageCut} s',
             ),
       textAlign: TextAlign.center,
       style: _rage ? T.label(pal.bad) : T.body(12.5, pal.muted),
     );
-    final hero = _Pips('${tr('Kamu', 'You', 'Tú', 'Toi')} · ${g.job.name}', _heroHp, _heroMax, pal.good);
+    final hero = _Pips('${tr('Kamu', 'You', 'Tú', 'Toi', 'Du', 'Você')} · ${g.job.name}', _heroHp, _heroMax, pal.good);
     final stage = LayoutBuilder(
       builder: (context, box) {
         final h = box.maxHeight;
@@ -808,6 +872,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                           'Boss · ${rankNames[widget.s.tier]} coronation',
                           'Jefe · coronación de ${rankNames[widget.s.tier]}',
                           'Boss · couronnement de ${rankNames[widget.s.tier]}',
+                          'Boss · Krönung zum ${rankNames[widget.s.tier]}',
+                          'Boss · coroação de ${rankNames[widget.s.tier]}',
                         ),
                         name: en.name,
                         compact: typing,
@@ -863,28 +929,48 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     final heading = switch (_kind) {
       RunKind.learn =>
         _item.fresh
-            ? tr('Kata baru', 'New word', 'Palabra nueva', 'Nouveau mot')
+            ? tr('Kata baru', 'New word', 'Palabra nueva', 'Nouveau mot', 'Neues Wort', 'Palavra nova')
             : (w.inflected
                   ? tr(
                       'Isi dengan bentuk yang tepat',
                       'Fill in the right form',
                       'Escribe la forma correcta',
                       'Écris la bonne forme',
+                      'Setze die richtige Form ein',
+                      'Escreva a forma certa',
                     )
-                  : tr('Isi celahnya', 'Fill the gap', 'Completa el hueco', 'Remplis le trou')),
+                  : tr(
+                      'Isi celahnya',
+                      'Fill the gap',
+                      'Completa el hueco',
+                      'Remplis le trou',
+                      'Fülle die Lücke',
+                      'Preencha a lacuna',
+                    )),
       RunKind.placement => tr(
         'Ujian penempatan · ${rankNames[_ptier]}',
         'Placement test · ${rankNames[_ptier]}',
         'Prueba de nivel · ${rankNames[_ptier]}',
         'Test de niveau · ${rankNames[_ptier]}',
+        'Einstufungstest · ${rankNames[_ptier]}',
+        'Teste de nivelamento · ${rankNames[_ptier]}',
       ),
       RunKind.trial || RunKind.sub => tr(
         'Serang dengan kata yang tepat',
         'Strike with the right word',
         'Golpea con la palabra correcta',
         'Frappe avec le bon mot',
+        'Schlag mit dem richtigen Wort zu',
+        'Golpeie com a palavra certa',
       ),
-      RunKind.defence => tr('Mempertahankan gelar', 'Defending the title', 'Defendiendo el título', 'Défense du titre'),
+      RunKind.defence => tr(
+        'Mempertahankan gelar',
+        'Defending the title',
+        'Defendiendo el título',
+        'Défense du titre',
+        'Titel wird verteidigt',
+        'Defendendo o título',
+      ),
     };
     final String? note = switch (_phase) {
       _Phase.near =>
@@ -894,24 +980,32 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 'The word is right, the form is not. Look at the words around the gap.',
                 'La palabra es correcta, la forma no. Mira las palabras alrededor del hueco.',
                 'Le mot est juste, pas la forme. Regarde les mots autour du trou.',
+                'Das Wort stimmt, die Form nicht. Sieh dir die Wörter um die Lücke an.',
+                'A palavra está certa, a forma não. Olhe as palavras em volta da lacuna.',
               )
             : tr(
                 'Hampir. Periksa ejaannya.',
                 'Almost. Check the spelling.',
                 'Casi. Revisa la ortografía.',
                 'Presque. Vérifie l’orthographe.',
+                'Fast. Prüfe die Schreibung.',
+                'Quase. Confira a grafia.',
               ),
       _Phase.shown => tr(
         'Jawabannya $answer. Ketik sekali supaya melekat.',
         'The answer is $answer. Type it once so it sticks.',
         'La respuesta es $answer. Escríbela una vez para que se quede.',
         'La réponse est $answer. Tape-la une fois pour qu’elle reste.',
+        'Die Antwort ist $answer. Tipp sie einmal, damit sie hängen bleibt.',
+        'A resposta é $answer. Digite uma vez para fixar.',
       ),
       _Phase.miss => tr(
         'Jawabannya $answer.',
         'The answer is $answer.',
         'La respuesta es $answer.',
         'La réponse est $answer.',
+        'Die Antwort ist $answer.',
+        'A resposta é $answer.',
       ),
       _Phase.right =>
         _item.fresh
@@ -920,10 +1014,19 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 'Noted. A new word enters your chronicle.',
                 'Anotado. Una palabra nueva entra en tu crónica.',
                 'Noté. Un nouveau mot entre dans ta chronique.',
+                'Verzeichnet. Ein neues Wort kommt in deine Chronik.',
+                'Registrado. Uma palavra nova entra na sua crônica.',
               )
             : (_reward?.crit ?? false
-                  ? tr('Benar, dan cepat.', 'Right, and fast.', 'Correcto, y rápido.', 'Juste, et vite.')
-                  : tr('Benar.', 'Right.', 'Correcto.', 'Juste.')),
+                  ? tr(
+                      'Benar, dan cepat.',
+                      'Right, and fast.',
+                      'Correcto, y rápido.',
+                      'Juste, et vite.',
+                      'Richtig, und schnell.',
+                      'Certo, e rápido.',
+                    )
+                  : tr('Benar.', 'Right.', 'Correcto.', 'Juste.', 'Richtig.', 'Certo.')),
       _Phase.ask => null,
     };
     final typing = _phase == _Phase.ask || _phase == _Phase.near || _phase == _Phase.shown;
@@ -940,6 +1043,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                   '${parts[0]} gap ${parts[1]}',
                   '${parts[0]} hueco ${parts[1]}',
                   '${parts[0]} trou ${parts[1]}',
+                  '${parts[0]} Lücke ${parts[1]}',
+                  '${parts[0]} lacuna ${parts[1]}',
                 )
               : '${parts[0]}$answer${parts[1]}',
           child: GestureDetector(
@@ -1091,6 +1196,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                   'Choose the partner word',
                   'Elige la palabra compañera',
                   'Choisis le mot compagnon',
+                  'Wähle das Partnerwort',
+                  'Escolha a palavra parceira',
                 )
               : (it.fresh
                     ? tr(
@@ -1098,8 +1205,17 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                         'New word · choose its meaning',
                         'Palabra nueva · elige su significado',
                         'Nouveau mot · choisis son sens',
+                        'Neues Wort · wähle seine Bedeutung',
+                        'Palavra nova · escolha o sentido',
                       )
-                    : tr('Pilih artinya', 'Choose the meaning', 'Elige el significado', 'Choisis le sens')),
+                    : tr(
+                        'Pilih artinya',
+                        'Choose the meaning',
+                        'Elige el significado',
+                        'Choisis le sens',
+                        'Wähle die Bedeutung',
+                        'Escolha o sentido',
+                      )),
         ),
         const SizedBox(height: 14),
         if (c != null) ...[
@@ -1142,6 +1258,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 'This word will come back in a moment as a gap.',
                 'Esta palabra volverá enseguida como hueco.',
                 'Ce mot reviendra dans un instant sous forme de trou.',
+                'Dieses Wort kommt gleich als Lücke zurück.',
+                'Esta palavra volta daqui a pouco como lacuna.',
               ),
               style: T.body(15, pal.muted),
             ),
@@ -1169,6 +1287,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
             'Build the sentence with this word',
             'Construye la frase con esta palabra',
             'Construis la phrase avec ce mot',
+            'Bau den Satz mit diesem Wort',
+            'Monte a frase com esta palavra',
           ),
         ),
         const SizedBox(height: 12),
@@ -1214,6 +1334,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                       'Tap the words below in the right order',
                       'Toca las palabras de abajo en el orden correcto',
                       'Touche les mots ci-dessous dans le bon ordre',
+                      'Tippe die Wörter unten in der richtigen Reihenfolge an',
+                      'Toque nas palavras abaixo na ordem certa',
                     ),
                     style: T.body(16, pal.muted),
                   ),
@@ -1230,7 +1352,14 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
           )
         else if (_phase == _Phase.miss) ...[
           Text(
-            tr('Susunan yang benar:', 'The right order:', 'El orden correcto:', 'Le bon ordre :'),
+            tr(
+              'Susunan yang benar:',
+              'The right order:',
+              'El orden correcto:',
+              'Le bon ordre :',
+              'Die richtige Reihenfolge:',
+              'A ordem certa:',
+            ),
             style: T.body(15, pal.muted),
           ),
           const SizedBox(height: 4),
@@ -1242,6 +1371,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
               'Right. The other two words were only decoys.',
               'Correcto. Las otras dos palabras solo eran señuelos.',
               'Juste. Les deux autres mots n’étaient que des leurres.',
+              'Richtig. Die anderen zwei Wörter waren nur Köder.',
+              'Certo. As outras duas palavras eram só iscas.',
             ),
           ),
       ],
@@ -1249,12 +1380,12 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
   }
 
   static String _posName(String p) => switch (p) {
-    'n' => tr('kata benda', 'noun', 'sustantivo', 'nom'),
-    'v' => tr('kata kerja', 'verb', 'verbo', 'verbe'),
-    'adj' => tr('kata sifat', 'adjective', 'adjetivo', 'adjectif'),
-    'adv' => tr('kata keterangan', 'adverb', 'adverbio', 'adverbe'),
-    'prep' => tr('kata depan', 'preposition', 'preposición', 'préposition'),
-    _ => tr('kata sambung', 'conjunction', 'conjunción', 'conjonction'),
+    'n' => tr('kata benda', 'noun', 'sustantivo', 'nom', 'Nomen', 'substantivo'),
+    'v' => tr('kata kerja', 'verb', 'verbo', 'verbe', 'Verb', 'verbo'),
+    'adj' => tr('kata sifat', 'adjective', 'adjetivo', 'adjectif', 'Adjektiv', 'adjetivo'),
+    'adv' => tr('kata keterangan', 'adverb', 'adverbio', 'adverbe', 'Adverb', 'advérbio'),
+    'prep' => tr('kata depan', 'preposition', 'preposición', 'préposition', 'Präposition', 'preposição'),
+    _ => tr('kata sambung', 'conjunction', 'conjunción', 'conjonction', 'Konjunktion', 'conjunção'),
   };
 
   // ------------------------------------------------------------------ endings
@@ -1270,14 +1401,30 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       case RunKind.learn:
         final gained = max(0, e.solidTotal - _solidBefore);
         mark = const Seal(size: 76);
-        label = tr('Tercatat hari ini', 'Noted today', 'Anotado hoy', 'Noté aujourd’hui');
+        label = tr(
+          'Tercatat hari ini',
+          'Noted today',
+          'Anotado hoy',
+          'Noté aujourd’hui',
+          'Heute verzeichnet',
+          'Registrado hoje',
+        );
         title = _done == 0
-            ? tr('Mejamu kosong', 'Your desk is empty', 'Tu mesa está vacía', 'Ton bureau est vide')
+            ? tr(
+                'Mejamu kosong',
+                'Your desk is empty',
+                'Tu mesa está vacía',
+                'Ton bureau est vide',
+                'Dein Pult ist leer',
+                'Sua mesa está vazia',
+              )
             : tr(
                 '$_right benar dari $_done',
                 '$_right right out of $_done',
                 '$_right bien de $_done',
                 '$_right justes sur $_done',
+                '$_right richtig von $_done',
+                '$_right certas de $_done',
               );
         text = _done == 0
             ? tr(
@@ -1285,6 +1432,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 'No words are waiting. Come back tomorrow.',
                 'No hay palabras esperando. Vuelve mañana.',
                 'Aucun mot n’attend. Reviens demain.',
+                'Keine Wörter warten. Komm morgen wieder.',
+                'Nenhuma palavra esperando. Volte amanhã.',
               )
             : [
                 '+$_xp XP',
@@ -1294,6 +1443,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                     '$_freshSeen new words',
                     '$_freshSeen palabras nuevas',
                     '$_freshSeen nouveaux mots',
+                    '$_freshSeen neue Wörter',
+                    '$_freshSeen palavras novas',
                   ),
                 if (gained > 0)
                   tr(
@@ -1301,22 +1452,35 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                     '$gained words now solid',
                     '$gained palabras ya firmes',
                     '$gained mots désormais ancrés',
+                    '$gained Wörter jetzt gefestigt',
+                    '$gained palavras agora firmes',
                   ),
                 tr(
                   'combo terbaik ${_g.bestCombo}',
                   'best combo ${_g.bestCombo}',
                   'mejor combo ${_g.bestCombo}',
                   'meilleur combo ${_g.bestCombo}',
+                  'beste Kombo ${_g.bestCombo}',
+                  'melhor combo ${_g.bestCombo}',
                 ),
               ].join(' · ');
       case RunKind.placement:
         mark = Shield(rank, width: 96);
-        label = tr('Ujian penempatan', 'Placement test', 'Prueba de nivel', 'Test de niveau');
+        label = tr(
+          'Ujian penempatan',
+          'Placement test',
+          'Prueba de nivel',
+          'Test de niveau',
+          'Einstufungstest',
+          'Teste de nivelamento',
+        );
         title = tr(
           'Kamu mulai sebagai ${rankNames[rank]}',
           'You start as a ${rankNames[rank]}',
           'Empiezas como ${rankNames[rank]}',
           'Tu commences en ${rankNames[rank]}',
+          'Du beginnst als ${rankNames[rank]}',
+          'Você começa como ${rankNames[rank]}',
         );
         text = rank == 0
             ? tr(
@@ -1324,12 +1488,16 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 'Every knight was once a peasant. Your first word is waiting.',
                 'Todo caballero fue antes campesino. Tu primera palabra te espera.',
                 'Tout chevalier fut d’abord paysan. Ton premier mot t’attend.',
+                'Jeder Ritter war einmal ein Bauer. Dein erstes Wort wartet.',
+                'Todo cavaleiro já foi camponês. Sua primeira palavra espera.',
               )
             : tr(
                 'Jalanmu: ${_g.job.name}. Kosakatamu setara ${scoreLine(rank, App.I.banner)}. Kata dari ranah yang kamu lewati akan muncul untuk diulang, jadi gelar ini tetap harus dijaga.',
                 'Your path: ${_g.job.name}. Your vocabulary is on a par with ${scoreLine(rank, App.I.banner)}. Words from the lands you skipped will come up for review, so this title still has to be kept.',
                 'Tu camino: ${_g.job.name}. Tu vocabulario equivale a ${scoreLine(rank, App.I.banner)}. Las palabras de las tierras que saltaste volverán a repaso, así que este título aún hay que conservarlo.',
                 'Ta voie : ${_g.job.name}. Ton vocabulaire équivaut à ${scoreLine(rank, App.I.banner)}. Les mots des terres sautées reviendront en révision : ce titre reste à garder.',
+                'Dein Weg: ${_g.job.name}. Dein Wortschatz liegt auf dem Niveau von ${scoreLine(rank, App.I.banner)}. Wörter aus den übersprungenen Ländern kommen zur Wiederholung, also muss dieser Titel noch gehalten werden.',
+                'Seu caminho: ${_g.job.name}. Seu vocabulário está no nível de ${scoreLine(rank, App.I.banner)}. Palavras das terras que você pulou vão aparecer para revisão, então este título ainda precisa ser mantido.',
               );
       case RunKind.trial || RunKind.sub:
         final en = _enemy!;
@@ -1344,14 +1512,25 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 size: 104,
               )
             : EnemySprite(sprite: en.sprite, tone: en.tone, size: 104);
-        label = _passed ? tr('Menang', 'Victory', 'Victoria', 'Victoire') : tr('Kalah', 'Defeat', 'Derrota', 'Défaite');
+        label = _passed
+            ? tr('Menang', 'Victory', 'Victoria', 'Victoire', 'Sieg', 'Vitória')
+            : tr('Kalah', 'Defeat', 'Derrota', 'Défaite', 'Niederlage', 'Derrota');
         title = _passed
-            ? tr('${en.name} tumbang', 'The ${en.name} has fallen', '${en.name} ha caído', '${en.name} est tombé')
+            ? tr(
+                '${en.name} tumbang',
+                'The ${en.name} has fallen',
+                '${en.name} ha caído',
+                '${en.name} est tombé',
+                '${en.name} ist gefallen',
+                '${en.name} caiu',
+              )
             : tr(
                 '${en.name} masih berdiri',
                 'The ${en.name} still stands',
                 '${en.name} sigue en pie',
                 '${en.name} tient toujours debout',
+                '${en.name} steht noch',
+                '${en.name} ainda está de pé',
               );
         text = _passed
             ? tr(
@@ -1359,31 +1538,60 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 '$_right blows landed, +$_xp XP. You rise to ${rankNames[rank]} ${stageName(e.stage)}.',
                 '$_right golpes acertados, +$_xp XP. Subes a ${rankNames[rank]} ${stageName(e.stage)}.',
                 '$_right coups portés, +$_xp XP. Tu montes à ${rankNames[rank]} ${stageName(e.stage)}.',
+                '$_right Hiebe trafen, +$_xp XP. Du steigst auf zu ${rankNames[rank]} ${stageName(e.stage)}.',
+                '$_right golpes acertaram, +$_xp XP. Você sobe para ${rankNames[rank]} ${stageName(e.stage)}.',
               )
             : tr(
                 '$_right pukulan masuk, perlu $_enemyMax. Kata yang meleset sudah masuk antrean ulang. ${_kind == RunKind.sub ? 'Coba lagi empat jam lagi.' : 'Coba lagi besok.'}',
                 '$_right blows landed, $_enemyMax needed. The words you missed are queued for review. ${_kind == RunKind.sub ? 'Try again in four hours.' : 'Try again tomorrow.'}',
                 '$_right golpes acertados, se necesitaban $_enemyMax. Las palabras falladas vuelven a repaso. ${_kind == RunKind.sub ? 'Inténtalo de nuevo en cuatro horas.' : 'Inténtalo de nuevo mañana.'}',
                 '$_right coups portés, il en fallait $_enemyMax. Les mots manqués repartent en révision. ${_kind == RunKind.sub ? 'Réessaie dans quatre heures.' : 'Réessaie demain.'}',
+                '$_right Hiebe trafen, $_enemyMax waren nötig. Die verfehlten Wörter stehen zur Wiederholung an. ${_kind == RunKind.sub ? 'Versuch es in vier Stunden wieder.' : 'Versuch es morgen wieder.'}',
+                '$_right golpes acertaram, eram precisos $_enemyMax. As palavras que você errou estão na fila de revisão. ${_kind == RunKind.sub ? 'Tente de novo em quatro horas.' : 'Tente de novo amanhã.'}',
               );
       case RunKind.defence:
         mark = Shield(rank, width: 96, hollow: !_passed);
-        label = tr('Mempertahankan gelar', 'Defending the title', 'Defendiendo el título', 'Défense du titre');
+        label = tr(
+          'Mempertahankan gelar',
+          'Defending the title',
+          'Defendiendo el título',
+          'Défense du titre',
+          'Titel wird verteidigt',
+          'Defendendo o título',
+        );
         title = _passed
-            ? tr('Gelar dipertahankan', 'Title defended', 'Título defendido', 'Titre défendu')
-            : tr('Belum cukup', 'Not enough yet', 'Aún no es suficiente', 'Pas encore assez');
+            ? tr(
+                'Gelar dipertahankan',
+                'Title defended',
+                'Título defendido',
+                'Titre défendu',
+                'Titel verteidigt',
+                'Título defendido',
+              )
+            : tr(
+                'Belum cukup',
+                'Not enough yet',
+                'Aún no es suficiente',
+                'Pas encore assez',
+                'Noch nicht genug',
+                'Ainda não basta',
+              );
         text = _passed
             ? tr(
                 '$_right dari ${Engine.defenceSize} benar. ${rankNames[rank]} tetap gelarmu.',
                 '$_right of ${Engine.defenceSize} right. ${rankNames[rank]} remains your title.',
                 '$_right de ${Engine.defenceSize} bien. ${rankNames[rank]} sigue siendo tu título.',
                 '$_right justes sur ${Engine.defenceSize}. ${rankNames[rank]} reste ton titre.',
+                '$_right von ${Engine.defenceSize} richtig. ${rankNames[rank]} bleibt dein Titel.',
+                '$_right de ${Engine.defenceSize} certas. ${rankNames[rank]} continua sendo seu título.',
               )
             : tr(
                 '$_right dari ${Engine.defenceSize} benar, perlu ${Engine.defencePass}. Kamu masih punya ${e.shakyDaysLeft} hari.',
                 '$_right of ${Engine.defenceSize} right, ${Engine.defencePass} needed. You still have ${e.shakyDaysLeft} days.',
                 '$_right de ${Engine.defenceSize} bien, se necesitaban ${Engine.defencePass}. Aún te quedan ${e.shakyDaysLeft} días.',
                 '$_right justes sur ${Engine.defenceSize}, il en fallait ${Engine.defencePass}. Il te reste ${e.shakyDaysLeft} jours.',
+                '$_right von ${Engine.defenceSize} richtig, ${Engine.defencePass} nötig. Du hast noch ${e.shakyDaysLeft} Tage.',
+                '$_right de ${Engine.defenceSize} certas, eram precisas ${Engine.defencePass}. Você ainda tem ${e.shakyDaysLeft} dias.',
               );
     }
     return Padding(
@@ -1435,8 +1643,15 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
           const Spacer(flex: 3),
           InkButton(
             _kind == RunKind.placement
-                ? tr('Masuk ke negerimu', 'Enter your realm', 'Entra en tu reino', 'Entre dans ton royaume')
-                : tr('Selesai', 'Done', 'Hecho', 'Terminé'),
+                ? tr(
+                    'Masuk ke negerimu',
+                    'Enter your realm',
+                    'Entra en tu reino',
+                    'Entre dans ton royaume',
+                    'Betritt dein Reich',
+                    'Entre no seu reino',
+                  )
+                : tr('Selesai', 'Done', 'Hecho', 'Terminé', 'Fertig', 'Pronto'),
             onTap: () => Navigator.of(context).pop(),
           ),
           const SizedBox(height: 8),
@@ -1639,6 +1854,8 @@ class _Hp extends StatelessWidget {
         '$name, life $hp of $max',
         '$name, vida $hp de $max',
         '$name, vie $hp sur $max',
+        '$name, Leben $hp von $max',
+        '$name, vida $hp de $max',
       ),
       child: ExcludeSemantics(
         child: SizedBox(
@@ -1647,7 +1864,7 @@ class _Hp extends StatelessWidget {
             crossAxisAlignment: right ? CrossAxisAlignment.end : CrossAxisAlignment.start,
             children: [
               Text(
-                '${right ? tr('Musuh', 'Foe', 'Enemigo', 'Ennemi') : name}  $hp/$max',
+                '${right ? tr('Musuh', 'Foe', 'Enemigo', 'Ennemi', 'Gegner', 'Inimigo') : name}  $hp/$max',
                 style: T.body(14, pal.ink, w: FontWeight.w700),
               ),
               const SizedBox(height: 3),
@@ -1874,6 +2091,8 @@ class _BossBar extends StatelessWidget {
         '$name, life $hp of $max',
         '$name, vida $hp de $max',
         '$name, vie $hp sur $max',
+        '$name, Leben $hp von $max',
+        '$name, vida $hp de $max',
       ),
       child: ExcludeSemantics(
         child: Row(
@@ -1944,6 +2163,8 @@ class _Pips extends StatelessWidget {
         '$name, life $hp of $max',
         '$name, vida $hp de $max',
         '$name, vie $hp sur $max',
+        '$name, Leben $hp von $max',
+        '$name, vida $hp de $max',
       ),
       child: ExcludeSemantics(
         child: Column(
@@ -1992,6 +2213,8 @@ class _Tally extends StatelessWidget {
         'Word ${now + 1} of $total · $right right, ${marks.length - right} missed',
         'Palabra ${now + 1} de $total · $right bien, ${marks.length - right} mal',
         'Mot ${now + 1} sur $total · $right justes, ${marks.length - right} manqués',
+        'Wort ${now + 1} von $total · $right richtig, ${marks.length - right} verfehlt',
+        'Palavra ${now + 1} de $total · $right certas, ${marks.length - right} erradas',
       ),
       child: ExcludeSemantics(
         child: SizedBox(height: 14, child: CustomPaint(painter: _TallyPainter(marks, total, now, pal))),

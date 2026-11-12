@@ -31,11 +31,14 @@ class SettingsPage extends StatelessWidget {
                 children: [
                   Press(
                     onTap: () => Navigator.of(context).pop(),
-                    label: tr('Kembali', 'Back', 'Volver', 'Retour'),
+                    label: tr('Kembali', 'Back', 'Volver', 'Retour', 'Zurück', 'Voltar'),
                     child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
                   ),
                   Expanded(
-                    child: Text(tr('Pengaturan', 'Settings', 'Ajustes', 'Réglages'), style: T.display(27, pal.ink)),
+                    child: Text(
+                      tr('Pengaturan', 'Settings', 'Ajustes', 'Réglages', 'Einstellungen', 'Configurações'),
+                      style: T.display(27, pal.ink),
+                    ),
                   ),
                 ],
               ),
@@ -44,10 +47,24 @@ class SettingsPage extends StatelessWidget {
                   padding: const EdgeInsets.fromLTRB(8, 10, 8, 28),
                   children: [
                     _Group(
-                      tr('Bahasa belajar', 'Learning language', 'Idioma de aprendizaje', 'Langue d’apprentissage'),
+                      tr(
+                        'Bahasa belajar',
+                        'Learning language',
+                        'Idioma de aprendizaje',
+                        'Langue d’apprentissage',
+                        'Lernsprache',
+                        'Idioma de aprendizagem',
+                      ),
                       [
                         _Choice(
-                          options: const {'id': 'Indonesia', 'en': 'English', 'es': 'Español', 'fr': 'Français'},
+                          options: const {
+                            'id': 'Indonesia',
+                            'en': 'English',
+                            'es': 'Español',
+                            'fr': 'Français',
+                            'de': 'Deutsch',
+                            'pt': 'Português',
+                          },
                           value: app.langCode,
                           onPick: (v) => app.put('lang', v),
                         ),
@@ -57,11 +74,13 @@ class SettingsPage extends StatelessWidget {
                             'In English, a word is explained in simpler English and the whole app speaks English. Titles and jobs are English in either language. Your progress stays.',
                             'En español, cada palabra se explica en español y toda la aplicación habla español. Los títulos y oficios quedan en inglés en todos los idiomas. Tu progreso se conserva.',
                             'En français, chaque mot est expliqué en français et toute l’application parle français. Les titres et les métiers restent en anglais dans toutes les langues. Ta progression est conservée.',
+                            'Auf Deutsch wird jedes Wort auf Deutsch erklärt, und die ganze App spricht Deutsch. Titel und Berufe bleiben in jeder Sprache englisch. Dein Fortschritt bleibt.',
+                            'Em português, cada palavra é explicada em português, e o app inteiro fala português. Títulos e profissões ficam em inglês em qualquer idioma. Seu progresso continua.',
                           ),
                         ),
                       ],
                     ),
-                    _Group(tr('Panji', 'Banner', 'Estandarte', 'Bannière'), [
+                    _Group(tr('Panji', 'Banner', 'Estandarte', 'Bannière', 'Banner', 'Estandarte'), [
                       _Choice(
                         options: const {'toefl': 'TOEFL', 'ielts': 'IELTS'},
                         value: app.banner,
@@ -73,6 +92,8 @@ class SettingsPage extends StatelessWidget {
                           'Changing the banner changes the extra words and the spelling. Your progress and your title stay.',
                           'Cambiar el estandarte cambia las palabras extra y la ortografía. Tu progreso y tu título se conservan.',
                           'Changer de bannière change les mots en plus et l’orthographe. Ta progression et ton titre restent.',
+                          'Ein anderes Banner ändert die zusätzlichen Wörter und die Schreibung. Fortschritt und Titel bleiben.',
+                          'Trocar o estandarte muda as palavras extras e a grafia. Seu progresso e seu título continuam.',
                         ),
                       ),
                     ]),
@@ -82,13 +103,15 @@ class SettingsPage extends StatelessWidget {
                         'New words each day',
                         'Palabras nuevas al día',
                         'Nouveaux mots par jour',
+                        'Neue Wörter pro Tag',
+                        'Palavras novas por dia',
                       ),
                       [
                         Row(
                           children: [
                             _Step(
                               Icons.remove,
-                              tr('Kurangi', 'Fewer', 'Menos', 'Moins'),
+                              tr('Kurangi', 'Fewer', 'Menos', 'Moins', 'Weniger', 'Menos'),
                               app.perDay > 5 ? () => app.put('perDay', app.perDay - 5) : null,
                             ),
                             Expanded(
@@ -96,7 +119,7 @@ class SettingsPage extends StatelessWidget {
                             ),
                             _Step(
                               Icons.add,
-                              tr('Tambah', 'More', 'Más', 'Plus'),
+                              tr('Tambah', 'More', 'Más', 'Plus', 'Mehr', 'Mais'),
                               app.perDay < 40 ? () => app.put('perDay', app.perDay + 5) : null,
                             ),
                           ],
@@ -107,13 +130,22 @@ class SettingsPage extends StatelessWidget {
                             'Fifteen words a day is already a fair load. Today\'s new words are tomorrow\'s reviews.',
                             'Quince palabras al día ya es buena carga. Las palabras nuevas de hoy son los repasos de mañana.',
                             'Quinze mots par jour, c’est déjà une bonne charge. Les nouveaux mots d’aujourd’hui sont les révisions de demain.',
+                            'Fünfzehn Wörter am Tag sind schon ein ordentliches Pensum. Die neuen Wörter von heute sind die Wiederholungen von morgen.',
+                            'Quinze palavras por dia já é uma boa carga. As palavras novas de hoje são as revisões de amanhã.',
                           ),
                         ),
                       ],
                     ),
-                    _Group(tr('Suara', 'Sound', 'Sonido', 'Son'), [
+                    _Group(tr('Suara', 'Sound', 'Sonido', 'Son', 'Ton', 'Som'), [
                       _Toggle(
-                        tr('Musik latar', 'Background music', 'Música de fondo', 'Musique de fond'),
+                        tr(
+                          'Musik latar',
+                          'Background music',
+                          'Música de fondo',
+                          'Musique de fond',
+                          'Hintergrundmusik',
+                          'Música de fundo',
+                        ),
                         app.musicOn,
                         (v) => app.put('music', v ? 1 : 0),
                       ),
@@ -127,7 +159,14 @@ class SettingsPage extends StatelessWidget {
                             trackHeight: 3,
                           ),
                           child: Semantics(
-                            label: tr('Keras musik', 'Music volume', 'Volumen de la música', 'Volume de la musique'),
+                            label: tr(
+                              'Keras musik',
+                              'Music volume',
+                              'Volumen de la música',
+                              'Volume de la musique',
+                              'Musiklautstärke',
+                              'Volume da música',
+                            ),
                             child: Slider(
                               value: app.musicVol.clamp(0.05, 1.0),
                               min: 0.05,
@@ -137,24 +176,45 @@ class SettingsPage extends StatelessWidget {
                           ),
                         ),
                       _Toggle(
-                        tr('Efek suara', 'Sound effects', 'Efectos de sonido', 'Effets sonores'),
+                        tr(
+                          'Efek suara',
+                          'Sound effects',
+                          'Efectos de sonido',
+                          'Effets sonores',
+                          'Soundeffekte',
+                          'Efeitos sonoros',
+                        ),
                         app.sfxOn,
                         (v) => app.put('sfx', v ? 1 : 0),
                       ),
                     ]),
-                    _Group(tr('Tampilan', 'Look', 'Aspecto', 'Apparence'), [
+                    _Group(tr('Tampilan', 'Look', 'Aspecto', 'Apparence', 'Aussehen', 'Aparência'), [
                       _Choice(
                         options: {
-                          'system': tr('Ikut ponsel', 'Follow phone', 'Como el teléfono', 'Comme le téléphone'),
-                          'light': tr('Kertas', 'Paper', 'Papel', 'Papier'),
-                          'dark': tr('Lilin', 'Candle', 'Vela', 'Bougie'),
+                          'system': tr(
+                            'Ikut ponsel',
+                            'Follow phone',
+                            'Como el teléfono',
+                            'Comme le téléphone',
+                            'Wie das Handy',
+                            'Igual ao celular',
+                          ),
+                          'light': tr('Kertas', 'Paper', 'Papel', 'Papier', 'Papier', 'Papel'),
+                          'dark': tr('Lilin', 'Candle', 'Vela', 'Bougie', 'Kerze', 'Vela'),
                         },
                         value: app.theme,
                         onPick: (v) => app.put('theme', v),
                       ),
                       const SizedBox(height: 8),
                       _Toggle(
-                        tr('Gerak tenang', 'Calm motion', 'Movimiento sereno', 'Mouvement apaisé'),
+                        tr(
+                          'Gerak tenang',
+                          'Calm motion',
+                          'Movimiento sereno',
+                          'Mouvement apaisé',
+                          'Ruhige Bewegung',
+                          'Movimento calmo',
+                        ),
                         app.calm,
                         (v) => app.put('calm', v ? 1 : 0),
                       ),
@@ -164,21 +224,32 @@ class SettingsPage extends StatelessWidget {
                           'Fewer animations. Your phone\'s own setting for removing animations is honoured too.',
                           'Menos animaciones. También se respeta el ajuste del teléfono para quitar animaciones.',
                           'Moins d’animations. Le réglage du téléphone qui retire les animations est aussi respecté.',
+                          'Weniger Animationen. Die Einstellung deines Handys zum Entfernen von Animationen wird ebenfalls beachtet.',
+                          'Menos animações. A configuração do seu celular para remover animações também é respeitada.',
                         ),
                       ),
                     ]),
-                    _Group(tr('Tentang', 'About', 'Acerca de', 'À propos'), [
+                    _Group(tr('Tentang', 'About', 'Acerca de', 'À propos', 'Über', 'Sobre'), [
                       _Link(
                         tr(
                           'Dari mana rentang skor berasal',
                           'Where the score ranges come from',
                           'De dónde salen los rangos de nota',
                           'D’où viennent les fourchettes de score',
+                          'Woher die Spannen kommen',
+                          'De onde vêm as faixas de nota',
                         ),
                         () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SourcesPage())),
                       ),
                       _Link(
-                        tr('Lisensi huruf', 'Font licences', 'Licencias de las fuentes', 'Licences des polices'),
+                        tr(
+                          'Lisensi huruf',
+                          'Font licences',
+                          'Licencias de las fuentes',
+                          'Licences des polices',
+                          'Schriftlizenzen',
+                          'Licenças das fontes',
+                        ),
                         () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const LicencesPage())),
                       ),
                       _Link(
@@ -187,13 +258,15 @@ class SettingsPage extends StatelessWidget {
                           'Software licences',
                           'Licencias de software',
                           'Licences des logiciels',
+                          'Softwarelizenzen',
+                          'Licenças de software',
                         ),
                         () =>
                             showLicensePage(context: context, applicationName: 'Verbarium', applicationVersion: '0.5'),
                       ),
                       const _SupportLink(),
                       _Link(
-                        tr('Privasi', 'Privacy', 'Privacidad', 'Confidentialité'),
+                        tr('Privasi', 'Privacy', 'Privacidad', 'Confidentialité', 'Datenschutz', 'Privacidade'),
                         () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const PrivacyPage())),
                       ),
                       const SizedBox(height: 8),
@@ -203,40 +276,58 @@ class SettingsPage extends StatelessWidget {
                           'Verbarium 0.5 (test build) · by Armstrang\nWorks without internet. Your progress lives only on this phone.\nThe music is played on CC0 instrument samples from VSCO 2 CE and VCSL (Versilian Studios).',
                           'Verbarium 0.5 (versión de prueba) · por Armstrang\nFunciona sin internet. Tu progreso vive solo en este teléfono.\nLa música se toca con muestras de instrumentos CC0 de VSCO 2 CE y VCSL (Versilian Studios).',
                           'Verbarium 0.5 (version de test) · par Armstrang\nFonctionne sans internet. Ta progression ne vit que sur ce téléphone.\nLa musique est jouée avec des échantillons d’instruments CC0 de VSCO 2 CE et VCSL (Versilian Studios).',
+                          'Verbarium 0.5 (Testversion) · von Armstrang\nFunktioniert ohne Internet. Dein Fortschritt liegt nur auf diesem Handy.\nDie Musik wird mit CC0-Instrumentensamples aus VSCO 2 CE und VCSL (Versilian Studios) gespielt.',
+                          'Verbarium 0.5 (versão de teste) · por Armstrang\nFunciona sem internet. Seu progresso fica só neste celular.\nA música é tocada com amostras de instrumentos CC0 do VSCO 2 CE e do VCSL (Versilian Studios).',
                         ),
                         style: T.body(15, pal.muted, height: 1.5),
                       ),
                     ]),
-                    _Group(tr('Mulai dari awal', 'Start over', 'Empezar de cero', 'Tout recommencer'), [
-                      InkButton(
-                        tr(
-                          'Hapus semua kemajuan',
-                          'Erase all progress',
-                          'Borrar todo el progreso',
-                          'Effacer toute la progression',
-                        ),
-                        outline: true,
-                        onTap: () async {
-                          final yes = await confirm(
-                            context,
-                            title: tr(
-                              'Hapus semua kemajuan?',
-                              'Erase all progress?',
-                              '¿Borrar todo el progreso?',
-                              'Effacer toute la progression ?',
-                            ),
-                            text: tr(
-                              'Gelar, kata yang sudah kukuh dan seluruh kronikmu hilang. Ini tidak bisa dibatalkan.',
-                              'Your title, your solid words and your whole chronicle will be gone. This cannot be undone.',
-                              'Tu título, tus palabras firmes y toda tu crónica desaparecerán. No se puede deshacer.',
-                              'Ton titre, tes mots ancrés et toute ta chronique disparaîtront. C’est irréversible.',
-                            ),
-                            yes: tr('Hapus', 'Erase', 'Borrar', 'Effacer'),
-                          );
-                          if (yes) await app.resetProgress();
-                        },
+                    _Group(
+                      tr(
+                        'Mulai dari awal',
+                        'Start over',
+                        'Empezar de cero',
+                        'Tout recommencer',
+                        'Neu beginnen',
+                        'Recomeçar',
                       ),
-                    ]),
+                      [
+                        InkButton(
+                          tr(
+                            'Hapus semua kemajuan',
+                            'Erase all progress',
+                            'Borrar todo el progreso',
+                            'Effacer toute la progression',
+                            'Allen Fortschritt löschen',
+                            'Apagar todo o progresso',
+                          ),
+                          outline: true,
+                          onTap: () async {
+                            final yes = await confirm(
+                              context,
+                              title: tr(
+                                'Hapus semua kemajuan?',
+                                'Erase all progress?',
+                                '¿Borrar todo el progreso?',
+                                'Effacer toute la progression ?',
+                                'Allen Fortschritt löschen?',
+                                'Apagar todo o progresso?',
+                              ),
+                              text: tr(
+                                'Gelar, kata yang sudah kukuh dan seluruh kronikmu hilang. Ini tidak bisa dibatalkan.',
+                                'Your title, your solid words and your whole chronicle will be gone. This cannot be undone.',
+                                'Tu título, tus palabras firmes y toda tu crónica desaparecerán. No se puede deshacer.',
+                                'Ton titre, tes mots ancrés et toute ta chronique disparaîtront. C’est irréversible.',
+                                'Dein Titel, deine gefestigten Wörter und deine ganze Chronik sind dann weg. Das lässt sich nicht rückgängig machen.',
+                                'Seu título, suas palavras firmes e toda a sua crônica vão sumir. Não dá para desfazer.',
+                              ),
+                              yes: tr('Hapus', 'Erase', 'Borrar', 'Effacer', 'Löschen', 'Apagar'),
+                            );
+                            if (yes) await app.resetProgress();
+                          },
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -307,42 +398,58 @@ class _Choice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pal = Look.of(context).pal;
-    final keys = options.keys.toList();
+    final all = options.keys.toList();
+    // more than four choices go on rows of three
+    final per = all.length > 4 ? 3 : all.length;
     return Container(
       decoration: BoxDecoration(
         border: Border.all(color: pal.ink, width: 1.5),
         borderRadius: BorderRadius.circular(3),
       ),
-      child: Row(
+      child: Column(
         children: [
-          for (var i = 0; i < keys.length; i++)
-            Expanded(
-              child: Press(
-                onTap: () => onPick(keys[i]),
-                child: Semantics(
-                  selected: value == keys[i],
-                  child: AnimatedContainer(
-                    duration: Dur.out,
-                    height: 48,
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                      color: value == keys[i] ? pal.ink : Colors.transparent,
-                      border: i == 0 ? null : Border(left: BorderSide(color: pal.ink, width: 1.5)),
-                    ),
-                    padding: const EdgeInsets.symmetric(horizontal: 6),
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      child: Text(
-                        options[keys[i]]!,
-                        style: T.body(16, value == keys[i] ? pal.bg : pal.ink, w: FontWeight.w700),
-                      ),
+          for (var r = 0; r * per < all.length; r++)
+            Container(
+              decoration: BoxDecoration(
+                border: r == 0 ? null : Border(top: BorderSide(color: pal.ink, width: 1.5)),
+              ),
+              child: _row(pal, all.skip(r * per).take(per).toList()),
+            ),
+        ],
+      ),
+    );
+  }
+
+  Widget _row(Pal pal, List<String> keys) {
+    return Row(
+      children: [
+        for (var i = 0; i < keys.length; i++)
+          Expanded(
+            child: Press(
+              onTap: () => onPick(keys[i]),
+              child: Semantics(
+                selected: value == keys[i],
+                child: AnimatedContainer(
+                  duration: Dur.out,
+                  height: 48,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: value == keys[i] ? pal.ink : Colors.transparent,
+                    border: i == 0 ? null : Border(left: BorderSide(color: pal.ink, width: 1.5)),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 6),
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      options[keys[i]]!,
+                      style: T.body(16, value == keys[i] ? pal.bg : pal.ink, w: FontWeight.w700),
                     ),
                   ),
                 ),
               ),
             ),
-        ],
-      ),
+          ),
+      ],
     );
   }
 }
@@ -408,7 +515,9 @@ class _Toggle extends StatelessWidget {
               SizedBox(
                 width: 54,
                 child: Text(
-                  value ? tr('Nyala', 'On', 'Sí', 'Oui') : tr('Mati', 'Off', 'No', 'Non'),
+                  value
+                      ? tr('Nyala', 'On', 'Sí', 'Oui', 'An', 'Ligado')
+                      : tr('Mati', 'Off', 'No', 'Non', 'Aus', 'Desligado'),
                   textAlign: TextAlign.right,
                   style: T.body(15, pal.muted),
                 ),
@@ -463,12 +572,19 @@ class LicencesPage extends StatelessWidget {
             children: [
               Press(
                 onTap: () => Navigator.of(context).pop(),
-                label: tr('Kembali', 'Back', 'Volver', 'Retour'),
+                label: tr('Kembali', 'Back', 'Volver', 'Retour', 'Zurück', 'Voltar'),
                 child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
               ),
               Expanded(
                 child: Text(
-                  tr('Lisensi huruf', 'Font licences', 'Licencias de las fuentes', 'Licences des polices'),
+                  tr(
+                    'Lisensi huruf',
+                    'Font licences',
+                    'Licencias de las fuentes',
+                    'Licences des polices',
+                    'Schriftlizenzen',
+                    'Licenças das fontes',
+                  ),
                   style: T.display(25, pal.ink),
                 ),
               ),
@@ -495,48 +611,72 @@ class PrivacyPage extends StatelessWidget {
 
   static List<(String, String)> get parts => [
     (
-      tr('Yang disimpan', 'What is kept', 'Qué se guarda', 'Ce qui est conservé'),
+      tr(
+        'Yang disimpan',
+        'What is kept',
+        'Qué se guarda',
+        'Ce qui est conservé',
+        'Was gespeichert wird',
+        'O que é guardado',
+      ),
       tr(
         'Kemajuanmu (kata, gelar, kronik, pengaturan) disimpan dalam satu berkas di ponsel ini saja. Tidak ada akun, tidak ada nama, tidak ada email.',
         'Your progress (words, title, chronicle, settings) is kept in one file on this phone only. There is no account, no name, no email.',
         'Tu progreso (palabras, título, crónica, ajustes) se guarda en un solo archivo, solo en este teléfono. No hay cuenta, ni nombre, ni correo.',
         'Ta progression (mots, titre, chronique, réglages) est conservée dans un seul fichier, sur ce téléphone uniquement. Pas de compte, pas de nom, pas d’e-mail.',
+        'Dein Fortschritt (Wörter, Titel, Chronik, Einstellungen) liegt in einer einzigen Datei nur auf diesem Handy. Es gibt kein Konto, keinen Namen, keine E-Mail.',
+        'Seu progresso (palavras, título, crônica, configurações) fica num único arquivo, só neste celular. Não há conta, nome nem e-mail.',
       ),
     ),
     (
-      tr('Yang dikirim', 'What is sent', 'Qué se envía', 'Ce qui est envoyé'),
+      tr('Yang dikirim', 'What is sent', 'Qué se envía', 'Ce qui est envoyé', 'Was gesendet wird', 'O que é enviado'),
       tr(
         'Tidak ada. Verbarium tidak memakai iklan, analitik, atau pelacak, dan tidak mengirim apa pun ke server.',
         'Nothing. Verbarium has no ads, no analytics and no trackers, and sends nothing to any server.',
         'Nada. Verbarium no tiene anuncios, ni analíticas, ni rastreadores, y no envía nada a ningún servidor.',
         'Rien. Verbarium n’a ni publicité, ni statistiques, ni traceurs, et n’envoie rien à aucun serveur.',
+        'Nichts. Verbarium hat keine Werbung, keine Analyse und keine Tracker und sendet nichts an einen Server.',
+        'Nada. O Verbarium não tem anúncios, análises nem rastreadores, e não envia nada para nenhum servidor.',
       ),
     ),
     (
-      tr('Izin internet', 'Internet permission', 'Permiso de internet', 'Autorisation internet'),
+      tr(
+        'Izin internet',
+        'Internet permission',
+        'Permiso de internet',
+        'Autorisation internet',
+        'Internetberechtigung',
+        'Permissão de internet',
+      ),
       tr(
         'Verbarium meminta izin internet hanya karena Google Play membutuhkannya untuk donasi. Koneksi itu hanya dibuka saat halaman Dukung Verbarium terbuka, dan hanya ke Google Play. Verbarium sendiri tidak mengirim atau mengambil data apa pun.',
         'Verbarium asks for internet access only because Google Play needs it for donations. The connection is opened only while the Support Verbarium page is open, and only to Google Play. Verbarium itself sends and collects nothing.',
         'Verbarium pide acceso a internet solo porque Google Play lo necesita para las donaciones. La conexión solo se abre mientras la página Apoya a Verbarium está abierta, y solo con Google Play. Verbarium por sí mismo no envía ni recoge ningún dato.',
         'Verbarium demande l’accès à internet uniquement parce que Google Play en a besoin pour les dons. La connexion n’est ouverte que pendant que la page Soutenir Verbarium est ouverte, et seulement vers Google Play. Verbarium lui-même n’envoie et ne collecte aucune donnée.',
+        'Verbarium fragt nur nach Internetzugang, weil Google Play ihn für Spenden braucht. Die Verbindung wird nur geöffnet, solange die Seite Verbarium unterstützen offen ist, und nur zu Google Play. Verbarium selbst sendet und sammelt nichts.',
+        'O Verbarium só pede acesso à internet porque o Google Play precisa dele para doações. A conexão só é aberta enquanto a página Apoiar o Verbarium está aberta, e só com o Google Play. O próprio Verbarium não envia nem coleta nada.',
       ),
     ),
     (
-      tr('Dukungan', 'Support', 'Apoyo', 'Soutien'),
+      tr('Dukungan', 'Support', 'Apoyo', 'Soutien', 'Unterstützen', 'Apoio'),
       tr(
         'Untuk versi dari Play Store ada pilihan mendukung Verbarium; pembayarannya diurus sepenuhnya oleh Google Play. Verbarium tidak pernah melihat data pembayaranmu, dan dukungan tidak membuka apa pun: aplikasinya tetap sama untuk semua orang.',
         'The Play Store version offers a way to support Verbarium; the payment is handled entirely by Google Play. Verbarium never sees your payment details, and support unlocks nothing: the app is the same for everyone.',
         'La versión de Play Store ofrece una forma de apoyar a Verbarium; el pago lo gestiona por completo Google Play. Verbarium nunca ve tus datos de pago, y el apoyo no desbloquea nada: la aplicación es igual para todos.',
         'La version du Play Store permet de soutenir Verbarium ; le paiement est entièrement géré par Google Play. Verbarium ne voit jamais tes données de paiement, et le soutien ne débloque rien : l’application est la même pour tous.',
+        'Die Version aus dem Play Store bietet eine Möglichkeit, Verbarium zu unterstützen; die Zahlung wickelt allein Google Play ab. Verbarium sieht deine Zahlungsdaten nie, und Unterstützung schaltet nichts frei: Die App ist für alle gleich.',
+        'A versão da Play Store oferece um jeito de apoiar o Verbarium; o pagamento é todo feito pelo Google Play. O Verbarium nunca vê seus dados de pagamento, e o apoio não desbloqueia nada: o app é igual para todos.',
       ),
     ),
     (
-      tr('Menghapus', 'Erasing', 'Borrar', 'Effacer'),
+      tr('Menghapus', 'Erasing', 'Borrar', 'Effacer', 'Löschen', 'Apagar'),
       tr(
         'Hapus semua kemajuan di Pengaturan, atau hapus aplikasinya: berkas itu ikut hilang.',
         'Erase all progress in Settings, or uninstall the app: the file goes with it.',
         'Borra todo el progreso en Ajustes, o desinstala la aplicación: el archivo desaparece con ella.',
         'Efface toute la progression dans les Réglages, ou désinstalle l’application : le fichier disparaît avec elle.',
+        'Lösche allen Fortschritt in den Einstellungen oder deinstalliere die App: Die Datei geht mit ihr.',
+        'Apague todo o progresso nas Configurações ou desinstale o app: o arquivo vai junto.',
       ),
     ),
   ];
@@ -553,11 +693,14 @@ class PrivacyPage extends StatelessWidget {
             children: [
               Press(
                 onTap: () => Navigator.of(context).pop(),
-                label: tr('Kembali', 'Back', 'Volver', 'Retour'),
+                label: tr('Kembali', 'Back', 'Volver', 'Retour', 'Zurück', 'Voltar'),
                 child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
               ),
               Expanded(
-                child: Text(tr('Privasi', 'Privacy', 'Privacidad', 'Confidentialité'), style: T.display(25, pal.ink)),
+                child: Text(
+                  tr('Privasi', 'Privacy', 'Privacidad', 'Confidentialité', 'Datenschutz', 'Privacidade'),
+                  style: T.display(25, pal.ink),
+                ),
               ),
             ],
           ),
@@ -598,7 +741,14 @@ class _SupportLinkState extends State<_SupportLink> {
   Widget build(BuildContext context) {
     if (!play) return const SizedBox.shrink();
     return _Link(
-      tr('Dukung Verbarium', 'Support Verbarium', 'Apoya a Verbarium', 'Soutenir Verbarium'),
+      tr(
+        'Dukung Verbarium',
+        'Support Verbarium',
+        'Apoya a Verbarium',
+        'Soutenir Verbarium',
+        'Verbarium unterstützen',
+        'Apoiar o Verbarium',
+      ),
       () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SupportPage())),
     );
   }
@@ -660,14 +810,25 @@ class _SupportPageState extends State<SupportPage> {
       'A cup of tea for the scribe',
       'Una taza de té para el escriba',
       'Une tasse de thé pour le scribe',
+      'Eine Tasse Tee für den Schreiber',
+      'Uma xícara de chá para o escriba',
     ),
     'donasi_sedang' => tr(
       'Lilin untuk menara',
       'Candles for the tower',
       'Velas para la torre',
       'Des bougies pour la tour',
+      'Kerzen für den Turm',
+      'Velas para a torre',
     ),
-    _ => tr('Tinta untuk Kronik', 'Ink for the Chronicle', 'Tinta para la Crónica', 'De l’encre pour la Chronique'),
+    _ => tr(
+      'Tinta untuk Kronik',
+      'Ink for the Chronicle',
+      'Tinta para la Crónica',
+      'De l’encre pour la Chronique',
+      'Tinte für die Chronik',
+      'Tinta para a Crônica',
+    ),
   };
 
   @override
@@ -683,12 +844,19 @@ class _SupportPageState extends State<SupportPage> {
             children: [
               Press(
                 onTap: () => Navigator.of(context).pop(),
-                label: tr('Kembali', 'Back', 'Volver', 'Retour'),
+                label: tr('Kembali', 'Back', 'Volver', 'Retour', 'Zurück', 'Voltar'),
                 child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
               ),
               Expanded(
                 child: Text(
-                  tr('Dukung Verbarium', 'Support Verbarium', 'Apoya a Verbarium', 'Soutenir Verbarium'),
+                  tr(
+                    'Dukung Verbarium',
+                    'Support Verbarium',
+                    'Apoya a Verbarium',
+                    'Soutenir Verbarium',
+                    'Verbarium unterstützen',
+                    'Apoiar o Verbarium',
+                  ),
                   style: T.display(25, pal.ink),
                 ),
               ),
@@ -704,6 +872,8 @@ class _SupportPageState extends State<SupportPage> {
                     'Verbarium is free for everyone and will stay that way. Support unlocks nothing; it helps new words keep being written.',
                     'Verbarium es gratis para todos y seguirá siéndolo. El apoyo no desbloquea nada; ayuda a que se sigan escribiendo palabras nuevas.',
                     'Verbarium est gratuit pour tous et le restera. Le soutien ne débloque rien ; il aide à continuer d’écrire de nouveaux mots.',
+                    'Verbarium ist für alle kostenlos und bleibt es. Unterstützung schaltet nichts frei; sie hilft, dass weiter neue Wörter geschrieben werden.',
+                    'O Verbarium é gratuito para todos e vai continuar assim. O apoio não desbloqueia nada; ajuda a continuar escrevendo palavras novas.',
                   ),
                   style: T.body(16, pal.ink, height: 1.5),
                 ),
@@ -715,6 +885,8 @@ class _SupportPageState extends State<SupportPage> {
                       'Asking Google Play…',
                       'Consultando Google Play…',
                       'Connexion à Google Play…',
+                      'Frage Google Play …',
+                      'Consultando o Google Play…',
                     ),
                     style: T.body(15, pal.muted, height: 1.5),
                   )
@@ -725,6 +897,8 @@ class _SupportPageState extends State<SupportPage> {
                       'Not available yet. Try again later.',
                       'Aún no está disponible. Inténtalo más tarde.',
                       'Pas encore disponible. Réessaie plus tard.',
+                      'Noch nicht verfügbar. Versuch es später noch einmal.',
+                      'Ainda não disponível. Tente de novo mais tarde.',
                     ),
                     style: T.body(15, pal.muted, height: 1.5),
                   ),
@@ -739,18 +913,24 @@ class _SupportPageState extends State<SupportPage> {
                       'Thank you. The scribe will remember.',
                       'Gracias. El escriba lo recordará.',
                       'Merci. Le scribe s’en souviendra.',
+                      'Danke. Der Schreiber wird es nicht vergessen.',
+                      'Obrigado. O escriba vai se lembrar.',
                     ),
                     'pending' => tr(
                       'Pembayaran sedang diproses oleh Google Play.',
                       'Google Play is still processing the payment.',
                       'Google Play aún está procesando el pago.',
                       'Google Play traite encore le paiement.',
+                      'Google Play bearbeitet die Zahlung noch.',
+                      'O Google Play ainda está processando o pagamento.',
                     ),
                     _ => tr(
                       'Belum berhasil. Coba lagi nanti.',
                       'That did not go through. Try again later.',
                       'No se pudo completar. Inténtalo más tarde.',
                       'Cela n’a pas abouti. Réessaie plus tard.',
+                      'Das hat nicht geklappt. Versuch es später noch einmal.',
+                      'Não deu certo. Tente de novo mais tarde.',
                     ),
                   }, style: T.body(15, pal.muted, height: 1.5)),
                 if (n > 0)
@@ -760,6 +940,8 @@ class _SupportPageState extends State<SupportPage> {
                       'You have supported Verbarium $n times.',
                       'Has apoyado a Verbarium $n veces.',
                       'Tu as soutenu Verbarium $n fois.',
+                      'Du hast Verbarium $n-mal unterstützt.',
+                      'Você apoiou o Verbarium $n vezes.',
                     ),
                     style: T.body(15, pal.muted, height: 1.5),
                   ),

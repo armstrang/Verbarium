@@ -12,6 +12,7 @@ import '../app/app.dart';
 import '../app/lang.dart';
 import '../data/deck.dart';
 import '../engine/engine.dart';
+import 'banner.dart';
 import 'pixel.dart';
 import 'realm.dart' show SourcesPage;
 import 'root.dart';
@@ -113,7 +114,7 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
     final app = App.I;
     return TabBody(
       children: [
-        Label(tr('Negeri', 'The realm', 'El reino', 'Le royaume')),
+        Label(tr('Negeri', 'The realm', 'El reino', 'Le royaume', 'Das Reich', 'O reino')),
         const SizedBox(height: 6),
         Row(
           crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -121,7 +122,14 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
           children: [
             Expanded(
               child: Text(
-                tr('Pilih kerajaan', 'Choose a kingdom', 'Elige un reino', 'Choisis un royaume'),
+                tr(
+                  'Pilih kerajaan',
+                  'Choose a kingdom',
+                  'Elige un reino',
+                  'Choisis un royaume',
+                  'Wähle ein Königreich',
+                  'Escolha um reino',
+                ),
                 style: T.display(31, pal.ink),
               ),
             ),
@@ -132,6 +140,8 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
                   '${app.engine.streak} days',
                   '${app.engine.streak} días',
                   '${app.engine.streak} jours',
+                  '${app.engine.streak} Tage',
+                  '${app.engine.streak} dias',
                 ),
                 style: T.body(15, pal.gold, w: FontWeight.w700),
               ),
@@ -177,6 +187,8 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
                           'World map: Grauwacht in the north, Beaumarais in the west, Valdoro in the south, Alvamar in the east, Aldmere in the middle. Tap a kingdom.',
                           'Mapa del mundo: Grauwacht al norte, Beaumarais al oeste, Valdoro al sur, Alvamar al este, Aldmere en el centro. Toca un reino.',
                           'Carte du monde : Grauwacht au nord, Beaumarais à l’ouest, Valdoro au sud, Alvamar à l’est, Aldmere au centre. Touche un royaume.',
+                          'Weltkarte: Grauwacht im Norden, Beaumarais im Westen, Valdoro im Süden, Alvamar im Osten, Aldmere in der Mitte. Tippe auf ein Königreich.',
+                          'Mapa do mundo: Grauwacht ao norte, Beaumarais a oeste, Valdoro ao sul, Alvamar a leste, Aldmere no centro. Toque num reino.',
                         ),
                         child: WorldMap(here: app.realm),
                       ),
@@ -194,6 +206,8 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
             'Tap a land to go down',
             'Toca una tierra para bajar',
             'Touche une terre pour descendre',
+            'Tippe auf ein Land, um hinabzusteigen',
+            'Toque numa terra para descer',
           ),
           style: T.body(14, pal.muted),
           textAlign: TextAlign.center,
@@ -312,8 +326,8 @@ class KingdomRow extends StatelessWidget {
                   Text(k.name, style: T.display(20, pal.ink)),
                   Text(
                     st.seen == 0
-                        ? '${k.language} · ${tr('belum dimulai', 'not started', 'sin empezar', 'pas commencé')}'
-                        : '${k.language} · ${rankNames[st.rank]} · ${tr('${st.seen} kata', '${st.seen} words', '${st.seen} palabras', '${st.seen} mots')}',
+                        ? '${k.language} · ${tr('belum dimulai', 'not started', 'sin empezar', 'pas commencé', 'nicht begonnen', 'não começado')}'
+                        : '${k.language} · ${rankNames[st.rank]} · ${tr('${st.seen} kata', '${st.seen} words', '${st.seen} palabras', '${st.seen} mots', '${st.seen} Wörter', '${st.seen} palavras')}',
                     style: T.body(14, pal.muted),
                   ),
                 ],
@@ -321,10 +335,10 @@ class KingdomRow extends StatelessWidget {
             ),
             Text(
               here
-                  ? tr('Lanjut', 'Go on', 'Seguir', 'Continuer')
+                  ? tr('Lanjut', 'Go on', 'Seguir', 'Continuer', 'Weiter', 'Continuar')
                   : (st.seen == 0
-                        ? tr('Masuk', 'Enter', 'Entrar', 'Entrer')
-                        : tr('Lanjut', 'Go on', 'Seguir', 'Continuer')),
+                        ? tr('Masuk', 'Enter', 'Entrar', 'Entrer', 'Betreten', 'Entrar')
+                        : tr('Lanjut', 'Go on', 'Seguir', 'Continuer', 'Weiter', 'Continuar')),
               style: T.body(14, here ? pal.good : pal.muted, w: here ? FontWeight.w700 : FontWeight.w400),
             ),
           ],
@@ -878,6 +892,7 @@ class KingdomScreen extends StatelessWidget {
     final places = placeNames[k.code]!;
     final next = min(rank + 1, Engine.maxRank);
     final share = rank >= Engine.maxRank ? 1.0 : e.stat(next).share;
+    askViaOnce(context);
     return Leaf(
       padding: EdgeInsets.zero,
       child: ListView(
@@ -893,7 +908,14 @@ class KingdomScreen extends StatelessWidget {
                 left: 12,
                 top: MediaQuery.paddingOf(context).top + 10,
                 child: Press(
-                  label: tr('Kembali ke peta', 'Back to the map', 'Volver al mapa', 'Retour à la carte'),
+                  label: tr(
+                    'Kembali ke peta',
+                    'Back to the map',
+                    'Volver al mapa',
+                    'Retour à la carte',
+                    'Zurück zur Karte',
+                    'Voltar ao mapa',
+                  ),
                   onTap: () => Navigator.of(context).pop(),
                   child: Container(
                     height: 44,
@@ -908,7 +930,10 @@ class KingdomScreen extends StatelessWidget {
                       children: [
                         const Icon(Icons.arrow_back, size: 18, color: Color(0xFF1C1B19)),
                         const SizedBox(width: 6),
-                        Text(tr('Peta', 'Map', 'Mapa', 'Carte'), style: T.body(15, const Color(0xFF1C1B19))),
+                        Text(
+                          tr('Peta', 'Map', 'Mapa', 'Carte', 'Karte', 'Mapa'),
+                          style: T.body(15, const Color(0xFF1C1B19)),
+                        ),
                       ],
                     ),
                   ),
@@ -922,25 +947,26 @@ class KingdomScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,
                   children: [
                     Expanded(child: Text(k.name, style: T.display(30, pal.ink))),
-                    Text(k.language, style: T.body(15, pal.muted)),
+                    if (k.code == 'en') Text(k.language, style: T.body(15, pal.muted)) else BannerPill(k),
                   ],
                 ),
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    _Tile(tr('Gelar', 'Title', 'Título', 'Titre'), rankNames[rank], display: true),
+                    _Tile(tr('Gelar', 'Title', 'Título', 'Titre', 'Titel', 'Título'), rankNames[rank], display: true),
                     const SizedBox(width: 8),
                     _Tile(
-                      tr('Kata', 'Words', 'Palabras', 'Mots'),
+                      tr('Kata', 'Words', 'Palabras', 'Mots', 'Wörter', 'Palavras'),
                       '${e.seenTotal}',
                       sub: ' / ${app.deck.words.length}',
                     ),
                     const SizedBox(width: 8),
-                    _Tile(tr('Ulangan hari ini', 'Due today', 'Para hoy', 'À revoir'), '${e.dueWords().length}'),
+                    _Tile(
+                      tr('Ulangan hari ini', 'Due today', 'Para hoy', 'À revoir', 'Heute fällig', 'Para hoje'),
+                      '${e.dueWords().length}',
+                    ),
                   ],
                 ),
                 const SizedBox(height: 14),
@@ -954,15 +980,31 @@ class KingdomScreen extends StatelessWidget {
                 const SizedBox(height: 16),
                 InkButton(
                   rank >= Engine.maxRank
-                      ? tr('Ulang kata', 'Review words', 'Repasar palabras', 'Réviser des mots')
+                      ? tr(
+                          'Ulang kata',
+                          'Review words',
+                          'Repasar palabras',
+                          'Réviser des mots',
+                          'Wörter wiederholen',
+                          'Revisar palavras',
+                        )
                       : (e.seenTotal == 0
                             ? tr(
                                 'Mulai di ${k.name}',
                                 'Begin in ${k.name}',
                                 'Empezar en ${k.name}',
                                 'Commencer à ${k.name}',
+                                'In ${k.name} beginnen',
+                                'Começar em ${k.name}',
                               )
-                            : tr('Lanjut belajar', 'Keep learning', 'Seguir aprendiendo', 'Continuer')),
+                            : tr(
+                                'Lanjut belajar',
+                                'Keep learning',
+                                'Seguir aprendiendo',
+                                'Continuer',
+                                'Weiterlernen',
+                                'Continuar aprendendo',
+                              )),
                   onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn)),
                 ),
                 const SizedBox(height: 8),
@@ -972,7 +1014,14 @@ class KingdomScreen extends StatelessWidget {
                     height: 48,
                     alignment: Alignment.center,
                     child: Text(
-                      tr('Tangga gelar', 'The ladder of titles', 'La escala de títulos', 'L’échelle des titres'),
+                      tr(
+                        'Tangga gelar',
+                        'The ladder of titles',
+                        'La escala de títulos',
+                        'L’échelle des titres',
+                        'Die Titelleiter',
+                        'A escada de títulos',
+                      ),
                       style: T.body(16, pal.ink, w: FontWeight.w500).copyWith(decoration: TextDecoration.underline),
                     ),
                   ),
@@ -1042,12 +1091,12 @@ class _PlaceRow extends StatelessWidget {
     final held = i <= rank, winning = i == rank + 1;
     final st = i == 0 ? null : e.stat(i);
     final status = held
-        ? tr('Dikuasai', 'Held', 'Dominado', 'Conquis')
+        ? tr('Dikuasai', 'Held', 'Dominado', 'Conquis', 'Gehalten', 'Conquistado')
         : (winning
               ? (st!.seen > 0
-                    ? tr('Sedang direbut', 'Being won', 'En conquista', 'En cours')
-                    : tr('Mulai di sini', 'Start here', 'Empieza aquí', 'Commence ici'))
-              : tr('Terkunci', 'Locked', 'Cerrado', 'Fermé'));
+                    ? tr('Sedang direbut', 'Being won', 'En conquista', 'En cours', 'Wird erobert', 'Em conquista')
+                    : tr('Mulai di sini', 'Start here', 'Empieza aquí', 'Commence ici', 'Hier beginnen', 'Comece aqui'))
+              : tr('Terkunci', 'Locked', 'Cerrado', 'Fermé', 'Gesperrt', 'Fechado'));
     final tint = pal.tincture(i);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5),
@@ -1561,12 +1610,19 @@ class LadderPage extends StatelessWidget {
             children: [
               Press(
                 onTap: () => Navigator.of(context).pop(),
-                label: tr('Kembali', 'Back', 'Volver', 'Retour'),
+                label: tr('Kembali', 'Back', 'Volver', 'Retour', 'Zurück', 'Voltar'),
                 child: SizedBox(width: 48, height: 48, child: Icon(Icons.arrow_back, color: pal.ink)),
               ),
               Expanded(
                 child: Text(
-                  tr('Tangga gelar', 'The ladder of titles', 'La escala de títulos', 'L’échelle des titres'),
+                  tr(
+                    'Tangga gelar',
+                    'The ladder of titles',
+                    'La escala de títulos',
+                    'L’échelle des titres',
+                    'Die Titelleiter',
+                    'A escada de títulos',
+                  ),
                   style: T.display(26, pal.ink),
                 ),
               ),
@@ -1582,6 +1638,8 @@ class LadderPage extends StatelessWidget {
                     'Each title means vocabulary at one CEFR level. A test score also depends on reading, listening, writing and speaking.',
                     'Cada título equivale al vocabulario de un nivel MCER. La nota de un examen también depende de leer, escuchar, escribir y hablar.',
                     'Chaque titre équivaut au vocabulaire d’un niveau CECRL. Un score dépend aussi de la lecture, de l’écoute, de l’écrit et de l’oral.',
+                    'Jeder Titel steht für Wortschatz auf einer GER-Stufe. Ein Prüfungsergebnis hängt auch von Lesen, Hören, Schreiben und Sprechen ab.',
+                    'Cada título significa vocabulário num nível do QECR. A nota de uma prova também depende de leitura, escuta, escrita e fala.',
                   ),
                   style: T.body(15.5, pal.muted, height: 1.45),
                 ),
@@ -1599,6 +1657,8 @@ class LadderPage extends StatelessWidget {
                       'TOEFL on the 1–6 scale. Sources: the CEFR alignments of IELTS and ETS. Word levels from the Oxford 3000/5000.',
                       'TOEFL en la escala de 1 a 6. Fuentes: las equivalencias MCER de IELTS y ETS. Niveles de palabras del Oxford 3000/5000.',
                       'TOEFL sur l’échelle de 1 à 6. Sources : les correspondances CECRL d’IELTS et d’ETS. Niveaux des mots selon l’Oxford 3000/5000.',
+                      'TOEFL auf der Skala 1–6. Quellen: die GER-Zuordnungen von IELTS und ETS. Wortstufen aus den Oxford 3000/5000.',
+                      'TOEFL na escala 1–6. Fontes: os alinhamentos ao QECR do IELTS e da ETS. Níveis das palavras do Oxford 3000/5000.',
                     ),
                     style: T.body(13.5, pal.muted, height: 1.4),
                   ),
@@ -1613,6 +1673,8 @@ class LadderPage extends StatelessWidget {
                         'Where do these numbers come from?',
                         '¿De dónde salen estos números?',
                         'D’où viennent ces chiffres ?',
+                        'Woher kommen diese Zahlen?',
+                        'De onde vêm esses números?',
                       ),
                       style: T.body(16, pal.ink, w: FontWeight.w500).copyWith(decoration: TextDecoration.underline),
                     ),
@@ -1638,10 +1700,10 @@ class _LadderRung extends StatelessWidget {
     final info = Engine.ranks[r];
     final held = r <= rank, here = r == rank;
     final state = here
-        ? '${tr('Gelarmu', 'Your title', 'Tu título', 'Ton titre')}${r < Engine.maxRank ? ' · ${stageName(App.I.engine.stage)}' : ''}'
+        ? '${tr('Gelarmu', 'Your title', 'Tu título', 'Ton titre', 'Dein Titel', 'Seu título')}${r < Engine.maxRank ? ' · ${stageName(App.I.engine.stage)}' : ''}'
         : (held
-              ? tr('Sudah dilalui', 'Passed', 'Superado', 'Franchi')
-              : (r == rank + 1 ? tr('Berikutnya', 'Next', 'Siguiente', 'Suivant') : ''));
+              ? tr('Sudah dilalui', 'Passed', 'Superado', 'Franchi', 'Bestanden', 'Superado')
+              : (r == rank + 1 ? tr('Berikutnya', 'Next', 'Siguiente', 'Suivant', 'Als Nächstes', 'Próximo') : ''));
     return Container(
       margin: const EdgeInsets.only(bottom: 6),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
