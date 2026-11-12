@@ -34,106 +34,172 @@ class HeroTab extends StatelessWidget {
         Label(tr('Karakter', 'Character', 'Personaje', 'Personnage')),
         const SizedBox(height: 10),
         Rise(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Press(
-                // the hero tapped: the story of who they are
-                onTap: () => Navigator.of(context).push(runRoute(LorePage(job: job, rank: rank))),
-                label: tr(
-                  'Kisah ${job.name}',
-                  'Story of the ${job.name}',
-                  'Historia de ${job.name}',
-                  'Histoire de ${job.name}',
-                ),
-                child: Container(
-                  width: 132,
-                  height: 150,
+          child: Press(
+            // the hero tapped: the story of who they are
+            onTap: () => Navigator.of(context).push(runRoute(LorePage(job: job, rank: rank))),
+            label: tr(
+              'Kisah ${job.name}',
+              'Story of the ${job.name}',
+              'Historia de ${job.name}',
+              'Histoire de ${job.name}',
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: SizedBox(
+                height: 236,
+                child: Stack(
                   alignment: Alignment.bottomCenter,
-                  padding: const EdgeInsets.only(bottom: 10),
-                  decoration: BoxDecoration(
-                    color: pal.field,
-                    border: Border.all(color: pal.ink, width: 1.5),
-                    borderRadius: BorderRadius.circular(3),
-                  ),
-                  child: HeroSprite(
-                    garb: job.garb,
-                    tier: job.tier,
-                    weapon: g.tone('weapon'),
-                    shield: g.tone('shield'),
-                    cloak: g.tone('cloak'),
-                    size: 108,
-                  ),
-                ),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    FittedBox(
-                      fit: BoxFit.scaleDown,
-                      alignment: Alignment.centerLeft,
-                      child: Text(job.name, style: T.display(30, pal.ink)),
-                    ),
-                    Text(
-                      '${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''}',
-                      style: T.body(16.5, pal.ink, w: FontWeight.w500),
-                    ),
-                    if (g.title.isNotEmpty) Text(g.title, style: T.display(19, pal.muted, italic: true)),
-                    const SizedBox(height: 8),
-                    Text('Level ${g.level}', style: T.body(17, pal.ink, w: FontWeight.w700)),
-                    const SizedBox(height: 6),
-                    Bar(g.levelShare, height: 6),
-                    const SizedBox(height: 4),
-                    Text(
-                      tr(
-                        '${g.toNext} XP lagi ke level ${g.level + 1}',
-                        '${g.toNext} XP to level ${g.level + 1}',
-                        '${g.toNext} XP para el nivel ${g.level + 1}',
-                        '${g.toNext} XP avant le niveau ${g.level + 1}',
+                    Positioned.fill(child: CustomPaint(painter: _Land(App.I.realm, pal.dark))),
+                    Positioned(
+                      bottom: 22,
+                      child: Container(
+                        width: 110,
+                        height: 12,
+                        decoration: BoxDecoration(
+                          color: const Color(0x33000000),
+                          borderRadius: BorderRadius.all(Radius.elliptical(55, 6)),
+                        ),
                       ),
-                      style: T.body(14.5, pal.muted),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 26),
+                      child: HeroSprite(
+                        garb: job.garb,
+                        tier: job.tier,
+                        weapon: g.tone('weapon'),
+                        shield: g.tone('shield'),
+                        cloak: g.tone('cloak'),
+                        size: 150,
+                      ),
+                    ),
+                    Positioned(
+                      right: 10,
+                      top: 10,
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFFCFBF7),
+                          border: Border.all(color: const Color(0xFFCFC9BA)),
+                          borderRadius: BorderRadius.circular(999),
+                        ),
+                        child: Text(
+                          tr(
+                            'Ketuk sosok untuk kisahnya',
+                            'Tap the figure for its story',
+                            'Toca la figura para su historia',
+                            'Touche le personnage pour son histoire',
+                          ),
+                          style: T.body(13, const Color(0xFF1C1B19)),
+                        ),
+                      ),
                     ),
                   ],
                 ),
               ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 14),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
+          children: [
+            Expanded(
+              child: FittedBox(
+                fit: BoxFit.scaleDown,
+                alignment: Alignment.centerLeft,
+                child: Text(job.name, style: T.display(32, pal.ink)),
+              ),
+            ),
+            Text(
+              '${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''} · Level ${g.level}',
+              style: T.body(15, pal.muted),
+            ),
+          ],
+        ),
+        Text(job.hint, style: T.display(16.5, pal.ink, italic: true)),
+        if (g.title.isNotEmpty) Text(g.title, style: T.display(16, pal.muted, italic: true)),
+        const SizedBox(height: 8),
+        Bar(g.levelShare, height: 6),
+        const SizedBox(height: 4),
+        Text(
+          tr(
+            '${g.toNext} XP lagi ke level ${g.level + 1}',
+            '${g.toNext} XP to level ${g.level + 1}',
+            '${g.toNext} XP para el nivel ${g.level + 1}',
+            '${g.toNext} XP avant le niveau ${g.level + 1}',
+          ),
+          style: T.body(13.5, pal.muted),
+        ),
+        const SizedBox(height: 18),
+        Label(tr('Jalan job', 'The path of jobs', 'El camino de oficios', 'La voie des métiers')),
+        const SizedBox(height: 8),
+        Wrap(
+          spacing: 6,
+          runSpacing: 6,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: [
+            for (final (i, j) in g.path.indexed) ...[
+              if (i > 0) Text('›', style: T.body(16, pal.muted)),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 5),
+                decoration: BoxDecoration(
+                  color: j == job ? look.accent : pal.field,
+                  border: Border.all(color: j == job ? look.accent : pal.line),
+                  borderRadius: BorderRadius.circular(999),
+                ),
+                child: Text(j.name, style: T.body(14.5, j == job ? pal.onAccent : pal.ink, w: FontWeight.w500)),
+              ),
+            ],
+            if (rank < Engine.maxRank) ...[
+              Text('›', style: T.body(16, pal.muted)),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 5),
+                decoration: BoxDecoration(
+                  border: Border.all(color: pal.muted),
+                  borderRadius: BorderRadius.circular(999),
+                ),
+                child: Text('?', style: T.body(14.5, pal.muted)),
+              ),
+            ],
+          ],
+        ),
+        const SizedBox(height: 12),
+        Container(
+          padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+          decoration: BoxDecoration(
+            color: pal.field,
+            border: Border.all(color: pal.line),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                tr('Perk yang terkumpul', 'Perks gathered', 'Ventajas reunidas', 'Atouts réunis'),
+                style: T.body(13.5, pal.muted),
+              ),
+              const SizedBox(height: 4),
+              if (perks.isEmpty)
+                Text(
+                  tr(
+                    'Job pertamamu ditentukan saat kamu dinobatkan menjadi Squire. Bukan kamu yang memilih: cara belajarmu yang menentukan.',
+                    'Your first job is decided when you are crowned Squire. You do not choose it: the way you learn does.',
+                    'Tu primer oficio se decide cuando te coronan Squire. No lo eliges tú: lo decide tu manera de aprender.',
+                    'Ton premier métier se décide quand tu es couronné Squire. Tu ne le choisis pas : ta façon d’apprendre le fait.',
+                  ),
+                  style: T.body(15, pal.ink, height: 1.45),
+                )
+              else
+                for (final j in perks)
+                  Padding(
+                    padding: const EdgeInsets.only(top: 3),
+                    child: Text('${j.name}: ${j.perk.text}', style: T.body(15, pal.ink, height: 1.4)),
+                  ),
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 8),
-          child: Text(
-            tr(
-              'Ketuk karakternya untuk membaca kisahnya.',
-              'Tap the figure to read their story.',
-              'Toca la figura para leer su historia.',
-              'Touche le personnage pour lire son histoire.',
-            ),
-            style: T.body(14, pal.muted),
-          ),
-        ),
-        const SizedBox(height: 22),
-        Label(tr('Jalan dan perk', 'Path and perks', 'Camino y ventajas', 'Voie et atouts')),
-        const SizedBox(height: 6),
-        Text(g.path.map((j) => j.name).join('  ›  '), style: T.body(16.5, pal.ink, w: FontWeight.w500, height: 1.45)),
-        const SizedBox(height: 4),
-        if (perks.isEmpty)
-          Text(
-            tr(
-              'Job pertamamu ditentukan saat kamu dinobatkan menjadi Squire. Bukan kamu yang memilih: cara belajarmu yang menentukan.',
-              'Your first job is decided when you are crowned Squire. You do not choose it: the way you learn does.',
-              'Tu primer oficio se decide cuando te coronan Squire. No lo eliges tú: lo decide tu manera de aprender.',
-              'Ton premier métier se décide quand tu es couronné Squire. Tu ne le choisis pas : ta façon d’apprendre le fait.',
-            ),
-            style: T.body(15, pal.muted, height: 1.45),
-          )
-        else
-          for (final j in perks)
-            Padding(
-              padding: const EdgeInsets.only(top: 3),
-              child: Text('${j.name}: ${j.perk.text}', style: T.body(15, pal.muted, height: 1.4)),
-            ),
         const SizedBox(height: 22),
         const _BuildBlock(),
         const SizedBox(height: 22),
@@ -667,4 +733,52 @@ class _Slot extends StatelessWidget {
       ),
     );
   }
+}
+
+/// the country behind the figure: the kingdom being played, by day or by candlelight
+class _Land extends CustomPainter {
+  final String code;
+  final bool night;
+  _Land(this.code, this.night);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    final (sky, far, near, ground, tree) = switch (code) {
+      'de' => (0xFFE2E3E6, 0xFF9A9488, 0xFFC9C6BC, 0xFFE6E4DE, 0xFF4E5A4A),
+      'es' => (0xFFF3E7CC, 0xFFE0C79A, 0xFFEADCB8, 0xFFF0E4C6, 0xFF6E7F4E),
+      'fr' => (0xFFE9E4EC, 0xFFC9BFD3, 0xFFDCD6CF, 0xFFE6E1DA, 0xFF5A2A6B),
+      'pt' => (0xFFD2DEDB, 0xFFA9C1BD, 0xFFDAD7C9, 0xFFE7E3D6, 0xFF4E6B5A),
+      _ => (0xFFE4E8EE, 0xFFB9C2B0, 0xFFD6D3C3, 0xFFE9E6DA, 0xFF7C8A63),
+    };
+    canvas.drawRect(Offset.zero & size, Paint()..color = Color(sky));
+    Path hill(double y0, double y1, double y2) => Path()
+      ..moveTo(0, h * y0)
+      ..cubicTo(w * .3, h * y1, w * .6, h * y2, w, h * y1)
+      ..lineTo(w, h)
+      ..lineTo(0, h)
+      ..close();
+    if (code == 'de') {
+      final m = Path()..moveTo(0, h * .62);
+      for (final (x, y) in const [(.12, .3), (.24, .52), (.4, .18), (.56, .46), (.7, .24), (.86, .5), (1.0, .36)]) {
+        m.lineTo(w * x, h * y);
+      }
+      m
+        ..lineTo(w, h)
+        ..lineTo(0, h)
+        ..close();
+      canvas.drawPath(m, Paint()..color = Color(far));
+    } else {
+      canvas.drawPath(hill(.62, .5, .58), Paint()..color = Color(far));
+    }
+    canvas.drawPath(hill(.72, .66, .74), Paint()..color = Color(near));
+    canvas.drawPath(hill(.86, .84, .88), Paint()..color = Color(ground));
+    for (final (x, y, r) in const [(.1, .7, 9.0), (.16, .73, 6.0), (.88, .66, 9.0), (.93, .7, 6.0)]) {
+      canvas.drawCircle(Offset(w * x, h * y), r, Paint()..color = Color(tree));
+    }
+    if (night) canvas.drawRect(Offset.zero & size, Paint()..color = const Color(0x40101820));
+  }
+
+  @override
+  bool shouldRepaint(_Land old) => old.code != code || old.night != night;
 }

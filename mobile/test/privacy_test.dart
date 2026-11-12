@@ -9,7 +9,15 @@ Iterable<File> _files(String dir, String ext) =>
 
 void main() {
   test('no Dart code talks to the network', () {
-    const banned = ['HttpClient', 'package:http/', 'WebSocket', 'Socket.connect', 'RawSocket', 'HttpRequest', 'Uri.http'];
+    const banned = [
+      'HttpClient',
+      'package:http/',
+      'WebSocket',
+      'Socket.connect',
+      'RawSocket',
+      'HttpRequest',
+      'Uri.http',
+    ];
     for (final f in _files('lib', '.dart')) {
       final s = f.readAsStringSync();
       for (final b in banned) {
@@ -19,7 +27,15 @@ void main() {
   });
 
   test('no Kotlin code talks to the network, and only Donate.kt uses Google Play Billing', () {
-    const banned = ['HttpURLConnection', 'java.net.URL', 'java.net.Socket', 'okhttp', 'URLConnection', 'Firebase', 'analytics'];
+    const banned = [
+      'HttpURLConnection',
+      'java.net.URL',
+      'java.net.Socket',
+      'okhttp',
+      'URLConnection',
+      'Firebase',
+      'analytics',
+    ];
     for (final f in _files('android/app/src/main/kotlin', '.kt')) {
       final s = f.readAsStringSync();
       for (final b in banned) {

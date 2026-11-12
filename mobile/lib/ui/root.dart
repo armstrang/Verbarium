@@ -13,8 +13,8 @@ import '../engine/engine.dart';
 import '../engine/game.dart';
 import 'chronicle.dart';
 import 'hero.dart';
+import 'world.dart';
 import 'pixel.dart';
-import 'realm.dart';
 import 'run.dart';
 import 'settings.dart';
 import 'theme.dart';
@@ -28,6 +28,8 @@ String bannerName(String b) => b == 'ielts' ? 'IELTS' : 'TOEFL';
 /// what a rank's vocabulary is on a par with, in the words of the chosen test
 String scoreLine(int rank, String banner) {
   final r = Engine.ranks[rank];
+  // a kingdom of another language, or the Peasant: CEFR alone
+  if (banner.isEmpty || r.ielts == '–') return 'CEFR ${r.cefr}';
   return banner == 'ielts' ? 'IELTS ${below(r.ielts)}' : 'TOEFL iBT ${below(r.toefl)}';
 }
 
@@ -273,9 +275,14 @@ class _OnboardingState extends State<Onboarding> {
             key: const ValueKey(0),
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 12),
+              const SizedBox(height: 4),
+              const Center(child: Rise(child: Seal(size: 58))),
+              const SizedBox(height: 8),
+              Center(child: Text('VERBARIUM', style: T.label(pal.muted).copyWith(letterSpacing: 3))),
+              const SizedBox(height: 16),
               Wrap(
                 runSpacing: 8,
+                alignment: WrapAlignment.center,
                 children: [
                   for (final l in const [('id', 'Indonesia'), ('en', 'English'), ('es', 'Español'), ('fr', 'Français')])
                     Padding(
@@ -287,13 +294,12 @@ class _OnboardingState extends State<Onboarding> {
                           selected: App.I.langCode == l.$1,
                           child: ExcludeSemantics(
                             child: Container(
-                              height: 44,
-                              padding: const EdgeInsets.symmetric(horizontal: 14),
-                              alignment: Alignment.center,
+                              constraints: const BoxConstraints(minHeight: 44),
+                              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
                               decoration: BoxDecoration(
                                 color: App.I.langCode == l.$1 ? pal.ink : Colors.transparent,
                                 border: Border.all(color: pal.ink, width: 1.5),
-                                borderRadius: BorderRadius.circular(3),
+                                borderRadius: BorderRadius.circular(999),
                               ),
                               child: Text(
                                 l.$2,
@@ -527,7 +533,7 @@ class _ShellState extends State<Shell> {
       tr('Kronik', 'Chronicle', 'Crónica', 'Chronique'),
     ];
     const icons = [Icons.edit_outlined, Icons.map_outlined, Icons.shield_outlined, Icons.menu_book_outlined];
-    final pages = [const Today(), const RealmTab(), const HeroTab(), const ChronicleTab()];
+    final pages = [const Today(), const RealmWorld(), const HeroTab(), const ChronicleTab()];
     return Material(
       type: MaterialType.transparency,
       child: Paper(
@@ -824,11 +830,26 @@ class Today extends StatelessWidget {
     final advice = g.advice();
     final quests = g.daily;
 
+    final next = min(rank + 1, Engine.maxRank);
+    final road = e.stat(next);
     return TabBody(
       children: [
         Row(
           children: [
-            Expanded(child: Text('Verbarium', style: T.display(30, pal.ink))),
+            Expanded(child: Text(tr('Hari ini', 'Today', 'Hoy', 'Aujourd’hui'), style: T.display(30, pal.ink))),
+            if (e.streak > 0)
+              Padding(
+                padding: const EdgeInsets.only(right: 4),
+                child: Text(
+                  tr(
+                    'Rentetan ${e.streak} hari',
+                    '${e.streak}-day streak',
+                    'Racha de ${e.streak} días',
+                    'Série de ${e.streak} jours',
+                  ),
+                  style: T.body(15, pal.gold, w: FontWeight.w700),
+                ),
+              ),
             Press(
               onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SettingsPage())),
               label: tr('Pengaturan', 'Settings', 'Ajustes', 'Réglages'),
@@ -836,118 +857,101 @@ class Today extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 8),
+        const SizedBox(height: 6),
         Rise(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              HeroSprite(
-                garb: g.job.garb,
-                tier: g.job.tier,
-                weapon: g.tone('weapon'),
-                shield: g.tone('shield'),
-                cloak: g.tone('cloak'),
-                size: 66,
-              ),
-              const SizedBox(width: 14),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Shield(rank, width: 20),
-                        const SizedBox(width: 8),
-                        Expanded(
-                          child: FittedBox(
-                            fit: BoxFit.scaleDown,
-                            alignment: Alignment.centerLeft,
-                            child: Text(g.job.name, style: T.display(28, pal.ink)),
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      '${App.I.realm == 'en' ? '' : '${App.I.kingdom.name} · '}${rankNames[rank]}${rank < Engine.maxRank ? ' ${stageName(e.stage)}' : ''} · Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'}',
-                      style: T.body(15, pal.ink, w: FontWeight.w500),
-                    ),
-                    Text(
-                      tr(
-                        'Kosakata setara ${scoreLine(rank, app.banner)}',
-                        'Vocabulary on a par with ${scoreLine(rank, app.banner)}',
-                        'Vocabulario equivalente a ${scoreLine(rank, app.banner)}',
-                        'Vocabulaire équivalent à ${scoreLine(rank, app.banner)}',
-                      ),
-                      style: T.body(15, pal.muted),
-                    ),
-                    const SizedBox(height: 6),
-                    Semantics(
-                      label: tr(
-                        '${g.toNext} XP lagi ke level ${g.level + 1}',
-                        '${g.toNext} XP to level ${g.level + 1}',
-                        '${g.toNext} XP para el nivel ${g.level + 1}',
-                        '${g.toNext} XP avant le niveau ${g.level + 1}',
-                      ),
-                      child: Bar(g.levelShare, height: 5),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 12),
-        Text(rankGreeting(rank), style: T.display(19, pal.muted, italic: true)),
-        const SizedBox(height: 14),
-        const Rule(),
-        const SizedBox(height: 16),
-        Label(tr('Saran hari ini', 'Advice for today', 'Consejo de hoy', 'Conseil du jour')),
-        const SizedBox(height: 8),
-        for (final a in advice)
-          Padding(
-            padding: const EdgeInsets.only(bottom: 6),
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(12, 12, 14, 12),
+            decoration: BoxDecoration(
+              color: pal.field,
+              border: Border.all(color: pal.line),
+              borderRadius: BorderRadius.circular(12),
+            ),
             child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 8, right: 10),
-                  child: Transform.rotate(angle: 0.785, child: Container(width: 6, height: 6, color: look.accent)),
+                HeroSprite(
+                  garb: g.job.garb,
+                  tier: g.job.tier,
+                  weapon: g.tone('weapon'),
+                  shield: g.tone('shield'),
+                  cloak: g.tone('cloak'),
+                  size: 64,
                 ),
-                Expanded(child: Text(a, style: T.body(16.5, pal.ink, height: 1.4))),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Shield(rank, width: 20),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              alignment: Alignment.centerLeft,
+                              child: Text('${rankNames[rank]} · ${g.job.name}', style: T.display(24, pal.ink)),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        '${App.I.realm == 'en' ? '' : '${App.I.kingdom.name} · '}${rank < Engine.maxRank ? '${tr('tingkat', 'stage', 'etapa', 'étape')} ${stageName(e.stage)} · ' : ''}Level ${g.level}${g.title.isEmpty ? '' : ' · ${g.title}'}',
+                        style: T.body(14.5, pal.ink, w: FontWeight.w500),
+                      ),
+                      Text(
+                        tr(
+                          'Kosakata setara ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
+                          'Vocabulary on a par with ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
+                          'Vocabulario equivalente a ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
+                          'Vocabulaire équivalent à ${scoreLine(rank, app.realm == 'en' ? app.banner : '')}',
+                        ),
+                        style: T.body(14, pal.muted),
+                      ),
+                      const SizedBox(height: 6),
+                      Semantics(
+                        label: tr(
+                          '${g.toNext} XP lagi ke level ${g.level + 1}',
+                          '${g.toNext} XP to level ${g.level + 1}',
+                          '${g.toNext} XP para el nivel ${g.level + 1}',
+                          '${g.toNext} XP avant le niveau ${g.level + 1}',
+                        ),
+                        child: Bar(g.levelShare, height: 6),
+                      ),
+                      const SizedBox(height: 3),
+                      Text(
+                        tr(
+                          '${g.toNext} XP lagi ke level ${g.level + 1}',
+                          '${g.toNext} XP to level ${g.level + 1}',
+                          '${g.toNext} XP para el nivel ${g.level + 1}',
+                          '${g.toNext} XP avant le niveau ${g.level + 1}',
+                        ),
+                        style: T.body(12.5, pal.muted),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
+        ),
         const SizedBox(height: 10),
+        Text(rankGreeting(rank), style: T.display(18.5, pal.muted, italic: true)),
+        const SizedBox(height: 14),
         Rise(
           delay: const Duration(milliseconds: 60),
           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              _Count(plan.reviews, tr('ulang', 'to review', 'por repasar', 'à réviser')),
-              const SizedBox(width: 32),
-              _Count(plan.fresh, tr('kata baru', 'new words', 'palabras nuevas', 'nouveaux mots')),
-              Expanded(
-                child: e.streak > 0
-                    ? Padding(
-                        padding: const EdgeInsets.only(bottom: 6, left: 12),
-                        child: Text(
-                          tr(
-                            '${e.streak} hari beruntun',
-                            '${e.streak} days in a row',
-                            '${e.streak} días seguidos',
-                            '${e.streak} jours d’affilée',
-                          ),
-                          textAlign: TextAlign.right,
-                          style: T.body(15.5, pal.muted),
-                        ),
-                      )
-                    : const SizedBox(),
-              ),
+              _Tile(plan.reviews, tr('ulang', 'to review', 'por repasar', 'à réviser')),
+              const SizedBox(width: 8),
+              _Tile(plan.fresh, tr('kata baru', 'new words', 'palabras nuevas', 'nouveaux mots')),
+              const SizedBox(width: 8),
+              _Tile(e.solidTotal, tr('kukuh', 'solid', 'firmes', 'ancrés')),
             ],
           ),
         ),
-        const SizedBox(height: 16),
+        const SizedBox(height: 14),
         if (!plan.empty)
           InkButton(
             plan.doneToday > 0
@@ -985,14 +989,174 @@ class Today extends StatelessWidget {
               onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn, extraFresh: 10)),
             ),
         ],
-        const SizedBox(height: 22),
+        if (rank < Engine.maxRank) ...[
+          const SizedBox(height: 14),
+          Rise(
+            delay: const Duration(milliseconds: 120),
+            child: Container(
+              padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+              decoration: BoxDecoration(
+                color: pal.field,
+                border: Border.all(color: pal.line),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Row(
+                    children: [
+                      Shield(next, width: 18, hollow: true),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          tr(
+                            'Jalan ke ${rankNames[next]} · ${(road.share * 100).round()}% kata kukuh',
+                            'The road to ${rankNames[next]} · ${(road.share * 100).round()}% of words solid',
+                            'Camino a ${rankNames[next]} · ${(road.share * 100).round()}% de palabras firmes',
+                            'Route vers ${rankNames[next]} · ${(road.share * 100).round()} % de mots ancrés',
+                          ),
+                          style: T.body(14.5, pal.ink, w: FontWeight.w500),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  _RoadBar(road.share),
+                  const SizedBox(height: 6),
+                  Text(
+                    tr(
+                      'Ujian penobatan terbuka di ${(Engine.openShare * 100).round()}%.',
+                      'The coronation trial opens at ${(Engine.openShare * 100).round()}%.',
+                      'La prueba de coronación se abre al ${(Engine.openShare * 100).round()} %.',
+                      'L’épreuve du couronnement s’ouvre à ${(Engine.openShare * 100).round()} %.',
+                    ),
+                    style: T.body(13, pal.muted),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+        const SizedBox(height: 18),
         const FightCard(),
-        const SizedBox(height: 22),
+        const SizedBox(height: 20),
         Label(tr('Quest hari ini', 'Today\'s quests', 'Misiones de hoy', 'Quêtes du jour')),
         const SizedBox(height: 4),
-        for (final q in quests) QuestRow(q),
+        for (final (i, q) in quests.indexed)
+          Rise(
+            delay: Duration(milliseconds: 160 + 50 * i),
+            child: QuestRow(q),
+          ),
+        if (advice.isNotEmpty) ...[
+          const SizedBox(height: 16),
+          Container(
+            padding: const EdgeInsets.fromLTRB(12, 12, 14, 12),
+            decoration: BoxDecoration(color: pal.deep, borderRadius: BorderRadius.circular(12)),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(Icons.lightbulb_outline, size: 20, color: pal.ink),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        tr('Saran hari ini', 'Advice for today', 'Consejo de hoy', 'Conseil du jour'),
+                        style: T.body(14.5, pal.ink, w: FontWeight.w700),
+                      ),
+                      for (final a in advice)
+                        Padding(
+                          padding: const EdgeInsets.only(top: 3),
+                          child: Text(a, style: T.body(15, pal.ink, height: 1.4)),
+                        ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ],
     );
+  }
+}
+
+/// the bar toward the next title, with the mark where the coronation trial opens
+class _RoadBar extends StatelessWidget {
+  final double share;
+  const _RoadBar(this.share);
+
+  @override
+  Widget build(BuildContext context) {
+    final look = Look.of(context);
+    return LayoutBuilder(
+      builder: (context, box) => Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Bar(share, height: 8),
+          Positioned(
+            left: box.maxWidth * Engine.openShare - 1,
+            top: -3,
+            child: Container(width: 2, height: 14, color: look.pal.gold),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// a number in a box that counts up when it first shows
+class _Tile extends StatelessWidget {
+  final int n;
+  final String what;
+  const _Tile(this.n, this.what);
+
+  @override
+  Widget build(BuildContext context) {
+    final look = Look.of(context);
+    final pal = look.pal;
+    return Expanded(
+      child: Semantics(
+        label: '$n $what',
+        child: ExcludeSemantics(
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(12, 9, 10, 9),
+            decoration: BoxDecoration(
+              color: pal.field,
+              border: Border.all(color: pal.line),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(what, style: T.body(13, pal.muted), maxLines: 1, overflow: TextOverflow.ellipsis),
+                TweenAnimationBuilder<double>(
+                  tween: Tween(begin: 0, end: n.toDouble()),
+                  duration: look.calm ? Duration.zero : const Duration(milliseconds: 900),
+                  curve: Curves.easeOutCubic,
+                  builder: (context, v, _) => FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text(_grouped(v.round()), style: T.display(30, pal.ink, height: 1.1)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  static String _grouped(int v) {
+    final s = '$v';
+    final b = StringBuffer();
+    for (var i = 0; i < s.length; i++) {
+      if (i > 0 && (s.length - i) % 3 == 0) b.write('.');
+      b.write(s[i]);
+    }
+    return b.toString();
   }
 }
 
@@ -1065,29 +1229,6 @@ class QuestRow extends StatelessWidget {
               ),
             ),
         ],
-      ),
-    );
-  }
-}
-
-class _Count extends StatelessWidget {
-  final int n;
-  final String what;
-  const _Count(this.n, this.what);
-
-  @override
-  Widget build(BuildContext context) {
-    final pal = Look.of(context).pal;
-    return Semantics(
-      label: '$n $what',
-      child: ExcludeSemantics(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('$n', style: T.display(48, pal.ink, height: 1)),
-            Text(what, style: T.body(15.5, pal.muted)),
-          ],
-        ),
       ),
     );
   }

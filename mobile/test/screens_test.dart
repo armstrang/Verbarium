@@ -18,6 +18,7 @@ import 'package:verbarium/ui/root.dart';
 import 'package:verbarium/ui/run.dart';
 import 'package:verbarium/ui/settings.dart';
 import 'package:verbarium/ui/theme.dart';
+import 'package:verbarium/ui/world.dart';
 
 final now = DateTime(2026, 11, 10, 9).millisecondsSinceEpoch;
 
@@ -228,7 +229,7 @@ void main() {
     await tester.tap(find.text('Mulai sebagai Peasant'));
     await beat(tester, 900);
     expect(find.text('Mulai belajar'), findsOneWidget);
-    expect(find.textContaining('Peasant I ·'), findsOneWidget);
+    expect(find.textContaining('Peasant · '), findsOneWidget);
     await shot(tester, '03-hari-ini-petani');
     await tester.pump(const Duration(seconds: 1));
   });
@@ -239,7 +240,8 @@ void main() {
       await learner(tester, theme: theme);
       await tester.pumpWidget(const VerbariumApp());
       await beat(tester, 900);
-      expect(find.textContaining('Squire I ·'), findsOneWidget);
+      expect(find.textContaining('Squire · '), findsOneWidget);
+      expect(find.textContaining('tingkat I ·'), findsOneWidget);
       await shot(tester, '10-hari-ini-$theme');
       await tester.drag(find.byType(ListView), const Offset(0, -520));
       await beat(tester);
@@ -346,6 +348,10 @@ void main() {
     expect(app.game.daily.any((q) => q.id == 'new' && q.done), isTrue);
     await tester.tap(find.text('Selesai'));
     await beat(tester, 900);
+    for (var i = 0; i < 6 && !has(find.textContaining('Ambil +')); i++) {
+      await tester.drag(find.byType(ListView).first, const Offset(0, -300));
+      await beat(tester);
+    }
     expect(find.textContaining('Ambil +'), findsWidgets);
     await tester.pump(const Duration(seconds: 1));
   });
@@ -379,7 +385,7 @@ void main() {
     await beat(tester, 900);
     await tester.drag(find.byType(ListView), const Offset(0, 600));
     await beat(tester);
-    expect(find.textContaining('Squire II ·'), findsOneWidget);
+    expect(find.textContaining('tingkat II ·'), findsOneWidget);
     await tester.pump(const Duration(seconds: 1));
   });
 
@@ -445,7 +451,7 @@ void main() {
     await beat(tester, 900);
     await tester.drag(find.byType(ListView), const Offset(0, 2000));
     await beat(tester);
-    expect(find.textContaining('Knight I ·'), findsOneWidget);
+    expect(find.textContaining('Knight · '), findsOneWidget);
     await shot(tester, '38-hari-ini-knight');
     await tester.pump(const Duration(seconds: 1));
   });
@@ -524,10 +530,12 @@ void main() {
     final app = await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);
     await tester.pumpWidget(const VerbariumApp());
     await beat(tester, 900);
-    expect(find.text('Duelist'), findsOneWidget, reason: 'Today names the job');
+    expect(find.textContaining('Duelist'), findsOneWidget, reason: 'Today names the job');
     await tester.tap(find.text('Karakter'));
     await beat(tester, 900);
-    expect(find.text('Peasant  ›  Blade  ›  Duelist'), findsOneWidget);
+    for (final j in ['Peasant', 'Blade', 'Duelist']) {
+      expect(find.text(j), findsWidgets, reason: 'the path of jobs, one chip each');
+    }
     await shot(tester, '40-job');
     await tester.drag(find.byType(ListView), const Offset(0, -420));
     await beat(tester);
@@ -554,8 +562,8 @@ void main() {
     await tester.pumpWidget(const VerbariumApp());
     await beat(tester, 900);
     expect(find.text('Continue learning'), findsOneWidget);
-    expect(find.text('Scribe'), findsOneWidget);
-    expect(find.textContaining('Squire I ·'), findsOneWidget, reason: 'titles are the same in both languages');
+    expect(find.textContaining('Scribe'), findsOneWidget);
+    expect(find.textContaining('Squire · '), findsOneWidget, reason: 'titles are the same in both languages');
     await shot(tester, '70-en-today');
     await tester.tap(find.text('Character'));
     await beat(tester, 900);
@@ -606,7 +614,7 @@ void main() {
       await tester.pumpWidget(const VerbariumApp());
       await beat(tester, 900);
       expect(find.text(cont), findsOneWidget);
-      expect(find.text('Scribe'), findsOneWidget, reason: 'jobs keep their English names');
+      expect(find.textContaining('Scribe'), findsOneWidget, reason: 'jobs keep their English names');
       await shot(tester, '$prefix-today');
       await tester.tap(find.byIcon(Icons.tune));
       await beat(tester, 900);
@@ -637,6 +645,8 @@ void main() {
     await tester.scrollUntilVisible(find.text('Privasi'), 200, scrollable: find.byType(Scrollable).last);
     expect(find.text('Lisensi perangkat lunak'), findsOneWidget);
     expect(find.text('Dukung Verbarium'), findsNothing, reason: 'off Google Play the donation products are not found');
+    await tester.ensureVisible(find.text('Privasi'));
+    await beat(tester);
     await tester.tap(find.text('Privasi'));
     await beat(tester);
     expect(find.byType(PrivacyPage), findsOneWidget);
@@ -677,6 +687,39 @@ void main() {
     expect(app.engine.stat(1).solid, solid, reason: 'the words of the first banner were not forgotten');
   });
 
+  testWidgets('Negeri: the living world map, the flight through the clouds, a kingdom\'s road', (tester) async {
+    phone(tester);
+    final app = await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/79-hari-ini.png'));
+    await tester.drag(find.byType(ListView).first, const Offset(0, -600));
+    await beat(tester);
+    await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/79b-hari-ini-bawah.png'));
+    await tester.tap(find.text('Negeri'));
+    await beat(tester, 900);
+    await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/80-dunia.png'));
+    await tester.runAsync(() => app.chooseRealm('de'));
+    await tester.tap(find.text('Grauwacht'));
+    await tester.pump(const Duration(milliseconds: 700));
+    await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/80b-zoom.png'));
+    for (var i = 0; i < 8; i++) {
+      await tester.pump(const Duration(milliseconds: 400));
+    }
+    expect(find.byType(KingdomScreen), findsOneWidget);
+    await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/81-jalan.png'));
+    await tester.tap(find.text('Peta'));
+    await beat(tester, 900);
+    await tester.runAsync(() => app.chooseRealm('en'));
+    await tester.tap(find.text('Aldmere'));
+    await beat(tester, 2500);
+    await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/82-jalan-aldmere.png'));
+    await tester.drag(find.byType(ListView).first, const Offset(0, -500));
+    await beat(tester);
+    await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/83-tempat.png'));
+    await tester.pump(const Duration(seconds: 2));
+  });
+
   testWidgets('another kingdom: Grauwacht has its own road, the sentence in Indonesian and the letters to type', (
     tester,
   ) async {
@@ -691,7 +734,8 @@ void main() {
     await beat(tester, 700);
     expect(app.engine.rank, 0, reason: 'a new kingdom starts from the fields');
     expect(app.root.integer('rank'), 2, reason: 'Aldmere keeps its title');
-    expect(find.textContaining('Peasant di Grauwacht'), findsOneWidget);
+    expect(find.textContaining('Grauwacht · Peasant'), findsNothing);
+    expect(find.text('Grauwacht'), findsWidgets);
     await shot(tester, '70-negeri-grauwacht');
     await tester.tap(find.text('Hari ini'));
     await beat(tester, 700);
