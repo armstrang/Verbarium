@@ -116,8 +116,13 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
   bool get _fight => _kind == RunKind.trial || _kind == RunKind.sub;
   bool get _timed => _fight || _kind == RunKind.defence;
 
-  /// seconds per word; a job's perk can give a little more against a guard of the road, never in a coronation
-  int get _seconds => Engine.trialSeconds + (_kind == RunKind.sub ? _g.perk('subTime') : 0);
+  /// seconds per word; a job's perk can give a little more against a guard of the road, never in a coronation;
+  /// a boss below half its life rages and gives less
+  int get _seconds =>
+      Engine.trialSeconds + (_kind == RunKind.sub ? _g.perk('subTime') : 0) - (_rage ? Engine.rageCut : 0);
+
+  /// the boss of a coronation, wounded past half, rages
+  bool get _rage => _kind == RunKind.trial && _enemyMax > 0 && _enemyHp > 0 && _enemyHp * 2 <= _enemyMax;
   _Item get _item => _q[_i];
 
   @override
@@ -290,8 +295,13 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     if (_item.fresh) _freshSeen++;
     final crit = _reward?.crit ?? false;
     if (_fight) {
+      final calmBefore = !_rage;
       _enemyHp = max(0, _enemyHp - 1);
       _blow(HeroPose.attack, crit ? tr('KRITIS!', 'CRITICAL!', '¡CRÍTICO!', 'CRITIQUE !') : '−1', true);
+      if (calmBefore && _rage) {
+        _clock.duration = Duration(seconds: _seconds);
+        App.I.sfx('crit');
+      }
       App.I.sfx(crit ? 'crit' : 'hit');
     } else {
       App.I.sfx('quill');
@@ -640,13 +650,49 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     final en = _enemy!;
     final big = en.boss;
     return SizedBox(
-      height: 152,
+      height: big ? 196 : 162,
       child: Stack(
         clipBehavior: Clip.none,
         children: [
+          if (big)
+            // the boss stands in its own fire
+            Positioned(
+              right: -30,
+              bottom: 0,
+              width: 230,
+              height: 190,
+              child: IgnorePointer(
+                child: DecoratedBox(
+                  decoration: BoxDecoration(
+                    gradient: RadialGradient(
+                      center: const Alignment(0, 0.3),
+                      radius: 0.5,
+                      colors: [
+                        pal.bad.withValues(alpha: _rage ? 0.42 : 0.24),
+                        pal.bad.withValues(alpha: 0),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
           Positioned(left: 0, right: 0, bottom: 14, child: Container(height: 1.5, color: pal.ink)),
           Positioned(left: 0, top: 0, child: _Hp(tr('Kamu', 'You', 'Tú', 'Toi'), _heroHp, _heroMax, pal.good)),
           Positioned(right: 0, top: 0, child: _Hp(en.name, _enemyHp, _enemyMax, pal.bad, right: true)),
+          if (_rage)
+            Positioned(
+              right: 0,
+              top: 40,
+              child: Text(
+                tr(
+                  'MURKA · −${Engine.rageCut} detik',
+                  'ENRAGED · −${Engine.rageCut} s',
+                  'FURIA · −${Engine.rageCut} s',
+                  'FUREUR · −${Engine.rageCut} s',
+                ),
+                style: T.label(pal.bad),
+              ),
+            ),
           AnimatedPositioned(
             duration: const Duration(milliseconds: 140),
             curve: Curves.easeOut,
@@ -669,7 +715,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
             child: EnemySprite(
               sprite: en.sprite,
               tone: en.tone,
-              size: big ? 96 : 84,
+              size: big ? 138 : 96,
               struck: _struck,
               beaten: _enemyHp <= 0,
             ),

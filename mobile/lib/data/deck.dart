@@ -93,8 +93,8 @@ String glossOf(String id, String def, String meaning) {
 }
 
 class Deck {
-  static const coreFiles = ['1-squire', '2-knight', '3-baron', '4-duke', '5-raja'];
-  static const tiers = 5;
+  static const coreFiles = ['1-squire', '2-knight', '3-baron', '4-count', '5-duke', '6-king'];
+  static const tiers = 6;
 
   final List<Word> words;
   final List<Colloc> collocs;
@@ -132,10 +132,10 @@ class Deck {
 
   static Future<Deck> load(String banner) async {
     final words = <Word>[];
-    // a rank's words may be spread over several files: 1-squire.txt, 1-squire-b.txt, …
+    // a rank's words may be spread over several files: 1-squire.txt, 1-squire-b.txt, …; 1 Squire … 6 King
     final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
     final all = manifest.listAssets();
-    final files = all.where((a) => RegExp(r'^assets/deck/[1-5]-[^/]+$').hasMatch(a)).toList()..sort();
+    final files = all.where((a) => RegExp(r'^assets/deck/[1-6]-[^/]+$').hasMatch(a)).toList()..sort();
     for (final f in files) {
       words.addAll(parse(await rootBundle.loadString(f), tier: int.parse(f.split('/').last[0])));
     }

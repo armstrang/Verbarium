@@ -1,0 +1,360 @@
+abject|abyecto
+abjure|abjurar
+abnegation|abnegación
+abrogate|abrogar
+abscond|fugarse
+abstemious|sobrio, frugal
+abstruse|abstruso
+acerbic|mordaz
+acumen|perspicacia
+adroit|hábil
+adulation|adulación
+adumbrate|esbozar
+alacrity|presteza
+anachronism|anacronismo
+anathema|anatema
+anodyne|anodino
+antediluvian|antediluviano
+antipathy|antipatía
+antithesis|antítesis
+aplomb|aplomo
+apocryphal|apócrifo
+apotheosis|apoteosis
+apposite|apropiado
+approbation|aprobación
+arcane|arcano
+arrant|redomado
+arrogate|arrogarse
+ascetic|ascético
+asperity|aspereza
+assiduous|asiduo
+atrophy|atrofiarse
+augur|augurar
+auspicious|propicio
+avarice|avaricia
+avuncular|paternal y afable
+beatific|beatífico
+beguile|seducir, engañar
+bellicose|belicoso
+bilious|bilioso
+bombastic|grandilocuente
+bowdlerize|expurgar
+brusque|brusco
+bucolic|bucólico
+bumptious|engreído
+cacophony|cacofonía
+cajole|engatusar
+calumny|calumnia
+candor|franqueza
+capricious|caprichoso
+captious|capcioso, quisquilloso
+castigate|castigar, reprender
+cavil|poner reparos
+chary|cauteloso
+chicanery|artimañas
+chimera|quimera
+circumlocution|circunloquio
+coda|coda
+cogent|convincente
+cognizant|consciente
+commensurate|proporcional
+compendious|compendioso
+complicit|cómplice
+conciliatory|conciliador
+conflate|confundir, fusionar
+contrite|arrepentido
+contumacious|contumaz
+conundrum|enigma
+convivial|jovial
+corpulent|corpulento
+coruscate|centellear
+credo|credo
+credulous|crédulo
+culpability|culpabilidad
+cupidity|codicia
+cynosure|centro de atención
+decorum|decoro
+deferential|respetuoso
+deleterious|nocivo
+demagogue|demagogo
+demur|objetar
+denouement|desenlace
+desiccate|desecar
+desultory|inconexo
+diaphanous|diáfano
+diatribe|diatriba
+didactic|didáctico
+diffident|tímido, inseguro
+dilatory|dilatorio
+dilettante|diletante
+disabuse|desengañar
+disingenuous|falso, poco sincero
+disquisition|disertación
+dissemble|disimular
+doggerel|versos ramplones
+dyspeptic|dispéptico, malhumorado
+ebullient|entusiasta, efervescente
+effete|decadente, débil
+effrontery|desfachatez
+effulgent|refulgente
+egregious|atroz, flagrante
+elegy|elegía
+elide|elidir
+eloquence|elocuencia
+emollient|calmante
+encomium|encomio
+enervate|debilitar
+enjoin|ordenar, prohibir
+ennui|hastío
+epigram|epigrama
+equipoise|equilibrio
+equivocate|ser ambiguo
+ersatz|sucedáneo
+erudite|erudito
+erudition|erudición
+eulogy|panegírico, elogio fúnebre
+evanescent|evanescente
+exculpate|exculpar
+execrable|execrable
+exegesis|exégesis
+exigency|exigencia, urgencia
+exiguous|exiguo
+exonerate|exonerar
+expiate|expiar
+expostulate|protestar
+expunge|borrar
+extraneous|ajeno, superfluo
+facetious|bromista inoportuno
+fallacious|falaz
+fastidious|quisquilloso, meticuloso
+fatuous|necio
+feckless|irresponsable
+fecund|fecundo
+felicitous|acertado
+foment|fomentar
+forbearance|paciencia
+fortuitous|fortuito
+fractious|díscolo
+fulminate|fulminar
+fulsome|excesivo
+garrulous|charlatán
+germane|pertinente
+grandiloquent|grandilocuente
+guileless|ingenuo
+hackneyed|trillado
+halcyon|feliz y sereno
+harangue|arengar
+hermetic|hermético
+histrionic|histriónico
+homily|homilía
+hortatory|exhortatorio
+iconoclast|iconoclasta
+idiosyncrasy|idiosincrasia, rareza
+ignominious|ignominioso
+imbroglio|embrollo
+immure|emparedar
+impecunious|sin dinero
+imperious|imperioso
+impervious|impermeable, inmune
+implacable|implacable
+impugn|impugnar
+impute|imputar
+inchoate|incipiente
+incipient|incipiente
+incontrovertible|incontrovertible
+inculcate|inculcar
+indefatigable|incansable
+indigent|indigente
+indolent|indolente
+ineffable|inefable
+ineluctable|ineludible
+inimitable|inimitable
+insipid|insípido
+insolent|insolente
+insouciant|despreocupado
+internecine|destructivo, fratricida
+intransigent|intransigente
+inure|habituar
+invective|invectiva
+inveigle|engatusar
+inveterate|empedernido
+invidious|odioso, injusto
+irascible|irascible
+jejune|pueril, insulso
+jingoism|patriotería
+lachrymose|lacrimoso
+laconic|lacónico
+lacuna|laguna
+lambast|vapulear
+largesse|generosidad
+lassitude|lasitud
+laudable|loable
+lethargic|aletargado
+levity|ligereza
+licentious|licencioso
+liminal|liminal
+limpid|límpido
+loquacious|locuaz
+lugubrious|lúgubre
+magnanimous|magnánimo
+maladroit|torpe
+malfeasance|malversación
+malleable|maleable
+martinet|ordenancista
+maudlin|sensiblero
+mellifluous|melifluo
+mendacious|mentiroso
+mendicant|mendicante
+mercurial|voluble
+meretricious|aparatoso, vacío
+minatory|amenazador
+misanthrope|misántropo
+munificent|munífico
+nadir|nadir
+nebulous|nebuloso
+nefarious|nefasto
+neophyte|neófito
+nugatory|nulo, sin valor
+obfuscate|ofuscar, enturbiar
+obloquy|oprobio
+obsequious|servil
+obstreperous|alborotador
+obtuse|obtuso
+obviate|obviar
+officious|entrometido
+opprobrium|oprobio
+otiose|ocioso, inútil
+palimpsest|palimpsesto
+palliate|paliar
+panacea|panacea
+panegyric|panegírico
+paragon|dechado
+paroxysm|paroxismo
+parsimonious|tacaño
+parvenu|advenedizo
+paucity|escasez
+peccadillo|pecadillo
+pedagogue|pedagogo
+pedantic|pedante
+pejorative|peyorativo
+pellucid|diáfano
+penumbra|penumbra
+penury|penuria
+peregrination|peregrinación
+peremptory|perentorio
+perfidy|perfidia
+perfunctory|superficial, rutinario
+perspicacious|perspicaz
+perspicuous|claro, perspicuo
+pertinacious|pertinaz
+petulant|petulante, caprichoso
+philistine|filisteo, inculto
+phlegmatic|flemático
+pithy|conciso
+plangent|lastimero
+platitude|tópico
+plenary|plenario
+polyglot|políglota
+portent|presagio
+precocious|precoz
+predilection|predilección
+prescient|clarividente
+prevaricate|andarse con rodeos
+probity|probidad
+proclivity|propensión
+profligate|derrochador
+prolix|prolijo
+propinquity|proximidad
+propitiate|propiciar, apaciguar
+prosaic|prosaico
+proscribe|proscribir
+protean|proteico
+puerile|pueril
+pugnacious|pugnaz
+puissant|poderoso
+pulchritude|belleza
+punctilious|puntilloso
+pusillanimous|pusilánime
+quiescent|inactivo
+quixotic|quijotesco
+raconteur|narrador ameno
+rancour|rencor
+rapacious|rapaz
+rapprochement|acercamiento
+rebarbative|repelente
+recalcitrant|recalcitrante
+recant|retractarse
+recondite|recóndito
+recrudescence|recrudecimiento
+redolent|evocador, fragante
+redoubt|reducto
+refractory|refractario
+refulgent|refulgente
+remonstrate|protestar
+reprehensible|reprensible
+reprobate|réprobo
+restive|inquieto
+reticent|reservado
+ribald|procaz
+riposte|réplica
+sagacious|sagaz
+salubrious|salubre
+sanguine|optimista
+saturnine|taciturno
+sedulous|diligente
+sententious|sentencioso
+simulacrum|simulacro
+sinecure|sinecura
+solecism|solecismo
+solicitous|solícito
+solipsism|solipsismo
+somnolent|somnoliento
+sophistry|sofistería
+specious|engañoso
+splenetic|malhumorado
+stentorian|estentóreo
+stolid|impasible
+stultify|entorpecer
+supercilious|altanero
+supine|supino, pasivo
+sybarite|sibarita
+sycophant|adulador
+temerity|temeridad
+tendentious|tendencioso
+torpid|aletargado
+torpor|letargo
+tortuous|tortuoso
+traduce|calumniar
+trenchant|tajante
+truculent|agresivo
+tumid|hinchado, ampuloso
+turgid|ampuloso
+turpitude|vileza
+ubiquitous|omnipresente
+umbrage|resentimiento
+unctuous|empalagoso, zalamero
+unequivocal|inequívoco
+upbraid|reprender
+vacillate|vacilar
+vainglorious|vanaglorioso
+vapid|insulso
+variegated|abigarrado
+venal|venal
+venerate|venerar
+venial|venial
+veracity|veracidad
+verbose|verboso
+verisimilitude|verosimilitud
+vicarious|indirecto, vicario
+vicissitude|vicisitud
+vilify|vilipendiar
+vitiate|viciar
+vitriolic|virulento
+vituperate|vituperar
+voluble|locuaz
+wanton|gratuito, desenfrenado
+winnow|aventar, cribar
+winsome|encantador
+zealous|celoso, ferviente
+zeitgeist|espíritu de la época
+zephyr|céfiro

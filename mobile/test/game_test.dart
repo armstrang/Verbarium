@@ -30,7 +30,7 @@ void main() {
     for (final c in d.collocs) {
       expect(c.wrong.length, 3, reason: c.id);
       expect(c.wrong.contains(c.correct), isFalse, reason: c.id);
-      expect(c.tier, inInclusiveRange(1, 5));
+      expect(c.tier, inInclusiveRange(1, Deck.tiers));
     }
   });
 
@@ -94,7 +94,7 @@ void main() {
     final boss = g.onVictory(0, 2, true, true);
     expect(boss.any((n) => n.contains('Senjata besi')), isTrue);
     expect(g.earned, containsAll(['boss1', 'perfect']));
-    store.data['rank'] = 5;
+    store.data['rank'] = Engine.maxRank;
     expect(g.enemy, isNull);
     for (final row in Game.enemies) {
       expect(row.length, 3);

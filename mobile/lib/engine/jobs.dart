@@ -1,6 +1,6 @@
 /// Jobs: what the learner's character becomes. Nobody picks a job from a menu. While a title is being won, every
 /// answer adds to one of four sides of the build (precision, swiftness, insight, endurance); at the coronation the
-/// build decides which branch of the tree is taken. 37 jobs can be seen on the map, 6 more are hidden and are
+/// build decides which branch of the tree is taken. 45 jobs can be seen on the map, 7 more are hidden and are
 /// given for rare ways of learning.
 ///
 /// A job never touches memory or rank. It gives a perk (experience, a little room in the fights against the
@@ -445,11 +445,93 @@ class Jobs {
       'For one of the Sentinel line whose two strongest sides are nearly equal.',
     ),
 
+    // ---- Count: does the strongest side of the build still match the line?
+    Job(
+      'justicar',
+      'Justicar',
+      4,
+      0,
+      Perk('winXp', 30),
+      Garb(2, 1, 4),
+      'Bagi keturunan Blade yang tetap paling tepat.',
+      'For one of the Blade line who is still the most exact.',
+    ),
+    Job(
+      'warlord',
+      'Warlord',
+      4,
+      0,
+      Perk('comboCap', 3),
+      Garb(2, 6, 5),
+      'Bagi keturunan Blade yang kini dipimpin sisi lain.',
+      'For one of the Blade line now led by another side.',
+    ),
+    Job(
+      'pathfinder',
+      'Pathfinder',
+      4,
+      1,
+      Perk('critWin', 1),
+      Garb(1, 3, 1),
+      'Bagi keturunan Scout yang tetap paling cepat.',
+      'For one of the Scout line who is still the quickest.',
+    ),
+    Job(
+      'assassin',
+      'Assassin',
+      4,
+      1,
+      Perk('critXp', 3),
+      Garb(1, 4, 4),
+      'Bagi keturunan Scout yang kini dipimpin sisi lain.',
+      'For one of the Scout line now led by another side.',
+    ),
+    Job(
+      'loremaster',
+      'Loremaster',
+      4,
+      2,
+      Perk('solidXp', 4),
+      Garb(3, 7, 3),
+      'Bagi keturunan Scribe yang ingatannya tetap paling dalam.',
+      'For one of the Scribe line whose memory still runs deepest.',
+    ),
+    Job(
+      'alchemist',
+      'Alchemist',
+      4,
+      2,
+      Perk('xpChoice', 2),
+      Garb(0, 5, 8),
+      'Bagi keturunan Scribe yang kini dipimpin sisi lain.',
+      'For one of the Scribe line now led by another side.',
+    ),
+    Job(
+      'bulwark',
+      'Bulwark',
+      4,
+      3,
+      Perk('subHp', 1),
+      Garb(2, 2, 9),
+      'Bagi keturunan Sentinel yang tetap paling setia.',
+      'For one of the Sentinel line who is still the most faithful.',
+    ),
+    Job(
+      'templar',
+      'Templar',
+      4,
+      3,
+      Perk('questXp', 25),
+      Garb(2, 6, 7),
+      'Bagi keturunan Sentinel yang kini dipimpin sisi lain.',
+      'For one of the Sentinel line now led by another side.',
+    ),
+
     // ---- Duke: the line, and whether hand (precision, swiftness) or mind (insight, endurance) leads
     Job(
       'champion',
       'Champion',
-      4,
+      5,
       0,
       Perk('xpCloze', 3),
       Garb(2, 1, 7),
@@ -459,7 +541,7 @@ class Jobs {
     Job(
       'inquisitor',
       'Inquisitor',
-      4,
+      5,
       0,
       Perk('formXp', 3),
       Garb(3, 6, 5),
@@ -469,7 +551,7 @@ class Jobs {
     Job(
       'windrunner',
       'Windrunner',
-      4,
+      5,
       1,
       Perk('critXp', 4),
       Garb(1, 3, 6),
@@ -479,7 +561,7 @@ class Jobs {
     Job(
       'phantom',
       'Phantom',
-      4,
+      5,
       1,
       Perk('comboCap', 4),
       Garb(1, 4, 9),
@@ -489,7 +571,7 @@ class Jobs {
     Job(
       'battlemage',
       'Battlemage',
-      4,
+      5,
       2,
       Perk('xpBuild', 4),
       Garb(2, 5, 2),
@@ -499,7 +581,7 @@ class Jobs {
     Job(
       'archmage',
       'Archmage',
-      4,
+      5,
       2,
       Perk('solidXp', 5),
       Garb(3, 5, 7),
@@ -509,7 +591,7 @@ class Jobs {
     Job(
       'ironclad',
       'Ironclad',
-      4,
+      5,
       3,
       Perk('subHp', 2),
       Garb(2, 6, 9),
@@ -519,7 +601,7 @@ class Jobs {
     Job(
       'elder',
       'Elder',
-      4,
+      5,
       3,
       Perk('dayXp', 30),
       Garb(0, 5, 6),
@@ -531,7 +613,7 @@ class Jobs {
     Job(
       'sovereign',
       'Sovereign',
-      5,
+      6,
       0,
       Perk('xpCloze', 4),
       Garb(4, 1, 4),
@@ -541,7 +623,7 @@ class Jobs {
     Job(
       'conqueror',
       'Conqueror',
-      5,
+      6,
       1,
       Perk('critXp', 6),
       Garb(4, 2, 2),
@@ -551,7 +633,7 @@ class Jobs {
     Job(
       'sage',
       'Sage',
-      5,
+      6,
       2,
       Perk('solidXp', 8),
       Garb(4, 5, 3),
@@ -561,7 +643,7 @@ class Jobs {
     Job(
       'paragon',
       'Paragon',
-      5,
+      6,
       3,
       Perk('questXp', 50),
       Garb(4, 6, 7),
@@ -615,9 +697,20 @@ class Jobs {
       hidden: true,
     ),
     Job(
+      'archivist',
+      'Archivist',
+      4,
+      0,
+      Perk('formXp', 4),
+      Garb(5, 7, 3),
+      'Ujian penobatan Count dilalui tanpa satu pun salah.',
+      'A Count\'s coronation trial passed without a single miss.',
+      hidden: true,
+    ),
+    Job(
       'chronomancer',
       'Chronomancer',
-      4,
+      5,
       0,
       Perk('critWin', 2),
       Garb(3, 5, 8),
@@ -628,7 +721,7 @@ class Jobs {
     Job(
       'polymath',
       'Polymath',
-      5,
+      6,
       0,
       Perk('xpAll', 2),
       Garb(4, 7, 6),
@@ -673,6 +766,13 @@ class Jobs {
     'monk': 'mystic',
   };
   static const _hybrid = ['spellblade', 'trickster', 'enchanter', 'runekeeper'];
+  // per line: [the line still leads, another side leads]
+  static const _count = [
+    ['justicar', 'warlord'],
+    ['pathfinder', 'assassin'],
+    ['loremaster', 'alchemist'],
+    ['bulwark', 'templar'],
+  ];
   static const _duke = [
     ['champion', 'inquisitor'],
     ['windrunner', 'phantom'],
@@ -701,8 +801,10 @@ class Jobs {
         final own = _own[parent.id] ?? _own[_knight[line][0]]!;
         return byId(b.balanced ? _hybrid[line] : own);
       case 4:
-        return byId(_duke[line][b.top <= 1 ? 0 : 1]);
+        return byId(_count[line][b.top == line ? 0 : 1]);
       case 5:
+        return byId(_duke[line][b.top <= 1 ? 0 : 1]);
+      case 6:
         return byId(_king[career.top]);
       default:
         return all[0];
@@ -716,8 +818,9 @@ class Jobs {
       0 => [for (final id in _squire) byId(id)],
       1 => [for (final id in _knight[line]) byId(id)],
       2 => [byId(_own[parent.id]), byId(_hybrid[line])],
-      3 => [for (final id in _duke[line]) byId(id)],
-      4 => [for (final id in _king) byId(id)],
+      3 => [for (final id in _count[line]) byId(id)],
+      4 => [for (final id in _duke[line]) byId(id)],
+      5 => [for (final id in _king) byId(id)],
       _ => const [],
     };
   }
@@ -736,8 +839,10 @@ class Jobs {
         if (v('letter') == 1) return byId('lexicon');
         if (v('flawless') == 1) return byId('oracle');
       case 4:
-        if (v('cz') >= 150 && v('czms') / v('cz') < 4500) return byId('chronomancer');
+        if (v('flawless') == 1) return byId('archivist');
       case 5:
+        if (v('cz') >= 150 && v('czms') / v('cz') < 4500) return byId('chronomancer');
+      case 6:
         if (career.total >= 2000 && career.even) return byId('polymath');
     }
     return null;

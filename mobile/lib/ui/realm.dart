@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import '../app/app.dart';
 import '../app/lang.dart';
+import '../data/deck.dart';
 import '../engine/engine.dart';
 import 'pixel.dart';
 import 'root.dart';
@@ -19,6 +20,7 @@ List<String> get landNames => [
   tr('Desa', 'Village', 'Aldea', 'Village'),
   tr('Kota', 'Town', 'Ciudad', 'Ville'),
   tr('Kastel', 'Castle', 'Castillo', 'Château'),
+  tr('Marka', 'March', 'Marca', 'Marche'),
   tr('Kadipaten', 'Duchy', 'Ducado', 'Duché'),
   tr('Takhta', 'Throne', 'Trono', 'Trône'),
 ];
@@ -33,7 +35,7 @@ class RealmTab extends StatelessWidget {
     final app = App.I;
     final e = app.engine;
     final rank = e.rank;
-    final shares = [for (var t = 1; t <= 5; t++) e.stat(t).share];
+    final shares = [for (var t = 1; t <= Deck.tiers; t++) e.stat(t).share];
     return TabBody(
       children: [
         Label(tr('Negerimu', 'Your realm', 'Tu reino', 'Ton royaume')),
@@ -105,10 +107,10 @@ class _World extends StatelessWidget {
     const towns = _MapPainter._towns;
     final from = rank <= 1 ? const Offset(20, 176) : towns[rank - 2];
     final at = rank == 0 ? const Offset(26, 170) : towns[rank - 1];
-    final foe = rank < 5 ? towns[rank] : null;
+    final foe = rank < Engine.maxRank ? towns[rank] : null;
     return Semantics(
       label:
-          '${tr('Peta negeri.', 'Map of the realm.', 'Mapa del reino.', 'Carte du royaume.')} ${[for (var t = 1; t <= 5; t++) '${landNames[t - 1]} ${t <= rank ? tr('dikuasai', 'held', 'dominado', 'conquis') : (t == rank + 1 ? tr('sedang direbut', 'being won', 'en conquista', 'en cours de conquête') : tr('belum terbuka', 'not open yet', 'aún cerrado', 'pas encore ouvert'))}'].join(', ')}.${en == null ? '' : tr(' ${en.name} menghadang.', ' The ${en.name} bars the way.', ' ${en.name} cierra el paso.', ' ${en.name} barre la route.')}',
+          '${tr('Peta negeri.', 'Map of the realm.', 'Mapa del reino.', 'Carte du royaume.')} ${[for (var t = 1; t <= Deck.tiers; t++) '${landNames[t - 1]} ${t <= rank ? tr('dikuasai', 'held', 'dominado', 'conquis') : (t == rank + 1 ? tr('sedang direbut', 'being won', 'en conquista', 'en cours de conquête') : tr('belum terbuka', 'not open yet', 'aún cerrado', 'pas encore ouvert'))}'].join(', ')}.${en == null ? '' : tr(' ${en.name} menghadang.', ' The ${en.name} bars the way.', ' ${en.name} cierra el paso.', ' ${en.name} barre la route.')}',
       child: AspectRatio(
         aspectRatio: 342 / 214,
         child: LayoutBuilder(
@@ -223,10 +225,19 @@ class _MapPainter extends CustomPainter {
     [Offset(14, 150), Offset(52, 104), Offset(98, 122), Offset(92, 190), Offset(28, 196)],
     [Offset(98, 122), Offset(120, 66), Offset(176, 78), Offset(170, 150), Offset(92, 190)],
     [Offset(176, 78), Offset(206, 26), Offset(262, 40), Offset(250, 118), Offset(170, 150)],
+    // the March, the Count's border land, low under the town
+    [Offset(92, 190), Offset(170, 150), Offset(180, 200), Offset(112, 208)],
     [Offset(170, 150), Offset(250, 118), Offset(292, 150), Offset(262, 200), Offset(180, 200)],
     [Offset(262, 40), Offset(326, 30), Offset(330, 132), Offset(292, 150), Offset(250, 118)],
   ];
-  static const _towns = [Offset(54, 152), Offset(134, 124), Offset(214, 84), Offset(226, 164), Offset(292, 86)];
+  static const _towns = [
+    Offset(54, 152),
+    Offset(134, 124),
+    Offset(214, 84),
+    Offset(140, 188),
+    Offset(226, 164),
+    Offset(292, 86),
+  ];
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -241,7 +252,7 @@ class _MapPainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round
       ..color = pal.ink;
 
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < _lands.length; i++) {
       final tier = i + 1;
       final path = Path()..addPolygon(_lands[i], true);
       final tint = pal.tincture(tier);
@@ -281,7 +292,7 @@ class _MapPainter extends CustomPainter {
 
     // the road, drawn as far as the land being won
     final road = Path()..moveTo(_towns[0].dx, _towns[0].dy);
-    final reach = min(rank + 1, 5);
+    final reach = min(rank + 1, _towns.length);
     for (var i = 1; i < reach; i++) {
       final a = _towns[i - 1], b = _towns[i];
       road.quadraticBezierTo((a.dx + b.dx) / 2, min(a.dy, b.dy) - 6, b.dx, b.dy);
@@ -302,7 +313,7 @@ class _MapPainter extends CustomPainter {
       }
     }
 
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < _towns.length; i++) {
       final tier = i + 1;
       final p = _towns[i];
       final open = tier <= rank + 1;
@@ -457,18 +468,26 @@ class SourcesPage extends StatelessWidget {
                 ),
                 p(
                   tr(
-                    'C1 dibagi menjadi dua gelar, Baron dan Duke, supaya jarak antargelar tidak terlalu jauh. Pada TOEFL pembagian itu mengikuti setengah band (5 dan 5.5). Pada IELTS pembagian 7.0 lalu 7.5–8.0 adalah keputusan Verbarium, bukan ketetapan resmi.',
-                    'C1 is split into two titles, Baron and Duke, so that the step between titles is not too large. On TOEFL the split follows the half bands (5 and 5.5). On IELTS the split into 7.0 and then 7.5–8.0 is Verbarium\'s decision, not an official one.',
-                    'El C1 se divide en dos títulos, Baron y Duke, para que el salto entre títulos no sea demasiado grande. En TOEFL la división sigue las medias bandas (5 y 5.5). En IELTS, la división en 7.0 y luego 7.5–8.0 es decisión de Verbarium, no oficial.',
-                    'Le C1 est partagé en deux titres, Baron et Duke, pour que le pas entre titres ne soit pas trop grand. Au TOEFL, le partage suit les demi-bandes (5 et 5.5). À l’IELTS, le partage en 7.0 puis 7.5–8.0 est un choix de Verbarium, non officiel.',
+                    'C1 dibagi menjadi dua gelar, Count dan Duke, supaya jarak antargelar tidak terlalu jauh. Pada TOEFL pembagian itu mengikuti setengah band (5 dan 5.5). Pada IELTS pembagian 7.0 lalu 7.5–8.0 adalah keputusan Verbarium, bukan ketetapan resmi.',
+                    'C1 is split into two titles, Count and Duke, so that the step between titles is not too large. On TOEFL the split follows the half bands (5 and 5.5). On IELTS the split into 7.0 and then 7.5–8.0 is Verbarium\'s decision, not an official one.',
+                    'El C1 se divide en dos títulos, Count y Duke, para que el salto entre títulos no sea demasiado grande. En TOEFL la división sigue las medias bandas (5 y 5.5). En IELTS, la división en 7.0 y luego 7.5–8.0 es decisión de Verbarium, no oficial.',
+                    'Le C1 est partagé en deux titres, Count et Duke, pour que le pas entre titres ne soit pas trop grand. Au TOEFL, le partage suit les demi-bandes (5 et 5.5). À l’IELTS, le partage en 7.0 puis 7.5–8.0 est un choix de Verbarium, non officiel.',
                   ),
                 ),
                 p(
                   tr(
-                    'Pemilihan kata untuk tiap ranah juga keputusan Verbarium. Daftar katanya disusun sendiri menurut tingkat kesulitan, bukan salinan daftar resmi mana pun.',
-                    'The choice of words for each land is Verbarium\'s decision as well. The lists were written by us in order of difficulty; they are not copies of any official list.',
-                    'La elección de palabras de cada tierra también es decisión de Verbarium. Las listas las escribimos nosotros por orden de dificultad; no son copias de ninguna lista oficial.',
-                    'Le choix des mots de chaque terre est aussi un choix de Verbarium. Nous avons écrit les listes nous-mêmes, par ordre de difficulté ; ce ne sont des copies d’aucune liste officielle.',
+                    'Peasant adalah titik awal (A1) dan Squire setara A2. Kedua ujian tidak memberi rentang skor tersendiri di bawah B1, jadi di tangga gelar keduanya tertulis di bawah 4.0 dan di bawah 3.',
+                    'The Peasant is where everyone starts (A1) and the Squire stands for A2. Neither test gives its own score range below B1, so on the ladder both read as under 4.0 and under 3.',
+                    'Peasant es el punto de partida (A1) y Squire equivale a A2. Ninguno de los dos exámenes da un rango propio por debajo de B1, así que en la escala ambos figuran como menos de 4.0 y menos de 3.',
+                    'Peasant est le point de départ (A1) et Squire correspond à A2. Aucun des deux tests ne donne de fourchette propre sous B1, donc sur l’échelle les deux figurent comme moins de 4.0 et moins de 3.',
+                  ),
+                ),
+                p(
+                  tr(
+                    'Tiap kata ditaruh di gelar menurut tingkat CEFR-nya dalam Oxford 3000 dan Oxford 5000 (Oxford University Press). Kata di luar daftar itu ditaruh menurut seberapa sering dipakai dalam korpus BNC/COCA; yang paling jarang menjadi C2. Kalimat dan artinya kami tulis sendiri; daftar Oxford hanya dipakai untuk menentukan tingkat.',
+                    'Each word sits at the title of its CEFR level in the Oxford 3000 and Oxford 5000 (Oxford University Press). Words outside those lists are placed by how often they are used in the BNC/COCA corpora; the rarest become C2. The sentences and meanings are our own; the Oxford lists only decide the level.',
+                    'Cada palabra está en el título de su nivel MCER según el Oxford 3000 y el Oxford 5000 (Oxford University Press). Las que no figuran en esas listas se colocan según su frecuencia en los corpus BNC/COCA; las más raras pasan a C2. Las frases y los significados son nuestros; las listas de Oxford solo deciden el nivel.',
+                    'Chaque mot est placé au titre de son niveau CECRL dans l’Oxford 3000 et l’Oxford 5000 (Oxford University Press). Les mots absents de ces listes sont placés selon leur fréquence dans les corpus BNC/COCA ; les plus rares deviennent C2. Les phrases et les sens sont les nôtres ; les listes d’Oxford ne décident que du niveau.',
                   ),
                 ),
               ],

@@ -1,0 +1,354 @@
+mistrust|méfiance
+moderation|modération
+modicum|minimum
+mollify|apaiser
+momentous|capital
+morass|bourbier
+morose|morose
+motto|devise
+muddle|confusion
+mural|peinture murale
+murky|trouble
+mutiny|mutinerie
+myopic|myope
+narcotic|stupéfiant
+nascent|naissant
+negate|annuler
+negligible|négligeable
+nettle|agacer
+neurotic|névrosé
+nimble|agile
+nocturnal|nocturne
+nomad|nomade
+nonchalant|nonchalant
+nonplussed|perplexe
+noxious|nocif
+nuance|nuance
+nullify|annuler
+obdurate|obstiné
+obituary|nécrologie
+oblique|indirect, oblique
+obliterate|anéantir
+oblivious|inconscient
+obsolete|obsolète
+obstinate|obstiné
+obtrusive|envahissant
+odious|odieux
+omen|présage
+onerous|lourd, pénible
+onslaught|assaut
+opaque|opaque
+opine|opiner
+optimum|optimal
+opulent|opulent
+ordinance|arrêté
+ornate|orné
+ostentatious|ostentatoire
+ostracize|ostraciser
+outburst|accès, explosion
+outcast|paria
+outcry|tollé
+outdated|dépassé
+outnumber|être plus nombreux que
+outpost|avant-poste
+outspoken|franc, direct
+ovation|ovation
+overboard|par-dessus bord
+overdue|en retard
+overload|surcharger
+overpower|maîtriser
+overrun|envahir, dépasser
+oversight|oubli, supervision
+overture|ouverture, avance
+overwrought|surmené, à bout
+pageant|spectacle, cortège
+painstaking|minutieux
+palatable|agréable, acceptable
+pallid|blême
+palpable|palpable
+paltry|dérisoire
+panorama|panorama
+parable|parabole
+parch|dessécher
+parchment|parchemin
+parity|parité
+parry|parer
+paternal|paternel
+patronize|prendre de haut
+pedigree|pedigree
+penal|pénal
+penchant|penchant
+pendulum|pendule
+penitent|pénitent
+perceptive|perspicace
+perilous|périlleux
+perjury|parjure
+permissible|permis
+pernicious|pernicieux
+perplex|déconcerter
+persevere|persévérer
+persona|personnage
+pertain|concerner
+pertinent|pertinent
+perturb|perturber
+peruse|parcourir attentivement
+pervade|imprégner
+pessimism|pessimisme
+pessimistic|pessimiste
+phenomenal|phénoménal
+phobia|phobie
+picturesque|pittoresque
+pinnacle|sommet
+pious|pieux
+pique|piquer, vexer
+piracy|piraterie
+pivotal|crucial
+placate|apaiser
+placid|placide
+plaintive|plaintif
+plethora|pléthore
+plucky|courageux
+plunder|piller
+poignant|poignant
+polemic|polémique
+pollinate|polliniser
+pomp|faste
+ponderous|lourd, pesant
+porous|poreux
+portend|présager
+postulate|postuler
+potency|puissance
+pounce|bondir sur
+pragmatism|pragmatisme
+prairie|prairie
+prattle|babiller
+precept|précepte
+precinct|enceinte, quartier
+precipitous|abrupt, précipité
+predicament|situation difficile
+predominate|prédominer
+preen|se pomponner
+preface|préface
+prehistoric|préhistorique
+preposterous|absurde
+prerogative|prérogative
+presumptuous|présomptueux
+pretext|prétexte
+prim|guindé
+primate|primate
+pristine|immaculé, intact
+proactive|proactif
+prodigious|prodigieux
+prodigy|prodige
+profane|profane
+profess|professer, prétendre
+proficient|compétent
+profuse|abondant
+prolific|prolifique
+promulgate|promulguer
+propensity|propension
+prophecy|prophétie
+propitious|propice
+protracted|prolongé
+protrude|dépasser
+proverb|proverbe
+prowess|prouesse
+prowl|rôder
+proxy|mandataire
+puberty|puberté
+pulp|pulpe
+pungent|âcre, piquant
+punitive|punitif
+puny|chétif
+quaint|pittoresque, désuet
+qualm|scrupule
+quandary|dilemme
+quarantine|quarantaine
+quell|réprimer, apaiser
+querulous|geignard
+quibble|ergoter
+quintessential|par excellence
+quip|bon mot
+rampage|déchaînement
+rampant|endémique, rampant
+rankle|rester en travers
+ransom|rançon
+rapport|bonne entente
+rapture|ravissement
+raucous|bruyant, rauque
+ravage|ravager
+rebuff|repousser
+rebuke|réprimander
+rebut|réfuter
+recapture|reprendre
+recline|s’allonger
+reclusive|reclus
+recourse|recours
+recrimination|récrimination
+rectify|rectifier
+redoubtable|redoutable
+redress|réparation
+refute|réfuter
+regal|royal
+rejoice|se réjouir
+relapse|rechute
+remiss|négligent
+remission|rémission
+remorse|remords
+rendition|interprétation
+repatriate|rapatrier
+repercussion|répercussion
+repetitive|répétitif
+replenish|réapprovisionner
+replica|réplique
+repose|repos
+reprieve|sursis
+reprimand|réprimander
+reprisal|représailles
+reproach|reproche
+reprove|réprimander
+reptile|reptile
+repudiate|répudier, rejeter
+rescind|annuler
+resolute|résolu
+resonate|résonner
+respite|répit
+resplendent|resplendissant
+resurgence|résurgence
+retinue|suite, cortège
+retract|rétracter, retirer
+retribution|châtiment
+revoke|révoquer
+rife|répandu
+rift|fossé, rupture
+righteous|vertueux
+rile|irriter
+rodent|rongeur
+rout|déroute
+rudimentary|rudimentaire
+ruminate|ruminer
+rupture|rupture
+rustic|rustique
+sacrosanct|sacro-saint
+sallow|cireux
+sanctimonious|moralisateur
+sardonic|sardonique
+sate|rassasier
+scathing|cinglant
+scoff|se moquer
+scourge|fléau
+scrupulous|scrupuleux
+scrutinize|scruter
+scuttle|saborder, détaler
+secluded|isolé
+sedate|posé
+seethe|bouillir de colère
+sequel|suite
+shirk|se dérober à
+shun|fuir, éviter
+skirmish|escarmouche
+slander|calomnie
+slovenly|négligé
+sluggish|lent, mou
+smug|suffisant
+snub|snober
+sojourn|séjour
+solace|réconfort
+sombre|sombre
+sporadic|sporadique
+spurious|fallacieux
+spurn|dédaigner
+squalid|sordide
+squander|gaspiller
+stagnant|stagnant
+stagnate|stagner
+staunch|fervent, loyal
+steadfast|inébranlable
+stigma|stigmate
+stoic|stoïque
+strenuous|ardu
+strident|strident
+strife|conflit
+stupor|stupeur
+suave|suave, raffiné
+subjugate|subjuguer
+substantiate|étayer
+subterfuge|subterfuge
+succinct|succinct
+sullen|maussade
+sully|souiller
+sumptuous|somptueux
+superfluous|superflu
+supersede|remplacer
+supplant|supplanter
+surly|bourru
+surmise|supposer
+surreptitious|subreptice
+swagger|se pavaner
+tacit|tacite
+taciturn|taciturne
+tantamount|équivalent à
+tarnish|ternir
+tawdry|clinquant
+tedious|fastidieux
+temperance|tempérance
+tenacious|tenace
+tenacity|ténacité
+tenuous|ténu
+tepid|tiède
+terse|laconique
+throng|foule
+timorous|craintif
+tirade|tirade
+toil|trimer
+torrid|torride
+tractable|docile
+trajectory|trajectoire
+transgress|transgresser
+travesty|parodie, travestissement
+trepidation|appréhension
+trite|banal
+truant|élève absentéiste
+truncate|tronquer
+tumult|tumulte
+turbulent|turbulent
+tutelage|tutelle
+unassuming|modeste
+uncanny|étrange, troublant
+underscore|souligner
+unkempt|négligé
+unruly|indiscipliné
+unscathed|indemne
+untenable|intenable
+unwieldy|encombrant
+upshot|résultat
+urbane|courtois, raffiné
+usurp|usurper
+vagary|caprice
+valour|bravoure
+vanquish|vaincre
+veer|virer
+vehement|véhément
+veneer|vernis, façade
+venerable|vénérable
+verve|verve
+vestige|vestige
+vex|contrarier
+vie|rivaliser
+vindicate|justifier, disculper
+vindictive|vindicatif
+virulent|virulent
+vociferous|véhément
+waft|flotter
+wallow|se vautrer
+watershed|tournant
+whet|aiguiser
+whim|caprice
+wily|rusé
+wistful|mélancolique
+wizened|ratatiné
+wrangle|se disputer
+wrath|courroux
+wrest|arracher
+zenith|zénith, apogée
+zest|entrain

@@ -1,0 +1,701 @@
+# Duke: CEFR C1 (late). word|pos|meaning|sentence with ___[|=form]
+abase|v|merendahkan diri|He would not ___ himself before the board.
+abate|v|mereda|The storm began to ___ towards evening.
+abbreviate|v|menyingkat|Writers often ___ long titles after the first mention.
+abdicate|v|turun takhta|The king chose to ___ in favour of his daughter.
+aberrant|adj|menyimpang|The test picked up ___ behaviour in the cells.
+aberration|n|penyimpangan|The cold summer was an ___ in a long warming trend.
+abeyance|n|penangguhan|The plan is in ___ until funds are found.
+abhor|v|sangat membenci|Most people ___ cruelty to animals.
+abominable|adj|sangat buruk|The weather was ___ all week.
+abrasive|adj|kasar, mengikis|Do not clean the lens with an ___ cloth.
+abridge|v|meringkas|Editors had to ___ the novel for radio.
+absolve|v|membebaskan dari salah|The report does not ___ the managers.
+abstain|v|menahan diri, abstain|Three members chose to ___ from the vote.
+abstinence|n|pantang|The monks practise ___ from meat and wine.
+accede|v|menyetujui (permintaan)|The board refused to ___ to the demand.
+accentuate|v|menonjolkan|Dark frames ___ the colour of the walls.
+accession|n|naik takhta, aksesi|Her ___ to the throne was celebrated for a week.
+accolade|n|penghargaan|The prize is the highest ___ in the field.
+accomplice|n|kaki tangan|The thief and his ___ were arrested at the border.
+accost|v|menghampiri dan menegur|Reporters ___ ministers on the steps.
+accretion|n|penumpukan bertahap|The coral reef grows by slow ___ over centuries.
+acquiesce|v|menurut, menyetujui dengan diam|The board decided to ___ in the merger.
+acrimony|n|kegetiran, permusuhan|The partnership ended in ___ and lawsuits.
+acuity|n|ketajaman|The test measures visual ___ at a distance.
+adamant|adj|bersikukuh|She was ___ that she had locked the door.
+adept|adj|mahir|He is ___ at calming angry clients.
+adhesive|n|perekat|Use a strong ___ to fix the tile.
+adjourn|v|menunda (sidang)|The court will ___ until Monday.
+adjudicate|v|memutus perkara|A panel will ___ on the claim.
+adjunct|n|pelengkap|The app is a useful ___ to classroom teaching.
+admonish|v|menegur, memperingatkan|Teachers ___ pupils who arrive late.
+admonition|n|teguran, peringatan|The judge let him go with a stern ___ and a fine.
+adulterate|v|mencampur (menurunkan mutu)|Some traders ___ honey with syrup.
+adversity|n|kemalangan|She showed courage in the face of ___ and loss.
+aegis|n|naungan|The talks were held under the ___ of the United Nations.
+affable|adj|ramah|The ___ host put everyone at ease.
+affront|n|penghinaan|The remark was an ___ to the whole profession.
+aggrandize/aggrandise|v|membesar-besarkan (kuasa)|He used the office to ___ himself.
+aggrieved|adj|merasa dirugikan|The ___ tenants took the landlord to court.
+agile|adj|lincah|The firm must stay ___ to survive.
+agrarian|adj|agraris|It was an ___ society with few towns.
+alchemy|n|alkimia|By some ___ the cook turns scraps into a feast.
+allay|v|meredakan|The statement did little to ___ public fears.
+allegory|n|alegori|The novel is an ___ of life under dictatorship.
+allude|v|menyinggung secara tidak langsung|The speaker did not ___ to the recent scandal.
+allure|n|daya pikat|Few can resist the ___ of easy money.
+aloof|adj|menjaga jarak|He remained ___ from office politics.
+altruistic|adj|altruistis, tanpa pamrih|Her reasons for helping were purely ___ in nature.
+amalgamate|v|menggabungkan|The two unions voted to ___ next year.
+amass|v|menimbun|Few traders ___ a fortune so quickly.
+ameliorate|v|memperbaiki, meringankan|The new clinic did little to ___ conditions in the camp.
+amenable|adj|bersedia menerima|The board proved ___ to the idea.
+amiable|adj|baik hati dan ramah|She is an ___ neighbour.
+amicable|adj|damai, bersahabat|The two sides reached an ___ settlement.
+amity|n|persahabatan|The two towns live in ___ after years of rivalry.
+amorphous|adj|tak berbentuk, tak jelas susunannya|The plan remained ___ until a budget was set.
+animosity|n|permusuhan|There is no personal ___ between the rivals.
+annotate|v|memberi catatan|Students ___ the poem before the seminar.
+annul|v|membatalkan|The court agreed to ___ the marriage.
+anomalous|adj|ganjil, tak lazim|The ___ result was checked three times.
+antagonist|n|lawan, tokoh penentang|The ___ of the novel is the hero's own brother.
+antagonize/antagonise|v|memusuhi, memancing permusuhan|Such remarks only ___ the unions.
+antecedent|n|pendahulu, anteseden|The riots had an ___ in the strikes of the 1920s.
+anthology|n|antologi|The ___ contains poems from five continents.
+antiquated|adj|ketinggalan zaman|The office still uses an ___ phone system.
+apathy|n|sikap acuh tak acuh|Low turnout reflects voter ___ rather than satisfaction.
+apex|n|puncak|He reached the ___ of his career at fifty.
+apparel|n|pakaian|The shop sells sports ___ and shoes.
+appease|v|menenangkan, meredakan|Small tax cuts will not ___ the critics.
+apprise|v|memberi tahu|Please ___ me of any change.
+aptitude|n|bakat, kecakapan|She showed an early ___ for mathematics.
+arable|adj|dapat ditanami|Only a tenth of the country is ___ land.
+arbiter|n|penengah, penentu|The court is the final ___ of the law.
+archaic|adj|kuno, usang|The law uses ___ terms that few understand.
+ardent|adj|bersemangat, gigih|She is an ___ supporter of free schools.
+arduous|adj|berat, melelahkan|The climbers faced an ___ journey to the summit.
+aristocracy|n|kaum bangsawan|The ___ lost much of its land after the war.
+armament|n|persenjataan|Spending on ___ doubled in five years.
+askew|adv|miring|His tie was ___ and his hair uncombed.
+assent|n|persetujuan|The bill received royal ___ in May.
+assuage|v|meredakan|Nothing could ___ her guilt.
+astute|adj|cerdik, jeli|It was an ___ move to buy the land early.
+atone|v|menebus (kesalahan)|He tried to ___ for his mistake by working late.
+attenuate|v|melemahkan|Thick walls ___ the noise from the street.
+attest|v|membuktikan, bersaksi|The ruins ___ to the wealth of the old port.
+attire|n|busana|Formal ___ is required at the dinner.
+attrition|n|pengikisan, penyusutan|The army was worn down by ___ over two winters.
+audacious|adj|berani, nekat|It was an ___ plan to cross the desert alone.
+autocrat|n|penguasa mutlak|The ___ ruled without a parliament.
+auxiliary|adj|pembantu, cadangan|The hospital has an ___ power supply.
+avalanche|n|longsoran salju|An ___ blocked the mountain pass.
+avenge|v|membalas dendam|He swore to ___ his brother's death.
+avid|adj|gemar sekali|She is an ___ reader of history.
+avow|v|mengakui terbuka|They ___ their support for the strike.
+awry|adv|meleset, kacau|The plan went ___ on the first day.
+backfire|v|menjadi bumerang|Harsh rules often ___ in the long run.
+backlog|n|tumpukan pekerjaan|The court has a ___ of two thousand cases.
+balk|v|enggan, menolak|Investors ___ at the high price.
+ballad|n|balada|The singer ended with an old Scottish ___ about the sea.
+banal|adj|basi, klise|The speech was full of ___ remarks about teamwork.
+barbaric|adj|biadab|The punishment was condemned as ___ and outdated.
+barometer|n|barometer, tolok ukur|House prices are a ___ of confidence.
+barrage|n|rentetan|The minister faced a ___ of questions.
+barricade|n|barikade|Protesters built a ___ across the road.
+barter|v|menukar barang|Villagers ___ rice for salt and cloth.
+bask|v|berjemur, menikmati|Lizards ___ on the warm stones.
+bastion|n|benteng|The university is seen as a ___ of free thought.
+beacon|n|suar|The lighthouse served as a ___ for ships.
+befall|v|menimpa|No one knew what would ___ the expedition.
+belated|adj|terlambat|He sent a ___ birthday card.
+beleaguer|v|mengepung, merundung|Debts ___ the company from every side.
+belie|v|menyembunyikan, bertolak belakang dengan|His easy smile seemed to ___ his real concern.
+belligerent|adj|suka berkelahi|He grew ___ after the third drink.
+bemused|adj|bingung geli|She gave a ___ smile at the strange request.
+benefactor|n|dermawan|An unknown ___ paid for the new wing.
+bequeath|v|mewariskan|He chose to ___ his library to the town.
+bequest|n|warisan (hibah wasiat)|The library was built with a ___ from a local merchant.
+berate|v|memarahi keras|Coaches should not ___ players in public.
+bereaved|adj|berduka (ditinggal mati)|The charity supports ___ families.
+bereft|adj|kehilangan|The town is ___ of young people.
+beset|v|menimpa, mengepung|Delays ___ the project from the start.
+besiege|v|mengepung|Reporters ___ the house for a week.
+bestow|v|menganugerahkan|The university will ___ an honorary degree on her.
+blemish|n|noda, cacat|The apple had not a single ___ on its skin.
+blight|n|hama, perusak|Empty shops are a ___ on the high street.
+blithe|adj|riang tanpa peduli|He showed a ___ disregard for the rules.
+blunder|n|kesalahan besar|Selling the land was a costly ___ for the council.
+boisterous|adj|ramai dan riuh|A ___ crowd filled the square.
+bounty|n|hadiah, kelimpahan|The harvest festival celebrates the ___ of the land.
+bravado|n|keberanian pura-pura|His threats were mere ___ and nothing more.
+brazen|adj|tak tahu malu|It was a ___ lie.
+brevity|n|keringkasan|The report is admired for its ___ and clarity.
+brittle|adj|rapuh, getas|Old bones become ___ and break easily.
+broach|v|mengangkat (topik)|She did not dare to ___ the subject of money.
+brunt|n|bagian terberat|Small towns bore the ___ of the cuts.
+buoyant|adj|bergairah, mengapung|Sales remained ___ throughout the summer.
+burgeon|v|berkembang pesat|New firms ___ wherever rents are low.
+buttress|v|menopang|New figures ___ the case for reform.
+cadence|n|irama naik turun|He spoke with the slow ___ of the south.
+calamity|n|malapetaka|The drought was a ___ for the whole region.
+calibrate|v|mengalibrasi|Technicians ___ the scales every morning.
+callous|adj|tak berperasaan|It was a ___ remark to make to a widow.
+callow|adj|hijau, belum matang|A ___ youth of nineteen led the charge.
+camouflage|n|kamuflase|The moth's wings provide perfect ___ against bark.
+candid|adj|terus terang|She gave a ___ account of her mistakes.
+canny|adj|cerdik berhitung|A ___ investor bought the land early.
+capitulate|v|menyerah|The board refused to ___ to the demand.
+captivate|v|memikat|Good stories ___ young readers.
+caricature|n|karikatur|The cartoon is a cruel ___ of the minister.
+carnage|n|pembantaian|Reporters described the ___ on the motorway.
+carp|v|mengomel soal kecil|Reviewers ___ about the length of the book.
+categorical|adj|tegas, mutlak|The minister issued a ___ denial.
+caustic|adj|pedas, tajam (ucapan)|The critic was known for his ___ reviews.
+caveat|n|catatan peringatan|The offer comes with one ___ about delivery times.
+cede|v|menyerahkan (wilayah)|The treaty forced the state to ___ two provinces.
+celestial|adj|berkaitan dengan langit|Sailors steered by ___ bodies.
+censure|v|mengecam (resmi)|Parliament voted to ___ the minister.
+cessation|n|penghentian|Both sides agreed to a ___ of fighting.
+chagrin|n|rasa kesal malu|To his ___ the letter was read aloud.
+chasm|n|jurang|A rope bridge crosses the ___ below the falls.
+chastise|v|menghukum, menegur keras|Judges ___ lawyers who waste time.
+chide|v|menegur|Parents ___ children who interrupt.
+chivalry|n|kesatriaan|The tales celebrate the age of ___ and honour.
+churlish|adj|kasar tak tahu sopan|It would be ___ to refuse the gift.
+circumference|n|keliling lingkaran|The ___ of the lake is twelve kilometres.
+circumspect|adj|berhati-hati|Bankers are ___ about lending to new firms.
+circumvent|v|menghindari, mengakali|Some firms ___ the rule by hiring contractors.
+citadel|n|benteng kota|The ___ overlooks the old harbour.
+clamber|v|memanjat susah payah|Children ___ over the rocks at low tide.
+clandestine|adj|rahasia, gelap|The two met at a ___ gathering in the hills.
+clemency|n|pengampunan|The prisoner asked the governor for ___ and was refused.
+clientele|n|para pelanggan|The café has a loyal ___ of students.
+clot|n|gumpalan (darah)|A blood ___ caused the stroke.
+cloying|adj|manis memuakkan|The film has a ___ ending.
+coalesce|v|menyatu|Small groups began to ___ into one movement.
+coax|v|membujuk|It took an hour to ___ the cat down.
+coddle|v|memanjakan|Schools should not ___ able pupils.
+coexist|v|hidup berdampingan|Different faiths ___ peacefully in the town.
+cognate|adj|serumpun|The two words are ___ and share a root.
+cohesion|n|kepaduan, kohesi|Shared meals build ___ within a team.
+cohesive|adj|padu|The players have become a ___ unit.
+collateral|n|agunan|He offered the house as ___ for the loan.
+collude|v|bersekongkol|Firms must not ___ to fix prices.
+collusion|n|persekongkolan|The firms were fined for ___ over prices.
+colossal|adj|raksasa|The dam was a ___ waste of money.
+combustion|n|pembakaran|The engine relies on the ___ of fuel and air.
+commiserate|v|ikut bersimpati|Friends came to ___ with the losing team.
+commune|n|komune|They lived on a farming ___ for five years.
+complacency|n|rasa puas diri|There is no room for ___ after one good year.
+complexion|n|warna kulit wajah|She has a pale ___ and dark hair.
+complicity|n|keterlibatan (dalam kejahatan)|He denied any ___ in the fraud.
+composure|n|ketenangan diri|She kept her ___ under hostile questioning.
+compulsion|n|paksaan, dorongan kuat|He felt a ___ to check the lock again.
+compunction|n|rasa bersalah|He felt no ___ about leaving early.
+conciliate|v|mendamaikan|The chairman tried to ___ the angry members.
+concise|adj|ringkas|Keep your answers clear and ___ in the exam.
+concoct|v|mengarang, meracik|The boys ___ an excuse on the way home.
+concomitant|adj|yang menyertai|Growth brought a ___ rise in traffic.
+concur|v|sependapat|Most experts ___ with this view.
+condescend|v|bersikap merendahkan|Good teachers never ___ to their pupils.
+condescension|n|sikap merendahkan|She spoke to the staff without ___ or flattery.
+condolence|n|ucapan belasungkawa|She sent a letter of ___ to the family.
+condone|v|membiarkan, memaafkan (kesalahan)|The school does not ___ cheating of any kind.
+conducive|adj|mendukung, kondusif|A quiet room is ___ to careful study.
+conduit|n|saluran|The port is a ___ for trade with the interior.
+confound|v|membingungkan, mematahkan|The results ___ every forecast.
+congenial|adj|menyenangkan, cocok|She found the work ___ and well paid.
+congruent|adj|selaras|His actions are not ___ with his words.
+conjecture|n|dugaan|Without data, the claim is mere ___ and nothing more.
+connive|v|bersekongkol diam-diam|Guards who ___ at theft are dismissed.
+connoisseur|n|ahli penikmat|He is a ___ of old maps.
+conscientious|adj|teliti dan bertanggung jawab|She is a ___ worker who checks everything twice.
+conscript|n|wajib militer|Every ___ serves for eighteen months.
+consecrate|v|menyucikan|Bishops ___ new churches in the region.
+conservatory|n|konservatori, rumah kaca|She studied the violin at a ___ in Vienna.
+consign|v|menyerahkan, menitipkan|Historians ___ such theories to the past.
+constellation|n|rasi bintang|The Plough is the easiest ___ to find.
+consternation|n|kebingungan cemas|The news caused ___ among investors.
+constrict|v|menyempitkan|Tight collars ___ the neck.
+consul|n|konsul|The ___ helped the stranded tourists.
+consummate|adj|sempurna, ulung|She is a ___ professional in every way.
+contagious|adj|menular|The disease is highly ___ among children.
+contravene|v|melanggar|Such sales ___ the trade agreement.
+contrition|n|penyesalan mendalam|The letter was full of ___ for the harm done.
+contrive|v|merekayasa, berhasil mengatur|They ___ to meet without anyone knowing.
+convoluted|adj|berbelit-belit|The plot is too ___ to summarise.
+copious|adj|berlimpah|She took ___ notes during the lecture.
+cordial|adj|ramah, hangat|Relations between the two towns are ___ again.
+cordon|n|garis penjagaan|Police threw a ___ around the building.
+coronation|n|penobatan|The ___ was watched by millions.
+corroborate|v|menguatkan (dengan bukti)|Two witnesses ___ the driver's account.
+cosmopolitan|adj|kosmopolitan|The port has a ___ feel.
+coterie|n|kelompok kecil eksklusif|A ___ of advisers surrounds the minister.
+countenance|v|menyetujui, membiarkan|The school will not ___ bullying.
+counteract|v|menangkal, melawan|Trees ___ the heat of paved streets.
+counterfeit|adj|palsu|He was caught with ___ banknotes.
+courier|n|kurir|A ___ delivered the contract by noon.
+covet|v|mengingini|Collectors ___ the first edition.
+crass|adj|kasar, tolol|It was a ___ remark to make at a funeral.
+craven|adj|pengecut|The paper called the decision ___ and weak.
+credence|n|kepercayaan|New evidence lends ___ to her account.
+credulity|n|sifat mudah percaya|The story strains the ___ of any reader.
+creed|n|kepercayaan, asas|The club is open to people of every ___ and colour.
+crevice|n|celah (batu)|A lizard hid in a ___ in the wall.
+crux|n|inti persoalan|The ___ of the matter is who will pay.
+culpable|adj|patut disalahkan|The court found the driver ___ for the crash.
+culprit|n|biang keladi, pelaku|Poor wiring was the ___ in the fire.
+cumbersome|adj|merepotkan, canggung|The old system was slow and ___ to use.
+curfew|n|jam malam|The army imposed a ___ after the riots.
+cursory|adj|sepintas lalu|A ___ glance was enough to spot the error.
+curt|adj|singkat dan ketus|He gave a ___ nod and left.
+custodian|n|penjaga, pengelola|The trust is the ___ of the old forest.
+dabble|v|mencoba-coba|In retirement he began to ___ in painting.
+dally|v|berlambat-lambat|Do not ___ on the way to school.
+dawdle|v|bermalas-malasan|Tourists ___ along the river in the evening.
+deadlock|n|jalan buntu|The talks ended in ___ after two days.
+debacle|n|kegagalan memalukan|The launch turned into a ___ within hours.
+debilitate|v|melemahkan|Long illnesses ___ even strong patients.
+debit|n|debit|The ___ appeared on my account twice.
+debunk|v|membongkar kepalsuan|The book sets out to ___ ten myths about sleep.
+deceit|n|tipu daya|He won the contract by ___ and flattery.
+decimate|v|memusnahkan sebagian besar|Disease can ___ a herd in weeks.
+decipher|v|menguraikan (tulisan)|Nobody could ___ the doctor's handwriting.
+decompose|v|membusuk, terurai|Leaves ___ quickly in warm, wet soil.
+decorous|adj|sopan dan pantas|The debate was ___ and dull.
+decoy|n|pengecoh, umpan|The second car was a ___ to fool the press.
+decry|v|mengecam|Teachers ___ the lack of funds.
+deduce|v|menyimpulkan (secara logis)|From the footprints we can ___ the animal's size.
+defame|v|mencemarkan nama|The article was written to ___ a rival.
+deference|n|rasa hormat|He lowered his voice in ___ to the judge.
+defiance|n|pembangkangan|Thousands marched in ___ of the ban.
+defiant|adj|membangkang|The mayor remained ___ after the vote.
+deflate|v|mengempiskan|One sharp question can ___ a proud speaker.
+deft|adj|cekatan|With a ___ movement she caught the glass.
+defunct|adj|sudah tidak berlaku|The letter came from a ___ company.
+dehydrate|v|mengalami dehidrasi|Athletes ___ quickly in such heat.
+deign|v|sudi|He did not ___ to answer.
+delectable|adj|lezat|The café serves ___ pastries.
+delineate|v|menggariskan, menguraikan|The report must ___ each team's duties.
+deluge|n|banjir besar, limpahan|The office received a ___ of complaints.
+delve|v|menyelami|The film does not ___ into his early life.
+demarcate|v|menetapkan batas|Stone posts ___ the edge of the estate.
+demean|v|merendahkan martabat|Such jokes ___ the people who tell them.
+demeanour/demeanor|n|pembawaan|Her calm ___ reassured the passengers.
+demote|v|menurunkan pangkat|The board voted to ___ the manager.
+demure|adj|pendiam dan santun|She gave a ___ smile and said nothing.
+denigrate|v|merendahkan|It is easy to ___ work you have not tried.
+deplore|v|menyesalkan|We ___ the use of force against students.
+depose|v|menggulingkan|The army moved to ___ the president.
+deprecate|v|mencela, meremehkan|He likes to ___ his own work.
+depreciate|v|menyusut nilainya|New cars ___ fastest in the first year.
+derelict|adj|terbengkalai|The ___ factory was turned into flats.
+desolate|adj|sunyi dan gersang|The coast is ___ in winter.
+despoil|v|menjarah, merusak|Mines ___ the hills for miles around.
+despondent|adj|putus asa|He grew ___ after months without work.
+despot|n|penguasa lalim|The ___ ruled by fear for thirty years.
+destabilize/destabilise|v|menggoyahkan|Rumours can ___ a small bank.
+destitute|adj|papa, melarat|The flood left hundreds of families ___ overnight.
+detest|v|sangat membenci|I ___ having to queue.
+detonate|v|meledakkan|Engineers will ___ the charges at noon.
+detour|n|jalan memutar|We made a ___ to avoid the flooded road.
+detrimental|adj|merugikan|Late nights are ___ to concentration.
+devoid|adj|hampa dari|The speech was ___ of any new ideas.
+devour|v|melahap|The children ___ everything on the table.
+devout|adj|saleh|She comes from a ___ family.
+dexterity|n|ketangkasan|The work demands manual ___ and patience.
+dichotomy|n|dikotomi|The book rejects the ___ between art and science.
+dictum|n|ucapan berwibawa|He lived by the ___ that less is more.
+dignitary|n|pejabat tinggi|A foreign ___ opened the exhibition.
+digress|v|menyimpang dari pokok|Good lecturers rarely ___ for long.
+dilapidated|adj|bobrok|They bought a ___ farmhouse and rebuilt it.
+diminutive|adj|mungil|The ___ actress played a giant on stage.
+disarray|n|kekacauan|The resignation left the party in ___ for months.
+disband|v|membubarkan|The club had to ___ for lack of members.
+disclaimer|n|penafian|The advert carries a ___ in small print.
+discomfit|v|membuat canggung|Direct questions ___ most politicians.
+disconsolate|adj|sangat sedih|The ___ fans left in silence.
+discord|n|perselisihan|Money was a source of ___ in the family.
+disgruntled|adj|kesal, tidak puas|A ___ worker leaked the report.
+dishearten|v|mematahkan semangat|Early failures ___ many beginners.
+dishevelled/disheveled|adj|kusut berantakan|He arrived late and ___ from the storm.
+dislodge|v|melepaskan dari tempatnya|Rain can ___ rocks above the road.
+disparage|v|meremehkan, menjelekkan|It is unfair to ___ work you have not read.
+disparate|adj|sangat berbeda|The book joins ___ ideas into one theory.
+dispassionate|adj|tanpa emosi, objektif|We need a ___ look at the facts.
+dispel|v|menghalau|The minister tried to ___ fears of a shortage.
+disprove|v|membuktikan salah|New data ___ the earlier claim.
+disquiet|n|kegelisahan|There is growing ___ about the delays.
+dissect|v|membedah|Students ___ a frog in the second term.
+dissipate|v|buyar, menghilang|The mist began to ___ by ten.
+dissolute|adj|tak bermoral|The heir led a ___ life in the city.
+dissonance|n|ketidakselarasan|There is a ___ between his words and his acts.
+dissuade|v|membujuk agar tidak|Nothing could ___ her from going.
+distraught|adj|sangat kalut|The ___ mother searched every street.
+dither|v|bimbang berlarut|Ministers ___ while prices rise.
+divergent|adj|berbeda arah, menyimpang|The two experts hold ___ views on the cause.
+divulge|v|membocorkan|Doctors may not ___ details of a case.
+dogma|n|dogma|He questioned every ___ he had been taught.
+dogmatic|adj|dogmatis, kaku pada pendapat|A ___ teacher leaves no room for questions.
+doleful|adj|sedih memelas|The dog gave a ___ look at the door.
+domesticate|v|menjinakkan|People began to ___ sheep ten thousand years ago.
+dominion|n|kekuasaan, wilayah|The empire held ___ over the whole coast.
+dormant|adj|tidak aktif|The volcano has been ___ for centuries.
+dour|adj|masam, keras|The ___ old farmer rarely spoke.
+dreary|adj|suram, menjemukan|It was a ___ afternoon of rain and paperwork.
+droll|adj|lucu aneh|She has a ___ way of telling a story.
+dupe|v|menipu|Fake emails ___ thousands of customers.
+duress|n|paksaan|The statement was signed under ___ and has no force.
+eavesdrop|v|menguping|It is rude to ___ on private talks.
+ebb|v|surut|Public support began to ___ after the vote.
+eclectic|adj|beragam sumber|The shop sells an ___ mix of old and new.
+edible|adj|dapat dimakan|Not every mushroom in the wood is ___ and safe.
+edifice|n|bangunan megah|The bank is an imposing ___ of grey stone.
+edify|v|mendidik (batin)|The talks aim to ___ as well as amuse.
+efface|v|menghapus|Time cannot ___ the memory of that day.
+effusive|adj|berlebihan dalam pujian|The host was ___ in his thanks.
+egalitarian|adj|egaliter|The school has an ___ spirit.
+egress|n|jalan keluar|The hall has only one means of ___ in a fire.
+elapse|v|berlalu (waktu)|Several years may ___ before results appear.
+elated|adj|sangat gembira|She was ___ at the news of her prize.
+elucidate|v|menjelaskan, menerangkan|A diagram would ___ the process.
+elude|v|lolos dari|The answer continues to ___ researchers.
+emancipate|v|membebaskan|Education can ___ people from poverty.
+embellish|v|membumbui, menghias|Storytellers ___ the facts a little.
+emblem|n|lambang|The eagle is the ___ of the republic.
+embroil|v|melibatkan dalam kesulitan|Such deals ___ the firm in lawsuits.
+enclave|n|daerah kantong|The town is a French-speaking ___ in the north.
+encroach|v|merambah|Houses ___ on the farmland each year.
+encumber|v|membebani|Heavy debts ___ the estate.
+endemic|adj|endemik|Corruption was ___ in the old system.
+engender|v|menimbulkan|Secret deals ___ mistrust.
+engross|v|menyita perhatian|Good novels ___ the reader from the first page.
+engulf|v|menelan, melanda|Flames began to ___ the roof.
+enigma|n|teka-teki, misteri|The origin of the script is still an ___ to scholars.
+enigmatic|adj|penuh teka-teki|She gave an ___ smile and left.
+enmity|n|permusuhan|The ___ between the families lasted for generations.
+ensconce|v|menempatkan dengan nyaman|Guests ___ themselves by the fire.
+enslave|v|memperbudak|Debts can ___ a family for generations.
+entourage|n|rombongan pengiring|The singer arrived with an ___ of twenty.
+entrant|n|peserta|Each ___ pays a small fee.
+entreat|v|memohon sangat|I ___ you to reconsider.
+enumerate|v|menyebut satu per satu|The report goes on to ___ the risks.
+envious|adj|iri|He was ___ of his brother's success.
+envisage|v|membayangkan (masa depan)|Planners ___ a city with far fewer cars.
+envoy|n|utusan|The president sent a special ___ to the talks.
+ephemeral|adj|sekejap, tidak kekal|Fame on social media is often ___ and shallow.
+epitome|n|contoh sempurna|The hotel is the ___ of quiet luxury.
+epitomize/epitomise|v|menjadi lambang|The towers ___ the wealth of the port.
+epoch|n|zaman|The invention marked a new ___ in medicine.
+equable|adj|tenang, stabil|The island has an ___ climate.
+equanimity|n|ketenangan batin|She accepted the verdict with ___ and grace.
+equator|n|khatulistiwa|The island lies just south of the ___ in warm seas.
+errand|n|suruhan, urusan kecil|She sent the boy on an ___ to the baker.
+erratic|adj|tidak menentu|Rainfall has become ___ in recent years.
+erroneous|adj|keliru|The article was based on ___ figures.
+eschew|v|menjauhi|Good writers ___ needless jargon.
+esoteric|adj|hanya dipahami kalangan terbatas|The debate turned on an ___ point of law.
+espionage|n|mata-mata|He was jailed for ___ in 1975.
+espouse|v|menganut, mendukung|Few parties ___ such radical views.
+estrange|v|merenggangkan|Such quarrels ___ brothers for life.
+ethos|n|etos|The school has an ___ of hard work.
+etiquette|n|etiket|Court ___ forbids speaking before the judge.
+euphemism|n|eufemisme|"Let go" is a ___ for dismissed.
+evasive|adj|mengelak|He gave an ___ answer to every question.
+evince|v|menunjukkan|The pupils ___ little interest in the topic.
+exalt|v|mengagungkan|The poems ___ the life of the farmer.
+excoriate|v|mengecam habis-habisan|Columnists ___ the minister for the delay.
+exhale|v|mengembuskan napas|Breathe in deeply and ___ slowly.
+exhaustive|adj|menyeluruh|The police made an ___ search of the area.
+exhort|v|mendesak, menyerukan|Leaders ___ the public to save water.
+exhume|v|menggali kubur|The court gave leave to ___ the body.
+exodus|n|eksodus|The war caused an ___ from the cities.
+exorbitant|adj|sangat mahal|The hotel charges ___ prices in August.
+expatriate|n|ekspatriat|The club is popular with every ___ in town.
+expedient|adj|menguntungkan sesaat, praktis|It was politically ___ to delay the vote.
+expedite|v|mempercepat (proses)|Online forms ___ the visa process.
+expend|v|menghabiskan (tenaga, dana)|Do not ___ all your energy on the first lap.
+exponent|n|penganjur, pelopor|He was a leading ___ of free trade.
+exponential|adj|eksponensial|The city has seen ___ growth in traffic.
+exposition|n|pemaparan|The book opens with a clear ___ of the theory.
+expulsion|n|pengusiran|The ___ of the diplomats ended the talks.
+extant|adj|masih ada|Only three copies of the map are ___ today.
+extinguish|v|memadamkan|It took six hours to ___ the fire.
+extol|v|memuji-muji|Travel writers ___ the beauty of the coast.
+extort|v|memeras (uang)|Gangs ___ money from shop owners.
+extradite|v|mengekstradisi|The state refused to ___ the banker.
+extrapolate|v|mengekstrapolasi, memperkirakan dari data|We cannot ___ national trends from one town.
+exuberant|adj|penuh semangat|The crowd was ___ after the win.
+exude|v|memancarkan|The new manager seems to ___ confidence.
+fable|n|fabel|The ___ of the fox and the crow is known to every child.
+facade|n|tampak muka, kedok|The ___ of the bank is made of white marble.
+facile|adj|gampangan, dangkal|The report offers a ___ answer to a hard question.
+fallacy|n|kekeliruan berpikir|It is a ___ that more roads reduce traffic.
+fallible|adj|bisa keliru|Memory is ___ and courts know it.
+fallow|adj|bera, tidak digarap|The field lay ___ for two years.
+fanfare|n|gegap gempita|The shop opened with great ___ in May.
+farce|n|lelucon, sandiwara konyol|The trial was a ___ from start to finish.
+fathom|v|memahami (sesuatu yang sulit)|I cannot ___ why he refused.
+fawn|v|menjilat|Courtiers ___ on the young king.
+feign|v|berpura-pura|Some animals ___ death to escape.
+felony|n|kejahatan berat|Tax fraud on that scale is a ___ under state law.
+ferment|v|berfermentasi|Grapes ___ in large wooden barrels.
+ferocious|adj|ganas|A ___ storm struck the coast.
+fervent|adj|bersemangat, berapi-api|She is a ___ supporter of free education.
+fervour/fervor|n|semangat berkobar|The crowd sang with ___ in the rain.
+fester|v|membusuk, makin parah|Grievances ___ when nobody listens.
+fetter|v|membelenggu|Old habits ___ the mind.
+feud|n|perseteruan|The ___ between the families lasted fifty years.
+feudal|adj|feodal|Under the ___ system peasants owed labour to a lord.
+fiasco|n|kegagalan total|The launch was a ___ and the product was withdrawn.
+fiat|n|perintah mutlak|Prices cannot be set by ___ from the capital.
+fickle|adj|plin-plan, berubah-ubah|The weather is ___ in the mountains.
+figurative|adj|kiasan|The phrase is used in a ___ sense.
+finale|n|babak akhir|The fireworks made a fine ___ to the festival.
+finesse|n|kehalusan, kecakapan|She handled the dispute with ___ and tact.
+flagrant|adj|mencolok (pelanggaran)|It was a ___ breach of the rules.
+flair|n|bakat alami|He has a ___ for languages.
+flamboyant|adj|flamboyan|The ___ designer wore a yellow suit.
+flaunt|v|memamerkan|Some people ___ their wealth.
+fledgling|adj|baru berdiri|The ___ company has only six staff.
+flimsy|adj|tipis, lemah|The case rests on ___ evidence.
+flinch|v|tersentak, gentar|She did not ___ when the needle went in.
+flounder|v|menggelepar, kebingungan|Without a plan the project began to ___ badly.
+flout|v|melanggar terang-terangan|Drivers ___ the ban every night.
+flurry|n|kesibukan mendadak|There was a ___ of activity before the visit.
+folklore|n|cerita rakyat|In local ___ the lake has no bottom.
+forage|v|mencari makan|Bears ___ for berries in late summer.
+foray|n|penjajakan, serbuan singkat|It was her first ___ into politics.
+forbidding|adj|tampak menakutkan|The castle has a ___ look in winter.
+foreseeable|adj|dapat diperkirakan|Rates will stay low for the ___ future.
+foresight|n|pandangan jauh|With more ___ the shortage could have been avoided.
+forestall|v|mendahului untuk mencegah|The firm cut prices to ___ its rivals.
+forfeit|v|kehilangan hak|Late entrants ___ their deposit.
+forlorn|adj|merana, hampir tanpa harapan|A ___ dog waited by the gate.
+formative|adj|membentuk (watak)|He spent his ___ years in a mining town.
+forsake|v|meninggalkan|He would not ___ his principles for money.
+forthright|adj|blak-blakan|He was ___ in his criticism of the plan.
+fortitude|n|ketabahan|She bore the illness with ___ and humour.
+fraternity|n|persaudaraan|The medical ___ opposed the change.
+fraudulent|adj|curang, palsu|He made a ___ claim for damages.
+fraught|adj|penuh (bahaya, masalah)|The journey was ___ with danger.
+frenetic|adj|sibuk kalang kabut|The week before the launch was ___ for everyone.
+frivolous|adj|remeh, tidak serius|The court rejected the claim as ___ and costly.
+frolic|v|bermain riang|Lambs ___ in the spring fields.
+fugitive|n|buronan|The ___ was caught at a bus station.
+furnace|n|tungku|The ___ melts steel at great heat.
+furore/furor|n|kegemparan|The remark caused a ___ in the press.
+furtive|adj|sembunyi-sembunyi|He cast a ___ glance at the door.
+gadget|n|perkakas kecil|He bought a ___ for peeling garlic.
+gaffe|n|kekeliruan memalukan|The minister's ___ was replayed all evening.
+gainsay|v|menyangkal|Nobody can ___ her courage.
+gallant|adj|gagah berani|It was a ___ attempt to save the ship.
+galvanize/galvanise|v|menggerakkan|Such news can ___ a community into action.
+gambit|n|langkah pembuka cerdik|Her opening ___ was to offer a discount.
+garish|adj|norak mencolok|The hotel is painted in ___ colours.
+garner|v|menghimpun, memperoleh|The film managed to ___ wide praise.
+gaunt|adj|kurus cekung|He came back ___ after the long illness.
+genealogy|n|silsilah|He traced the family's ___ back to 1600.
+genial|adj|ramah dan hangat|The ___ doctor knew every patient by name.
+germinate|v|berkecambah|The seeds ___ within a week.
+ghetto|n|permukiman kumuh terasing|He grew up in a ___ on the edge of the city.
+giddy|adj|pening, girang|She felt ___ at the top of the tower.
+gimmick|n|akal-akalan pemasaran|The free toy is just a sales ___ for children.
+glean|v|memungut (informasi)|Reporters ___ details from old letters.
+glib|adj|lancar tapi dangkal|He gave a ___ answer and moved on.
+glut|n|kelebihan pasokan|A ___ of oil pushed prices down.
+goad|v|menghasut, mendorong|Rivals tried to ___ him into a mistake.
+gorge|n|ngarai|The river runs through a deep ___ below the village.
+gouge|v|mencungkil|Glaciers ___ deep valleys out of rock.
+grandeur|n|keagungan|Visitors are struck by the ___ of the mountains.
+grapple|v|bergulat (dengan masalah)|Cities ___ with rising rents.
+gratuitous|adj|tidak perlu, tanpa alasan|The scene contains ___ violence.
+gregarious|adj|suka bergaul|She is ___ and makes friends easily.
+grovel|v|merendahkan diri|I will not ___ for a pay rise.
+guile|n|tipu muslihat|He won by ___ rather than strength.
+guise|n|kedok, rupa|The tax returned in a new ___ a year later.
+gullible|adj|mudah tertipu|The scheme targets ___ investors.
+gust|n|tiupan angin kencang|A ___ of wind blew the papers away.
+habitual|adj|menjadi kebiasaan|He is a ___ late arriver.
+haggard|adj|kuyu|The rescuers looked ___ after two nights.
+hallmark|n|ciri khas|Clear prose is the ___ of her work.
+hallowed|adj|dikeramatkan|The team walked onto the ___ turf.
+hamlet|n|dusun|The road ends at a ___ of six houses.
+haphazard|adj|serampangan|The files were stored in a ___ way.
+hapless|adj|malang|The ___ driver was fined twice in one day.
+harbinger|n|pertanda|The first frost is a ___ of winter.
+harrowing|adj|memilukan|She gave a ___ account of the journey.
+haughty|adj|angkuh|A ___ clerk waved us away.
+havoc|n|kerusakan besar|The strike caused ___ on the railways.
+headway|n|kemajuan|We are making slow ___ with the report.
+hectic|adj|sangat sibuk|It was a ___ week before the launch.
+hedonism|n|hedonisme|The city has a name for ___ and late nights.
+hefty|adj|besar, berat|The firm paid a ___ fine.
+heinous|adj|keji|The court called it a ___ crime.
+helm|n|kemudi, pucuk pimpinan|A new director took the ___ in May.
+hereditary|adj|turun-temurun|The disease is ___ in some families.
+heresy|n|bidah|In that office, leaving early is ___ of the worst kind.
+heretic|n|penganut bidah|The church condemned him as a ___ in 1520.
+hermit|n|pertapa|A ___ lived in the cave for forty years.
+heyday|n|masa jaya|In its ___ the port handled half the country's trade.
+hiatus|n|jeda|The band returned after a ___ of five years.
+hoard|v|menimbun|People ___ food before a storm.
+hoax|n|kabar bohong|The bomb warning was a ___ by a schoolboy.
+homage|n|penghormatan|The film pays ___ to the silent era.
+horde|n|gerombolan|A ___ of tourists filled the square.
+hospitable|adj|ramah menerima tamu|The villagers were ___ to strangers.
+hubris|n|kesombongan berlebih|The bank's fall was a tale of ___ and debt.
+humdrum|adj|membosankan sehari-hari|She longed to escape her ___ routine.
+humility|n|kerendahan hati|He accepted the prize with ___ and thanks.
+hypocrisy|n|kemunafikan|Voters are quick to punish ___ in their leaders.
+hypocrite|n|orang munafik|Only a ___ would preach thrift and spend like that.
+hysteria|n|histeria|The rumour caused mass ___ in the market.
+idiom|n|idiom|The ___ makes no sense when translated word for word.
+idyllic|adj|permai|They spent an ___ week by the lake.
+illicit|adj|gelap, terlarang|Police seized ___ goods worth a million.
+illustrious|adj|termasyhur|He comes from an ___ family of scholars.
+immaculate|adj|bersih tanpa cela|The kitchen was ___ when we arrived.
+immutable|adj|tidak dapat diubah|These are not ___ laws of nature.
+impartial|adj|tidak memihak|A judge must give an ___ ruling.
+impasse|n|jalan buntu|Talks have reached an ___ over pay.
+impassive|adj|tanpa ekspresi|The guard remained ___ throughout.
+impeccable|adj|tanpa cela|Her manners are ___ at all times.
+imperil|v|membahayakan|Further cuts would ___ the service.
+impersonal|adj|tidak pribadi|The letter was cold and ___ in tone.
+impetuous|adj|gegabah|It was an ___ decision that he later regretted.
+impinge|v|berdampak, melanggar|New rules ___ on the work of small firms.
+implausible|adj|tidak masuk akal|The plot of the film is ___ from the start.
+implore|v|memohon dengan sangat|I ___ you to think again.
+importune|v|merengek, mendesak|Beggars ___ tourists at the gate.
+impromptu|adj|tanpa persiapan|She gave an ___ speech at the dinner.
+impudent|adj|kurang ajar|The ___ boy answered back.
+inane|adj|konyol, kosong|The show is full of ___ chatter.
+inaugural|adj|perdana|The president gave her ___ address at noon.
+incandescent|adj|berpijar, sangat marah|She was ___ with rage at the bill.
+incense|v|membuat marah besar|Such remarks ___ the local farmers.
+inception|n|permulaan|She has led the project since its ___ in 2010.
+incessant|adj|tiada henti|The ___ noise of traffic kept them awake.
+incisive|adj|tajam (pikiran)|She wrote an ___ review of the policy.
+incite|v|menghasut|Such speeches ___ hatred.
+incongruous|adj|janggal, tidak serasi|The glass tower looks ___ beside the old church.
+incredulous|adj|tidak percaya|He gave an ___ laugh at the price.
+indebted|adj|berutang budi|I am ___ to my teachers for their patience.
+indelible|adj|tak terhapus|The trip left an ___ mark on her.
+indomitable|adj|tak terkalahkan (semangat)|The old teacher had an ___ spirit.
+inept|adj|tidak cakap|The reply was slow and ___ at best.
+inert|adj|lembam, tidak aktif|The gas is ___ and safe to store.
+inertia|n|kelembaman, kemalasan|Bureaucratic ___ delayed the reform.
+inexorable|adj|tak terbendung|The ___ rise of the sea threatens the delta.
+inexplicable|adj|tak dapat dijelaskan|For some ___ reason the file vanished.
+infallible|adj|tidak pernah salah|No test is ___ in practice.
+infatuated|adj|tergila-gila|He was ___ with the idea of fame.
+infest|v|menyerbu (hama)|Rats ___ the old warehouse.
+infirm|adj|lemah karena tua|The home cares for the old and ___ of the parish.
+infirmary|n|balai pengobatan|The injured sailor was taken to the ___ on shore.
+infuriate|v|membuat sangat marah|Late trains ___ commuters.
+ingenious|adj|cerdik, penuh akal|The engineer found an ___ way to save water.
+ingenuity|n|kecerdikan|The bridge is a tribute to human ___ and skill.
+ingest|v|menelan|Seabirds ___ plastic by mistake.
+ingrained|adj|mendarah daging|The habit is too deeply ___ to change quickly.
+ingratiate|v|mengambil hati|He tried to ___ himself with the new boss.
+inimical|adj|merugikan, bermusuhan|Such secrecy is ___ to good government.
+inkling|n|firasat samar|I had no ___ of what was coming.
+innate|adj|bawaan lahir|Humans have an ___ ability to learn language.
+innocuous|adj|tidak berbahaya|The remark seemed ___ at the time.
+innuendo|n|sindiran tersirat|The article was full of ___ about her past.
+innumerable|adj|tak terhitung|There are ___ stars in the night sky.
+inquisitive|adj|ingin tahu|The ___ child asked a hundred questions.
+inroad|n|terobosan|The firm has made an ___ into the Asian market.
+insatiable|adj|tak terpuaskan|She has an ___ curiosity about the world.
+inseparable|adj|tak terpisahkan|The twins were ___ as children.
+insidious|adj|berbahaya secara diam-diam|Debt can have an ___ effect on health.
+insinuate|v|menyindir, menyiratkan|Are you trying to ___ that I lied?
+insolvent|adj|bangkrut|The builder was declared ___ in March.
+insomnia|n|insomnia|Stress is a common cause of ___ in adults.
+instigate|v|menghasut, memprakarsai|The union threatened to ___ a strike.
+instil/instill|v|menanamkan|Good coaches ___ confidence in young players.
+insuperable|adj|tak teratasi|The cost is not an ___ barrier.
+insurmountable|adj|tak teratasi|The cost is not an ___ obstacle.
+interject|v|menyela|Allow me to ___ a word of caution.
+interloper|n|penyelundup, orang luar|The villagers treated him as an ___ for years.
+interlude|n|selingan|There was a short musical ___ between the acts.
+intermediary|n|perantara|A lawyer acted as ___ between the families.
+interminable|adj|tak berkesudahan|The meeting seemed ___ to those present.
+intoxicate|v|memabukkan|Success can ___ a young leader.
+intractable|adj|sulit diatasi|Housing remains an ___ problem.
+intrepid|adj|pemberani|The ___ travellers crossed the pass in winter.
+inundate|v|membanjiri|Requests for tickets ___ the office each spring.
+invalid|adj|tidak sah|The ticket is ___ after six o'clock.
+inveigh|v|mengecam keras|Preachers ___ against greed.
+invigorate|v|menyegarkan|Cold swims ___ the body.
+irate|adj|berang|An ___ customer demanded a refund.
+irk|v|menjengkelkan|Small delays ___ him more than large ones.
+irrevocable|adj|tidak dapat ditarik kembali|Signing the contract is an ___ step.
+itinerary|n|rencana perjalanan|The ___ includes three days in Rome.
+jaded|adj|jenuh|Even ___ critics enjoyed the play.
+jargon|n|jargon|The report is full of legal ___ and hard to read.
+jaunty|adj|riang dan percaya diri|He wore his hat at a ___ angle.
+jeopardize/jeopardise|v|membahayakan|Further delays could ___ the whole project.
+jibe|n|ejekan|She ignored the ___ about her accent.
+jocular|adj|jenaka|He replied in a ___ tone.
+jostle|v|berdesakan|Reporters ___ for a place at the front.
+jubilant|adj|bersorak gembira|The fans were ___ after the final whistle.
+jubilee|n|yubileum|The school celebrates its ___ next year.
+judicious|adj|bijak, penuh pertimbangan|A ___ use of colour improves the chart.
+juncture|n|titik waktu genting|At this ___ a change of plan would be costly.
+juxtapose|v|menyandingkan|The artist likes to ___ old photographs with new ones.
+kernel|n|inti|There is a ___ of truth in the rumour.
+kindle|v|menyalakan, membangkitkan|A good teacher can ___ a love of reading.
+kindred|adj|sejenis, sekerabat|The two writers were ___ spirits.
+knack|n|kepandaian khusus|He has a ___ for fixing old clocks.
+laborious|adj|berat dan lama|Copying the records by hand was a ___ task.
+labyrinth|n|labirin|The old town is a ___ of narrow lanes.
+lacklustre/lackluster|adj|hambar, tanpa greget|The team gave a ___ performance.
+lampoon|v|mengolok lewat sindiran|Cartoonists ___ every new leader.
+languid|adj|lesu, lamban|They spent a ___ afternoon by the river.
+languish|v|merana, terbengkalai|Many good ideas ___ for lack of funds.
+laud|v|memuji|Critics ___ the film for its honesty.
+lax|adj|longgar|Security at the port was ___ for years.
+legible|adj|terbaca|Please make sure your address is ___ on the form.
+lenient|adj|lunak|The judge was ___ with first offenders.
+lionize/lionise|v|mengelu-elukan|Papers ___ the young champion.
+litany|n|deretan panjang (keluhan)|The report is a ___ of missed chances.
+lithe|adj|lentur gemulai|The dancer has a ___ body.
+livelihood|n|mata pencaharian|Fishing is the ___ of the whole village.
+livid|adj|sangat marah|The coach was ___ after the defeat.
+lofty|adj|luhur, menjulang|The party has ___ ideals but few plans.
+longevity|n|umur panjang|Diet plays a part in ___ and health.
+loophole|n|celah hukum|The firm used a ___ to avoid the tax.
+lucid|adj|jernih, mudah dipahami|The guide gives a ___ account of the law.
+lull|n|masa tenang|There was a brief ___ in the fighting.
+lurid|adj|seram mencolok|The paper printed ___ details of the crime.
+magnate|n|taipan|A shipping ___ bought the island.
+majestic|adj|megah, agung|The ___ peaks rise above the clouds.
+malaise|n|rasa tidak enak, kelesuan|There is a general ___ in the industry.
+malevolent|adj|berniat jahat|He gave her a ___ stare.
+malfunction|n|kerusakan fungsi|A ___ in the pump stopped the plant.
+malice|n|niat jahat|He spoke without ___ towards his rival.
+malicious|adj|berniat jahat|Someone spread a ___ rumour about her.
+malnutrition|n|kurang gizi|Many children in the camp suffer from ___ and fever.
+manifesto|n|manifesto|The party published its ___ a month before the vote.
+mar|v|merusak, menodai|One error should not ___ a fine career.
+maverick|n|orang yang berjalan sendiri|The senator is a ___ who votes as he likes.
+maxim|n|pepatah|His ___ was never to borrow.
+meagre/meager|adj|sangat sedikit|They live on a ___ income.
+meander|v|berkelok-kelok|The river begins to ___ across the plain.
+meddle|v|ikut campur|Outsiders should not ___ in a family quarrel.
+mediocre|adj|biasa-biasa saja|The food was ___ and overpriced.
+meek|adj|lemah lembut, penurut|She is too ___ to complain.
+mercenary|n|tentara bayaran|The king hired a ___ army from abroad.
+metropolis|n|kota metropolitan|The fishing village grew into a ___ of ten million.
+mettle|n|keberanian, ketabahan|The final will test the team's ___ to the full.
+microbe|n|mikroba|A single ___ can multiply into millions overnight.
+mire|v|menjerumuskan (dalam masalah)|Scandals ___ the project in delay.
+misconception|n|salah paham|It is a common ___ that bats are blind.
+misfortune|n|kemalangan|He had the ___ to lose his job twice.
+misgiving|n|keraguan, waswas|I had one serious ___ about the plan.
+misguided|adj|keliru arah|It was a ___ attempt to help.
+mishap|n|kecelakaan kecil|The trip passed without ___ of any kind.
+misnomer|n|sebutan keliru|"Fast food" is a ___ at this café.
+misplace|v|salah menaruh|I often ___ my glasses.

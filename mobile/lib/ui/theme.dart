@@ -40,12 +40,13 @@ class Pal {
     gold: Color(0xFF9A7B2C),
     good: Color(0xFF2F5D3A),
     bad: Color(0xFF8E1B16),
-    // tanah, vert, gules, azure, purpure, sable
+    // tanah, vert, gules, azure, murrey, purpure, sable
     tinctures: [
       Color(0xFF6B4F3A),
       Color(0xFF2F5D3A),
       Color(0xFF8E1B16),
       Color(0xFF1F3F73),
+      Color(0xFF6B2440),
       Color(0xFF5A2A6B),
       Color(0xFF1C1B19),
     ],
@@ -69,6 +70,7 @@ class Pal {
       Color(0xFF8FBF96),
       Color(0xFFE39A91),
       Color(0xFF9DB9EA),
+      Color(0xFFE8AAC4),
       Color(0xFFCDA6DE),
       Color(0xFFD9B861),
     ],
@@ -157,7 +159,7 @@ class Dur {
 }
 
 /// the titles are English in every language
-const rankNames = ['Peasant', 'Squire', 'Knight', 'Baron', 'Duke', 'King'];
+const rankNames = ['Peasant', 'Squire', 'Knight', 'Baron', 'Count', 'Duke', 'King'];
 
 /// how the app speaks to each title: plain to a farmer, with ceremony to a king
 String rankGreeting(int rank) => [
@@ -186,6 +188,12 @@ String rankGreeting(int rank) => [
     'La salle t’attend, mon seigneur Baron.',
   ),
   tr(
+    'Benteng perbatasan menantimu, Tuan Count.',
+    'The march fort awaits you, my lord Count.',
+    'La fortaleza de la marca te espera, mi señor Count.',
+    'La forteresse de la marche t’attend, mon seigneur Count.',
+  ),
+  tr(
     'Istana sudah siap, Yang Mulia.',
     'The palace is ready, Your Grace.',
     'El palacio está listo, Vuestra Gracia.',
@@ -197,4 +205,4 @@ String rankGreeting(int rank) => [
     'El trono espera tu palabra, Majestad.',
     'Le trône attend ta parole, Majesté.',
   ),
-][rank.clamp(0, 5)];
+][rank.clamp(0, 6)];

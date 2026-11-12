@@ -33,7 +33,7 @@ void main() {
       final extra = Deck.parse(File('assets/deck/$b.txt').readAsStringSync());
       expect(extra.length, greaterThan(450), reason: b);
       for (final w in extra) {
-        expect(w.tier, inInclusiveRange(1, 5), reason: w.id);
+        expect(w.tier, inInclusiveRange(1, Deck.tiers), reason: w.id);
         expect(ids.contains(w.id), isFalse, reason: '${w.id} is already in the core');
       }
     }
@@ -54,12 +54,20 @@ void main() {
       expect(d, isNotNull, reason: '${w.id} has no definition');
       expect(d!.length, greaterThan(2), reason: w.id);
       for (final form in w.forms) {
-        expect(RegExp('\\b$form\\b', caseSensitive: false).hasMatch(d), isFalse, reason: 'the definition of ${w.id} uses the word itself');
+        expect(
+          RegExp('\\b$form\\b', caseSensitive: false).hasMatch(d),
+          isFalse,
+          reason: 'the definition of ${w.id} uses the word itself',
+        );
       }
     }
     for (final c in Deck.parseCollocs(File('assets/deck/collocations.txt').readAsStringSync())) {
       expect(c.def, isNotEmpty, reason: c.id);
-      expect(RegExp('\\b${c.correct}\\b').hasMatch(c.def), isFalse, reason: '${c.id}: the English meaning gives the answer away');
+      expect(
+        RegExp('\\b${c.correct}\\b').hasMatch(c.def),
+        isFalse,
+        reason: '${c.id}: the English meaning gives the answer away',
+      );
     }
   });
 
@@ -103,7 +111,9 @@ void formsAndChips() {
     final collocs = Deck.parseCollocs(File('assets/deck/collocations.txt').readAsStringSync());
     for (final l in ['es', 'fr']) {
       final m = <String, String>{};
-      for (final f in Directory('assets/deck/$l').listSync().whereType<File>().where((f) => f.path.endsWith('.txt') && !f.path.endsWith('collocations.txt'))) {
+      for (final f in Directory(
+        'assets/deck/$l',
+      ).listSync().whereType<File>().where((f) => f.path.endsWith('.txt') && !f.path.endsWith('collocations.txt'))) {
         m.addAll(Deck.parseDefs(f.readAsStringSync()));
       }
       for (final w in all) {
@@ -116,7 +126,12 @@ void formsAndChips() {
     }
     glosses['tide'] = ['marea', 'marée'];
     const w = Word('tide', ['tide'], 'n', 'pasang surut', 'The ___ came in.', 1, [], 'the rise and fall of the sea');
-    for (final (code, want) in const [('id', 'pasang surut'), ('en', 'the rise and fall of the sea'), ('es', 'marea'), ('fr', 'marée')]) {
+    for (final (code, want) in const [
+      ('id', 'pasang surut'),
+      ('en', 'the rise and fall of the sea'),
+      ('es', 'marea'),
+      ('fr', 'marée'),
+    ]) {
       lang.code = code;
       expect(w.gloss, want, reason: code);
     }

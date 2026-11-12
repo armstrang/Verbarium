@@ -54,9 +54,9 @@ class _GrainPainter extends CustomPainter {
       canvas.drawLine(p, p + Offset(cos(a) * len, sin(a) * len), fibre);
     }
     // the page dresses up with the title: a farmer's page is bare, a knight's has a ruled margin in his colour,
-    // a baron's is ruled in ink, a duke's twice, a king's twice in gold
+    // a baron's is ruled in ink, a count's and a duke's twice, a king's twice in gold
     if (rank >= 2) {
-      final c = rank == 5
+      final c = rank == 6
           ? pal.gold
           : (rank == 2 ? pal.tincture(2).withValues(alpha: 0.55) : pal.ink.withValues(alpha: 0.7));
       final line = Paint()
@@ -349,14 +349,17 @@ class ShieldPainter extends CustomPainter {
         canvas.drawPath(p, c);
       case 3: // pale
         canvas.drawRect(Rect.fromLTWH(w * 0.5 - band * 0.7, 0, band * 1.4, h), c);
-      case 4: // saltire
+      case 4: // two bars, the Count's
+        canvas.drawRect(Rect.fromLTWH(0, h * 0.3, w, band * 0.8), c);
+        canvas.drawRect(Rect.fromLTWH(0, h * 0.3 + band * 1.5, w, band * 0.8), c);
+      case 5: // saltire
         final s = Paint()
           ..color = charge
           ..strokeWidth = band * 0.95
           ..style = PaintingStyle.stroke;
         canvas.drawLine(Offset(0, h * 0.02), Offset(w, h * 0.82), s);
         canvas.drawLine(Offset(w, h * 0.02), Offset(0, h * 0.82), s);
-      case 5: // crown
+      case 6: // crown
         final g = Paint()..color = gold ?? charge;
         final top = h * 0.26, base = h * 0.56, l = w * 0.22, r = w * 0.78;
         final p = Path()
@@ -373,7 +376,7 @@ class ShieldPainter extends CustomPainter {
     }
     canvas.restore();
     canvas.drawPath(path, stroke);
-    if (rank == 5 && gold != null) {
+    if (rank == 6 && gold != null) {
       canvas.drawPath(
         path,
         Paint()

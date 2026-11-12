@@ -4,504 +4,504 @@
 1|programme|n|program, acara|The training ___ lasts six weeks.
 1|behavior/behaviour|n|perilaku|The study looked at the ___ of young drivers.
 1|center/centre|n|pusat|The sports ___ is open until ten at night.
-1|leisure|n|waktu luang|People have less ___ time than they did ten years ago.
+2|leisure|n|waktu luang|People have less ___ time than they did ten years ago.
 1|traffic|n|lalu lintas|Heavy ___ makes the journey twice as long.
 1|rubbish|n|sampah|The council collects ___ twice a week.
-1|housing|n|perumahan|Cheap ___ is hard to find in the capital.
+3|housing|n|perumahan|Cheap ___ is hard to find in the capital.
 1|crime|n|kejahatan|Street lighting can reduce ___ at night.
 1|diet|n|pola makan|A balanced ___ includes fresh vegetables.
 1|travel|v|bepergian|More people ___ abroad for work than before.
-1|graph|n|grafik|The ___ shows sales over five years.
-1|percentage|n|persentase|The ___ of women in work rose steadily.
+3|graph|n|grafik|The ___ shows sales over five years.
+2|percentage|n|persentase|The ___ of women in work rose steadily.
 1|rise|v|naik|House prices ___ faster in cities than in villages.
 1|fall|v|turun|Sales usually ___ in the first month of the year.
-2|commute|v|pulang-pergi kerja|Many workers ___ more than an hour each day.
-2|infrastructure|n|prasarana|Good ___ attracts new businesses to a town.
+3|commute|v|pulang-pergi kerja|Many workers ___ more than an hour each day.
+3|infrastructure|n|prasarana|Good ___ attracts new businesses to a town.
 2|unemployment|n|pengangguran|Youth ___ is highest in the north.
-2|obesity|n|obesitas|Childhood ___ is linked to sugary drinks.
-2|congestion|n|kemacetan|Road ___ costs the city millions each year.
-2|renewable|adj|terbarukan|Wind is a ___ source of energy.
-2|emission|n|emisi|Each ___ of carbon adds to global warming.
-2|recycle|v|mendaur ulang|Most households ___ paper and glass.
-2|fluctuation|n|naik turun, fluktuasi|There was a slight ___ in prices during spring.
-2|peak|n|puncak|Visitor numbers reached a ___ in August.
-2|plateau|n|masa mendatar|After a sharp rise, sales reached a ___ in 2015.
-2|plummet|v|anjlok|Prices ___ whenever supply doubles.
-2|soar|v|melonjak|Rents ___ when a new station opens.
-2|dwelling|n|tempat tinggal, hunian|Each ___ in the block has its own garden.
-2|pedestrian|n|pejalan kaki|The bridge is open to every ___ and cyclist.
-2|curriculum|n|kurikulum|Art should stay in the school ___ for all ages.
-2|drawback|n|kekurangan, kelemahan|The main ___ of the plan is its cost.
-2|outskirts|n|pinggiran kota|New estates are built on the ___ of the city.
-3|urbanization/urbanisation|n|urbanisasi|Rapid ___ puts pressure on water supplies.
+3|obesity|n|obesitas|Childhood ___ is linked to sugary drinks.
+3|congestion|n|kemacetan|Road ___ costs the city millions each year.
+4|renewable|adj|terbarukan|Wind is a ___ source of energy.
+3|emission|n|emisi|Each ___ of carbon adds to global warming.
+1|recycle|v|mendaur ulang|Most households ___ paper and glass.
+3|fluctuation|n|naik turun, fluktuasi|There was a slight ___ in prices during spring.
+4|peak|n|puncak|Visitor numbers reached a ___ in August.
+4|plateau|n|masa mendatar|After a sharp rise, sales reached a ___ in 2015.
+5|plummet|v|anjlok|Prices ___ whenever supply doubles.
+4|soar|v|melonjak|Rents ___ when a new station opens.
+3|dwelling|n|tempat tinggal, hunian|Each ___ in the block has its own garden.
+4|pedestrian|n|pejalan kaki|The bridge is open to every ___ and cyclist.
+3|curriculum|n|kurikulum|Art should stay in the school ___ for all ages.
+4|drawback|n|kekurangan, kelemahan|The main ___ of the plan is its cost.
+4|outskirts|n|pinggiran kota|New estates are built on the ___ of the city.
+4|urbanization/urbanisation|n|urbanisasi|Rapid ___ puts pressure on water supplies.
 3|globalization/globalisation|n|globalisasi|Critics say ___ harms small local producers.
-3|sedentary|adj|kurang gerak|A ___ lifestyle raises the risk of heart disease.
-3|deforestation|n|penggundulan hutan|The report links ___ to the loss of rare species.
-3|biodiversity|n|keanekaragaman hayati|Wetlands are rich in ___ and need protection.
-3|demographic|adj|demografis, kependudukan|The country faces a ___ shift toward older citizens.
+5|sedentary|adj|kurang gerak|A ___ lifestyle raises the risk of heart disease.
+4|deforestation|n|penggundulan hutan|The report links ___ to the loss of rare species.
+5|biodiversity|n|keanekaragaman hayati|Wetlands are rich in ___ and need protection.
+4|demographic|adj|demografis, kependudukan|The country faces a ___ shift toward older citizens.
 3|affordable|adj|terjangkau|Young families need ___ homes near their work.
-3|deterrent|n|penangkal, pencegah|Heavy fines act as a ___ to careless driving.
-3|rehabilitation|n|rehabilitasi|Prisons should focus on ___ rather than punishment.
-3|consumerism|n|konsumerisme|Advertising feeds the growth of ___ among teenagers.
-3|levy|n|pungutan, retribusi|The council introduced a ___ on plastic bags.
+4|deterrent|n|penangkal, pencegah|Heavy fines act as a ___ to careless driving.
+4|rehabilitation|n|rehabilitasi|Prisons should focus on ___ rather than punishment.
+4|consumerism|n|konsumerisme|Advertising feeds the growth of ___ among teenagers.
+4|levy|n|pungutan, retribusi|The council introduced a ___ on plastic bags.
 1|lorry|n|truk|A ___ blocked the narrow street for an hour.
 1|timetable|n|jadwal|The bus ___ changes at the weekend.
-1|motorway|n|jalan tol|There was an accident on the ___ this morning.
+3|motorway|n|jalan tol|There was an accident on the ___ this morning.
 1|postcode|n|kode pos|Write your ___ at the end of the address.
-1|fortnight|n|dua minggu|We spent a ___ by the sea in August.
+2|fortnight|n|dua minggu|We spent a ___ by the sea in August.
 1|cinema|n|bioskop|The ___ shows foreign films on Mondays.
 1|trainers|n|sepatu olahraga|He wore jeans and white ___ to the party.
-1|tram|n|trem|A ___ runs from the station to the beach.
+5|tram|n|trem|A ___ runs from the station to the beach.
 1|underground|n|kereta bawah tanah|The ___ is the fastest way across the city.
-1|roundabout|n|bundaran|Take the second exit at the ___ by the park.
-1|pensioner|n|pensiunan|The bus is free for every ___ in the city.
+5|roundabout|n|bundaran|Take the second exit at the ___ by the park.
+3|pensioner|n|pensiunan|The bus is free for every ___ in the city.
 1|teenager|n|remaja|The average ___ spends five hours a day online.
 1|double|v|berlipat dua|Sales are expected to ___ within five years.
-1|triple|v|berlipat tiga|The number of visitors may ___ by 2030.
-1|halve|v|berkurang separuh|The city plans to ___ its waste in a decade.
-1|steadily|adv|terus-menerus|The figure rose ___ over the period.
-1|sharply|adv|dengan tajam|Prices fell ___ in the second quarter.
-2|upward|adj|naik|The graph shows an ___ trend in car ownership.
-2|downward|adj|turun|There was a ___ trend in smoking among men.
-2|dramatically|adv|secara drastis|The number of students rose ___ after 2010.
-2|marginally|adv|sedikit|Spending on books increased only ___ last year.
-2|stabilize/stabilise|v|menjadi stabil|The rate is expected to ___ at around five percent.
-2|twofold|adj|dua kali lipat|There was a ___ increase in exports.
+4|triple|v|berlipat tiga|The number of visitors may ___ by 2030.
+4|halve|v|berkurang separuh|The city plans to ___ its waste in a decade.
+3|steadily|adv|terus-menerus|The figure rose ___ over the period.
+2|sharply|adv|dengan tajam|Prices fell ___ in the second quarter.
+3|upward|adj|naik|The graph shows an ___ trend in car ownership.
+3|downward|adj|turun|There was a ___ trend in smoking among men.
+3|dramatically|adv|secara drastis|The number of students rose ___ after 2010.
+4|marginally|adv|sedikit|Spending on books increased only ___ last year.
+4|stabilize/stabilise|v|menjadi stabil|The rate is expected to ___ at around five percent.
+4|twofold|adj|dua kali lipat|There was a ___ increase in exports.
 2|threefold|adj|tiga kali lipat|The town saw a ___ rise in rents.
-2|quadruple|v|berlipat empat|Output could ___ if the new plant opens.
-2|dip|n|penurunan kecil|There was a slight ___ in sales in March.
-2|slump|n|kemerosotan tajam|The ___ in house prices lasted three years.
-2|upturn|n|kenaikan kembali|An ___ in tourism created new jobs.
-2|trough|n|titik terendah (grafik)|Sales hit a ___ in January before recovering.
-2|respectively|adv|masing-masing|The two towns grew by five and nine percent ___ over the decade.
-2|childcare|n|pengasuhan anak|The cost of ___ keeps many parents at home.
-2|retirement|n|masa pensiun|Many people take up a new hobby in ___ these days.
-2|overpopulation|n|kelebihan penduduk|___ puts pressure on housing and water.
-2|overcrowding|n|kepadatan berlebih|___ in prisons is a growing problem.
-2|homelessness|n|tunawisma|The charity works to reduce ___ among young people.
-2|vandalism|n|perusakan|The bus shelter was closed because of ___ last month.
-2|offender|n|pelanggar hukum|A young ___ needs training more than punishment.
-2|imprisonment|n|hukuman penjara|The judge chose a fine rather than ___ for a first offence.
-2|sustainability|n|keberlanjutan|The firm publishes a report on ___ each year.
-2|landfill|n|tempat pembuangan akhir|Most plastic still ends up in ___ or the sea.
-2|greenhouse|n|rumah kaca|Carbon dioxide is the main ___ gas.
-2|footprint|n|jejak|Flying less will reduce your carbon ___ more than anything.
-2|pollutant|n|zat pencemar|The main ___ in the river is waste from farms.
-2|automation|n|otomatisasi|___ has replaced many jobs on the factory floor.
-2|outsourcing|n|alih daya|___ moved thousands of jobs abroad.
-2|multinational|adj|multinasional|A ___ company bought the local brewery.
-2|advertising|n|periklanan|Children are an easy target for ___ on television.
-2|materialism|n|materialisme|Some blame ___ for the decline of community life.
-2|multicultural|adj|multibudaya|London is a ___ city with hundreds of languages.
-2|immigration|n|imigrasi|___ has changed the face of the city.
-2|discrimination|n|diskriminasi|The law forbids ___ on grounds of age.
-2|numeracy|n|kemampuan berhitung|The school tests literacy and ___ each year.
-2|vocational|adj|kejuruan|He chose ___ training instead of university.
-2|apprenticeship|n|masa magang|She began an ___ with an electrician at sixteen.
-2|truancy|n|kebiasaan membolos|The school reduced ___ by calling parents each morning.
-2|vaccination|n|vaksinasi|___ has almost ended the disease.
-2|preventable|adj|dapat dicegah|Most of these deaths are ___ with clean water.
-2|ageing|adj|menua|An ___ population needs more doctors.
-2|healthcare|n|layanan kesehatan|Free ___ is funded by taxes.
-2|wellbeing|n|kesejahteraan|Green spaces improve the ___ of city dwellers.
-2|nutritious|adj|bergizi|Schools should offer a ___ lunch.
-2|taxpayer|n|pembayar pajak|The ___ should not pay for the bank's mistakes.
-3|tertiary|adj|tingkat ketiga (pendidikan tinggi)|Half of young adults now enter ___ education.
-3|desertification|n|penggurunan|Overgrazing speeds up ___ at the edge of the Sahara.
-3|overfishing|n|penangkapan ikan berlebihan|___ has emptied the bay of cod.
-3|telecommuting|n|kerja jarak jauh|___ cuts traffic but can isolate staff.
+5|quadruple|v|berlipat empat|Output could ___ if the new plant opens.
+4|dip|n|penurunan kecil|There was a slight ___ in sales in March.
+3|slump|n|kemerosotan tajam|The ___ in house prices lasted three years.
+5|upturn|n|kenaikan kembali|An ___ in tourism created new jobs.
+5|trough|n|titik terendah (grafik)|Sales hit a ___ in January before recovering.
+4|respectively|adv|masing-masing|The two towns grew by five and nine percent ___ over the decade.
+1|childcare|n|pengasuhan anak|The cost of ___ keeps many parents at home.
+3|retirement|n|masa pensiun|Many people take up a new hobby in ___ these days.
+1|overpopulation|n|kelebihan penduduk|___ puts pressure on housing and water.
+4|overcrowding|n|kepadatan berlebih|___ in prisons is a growing problem.
+3|homelessness|n|tunawisma|The charity works to reduce ___ among young people.
+3|vandalism|n|perusakan|The bus shelter was closed because of ___ last month.
+3|offender|n|pelanggar hukum|A young ___ needs training more than punishment.
+4|imprisonment|n|hukuman penjara|The judge chose a fine rather than ___ for a first offence.
+4|sustainability|n|keberlanjutan|The firm publishes a report on ___ each year.
+1|landfill|n|tempat pembuangan akhir|Most plastic still ends up in ___ or the sea.
+3|greenhouse|n|rumah kaca|Carbon dioxide is the main ___ gas.
+1|footprint|n|jejak|Flying less will reduce your carbon ___ more than anything.
+3|pollutant|n|zat pencemar|The main ___ in the river is waste from farms.
+3|automation|n|otomatisasi|___ has replaced many jobs on the factory floor.
+3|outsourcing|n|alih daya|___ moved thousands of jobs abroad.
+4|multinational|adj|multinasional|A ___ company bought the local brewery.
+1|advertising|n|periklanan|Children are an easy target for ___ on television.
+3|materialism|n|materialisme|Some blame ___ for the decline of community life.
+4|multicultural|adj|multibudaya|London is a ___ city with hundreds of languages.
+3|immigration|n|imigrasi|___ has changed the face of the city.
+4|discrimination|n|diskriminasi|The law forbids ___ on grounds of age.
+3|numeracy|n|kemampuan berhitung|The school tests literacy and ___ each year.
+3|vocational|adj|kejuruan|He chose ___ training instead of university.
+3|apprenticeship|n|masa magang|She began an ___ with an electrician at sixteen.
+3|truancy|n|kebiasaan membolos|The school reduced ___ by calling parents each morning.
+3|vaccination|n|vaksinasi|___ has almost ended the disease.
+1|preventable|adj|dapat dicegah|Most of these deaths are ___ with clean water.
+1|ageing|adj|menua|An ___ population needs more doctors.
+3|healthcare|n|layanan kesehatan|Free ___ is funded by taxes.
+3|wellbeing|n|kesejahteraan|Green spaces improve the ___ of city dwellers.
+5|nutritious|adj|bergizi|Schools should offer a ___ lunch.
+4|taxpayer|n|pembayar pajak|The ___ should not pay for the bank's mistakes.
+5|tertiary|adj|tingkat ketiga (pendidikan tinggi)|Half of young adults now enter ___ education.
+4|desertification|n|penggurunan|Overgrazing speeds up ___ at the edge of the Sahara.
+1|overfishing|n|penangkapan ikan berlebihan|___ has emptied the bay of cod.
+4|telecommuting|n|kerja jarak jauh|___ cuts traffic but can isolate staff.
 3|entrepreneurship|n|kewirausahaan|The college runs a course in ___ for graduates.
-3|assimilation|n|pembauran|The ___ of newcomers takes a generation.
-3|malnourished|adj|kurang gizi|One child in five in the camp is ___ and weak.
-3|subsidize/subsidise|v|menyubsidi|Governments ___ public transport to cut car use.
+4|assimilation|n|pembauran|The ___ of newcomers takes a generation.
+4|malnourished|adj|kurang gizi|One child in five in the camp is ___ and weak.
+4|subsidize/subsidise|v|menyubsidi|Governments ___ public transport to cut car use.
 3|privatize/privatise|v|memprivatisasi|The plan to ___ the railways divided the country.
-3|nationalize/nationalise|v|menasionalisasi|The party promised to ___ the water companies.
-3|conservationist|n|pelestari alam|A ___ counted the turtles on the beach each night.
-3|reoffend|v|mengulangi kejahatan|Prisoners who learn a trade are less likely to ___ after release.
-3|additive|n|zat aditif|The drink contains no artificial ___ or colour.
-1|advert|n|iklan|The ___ for the new phone was on every bus.
+4|nationalize/nationalise|v|menasionalisasi|The party promised to ___ the water companies.
+4|conservationist|n|pelestari alam|A ___ counted the turtles on the beach each night.
+4|reoffend|v|mengulangi kejahatan|Prisoners who learn a trade are less likely to ___ after release.
+4|additive|n|zat aditif|The drink contains no artificial ___ or colour.
+2|advert|n|iklan|The ___ for the new phone was on every bus.
 1|bicycle|n|sepeda|More people go to work by ___ in Dutch cities.
-1|canteen|n|kantin|Pupils eat lunch in the school ___.
+5|canteen|n|kantin|Pupils eat lunch in the school ___.
 1|fridge|n|kulkas|Keep the milk in the ___.
 1|parking|n|parkir|Car ___ in the city centre is expensive.
 1|playground|n|taman bermain|The children ran to the ___.
 1|supermarket|n|supermarket|I buy most of my food at the ___.
 1|tourism|n|pariwisata|Seasonal ___ is the island's main industry.
-1|slightly|adv|sedikit|The figure fell ___ in the second quarter.
-1|souvenir|n|cendera mata|Tourists buy a ___ to remember their trip.
-1|barbecue|n|barbekyu|We had a ___ in the garden.
+2|slightly|adv|sedikit|The figure fell ___ in the second quarter.
+4|souvenir|n|cendera mata|Tourists buy a ___ to remember their trip.
+4|barbecue|n|barbekyu|We had a ___ in the garden.
 1|biscuit|n|biskuit|She had tea and a ___.
 1|chips|n|kentang goreng|We had fish and ___ by the sea.
 1|cooker|n|kompor|Put the pan on the ___.
-1|crisps|n|keripik kentang|A packet of ___ is not a healthy lunch.
-1|dishwasher|n|mesin cuci piring|Load the ___ after dinner.
-1|duvet|n|selimut tebal|I need a warmer ___ for winter.
+2|crisps|n|keripik kentang|A packet of ___ is not a healthy lunch.
+2|dishwasher|n|mesin cuci piring|Load the ___ after dinner.
+2|duvet|n|selimut tebal|I need a warmer ___ for winter.
 1|gardening|n|berkebun|Weekend ___ is a popular hobby among retired people.
-1|kindergarten|n|taman kanak-kanak|My daughter starts ___ next year.
-1|laundry|n|cucian|I do the ___ on Sundays.
+5|kindergarten|n|taman kanak-kanak|My daughter starts ___ next year.
+3|laundry|n|cucian|I do the ___ on Sundays.
 1|mayor|n|wali kota|The ___ opened the new park.
 1|pub|n|pub, kedai minum|They met friends at the local ___.
 1|seaside|n|tepi pantai|We spent the summer at the ___.
 1|takeaway|n|makanan bawa pulang|We ordered a Chinese ___.
-1|toddler|n|balita|The ___ took his first steps.
-1|torch|n|senter|Take a ___ in case the power fails.
-1|trolley|n|troli|Push the ___ to the checkout.
+2|toddler|n|balita|The ___ took his first steps.
+4|torch|n|senter|Take a ___ in case the power fails.
+4|trolley|n|troli|Push the ___ to the checkout.
 1|weekday|n|hari kerja|The museum is quiet on a ___.
 1|traveling/travelling|n|perjalanan, bepergian|Many believe ___ broadens the mind.
 1|smartphone|n|ponsel pintar|Almost every teenager owns a ___.
-2|banking|n|perbankan|Online ___ has closed many local branches.
-2|bungalow|n|rumah satu lantai|They sold the family house and moved into a ___.
-2|calorie|n|kalori|A can of cola contains more than one hundred and forty ___.|=calories
-2|careers|n|karier (layanan bimbingan)|The ___ adviser helped me choose a course.
-2|carer|n|perawat keluarga|She is the full-time ___ for her elderly father.
-2|cheque|n|cek|Few people still pay by ___.
-2|commuter|n|penglaju|Every ___ was late because of the strike.
-2|convenience|n|kemudahan|People shop online for ___.
-2|cyclist|n|pesepeda|Each ___ must wear a helmet.
-2|disposable|adj|sekali pakai|Millions of ___ cups end up in landfill.
-2|enroll/enrol|v|mendaftar|You can ___ on the course online.
-2|flatmate|n|teman satu flat|My ___ pays half the rent.
-2|funding|n|pendanaan|The project lost its government ___.
-2|graffiti|n|grafiti, coretan dinding|The wall was covered in ___.
+1|banking|n|perbankan|Online ___ has closed many local branches.
+4|bungalow|n|rumah satu lantai|They sold the family house and moved into a ___.
+3|calorie|n|kalori|A can of cola contains more than one hundred and forty ___.|=calories
+1|careers|n|karier (layanan bimbingan)|The ___ adviser helped me choose a course.
+1|carer|n|perawat keluarga|She is the full-time ___ for her elderly father.
+3|cheque|n|cek|Few people still pay by ___.
+3|commuter|n|penglaju|Every ___ was late because of the strike.
+3|convenience|n|kemudahan|People shop online for ___.
+3|cyclist|n|pesepeda|Each ___ must wear a helmet.
+3|disposable|adj|sekali pakai|Millions of ___ cups end up in landfill.
+3|enroll/enrol|v|mendaftar|You can ___ on the course online.
+3|flatmate|n|teman satu flat|My ___ pays half the rent.
+3|funding|n|pendanaan|The project lost its government ___.
+5|graffiti|n|grafiti, coretan dinding|The wall was covered in ___.
 2|grocer|n|pedagang bahan makanan|The ___ on the corner sells fresh fruit.
-2|headteacher|n|kepala sekolah|The ___ spoke to the parents.
-2|heatwave|n|gelombang panas|The ___ lasted for two weeks.
-2|internship|n|magang|She did an ___ at a law firm.
-2|lecturer|n|dosen|My ___ marked the essays quickly.
-2|manufacturing|n|manufaktur|Jobs in ___ fell during the decade.
-2|motorist|n|pengendara mobil|Every ___ must pay the toll.
-2|overtime|n|lembur|Nurses often work ___ at weekends.
+1|headteacher|n|kepala sekolah|The ___ spoke to the parents.
+1|heatwave|n|gelombang panas|The ___ lasted for two weeks.
+3|internship|n|magang|She did an ___ at a law firm.
+3|lecturer|n|dosen|My ___ marked the essays quickly.
+3|manufacturing|n|manufaktur|Jobs in ___ fell during the decade.
+4|motorist|n|pengendara mobil|Every ___ must pay the toll.
+1|overtime|n|lembur|Nurses often work ___ at weekends.
 2|packaging|n|kemasan|Too much plastic ___ ends up in the sea.
-2|plumber|n|tukang ledeng|We called a ___ to fix the leak.
-2|rainfall|n|curah hujan|Monthly ___ was highest in November.
+3|plumber|n|tukang ledeng|We called a ___ to fix the leak.
+1|rainfall|n|curah hujan|Monthly ___ was highest in November.
 2|secondary|adj|menengah (sekolah)|She teaches maths at a ___ school.
-2|skyscraper|n|pencakar langit|A new ___ dominates the skyline.
+3|skyscraper|n|pencakar langit|A new ___ dominates the skyline.
 2|spending|n|pengeluaran, belanja|Government ___ on health rose by ten per cent.
-2|terraced|adj|berderet (rumah)|They live in a ___ house in Leeds.
-2|textile|n|tekstil|The ___ industry once employed thousands here.
-2|trainee|n|peserta pelatihan|Each ___ spends a month in every department.
-2|tuition|n|biaya kuliah, les|University ___ fees rose sharply.
-2|wheelchair|n|kursi roda|Every station should have ___ access.
-2|workplace|n|tempat kerja|Stress in the ___ affects health.
+3|terraced|adj|berderet (rumah)|They live in a ___ house in Leeds.
+3|textile|n|tekstil|The ___ industry once employed thousands here.
+3|trainee|n|peserta pelatihan|Each ___ spends a month in every department.
+4|tuition|n|biaya kuliah, les|University ___ fees rose sharply.
+1|wheelchair|n|kursi roda|Every station should have ___ access.
+3|workplace|n|tempat kerja|Stress in the ___ affects health.
 2|approximately|adv|kira-kira, sekitar|In 2010, ___ half of the students walked to school.
-2|declining|adj|menurun|The chart shows a ___ number of farm workers.
-2|rapidly|adv|dengan cepat|Sales of electric cars rose ___ after 2020.
+3|declining|adj|menurun|The chart shows a ___ number of farm workers.
+3|rapidly|adv|dengan cepat|Sales of electric cars rose ___ after 2020.
 2|flooding|n|banjir|Heavy rain caused ___ in low areas.
-2|backpacker|n|pelancong ransel|A ___ can travel cheaply by staying in hostels.
+3|backpacker|n|pelancong ransel|A ___ can travel cheaply by staying in hostels.
 2|marketing|n|pemasaran|Firms spend more on ___ than on research.
-2|arcade|n|pusat permainan, arkade|Teenagers met at the amusement ___.
-2|asthma|n|asma|Air pollution makes ___ worse.
-2|chemist|n|apotek|I bought some cough medicine at the ___.
-2|cosmetics|n|kosmetik|Sales of ___ rose online.
-2|detached|adj|terpisah (rumah)|They bought a ___ house with a big garden.
-2|diesel|n|solar|Older ___ cars produce more pollution.
-2|doorstep|n|ambang pintu|The parcel was left on the ___.
+5|arcade|n|pusat permainan, arkade|Teenagers met at the amusement ___.
+4|asthma|n|asma|Air pollution makes ___ worse.
+4|chemist|n|apotek|I bought some cough medicine at the ___.
+4|cosmetics|n|kosmetik|Sales of ___ rose online.
+3|detached|adj|terpisah (rumah)|They bought a ___ house with a big garden.
+4|diesel|n|solar|Older ___ cars produce more pollution.
+1|doorstep|n|ambang pintu|The parcel was left on the ___.
 2|footpath|n|jalan setapak|A ___ runs along the river.
-2|fundraising|n|penggalangan dana|The school held a ___ event for the library.
-2|hostel|n|asrama, hostel|We stayed in a youth ___ in Paris.
-2|junction|n|persimpangan|Turn left at the next ___.
-2|landline|n|telepon rumah|Few young people still have a ___.
-2|marketplace|n|pasar|The ___ is busy on Saturdays.
-2|nightlife|n|kehidupan malam|The city is famous for its ___.
-2|overweight|adj|kelebihan berat badan|A third of children are ___.
-2|paperwork|n|urusan administrasi|Teachers complain about too much ___.
-2|pollen|n|serbuk sari|High ___ counts make hay fever worse.
-2|postal|adj|pos|Voting by ___ ballot is popular.
-2|preschool|n|prasekolah|Free ___ places help working parents.
-2|savings|n|tabungan|They used their ___ to buy a house.
-2|sickness|n|penyakit|Staff ___ cost the firm thousands.
-2|signpost|n|papan penunjuk jalan|The ___ pointed to the castle.
-2|skateboard|n|papan luncur|He rides his ___ to school.
-2|spa|n|spa|The hotel has a ___ and a pool.
-2|sportswear|n|pakaian olahraga|Sales of ___ rose by twenty per cent.
-2|subway|n|terowongan penyeberangan|Use the ___ to cross the main road.
-2|terminal|n|terminal|Flights to Spain leave from ___ two.
-2|textbook|n|buku pelajaran|Every pupil has a maths ___.
-2|toiletries|n|perlengkapan mandi|Pack your ___ in a small bag.
-2|tracksuit|n|baju olahraga|He wore a ___ to the gym.
-2|unpaid|adj|tidak dibayar|Many young people do ___ work experience.
-2|villager|n|penduduk desa|Every ___ came to the fair.
-2|wardrobe|n|lemari pakaian|Hang your coat in the ___.
-2|whiteboard|n|papan tulis putih|The teacher wrote the date on the ___.
-2|compost|n|kompos|Vegetable peelings can be turned into ___.
-2|ozone|n|ozon|The ___ layer protects us from the sun's rays.
-2|rainforest|n|hutan hujan|The ___ is home to half of all species.
-2|reusable|adj|dapat dipakai ulang|Shoppers bring ___ bags.
-2|offline|adv|luring, tanpa internet|Some people choose to spend weekends ___.
-2|online|adv|daring|Most young people shop ___.
-2|selfie|n|swafoto|Tourists took a ___ in front of the tower.
-2|meter/metre|n|meter|Sea levels could rise by one ___.
-2|liter/litre|n|liter|Petrol costs nearly two pounds a ___.
-2|overcrowded|adj|terlalu padat|Trains are ___ at rush hour.
-2|underpaid|adj|bergaji terlalu rendah|Many carers feel ___.
-2|overpriced|adj|terlalu mahal|Food at the airport is ___.
-2|recovery|n|pemulihan|The graph shows a slow ___ after the crisis.
-2|hike|n|kenaikan tajam|A ___ in rent forced many to move.
-2|noticeable|adj|nyata, kentara|There was a ___ drop in sales in March.
-2|broadband|n|internet pita lebar|Fast ___ is still missing in some villages.
-2|streaming|n|layanan streaming|Music ___ has replaced CDs.
-3|allotment|n|kebun sewaan|My neighbour grows beans on his ___.
-3|arthritis|n|radang sendi|Many older people suffer from ___ in their hands.
-3|bedsit|n|kamar sewa satu ruang|Students often rent a ___ near the university.
-3|biofuel|n|bahan bakar nabati|Some buses now run on ___ made from used oil.
-3|citizenship|n|kewarganegaraan|He applied for British ___ after ten years.
+4|fundraising|n|penggalangan dana|The school held a ___ event for the library.
+5|hostel|n|asrama, hostel|We stayed in a youth ___ in Paris.
+4|junction|n|persimpangan|Turn left at the next ___.
+1|landline|n|telepon rumah|Few young people still have a ___.
+4|marketplace|n|pasar|The ___ is busy on Saturdays.
+1|nightlife|n|kehidupan malam|The city is famous for its ___.
+4|overweight|adj|kelebihan berat badan|A third of children are ___.
+1|paperwork|n|urusan administrasi|Teachers complain about too much ___.
+5|pollen|n|serbuk sari|High ___ counts make hay fever worse.
+3|postal|adj|pos|Voting by ___ ballot is popular.
+3|preschool|n|prasekolah|Free ___ places help working parents.
+3|savings|n|tabungan|They used their ___ to buy a house.
+1|sickness|n|penyakit|Staff ___ cost the firm thousands.
+1|signpost|n|papan penunjuk jalan|The ___ pointed to the castle.
+3|skateboard|n|papan luncur|He rides his ___ to school.
+4|spa|n|spa|The hotel has a ___ and a pool.
+3|sportswear|n|pakaian olahraga|Sales of ___ rose by twenty per cent.
+1|subway|n|terowongan penyeberangan|Use the ___ to cross the main road.
+3|terminal|n|terminal|Flights to Spain leave from ___ two.
+3|textbook|n|buku pelajaran|Every pupil has a maths ___.
+3|toiletries|n|perlengkapan mandi|Pack your ___ in a small bag.
+3|tracksuit|n|baju olahraga|He wore a ___ to the gym.
+3|unpaid|adj|tidak dibayar|Many young people do ___ work experience.
+4|villager|n|penduduk desa|Every ___ came to the fair.
+4|wardrobe|n|lemari pakaian|Hang your coat in the ___.
+1|whiteboard|n|papan tulis putih|The teacher wrote the date on the ___.
+4|compost|n|kompos|Vegetable peelings can be turned into ___.
+3|ozone|n|ozon|The ___ layer protects us from the sun's rays.
+1|rainforest|n|hutan hujan|The ___ is home to half of all species.
+3|reusable|adj|dapat dipakai ulang|Shoppers bring ___ bags.
+1|offline|adv|luring, tanpa internet|Some people choose to spend weekends ___.
+1|online|adv|daring|Most young people shop ___.
+3|selfie|n|swafoto|Tourists took a ___ in front of the tower.
+1|meter/metre|n|meter|Sea levels could rise by one ___.
+3|liter/litre|n|liter|Petrol costs nearly two pounds a ___.
+4|overcrowded|adj|terlalu padat|Trains are ___ at rush hour.
+3|underpaid|adj|bergaji terlalu rendah|Many carers feel ___.
+3|overpriced|adj|terlalu mahal|Food at the airport is ___.
+3|recovery|n|pemulihan|The graph shows a slow ___ after the crisis.
+4|hike|n|kenaikan tajam|A ___ in rent forced many to move.
+1|noticeable|adj|nyata, kentara|There was a ___ drop in sales in March.
+4|broadband|n|internet pita lebar|Fast ___ is still missing in some villages.
+3|streaming|n|layanan streaming|Music ___ has replaced CDs.
+4|allotment|n|kebun sewaan|My neighbour grows beans on his ___.
+4|arthritis|n|radang sendi|Many older people suffer from ___ in their hands.
+4|bedsit|n|kamar sewa satu ruang|Students often rent a ___ near the university.
+4|biofuel|n|bahan bakar nabati|Some buses now run on ___ made from used oil.
+4|citizenship|n|kewarganegaraan|He applied for British ___ after ten years.
 3|civilization/civilisation|n|peradaban|The Romans spread their ___ across Europe.
-3|councillor|n|anggota dewan kota|A local ___ opened the new library.
-3|deprived|adj|miskin, serba kekurangan|Children from ___ areas leave school earlier.
+4|councillor|n|anggota dewan kota|A local ___ opened the new library.
+4|deprived|adj|miskin, serba kekurangan|Children from ___ areas leave school earlier.
 3|diabetes|n|diabetes|Sugary drinks raise the risk of ___.
-3|ecotourism|n|ekowisata|Responsible ___ brings money to protected forests.
-3|greenery|n|tanaman hijau|More ___ makes a city feel calmer.
-3|humanities|n|ilmu humaniora|Fewer students choose the ___ today.
-3|insulation|n|insulasi, peredam panas|Good roof ___ cuts heating bills.
-3|irrigation|n|irigasi|Modern ___ allows crops to grow in dry regions.
+4|ecotourism|n|ekowisata|Responsible ___ brings money to protected forests.
+5|greenery|n|tanaman hijau|More ___ makes a city feel calmer.
+4|humanities|n|ilmu humaniora|Fewer students choose the ___ today.
+4|insulation|n|insulasi, peredam panas|Good roof ___ cuts heating bills.
+4|irrigation|n|irigasi|Modern ___ allows crops to grow in dry regions.
 3|jobseeker|n|pencari kerja|Each ___ meets an adviser every week.
-3|lifelong|adj|seumur hidup|Reading can be a ___ habit.
-3|lifespan|n|rentang hidup|Average ___ has risen in most countries.
-3|maternity|n|bersalin, kehamilan|She is on ___ leave until March.
+4|lifelong|adj|seumur hidup|Reading can be a ___ habit.
+4|lifespan|n|rentang hidup|Average ___ has risen in most countries.
+5|maternity|n|bersalin, kehamilan|She is on ___ leave until March.
 3|offshore|adj|lepas pantai|An ___ wind farm supplies the region.
-3|paramedic|n|paramedis|A ___ arrived within ten minutes.
-3|residential|adj|perumahan, hunian|Lorries are banned from ___ streets.
+5|paramedic|n|paramedis|A ___ arrived within ten minutes.
+4|residential|adj|perumahan, hunian|Lorries are banned from ___ streets.
 3|retailer|n|pengecer|The largest ___ closed fifty stores.
-3|suburban|adj|pinggiran kota|Most ___ families depend on the car.
-3|taxation|n|perpajakan|Higher ___ on fuel could reduce traffic.
-3|transit|n|transit, angkutan|Goods were damaged in ___.
-3|turbine|n|turbin|Each wind ___ powers hundreds of homes.
-3|upbringing|n|pengasuhan|A strict ___ shaped his values.
-3|utilities|n|tagihan utilitas|Rent includes ___ such as gas and water.
-3|similarly|adv|demikian pula|Car use rose in Spain; ___, it grew in Italy.
+4|suburban|adj|pinggiran kota|Most ___ families depend on the car.
+4|taxation|n|perpajakan|Higher ___ on fuel could reduce traffic.
+4|transit|n|transit, angkutan|Goods were damaged in ___.
+4|turbine|n|turbin|Each wind ___ powers hundreds of homes.
+5|upbringing|n|pengasuhan|A strict ___ shaped his values.
+4|utilities|n|tagihan utilitas|Rent includes ___ such as gas and water.
+2|similarly|adv|demikian pula|Car use rose in Spain; ___, it grew in Italy.
 3|consequently|adv|akibatnya|Rents rose sharply; ___, many families moved out.
-3|globalize/globalise|v|mengglobalkan|Firms ___ their supply chains to cut costs.
-3|standardize/standardise|v|menyeragamkan|Schools ___ tests to compare results.
-3|prioritize/prioritise|v|memprioritaskan|Governments must ___ spending on health.
-3|maximize/maximise|v|memaksimalkan|Farmers use chemicals to ___ their yields.
-3|urbanize/urbanise|v|mengotakan|Developing countries ___ rapidly.
-3|industrialize/industrialise|v|mengindustrialisasikan|Britain was the first nation to ___.
-3|specialize/specialise|v|mengkhususkan diri|Many doctors ___ in one area of medicine.
-3|legalize/legalise|v|melegalkan|Some countries have voted to ___ gambling.
-3|punishment|n|hukuman|Harsh ___ does not always prevent crime.
+4|globalize/globalise|v|mengglobalkan|Firms ___ their supply chains to cut costs.
+4|standardize/standardise|v|menyeragamkan|Schools ___ tests to compare results.
+4|prioritize/prioritise|v|memprioritaskan|Governments must ___ spending on health.
+4|maximize/maximise|v|memaksimalkan|Farmers use chemicals to ___ their yields.
+4|urbanize/urbanise|v|mengotakan|Developing countries ___ rapidly.
+4|industrialize/industrialise|v|mengindustrialisasikan|Britain was the first nation to ___.
+2|specialize/specialise|v|mengkhususkan diri|Many doctors ___ in one area of medicine.
+4|legalize/legalise|v|melegalkan|Some countries have voted to ___ gambling.
+2|punishment|n|hukuman|Harsh ___ does not always prevent crime.
 3|addiction|n|kecanduan|Gaming ___ worries many parents.
-3|burnout|n|kelelahan berat (karena kerja)|Long shifts lead to ___ among nurses.
+4|burnout|n|kelelahan berat (karena kerja)|Long shifts lead to ___ among nurses.
 3|commuting|n|perjalanan pulang-pergi kerja|Daily ___ takes over an hour in London.
 3|emissions|n|emisi|Car ___ are the main cause of city smog.
 3|warming|n|pemanasan|Global ___ is melting polar ice.
-3|fertiliser|n|pupuk|Chemical ___ washes into rivers.
-3|preservation|n|pelestarian|The ___ of old buildings costs money.
-3|loyalty|n|kesetiaan|Supermarkets reward customer ___ with points.
-3|affordability|n|keterjangkauan harga|Housing ___ is a problem for young people.
-3|antisocial|adj|antisosial, mengganggu|Typical ___ behaviour includes noise and graffiti.
-3|autism|n|autisme|Early support helps children with ___.
-3|childminder|n|pengasuh anak|A ___ looks after the twins while their parents work.
-3|dentistry|n|kedokteran gigi|She is studying ___ at university.
-3|dietary|adj|berkaitan dengan pola makan|Schools must respect pupils' ___ needs.
-3|exhaustion|n|kelelahan|The runners collapsed from ___.
-3|flyover|n|jalan layang|A new ___ will ease traffic at the junction.
-3|freeway|n|jalan bebas hambatan|Traffic on the ___ moved slowly.
-3|generator|n|generator|The hospital has a backup ___.
-3|gigabyte|n|gigabita|A film needs about two ___ of space.|=gigabytes
-3|handset|n|gagang telepon, ponsel|The new ___ has a larger screen.
+4|fertiliser|n|pupuk|Chemical ___ washes into rivers.
+4|preservation|n|pelestarian|The ___ of old buildings costs money.
+4|loyalty|n|kesetiaan|Supermarkets reward customer ___ with points.
+2|affordability|n|keterjangkauan harga|Housing ___ is a problem for young people.
+4|antisocial|adj|antisosial, mengganggu|Typical ___ behaviour includes noise and graffiti.
+4|autism|n|autisme|Early support helps children with ___.
+4|childminder|n|pengasuh anak|A ___ looks after the twins while their parents work.
+4|dentistry|n|kedokteran gigi|She is studying ___ at university.
+4|dietary|adj|berkaitan dengan pola makan|Schools must respect pupils' ___ needs.
+4|exhaustion|n|kelelahan|The runners collapsed from ___.
+1|flyover|n|jalan layang|A new ___ will ease traffic at the junction.
+5|freeway|n|jalan bebas hambatan|Traffic on the ___ moved slowly.
+4|generator|n|generator|The hospital has a backup ___.
+4|gigabyte|n|gigabita|A film needs about two ___ of space.|=gigabytes
+4|handset|n|gagang telepon, ponsel|The new ___ has a larger screen.
 3|householder|n|pemilik rumah|Every ___ received a letter from the council.
-3|housewife|n|ibu rumah tangga|Fewer women describe themselves as a ___ today.
-3|intercity|adj|antarkota|The ___ train takes two hours to London.
-3|jobcentre|n|kantor penyalur kerja|He signed on at the ___ after losing his job.
-3|lodger|n|penyewa kamar|They rent the spare room to a ___.
-3|menswear|n|pakaian pria|The ___ department is on the first floor.
-3|midwife|n|bidan|A ___ helped deliver the baby at home.
-3|motorcyclist|n|pengendara sepeda motor|The ___ was not wearing a helmet.
-3|nappy|n|popok|Disposable ___ take centuries to break down.|=nappies
-3|newsagent|n|kios koran|I buy a paper at the ___ each morning.
-3|overcharge|v|menagih terlalu mahal|Some taxi drivers ___ tourists.
-3|overdraft|n|cerukan (utang bank)|Students often have an ___ on their bank account.
-3|parental|adj|orang tua, parental|Paid ___ leave is now longer in many countries.
-3|pharmacist|n|apoteker|The ___ explained how to take the tablets.
-3|pickpocket|n|pencopet|A ___ stole my wallet on the train.
+1|housewife|n|ibu rumah tangga|Fewer women describe themselves as a ___ today.
+4|intercity|adj|antarkota|The ___ train takes two hours to London.
+1|jobcentre|n|kantor penyalur kerja|He signed on at the ___ after losing his job.
+4|lodger|n|penyewa kamar|They rent the spare room to a ___.
+4|menswear|n|pakaian pria|The ___ department is on the first floor.
+5|midwife|n|bidan|A ___ helped deliver the baby at home.
+4|motorcyclist|n|pengendara sepeda motor|The ___ was not wearing a helmet.
+4|nappy|n|popok|Disposable ___ take centuries to break down.|=nappies
+4|newsagent|n|kios koran|I buy a paper at the ___ each morning.
+4|overcharge|v|menagih terlalu mahal|Some taxi drivers ___ tourists.
+5|overdraft|n|cerukan (utang bank)|Students often have an ___ on their bank account.
+4|parental|adj|orang tua, parental|Paid ___ leave is now longer in many countries.
+4|pharmacist|n|apoteker|The ___ explained how to take the tablets.
+1|pickpocket|n|pencopet|A ___ stole my wallet on the train.
 3|placement|n|penempatan kerja (magang)|Nursing students do a ___ in a hospital.
-3|policing|n|pengamanan oleh polisi|Community ___ can build trust.
-3|pothole|n|jalan berlubang|The council fixed the ___ outside my house.
-3|punctuality|n|ketepatan waktu|Employers value ___.
+1|policing|n|pengamanan oleh polisi|Community ___ can build trust.
+4|pothole|n|jalan berlubang|The council fixed the ___ outside my house.
+4|punctuality|n|ketepatan waktu|Employers value ___.
 3|railcard|n|kartu diskon kereta|Students can buy a ___ to save on fares.
-3|rainwater|n|air hujan|Some homes collect ___ for the garden.
-3|receptionist|n|resepsionis|The ___ booked my appointment.
+1|rainwater|n|air hujan|Some homes collect ___ for the garden.
+4|receptionist|n|resepsionis|The ___ booked my appointment.
 3|recruitment|n|perekrutan|Teacher ___ is falling in rural areas.
-3|rental|n|sewa|Car ___ is cheaper at the airport.
-3|retiree|n|pensiunan|Each ___ receives a state pension.
-3|salesperson|n|wiraniaga|The ___ showed us the new cars.
-3|schooling|n|pendidikan sekolah|Ten years of ___ is compulsory.
-3|shopkeeper|n|pemilik toko|The ___ knew every customer by name.
-3|smog|n|kabut asap|Thick ___ covered the city.
+4|rental|n|sewa|Car ___ is cheaper at the airport.
+4|retiree|n|pensiunan|Each ___ receives a state pension.
+4|salesperson|n|wiraniaga|The ___ showed us the new cars.
+1|schooling|n|pendidikan sekolah|Ten years of ___ is compulsory.
+4|shopkeeper|n|pemilik toko|The ___ knew every customer by name.
+5|smog|n|kabut asap|Thick ___ covered the city.
 3|spokesperson|n|juru bicara|A ___ for the council refused to comment.
-3|starvation|n|kelaparan|Drought brought the region close to ___.
-3|stationery|n|alat tulis|The office orders ___ every month.
-3|storey|n|lantai, tingkat|The block has twenty ___.|=storeys
-3|streetlight|n|lampu jalan|Every ___ was switched off to save energy.
+4|starvation|n|kelaparan|Drought brought the region close to ___.
+5|stationery|n|alat tulis|The office orders ___ every month.
+1|storey|n|lantai, tingkat|The block has twenty ___.|=storeys
+1|streetlight|n|lampu jalan|Every ___ was switched off to save energy.
 3|superstore|n|toko swalayan besar|A ___ opened on the edge of town.
-3|thermostat|n|termostat|Turn the ___ down to save energy.
-3|townhouse|n|rumah kota bertingkat|They live in a narrow ___ in the old town.
-3|underpass|n|jalan bawah tanah|Cyclists use the ___ under the ring road.
-3|vandal|n|perusak fasilitas umum|A ___ broke the windows of the bus stop.
-3|vending|n|penjualan otomatis|The ___ machines in schools sell sugary drinks.
-3|warranty|n|garansi|The fridge has a two-year ___.
-3|wellness|n|kebugaran, kesehatan|Companies offer ___ programmes to staff.
-3|windfarm|n|ladang angin|A ___ was built off the coast.
-3|biodegradable|adj|dapat terurai secara alami|Bags made of paper are ___.
-3|drainage|n|saluran pembuangan air|Poor ___ caused the floods.
-3|ecological|adj|ekologis|The oil spill was an ___ disaster.
-3|ecosystem|n|ekosistem|Introducing a new species can upset the ___.
-3|environmentalist|n|aktivis lingkungan|An ___ led the campaign to save the forest.
-3|floodwater|n|air banjir|Brown ___ reached the first floor of the houses.
-3|methane|n|metana|Landfill sites release ___.
-3|photosynthesis|n|fotosintesis|Trees absorb carbon through ___.
-3|plantation|n|perkebunan|Forests were cleared for a palm oil ___.
-3|radioactive|adj|radioaktif|Nuclear ___ waste must be stored for thousands of years.
-3|toxin|n|racun|Plastics release a ___ into the soil.
-3|advertisement|n|iklan|The ___ targeted young viewers.
-3|breadwinner|n|pencari nafkah|In many families both parents are a ___.
-3|disadvantaged|adj|kurang beruntung|Free meals help ___ pupils.
-3|dropout|n|anak putus sekolah|Every ___ is offered a second chance.
-3|literate|adj|melek huruf|Ninety per cent of adults are ___.
-3|multilingual|adj|multibahasa|London is a ___ city.
-3|outsource|v|mengalihdayakan|Many firms ___ customer service abroad.
-3|socialize/socialise|v|bersosialisasi|Children learn to ___ at nursery.
-3|underfunded|adj|kekurangan dana|Rural schools are often ___.
-3|fourfold|adv|empat kali lipat|Online sales increased ___ between 2010 and 2020.
-3|fivefold|adv|lima kali lipat|The price of the tickets rose ___.
-3|tenfold|adv|sepuluh kali lipat|Visitor numbers grew ___ after the film.
-3|midpoint|n|titik tengah|At the ___ of the period, sales were at their lowest.
-3|upsurge|n|lonjakan|There was an ___ in demand for bicycles in 2020.
+5|thermostat|n|termostat|Turn the ___ down to save energy.
+1|townhouse|n|rumah kota bertingkat|They live in a narrow ___ in the old town.
+4|underpass|n|jalan bawah tanah|Cyclists use the ___ under the ring road.
+4|vandal|n|perusak fasilitas umum|A ___ broke the windows of the bus stop.
+4|vending|n|penjualan otomatis|The ___ machines in schools sell sugary drinks.
+4|warranty|n|garansi|The fridge has a two-year ___.
+1|wellness|n|kebugaran, kesehatan|Companies offer ___ programmes to staff.
+1|windfarm|n|ladang angin|A ___ was built off the coast.
+4|biodegradable|adj|dapat terurai secara alami|Bags made of paper are ___.
+4|drainage|n|saluran pembuangan air|Poor ___ caused the floods.
+4|ecological|adj|ekologis|The oil spill was an ___ disaster.
+4|ecosystem|n|ekosistem|Introducing a new species can upset the ___.
+4|environmentalist|n|aktivis lingkungan|An ___ led the campaign to save the forest.
+2|floodwater|n|air banjir|Brown ___ reached the first floor of the houses.
+5|methane|n|metana|Landfill sites release ___.
+5|photosynthesis|n|fotosintesis|Trees absorb carbon through ___.
+4|plantation|n|perkebunan|Forests were cleared for a palm oil ___.
+4|radioactive|adj|radioaktif|Nuclear ___ waste must be stored for thousands of years.
+4|toxin|n|racun|Plastics release a ___ into the soil.
+1|advertisement|n|iklan|The ___ targeted young viewers.
+1|breadwinner|n|pencari nafkah|In many families both parents are a ___.
+2|disadvantaged|adj|kurang beruntung|Free meals help ___ pupils.
+1|dropout|n|anak putus sekolah|Every ___ is offered a second chance.
+4|literate|adj|melek huruf|Ninety per cent of adults are ___.
+4|multilingual|adj|multibahasa|London is a ___ city.
+4|outsource|v|mengalihdayakan|Many firms ___ customer service abroad.
+4|socialize/socialise|v|bersosialisasi|Children learn to ___ at nursery.
+4|underfunded|adj|kekurangan dana|Rural schools are often ___.
+2|fourfold|adv|empat kali lipat|Online sales increased ___ between 2010 and 2020.
+2|fivefold|adv|lima kali lipat|The price of the tickets rose ___.
+2|tenfold|adv|sepuluh kali lipat|Visitor numbers grew ___ after the film.
+4|midpoint|n|titik tengah|At the ___ of the period, sales were at their lowest.
+4|upsurge|n|lonjakan|There was an ___ in demand for bicycles in 2020.
 3|spike|n|lonjakan tajam|There was a ___ in visits during the holidays.
-3|proportionally|adv|secara proporsional|Tax should rise ___ with income.
-3|whilst|conj|sementara itu|Car use fell, ___ cycling grew.
-3|amongst|prep|di antara|Obesity is rising ___ young children.
-3|undoubtedly|adv|tak diragukan lagi|Technology has ___ changed how we work.
+4|proportionally|adv|secara proporsional|Tax should rise ___ with income.
+4|whilst|conj|sementara itu|Car use fell, ___ cycling grew.
+4|amongst|prep|di antara|Obesity is rising ___ young children.
+4|undoubtedly|adv|tak diragukan lagi|Technology has ___ changed how we work.
 3|inevitably|adv|mau tidak mau|Prices will ___ rise as fuel gets scarce.
-3|tighten|v|memperketat|The government plans to ___ rules on smoking.
-3|sprawl|n|perluasan kota tak terkendali|Urban ___ swallows farmland.
-3|slum|n|permukiman kumuh|A third of the city lives in a ___.
-4|anaesthetic|n|obat bius|The patient was given a local ___ before the operation.
-4|barrister|n|pengacara (di pengadilan)|The ___ spoke for the defence in court.
-4|digitize/digitise|v|mendigitalkan|The library plans to ___ its old maps.
-4|gentrification|n|gentrifikasi|Rapid ___ pushes up rents in poor districts.
-4|illiteracy|n|buta huruf|Adult ___ remains high in rural areas.
-4|immunize/immunise|v|mengimunisasi|Nurses ___ babies against measles.
-4|kerb|n|tepi trotoar|The car stopped close to the ___.
-4|lone|adj|tunggal, sendirian|Many ___ parents need help with childcare.
-4|metropolitan|adj|metropolitan|The ___ area has ten million people.
-4|overheads|n|biaya operasional|Small shops struggle with high ___.
-4|parenthood|n|masa menjadi orang tua|Many couples delay ___ until their thirties.
-4|sanitation|n|sanitasi|Poor ___ spreads disease.
+4|tighten|v|memperketat|The government plans to ___ rules on smoking.
+4|sprawl|n|perluasan kota tak terkendali|Urban ___ swallows farmland.
+4|slum|n|permukiman kumuh|A third of the city lives in a ___.
+5|anaesthetic|n|obat bius|The patient was given a local ___ before the operation.
+5|barrister|n|pengacara (di pengadilan)|The ___ spoke for the defence in court.
+5|digitize/digitise|v|mendigitalkan|The library plans to ___ its old maps.
+5|gentrification|n|gentrifikasi|Rapid ___ pushes up rents in poor districts.
+5|illiteracy|n|buta huruf|Adult ___ remains high in rural areas.
+5|immunize/immunise|v|mengimunisasi|Nurses ___ babies against measles.
+5|kerb|n|tepi trotoar|The car stopped close to the ___.
+2|lone|adj|tunggal, sendirian|Many ___ parents need help with childcare.
+3|metropolitan|adj|metropolitan|The ___ area has ten million people.
+3|overheads|n|biaya operasional|Small shops struggle with high ___.
+5|parenthood|n|masa menjadi orang tua|Many couples delay ___ until their thirties.
+5|sanitation|n|sanitasi|Poor ___ spreads disease.
 4|sewage|n|limbah|Untreated ___ was pumped into the river.
-4|wastage|n|pemborosan|Supermarkets aim to reduce food ___.
+5|wastage|n|pemborosan|Supermarkets aim to reduce food ___.
 4|wholesale|adj|grosir|The ___ prices are lower than shop prices.
-4|proportionate|adj|sebanding|The fine should be ___ to the damage caused.
+5|proportionate|adj|sebanding|The fine should be ___ to the damage caused.
 4|arguably|adv|bisa dikatakan|Clean water is ___ the greatest public health success.
-4|undeniably|adv|tak dapat disangkal|Tourism has ___ brought money to the region.
-4|deprivation|n|kemiskinan, kekurangan|Areas of ___ have higher crime rates.
-4|censorship|n|sensor|Some argue that ___ of the press protects no one.
-4|individualism|n|individualisme|Western cultures are said to value ___.
-4|materialistic|adj|materialistis|Advertising makes children more ___.
+5|undeniably|adv|tak dapat disangkal|Tourism has ___ brought money to the region.
+5|deprivation|n|kemiskinan, kekurangan|Areas of ___ have higher crime rates.
+5|censorship|n|sensor|Some argue that ___ of the press protects no one.
+5|individualism|n|individualisme|Western cultures are said to value ___.
+5|materialistic|adj|materialistis|Advertising makes children more ___.
 4|characterise|v|mencirikan|Long working hours ___ the industry.
-4|categorise|v|mengelompokkan|The survey ___ households by income.|=categorizes/categorises
-4|penalize/penalise|v|menghukum, memberi sanksi|New rules ___ drivers who use their phones.
-4|cybercrime|n|kejahatan siber|Online ___ costs businesses billions each year.
-4|anonymity|n|anonimitas|The ___ of the internet encourages rude comments.
-4|flexitime|n|jam kerja fleksibel|A ___ scheme lets staff start any time between seven and ten.
-4|telecommute|v|bekerja dari rumah|More staff ___ two days a week.
+5|categorise|v|mengelompokkan|The survey ___ households by income.|=categorizes/categorises
+5|penalize/penalise|v|menghukum, memberi sanksi|New rules ___ drivers who use their phones.
+5|cybercrime|n|kejahatan siber|Online ___ costs businesses billions each year.
+5|anonymity|n|anonimitas|The ___ of the internet encourages rude comments.
+5|flexitime|n|jam kerja fleksibel|A ___ scheme lets staff start any time between seven and ten.
+5|telecommute|v|bekerja dari rumah|More staff ___ two days a week.
 4|dependency|n|ketergantungan|The country has a ___ on imported oil.
-4|alcoholism|n|alkoholisme|Untreated ___ damages families as well as health.
-4|bursary|n|beasiswa (bantuan biaya)|She won a ___ to cover her fees.
+5|alcoholism|n|alkoholisme|Untreated ___ damages families as well as health.
+5|bursary|n|beasiswa (bantuan biaya)|She won a ___ to cover her fees.
 4|carriageway|n|jalur jalan raya|An accident closed the northbound ___.
-4|catchment|n|wilayah zonasi (sekolah)|House prices are high in the school's ___ area.
-4|employability|n|kesiapan kerja|Work experience improves graduates' ___.
-4|eviction|n|pengusiran (dari rumah sewa)|The family faces ___ for unpaid rent.
-4|geriatric|adj|geriatri, lansia|The ___ ward cares for elderly patients.
-4|greenbelt|n|jalur hijau|Building on the ___ is strictly limited.
-4|hoarding|n|papan iklan besar|A huge ___ advertised the film.
-4|incineration|n|pembakaran (sampah)|Waste ___ reduces the volume of rubbish but pollutes the air.
-4|incinerator|n|insinerator|Residents protested against the new ___.
-4|inpatient|n|pasien rawat inap|Each ___ is visited by a doctor every morning.
-4|layby|n|tempat berhenti di tepi jalan|The lorry driver rested in a ___.
-4|lettings|n|penyewaan properti|The agency handles ___ and sales.
-4|microchip|n|cip mikro|Every pet dog must have a ___.
-4|monorail|n|monorel|A ___ links the airport to the city.
-4|obligatory|adj|wajib|Wearing a seatbelt is ___.
-4|occupancy|n|tingkat hunian|Hotel ___ peaked in August.
-4|outpatient|n|pasien rawat jalan|She was treated as an ___ and went home the same day.
-4|physiotherapy|n|fisioterapi|He needed ___ after his knee injury.
+1|catchment|n|wilayah zonasi (sekolah)|House prices are high in the school's ___ area.
+1|employability|n|kesiapan kerja|Work experience improves graduates' ___.
+5|eviction|n|pengusiran (dari rumah sewa)|The family faces ___ for unpaid rent.
+5|geriatric|adj|geriatri, lansia|The ___ ward cares for elderly patients.
+1|greenbelt|n|jalur hijau|Building on the ___ is strictly limited.
+5|hoarding|n|papan iklan besar|A huge ___ advertised the film.
+5|incineration|n|pembakaran (sampah)|Waste ___ reduces the volume of rubbish but pollutes the air.
+5|incinerator|n|insinerator|Residents protested against the new ___.
+5|inpatient|n|pasien rawat inap|Each ___ is visited by a doctor every morning.
+5|layby|n|tempat berhenti di tepi jalan|The lorry driver rested in a ___.
+5|lettings|n|penyewaan properti|The agency handles ___ and sales.
+5|microchip|n|cip mikro|Every pet dog must have a ___.
+5|monorail|n|monorel|A ___ links the airport to the city.
+5|obligatory|adj|wajib|Wearing a seatbelt is ___.
+5|occupancy|n|tingkat hunian|Hotel ___ peaked in August.
+5|outpatient|n|pasien rawat jalan|She was treated as an ___ and went home the same day.
+5|physiotherapy|n|fisioterapi|He needed ___ after his knee injury.
 4|premises|n|tempat usaha|Smoking is not allowed on the ___.
-4|quarterly|adj|triwulanan|The firm publishes ___ sales figures.
+1|quarterly|adj|triwulanan|The firm publishes ___ sales figures.
 4|refurbishment|n|renovasi|The museum is closed for ___.
-4|regeneration|n|peremajaan (wilayah)|Urban ___ brought new jobs to the docks.
-4|roadworks|n|perbaikan jalan|Weekend ___ caused delays on the motorway.
-4|rota|n|jadwal bergilir|The cleaning ___ is on the fridge.
+5|regeneration|n|peremajaan (wilayah)|Urban ___ brought new jobs to the docks.
+5|roadworks|n|perbaikan jalan|Weekend ___ caused delays on the motorway.
+5|rota|n|jadwal bergilir|The cleaning ___ is on the fridge.
 4|solicitor|n|pengacara (urusan hukum umum)|A ___ handled the sale of the house.
-4|statistician|n|ahli statistik|A government ___ prepared the figures.
-4|surcharge|n|biaya tambahan|Airlines add a fuel ___ to tickets.
-4|tenancy|n|masa sewa|The ___ lasts for twelve months.
-4|tollbooth|n|gerbang tol|Cars queued at the ___.
-4|valuation|n|penaksiran nilai|The bank asked for a ___ of the house.
-4|veterinary|adj|kedokteran hewan|She works at a ___ clinic.
-4|viaduct|n|jembatan layang kereta|The train crossed a stone ___.
-4|aridity|n|kekeringan|Rising ___ is turning farmland into desert.
-4|contamination|n|kontaminasi, pencemaran|The ___ of the water supply made hundreds ill.
-4|coolant|n|cairan pendingin|The power station uses sea water as a ___.
-4|degradation|n|degradasi, kerusakan|Overgrazing leads to land ___.
-4|depletion|n|penipisan, pengurasan|Ozone ___ was slowed by a ban on certain gases.
-4|dioxide|n|dioksida|Carbon ___ levels have risen every year.
-4|effluent|n|limbah cair|Factory ___ killed fish in the river.
-4|geothermal|adj|panas bumi|Iceland heats homes with ___ energy.
-4|hydroelectric|adj|hidroelektrik, tenaga air|The dam supplies ___ power.
-4|incentivize/incentivise|v|memberi insentif|Tax breaks ___ companies to go green.
-4|microplastic|n|mikroplastik|Each ___ is smaller than a grain of rice.
-4|permafrost|n|tanah beku abadi|Melting ___ releases stored gases.
+5|statistician|n|ahli statistik|A government ___ prepared the figures.
+5|surcharge|n|biaya tambahan|Airlines add a fuel ___ to tickets.
+5|tenancy|n|masa sewa|The ___ lasts for twelve months.
+5|tollbooth|n|gerbang tol|Cars queued at the ___.
+5|valuation|n|penaksiran nilai|The bank asked for a ___ of the house.
+5|veterinary|adj|kedokteran hewan|She works at a ___ clinic.
+5|viaduct|n|jembatan layang kereta|The train crossed a stone ___.
+5|aridity|n|kekeringan|Rising ___ is turning farmland into desert.
+5|contamination|n|kontaminasi, pencemaran|The ___ of the water supply made hundreds ill.
+5|coolant|n|cairan pendingin|The power station uses sea water as a ___.
+5|degradation|n|degradasi, kerusakan|Overgrazing leads to land ___.
+5|depletion|n|penipisan, pengurasan|Ozone ___ was slowed by a ban on certain gases.
+3|dioxide|n|dioksida|Carbon ___ levels have risen every year.
+5|effluent|n|limbah cair|Factory ___ killed fish in the river.
+5|geothermal|adj|panas bumi|Iceland heats homes with ___ energy.
+5|hydroelectric|adj|hidroelektrik, tenaga air|The dam supplies ___ power.
+5|incentivize/incentivise|v|memberi insentif|Tax breaks ___ companies to go green.
+5|microplastic|n|mikroplastik|Each ___ is smaller than a grain of rice.
+5|permafrost|n|tanah beku abadi|Melting ___ releases stored gases.
 4|poaching|n|perburuan liar|Illegal ___ threatens elephants in Africa.
-4|purification|n|penjernihan|Water ___ plants serve the whole city.
-4|reforestation|n|reboisasi|Large ___ projects plant millions of trees.
-4|sewerage|n|sistem saluran limbah|The old ___ cannot cope with heavy rain.
-4|smokestack|n|cerobong pabrik|Black smoke poured from the ___.
-4|affluence|n|kemakmuran|Rising ___ led to more car ownership.
-4|bilingualism|n|kedwibahasaan|Early ___ may improve memory in old age.
-4|childrearing|n|pengasuhan anak|Views on ___ differ between cultures.
-4|conformist|adj|konformis|Schools may produce ___ thinkers.
-4|crowdfunding|n|penggalangan dana daring|The film was paid for by ___.
-4|cyberbullying|n|perundungan siber|Online ___ can follow a child home.
-4|elitism|n|elitisme|Some see private schools as a sign of ___.
-4|emancipation|n|emansipasi|Women's ___ changed working life.
-4|ethnicity|n|etnisitas|The survey asked about age and ___.
-4|globalized/globalised|adj|terglobalisasi|We live in a ___ economy.
-4|inclusivity|n|inklusivitas|The university promotes ___ in hiring.
-4|intergenerational|adj|antargenerasi|Some ___ housing mixes students and pensioners.
-4|joblessness|n|pengangguran|Long-term ___ is highest among young men.
-4|marginalized/marginalised|adj|terpinggirkan|The charity supports ___ groups.
-4|overconsumption|n|konsumsi berlebihan|Global ___ is draining natural resources.
-4|populist|adj|populis|The ___ party promised lower taxes.
+5|purification|n|penjernihan|Water ___ plants serve the whole city.
+5|reforestation|n|reboisasi|Large ___ projects plant millions of trees.
+5|sewerage|n|sistem saluran limbah|The old ___ cannot cope with heavy rain.
+5|smokestack|n|cerobong pabrik|Black smoke poured from the ___.
+5|affluence|n|kemakmuran|Rising ___ led to more car ownership.
+5|bilingualism|n|kedwibahasaan|Early ___ may improve memory in old age.
+5|childrearing|n|pengasuhan anak|Views on ___ differ between cultures.
+5|conformist|adj|konformis|Schools may produce ___ thinkers.
+3|crowdfunding|n|penggalangan dana daring|The film was paid for by ___.
+5|cyberbullying|n|perundungan siber|Online ___ can follow a child home.
+5|elitism|n|elitisme|Some see private schools as a sign of ___.
+5|emancipation|n|emansipasi|Women's ___ changed working life.
+5|ethnicity|n|etnisitas|The survey asked about age and ___.
+5|globalized/globalised|adj|terglobalisasi|We live in a ___ economy.
+5|inclusivity|n|inklusivitas|The university promotes ___ in hiring.
+5|intergenerational|adj|antargenerasi|Some ___ housing mixes students and pensioners.
+5|joblessness|n|pengangguran|Long-term ___ is highest among young men.
+5|marginalized/marginalised|adj|terpinggirkan|The charity supports ___ groups.
+3|overconsumption|n|konsumsi berlebihan|Global ___ is draining natural resources.
+5|populist|adj|populis|The ___ party promised lower taxes.
 4|stereotyping|n|stereotip, pelabelan|Gender ___ starts in early childhood.
-4|teleworking|n|kerja jarak jauh|Regular ___ cuts commuting time.
-4|upskilling|n|peningkatan keterampilan|Regular ___ helps older workers keep their jobs.
-4|disproportionately|adv|secara tidak seimbang|Poor families are ___ affected by rising prices.
+5|teleworking|n|kerja jarak jauh|Regular ___ cuts commuting time.
+5|upskilling|n|peningkatan keterampilan|Regular ___ helps older workers keep their jobs.
+5|disproportionately|adv|secara tidak seimbang|Poor families are ___ affected by rising prices.
 4|counterproductive|adj|kontraproduktif|Banning phones may be ___ if pupils hide them.
-4|overrepresented|adj|terlalu banyak terwakili|Young men are ___ in accident figures.
-4|underrepresented|adj|kurang terwakili|Women remain ___ in engineering.
-4|stagnation|n|stagnasi|Years of ___ followed the boom.
+5|overrepresented|adj|terlalu banyak terwakili|Young men are ___ in accident figures.
+5|underrepresented|adj|kurang terwakili|Women remain ___ in engineering.
+5|stagnation|n|stagnasi|Years of ___ followed the boom.
 4|thereafter|adv|sesudahnya|Sales peaked in 2015 and fell steadily ___.
-4|footfall|n|jumlah pengunjung toko|Weekly ___ on the high street fell after the mall opened.
-4|megacity|n|megakota|Lagos has grown into a ___.
-4|brownfield|adj|lahan bekas pakai|Building on ___ sites protects the countryside.
-4|greenfield|adj|lahan hijau belum terbangun|Developers prefer cheaper ___ sites.
-5|photovoltaic|adj|fotovoltaik|Rooftop ___ panels turn sunlight into power.
-5|civilize/civilise|v|memberadabkan|Some believed that schools could ___ society.
-5|custodial|adj|berupa hukuman penjara|A ___ sentence is not always effective for young offenders.
-5|delinquency|n|kenakalan remaja|Youth clubs may reduce juvenile ___.
-5|pedestrianize/pedestrianise|v|menjadikan kawasan pejalan kaki|The council plans to ___ the high street.
-5|abattoir|n|rumah potong hewan|The cattle were taken to the ___.
-5|conurbation|n|kawasan kota besar gabungan|Manchester sits at the centre of a large ___.
-5|guarantor|n|penjamin|Students need a ___ to rent a flat.
-5|conservationism|n|paham konservasi|Support for ___ grew stronger in the 1970s.
-5|eutrophication|n|eutrofikasi|Fertiliser runoff causes ___ in lakes.
-5|monoculture|n|monokultur|Palm oil ___ destroys habitats.
-5|salinization/salinisation|n|salinisasi|Poor irrigation leads to soil ___.
-5|commercialization/commercialisation|n|komersialisasi|The ___ of sport has raised ticket prices.
-5|commodification|n|komodifikasi|Critics attack the ___ of education.
-5|homogeneity|n|homogenitas, keseragaman|Global brands increase the ___ of city centres.
-5|meritocracy|n|meritokrasi|A true ___ rewards talent, not wealth.
-5|obsolescence|n|keusangan|Planned ___ makes phones last only a few years.
-5|polarization/polarisation|n|polarisasi|Social media may increase political ___.
-5|privatization/privatisation|n|privatisasi|Rail ___ raised ticket prices.
+1|footfall|n|jumlah pengunjung toko|Weekly ___ on the high street fell after the mall opened.
+5|megacity|n|megakota|Lagos has grown into a ___.
+1|brownfield|adj|lahan bekas pakai|Building on ___ sites protects the countryside.
+1|greenfield|adj|lahan hijau belum terbangun|Developers prefer cheaper ___ sites.
+6|photovoltaic|adj|fotovoltaik|Rooftop ___ panels turn sunlight into power.
+2|civilize/civilise|v|memberadabkan|Some believed that schools could ___ society.
+6|custodial|adj|berupa hukuman penjara|A ___ sentence is not always effective for young offenders.
+6|delinquency|n|kenakalan remaja|Youth clubs may reduce juvenile ___.
+6|pedestrianize/pedestrianise|v|menjadikan kawasan pejalan kaki|The council plans to ___ the high street.
+6|abattoir|n|rumah potong hewan|The cattle were taken to the ___.
+6|conurbation|n|kawasan kota besar gabungan|Manchester sits at the centre of a large ___.
+6|guarantor|n|penjamin|Students need a ___ to rent a flat.
+6|conservationism|n|paham konservasi|Support for ___ grew stronger in the 1970s.
+6|eutrophication|n|eutrofikasi|Fertiliser runoff causes ___ in lakes.
+6|monoculture|n|monokultur|Palm oil ___ destroys habitats.
+6|salinization/salinisation|n|salinisasi|Poor irrigation leads to soil ___.
+6|commercialization/commercialisation|n|komersialisasi|The ___ of sport has raised ticket prices.
+6|commodification|n|komodifikasi|Critics attack the ___ of education.
+6|homogeneity|n|homogenitas, keseragaman|Global brands increase the ___ of city centres.
+6|meritocracy|n|meritokrasi|A true ___ rewards talent, not wealth.
+6|obsolescence|n|keusangan|Planned ___ makes phones last only a few years.
+6|polarization/polarisation|n|polarisasi|Social media may increase political ___.
+4|privatization/privatisation|n|privatisasi|Rail ___ raised ticket prices.

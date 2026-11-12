@@ -1,261 +1,700 @@
-# Verbarium — Spanish meanings for 1-squire.txt: word|meaning
 ability|capacidad
-absence|ausencia
+abroad|en el extranjero
 accept|aceptar
-accurate|preciso
+accident|accidente
 achieve|lograr
+act|actuar
+action|acción
+active|activo
 activity|actividad
-admit|admitir
+add|añadir
+address|dirección
+adult|adulto
 advantage|ventaja
+adventure|aventura
+advertise|anunciar, hacer publicidad
 advice|consejo
 affect|afectar
-afford|permitirse (pagar)
-agreement|acuerdo
-aim|objetivo
+afraid|asustado, con miedo
+age|edad
+agree|estar de acuerdo
+air|aire
+airport|aeropuerto
+alive|vivo
 allow|permitir
+alone|solo
+alternative|alternativa
+although|aunque
+amaze|asombrar
+amazing|asombroso
+among|entre
 amount|cantidad
+analyse|analizar
 ancient|antiguo
-announce|anunciar
+angry|enfadado
+animal|animal
+answer|responder
+apartment|apartamento, piso
+appear|aparecer, parecer
+appearance|aspecto, apariencia
 apply|solicitar
+architect|arquitecto
+architecture|arquitectura
+area|zona, área
 argue|discutir, sostener
+argument|discusión, argumento
+army|ejército
 arrange|organizar
+arrangement|arreglo, disposición
+arrive|llegar
+artful|astuto
+article|artículo
+artist|artista
+asleep|dormido
+athlete|atleta
+attack|atacar
 attend|asistir a
-attitude|actitud
+attention|atención
+attractive|atractivo
+audience|público
+author|autor
+autumn|otoño
 available|disponible
 average|medio, promedio
 avoid|evitar
-aware|consciente
+award|premio
+awful|horrible, terrible
+backbone|columna vertebral
 background|origen, trasfondo
-balance|equilibrio
+bank|banco
+beach|playa
+bear|soportar, aguantar
+beat|vencer, golpear
 behave|comportarse
-belief|creencia
+behind|detrás de
+believe|creer
+belong|pertenecer
+below|debajo de
 benefit|beneficio
+bill|factura, cuenta
+biology|biología
+birth|nacimiento
+blank|en blanco
+block|bloquear
+blood|sangre
+blow|soplar
+board|tablero, tabla
+boil|hervir
+bone|hueso
+bored|aburrido
+boring|aburrido, pesado
 borrow|pedir prestado
-brief|breve
+boss|jefe
+bottom|fondo, parte de abajo
+brain|cerebro
+breadth|amplitud
+break|romper
+bridge|puente
+bright|brillante, listo
+brilliant|brillante
+bring|traer
+build|construir
+burn|quemar, arder
+business|negocio, empresa
+busy|ocupado
+camera|cámara
+camp|campamento
+capital|capital
+care|importar, preocuparse
 career|carrera profesional
+careful|cuidadoso
+carry|llevar, cargar
+case|caso
+cash|dinero en efectivo
+castle|castillo
+catch|atrapar
 cause|causa
-challenge|desafío, reto
+celebrate|celebrar
+celebrity|famoso
+cell|célula
+century|siglo
+certain|seguro, cierto
+chance|oportunidad, posibilidad
+change|cambiar
 character|carácter, personaje
+charity|beneficencia
+chart|gráfico
+cheap|barato
+check|comprobar, revisar
+chip|trozo, patata frita
 choice|elección
-claim|afirmar
+choose|elegir
+clear|claro
+clever|listo, inteligente
+climate|clima
+climb|escalar, subir
+close|cerrar
+clothes|ropa
+cloud|nube
+coach|entrenador
+coast|costa
+code|código
+colleague|colega
 collect|recoger, coleccionar
+college|universidad, facultad
+colour|color
+column|columna
+comedy|comedia
+comely|bien parecido
+comfortable|cómodo
+comment|comentario
 common|común
+communicate|comunicarse
+community|comunidad
+company|empresa
 compare|comparar
+compete|competir
+competition|competencia, concurso
 complain|quejarse
 complete|completar
-concern|preocupación
+computer|ordenador, computadora
+concert|concierto
+concerted|concertado
 condition|condición, estado
-confident|seguro de sí mismo
+conference|congreso, conferencia
 connect|conectar
 consider|considerar
 contain|contener
+context|contexto
+continent|continente
 continue|continuar
 control|controlar
-convince|convencer
+conversation|conversación
+cook|cocinar
+cool|fresco
+copy|copiar
+corner|esquina, rincón
+cornerstone|piedra angular
 correct|correcto
+cost|costar
+count|contar
+country|país
+couple|pareja
+course|curso, asignatura
+cover|cubrir
+cower|acobardarse
+crazy|loco
+cream|crema, nata
 create|crear
+criminal|delincuente
+cross|cruzar
 crowd|multitud
+cry|llorar
 culture|cultura
+cup|taza
 customer|cliente
-damage|daño
+cut|cortar
+cutback|recorte
+cycle|ir en bicicleta
+daily|diario
+danger|peligro
+dangerous|peligroso
+dark|oscuro
+data|datos
+date|fecha
+dead|muerto
 deal|ocuparse de
+dear|querido, caro
+dearth|escasez
+death|muerte
 decide|decidir
-decrease|disminuir
+decision|decisión
+deep|profundo
 degree|título universitario
-deliver|entregar, repartir
-demand|demanda
+delicious|delicioso
+department|departamento
 depend|depender
+dependable|fiable
 describe|describir
+desert|desierto
 design|diseñar
+desk|escritorio
 destroy|destruir
 detail|detalle
+detective|detective
 develop|desarrollar
+device|dispositivo
+dialogue|diálogo
+dictionary|diccionario
+die|morir
 difference|diferencia
-difficulty|dificultad
+different|diferente
+difficult|difícil
+digital|digital
+dinner|cena
+direct|directo
+direction|dirección
+dirty|sucio
+disagree|no estar de acuerdo
+disappear|desaparecer
+disaster|desastre
 discover|descubrir
 discuss|hablar de, discutir
 disease|enfermedad
+dish|plato
 distance|distancia
-divide|dividir
-doubt|duda
+document|documento
+downfall|caída, ruina
+downstairs|abajo, en el piso de abajo
+downturn|recesión, bajón
+drama|drama
+draw|dibujar
+dream|sueño
+dress|vestirse
+drink|beber
+drive|conducir
+drop|dejar caer, bajar
+drug|medicamento, droga
+dry|seco
+during|durante
+early|temprano
+earmark|destinar
 earn|ganar (dinero)
-economy|economía
+earth|tierra
+east|este
+easy|fácil
 education|educación
 effect|efecto
-effort|esfuerzo
+electric|eléctrico
+electricity|electricidad
+electronic|electrónico
+else|más, otro
 employ|emplear
-encourage|animar, fomentar
+employee|empleado
+employer|empleador
+empty|vacío
+end|terminar
 energy|energía
+engine|motor
+engineer|ingeniero
+enjoy|disfrutar
+enormous|enorme
+enough|suficiente, bastante
+enter|entrar
 environment|medio ambiente
-equal|igual
-escape|escapar
+equipment|equipo
+error|error
+especially|especialmente
+essay|ensayo, redacción
+even|incluso
+evening|tarde, noche
 event|acontecimiento, evento
+ever|alguna vez
+everywhere|en todas partes
 evidence|pruebas
 exact|exacto
-examine|examinar
+exacting|exigente
+exam|examen
 example|ejemplo
-exchange|intercambiar
+excellent|excelente
+except|excepto
+excited|emocionado
+exercise|ejercicio
+exist|existir
 expect|esperar, prever
+expensive|caro
 experience|experiencia
 experiment|experimento
+expert|experto
 explain|explicar
 express|expresar
+expression|expresión
+extra|adicional, extra
+extreme|extremo
+fact|hecho
+factor|factor
+factory|fábrica
 fail|fracasar, suspender
-familiar|conocido, familiar
+fair|justo
+fallout|consecuencias
+false|falso
+famous|famoso
+far|lejos
+farm|granja
+fashion|moda
+fat|grasa
+favourite|favorito
+fear|miedo
 feature|rasgo, característica
+feed|alimentar, dar de comer
+feel|sentir
+female|femenino, hembra
+festival|festival
+fever|fiebre
+few|pocos
+fiction|ficción
+field|campo
+fight|luchar, pelear
+figure|cifra, figura
+fill|llenar
 final|final
-flood|inundación
+finally|por fin, finalmente
+find|encontrar
+fine|bien, fino
+finger|dedo
+finish|terminar
+fire|fuego, incendio
+fit|quedar bien, encajar
+fix|arreglar
+flat|plano
+flight|vuelo
+floor|suelo
+fly|volar
 focus|concentrarse
+follow|seguir
 foreign|extranjero
 forest|bosque
-fuel|combustible
-function|función
+forget|olvidar
+fork|tenedor
+form|formulario, forma
+formal|formal
+forward|hacia delante
+free|libre, gratis
+fresh|fresco
+friendly|amable
+front|parte delantera
+fruit|fruta
+full|lleno
+fun|diversión
+funny|gracioso
+furniture|muebles
+further|más lejos, más allá
 future|futuro
-gain|obtener, ganar
+gallery|galería
+game|juego
+gap|hueco, espacio
+garden|jardín
+gate|puerta, portón
+gateway|puerta de entrada
 general|general
-global|global, mundial
+geography|geografía
+gift|regalo
+glass|vidrio, vaso
 goal|meta
 government|gobierno
-growth|crecimiento
+grass|hierba
+great|genial, grande
+greet|saludar
+ground|suelo, tierra
+grounds|motivos
+group|grupo
+grow|crecer, cultivar
 guess|adivinar
+guest|invitado
+guide|guía
 habit|hábito
-harm|dañar
+half|mitad
+hall|sala, salón
+happen|pasar, ocurrir
+hard|duro, difícil
+hardship|penuria, dificultad
+hardy|resistente
+hate|odiar
+headache|dolor de cabeza
+heady|embriagador
 health|salud
+healthy|sano
+heart|corazón
+heat|calor
+heavy|pesado
+height|altura
+helpful|útil, servicial
+hero|héroe
+hide|esconder, esconderse
+hill|colina
+history|historia
+hit|golpear
+hobby|afición
+hold|sostener
+hole|agujero
+holiday|vacaciones
+hope|esperar
+hospital|hospital
+huge|enorme
+human|humano
+hungry|hambriento
+hurt|herir, doler
+ice|hielo
+idea|idea
+ideal|ideal
+identify|identificar
+ill|enfermo
+illness|enfermedad
+image|imagen
+imagine|imaginar
+immediately|inmediatamente
+important|importante
+impossible|imposible
 improve|mejorar
 include|incluir
-income|ingresos
 increase|aumentar
+incredible|increíble
+independent|independiente
+individual|individuo
 industry|industria
-influence|influencia
-inform|informar
+information|información
 injury|lesión
+insect|insecto
+inside|dentro de
 instead|en su lugar
+instruction|instrucción
+instrument|instrumento
+intelligent|inteligente
 interest|interés
+interesting|interesante
+international|internacional
+interview|entrevista
 introduce|presentar
 invent|inventar
+invention|invento
+invite|invitar
 involve|implicar
-issue|asunto, problema
+island|isla
+item|artículo, elemento
+jam|atasco, mermelada
+jewellery|joyas
+job|trabajo, empleo
+join|unirse
+joke|chiste, broma
+journalist|periodista
 journey|viaje
+juice|zumo, jugo
+jump|saltar
+keep|guardar, mantener
+key|llave
+kill|matar
+kind|amable
+kitchen|cocina
+knee|rodilla
+knife|cuchillo
+knock|llamar (a la puerta)
 knowledge|conocimiento
+lake|lago
+lamp|lámpara
+land|tierra
 language|idioma, lengua
+large|grande
+last|durar
+late|tarde, con retraso
+laugh|reír
 law|ley
-limit|límite
+lawyer|abogado
+lazy|perezoso
+lead|dirigir, guiar
+leader|líder
+learn|aprender
+least|lo menos, menos
+leave|irse, dejar
+lecture|clase, conferencia
+lend|prestar
+lesson|lección
+letter|carta, letra
+level|nivel
+library|biblioteca
+lie|tumbarse, mentir
+lifestyle|estilo de vida
+lift|levantar
+light|luz
+likely|probable
+line|línea, fila
+link|vínculo
+list|lista
+listless|apático
 local|local
+lock|cerrar con llave
+look|mirar, parecer
+lose|perder
+loud|fuerte, ruidoso
+lovely|precioso, encantador
+low|bajo
+luck|suerte
+lunch|almuerzo, comida
+machine|máquina
+magazine|revista
+mail|correo
+main|principal
+major|principal, importante
+male|masculino, macho
 manage|gestionar, lograr
+manner|manera, modo
+map|mapa
+mark|marca, nota
+market|mercado
+marry|casarse
 material|material
-measure|medir
+matter|importar
+meal|comida
+mean|significar, querer decir
+meaning|significado
+meat|carne
+media|medios de comunicación
+medicine|medicina
+meet|conocer, reunirse
+meeting|reunión
 member|miembro
 memory|memoria, recuerdo
+mention|mencionar
+message|mensaje
+metal|metal
 method|método
+middle|medio, centro
+milestone|hito
+mind|mente
+mirror|espejo
+miss|perder, echar de menos
+mistake|error
+mobile|móvil
+model|modelo
 modern|moderno
+moment|momento
+money|dinero
+month|mes
+moon|luna
+mostly|sobre todo, en su mayoría
+mountain|montaña
+mouth|boca
+move|moverse, mudarse
+movement|movimiento
+museum|museo
+music|música
+narrow|estrecho
 natural|natural
+nature|naturaleza
+near|cerca de
+nearly|casi
 necessary|necesario
+neck|cuello
+need|necesitar
+needy|necesitado
+negative|negativo
+neighbour|vecino
+neighbouring|vecino
+neither|tampoco, ninguno de los dos
+nervous|nervioso
+network|red
+news|noticias
+newspaper|periódico
+nice|agradable, simpático
+noise|ruido
+noisy|ruidoso
+none|ninguno
+normal|normal
+north|norte
+nose|nariz
+note|nota
+nothing|nada
 notice|notar, darse cuenta
-obvious|obvio
-occur|ocurrir
+novel|novela
+number|número
+nurse|enfermero
+object|objeto
+ocean|océano
 offer|ofrecer
+office|oficina
+officer|agente, oficial
+often|a menudo
+oil|aceite, petróleo
+once|una vez, antes
+onion|cebolla
+only|solo, solamente
+open|abrir
 opinion|opinión
 opportunity|oportunidad
+opposite|opuesto, de enfrente
+option|opción
+orange|naranja
+order|pedir, ordenar
 ordinary|corriente, común
 organize|organizar
+original|original
+outside|fuera de
+outward|externo
+oven|horno
+overseas|en el extranjero
+own|poseer, tener
+owner|dueño
+pack|hacer la maleta, empaquetar
+page|página
+pain|dolor
+paint|pintar
+pair|par
+palace|palacio
+paper|papel
+paragraph|párrafo
+pardon|perdonar
+parent|padre o madre
+park|aparcar
+part|parte
 particular|particular, concreto
+partner|socio, pareja
+party|fiesta, partido
+pass|aprobar, pasar
+passenger|pasajero
+passport|pasaporte
+past|pasado
 patient|paciente
+pattern|patrón, dibujo
+pay|pagar
+peace|paz
+perfect|perfecto
 perform|realizar, actuar
+perhaps|quizás
 period|periodo
-permit|permitir
+perish|perecer
+person|persona
+personal|personal
+personality|personalidad
+pet|mascota
+petrol|gasolina
+photograph|fotografía
+phrase|frase, expresión
+physical|físico
+pick|elegir, recoger
+picture|imagen, cuadro
+piece|trozo, pieza
+pilot|piloto
+place|lugar
+plan|planear
+plant|planta
+plastic|plástico
+plate|plato
+platform|andén
+pleased|contento, satisfecho
+pocket|bolsillo
+point|punto
+police|policía
 polite|educado
 pollution|contaminación
+poor|pobre, malo
 popular|popular
 population|población
+position|posición
 positive|positivo
+possession|posesión
 possible|posible
+post|enviar por correo
+power|poder, fuerza, energía
 practice|práctica
+predict|predecir
 prefer|preferir
+preferable|preferible
 prepare|preparar
+present|regalo, presente
+presentable|presentable
+president|presidente
+pretty|bonito, guapo
 prevent|impedir, prevenir
-previous|anterior
-private|privado
-problem|problema
-process|proceso
-produce|producir
-protect|proteger
-provide|proporcionar
-public|público
-purpose|propósito
-quality|calidad
-quantity|cantidad
-reason|razón
-receive|recibir
-recent|reciente
-recognize|reconocer
-reduce|reducir
-refuse|negarse, rechazar
-region|región
-relationship|relación
-remain|permanecer, seguir
-remove|quitar, eliminar
-repair|reparar
-replace|sustituir
-reply|responder
-report|informe
-require|requerir, exigir
-research|investigación
-respect|respeto
-responsible|responsable
-result|resultado
-reveal|revelar
-reward|recompensa
-risk|riesgo
-role|papel
-rule|regla
-safety|seguridad
-salary|sueldo
-search|buscar
-select|seleccionar
-separate|separado
-serious|serio, grave
-service|servicio
-share|compartir
-similar|similar, parecido
-simple|sencillo
-situation|situación
-skill|habilidad
-society|sociedad
-solve|resolver
-source|fuente
-special|especial
-spread|extenderse, difundir
-standard|norma, nivel
-steady|estable, constante
-structure|estructura
-struggle|luchar, esforzarse
-succeed|tener éxito
-suggest|sugerir, indicar
-supply|suministro
-support|apoyar
-surface|superficie
-survive|sobrevivir
-system|sistema
-task|tarea
-technology|tecnología
-temperature|temperatura
-tend|tender a
-theory|teoría
-threat|amenaza
-tradition|tradición
-transport|transporte
-trust|confiar en
-typical|típico
-useful|útil
-value|valor
-variety|variedad
-various|varios, diversos
-view|opinión, vista
-visible|visible
-volunteer|voluntario
-waste|desperdiciar
-wealth|riqueza
-weigh|pesar
-wonder|preguntarse
-worth|que vale, digno de
-youth|juventud
+price|precio
+print|imprimir
+prison|prisión
+prize|premio

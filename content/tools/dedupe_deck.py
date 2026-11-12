@@ -7,8 +7,8 @@ import glob, os, re
 
 root = os.path.join(os.path.dirname(__file__), "..", "..", "mobile", "assets", "deck")
 files = sorted(glob.glob(os.path.join(root, "*.txt")))
-base = [f for f in files if re.fullmatch(r"[1-5]-[a-z]+\.txt", os.path.basename(f)) or os.path.basename(f) in ("toefl.txt", "ielts.txt")]
-more = [f for f in files if re.fullmatch(r"[1-5]-[a-z]+-[a-z]+\.txt", os.path.basename(f))]
+base = [f for f in files if re.fullmatch(r"[1-6]-[a-z]+\.txt", os.path.basename(f)) or os.path.basename(f) in ("toefl.txt", "ielts.txt")]
+more = [f for f in files if re.fullmatch(r"[1-6]-[a-z]+-[a-z]+\.txt", os.path.basename(f))]
 
 
 def words(line, banner):

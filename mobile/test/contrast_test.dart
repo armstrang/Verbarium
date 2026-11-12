@@ -26,8 +26,8 @@ void main() {
         'bad on paper': [p.bad, p.bg],
         'bad on field': [p.bad, p.field],
         'paper on ink (chosen option)': [p.bg, p.ink],
-        for (var r = 0; r < 6; r++) 'button text on tincture $r': [p.onAccent, p.tincture(r)],
-        for (var r = 0; r < 6; r++) 'tincture $r as text on paper': [p.tincture(r), p.bg],
+        for (var r = 0; r < p.tinctures.length; r++) 'button text on tincture $r': [p.onAccent, p.tincture(r)],
+        for (var r = 0; r < p.tinctures.length; r++) 'tincture $r as text on paper': [p.tincture(r), p.bg],
       };
       final low = [
         for (final e in pairs.entries)
@@ -38,7 +38,7 @@ void main() {
 
     test('${entry.key}: lines and tinctures stand out from the paper (3:1 for shapes)', () {
       final low = [
-        for (var r = 0; r < 6; r++)
+        for (var r = 0; r < p.tinctures.length; r++)
           if (ratio(p.tincture(r), p.bg) < 3) 'tincture $r',
       ];
       expect(low, isEmpty);

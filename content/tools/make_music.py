@@ -9,9 +9,12 @@ One short theme belongs to the Chronicler, the player. It never changes; the way
                          every time, a low D never stops, the cadence never lands. High violins hint at the King.
   m3 Baron    Kadipaten  A minor: two harpsichord voices chase each other (a canon) over low strings; a brief
                          memory of the recorder from the village. Then an empty hall.
-  m4 Duke     menuju Takhta  E lydian, slow: the theme at half speed on glockenspiel and harp over hanging
+  m4 Count    Marka      B minor, a night watch on the border wall: low strings hold, the solo violin plays the theme
+                         and breaks off where the Fog begins, a far horn calls and nothing answers, a side drum walks
+                         the wall. Then wind on the battlements.
+  m5 Duke     menuju Takhta  E lydian, slow: the theme at half speed on glockenspiel and harp over hanging
                          strings, a low flute; it ends suspended. Crickets.
-  m5 King     Takhta     D major: the recorder alone, as in the village; then strings and horn, borrowed minor
+  m6 King     Takhta     D major: the recorder alone, as in the village; then strings and horn, borrowed minor
                          chords, and the theme comes home for the first time; then the recorder and the wind again.
   battle                 D minor, 120: pizzicato ostinato, timpani, side drum; the horn plays the theme twisted
                          (its notes bent to Phrygian), and the Chronicler's own theme tries to break through.
@@ -470,6 +473,38 @@ def baron(k):
     mx.render('m3', rt=3.0)
 
 
+def count(k):
+    """Marka. B minor, a night watch on the border wall: low strings hold, the solo violin plays the theme and breaks
+    off where the Fog begins, a far horn calls and nothing answers, a side drum walks the wall. Then wind."""
+    beat = 60 / 60; bar = 4 * beat
+    pads = [['B2', 'F#3', 'D4'], ['G2', 'D3', 'B3'], ['E2', 'B2', 'G3'], ['F#2', 'C#3', 'A#3']] * 3
+    music = len(pads) * 2 * bar + 6
+    L = music + 38
+    mx = Mix(L)
+    mx.add(wind(L, 1.0), 0, 0, .05, .15, 'place')
+    t = 1.0
+    for ch in pads:
+        chord(mx, k['cellos'], ch[:2], t, 2 * bar, gain=.11, vel=.45, spread=.3)
+        chord(mx, k['violas'], ch[2:], t, 2 * bar, gain=.07, vel=.4)
+        mx.add(k['bass'].note(midi(ch[0]) - 12, 2 * bar, .45), t, .2, .11, .3, 'low')
+        # the watch walks the wall, far off
+        for j, d in enumerate((0, .5, 1.0, 1.75)):
+            mx.add(k['snare'].hit(.18 if j < 3 else .26), t + 4 * beat + d * beat, .55, .07, .85, 'drum')
+        t += 2 * bar
+    # the theme in B minor on the solo violin, twice; the second time the Fog takes its end
+    whole = P("F#4:1 B4:1.5 C#5:.5 D5:2 C#5:1 B4:1 G4:2 r:7")
+    broken = P("F#4:1 B4:1.5 C#5:.5 D5:3 r:10")
+    t = play(mx, k['fiddle'], whole, 1 + 2 * bar, beat, pan=-.1, gain=.42, vel=.5, rubato=.07, tag='violin')
+    t = play(mx, k['fiddle'], broken, t, beat * 1.05, pan=-.1, gain=.4, vel=.45, rubato=.09, tag='violin')
+    # a horn from the next tower; nothing answers
+    play(mx, k['horn'], P("F#3:1 B3:2.5 A3:.5 F#3:3"), 1 + 12 * bar, beat, pan=.6, gain=.24, send=.9, vel=.5, tag='horn')
+    play(mx, k['fiddle'], P("D5:1 C#5:1 B4:2 A#4:6"), 1 + 18 * bar, beat * 1.1, pan=-.1, gain=.36, vel=.42, rubato=.06, tag='violin')
+    end = 1 + len(pads) * 2 * bar
+    chord(mx, k['cellos'], ['F#2', 'C#3'], end, 3 * bar, gain=.1, vel=.4, spread=.3)
+    mx.add(k['fiddle'].note(midi('A#4'), 3 * bar, .35), end + .2, -.1, .2, .7, 'violin')
+    mx.render('m4', rt=3.2)
+
+
 def duke(k):
     """Toward the Throne. The theme at half speed on glockenspiel and harp over strings that hang; crickets."""
     beat = 60 / 56
@@ -490,7 +525,7 @@ def duke(k):
     play(mx, k['glock'], slow, 3, beat, pan=.3, gain=.45, send=.6, vel=.5, rubato=.05, tag='glock')
     play(mx, k['harp'], P("B3:2 E4:3 F#4:1 G#4:4 F#4:2 E4:2 C#4:4"), 3, beat, pan=-.3, gain=.3, send=.55, vel=.5, rubato=.05, tag='harp')
     play(mx, k['flute'], flute, 3 + 20 * beat, beat, pan=0, gain=.32, send=.5, vel=.45, rubato=.06, tag='flute')
-    mx.render('m4', rt=3.8)
+    mx.render('m5', rt=3.8)
 
 
 def king(k):
@@ -535,7 +570,7 @@ def king(k):
     # 4. the village again: the recorder, now coming home quietly
     play(mx, k['recorder'], P("A4:1 D5:1.5 E5:.5 F#5:2 E5:1 D5:1 B4:2 A4:1 D5:5"), t + 2, beat * 1.1, pan=.1, gain=.42, vel=.45, rubato=.08,
          tag='recorder')
-    mx.render('m5', rt=3.4)
+    mx.render('m6', rt=3.4)
 
 
 def battle(k):
@@ -689,7 +724,7 @@ def sfx(k):
 
 
 if __name__ == '__main__':
-    jobs = {'m0': peasant, 'm1': squire, 'm2': knight, 'm3': baron, 'm4': duke, 'm5': king, 'battle': battle, 'sfx': sfx}
+    jobs = {'m0': peasant, 'm1': squire, 'm2': knight, 'm3': baron, 'm4': count, 'm5': duke, 'm6': king, 'battle': battle, 'sfx': sfx}
     k = kit()
     for name in (sys.argv[1:] or jobs):
         jobs[name](k)

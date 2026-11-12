@@ -88,6 +88,7 @@ class MainActivity : FlutterActivity() {
         "m3" to R.raw.m3,
         "m4" to R.raw.m4,
         "m5" to R.raw.m5,
+        "m6" to R.raw.m6,
         "battle" to R.raw.battle,
     )
 

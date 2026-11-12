@@ -32,16 +32,17 @@ void main() {
     return g.onPromotion(tier, flawless).$1;
   }
 
-  test('the tree: 37 jobs on the map, 6 hidden, every name and id once', () {
-    expect(Jobs.visible.length, 37);
-    expect(Jobs.secret.length, 6);
+  test('the tree: 45 jobs on the map, 7 hidden, every name and id once', () {
+    expect(Jobs.visible.length, 45);
+    expect(Jobs.secret.length, 7);
     expect(Jobs.all.map((j) => j.id).toSet().length, Jobs.all.length);
     expect(Jobs.all.map((j) => j.name).toSet().length, Jobs.all.length);
-    expect([for (var t = 0; t <= 5; t++) Jobs.tier(t).length], [1, 4, 8, 12, 8, 4]);
+    expect([for (var t = 0; t <= 6; t++) Jobs.tier(t).length], [1, 4, 8, 12, 8, 8, 4]);
     for (final j in Jobs.all) {
       expect(j.hint, isNotEmpty);
       expect(j.id == 'peasant' || j.perk.kind != 'none', isTrue, reason: j.id);
-      if (j.id != 'peasant') expect(j.perk.text, isNot(contains('Belum ada')), reason: '${j.id} has a perk the app can describe');
+      if (j.id != 'peasant')
+        expect(j.perk.text, isNot(contains('Belum ada')), reason: '${j.id} has a perk the app can describe');
     }
   });
 
@@ -54,7 +55,7 @@ void main() {
             for (final gap in [40, 2]) Build([for (var i = 0; i < 4; i++) i == a ? 100 : (i == b ? 100 - gap : 10)]),
     ];
     void walk(Job parent, int tier) {
-      if (tier > 5) return;
+      if (tier > 6) return;
       for (final b in builds) {
         for (final c in builds) {
           final j = Jobs.natural(tier, parent, b, c);
@@ -194,7 +195,16 @@ void main() {
     expect(q.text, isNot(idText));
     expect(g.advice().join(' '), isNot(contains('kata')));
     expect(Game.feats.first.name, 'The first step');
-    const w = Word('abandon', ['abandon'], 'v', 'meninggalkan', 'They had to ___ the ship.', 2, [], 'to leave something for good');
+    const w = Word(
+      'abandon',
+      ['abandon'],
+      'v',
+      'meninggalkan',
+      'They had to ___ the ship.',
+      2,
+      [],
+      'to leave something for good',
+    );
     expect(w.gloss, 'to leave something for good');
     lang.english = false;
     expect(w.gloss, 'meninggalkan');

@@ -1,0 +1,700 @@
+abide|respecter (abide by)
+abolish|abolir
+abolition|abolition
+abound|abonder
+absence|absence
+abstraction|abstraction
+absurd|absurde
+abundance|abondance
+abuse|abus
+accelerate|accélérer
+accessible|accessible
+accessory|accessoire
+acclaim|acclamation, éloges
+acclimatize|s’acclimater
+accord|accord
+accordingly|en conséquence
+accountability|responsabilité
+accountable|responsable
+accrue|s’accumuler
+accumulate|accumuler
+accumulation|accumulation
+accusation|accusation
+acquisition|acquisition
+acquit|acquitter
+activism|militantisme
+acute|aigu
+adaptation|adaptation
+adhere|adhérer, respecter
+adherence|respect, adhésion
+adjacent|adjacent
+adjoin|jouxter
+administer|administrer
+admirable|admirable
+admission|admission, entrée
+admittedly|il faut l’admettre
+adolescence|adolescence
+adolescent|adolescent
+adorn|orner
+advent|avènement
+adversary|adversaire
+adverse|défavorable
+advisory|consultatif
+advocacy|défense, plaidoyer
+advocate|préconiser, défendre
+aerial|aérien
+aesthetic|esthétique
+affection|affection
+affinity|affinité
+affirmative|affirmatif
+affliction|affliction, mal
+affluent|aisé
+aftermath|suites, lendemain
+aggravate|aggraver
+aggregate|global, total
+aggression|agression
+agility|agilité
+agitate|agiter, inquiéter
+ailment|affection, mal
+albeit|bien que
+alert|vigilant, alerte
+alienate|éloigner, aliéner
+align|aligner
+alignment|alignement
+alike|pareil, de même
+allegation|allégation
+allege|alléguer, prétendre
+allegedly|prétendument
+allegiance|allégeance
+alleviate|atténuer
+alliance|alliance
+allocate|allouer
+allot|attribuer
+allowance|allocation, argent de poche
+ally|allié
+aloud|à voix haute
+alteration|modification
+altitude|altitude
+amateur|amateur
+ambassador|ambassadeur
+ambiguity|ambiguïté
+ambivalent|ambivalent
+amend|modifier, amender
+amenity|équipement, commodité
+amid|au milieu de
+amnesty|amnistie
+ample|ample, largement suffisant
+amplify|amplifier
+analogous|analogue
+analogy|analogie
+anarchy|anarchie
+anatomy|anatomie
+anecdote|anecdote
+anguish|angoisse
+annex|annexer
+anomaly|anomalie
+anonymous|anonyme
+antiquity|antiquité
+apathetic|apathique
+appalling|épouvantable
+apparatus|appareil, dispositif
+appetite|appétit
+applaud|applaudir
+appliance|appareil ménager
+applicable|applicable
+appoint|nommer
+appraisal|évaluation
+apprehend|appréhender
+apprehension|appréhension
+apprentice|apprenti
+arbitrary|arbitraire
+arbitrate|arbitrer
+arbitration|arbitrage
+archive|archives
+arena|arène
+aristocrat|aristocrate
+aroma|arôme
+array|ensemble, gamme
+artefact|artefact
+articulate|formuler clairement
+artisan|artisan
+ascend|monter
+ascent|ascension
+ascertain|établir, vérifier
+ascribe|attribuer
+aspirant|aspirant
+aspiration|aspiration
+aspire|aspirer
+assail|assaillir
+assassinate|assassiner
+assault|agression, assaut
+assemble|assembler, se rassembler
+assembly|assemblée, montage
+assert|affirmer
+assertion|affirmation
+assimilate|assimiler
+assortment|assortiment
+assurance|assurance, garantie
+asylum|asile
+atrocity|atrocité
+attain|atteindre
+attainment|réussite
+attentive|attentif
+attribute|attribuer
+audible|audible
+audit|audit
+augment|augmenter
+austere|austère
+austerity|austérité
+authentic|authentique
+authoritarian|autoritaire
+authoritative|qui fait autorité
+authorize|autoriser
+autonomy|autonomie
+aversion|aversion
+avert|éviter, détourner
+aviation|aviation
+await|attendre
+backdrop|toile de fond
+backlash|réaction hostile
+baffle|déconcerter
+bait|appât
+ballot|scrutin
+bane|fléau
+bare|nu
+barren|stérile, aride
+bay|baie
+beam|rayon, poutre
+beforehand|à l’avance
+behalf|au nom de (on behalf of)
+bemoan|déplorer
+benchmark|référence, repère
+beneath|sous
+beneficiary|bénéficiaire
+benevolent|bienveillant
+benign|bénin
+betray|trahir
+bewilder|déconcerter
+bigotry|sectarisme
+bilateral|bilatéral
+bind|lier
+binding|contraignant
+biography|biographie
+bizarre|bizarre
+blasphemy|blasphème
+blast|explosion
+blatant|flagrant
+bleak|sombre, morne
+bleed|saigner
+blend|mélanger
+bless|bénir
+blockade|blocus
+blueprint|plan, schéma directeur
+blunt|émoussé, franc
+boast|se vanter
+bolster|renforcer
+bombard|bombarder
+bondage|servitude
+boom|essor, boom
+bounce|rebondir
+boundary|limite, frontière
+boycott|boycotter
+brace|se préparer
+breach|violation
+breakdown|panne, ventilation
+breakthrough|percée
+breed|élever, se reproduire
+brink|bord, seuil
+bristle|se hérisser
+brochure|brochure
+browse|feuilleter, parcourir
+brutal|brutal
+buffer|tampon
+bulk|majeure partie
+bulky|encombrant
+bulwark|rempart
+buoy|soutenir, remonter
+burden|fardeau
+burdensome|pesant
+bureaucracy|bureaucratie
+burst|éclater
+bypass|contourner
+cabinet|placard, cabinet
+calibre|calibre, envergure
+canon|canon
+canvass|démarcher, sonder
+capability|capacité
+capitalism|capitalisme
+captive|captif
+cardinal|cardinal, fondamental
+cargo|cargaison
+cartel|cartel
+carve|sculpter, graver
+cascade|cascade
+casualty|victime
+cataclysm|cataclysme
+catalyst|catalyseur
+catastrophe|catastrophe
+cater|répondre aux besoins
+cattle|bétail
+causal|causal
+caution|prudence
+cautious|prudent
+cavalry|cavalerie
+cease|cesser
+cemetery|cimetière
+centralize|centraliser
+ceramic|en céramique
+chaos|chaos
+charisma|charisme
+charm|charme
+charter|charte
+choreograph|chorégraphier
+chronic|chronique
+chronological|chronologique
+circulate|circuler
+civic|civique
+civilian|civil
+clamour|clameur
+clarity|clarté
+clash|affrontement
+clergy|clergé
+climax|apogée, point culminant
+cling|s’accrocher
+coalition|coalition
+coarse|grossier, rêche
+coerce|contraindre
+cognitive|cognitif
+cohort|cohorte
+coincide|coïncider
+collaborate|collaborer
+collaborative|collaboratif
+collective|collectif
+collision|collision
+colloquial|familier
+colonial|colonial
+combat|combattre
+commemorate|commémorer
+commemoration|commémoration
+commence|commencer
+commend|louer
+commentary|commentaire
+commerce|commerce
+commodity|marchandise, matière première
+commonplace|banal, courant
+communal|commun, communautaire
+companion|compagnon
+compartment|compartiment
+compassion|compassion
+compatriot|compatriote
+compel|contraindre
+compelling|convaincant
+compendium|recueil, abrégé
+compensate|compenser
+compensation|indemnisation
+competence|compétence
+competent|compétent
+compile|compiler
+complacent|suffisant, satisfait
+complement|compléter
+complementary|complémentaire
+complexity|complexité
+compliance|conformité
+complication|complication
+comply|se conformer
+composition|composition
+comprehension|compréhension
+compromise|compromis
+comrade|camarade
+conceal|dissimuler
+concede|concéder
+conceit|vanité
+conceivable|concevable
+conceive|concevoir
+conception|conception
+conceptual|conceptuel
+concession|concession
+concurrent|simultané
+condemn|condamner
+condemnation|condamnation
+condense|condenser
+confederate|allié, complice
+confer|conférer, délibérer
+configuration|configuration
+confine|limiter
+confinement|enfermement
+confiscate|confisquer
+conflagration|incendie, embrasement
+confluence|confluent
+conformity|conformité
+confront|affronter
+conjunction|conjonction
+conjure|faire apparaître, évoquer
+connotation|connotation
+conquer|conquérir
+conquest|conquête
+conscience|conscience (morale)
+consecutive|consécutif
+consensus|consensus
+consent|consentement
+consolation|consolation
+consolidate|consolider
+consortium|consortium
+conspicuous|voyant
+constituent|composant, électeur
+constitute|constituer
+constitution|constitution
+constitutional|constitutionnel
+constraint|contrainte
+construe|interpréter
+contemplate|envisager, contempler
+contemplation|contemplation
+contempt|mépris
+contend|soutenir, rivaliser
+contender|prétendant
+contention|thèse, litige
+contentious|litigieux
+contingency|éventualité
+continuity|continuité
+contour|contour
+contraband|contrebande
+contraption|engin bizarre
+contrary|contraire
+convalescence|convalescence
+convene|convoquer, se réunir
+converge|converger
+convergence|convergence
+conversely|inversement
+conversion|conversion
+convict|condamner
+conviction|conviction, condamnation
+convoy|convoi
+cooperate|coopérer
+coordinate|coordonner
+copyright|droit d’auteur
+corpus|corpus
+correlate|être corrélé
+correlation|corrélation
+correspond|correspondre
+correspondence|correspondance
+corrosion|corrosion
+corrupt|corrompu
+counterpart|homologue
+covenant|pacte, alliance
+covert|secret, voilé
+craftsmanship|savoir-faire
+crawl|ramper
+credential|qualification, référence
+credibility|crédibilité
+credible|crédible
+cripple|paralyser
+crossroads|carrefour
+crucible|creuset
+crude|grossier, brut
+crusade|croisade
+crush|écraser
+crystallize|cristalliser
+cuisine|cuisine (gastronomie)
+culminate|culminer
+culmination|aboutissement
+cultivate|cultiver
+cumulative|cumulatif
+curator|conservateur
+curb|freiner
+curtail|restreindre
+customary|habituel
+cynical|cynique
+dampen|humidifier, refroidir
+daunt|intimider
+daunting|intimidant
+dawn|aube
+dazzle|éblouir
+debase|avilir
+debris|débris
+debut|débuts
+decadent|décadent
+deceive|tromper
+deception|tromperie
+decisive|décisif
+decree|décret
+deem|juger
+deface|dégrader
+defamation|diffamation
+default|défaut de paiement
+defect|défaut
+defection|défection
+deficiency|carence
+deficit|déficit
+deflect|détourner
+defraud|escroquer
+defy|défier
+degenerate|dégénérer
+degrade|dégrader
+deity|divinité
+dejected|abattu
+delegate|délégué
+delegation|délégation
+deliberation|délibération
+delicate|délicat
+delinquent|délinquant
+delirious|délirant
+delusion|illusion
+demise|disparition, fin
+demolish|démolir
+denial|déni, démenti
+denomination|confession, coupure
+denote|dénoter
+denounce|dénoncer
+dense|dense
+density|densité
+depict|représenter
+depiction|représentation
+deplete|épuiser
+deplorable|déplorable
+deploy|déployer
+deport|expulser
+depot|dépôt
+deprive|priver
+deputy|adjoint
+deregulate|déréglementer
+deride|tourner en dérision
+derogatory|péjoratif
+descend|descendre
+descendant|descendant
+descent|descente, ascendance
+desecrate|profaner
+designate|désigner
+despise|mépriser
+detain|détenir
+detention|détention
+deteriorate|se détériorer
+deterrence|dissuasion
+devalue|dévaluer
+devastate|dévaster
+deviate|s’écarter
+deviation|écart
+devil|diable
+devise|concevoir
+diagnose|diagnostiquer
+diagnosis|diagnostic
+diagnostic|diagnostique
+dialect|dialecte
+dictate|dicter
+dictator|dictateur
+differentiate|différencier
+diffuse|diffuser
+diffusion|diffusion
+dignity|dignité
+dilemma|dilemme
+diligence|application, diligence
+diligent|appliqué
+dilute|diluer
+dimension|dimension
+diminish|diminuer
+diplomacy|diplomatie
+diplomat|diplomate
+dire|terrible, désastreux
+directive|directive
+disarm|désarmer
+disbelief|incrédulité
+discard|jeter
+discern|discerner
+discharge|libérer, décharger
+disciple|disciple
+disclose|divulguer
+disclosure|divulgation
+discontent|mécontentement
+discourse|discours
+discredit|discréditer
+discrepancy|écart
+discrete|distinct, séparé
+discretion|discrétion, discernement
+disdain|dédain
+disgrace|disgrâce, honte
+disillusion|désillusionner
+disintegrate|se désintégrer
+dismal|lugubre, lamentable
+dismantle|démanteler
+dismay|consternation
+disobey|désobéir
+disorient|désorienter
+disparity|disparité
+dispatch|expédier
+dispense|distribuer
+dispersal|dispersion
+displace|déplacer, supplanter
+displacement|déplacement
+disposal|élimination
+dispose|se débarrasser de
+disposition|tempérament
+disproportionate|disproportionné
+dispute|litige, conflit
+disqualify|disqualifier
+disregard|ne pas tenir compte de
+disrepute|discrédit
+disrupt|perturber
+dissatisfaction|insatisfaction
+disseminate|diffuser
+dissent|désaccord
+dissident|dissident
+dissolve|dissoudre
+distil|distiller
+distinction|distinction
+distinctive|distinctif
+distort|déformer
+distress|détresse
+diversify|diversifier
+divert|détourner
+divine|divin
+docile|docile
+doctrine|doctrine
+domain|domaine
+donor|donateur, donneur
+dosage|posologie
+dose|dose
+drain|vider, drainer
+drastic|radical
+drift|dériver
+drown|se noyer
+drudgery|corvée
+dual|double
+dubious|douteux
+duplicate|dupliquer
+durable|durable
+dwindle|diminuer
+dynasty|dynastie
+eager|impatient, avide
+earnest|sérieux, sincère
+earnings|revenus
+ease|soulager
+eccentric|excentrique
+eclipse|éclipse
+ecology|écologie
+efficacy|efficacité
+effigy|effigie
+elaborate|développer
+elasticity|élasticité
+electoral|électoral
+electorate|électorat
+elegance|élégance
+elevate|élever
+elevation|élévation, altitude
+elicit|susciter, obtenir
+eligible|admissible
+elimination|élimination
+elite|élite
+eloquent|éloquent
+elusive|insaisissable
+emanate|émaner
+embargo|embargo
+embark|se lancer, embarquer
+embassy|ambassade
+embed|intégrer, ancrer
+embezzle|détourner (des fonds)
+embody|incarner
+embryo|embryon
+emigrate|émigrer
+eminence|éminence
+eminent|éminent
+emissary|émissaire
+empathize|compatir
+empathy|empathie
+emphatic|catégorique
+empirical|empirique
+empower|donner du pouvoir
+emulate|imiter, émuler
+enact|promulguer
+enactment|promulgation
+enchant|enchanter
+encode|coder
+encompass|englober
+endeavor|effort, entreprise
+endorse|approuver, soutenir
+endorsement|soutien, approbation
+endurance|endurance
+endure|endurer, durer
+enforce|faire respecter
+enforcement|application (de la loi)
+engrave|graver
+enlist|s’engager, recruter
+enormity|énormité
+enrage|rendre furieux
+enrich|enrichir
+ensemble|ensemble
+ensue|s’ensuivre
+entail|entraîner, impliquer
+entangle|empêtrer
+enterprise|entreprise
+enthral|captiver
+entice|attirer, tenter
+entitle|donner droit
+entity|entité
+entrenched|enraciné
+entrust|confier
+epic|épopée
+epidemic|épidémie
+equality|égalité
+equate|assimiler
+equation|équation
+equestrian|équestre
+equilibrium|équilibre
+equitable|équitable
+equivocal|équivoque
+eradicate|éradiquer
+eradication|éradication
+erect|ériger
+erode|éroder
+erosion|érosion
+eruption|éruption
+escalate|s’intensifier
+essence|essence
+esteem|estime
+eternal|éternel
+evacuate|évacuer
+evacuation|évacuation
+evade|éviter, éluder
+evict|expulser
+evoke|évoquer
+exacerbate|exacerber
+exaggerate|exagérer
+exasperate|exaspérer
+excavation|fouille
+excel|exceller
+exceptional|exceptionnel
+excess|excès
+excise|accise
+exclusion|exclusion
+exclusive|exclusif
+excursion|excursion
+execute|exécuter
+execution|exécution
+exemplary|exemplaire
+exemplify|illustrer
+exemption|exonération
+exert|exercer
+exertion|effort
+exhilarate|exalter
+exile|exil
+expanse|étendue
+expectancy|espérance (de vie)
+expel|expulser
+expenditure|dépenses
+experimental|expérimental
+expire|expirer
+expiry|expiration
+explanatory|explicatif
+explicit|explicite
+exploitation|exploitation
+exquisite|exquis
+extermination|extermination
+extinct|éteint, disparu
+extinction|extinction
+extravagant|dépensier, extravagant
+extremist|extrémiste
+exuberance|exubérance
+fabricate|inventer, fabriquer
+facet|facette
+facilitate|faciliter
+faction|faction
+fade|s’estomper
+falter|vaciller

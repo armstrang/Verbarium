@@ -123,6 +123,21 @@ class _B {
     }
   }
 
+  /// a drawing given as rows of letters; each letter names a material in [key] ('.' and unknown letters stay empty)
+  void grid(int x0, int y0, List<String> rs, Map<String, String> key) {
+    n++;
+    for (var dy = 0; dy < rs.length; dy++) {
+      for (var dx = 0; dx < rs[dy].length; dx++) {
+        final mat = key[rs[dy][dx]];
+        if (mat != null) put(x0 + dx, y0 + dy, mat);
+      }
+    }
+  }
+
+  /// the same, with each row written as its left half and mirrored into the right
+  void mirrored(int x0, int y0, List<String> half, Map<String, String> key) =>
+      grid(x0, y0, [for (final r in half) r + r.split('').reversed.join()], key);
+
   String? at(int x, int y) => x < 0 || y < 0 || x >= w || y >= h ? null : m[y * w + x];
 
   PixelArt render(Map<String, _T> pal, {bool mirror = false}) {
@@ -693,7 +708,7 @@ const _tint = [
   Color(0xFFC9682A),
 ];
 
-/// blade, by the weapon's grade: wood, iron, steel, bright steel, crystal, gold
+/// blade, by the weapon's grade: wood, iron, steel, bright steel, crystal, gold, blood steel
 const _weaponBlade = [
   Color(0xFF9A7B5A),
   Color(0xFFA8B0BA),
@@ -701,6 +716,7 @@ const _weaponBlade = [
   Color(0xFFE4EAF0),
   Color(0xFF9AD8FF),
   Color(0xFFF2D272),
+  Color(0xFFC4505E),
 ];
 const _weaponHilt = [
   Color(0xFF6E4A2E),
@@ -709,9 +725,10 @@ const _weaponHilt = [
   Color(0xFF1F3F73),
   Color(0xFF5A2A6B),
   Color(0xFF7A5A1C),
+  Color(0xFF2A1E28),
 ];
 
-/// shield: wood, iron, steel, silver, gold, bright gold
+/// shield: wood, iron, steel, silver, gold, bright gold, bone
 const _shieldTone = [
   Color(0xFF94643A),
   Color(0xFF8E959E),
@@ -719,6 +736,7 @@ const _shieldTone = [
   Color(0xFFAE2E28),
   Color(0xFF74408E),
   Color(0xFFE8BC3A),
+  Color(0xFFD8D0BC),
 ];
 const _cloakTone = [
   Color(0xFF7A5A3E),
@@ -727,6 +745,7 @@ const _cloakTone = [
   Color(0xFF3360AE),
   Color(0xFF74408E),
   Color(0xFFC9A03A),
+  Color(0xFF2A2433),
 ];
 
 Color _darker(Color c, double f) => Color.lerp(c, Colors.black, f)!;
@@ -766,8 +785,8 @@ PixelArt heroArt(
     },
   );
   final tint = _tint[garb.tint.clamp(0, _tint.length - 1)];
-  final cape = _cloakTone[cloak.clamp(0, 5)];
-  final sh = _shieldTone[shield.clamp(0, 5)];
+  final cape = _cloakTone[cloak.clamp(0, 6)];
+  final sh = _shieldTone[shield.clamp(0, 6)];
   final pal = <String, _T>{
     ..._common,
     'coat': _of(tint),
@@ -778,8 +797,8 @@ PixelArt heroArt(
     'gem': _of(cloak >= 0 ? cape : const Color(0xFFAE2E28)),
     'cape': _of(_darker(cape, .16)),
     'metal': tier >= 4 && heavy ? _of(const Color(0xFF6E7488)) : _steel,
-    'blade': _of(_weaponBlade[weapon.clamp(0, 5)]),
-    'grip': _of(_weaponHilt[weapon.clamp(0, 5)]),
+    'blade': _of(_weaponBlade[weapon.clamp(0, 6)]),
+    'grip': _of(_weaponHilt[weapon.clamp(0, 6)]),
     'shield': _of(sh),
     'charge': shield == 5 ? _of(tint) : _gold,
     'spark': _one(0xFF9AD8FF),
@@ -798,10 +817,23 @@ PixelArt heroArt(
 /// a = main colour, b = second colour, w = eye, blade or tusk, g = grip, s = skin, p = legs
 const _tones = <String, List<Map<String, Color>>>{
   'wolf': [
-    {'a': Color(0xFF8E8A9C), 'b': Color(0xFF4A4658), 'w': Color(0xFFFFE066)},
+    {'a': Color(0xFF5A5560), 'b': Color(0xFF2E2B33), 'w': Color(0xFFFF4A2E)},
+    {'a': Color(0xFF2A2730), 'b': Color(0xFF141217), 'w': Color(0xFFFF2A1A)},
   ],
   'boar': [
-    {'a': Color(0xFF7E5038), 'b': Color(0xFF3B271A), 'w': Color(0xFFF4F0E0)},
+    {'a': Color(0xFF5E3A28), 'b': Color(0xFF2A1A12), 'w': Color(0xFFFF4A2E)},
+  ],
+  'bat': [
+    {'a': Color(0xFF3A2E3E), 'b': Color(0xFF1E1622), 'w': Color(0xFFFF4A2E)},
+  ],
+  'count': [
+    {
+      'a': Color(0xFF221D28),
+      'b': Color(0xFF7A1420),
+      'w': Color(0xFFD9DEE4),
+      'g': Color(0xFF3B271A),
+      's': Color(0xFFD6D0DE),
+    },
   ],
   'bandit': [
     {
@@ -859,7 +891,7 @@ const _tones = <String, List<Map<String, Color>>>{
     {'a': Color(0xFF8C919C), 'w': Color(0xFFFF5A3C)},
   ],
   'dragon': [
-    {'a': Color(0xFF4E9E4A), 'b': Color(0xFFF2D27A), 'w': Color(0xFFFFE066)},
+    {'a': Color(0xFF8E1B16), 'b': Color(0xFFC9A54A), 'w': Color(0xFFFFE066)},
   ],
 };
 
@@ -882,12 +914,14 @@ PixelArt enemyArt(String sprite, int tone) {
     'w': _of(c('w', const Color(0xFFFFE066))),
     'eye': _one(c('w', const Color(0xFFFFE066)).toARGB32()),
     'stone': _of(a),
+    'b2': _of(_darker(a, .55)),
   };
   late PixelArt art;
   switch (sprite) {
-    case 'bandit' || 'knight' || 'skeleton' || 'mage':
+    case 'bandit' || 'knight' || 'skeleton' || 'mage' || 'count':
       final f = switch (sprite) {
         'bandit' => const _Fig(head: 1, arm: 4, mask: true),
+        'count' => const _Fig(head: 4, arm: 1, cape: true, heavy: true),
         'knight' => const _Fig(head: 2, arm: 1, heavy: true, visor: true, shield: true, cape: true),
         'skeleton' => const _Fig(head: 0, arm: 1, bone: true),
         _ => const _Fig(head: 3, arm: 5, robe: true, beard: true),
@@ -911,12 +945,16 @@ PixelArt enemyArt(String sprite, int tone) {
         if (sprite == 'skeleton') 'skin': _of(a),
         if (t['s'] != null) 'skin': _of(t['s']!),
         'hair': _of(const Color(0xFF3A3434)),
+        // the people you fight look back with burning eyes
+        'eyew': _one(0xFFFF4A2E),
+        'iris': _one(0xFFFFE066),
       });
       final b = _B(figW, figH);
       _figure(b, f, HeroPose.idle, 0);
       art = b.render(pal, mirror: true);
     default:
-      final b = _B(32, 32);
+      // the dragon, last of the guards, is drawn on a larger board
+      final b = sprite == 'dragon' ? _B(40, 30) : _B(32, 32);
       _beast(b, sprite);
       art = b.render(pal);
   }
@@ -926,24 +964,56 @@ PixelArt enemyArt(String sprite, int tone) {
 void _beast(_B b, String kind) {
   switch (kind) {
     case 'boar':
-      b.ell(18, 19, 12, 9, 'a');
-      b.rows(9, 9, ['#.#.#.#.#.#.#.#', '###############'], 'b');
-      for (final x in const [10, 15, 21, 26]) {
-        b.rect(x, 26, x + 2, 30, 'a');
-      }
-      b.rect(9, 30, 12, 30, 'b');
-      b.rect(14, 30, 17, 30, 'b');
-      b.ell(8, 18, 6.5, 6, 'a');
-      b.rows(5, 10, ['.##', '###'], 'a');
-      b.ell(2.5, 20, 3, 2.6, 'al');
-      b.n++;
-      b.put(1, 20, 'lash');
-      b.put(3, 20, 'lash');
-      b.rows(3, 22, ['#..', '##.', '.##'], 'w');
-      b.n++;
-      b.put(6, 15, 'ember');
-      b.put(7, 15, 'ember');
-      b.rows(29, 15, ['#', '##', '.#'], 'b');
+      // head low, tusks out, the back bristling
+      b.grid(
+        0,
+        15,
+        const [
+          '...........#.#.#.#.#............',
+          '..........d#d#d#d#d#d...........',
+          '.......dddaaaaaaaaaaaddd........',
+          '.....ddaaaaaaaaaaaaaaaaadd......',
+          '...ddaEaaaaaaaaaaaaaaaaaaad.....',
+          '..lallaaaaaaaaaaaaaaaaaaaaad.dd.',
+          '.lllaaaaaaaaaaaaaaaaaaaaaaaadad.',
+          'lnllaaaaaaaaaaaaaaaaaaaaaaaad...',
+          'llllWaaaaaaaaaaaaaaaaaaaaaaad...',
+          '.ddWWdaaaaaaaaaaaaaaaaaaaaad....',
+          '...W..daaaadddddddddddaaaad.....',
+          '......daaad.......daaaddaaad....',
+          '......daad........daad..daad....',
+          '......dad.........dad...dad.....',
+          '.....dddd........dddd..dddd.....',
+        ],
+        const {'a': 'a', 'd': 'ad', 'l': 'al', 'n': 'lash', 'E': 'ember', 'W': 'bone', '#': 'b'},
+      );
+    case 'bat':
+      // wings spread wide, eyes burning, fangs bared
+      b.mirrored(
+        0,
+        5,
+        const [
+          'A...............',
+          'AA..............',
+          'AAA.............',
+          'AAAA.........B..',
+          'AAAAA........BB.',
+          'AAAAAA......BBBB',
+          'AAAAAAA....BBBBB',
+          'AAAAAAAA..BBEEBB',
+          'AAAAAAAAABBBEEBB',
+          'AAAAAAAAABBBBBBB',
+          'AAAAAAAAABBBBBBB',
+          '.A.AAAAAABBBBWBB',
+          '...A.AAAABBBBWBB',
+          '.....A.AABBBBBBB',
+          '.......A.ABBBBBB',
+          '..........BBBBBB',
+          '...........BB.BB',
+          '...........B..BB',
+        ],
+        const {'A': 'ad', 'B': 'a', 'E': 'ember', 'W': 'bone'},
+      );
     case 'gargoyle':
       b.ox = 4;
       b.rows(0, 6, [
@@ -968,60 +1038,71 @@ void _beast(_B b, String kind) {
       b.rect(14, 28, 18, 30, 'a');
       b.rows(17, 26, ['....###', '..####.', '####...'], 'a');
     case 'dragon':
-      b.rows(15, 2, [
-        '..........#....',
-        '.........##....',
-        '........###..#.',
-        '.......####.##.',
-        '......########.',
-        '.....#########.',
-        '....##########.',
-        '...###########.',
-        '..############',
-        '.###.###.###.##',
-        '.##..##..##..#.',
-        '.#...#....#....',
-      ], 'ad');
-      b.rows(24, 21, ['..###', '.####', '####.', '##...', '#....'], 'a');
-      b.ell(15, 22, 9, 7.5, 'a');
-      b.ell(14, 24, 5.5, 4.5, 'b');
-      b.n++;
-      for (var y = 21; y <= 27; y += 2) {
-        b.span(y, 11, 17, 'b');
-      }
-      for (final x in const [9, 18]) {
-        b.rect(x, 27, x + 3, 30, 'a');
-      }
-      b.ell(9, 11, 7.5, 6.8, 'a');
-      b.rows(1, 11, ['#######', '########', '.#######'], 'a');
-      b.rows(3, 1, ['#.......#', '##.....##', '.##...##.'], 'bone');
-      b.rows(10, 4, ['.#.#.#'], 'ad');
-      b.n++;
-      for (final ex in const [6, 11]) {
-        b.rect(ex, 9, ex + 1, 11, 'eye');
-        b.put(ex + 1, 10, 'lash');
-      }
-      b.put(1, 12, 'lash');
-      b.rows(2, 14, ['#.#.#'], 'bone');
-    default: // wolf
-      b.rows(22, 12, ['...##', '..###', '.###.', '###..', '##...'], 'a');
-      b.ell(16, 21, 10, 6.5, 'a');
-      b.ell(15, 23.5, 6, 3, 'al', ymin: 23);
-      for (final x in const [8, 12, 18, 22]) {
-        b.rect(x, 26, x + 1, 30, 'a');
-      }
-      b.ell(10, 13, 7, 6.2, 'a');
-      b.rows(4, 4, ['##.......##', '###.....###', '####...####'], 'a');
-      b.rows(5, 5, ['#.......#', '##.....##'], 'b');
-      b.rows(1, 14, ['######', '#######', '.######'], 'al');
-      b.n++;
-      b.put(1, 14, 'lash');
-      b.put(2, 14, 'lash');
-      for (final ex in const [6, 11]) {
-        b.rect(ex, 11, ex + 1, 12, 'eye');
-        b.put(ex, 12, 'lash');
-      }
-      b.rows(3, 17, ['#.#.#'], 'bone');
+      // the last guard, side on: wing spread behind, fire between the teeth
+      b.grid(
+        0,
+        0,
+        const [
+          '.........W...W...............W..........',
+          '........W...W........W......Wv..........',
+          '........W..W.........Wv....Wvvv.........',
+          '.....aaWaaW.........Wvvv...Wvvv......W..',
+          '....aaaaaWaa........Wvvv..Wvvvvv...WWv..',
+          '...aaaaaaaaaa.......WvvvvWvvvvvv..Wvvv..',
+          '..aaaaaEEaaaaa.....WvvvvWvvvvvvvWWvvvv..',
+          '..aaaaaaaaaaaa.....WvvvWvvvvvvvWvvvvvv..',
+          'aaaaaaaaaaaaaa.....WvvWvvvvvvWWvvvvvv...',
+          'aaaaaaaaaaaaaa....WvvvWvvvvvWvvvvvvvv...',
+          'WWWWWWmaaaaaaad...WvvWvvvvWWvvvvvvvvv...',
+          'FFFFFmmaaaaaaaaa..WvWvvvvWvvvvvvvvvvv...',
+          'FFFFFmmm.aaaaaaaaWdWvvdWWvvvvvvvvvvvv...',
+          'FFFFFmma..aaaaaaaWvaaaaaaavvvvvvvvv.....',
+          'mWaWaWaa...aaaaaaaaaaaaaaaaavvvvvv......',
+          '.aaaaaaaa...aaaaaaaaaaaaaaaaaavv.......d',
+          '.a..........aaaaaaaaaaaaaaaaaaa........d',
+          '.............aaaaabbbbbaaaaaaaa.......dd',
+          '.............aaaabbbbbbbaaaaaaaa......dd',
+          '.............aaabbbbbbbbbaaaaaaa.....aad',
+          '.............aabbbbbbbbbbbaaaaaa.....aad',
+          '.............aabbbbbbbbbbbaaaaaa....aaaa',
+          '..............abbbbbbbbbbbaaaaa....aaaaa',
+          '..............aaaaabbbbbaaaaaaaaaaaaaaa.',
+          '...............aaaabbbbbaaaaaa.aaaaa....',
+          '...............aaaabbbbaaaaa.....a......',
+          '...............aaaaaaaaaaaaa............',
+          '...............aaaa.....aaaa............',
+          '...............aaaa.....aaaa............',
+          '..............WWWWWW...WWWWWW...........',
+        ],
+        const {'a': 'a', 'd': 'ad', 'v': 'b2', 'b': 'b', 'E': 'eye', 'W': 'bone', 'm': 'lash', 'F': 'ember'},
+      );
+    default: // wolf: head low, jaws open, hackles up, tail raised
+      b.grid(
+        0,
+        12,
+        const [
+          '......dd..dd....................',
+          '.....dad.dad....................',
+          '.....daadaad......d.d.d.d.......',
+          '....daaaaaaad....dadadadad......',
+          '...daaddaaaaaddddaaaaaaaaadd..dd',
+          '..daaEEaaaaaaaaaaaaaaaaaaaaad.da',
+          '.ddaaaaaaaaaaaaaaaaaaaaaaaaaadda',
+          'dlllaaaaaaaaaaaaaaaaaaaaaaaaaad.',
+          'WlWlWdaaaaaaaaaaaaaaaaaaaaaaad..',
+          'mmmmmmdaaaaaaaaaaaaaaaaaaaaad...',
+          'rmmmmmdaaaallllllaaaaaaaaaad....',
+          'WrWrWddaaallllllllaaaaaaaad.....',
+          '.lllldaaaddddddddddaaaaaadd.....',
+          '..dd.daaad........daaad.daad....',
+          '......daad........daad...daad...',
+          '.....daad.........daad...daad...',
+          '.....dad..........dad.....dad...',
+          '....dad..........dad......dad...',
+          '...WdWd.........WdWd.....WdWd...',
+        ],
+        const {'a': 'a', 'd': 'ad', 'l': 'al', 'E': 'ember', 'W': 'bone', 'm': 'lash', 'r': 'mouth'},
+      );
   }
 }
 
@@ -1213,6 +1294,63 @@ class _EnemySpriteState extends State<EnemySprite> with SingleTickerProviderStat
                 ),
               );
             },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// A foe on its own dark ground, the way the road shows it before a fight: a shadow under its feet and, behind a
+/// boss, a red glow. The ground stays dark by daylight too, so that the burning eyes read.
+class FoeStage extends StatelessWidget {
+  final String sprite;
+  final int tone;
+  final bool boss;
+  final double width;
+  const FoeStage({super.key, required this.sprite, this.tone = 0, this.boss = false, this.width = 96});
+
+  @override
+  Widget build(BuildContext context) {
+    final h = width * 0.88;
+    return ExcludeSemantics(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(4),
+        child: SizedBox(
+          width: width,
+          height: h,
+          child: Stack(
+            alignment: Alignment.bottomCenter,
+            children: [
+              const Positioned.fill(child: ColoredBox(color: Color(0xFF1E1C18))),
+              if (boss)
+                const Positioned.fill(
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: RadialGradient(
+                        center: Alignment(0, 0.5),
+                        radius: 0.8,
+                        colors: [Color(0x888E1B16), Color(0x001E1C18)],
+                      ),
+                    ),
+                  ),
+                ),
+              Positioned(
+                bottom: h * 0.07,
+                child: Container(
+                  width: width * 0.62,
+                  height: h * 0.07,
+                  decoration: BoxDecoration(
+                    color: const Color(0x99000000),
+                    borderRadius: BorderRadius.all(Radius.elliptical(width * 0.31, h * 0.035)),
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(bottom: h * 0.08),
+                child: EnemySprite(sprite: sprite, tone: tone, size: width * (boss ? 0.92 : 0.82)),
+              ),
+            ],
           ),
         ),
       ),

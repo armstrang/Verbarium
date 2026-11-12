@@ -397,10 +397,10 @@ class _OnboardingState extends State<Onboarding> {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    for (var r = 0; r <= 5; r++)
+                    for (var r = 0; r <= Engine.maxRank; r++)
                       Padding(
                         padding: const EdgeInsets.only(right: 10),
-                        child: Shield(r, width: 26.0 + r * 3),
+                        child: Shield(r, width: 24.0 + r * 2.5),
                       ),
                   ],
                 ),
@@ -690,7 +690,7 @@ class FightCard extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                EnemySprite(sprite: en.sprite, tone: en.tone, size: 60),
+                FoeStage(sprite: en.sprite, tone: en.tone, boss: en.boss, width: en.boss ? 118 : 100),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Column(
@@ -713,6 +713,10 @@ class FightCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 2),
                       Text(en.name, style: T.display(25, pal.ink)),
+                      if (en.threat.isNotEmpty) ...[
+                        const SizedBox(height: 2),
+                        Text(en.threat, style: T.display(15.5, pal.bad, italic: true)),
+                      ],
                     ],
                   ),
                 ),
@@ -723,10 +727,10 @@ class FightCard extends StatelessWidget {
               Text(
                 en.boss
                     ? tr(
-                        '${Engine.trialSize} kata, ${Engine.trialSeconds} detik tiap kata, tanpa petunjuk. Tumbang pada ${Engine.trialPass} pukulan; kamu kalah pada pukulan kelima yang meleset.',
-                        '${Engine.trialSize} words, ${Engine.trialSeconds} seconds each, no hints. It falls at ${Engine.trialPass} blows; you lose at the fifth blow that misses.',
-                        '${Engine.trialSize} palabras, ${Engine.trialSeconds} segundos cada una, sin pistas. Cae con ${Engine.trialPass} golpes; pierdes al quinto golpe fallado.',
-                        '${Engine.trialSize} mots, ${Engine.trialSeconds} secondes chacun, sans indice. Il tombe après ${Engine.trialPass} coups ; tu perds au cinquième coup manqué.',
+                        '${Engine.trialSize} kata, ${Engine.trialSeconds} detik tiap kata, tanpa petunjuk. Tumbang pada ${Engine.trialPass} pukulan; kamu kalah pada pukulan kelima yang meleset. Setelah separuh nyawanya hilang ia murka: ${Engine.rageCut} detik lebih sedikit tiap kata.',
+                        '${Engine.trialSize} words, ${Engine.trialSeconds} seconds each, no hints. It falls at ${Engine.trialPass} blows; you lose at the fifth blow that misses. Once half its life is gone it rages: ${Engine.rageCut} seconds fewer per word.',
+                        '${Engine.trialSize} palabras, ${Engine.trialSeconds} segundos cada una, sin pistas. Cae con ${Engine.trialPass} golpes; pierdes al quinto golpe fallado. Cuando pierde la mitad de su vida se enfurece: ${Engine.rageCut} segundos menos por palabra.',
+                        '${Engine.trialSize} mots, ${Engine.trialSeconds} secondes chacun, sans indice. Il tombe après ${Engine.trialPass} coups ; tu perds au cinquième coup manqué. Une fois la moitié de sa vie perdue, il entre en fureur : ${Engine.rageCut} secondes de moins par mot.',
                       )
                     : tr(
                         '${Engine.subSize} kata, ${Engine.trialSeconds + g.perk('subTime')} detik tiap kata. Tumbang pada ${Engine.subPass} pukulan; kamu punya ${Engine.subSize - Engine.subPass + 1 + g.perk('subHp')} nyawa.',

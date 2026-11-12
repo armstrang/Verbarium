@@ -1,261 +1,700 @@
-# Verbarium — plain English definitions for 1-squire.txt: word|definition
 ability|the power or skill to do something
-absence|the state of not being there
+abroad|in or to another country
 accept|to say yes to something offered
-accurate|correct in every detail
+accident|something bad that happens by chance
 achieve|to reach a goal by effort
+act|to do something
+action|something that is done
+active|doing things, busy and moving
 activity|something that people do
-admit|to say that something is true, often unwillingly
+add|to put something with something else
+address|the number and street where someone lives
+adult|a grown-up person
 advantage|something that helps you do better than others
+adventure|an exciting and unusual experience
+advertise|to tell the public about goods so that they buy them
 advice|what you tell someone they should do
 affect|to cause a change in something
-afford|to have enough money to pay for something
-agreement|a decision that two or more sides share
-aim|what you hope to do or reach
+afraid|feeling fear
+age|how old someone is
+agree|to have the same opinion
+air|the gas we breathe
+airport|a place where planes land and take off
+alive|living, not dead
 allow|to let someone do something
+alone|without other people
+alternative|another choice
+although|in spite of the fact that
+amaze|to surprise greatly
+amazing|very surprising and good
+among|in the middle of a group
 amount|how much there is of something
+analyse/analyze|to study the parts of something closely
 ancient|very old, from a time long ago
-announce|to tell people something officially
+angry|feeling strong dislike because of a wrong
+animal|a living thing that moves and is not a plant
+answer|to say or write something back to a question
+apartment|a set of rooms to live in, inside a larger building
+appear|to come into sight
+appearance|the way someone or something looks
 apply|to ask formally for a job or a place
+architect|a person who designs buildings
+architecture|the art and style of buildings
+area|a part of a place
 argue|to give reasons for a view, or to disagree in words
+argument|an angry talk between people who disagree
+army|a large group of soldiers who fight on land
 arrange|to plan or put things in order
+arrangement|a plan made with someone
+arrive|to reach a place
+artful|clever in a sly way
+article|a piece of writing in a newspaper
+artist|a person who paints or draws
+asleep|sleeping
+athlete|a person trained in sports
+attack|to try to hurt someone with force
 attend|to be present at an event
-attitude|the way you think and feel about something
+attention|careful looking or listening
+attractive|pleasant to look at
+audience|the people watching a show
+author|the writer of a book
+autumn|the season between summer and winter
 available|ready to be used or obtained
 average|usual, or found by dividing a total by the number of parts
 avoid|to keep away from something
-aware|knowing that something exists or is happening
+award|a prize for doing something well
+awful|very bad
+backbone|the main support
 background|the family, schooling and past that someone has
-balance|a state in which things are equal in weight or importance
+bank|a business that keeps and lends money
+beach|the sandy land beside the sea
+bear|to accept something unpleasant without complaining
+beat|to win against someone
 behave|to act in a certain way
-belief|something you think is true
+behind|at the back of
+believe|to think that something is true
+belong|to be owned by someone
+below|at a lower place than
 benefit|a good result or help that you get
+bill|a paper showing how much you must pay
+biology|the science of living things
+birth|the moment a baby comes into the world
+blank|with nothing written on it
+block|to stop something from getting past
+blood|the red liquid inside the body
+blow|to push air out of the mouth
+board|a flat piece of wood
+boil|to heat water until it makes steam
+bone|one of the hard white parts inside the body
+bored|tired because nothing is interesting
+boring|not interesting at all
 borrow|to take something and give it back later
-brief|lasting only a short time
+boss|the person in charge at work
+bottom|the lowest part
+brain|the organ in the head used for thinking
+breadth|the distance from side to side
+break|to make something come apart into pieces
+bridge|a structure that carries a road over a river
+bright|full of light
+brilliant|very clever or very bright
+bring|to carry something with you to a place
+build|to make a house or other structure
+burn|to be on fire
+business|the work of buying and selling
+busy|having a lot to do
+camera|a device for taking photos
+camp|a place where people sleep in tents
+capital|the city where a country's rulers work
+care|to feel that something matters
 career|the working life of a person in one field
+careful|taking trouble to avoid mistakes
+carry|to hold something and take it somewhere
+case|a matter for the police or a court
+cash|money in coins and notes
+castle|a large strong building with thick walls from old times
+catch|to take hold of something that is moving
 cause|the thing that makes something happen
-challenge|something hard that tests your ability
+celebrate|to do something happy for a special day
+celebrity|a famous person
+cell|the smallest living part of a body
+century|a hundred years
+certain|sure, without doubt
+chance|a time when something can be done
+change|to become or make different
 character|what a person is like, or a person in a story
+charity|an organization that helps people in need
+chart|a drawing that shows figures
+cheap|low in price
+check|to look at something to see that it is right
+chip|a very small piece that runs a computer
 choice|the act of picking between things
-claim|to say that something is true
+choose|to pick the one you want
+clear|easy to see or understand
+clever|quick to learn and understand
+climate|the usual weather of a place
+climb|to go up using hands and feet
+close|to shut
+clothes|things you wear on your body
+cloud|a white or grey mass in the sky that brings rain
+coach|a person who trains a team
+coast|the land next to the sea
+code|a set of signs or numbers with a hidden message
+colleague|a person you work with
 collect|to bring things together
+college|a place of study after school
+colour/color|red, blue, green and so on
+column|a regular piece by one writer in a newspaper
+comedy|a funny play or film
+comely|pleasant to look at
+comfortable|pleasant to sit in or wear
+comment|a remark that gives an opinion
 common|found often or shared by many
+communicate|to share information with others
+community|the people living in one area
+company|a business that makes or sells things
 compare|to look at how two things are alike or different
+compete|to try to win against others
+competition|an event in which people try to win
 complain|to say that you are not happy about something
 complete|to finish all of something
-concern|a feeling of worry
+computer|a machine that stores and works with information
+concert|a show of music for an audience
+concerted|done together with determination
 condition|the state that something is in
-confident|sure of your own ability
+conference|a large formal meeting
 connect|to join two things together
 consider|to think carefully about something
 contain|to have something inside
+context|the words or situation around something
+continent|one of the great land masses of the earth
 continue|to keep doing something
 control|to have power over how something works
-convince|to make someone believe something
+conversation|a talk between people
+cook|to make food ready by heating it
+cool|a little cold
+copy|to make something exactly like another
+corner|the place where two sides meet
+cornerstone|the most important base of something
 correct|right, with no mistakes
+cost|to have a price of
+count|to say numbers in order to find how many
+country|a land with its own government
+couple|two people together
+course|a series of lessons
+cover|to put something over another thing
+cower|to bend low in fear
+crazy|not sensible, mad
+cream|the thick fatty part of milk
 create|to make something new
+criminal|a person who breaks the law
+cross|to go from one side to the other
 crowd|a large number of people in one place
+cry|to have tears coming from the eyes
 culture|the ideas, art and way of life of a people
+cup|a small container to drink from
 customer|a person who buys from a shop or business
-damage|harm done to something
+cut|to divide with a knife
+cutback|a reduction in spending
+cycle|to ride a bike
+daily|happening every day
+danger|the chance of harm
+dangerous|likely to cause harm
+dark|with little or no light
+data|facts and numbers
+date|the day, month and year
+dead|no longer living
 deal|to take action on a problem
+dear|loved very much
+dearth|a lack
+death|the end of life
 decide|to choose after thinking
-decrease|to become or make smaller in number
+decision|a choice made after thinking
+deep|going far down
 degree|a title given by a university
-deliver|to take goods to a place
-demand|the wish of buyers for goods
+delicious|very good to eat
+department|one part of a large shop or organization
 depend|to need something or someone for support
+dependable|able to be trusted
 describe|to say what something is like
+desert|a dry land with sand and little rain
 design|to plan how something will look and work
+desk|a table for writing or working
 destroy|to break something so badly it cannot be used
 detail|a small fact or part
+detective|a police officer who solves crimes
 develop|to grow or make something grow
+device|a tool or machine made for a purpose
+dialogue/dialog|the spoken words in a film or book
+dictionary|a book that explains what words mean
+die|to stop living
 difference|the way in which things are not the same
-difficulty|a problem that makes something hard
+different|not the same
+difficult|hard to do
+digital|using computer signals
+dinner|the main meal of the evening
+direct|going straight, with nothing between
+direction|the way toward which something moves
+dirty|not clean
+disagree|to have another opinion
+disappear|to go out of sight
+disaster|a sudden event causing great harm
 discover|to find something for the first time
 discuss|to talk about something with others
 disease|an illness of people, animals or plants
+dish|food cooked in a certain way
 distance|the space between two places
-divide|to split into parts
-doubt|a feeling of not being sure
+document|an official paper
+downfall|a loss of power or success
+downstairs|on a lower floor of a building
+downturn|a fall in business activity
+drama|plays and acting
+draw|to make a picture with a pencil
+dream|pictures in the mind during sleep
+dress|to put on clothes
+drink|to take liquid into the mouth
+drive|to control a car
+drop|to let something fall
+drug|a medicine
+dry|not wet
+during|all through a time
+early|near the beginning, before the usual time
+earmark|to set aside for a purpose
 earn|to get money for work
-economy|the system of money, trade and work in a country
+earth|the planet we live on
+east|the direction where the sun rises
+easy|not hard
 education|teaching and learning, mostly at school
 effect|a change that something causes
-effort|hard work to do something
+electric|worked by power that runs through wires
+electricity|power that runs through wires and gives light
+electronic|using small electric parts like chips
+else|other, in addition
 employ|to pay someone to work for you
-encourage|to give someone hope or courage to act
+employee|a person paid to work for another
+employer|a person or company that pays others to work
+empty|with nothing inside
+end|to finish
 energy|the power needed to move, work or make heat
+engine|the machine that makes a car move
+engineer|a person who designs machines, roads or bridges
+enjoy|to get pleasure from
+enormous|very large
+enough|as much as is needed
+enter|to go into
 environment|the air, land and water around us
-equal|the same in size, number or value
-escape|to get away from a place or danger
+equipment|the tools needed for a job
+error|a mistake
+especially|more than usual, above all
+essay|a short piece of writing on one subject
+even|used to show that something is surprising
+evening|the last part of the day before night
 event|something that happens, often planned
+ever|at any time
+everywhere|in all places
 evidence|facts that show something is true
 exact|completely right, not near
-examine|to look at something closely
+exacting|demanding great care
+exam|a formal test of what you know
 example|one thing that shows what others are like
-exchange|to give one thing and get another
+excellent|very good indeed
+except|not including
+excited|happy and full of energy about something
+exercise|movement of the body to stay strong
+exist|to be real
 expect|to think that something will happen
+expensive|high in price
 experience|knowledge you get from doing things
 experiment|a test done to learn something
+expert|a person with special knowledge
 explain|to make something clear
 express|to show a feeling or idea in words
+expression|the look on a face
+extra|more than usual
+extreme|very great in degree
+fact|something known to be true
+factor|one of the things that cause a result
+factory|a building where goods are made
 fail|to not succeed
-familiar|well known to you
+fair|treating everyone in the same way
+fallout|the bad results of an event
+false|not true
+famous|known by many people
+far|at a great distance
+farm|land used for growing food and keeping animals
+fashion|the style of clothes liked at a certain time
+fat|the oily substance under the skin
+favourite/favorite|liked more than all others
+fear|the feeling of being afraid
 feature|an important part of something
+feed|to give food to
+feel|to be aware of through touch or the heart
+female|of the sex that can have babies
+festival|days of public celebration
+fever|a body heat higher than normal from illness
+few|not many
+fiction|stories about imagined people and events
+field|an open piece of land
+fight|to use force against someone
+figure|a number
+fill|to make full
 final|last in a series
-flood|a great amount of water covering dry land
+finally|at the end, after a long time
+find|to see or get something you were looking for
+fine|good, of high quality
+finger|one of the five long parts of the hand
+finish|to come to the end of something
+fire|flames and heat from something burning
+fit|to be the right size
+fix|to mend
+flat|level, without hills
+flight|a trip by plane
+floor|the part of a room you walk on
+fly|to move through the air
 focus|to give all your attention to one thing
+follow|to go after someone
 foreign|from another country
 forest|a large area covered with trees
-fuel|something burned to make heat or power
-function|the job that something does
+forget|to not remember
+fork|a tool with points for eating
+form|a paper with spaces to write in
+formal|following rules of polite or official style
+forward|toward the front
+free|costing nothing, or able to do as you like
+fresh|newly made or picked
+friendly|kind and pleasant to others
+front|the part that faces forward
+fruit|the sweet part of a plant that holds seeds
+full|with no space left inside
+fun|enjoyment
+funny|making you laugh
+furniture|chairs, tables, beds and so on
+further|at a greater distance
 future|the time that is still to come
-gain|to get more of something
+gallery|a room or building where art is shown
+game|an activity with rules, done for pleasure
+gap|an empty space between two things
+garden|land by a house where flowers grow
+gate|a door in a fence or wall
+gateway|an entrance that leads to somewhere
 general|true for most cases, not exact
-global|covering the whole world
+geography|the study of the earth's lands and peoples
+gift|something given
+glass|the clear hard material of windows
 goal|something you want to reach
 government|the people who rule a country
-growth|the process of getting bigger
+grass|the green plant that covers fields
+great|very large or very good
+greet|to say hello to
+ground|the surface of the earth
+grounds|reasons
+group|several people or things together
+grow|to get bigger
 guess|to give an answer without being sure
+guest|a person invited to your home
+guide|a person who shows the way
 habit|something you do often, almost without thinking
-harm|to hurt or cause damage
+half|one of two equal parts
+hall|a large room for meetings
+happen|to take place
+hard|not soft
+hardship|a condition of life that is difficult
+hardy|strong enough to bear hard conditions
+hate|to dislike very strongly
+headache|a pain in the head
+heady|exciting in a way that makes you light-headed
 health|the state of your body and mind
+healthy|well, not ill
+heart|the organ that pumps blood
+heat|the quality of being hot
+heavy|weighing a lot
+height|how tall something is
+helpful|giving help
+hero|a very brave person admired by many
+hide|to put where it cannot be seen
+hill|high ground, lower than a mountain
+history|the study of the past
+hit|to strike with the hand or an object
+hobby|something you do for pleasure in free time
+hold|to have in your hand
+hole|an empty space in something solid
+holiday|a time of rest away from work
+hope|to want something to happen
+hospital|a place where sick people are treated
+huge|very big
+human|of people
+hungry|wanting food
+hurt|to cause pain
+ice|frozen water
+idea|a thought or plan in the mind
+ideal|the best possible
+identify|to say who or what something is
+ill|sick, not well
+illness|a state of being sick
+image|a picture
+imagine|to form a picture in the mind
+immediately|at once, without waiting
+important|having great value or effect
+impossible|not able to happen or be done
 improve|to make or become better
 include|to have something as a part
-income|the money a person gets, mostly from work
 increase|to become or make larger in number
+incredible|hard to believe
+independent|not needing or ruled by others
+individual|a single person
 industry|the making of goods in factories
-influence|the power to change what others think or do
-inform|to tell someone facts
+information|facts about something
 injury|harm done to the body
+insect|a small animal with six legs, such as a fly
+inside|within
 instead|in place of something else
+instruction|a statement telling you what to do
+instrument|an object used to make music
+intelligent|able to learn and understand quickly
 interest|a feeling of wanting to know more
+interesting|holding your attention
+international|between or among countries
+interview|a meeting where someone is asked questions
 introduce|to make someone known to another person
 invent|to make something that did not exist before
+invention|a new thing that someone has made
+invite|to ask someone to come
 involve|to have as a necessary part
-issue|a subject that people argue about
+island|land with water all around it
+item|a single thing in a list
+jam|a line of cars that cannot move
+jewellery/jewelry|rings, necklaces and the like
+job|work that you are paid to do
+join|to become part of a group
+joke|something said to make people laugh
+journalist|a person who writes news
 journey|a trip from one place to another
+juice|the liquid from fruit
+jump|to push yourself off the ground
+keep|to go on having something
+key|a metal object that opens a lock
+kill|to cause to die
+kind|gentle and helpful to others
+kitchen|the room where food is cooked
+knee|the middle joint of the leg
+knife|a tool with a blade for cutting
+knock|to hit a door with the hand
 knowledge|what a person knows
+lake|a large area of water with land around it
+lamp|an object that gives light
+land|the dry part of the earth
 language|the words people use to speak and write
+large|big
+last|to go on for a time
+late|after the right time
+laugh|to make sounds showing that something is funny
 law|a rule made by a country
-limit|the highest amount allowed
+lawyer|a person trained to advise about rules of the state
+lazy|not willing to work
+lead|to go in front and show the way
+leader|the person in charge of a group
+learn|to get knowledge or a skill
+least|less than all others
+leave|to go away from
+lecture|a talk given to teach a class
+lend|to give for a time, to be given back
+lesson|a time when something is taught
+letter|a written message sent by post
+level|a height or grade
+library|a place with books to read or borrow
+lie|to say what is not true
+lifestyle|the way a person lives
+lift|to raise to a higher place
+light|what the sun gives so that we can see
+likely|expected to happen
+line|a long thin mark
+link|a connection
+list|names or things written one below another
+listless|without energy
 local|of the area near you
+lock|to close with a key
+look|to turn your eyes toward something
+lose|to no longer have
+loud|making a lot of sound
+lovely|beautiful or very pleasant
+low|not high
+luck|good things that happen by chance
+lunch|the meal eaten in the middle of the day
+machine|a device with moving parts that does work
+magazine|a thin book with pictures, sold weekly or monthly
+mail|letters and parcels sent by post
+main|most important
+major|large and important
+male|of the sex that cannot have babies
 manage|to be in charge of, or to succeed in doing
+manner|the way something is done
+map|a drawing of an area showing roads and towns
+mark|a number or letter given for school work
+market|a place where goods are bought and sold
+marry|to become husband and wife
 material|what a thing is made from
-measure|to find the size or amount of something
+matter|to be important
+meal|food eaten at one time
+mean|to have as its sense
+meaning|what a word or sign tells you
+meat|the flesh of animals used as food
+media|newspapers, radio and television
+medicine|something you take to get well
+meet|to come together with someone
+meeting|a time when people come together to talk
 member|a person who belongs to a group
 memory|the power to keep things in your mind
+mention|to speak about briefly
+message|words sent from one person to another
+metal|a hard shiny material such as iron or gold
 method|a way of doing something
+middle|the centre
+milestone|an important point in progress
+mind|the part of you that thinks
+mirror|a glass in which you can see yourself
+miss|to fail to catch or reach
+mistake|something done wrongly
+mobile|able to go from place to place
+model|a good example to copy
 modern|of the present time
+moment|a very short time
+money|coins and notes used to buy things
+month|one of the twelve parts of a year
+moon|the round body that shines in the night sky
+mostly|for the greater part
+mountain|a very high piece of land
+mouth|the opening in the face for eating and speaking
+move|to change place
+movement|a change of place or position
+museum|a building where old or valuable things are shown
+music|sounds arranged to be pleasant to hear
+narrow|not wide
 natural|made by the earth, not by people
+nature|plants, animals and the land, not made by people
+near|close to
+nearly|almost
 necessary|needed, not to be done without
+neck|the part between the head and the body
+need|to have to have
+needy|very poor
+negative|bad, or saying no
+neighbour/neighbor|a person who lives next to you
+neighbouring/neighboring|situated next to
+neither|not the one and not the other
+nervous|worried and a little afraid
+network|a system of connected lines or people
+news|reports of things that have just happened
+newspaper|printed sheets with reports, sold daily
+nice|pleasant
+noise|a loud or unwanted sound
+noisy|full of loud sound
+none|not any
+normal|usual
+north|the direction toward the top of a map
+nose|the part of the face used for smelling
+note|a few words written to help you remember
+nothing|not a single thing
 notice|to see or become aware of something
-obvious|easy to see or understand
-occur|to happen
+novel|a long written story
+number|a figure such as 1, 2 or 3
+nurse|a person who looks after the sick
+object|a thing you can see and touch
+ocean|a very large sea
 offer|to say you will give or do something
+office|a room where people work at desks
+officer|a person with a rank in the police or army
+often|many times
+oil|a thick liquid used for cooking or as fuel
+once|one time
+onion|a round vegetable with a strong smell
+only|and no one or nothing else
+open|to move a door so that people can go through
 opinion|what you think about something
 opportunity|a chance to do something
+opposite|completely different, or facing
+option|a choice
+orange|a round fruit with thick skin of the same name as its colour
+order|to ask for food or goods
 ordinary|normal, not special
 organize/organise|to plan and arrange an event or things
+original|first, not a copy
+outside|not within
+outward|on the outside
+oven|the closed box in which food is baked
+overseas|across the sea, in other countries
+own|to have as yours
+owner|the person to whom something belongs
+pack|to put things into a bag
+page|one side of a sheet in a book
+pain|the feeling when part of the body hurts
+paint|to put colour on with a brush
+pair|two things that go together
+palace|the large home of a king or queen
+paper|thin sheets for writing on
+paragraph|a block of sentences on one idea
+pardon|to forgive
+parent|a mother or father
+park|to leave a car in a place
+part|a piece of a whole
 particular|one certain, not any
+partner|a person you work or live with
+party|a gathering of people to enjoy themselves
+pass|to succeed in a test
+passenger|a person travelling in a vehicle
+passport|the small book you show to enter a country
+past|the time before now
 patient|able to wait calmly
+pattern|shapes or lines repeated in order
+pay|to give money for something
+peace|a time without war
+perfect|with nothing wrong
 perform|to do a task, or to act or play for people
+perhaps|maybe
 period|a length of time
-permit|to let something be done
+perish|to die
+person|a man, woman or child
+personal|belonging to you alone
+personality|the kind of person someone is
+pet|an animal kept at home for company
+petrol|the liquid fuel for cars
+photograph|a picture made with a camera
+phrase|a short group of words
+physical|of the body
+pick|to choose
+picture|a drawing or painting
+piece|a part cut or broken from something
+pilot|the person who flies a plane
+place|a certain spot or area
+plan|to decide how to do something before doing it
+plant|a living thing with leaves and roots
+plastic|a light man-made material used for bottles and bags
+plate|a flat dish for food
+platform|the raised part of a station where you wait for a train
+pleased|happy and satisfied
+pocket|a small bag sewn into clothes
+point|a single idea in a talk
+police|the people whose job is to catch criminals
 polite|having good manners
 pollution|dirt and waste that harm air, water or land
+poor|having little money
 popular|liked by many people
 population|all the people who live in a place
+position|the place where something is
 positive|hopeful, or showing yes
+possession|a thing that you own
 possible|able to happen or be done
+post|to send a letter
+power|the ability to control or to do
 practice|doing something again and again to get better
+predict|to say what will happen
 prefer|to like one thing more than another
+preferable|more suitable
 prepare|to get ready
+present|something you give to someone
+presentable|tidy enough to be seen
+president|the head of a republic
+pretty|pleasant to look at
 prevent|to stop something from happening
-previous|coming before this one
-private|belonging to one person, not to everyone
-problem|something hard that must be solved
-process|a set of steps that lead to a result
-produce|to make or grow something
-protect|to keep safe from harm
-provide|to give what is needed
-public|for all people
-purpose|the reason for doing something
-quality|how good something is
-quantity|how much or how many there is
-reason|why something happens or is done
-receive|to get something that is given or sent
-recent|happening a short time ago
-recognize/recognise|to know someone or something you have seen before
-reduce|to make smaller or less
-refuse|to say no
-region|a large area of a country or the world
-relationship|the way two people or things are joined
-remain|to stay in the same place or state
-remove|to take something away
-repair|to mend something broken
-replace|to put a new thing in the place of an old one
-reply|to answer
-report|a written or spoken account of something
-require|to need, or to make something necessary
-research|careful study to find new facts
-respect|a feeling that someone is good and important
-responsible|having the duty to look after something
-result|what happens because of something
-reveal|to make known something hidden
-reward|something given for good work
-risk|the chance that something bad may happen
-role|the part someone plays
-rule|a statement of what you must or must not do
-safety|the state of being free from danger
-salary|money paid each month for a job
-search|to look carefully for something
-select|to pick from a group
-separate|apart, not joined
-serious|bad or important, not a joke
-service|work done to help people
-share|to use or have something together with others
-similar|almost the same
-simple|easy, not hard to understand
-situation|what is happening at a certain time and place
-skill|the ability to do something well
-society|people living together in a group
-solve|to find the answer to a problem
-source|the place something comes from
-special|different from the usual and better
-spread|to move out over a wider area
-standard|a level of quality used to judge things
-steady|not changing, firm
-structure|the way the parts of something are put together
-struggle|to try very hard against difficulty
-succeed|to do what you tried to do
-suggest|to offer an idea for others to think about
-supply|an amount of something ready for use
-support|to help or agree with someone
-surface|the outside or top of something
-survive|to stay alive
-system|a set of parts that work together
-task|a piece of work to be done
-technology|machines and methods made by science
-temperature|how hot or cold something is
-tend|to be likely to do something
-theory|an idea that tries to explain something
-threat|a sign of danger or of harm to come
-tradition|a custom passed down over many years
-transport|the moving of people or goods
-trust|to believe that someone is honest
-typical|like most others of its kind
-useful|helping you to do something
-value|how much something is worth
-variety|many different kinds
-various|of several different kinds
-view|what you think about something
-visible|able to be seen
-volunteer|a person who works without pay
-waste|to use more than is needed
-wealth|a large amount of money and things owned
-weigh|to find how heavy something is
-wonder|to ask yourself about something
-worth|having a certain value
-youth|the time of being young
+price|the money you pay for something
+print|to put words on paper with a machine
+prison|a building where criminals are kept
+prize|something given to the winner

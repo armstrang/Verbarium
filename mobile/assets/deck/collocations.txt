@@ -1,85 +1,85 @@
 # Verbarium — kolokasi: pasangan kata yang lazim. Format: ranah|frasa dengan [jawaban]|pengecoh,pengecoh,pengecoh|arti
-1|[make] a decision|do,take,give|mengambil keputusan|to decide
-1|[do] homework|make,write,work|mengerjakan PR|work a school sets for home
-1|[take] a photo|make,do,put|mengambil foto|to use a camera
-1|[make] a mistake|do,take,have|membuat kesalahan|to do something wrong
-1|[have] a shower|make,do,get in|mandi|to wash under running water
-1|[pay] attention|give,put,make|memperhatikan|to listen and watch carefully
-1|[catch] a cold|take,get up,find|terkena pilek|to become ill with a cough and blocked nose
-1|[keep] a promise|hold,do,save|menepati janji|to do what you said you would
-1|[tell] the truth|say,speak,talk|berkata jujur|to say what really happened
-1|[save] time|keep,hold,win|menghemat waktu|to use fewer minutes or hours
-1|[heavy] rain|strong,big,hard|hujan lebat|a lot of water falling from the sky
-1|[strong] wind|heavy,big,hard|angin kencang|air moving with great force
-1|[fast] food|quick,rapid,speedy|makanan cepat saji|quick meals such as burgers
-1|depend [on] the weather|of,from,in|bergantung pada cuaca|to be decided by rain or sun
-1|interested [in] science|on,at,for|tertarik pada sains|wanting to know more about the study of nature
-1|good [at] maths|in,on,with|pandai matematika|able to do sums well
-1|listen [to] music|at,on,for|mendengarkan musik|hearing songs with attention
-1|arrive [at] the station|to,in,on|tiba di stasiun|to reach the place where trains stop
-1|[make] progress|do,take,get|membuat kemajuan|to get better or move forward
-1|[take] a break|make,do,give|beristirahat sejenak|to rest for a short while
-2|[conduct] research|make,perform up,build|melakukan penelitian|to carry out a careful study
-2|[raise] awareness|rise,lift,grow|meningkatkan kesadaran|to make more people know about something
-2|[meet] a deadline|reach,catch,arrive|memenuhi tenggat|to finish by the time set
-2|[draw] a conclusion|pull,make up,take out|menarik kesimpulan|to decide after looking at the facts
-2|[gain] experience|win,earn,take|memperoleh pengalaman|to learn by doing
-2|[play] a role|do,make,act on|memainkan peran|to have a part in something
-2|[pose] a threat|put,place,set|menimbulkan ancaman|to be a danger
-2|[reach] an agreement|arrive,get to,meet up|mencapai kesepakatan|to come to the same decision as another side
-2|[set] a goal|put,place,fix up|menetapkan tujuan|to decide what you want to achieve
-2|[take] responsibility|make,do,carry|mengambil tanggung jawab|to accept that something is your duty or fault
-2|[run] a business|drive,lead up,move|menjalankan usaha|to manage a company
-2|[commit] a crime|do,make,perform|melakukan kejahatan|to break the law
-2|a [sharp] rise|pointed,keen,cutting|kenaikan tajam|a sudden large increase
-2|a [steady] decline|still,stable up,fixed|penurunan yang terus-menerus|a slow fall that continues
-2|[highly] likely|strongly,deeply,largely|sangat mungkin|very probable
-2|[deeply] concerned|highly,strongly,largely|sangat khawatir|very worried
-2|[widely] used|largely,highly,deeply|digunakan secara luas|found or applied in many places
-2|contribute [to] the debate|for,in,on|berkontribusi pada perdebatan|adding something of your own when people discuss
-2|result [in] delays|to,on,at|berakibat penundaan|to cause things to be late
-2|aware [of] the risks|about,on,for|sadar akan risikonya|knowing about the dangers
-2|responsible [for] the error|of,to,about|bertanggung jawab atas kesalahan|being the cause of the mistake
-2|rely [on] imports|in,at,to|mengandalkan impor|needing goods from abroad
-2|an increase [in] prices|of,on,at|kenaikan harga|things costing more
-2|the reason [for] the delay|of,to,about|alasan penundaan|why something is late
-2|[have] an impact|make,do,give|berdampak|to change something strongly
-2|[address] an issue|speak,answer up,talk|menangani persoalan|to deal with a problem
-3|[exert] pressure|make,push,apply up|memberi tekanan|to push someone to act
-3|[implement] a policy|make up,do,install|menerapkan kebijakan|to put a plan of government into action
-3|[undergo] surgery|make,pass,suffer up|menjalani operasi|to have an operation
-3|[yield] results|give up,grow,make out|membuahkan hasil|to produce something useful
-3|[bear] the cost|carry out,hold up,take up|menanggung biaya|to pay for something
-3|[strike] a balance|hit,make up,beat|mencapai keseimbangan|to find a fair middle between two needs
-3|[lodge] a complaint|put,place up,stay|mengajukan keluhan|to protest formally
-3|[shed] light on the cause|throw up,drop,put|menjelaskan penyebabnya|to help explain why something happened
-3|[mounting] evidence|climbing,raising,lifting|bukti yang makin banyak|more and more proof
-3|a [compelling] argument|forcing,pushing,obliging|argumen yang meyakinkan|a case that is hard to disagree with
-3|a [marked] improvement|signed,noted up,written|perbaikan yang nyata|a clear change for the better
-3|[bitterly] disappointed|sourly,sharply,hardly|sangat kecewa|very unhappy at a result
-3|[inextricably] linked|inevitably,unavoidably,invisibly|terkait erat tak terpisahkan|joined so closely that they cannot be separated
-3|comply [with] the rules|to,on,by|mematuhi aturan|to obey what is required
-3|adhere [to] the plan|with,on,at|berpegang pada rencana|following what was decided
-3|prone [to] errors|for,with,of|rentan terhadap kesalahan|often making mistakes
-3|devoid [of] meaning|from,with,in|hampa makna|having no sense at all
-3|[in] accordance with the law|on,at,by|sesuai dengan hukum|as the rules of the state require
-3|[at] the expense of quality|on,in,by|dengan mengorbankan mutu|with a loss of how good something is
-3|[on] the verge of collapse|at,in,by|di ambang keruntuhan|very close to falling apart
-4|[curb] inflation|cut up,bend,hold on|mengekang inflasi|to keep the rise of prices under control
-4|[foster] innovation|grow up,feed,rise|menumbuhkan inovasi|to help new ideas grow
-4|[stifle] debate|choke on,cover,close up|membungkam perdebatan|to stop people from discussing freely
-4|[wield] influence|hold up,carry,swing|memegang pengaruh|to have and use power over others
-4|[dispel] a myth|throw,break up,clear off|menepis mitos|to show that a common belief is false
-4|[levy] a tax|rise,lift,place up|memungut pajak|to make people pay money to the state
-4|a [resounding] success|sounding,loud,noisy|keberhasilan gemilang|a very great win
-4|a [foregone] conclusion|forgotten,former,passed|hasil yang sudah bisa ditebak|a result that is certain before it happens
-4|[sweeping] reforms|brushing,cleaning,wiping|reformasi besar-besaran|changes that affect almost everything
-4|[scant] regard|scarce,rare,thin|sedikit sekali kepedulian|very little care or respect
-4|[vested] interests|dressed,invested,clothed|kepentingan pribadi yang mengakar|those who gain from keeping things as they are
-5|[mete] out punishment|meet,measure,mark|menjatuhkan hukuman|to give a penalty
-5|[eke] out a living|edge,ease,earn|mencari nafkah dengan susah payah|to earn just enough to survive
-5|[hazard] a guess|risk up,danger,chance on|memberanikan diri menebak|to try an answer without being sure
-5|[wreak] havoc|wreck,work,make up|menimbulkan kekacauan|to cause great damage
-5|a [moot] point|mute,mood,mock|pokok yang masih bisa diperdebatkan|a question still open to argument
-5|[abject] poverty|object,subject,reject|kemiskinan yang parah|the worst kind of being poor
-5|[bated] breath|baited,beaten,bathed|napas tertahan|a state of waiting anxiously
+2|[make] a decision|do,take,give|mengambil keputusan|to decide
+2|[do] homework|make,write,work|mengerjakan PR|work a school sets for home
+2|[take] a photo|make,do,put|mengambil foto|to use a camera
+2|[make] a mistake|do,take,have|membuat kesalahan|to do something wrong
+2|[have] a shower|make,do,get in|mandi|to wash under running water
+2|[pay] attention|give,put,make|memperhatikan|to listen and watch carefully
+2|[catch] a cold|take,get up,find|terkena pilek|to become ill with a cough and blocked nose
+2|[keep] a promise|hold,do,save|menepati janji|to do what you said you would
+2|[tell] the truth|say,speak,talk|berkata jujur|to say what really happened
+2|[save] time|keep,hold,win|menghemat waktu|to use fewer minutes or hours
+2|[heavy] rain|strong,big,hard|hujan lebat|a lot of water falling from the sky
+2|[strong] wind|heavy,big,hard|angin kencang|air moving with great force
+2|[fast] food|quick,rapid,speedy|makanan cepat saji|quick meals such as burgers
+2|depend [on] the weather|of,from,in|bergantung pada cuaca|to be decided by rain or sun
+2|interested [in] science|on,at,for|tertarik pada sains|wanting to know more about the study of nature
+2|good [at] maths|in,on,with|pandai matematika|able to do sums well
+2|listen [to] music|at,on,for|mendengarkan musik|hearing songs with attention
+2|arrive [at] the station|to,in,on|tiba di stasiun|to reach the place where trains stop
+2|[make] progress|do,take,get|membuat kemajuan|to get better or move forward
+2|[take] a break|make,do,give|beristirahat sejenak|to rest for a short while
+3|[conduct] research|make,perform up,build|melakukan penelitian|to carry out a careful study
+3|[raise] awareness|rise,lift,grow|meningkatkan kesadaran|to make more people know about something
+3|[meet] a deadline|reach,catch,arrive|memenuhi tenggat|to finish by the time set
+3|[draw] a conclusion|pull,make up,take out|menarik kesimpulan|to decide after looking at the facts
+3|[gain] experience|win,earn,take|memperoleh pengalaman|to learn by doing
+3|[play] a role|do,make,act on|memainkan peran|to have a part in something
+3|[pose] a threat|put,place,set|menimbulkan ancaman|to be a danger
+3|[reach] an agreement|arrive,get to,meet up|mencapai kesepakatan|to come to the same decision as another side
+3|[set] a goal|put,place,fix up|menetapkan tujuan|to decide what you want to achieve
+3|[take] responsibility|make,do,carry|mengambil tanggung jawab|to accept that something is your duty or fault
+3|[run] a business|drive,lead up,move|menjalankan usaha|to manage a company
+3|[commit] a crime|do,make,perform|melakukan kejahatan|to break the law
+3|a [sharp] rise|pointed,keen,cutting|kenaikan tajam|a sudden large increase
+3|a [steady] decline|still,stable up,fixed|penurunan yang terus-menerus|a slow fall that continues
+3|[highly] likely|strongly,deeply,largely|sangat mungkin|very probable
+3|[deeply] concerned|highly,strongly,largely|sangat khawatir|very worried
+3|[widely] used|largely,highly,deeply|digunakan secara luas|found or applied in many places
+3|contribute [to] the debate|for,in,on|berkontribusi pada perdebatan|adding something of your own when people discuss
+3|result [in] delays|to,on,at|berakibat penundaan|to cause things to be late
+3|aware [of] the risks|about,on,for|sadar akan risikonya|knowing about the dangers
+3|responsible [for] the error|of,to,about|bertanggung jawab atas kesalahan|being the cause of the mistake
+3|rely [on] imports|in,at,to|mengandalkan impor|needing goods from abroad
+3|an increase [in] prices|of,on,at|kenaikan harga|things costing more
+3|the reason [for] the delay|of,to,about|alasan penundaan|why something is late
+3|[have] an impact|make,do,give|berdampak|to change something strongly
+3|[address] an issue|speak,answer up,talk|menangani persoalan|to deal with a problem
+4|[exert] pressure|make,push,apply up|memberi tekanan|to push someone to act
+4|[implement] a policy|make up,do,install|menerapkan kebijakan|to put a plan of government into action
+4|[undergo] surgery|make,pass,suffer up|menjalani operasi|to have an operation
+4|[yield] results|give up,grow,make out|membuahkan hasil|to produce something useful
+4|[bear] the cost|carry out,hold up,take up|menanggung biaya|to pay for something
+4|[strike] a balance|hit,make up,beat|mencapai keseimbangan|to find a fair middle between two needs
+4|[lodge] a complaint|put,place up,stay|mengajukan keluhan|to protest formally
+4|[shed] light on the cause|throw up,drop,put|menjelaskan penyebabnya|to help explain why something happened
+4|[mounting] evidence|climbing,raising,lifting|bukti yang makin banyak|more and more proof
+4|a [compelling] argument|forcing,pushing,obliging|argumen yang meyakinkan|a case that is hard to disagree with
+4|a [marked] improvement|signed,noted up,written|perbaikan yang nyata|a clear change for the better
+4|[bitterly] disappointed|sourly,sharply,hardly|sangat kecewa|very unhappy at a result
+4|[inextricably] linked|inevitably,unavoidably,invisibly|terkait erat tak terpisahkan|joined so closely that they cannot be separated
+4|comply [with] the rules|to,on,by|mematuhi aturan|to obey what is required
+4|adhere [to] the plan|with,on,at|berpegang pada rencana|following what was decided
+4|prone [to] errors|for,with,of|rentan terhadap kesalahan|often making mistakes
+4|devoid [of] meaning|from,with,in|hampa makna|having no sense at all
+4|[in] accordance with the law|on,at,by|sesuai dengan hukum|as the rules of the state require
+4|[at] the expense of quality|on,in,by|dengan mengorbankan mutu|with a loss of how good something is
+4|[on] the verge of collapse|at,in,by|di ambang keruntuhan|very close to falling apart
+5|[curb] inflation|cut up,bend,hold on|mengekang inflasi|to keep the rise of prices under control
+5|[foster] innovation|grow up,feed,rise|menumbuhkan inovasi|to help new ideas grow
+5|[stifle] debate|choke on,cover,close up|membungkam perdebatan|to stop people from discussing freely
+5|[wield] influence|hold up,carry,swing|memegang pengaruh|to have and use power over others
+5|[dispel] a myth|throw,break up,clear off|menepis mitos|to show that a common belief is false
+5|[levy] a tax|rise,lift,place up|memungut pajak|to make people pay money to the state
+5|a [resounding] success|sounding,loud,noisy|keberhasilan gemilang|a very great win
+5|a [foregone] conclusion|forgotten,former,passed|hasil yang sudah bisa ditebak|a result that is certain before it happens
+5|[sweeping] reforms|brushing,cleaning,wiping|reformasi besar-besaran|changes that affect almost everything
+5|[scant] regard|scarce,rare,thin|sedikit sekali kepedulian|very little care or respect
+5|[vested] interests|dressed,invested,clothed|kepentingan pribadi yang mengakar|those who gain from keeping things as they are
+6|[mete] out punishment|meet,measure,mark|menjatuhkan hukuman|to give a penalty
+6|[eke] out a living|edge,ease,earn|mencari nafkah dengan susah payah|to earn just enough to survive
+6|[hazard] a guess|risk up,danger,chance on|memberanikan diri menebak|to try an answer without being sure
+6|[wreak] havoc|wreck,work,make up|menimbulkan kekacauan|to cause great damage
+6|a [moot] point|mute,mood,mock|pokok yang masih bisa diperdebatkan|a question still open to argument
+6|[abject] poverty|object,subject,reject|kemiskinan yang parah|the worst kind of being poor
+6|[bated] breath|baited,beaten,bathed|napas tertahan|a state of waiting anxiously

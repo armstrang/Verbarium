@@ -1,190 +1,354 @@
-# Verbarium — plain English definitions for 1-squire-b.txt: word|definition
-accident|something bad that happens by chance
-act|to do something
-action|something that is done
-active|doing things, busy and moving
-actual|real, existing in fact
-add|to put something with something else
-address|the number and street where someone lives
-adult|a grown-up person
-adventure|an exciting and unusual experience
-advertise|to tell the public about goods so that they buy them
-afraid|feeling fear
-age|how old someone is
-agency|a business that arranges services for others
-agree|to have the same opinion
-ahead|in front
-air|the gas we breathe
-airport|a place where planes land and take off
-alarm|a loud signal that warns of danger
-alive|living, not dead
-alone|without other people
-aloud|in a voice that can be heard
-although|in spite of the fact that
-amazing|very surprising and good
-ambulance|a vehicle that takes sick people to hospital
-among|in the middle of a group
-angry|feeling strong dislike because of a wrong
-animal|a living thing that moves and is not a plant
-annoy|to make someone a little angry
-answer|to say or write something back to a question
-anxious|worried and nervous
-apartment|a set of rooms to live in, inside a larger building
-apologize/apologise|to say you are sorry
-appear|to come into sight
-appearance|the way someone or something looks
-appointment|an agreed time to meet someone
-area|a part of a place
-argument|an angry talk between people who disagree
-army|a large group of soldiers who fight on land
-arrive|to reach a place
-article|a piece of writing in a newspaper
-artist|a person who paints or draws
-ashamed|feeling bad about something you did
-asleep|sleeping
-athlete|a person trained in sports
-attack|to try to hurt someone with force
-attention|careful looking or listening
-attractive|pleasant to look at
-audience|the people watching a show
-author|the writer of a book
-autumn|the season between summer and winter
-awake|not sleeping
-award|a prize for doing something well
-awful|very bad
-baggage|the bags you take on a trip
-bake|to cook in an oven
-bank|a business that keeps and lends money
-bargain|something bought for less than its usual price
-basic|simple and most important
-basket|a container made of thin strips, for carrying things
-battery|a small object that stores electric power
-battle|a fight between armies
-beach|the sandy land beside the sea
-bear|to accept something unpleasant without complaining
-beat|to win against someone
-beauty|the quality of being lovely to look at
-behind|at the back of
-believe|to think that something is true
-belong|to be owned by someone
-below|at a lower place than
-bend|to make something curved
-beside|next to
-bill|a paper showing how much you must pay
-birth|the moment a baby comes into the world
-bite|to cut with the teeth
-bitter|having a sharp taste like strong coffee
-blame|to say that someone caused something bad
-blanket|a thick warm cover for a bed
-bleed|to lose red liquid from a cut
-blind|not able to see
-block|to stop something from getting past
-blood|the red liquid inside the body
-blow|to push air out of the mouth
-board|a flat piece of wood
-boil|to heat water until it makes steam
-bomb|a weapon that explodes
-bone|one of the hard white parts inside the body
-border|the line between two countries
-bored|tired because nothing is interesting
-boring|not interesting at all
-boss|the person in charge at work
-bother|to cause trouble for someone
-bottom|the lowest part
-brain|the organ in the head used for thinking
-branch|an arm of a tree
-brave|not afraid of danger
-break|to make something come apart into pieces
-breath|the air taken in and let out of the lungs
-breathe|to take air in and let it out
-bridge|a structure that carries a road over a river
-bright|full of light
-bring|to carry something with you to a place
-broad|wide
-build|to make a house or other structure
-burn|to be on fire
-bury|to put under the ground
-business|the work of buying and selling
-busy|having a lot to do
-calm|quiet and not excited
-camera|a device for taking photos
-camp|a place where people sleep in tents
-cancel|to say that a planned event will not happen
-candidate|a person who tries to be chosen for a post
-capital|the city where a country's rulers work
-captain|the leader of a ship or team
-care|to feel that something matters
-careful|taking trouble to avoid mistakes
-careless|not giving enough attention
-carry|to hold something and take it somewhere
-case|a matter for the police or a court
-cash|money in coins and notes
-castle|a large strong building with thick walls from old times
-catch|to take hold of something that is moving
-celebrate|to do something happy for a special day
-central|in the middle
-century|a hundred years
-ceremony|a formal event for an important occasion
-certain|sure, without doubt
-chain|a line of metal rings joined together
-chance|a time when something can be done
-change|to become or make different
-charge|to ask for money as a price
-cheap|low in price
-cheat|to act in a way that is not honest to win
-check|to look at something to see that it is right
-cheerful|happy and bright
-chemical|a substance made or used in a laboratory
-chief|most important
-childhood|the time when you are a child
-choose|to pick the one you want
-citizen|a person who belongs to a country
-clear|easy to see or understand
-clever|quick to learn and understand
-climate|the usual weather of a place
-climb|to go up using hands and feet
-close|to shut
-cloth|material made from cotton or wool
-clothes|things you wear on your body
-cloud|a white or grey mass in the sky that brings rain
-coach|a person who trains a team
-coast|the land next to the sea
-coin|a round piece of metal used as money
-collection|a group of things brought together
-college|a place of study after school
-colour/color|red, blue, green and so on
-comfortable|pleasant to sit in or wear
-company|a business that makes or sells things
-competition|an event in which people try to win
-computer|a machine that stores and works with information
-concert|a show of music for an audience
-conversation|a talk between people
-cook|to make food ready by heating it
-cool|a little cold
-copy|to make something exactly like another
-corner|the place where two sides meet
-cost|to have a price of
-cotton|soft white plant material made into cloth
-count|to say numbers in order to find how many
-country|a land with its own government
-countryside|land outside towns, with fields and farms
-couple|two people together
-courage|the quality of not being afraid
-course|a series of lessons
-court|the place where a judge decides matters of law
-cover|to put something over another thing
-crash|to hit something hard while moving
-crazy|not sensible, mad
-cream|the thick fatty part of milk
-creature|any living animal
-crop|plants grown for food on a farm
-cross|to go from one side to the other
-cruel|happy to make others suffer
-cry|to have tears coming from the eyes
-cup|a small container to drink from
-cure|something that makes an illness go away
-curious|wanting to know things
-current|of the present time
-custom|something people in a place have long done
-cut|to divide with a knife
-cycle|to ride a bike
+probably|very likely
+problem|something hard that must be solved
+process|a set of steps that lead to a result
+produce|to make or grow something
+product|something made to be sold
+professional|doing something as a paid job
+profile|a short description of a person
+progress|movement toward something better
+project|a planned piece of work
+promise|to say that you will surely do something
+pronounce|to make the sound of a word
+protect|to keep safe from harm
+provide|to give what is needed
+public|for all people
+publish|to print and sell
+pull|to move something toward you
+purpose|the reason for doing something
+push|to move something away from you
+quality|how good something is
+quantity|how much or how many there is
+quarter|one of four equal parts
+queen|a woman who rules a country
+question|a sentence that asks for an answer
+questionable|open to doubt
+quick|fast
+quiet|with little sound
+quite|fairly, to some degree
+race|a contest to see who is fastest
+railway|the track on which trains run
+rain|water that falls from clouds
+raise|to lift up
+rate|the speed or amount of change
+rather|to some degree
+reach|to arrive at
+react|to act in answer to something
+ready|prepared
+real|not false or imagined
+realise/realize|to begin to understand
+reason|why something happens or is done
+receive|to get something that is given or sent
+recent|happening a short time ago
+reception|the desk where guests arrive in a hotel
+recipe|a set of steps for cooking a dish
+recognize/recognise|to know someone or something you have seen before
+recommend|to say that something is good to choose
+record|to write down or store sound
+reduce|to make smaller or less
+refer|to look at for information
+refuse|to say no
+region|a large area of a country or the world
+regular|happening at the same time again and again
+relationship|the way two people or things are joined
+relax|to rest and feel calm
+remember|to keep in the mind
+remove|to take something away
+repair|to mend something broken
+repeat|to say or do again
+replace|to put a new thing in the place of an old one
+reply|to answer
+report|a written or spoken account of something
+request|the act of asking politely
+research|careful study to find new facts
+respond|to answer
+rest|to stop working and be still
+restaurant|a place where you pay to eat meals
+restless|unable to stay still
+result|what happens because of something
+return|to come or go back
+review|an article that judges a book or film
+rice|white grains eaten as food in much of Asia
+rich|having a lot of money
+ride|to sit on and travel by horse or bike
+ring|to make the sound of a bell
+river|a long flow of water across land to the sea
+road|a hard way for cars between places
+rock|a large stone
+role|the part someone plays
+roof|the top cover of a building
+round|shaped like a ball or circle
+route|the way from one place to another
+routine|the usual order of doing things
+rude|not polite
+rule|a statement of what you must or must not do
+sad|unhappy
+safe|free from danger
+sail|to travel on water using the wind
+salary|money paid each month for a job
+sale|the selling of goods, often at lower prices
+salt|white grains from the sea that give taste to food
+same|not different
+save|to keep money for later
+scared|afraid
+scene|one part of a play or film
+schedule|a plan of times
+science|the study of nature by tests and facts
+score|the number of points in a game
+screen|the flat glass front of a phone or television
+sea|the salt water that covers much of the earth
+search|to look carefully for something
+season|one of the four parts of the year
+seat|something to sit on
+second|one of the sixty parts of a minute
+secret|something that others must not know
+secretary|a person who writes letters and keeps records in an office
+section|one of the parts of something
+seem|to appear to be
+sell|to give for money
+send|to make something go to another place
+sense|one of the five powers such as sight and hearing
+sentence|a group of words that ends with a full stop
+separate|apart, not joined
+series|a number of things one after another
+serious|bad or important, not a joke
+serve|to give food or help to
+service|work done to help people
+several|more than two but not many
+shake|to move quickly up and down or side to side
+shape|the outer form of something
+share|to use or have something together with others
+sheet|a single flat piece of paper
+ship|a large boat
+shirt|a piece of clothing for the upper body, with buttons
+shop|a place where things are sold
+short|not long or tall
+shoulder|the part of the body where the arm joins
+shout|to speak very loudly
+show|to let someone see
+shower|a place where you wash under falling water
+shut|to close
+sick|not well
+side|the left or right part of something
+sign|a board with words that tell you something
+silver|a shiny white metal of high value
+similar|almost the same
+simple|easy, not hard to understand
+since|from a past time until now
+sing|to make music with the voice
+single|only one
+site|a place where something is or was
+situation|what is happening at a certain time and place
+size|how big something is
+skill|the ability to do something well
+skin|the outer cover of the body
+sky|the space above the earth where clouds are
+sleep|to rest with eyes closed at night
+slow|not fast
+smart|clever
+smell|to notice with the nose
+smile|to turn up the corners of the mouth in pleasure
+smoke|the grey cloud that rises from a fire
+snake|a long animal with no legs
+snow|soft white frozen water that falls in winter
+soap|what you use with water to wash
+social|about people living together
+society|people living together in a group
+sock|a soft cover for the foot, worn inside a shoe
+soft|not hard
+soldier|a member of an army
+solution|the answer to a problem
+solve|to find the answer to a problem
+sometimes|now and then
+somewhere|in a place not known or named
+song|words set to music
+soon|in a short time
+sorry|feeling sad about what you did
+sort|a kind
+sound|what you hear
+soup|a hot liquid food
+source|the place something comes from
+south|the direction toward the bottom of a map
+space|an empty area
+speak|to say words
+special|different from the usual and better
+specific|exact and particular
+speech|a formal talk to an audience
+speed|how fast something moves
+spell|to say or write the letters of a word
+spend|to use money to buy things
+spoon|a tool with a small bowl for eating liquid food
+sport|a game or activity of the body, such as football
+spring|the season after winter
+square|a shape with four equal sides
+stage|the raised floor where actors perform
+stair|one of a set of steps inside a building
+stamp|a small paper stuck on a letter to pay for posting
+stand|to be on your feet
+star|a point of light in the night sky
+start|to begin
+state|the condition something is in
+statement|something said officially
+station|a place where trains stop
+stay|to remain in a place
+steal|to take what is not yours
+step|one action in a series
+still|up to now and continuing
+stomach|the part of the body where food goes
+stone|a hard piece of the ground
+stop|to end movement
+store|to keep for later use
+storm|bad weather with strong wind and rain
+story|an account of real or imagined events
+straight|without a bend
+strange|unusual and surprising
+strategy|a plan for reaching a goal
+street|a road in a town with buildings along it
+stress|worry caused by pressure
+strong|having great power
+structure|the way the parts of something are put together
+student|a person who is learning at school or university
+study|to spend time learning
+stupid|not clever
+style|a way of doing or making something
+subject|something taught at school, such as history
+succeed|to do what you tried to do
+success|a good result that you wanted
+sugar|sweet grains put in tea or cakes
+suggest|to offer an idea for others to think about
+suit|to look good on someone
+summer|the warmest season
+support|to help or agree with someone
+suppose|to think that something is probably true
+sure|having no doubt
+surprise|something you did not expect
+survey|a study of opinions by asking questions
+sweet|tasting like sugar
+swim|to move through water using arms and legs
+symbol|a sign that stands for something
+system|a set of parts that work together
+table|a piece of furniture with a flat top and legs
+talk|to speak with someone
+tall|of great height
+target|something you aim at
+task|a piece of work to be done
+taste|to have a certain flavour
+teach|to give lessons
+team|a group who play or work together
+technology|machines and methods made by science
+temperature|how hot or cold something is
+term|one of the parts of a school year
+terrible|very bad
+test|a set of questions to measure what you know
+thank|to tell someone you are grateful
+theatre/theater|a building where plays are shown
+thick|wide from one side to the other
+thief|a person who steals
+thin|not wide or fat
+thirsty|wanting to drink
+thought|an idea in the mind
+through|from one side to the other of
+throw|to send through the air with the hand
+ticket|a paper that shows you have paid to travel or enter
+tidy|neat and in order
+tie|to fasten with string
+tip|a small piece of useful advice
+tired|needing rest
+title|the name of a book or film
+together|with each other
+tool|something held in the hand to do a job
+tooth|one of the hard white things in the mouth
+top|the highest part
+topic|a subject for talk or writing
+touch|to put your hand on
+tour|a trip that visits several places
+tourist|a person who travels for pleasure
+towards/toward|in the direction of
+towel|a cloth for drying yourself
+tower|a tall narrow building
+town|a place with many houses, smaller than a city
+toy|a thing for a child to play with
+track|a rough path
+tradition|a custom passed down over many years
+traditional|following old customs
+train|to practise for a sport or skill
+transport|the moving of people or goods
+tree|a tall plant with a wooden trunk
+trip|a short journey
+trouble|problems or difficulty
+trousers|clothing for the legs
+true|right, in line with fact
+try|to make an effort
+turn|to change direction
+twice|two times
+twin|one of two children born together
+type|a kind or sort
+typical|like most others of its kind
+umbrella|a cover on a stick that keeps rain off
+uncle|the brother of your mother or father
+understand|to know the meaning of
+uniform|the same everywhere
+unit|a fixed amount used for measuring
+until|up to the time when
+unusual|not common
+upstairs|on a higher floor
+use|to do something with a tool or thing
+useful|helping you to do something
+usual|happening most often
+usually|most of the time
+valley|low land between hills
+van|a closed vehicle for carrying goods
+variety|many different kinds
+vegetable|a plant eaten as food, such as a carrot
+vehicle|a car, bus or truck
+view|what you think about something
+village|a very small town in the country
+virus|a tiny living thing that causes disease
+visit|to go to see a person or place
+visitor|a person who comes to see a place or person
+voice|the sound a person makes when speaking
+wait|to stay until something happens
+wake|to stop sleeping
+walk|to move on foot
+wall|a side of a room or building
+war|fighting between countries
+warm|a little hot
+wary|careful because of possible danger
+wash|to clean with water
+watch|to look at for some time
+wave|a raised line of water moving across the sea
+weak|not strong
+wear|to have clothes on your body
+weather|the state of the sky and air, such as rain or sun
+wedding|the ceremony in which two people marry
+week|seven days
+weekend|Saturday and Sunday
+weight|how heavy something is
+welcome|to greet someone who arrives in a friendly way
+west|the direction where the sun sets
+wet|covered with water
+wheel|a round part that turns under a car
+while|a period of time
+whole|all of something
+wide|large from side to side
+wife|the woman a man is married to
+wild|living free in nature
+win|to be first or best in a game
+wind|air that moves
+window|an opening with glass in a wall
+winter|the coldest season
+wish|to want something to be true
+without|not having
+wonderful|very good and pleasing
+wood|the hard material of trees
+word|a single unit of language
+work|to do a job
+world|the earth and all people on it
+worry|to feel afraid that something bad may happen
+worse|more bad
+write|to put words on paper
+wrong|not right
+yard|an area of ground next to a house
+year|twelve months
+yet|up to now
+young|not old
+zero|the number 0

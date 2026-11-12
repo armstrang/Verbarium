@@ -1,0 +1,405 @@
+probe|to examine deeply
+procession|a line of people moving in ceremony
+proclaim|to announce publicly
+proclamation|an official public announcement
+procrastinate|to keep delaying
+procure|to obtain with effort
+prodigal|wasteful with money
+productive|achieving a lot
+productivity|the rate at which work is done
+proficiency|skill
+profitable|making money
+profound|very deep
+progression|movement forward in steps
+prohibition|a rule that forbids
+projection|an estimate of future figures
+proliferate|to increase rapidly
+proliferation|a rapid increase in number
+prominence|the state of being well known
+prominent|well known or easily seen
+prone|likely to suffer from
+propaganda|one-sided information meant to persuade
+propagate|to spread or grow more of
+propel|to drive forward
+prophet|a person who speaks for God
+proponent|a person who argues in favour
+proposition|a suggested plan
+proprietor|the owner of a business
+prose|ordinary writing, not poetry
+prosecute|to bring to court for a crime
+prosecution|the side that accuses in court
+prospective|likely to become
+prosperity|the state of being rich and successful
+prosperous|rich and successful
+protagonist|the main character
+protective|giving safety
+protocol|the fixed rules for doing something
+prototype|the first model of a new design
+providence|the care of God over events
+province|one of the large areas into which a country is divided
+provincial|of a region outside the capital
+provision|the act of supplying
+provisional|for now, likely to change
+provocation|something that causes anger
+provocative|meant to cause a reaction
+provoke|to cause an angry reaction
+proximity|nearness
+prudence|careful good sense
+prudent|wise and careful
+prune|to cut back branches
+pseudonym|a false name used by a writer
+psychiatric|of illness of the mind
+publicize/publicise|to make widely known
+pulse|the regular beat of blood
+purify|to make clean
+purity|the state of being unmixed
+purport|to claim to be
+qualitative|about kind, not amount
+quantify|to express as a number
+quantitative|about amount
+quarrel|an angry disagreement
+quarry|a place where stone is dug
+query|a question
+quest|a long search
+quiver|to shake slightly
+quota|a fixed share that is allowed
+radiant|shining with joy
+radical|going to the root, very great
+radius|the distance from centre to edge of a circle
+rage|very great anger
+raid|a sudden attack or police visit
+ramble|to talk in a long confused way
+rash|done too quickly without thought
+ratification|formal approval
+ratify|to approve formally
+ratio|the relation of one amount to another
+ration|to allow only a fixed amount
+rational|based on reason
+rationale|the reasons behind a decision
+rationalize/rationalise|to find reasons to excuse
+ray|a thin line of light
+readily|easily and quickly
+readiness|the state of being prepared
+realm|an area of activity or thought
+reap|to cut and gather a crop
+rear|at the back
+reassurance|words that remove worry
+reassure|to remove someone's worry
+rebel|a person who fights against the government
+rebellion|an armed fight against rulers
+rebound|to rise again after a fall
+recede|to move back
+receptive|willing to listen
+recess|a break in the work of a court or parliament
+recipient|a person who receives
+reciprocal|given and received by both sides
+recite|to say aloud from memory
+reckless|careless of danger
+reclaim|to get back
+recollect|to remember
+reconstruct|to build or form again
+recreate|to make again
+rectangle|a shape with four straight sides and four right angles
+recurrence|a return of something
+redeem|to exchange for goods or money
+redemption|the act of being saved from wrong
+redevelop|to build anew in an old area
+redundancy|the loss of a job that is no longer needed
+redundant|not needed
+referendum|a public vote on one question
+refinery|a factory that makes oil or sugar pure
+reflex|an automatic movement of the body
+reform|a change made to improve a system
+refrain|to stop yourself from doing
+refuge|shelter from danger
+refund|money given back
+refurbish|to repair and decorate
+refusal|the act of saying no
+regardless|without being affected by
+regenerate|to bring new life to
+regime|a government, often a harsh one
+regiment|a large unit of soldiers
+rehearsal|a practice before a show
+reign|the time a king or queen rules
+reimburse|to pay back money spent
+reimbursement|the paying back of costs
+rein|a strap used to control a horse
+reiterate|to say again
+relay|to pass on
+relegate|to move to a lower place
+relentless|never stopping
+relic|an object left from the past
+relinquish|to give up
+relish|to enjoy greatly
+relocate|to move to a new place
+reluctance|unwillingness
+reluctant|not willing
+remainder|what is left
+remedy|a cure
+remembrance|the act of keeping the dead in memory
+reminder|something that helps you not forget
+reminiscent|making you think of something else
+remittance|money sent home
+remnant|a small part left over
+remuneration|payment for work
+renaissance|a new period of growth and interest
+render|to cause to become
+renew|to make valid for a further time
+renounce|to give up formally
+renovate|to repair and improve a building
+renowned|famous and admired
+repeal|to cancel a law
+repel|to drive away
+repentance|sorrow for having done wrong
+repertoire|all the pieces a performer can do
+replicate|to repeat exactly
+repression|the cruel control of people by force
+reproduce|to have young
+republic|a country without a king or queen
+repulsive|causing strong disgust
+requisite|needed for a purpose
+resemblance|a likeness
+resemble|to look like
+reservoir|a lake made to store water
+residual|remaining
+residue|what remains after the rest has gone
+resignation|the act of giving up a job
+resilience|the power to recover
+resilient|able to recover quickly
+resistant|not harmed by
+respective|belonging to each one separately
+respiratory|of breathing
+responsive|reacting quickly and well
+restoration|the return of something to good condition
+restraint|calm control of your actions
+resultant|caused by what was just named
+resume|to begin again after a pause
+resurrect|to bring back into use
+retaliate|to strike back
+retention|the keeping of something
+retort|to answer back sharply
+retreat|to move back from an enemy
+retrieve|to get back
+retrospect|a look back at the past
+retrospective|looking back or acting on the past
+reunion|a meeting of people long apart
+revel|to take great pleasure
+revelation|a surprising fact made known
+revenge|harm done in return for harm
+revere|to respect deeply
+reverence|deep respect
+reversal|a change to the opposite
+reverse|to turn the other way
+revert|to go back to an earlier state
+revival|a return to use or popularity
+revive|to bring back to life or use
+revolt|a rising against authority
+revolve|to move in a circle around
+rhetoric|fine speech that may lack meaning
+rhetorical|asked for effect, not for an answer
+rigidity|stiffness
+rigorous|strict and careful
+rim|the edge of something round
+riot|violent behaviour by a crowd
+ripple|a small wave
+rite|a ceremony of religion or custom
+ritual|a set of actions always done the same way
+rivalry|competition between two sides
+robust|strong and healthy
+rogue|acting alone and against the rules
+rotate|to turn around a centre
+rotation|the action of turning or taking turns
+rubble|broken stones and bricks
+ruling|a decision by a court
+ruthless|without pity
+sacred|holy
+sacrifice|the giving up of something for a greater good
+sake|the benefit or good of someone
+salient|most noticeable
+sanction|a punishment against a country
+sanctuary|a safe place
+saturate|to fill completely
+saturation|the point where no more can be added
+savour/savor|to enjoy slowly
+scant|hardly any
+scissors|a tool with two blades for cutting paper
+scope|the range covered
+scorn|contempt
+scrutiny|close examination
+secular|not connected with religion
+sediment|matter that settles at the bottom of water
+segment|one of the parts something divides into
+seize|to take by force or law
+seldom|not often
+sensation|a feeling in the body
+sentiment|a general feeling or opinion
+serene|calm and peaceful
+shortcoming|a fault or weakness
+shrewd|clever in practical matters
+shrink|to become smaller
+siege|the surrounding of a town by an army
+sigh|to let out a long breath
+simulate|to copy the conditions of
+skeleton|the frame of bones in a body
+skeptical/sceptical|doubting
+sketch|a quick simple drawing
+soak|to leave in water for a time
+sole|only
+solidarity|support among members of a group
+sorrow|deep sadness
+sour|having a sharp taste like a lemon
+span|the length of time something lasts
+spark|to set off
+sparse|thinly spread
+spectrum|a full range
+squeeze|to press hard from both sides
+stakeholder|a person with an interest in a business or plan
+stark|very plain and clear
+stereotype|a fixed simple idea of a group
+stifle|to hold back or choke
+stimulus|something that causes activity
+stipulate|to state as a condition
+straightforward|simple and easy to follow
+strain|pressure from too much work
+strand|one thread of a larger whole
+streamline|to make simpler and faster
+stringent|very strict
+stubborn|not willing to change your mind
+subdue|to bring under control
+subside|to become less
+subsidy|money given by government to keep prices low
+substantial|large in amount
+substitute|a person or thing that takes another's place
+subtle|not obvious
+succession|a number of things following each other
+successive|following one after another
+succumb|to give way to
+sue|to take to court for money
+suicide|the act of killing yourself
+superficial|only on the surface
+superior|better in quality
+supervise|to watch over work
+supervision|the watching over of work
+supplement|something added to make complete
+suppress|to put down by force
+surge|a sudden rise
+surpass|to do better than
+surplus|an amount more than needed
+surrender|to give up to an enemy
+surveillance|close watching of a person
+susceptible|easily affected
+suspicion|a feeling that something is wrong
+sustain|to keep going
+swing|to move back and forth while hanging
+sword|a long sharp blade with a handle
+symmetry|exact likeness of two halves
+synthesis|a combining of ideas into a whole
+tangible|real enough to touch
+tariff|a tax on goods brought into a country
+temper|a tendency to get angry
+temperament|a person's or animal's nature
+tempt|to make someone want what they should not have
+tenant|a person who rents a home
+tender|soft and easy to cut
+tentative|not yet certain
+terminate|to bring to an end
+testify|to speak as a witness in court
+testimony|a statement made in court
+texture|how a surface feels
+theoretical|about ideas, not practice
+thereby|by that means
+thread|a very thin line of cotton for sewing
+threshold|the level at which something begins
+thrive|to grow strong and well
+throne|the special chair of a king or queen
+thwart|to prevent from succeeding
+tide|the regular rise and fall of the sea
+timber|wood for building
+tolerance|willingness to accept others' ways
+tolerant|accepting of differences
+tolerate|to accept something you do not like
+toll|the number of people killed or hurt
+tomb|a stone grave
+torture|the causing of great pain on purpose
+tout|to praise in order to sell
+toxic|containing poison
+trail|a path through the country
+tranquil|calm and peaceful
+transaction|a piece of business
+transcend|to go beyond
+transient|lasting only a short while
+transparency|openness that lets people see what is done
+transparent|clear enough to see through
+traverse|to cross
+treaty|a written agreement between countries
+tremendous|very great
+tribunal|a special court
+tribute|an act that shows respect
+triumph|a great victory
+trivial|of little importance
+turmoil|great confusion
+turnover|the total sales of a business
+unanimous|agreed by everyone
+underestimate|to guess too low
+undermine|to weaken slowly
+unify|to bring together as one
+unprecedented|never having happened before
+unveil|to show for the first time
+upheaval|a great and sudden change
+uphold|to support and defend
+upright|standing straight up
+utility|usefulness
+utilize/utilise|to make use of
+vacant|empty, not in use
+vaccine|a substance given to protect against a disease
+vague|not clear
+vain|without success
+vanish|to disappear suddenly
+variable|something that can change
+velocity|speed in a given direction
+venture|a new business with some risk
+verdict|the decision of a jury
+verify|to check that something is true
+versatile|having many uses or skills
+verse|one part of a song or poem
+versus|against
+vessel|a ship
+veteran|a person with long experience, often of war
+viable|able to work or survive
+vice|a bad habit or moral fault
+vicinity|the surrounding area
+vigil|a period of staying awake to watch
+vigilant|watching for danger
+violate|to break a law or agreement
+virtue|a good moral quality
+vitality|energy and life
+vocabulary|all the words a person knows
+void|an empty space
+volatile|likely to change suddenly
+voyage|a long trip by sea
+vulnerable|easily hurt
+waive|to give up a right or charge
+wallet|a small flat case for money and cards
+wane|to grow weaker
+warehouse|a large building for storing goods
+warrant|to make necessary
+warrior|a fighter in battle
+weave|to make cloth by crossing threads
+weed|a wild plant growing where it is not wanted
+whereby|by which
+widow|a woman whose husband has died
+wield|to hold and use
+wilderness|wild land where no one lives
+wince|to make a quick movement from pain
+wipe|to rub with a cloth to clean or dry
+withhold|to refuse to give
+withstand|to remain strong against
+woe|great sorrow
+worship|to show love and respect to a god
+worthwhile|good enough to deserve the effort
+yawn|to open the mouth wide when tired
+yearn|to long for
+yell|to shout loudly
+yield|to produce
+youngster|a young person
+zeal|great energy and eagerness

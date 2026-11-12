@@ -41,8 +41,12 @@ class Enemy {
   final String _id, _en, sprite;
   final int tone;
   final bool boss;
-  const Enemy(this._id, this._en, this.sprite, this.tone, this.boss);
+  final String _threatId, _threatEn;
+  const Enemy(this._id, this._en, this.sprite, this.tone, this.boss, [this._threatId = '', this._threatEn = '']);
   String get name => tr(_id, _en);
+
+  /// one line of menace under the name
+  String get threat => tr(_threatId, _threatEn);
 }
 
 class Quest {
@@ -120,47 +124,161 @@ class Game {
     Gear('w3', 'weapon', 'Senjata perak', 'Silver arms', 'Baron Tiran', 'Tyrant Baron', 3),
     Gear('w4', 'weapon', 'Senjata adipati', 'Ducal arms', 'Adipati Pengkhianat', 'Traitor Duke', 4),
     Gear('w5', 'weapon', 'Senjata raja', 'Royal arms', 'Naga Tua', 'Old Dragon', 5),
+    Gear('w6', 'weapon', 'Senjata terkutuk', 'Cursed arms', 'Count Terkutuk', 'Cursed Count', 6),
     Gear('s1', 'shield', 'Perisai kayu', 'Wooden shield', 'Serigala Hutan', 'Forest Wolf', 0),
     Gear('s2', 'shield', 'Perisai besi', 'Iron shield', 'Bandit Jalanan', 'Highwayman', 1),
     Gear('s3', 'shield', 'Perisai baja', 'Steel shield', 'Tengkorak Penjaga', 'Skeleton Guard', 2),
     Gear('s4', 'shield', 'Perisai perak', 'Silver shield', 'Gargoyle', 'Gargoyle', 3),
     Gear('s5', 'shield', 'Perisai emas', 'Golden shield', 'Penjaga Takhta', 'Throne Guard', 5),
+    Gear('s6', 'shield', 'Perisai tulang', 'Bone shield', 'Serigala Kelam', 'Dire Wolf', 6),
     Gear('c1', 'cloak', 'Jubah cokelat', 'Brown cloak', 'Babi Hutan', 'Wild Boar', 0),
     Gear('c2', 'cloak', 'Jubah hijau', 'Green cloak', 'Pemanah Liar', 'Wild Archer', 1),
     Gear('c3', 'cloak', 'Jubah merah', 'Red cloak', 'Penyihir Menara', 'Tower Sorcerer', 2),
     Gear('c4', 'cloak', 'Jubah biru', 'Blue cloak', 'Ksatria Bayangan', 'Shadow Knight', 3),
     Gear('c5', 'cloak', 'Jubah ungu', 'Purple cloak', 'Raja Bayangan', 'Shadow King', 4),
+    Gear('c6', 'cloak', 'Jubah malam', 'Night cloak', 'Kelelawar Raksasa', 'Giant Bat', 6),
   ];
 
-  /// per rank held (0..4): sub-boss I, sub-boss II, the boss of the coronation
+  /// per rank held (0..5): sub-boss I, sub-boss II, the boss of the coronation
   static const enemies = [
     [
-      Enemy('Serigala Hutan', 'Forest Wolf', 'wolf', 0, false),
-      Enemy('Babi Hutan', 'Wild Boar', 'boar', 0, false),
-      Enemy('Kepala Bandit', 'Bandit Chief', 'bandit', 0, true),
+      Enemy('Serigala Hutan', 'Forest Wolf', 'wolf', 0, false, 'Memburu yang ragu.', 'Hunts what hesitates.'),
+      Enemy('Babi Hutan', 'Wild Boar', 'boar', 0, false, 'Menerjang setiap celah.', 'Charges through every gap.'),
+      Enemy(
+        'Kepala Bandit',
+        'Bandit Chief',
+        'bandit',
+        0,
+        true,
+        'Merampas kata dari yang lengah.',
+        'Robs the careless of their words.',
+      ),
     ],
     [
-      Enemy('Bandit Jalanan', 'Highwayman', 'bandit', 1, false),
-      Enemy('Pemanah Liar', 'Wild Archer', 'bandit', 2, false),
-      Enemy('Ksatria Hitam', 'Black Knight', 'knight', 0, true),
+      Enemy(
+        'Bandit Jalanan',
+        'Highwayman',
+        'bandit',
+        1,
+        false,
+        'Menunggu di tikungan jalan.',
+        'Waits at the bend of the road.',
+      ),
+      Enemy('Pemanah Liar', 'Wild Archer', 'bandit', 2, false, 'Tak pernah meleset dua kali.', 'Never misses twice.'),
+      Enemy(
+        'Ksatria Hitam',
+        'Black Knight',
+        'knight',
+        0,
+        true,
+        'Belum pernah mundur selangkah pun.',
+        'Has never yielded a single step.',
+      ),
     ],
     [
-      Enemy('Tengkorak Penjaga', 'Skeleton Guard', 'skeleton', 0, false),
-      Enemy('Penyihir Menara', 'Tower Sorcerer', 'mage', 0, false),
-      Enemy('Baron Tiran', 'Tyrant Baron', 'knight', 1, true),
+      Enemy(
+        'Tengkorak Penjaga',
+        'Skeleton Guard',
+        'skeleton',
+        0,
+        false,
+        'Masih berjaga setelah mati.',
+        'Still on watch after death.',
+      ),
+      Enemy(
+        'Penyihir Menara',
+        'Tower Sorcerer',
+        'mage',
+        0,
+        false,
+        'Mengutuk setiap ejaan yang salah.',
+        'Curses every wrong spelling.',
+      ),
+      Enemy(
+        'Baron Tiran',
+        'Tyrant Baron',
+        'knight',
+        1,
+        true,
+        'Menagih upeti dalam kata.',
+        'Takes his tribute in words.',
+      ),
     ],
     [
-      Enemy('Gargoyle', 'Gargoyle', 'gargoyle', 0, false),
-      Enemy('Ksatria Bayangan', 'Shadow Knight', 'knight', 2, false),
-      Enemy('Adipati Pengkhianat', 'Traitor Duke', 'mage', 1, true),
+      Enemy('Serigala Kelam', 'Dire Wolf', 'wolf', 1, false, 'Lebih besar dari kudamu.', 'Larger than your horse.'),
+      Enemy('Kelelawar Raksasa', 'Giant Bat', 'bat', 0, false, 'Datang bersama gelap.', 'Comes with the dark.'),
+      Enemy(
+        'Count Terkutuk',
+        'Cursed Count',
+        'count',
+        0,
+        true,
+        'Tak tidur sejak seabad lalu.',
+        'Has not slept for a century.',
+      ),
     ],
     [
-      Enemy('Penjaga Takhta', 'Throne Guard', 'knight', 3, false),
-      Enemy('Raja Bayangan', 'Shadow King', 'skeleton', 1, false),
-      Enemy('Naga Tua', 'Old Dragon', 'dragon', 0, true),
+      Enemy(
+        'Gargoyle',
+        'Gargoyle',
+        'gargoyle',
+        0,
+        false,
+        'Batu yang menunggu kamu lengah.',
+        'Stone that waits for you to slip.',
+      ),
+      Enemy(
+        'Ksatria Bayangan',
+        'Shadow Knight',
+        'knight',
+        2,
+        false,
+        'Meniru setiap gerakmu.',
+        'Mirrors every move you make.',
+      ),
+      Enemy(
+        'Adipati Pengkhianat',
+        'Traitor Duke',
+        'mage',
+        1,
+        true,
+        'Bersumpah setia, lalu menikam.',
+        'Swears loyalty, then strikes.',
+      ),
+    ],
+    [
+      Enemy(
+        'Penjaga Takhta',
+        'Throne Guard',
+        'knight',
+        3,
+        false,
+        'Pernah menjaga raja yang lebih hebat.',
+        'Has guarded greater kings.',
+      ),
+      Enemy(
+        'Raja Bayangan',
+        'Shadow King',
+        'skeleton',
+        1,
+        false,
+        'Duduk di takhta yang kau incar.',
+        'Sits on the throne you seek.',
+      ),
+      Enemy(
+        'Naga Tua',
+        'Old Dragon',
+        'dragon',
+        0,
+        true,
+        'Lebih tua dari bahasa itu sendiri.',
+        'Older than language itself.',
+      ),
     ],
   ];
-  static const _subDrops = ['s1', 'c1', 's2', 'c2', 's3', 'c3', 's4', 'c4', 's5', 'c5'];
+  // what each fight leaves behind, rank by rank (the Count's road was added later, hence the sixes)
+  static const _subDrops = ['s1', 'c1', 's2', 'c2', 's3', 'c3', 's6', 'c6', 's4', 'c4', 's5', 'c5'];
+  static const _bossDrops = ['w1', 'w2', 'w3', 'w6', 'w4', 'w5'];
 
   static const feats = [
     Feat('first', 'Langkah pertama', 'The first step', 'Menjawab kata pertamamu', 'Answered your first word'),
@@ -560,7 +678,9 @@ class Game {
   List<String> onVictory(int rankBefore, int stageBefore, bool boss, bool flawless) {
     final news = <String>[];
     if (_gain((boss ? 120 : 50) * (100 + perk('winXp')) ~/ 100)) news.add(_levelNews);
-    final id = boss ? 'w${rankBefore + 1}' : _subDrops[min(_subDrops.length - 1, rankBefore * 2 + stageBefore)];
+    final id = boss
+        ? _bossDrops[min(_bossDrops.length - 1, rankBefore)]
+        : _subDrops[min(_subDrops.length - 1, rankBefore * 2 + stageBefore)];
     final it = _grant(id);
     if (it != null) news.add(tr('Rampasan: ${it.name}', 'Loot: ${it.name}', 'Botín: ${it.name}', 'Butin : ${it.name}'));
     if (boss) news.addAll(_feat('boss1'));

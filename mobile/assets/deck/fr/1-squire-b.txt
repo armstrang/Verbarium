@@ -1,190 +1,354 @@
-# Verbarium — French meanings for 1-squire-b.txt: word|meaning
-accident|accident
-act|agir
-action|action
-active|actif
-actual|réel, véritable
-add|ajouter
-address|adresse
-adult|adulte
-adventure|aventure
-advertise|faire de la publicité
-afraid|effrayé, qui a peur
-age|âge
-agency|agence
-agree|être d’accord
-ahead|devant, en avant
-air|air
-airport|aéroport
-alarm|alarme
-alive|vivant
-alone|seul
-aloud|à voix haute
-although|bien que
-amazing|étonnant
-ambulance|ambulance
-among|parmi
-angry|en colère
-animal|animal
-annoy|agacer
-answer|répondre
-anxious|anxieux
-apartment|appartement
-apologize|s’excuser
-appear|apparaître, sembler
-appearance|apparence
-appointment|rendez-vous
-area|zone, région
-argument|dispute, argument
-army|armée
-arrive|arriver
-article|article
-artist|artiste
-ashamed|honteux
-asleep|endormi
-athlete|athlète
-attack|attaquer
-attention|attention
-attractive|attirant
-audience|public, auditoire
-author|auteur
-autumn|automne
-awake|éveillé
-award|prix, récompense
-awful|affreux
-baggage|bagages
-bake|cuire au four
-bank|banque
-bargain|bonne affaire
-basic|de base
-basket|panier
-battery|batterie, pile
-battle|bataille
-beach|plage
-bear|supporter
-beat|battre, frapper
-beauty|beauté
-behind|derrière
-believe|croire
-belong|appartenir
-below|en dessous de
-bend|plier, se pencher
-beside|à côté de
-bill|facture, addition
-birth|naissance
-bite|mordre
-bitter|amer
-blame|blâmer, reprocher
-blanket|couverture
-bleed|saigner
-blind|aveugle
-block|bloquer
-blood|sang
-blow|souffler
-board|planche, tableau
-boil|bouillir
-bomb|bombe
-bone|os
-border|frontière
-bored|qui s’ennuie
-boring|ennuyeux
-boss|patron, chef
-bother|déranger
-bottom|fond, bas
-brain|cerveau
-branch|branche, succursale
-brave|courageux
-break|casser
-breath|souffle, respiration
-breathe|respirer
-bridge|pont
-bright|brillant, vif
-bring|apporter
-broad|large
-build|construire
-burn|brûler
-bury|enterrer
-business|affaires, entreprise
-busy|occupé
-calm|calme
-camera|appareil photo
-camp|camp
-cancel|annuler
-candidate|candidat
-capital|capitale
-captain|capitaine
-care|se soucier
-careful|prudent, soigneux
-careless|négligent
-carry|porter
-case|cas, affaire
-cash|argent liquide
-castle|château
-catch|attraper
-celebrate|fêter, célébrer
-central|central
-century|siècle
-ceremony|cérémonie
-certain|certain
-chain|chaîne
-chance|chance, occasion
-change|changer
-charge|faire payer
-cheap|bon marché
-cheat|tricher, tromper
-check|vérifier
-cheerful|joyeux
-chemical|produit chimique
-chief|principal
-childhood|enfance
-choose|choisir
-citizen|citoyen
-clear|clair
-clever|intelligent, malin
-climate|climat
-climb|grimper, escalader
-close|fermer
-cloth|tissu
-clothes|vêtements
-cloud|nuage
-coach|entraîneur
-coast|côte
-coin|pièce de monnaie
-collection|collection
-college|université, faculté
-colour|couleur
-comfortable|confortable
-company|entreprise
-competition|concurrence, concours
-computer|ordinateur
-concert|concert
-conversation|conversation
-cook|cuisiner
-cool|frais
-copy|copier
-corner|coin
-cost|coûter
-cotton|coton
-count|compter
-country|pays
-countryside|campagne
-couple|couple
-courage|courage
-course|cours
-court|tribunal
-cover|couvrir
-crash|s’écraser, percuter
-crazy|fou
-cream|crème
-creature|créature
-crop|récolte, culture
-cross|traverser
-cruel|cruel
-cry|pleurer
-cup|tasse
-cure|remède, guérison
-curious|curieux
-current|actuel
-custom|coutume
-cut|couper
-cycle|faire du vélo
+probably|probablement
+problem|problème
+process|processus
+produce|produire
+product|produit
+professional|professionnel
+profile|profil
+progress|progrès
+project|projet
+promise|promettre
+pronounce|prononcer
+protect|protéger
+provide|fournir
+public|public
+publish|publier
+pull|tirer
+purpose|but
+push|pousser
+quality|qualité
+quantity|quantité
+quarter|quart
+queen|reine
+question|question
+questionable|discutable
+quick|rapide
+quiet|calme, silencieux
+quite|assez, plutôt
+race|course
+railway|chemin de fer
+rain|pluie
+raise|lever, augmenter
+rate|taux, rythme
+rather|plutôt
+reach|atteindre
+react|réagir
+ready|prêt
+real|réel, vrai
+realise|se rendre compte
+reason|raison
+receive|recevoir
+recent|récent
+reception|réception, accueil
+recipe|recette
+recognize|reconnaître
+recommend|recommander
+record|enregistrer
+reduce|réduire
+refer|faire référence
+refuse|refuser
+region|région
+regular|régulier
+relationship|relation
+relax|se détendre
+remember|se souvenir
+remove|enlever, supprimer
+repair|réparer
+repeat|répéter
+replace|remplacer
+reply|répondre
+report|rapport
+request|demande
+research|recherche
+respond|répondre
+rest|se reposer
+restaurant|restaurant
+restless|agité
+result|résultat
+return|revenir, rendre
+review|critique, examen
+rice|riz
+rich|riche
+ride|monter, aller à
+ring|sonner, appeler
+river|rivière, fleuve
+road|route
+rock|rocher
+role|rôle
+roof|toit
+round|rond
+route|itinéraire
+routine|routine
+rude|impoli
+rule|règle
+sad|triste
+safe|sûr, en sécurité
+sail|naviguer
+salary|salaire
+sale|vente, soldes
+salt|sel
+same|même
+save|économiser, sauver
+scared|effrayé
+scene|scène
+schedule|emploi du temps, calendrier
+science|science
+score|score, note
+screen|écran
+sea|mer
+search|chercher
+season|saison
+seat|siège
+second|seconde
+secret|secret
+secretary|secrétaire
+section|section
+seem|sembler
+sell|vendre
+send|envoyer
+sense|sens
+sentence|phrase
+separate|séparé
+series|série
+serious|sérieux, grave
+serve|servir
+service|service
+several|plusieurs
+shake|secouer
+shape|forme
+share|partager
+sheet|feuille, drap
+ship|navire
+shirt|chemise
+shop|magasin
+short|court, petit
+shoulder|épaule
+shout|crier
+show|montrer
+shower|douche, averse
+shut|fermer
+sick|malade
+side|côté
+sign|signe, panneau
+silver|argent
+similar|semblable
+simple|simple
+since|depuis
+sing|chanter
+single|seul, célibataire
+site|site
+situation|situation
+size|taille
+skill|compétence
+skin|peau
+sky|ciel
+sleep|dormir
+slow|lent
+smart|intelligent, élégant
+smell|sentir, sentir bon
+smile|sourire
+smoke|fumée
+snake|serpent
+snow|neige
+soap|savon
+social|social
+society|société
+sock|chaussette
+soft|doux, mou
+soldier|soldat
+solution|solution
+solve|résoudre
+sometimes|parfois
+somewhere|quelque part
+song|chanson
+soon|bientôt
+sorry|désolé
+sort|sorte
+sound|son
+soup|soupe
+source|source
+south|sud
+space|espace
+speak|parler
+special|spécial
+specific|spécifique
+speech|discours
+speed|vitesse
+spell|épeler
+spend|dépenser, passer
+spoon|cuillère
+sport|sport
+spring|printemps
+square|carré, place
+stage|scène, étape
+stair|marche
+stamp|timbre, tampon
+stand|être debout
+star|étoile
+start|commencer
+state|état
+statement|déclaration
+station|gare, station
+stay|rester, séjourner
+steal|voler
+step|pas
+still|encore, toujours
+stomach|estomac, ventre
+stone|pierre
+stop|arrêter
+store|stocker, ranger
+storm|tempête
+story|histoire
+straight|droit
+strange|étrange
+strategy|stratégie
+street|rue
+stress|stress
+strong|fort
+structure|structure
+student|étudiant
+study|étudier
+stupid|stupide
+style|style
+subject|matière, sujet
+succeed|réussir
+success|succès
+sugar|sucre
+suggest|suggérer, indiquer
+suit|aller bien, convenir
+summer|été
+support|soutenir
+suppose|supposer
+sure|sûr
+surprise|surprise
+survey|enquête, sondage
+sweet|sucré, doux
+swim|nager
+symbol|symbole
+system|système
+table|table
+talk|parler
+tall|grand
+target|cible, objectif
+task|tâche
+taste|goûter
+teach|enseigner
+team|équipe
+technology|technologie
+temperature|température
+term|trimestre, terme
+terrible|terrible
+test|test, examen
+thank|remercier
+theatre|théâtre
+thick|épais
+thief|voleur
+thin|mince
+thirsty|assoiffé
+thought|pensée
+through|à travers
+throw|lancer, jeter
+ticket|billet
+tidy|rangé, ordonné
+tie|attacher, nouer
+tip|bout, conseil, pourboire
+tired|fatigué
+title|titre
+together|ensemble
+tool|outil
+tooth|dent
+top|sommet, haut
+topic|sujet
+touch|toucher
+tour|visite, tournée
+tourist|touriste
+towards|vers
+towel|serviette
+tower|tour
+town|ville
+toy|jouet
+track|trace, piste
+tradition|tradition
+traditional|traditionnel
+train|s’entraîner, former
+transport|transport
+tree|arbre
+trip|voyage
+trouble|ennui, difficulté
+trousers|pantalon
+true|vrai
+try|essayer
+turn|tourner
+twice|deux fois
+twin|jumeau
+type|type
+typical|typique
+umbrella|parapluie
+uncle|oncle
+understand|comprendre
+uniform|uniforme
+unit|unité
+until|jusqu’à
+unusual|inhabituel
+upstairs|en haut
+use|utiliser
+useful|utile
+usual|habituel
+usually|d’habitude
+valley|vallée
+van|camionnette
+variety|variété
+vegetable|légume
+vehicle|véhicule
+view|avis, vue
+village|village
+virus|virus
+visit|visiter
+visitor|visiteur
+voice|voix
+wait|attendre
+wake|se réveiller, réveiller
+walk|marcher
+wall|mur
+war|guerre
+warm|chaud
+wary|méfiant
+wash|laver
+watch|regarder, surveiller
+wave|vague
+weak|faible
+wear|porter
+weather|temps (météo)
+wedding|mariage
+week|semaine
+weekend|week-end
+weight|poids
+welcome|accueillir
+west|ouest
+wet|mouillé
+wheel|roue
+while|moment, pendant que
+whole|entier
+wide|large
+wife|épouse, femme
+wild|sauvage
+win|gagner
+wind|vent
+window|fenêtre
+winter|hiver
+wish|souhaiter
+without|sans
+wonderful|merveilleux
+wood|bois
+word|mot
+work|travailler
+world|monde
+worry|s’inquiéter
+worse|pire
+write|écrire
+wrong|faux, erroné
+yard|cour
+year|année
+yet|encore, déjà
+young|jeune
+zero|zéro

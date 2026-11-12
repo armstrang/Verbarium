@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Checks the Verbarium deck (mobile/assets/deck/*.txt): format, one gap per sentence, no word twice.
 
-Core files: word|pos|meaning|sentence[|=form]   (the rank comes from the file name, 1-… to 5-…; a file may be
+Core files: word|pos|meaning|sentence[|=form]   (the rank comes from the file name, 1-… to 6-…; a file may be
                                                  split: 1-squire.txt, 1-squire-b.txt, …)
 Banner files (toefl.txt, ielts.txt): rank|word|pos|meaning|sentence[|=form]
 collocations.txt: rank|phrase with [answer]|wrong,wrong,wrong|meaning[|meaning in English]

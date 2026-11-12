@@ -1,480 +1,353 @@
-# Verbarium — plain English definitions for 3-baron-b.txt: word|definition
-abbreviate|to make a word or title shorter
-abide|to accept and follow a rule
-abnormal|not usual, in a worrying way
-abrupt|sudden and unexpected
-absurd|completely unreasonable
-accessory|an extra item that adds to the main thing
-acclaim|public praise
-accord|a formal agreement
-accordingly|in a way that suits the situation
-accusation|a statement that someone did wrong
-activate|to make something start working
-adaptation|a film or play made from a book
-addict|a person who cannot stop taking a drug
-adhesive|a substance that sticks things together
-adjoin|to be next to and touching
-administer|to give or manage officially
-admirable|deserving respect
-adolescence|the years between childhood and adult life
-adversary|an enemy or opponent
-advisory|giving advice
-affection|a gentle feeling of love
-affirm|to state firmly that something is true
-aggravate|to make worse
-agitate|to argue publicly for change
-agrarian|based on farming
-albeit|although
-alienate|to make someone feel they do not belong
-align|to bring into line with
-allegation|a claim of wrongdoing not yet proved
-allege|to claim without proof
-alliance|a union of countries or parties
-allot|to give as a share
-ambivalent|having mixed feelings
-amid|in the middle of
-analogous|similar in a way that helps explain
-anecdote|a short story about a real event
-annex|to take control of land by force
-anonymous|with no name given
-antagonist|the character who opposes the hero
-apparatus|the equipment for a task
-appraise|to judge the worth of
-apprentice|a young person learning a trade from a skilled worker
-arbitrate|to settle a dispute as a neutral judge
-archive|a collection of historical records
-arena|a place of public action or contest
-aristocracy|the class of people with titles
-array|a large and impressive group
-ascend|to go up
-aspiration|a strong hope for the future
-assertion|a firm statement
-assumption|something taken as true without proof
-assurance|a promise meant to give confidence
-asylum|protection given to someone who fled their country
-attain|to reach or gain
-attainment|success in reaching a level
-attentive|listening or watching carefully
-audit|an official check of accounts
-authentic|real, not a copy
-authorize/authorise|to give official permission for
-aviation|the flying of aircraft
-backdrop|the setting in which events happen
-backlash|a strong reaction against a change
-ballot|a secret vote
-bankrupt|unable to pay debts
-benchmark|a standard for comparing others
-beneficiary|a person who gains from something
-benign|not harmful
-bilateral|involving two sides
-bizarre|very strange
-bleak|without hope
-blueprint|a detailed plan for the future
-blunt|speaking in a direct, plain way
-blur|to make less clear
-breakdown|a list of the parts that make a total
-brink|the edge just before a great change
-brutal|very cruel or severe
-bulky|large and hard to carry
-bureaucracy|a system of many officials and rules
-bypass|to go around
-calibre/caliber|the level of quality or ability
-candid|open and honest
-captivate|to hold the full attention of
-cater|to provide what is needed
-caveat|a warning about a limit
-censor|to remove parts not allowed to be seen
-census|an official count of people
-chronic|lasting a long time, said of illness
-chronicle|a record of events in order of time
-chronological|arranged in order of time
-clarity|the quality of being easy to understand
-coalition|a union of parties for a shared purpose
-coerce|to force by threats
-cognitive|about thinking and knowing
-collateral|property promised if a loan is not repaid
-commemorate|to honour the memory of
-commentary|a spoken or written set of opinions on events
-commonplace|ordinary and often seen
-communal|shared by a group
-compassion|pity and care for those who suffer
-compelling|so strong that you must accept it
-competence|the ability to do something well
-complexity|the state of having many parts
-compliance|the act of obeying rules
-complication|a new problem that makes things harder
-composition|the way something is made up
-compress|to press into less space
-conceivable|able to be imagined
-conception|an idea of what something is
-concession|something given up to end an argument
-concise|short and clear
-condense|to make shorter or thicker
-configuration|the arrangement of parts
-confiscate|to take away officially
-conform|to follow the accepted rules
-conscientious|careful to do work properly
-consecutive|following one after another
-consolidate|to join into one stronger whole
-conspiracy|a secret plan to do wrong
-constituent|one of the parts that form a whole
-constraint|a limit on what can be done
-contaminate|to make dirty or poisonous
-contempt|the feeling that someone deserves no respect
-contention|a claim made in an argument
-continuity|the state of going on without a break
-conversely|in the opposite way
-conviction|a strong belief
-coordinate|to make parts work together
-cornerstone|the most important base of something
-correlation|a link in which two things change together
-correspondence|letters exchanged between people
-counterpart|a person with the same job elsewhere
-credibility|the quality of being believed
-culprit|the one responsible for a wrong
-curb|to hold back
-customary|usual by habit
-daunt|to make someone lose courage
-deadlock|a state in which no side will move
-debris|broken pieces left after destruction
-decisive|settling the result
-decree|an official order by a ruler
-default|failure to pay what is owed
-defer|to put off until later
-deficiency|a lack of something needed
-defy|to refuse to obey
-degrade|to lower the quality of
-deliberately|on purpose
-denial|a statement that something is not true
-density|how closely packed something is
-deploy|to send into position for use
-depreciate|to fall in value
-deprive|to take away something needed
-descendant|a person who comes from a certain ancestor
-detain|to keep in custody
-devise|to think up
-diagnosis|the naming of an illness after tests
-dictate|to decide what must happen
-diffuse|to spread out widely
-dilute|to make weaker by adding water
-diplomacy|the skill of managing relations between states
-directive|an official instruction
-disclose|to make known
-discourse|serious talk or writing on a subject
-discretion|freedom to decide
-dismantle|to take apart
-disparate|very different in kind
-dispatch|to send off
-disposal|the act of getting rid of
-disposition|a person's usual temper
-dissent|disagreement with an official view
-distinctive|easy to recognize because different
-divert|to send in another direction
-documentary|a film about real facts
-dormant|not active for now
-dubious|causing doubt
-duplicate|to make an exact copy
-dwell|to think for too long about
-eccentric|strange in a harmless way
-eclipse|the hiding of the sun or moon by another body
-ecology|the relations of living things with their surroundings
-elapse|to pass, said of time
-electorate|all the people who can vote
-elite|a small group with the most power
-eloquent|able to speak well and movingly
-embark|to begin a new course
-embed|to fix firmly inside
-empathy|the ability to share another's feelings
-empower|to give power to
-enact|to make into law
-endow|to give money to support
-enlighten|to give understanding to
-enrich|to make better in quality
-entrepreneur|a person who starts businesses
-epidemic|a disease spreading fast among many
-equilibrium|a state of balance
-escalate|to become more serious
-essence|the basic nature of something
-esteem|high respect
-ethics|ideas about right and wrong behaviour
-evade|to escape by cleverness
-evoke|to bring to mind
-exceptional|unusually good
-exclusive|not shared with others
-exemplary|so good as to be a model
-exempt|free from a duty
-expenditure|money spent
-expire|to come to an end and no longer be valid
-explanatory|meant to make clear
-exploitation|unfair use for gain
-exquisite|very beautiful and finely made
-fabricate|to make up something false
-facet|one side of a matter
-faction|a small group inside a larger one
-fallout|the bad results of an event
-feat|an act of great skill or courage
-fertility|the ability to produce crops or young
-fidelity|loyalty or exactness
-finite|having an end or limit
-flaw|a fault or weak point
-flourish|to grow and do well
-foremost|most important
-forfeit|to lose as a penalty
-formidable|very hard to deal with
-forum|a place for open discussion
-franchise|the right to sell a company's goods
-frantic|wild with hurry or fear
-frugal|careful in spending
-gauge|to measure or judge
-generic|not of a special brand
-genre|a type of art or writing
-gist|the main point
-governance|the way an organization is ruled
-grievance|a complaint about unfair treatment
-grounds|reasons
-habitual|done as a habit
-hallmark|a typical sign
-haphazard|without order or plan
-harness|to control and use
-hasten|to make happen sooner
-hazardous|dangerous
-heed|to pay attention to
-hefty|large in amount
-heighten|to make stronger
-hereditary|passed from parent to child
-hindsight|understanding that comes after an event
-homogeneous|made of parts that are all alike
-hostility|unfriendly or angry feeling
-humane|kind and causing little suffering
-hybrid|a mix of two different kinds
-hypothetical|imagined for the sake of argument
-illuminate|to make clear or light up
-imminent|about to happen
-immerse|to put deep into
-impair|to weaken or damage
-impending|coming very soon
-implication|a likely result
-improvise|to make up as you go
-inaugurate|to open officially
-inclusive|open to everyone
-incur|to bring upon yourself
-indefinite|with no fixed end
-indicator|a sign that shows a state
-indifferent|not caring
-indulge|to allow someone whatever they want
-inequality|an unfair difference between groups
-infinite|without end
-inflict|to cause something painful
-influx|the arrival of many at once
-infringe|to break a right or law
-ingenuity|skill in inventing
-inquire|to ask
-insistence|the act of demanding firmly
-insofar|to the degree that
-instability|the state of being likely to change suddenly
-insulate|to protect from heat, cold or sound
-intact|whole and not damaged
-intake|the amount taken in
-integration|the joining of parts into a whole
-interim|for the time being
-intuition|knowing without reasoning
-invaluable|extremely useful
-inventory|a full list of goods
-irony|a situation opposite to what was expected
-irrelevant|not connected with the matter
-irrespective|without regard to
-jurisdiction|the area of a court's power
-landmark|an event that marks a turning point
-lapse|a short failure
-lavish|rich and generous
-layout|the way things are arranged
-legacy|what is left behind by the past
-legislate|to make laws
-legitimacy|the quality of being lawful and accepted
-lenient|not strict in punishing
-liability|legal responsibility
-liable|responsible by law
-liaison|a person who links two groups
-linear|in a straight line
-literacy|the ability to read and write
-literal|in the plain first sense of the words
-lobby|to try to persuade those who make laws
-longevity|long life
-loophole|a gap in a rule that lets people avoid it
-magnitude|great size or importance
-mainstream|accepted by most people
-malfunction|a failure to work properly
-mandatory|required by rule
-manifest|to show clearly
-manuscript|a text written by hand
-maritime|of the sea and ships
-materialize/materialise|to become real
-mediocre|of only average quality
-mentor|an experienced guide and adviser
-metaphor|a way of describing one thing as another
-migration|movement from one region to another
-milestone|an important point in progress
-mimic|to copy the look or sound of
-misconception|a wrong idea
-mobilize/mobilise|to gather and prepare for action
-monopoly|sole control of a trade
-morale|the level of confidence in a group
-mortality|the number of deaths
-motif|an idea or shape that keeps returning in a work
-mundane|ordinary and dull
-narrate|to tell a story
-negligence|a failure to take proper care
-niche|a small special area of a market
-nominal|very small, in name only
-nonetheless|in spite of that
-notorious|famous for something bad
-novelty|the quality of being new
-nutrient|a substance that feeds living things
-oblivious|not aware
-obstruct|to block
-occupant|a person who lives in or uses a place
-occurrence|something that happens
-optimal|best possible
-optimism|the belief that things will go well
+origin|the place or point where something begins
 orthodox|following accepted beliefs
-outrage|great public anger
-outright|complete and direct
-outset|the beginning
-overhaul|to examine and improve thoroughly
+otherwise|if not
+outcome|the final result
+outfit|a set of clothes worn together
+outline|a short plan giving the main points
+output|the amount that is made
+outstanding|very much better than others
+overall|including everything
+overcome|to defeat a difficulty
+overhead|above you
 overlap|to cover part of the same area
-oversee|to watch over work
-overt|done openly
-pact|a formal agreement
-paramount|more important than anything else
-partisan|strongly supporting one side
-patron|a person who supports artists
+owe|to have to pay back
+oxygen|the gas in air that we need to live
+pace|the speed at which something moves
+palm|the inside flat part of the hand
+panel|a small group of experts
+panic|sudden fear that stops clear thought
+parade|a line of people marching in celebration
+paradox|a statement that seems to oppose itself yet may be true
+parallel|running side by side and never meeting
+parliament|the group of people elected to make laws
+particle|a very small piece
+passage|a short part of a text
+passionate|showing strong feeling
+patience|the ability to wait calmly
+patriot|a person who loves their country
+pause|to stop for a short time
+penalty|a punishment for breaking a rule
 penetrate|to go into or through
+pension|money paid regularly after you stop working
+perceive|to notice or understand in a certain way
 perception|the way something is seen or understood
-peripheral|at the edge, less important
-perpetual|never ending
-persistent|continuing for a long time
-petition|a request signed by many people
-philanthropy|the giving of money to help others
-pinpoint|to find exactly
-plight|a sad and difficult situation
-polarize/polarise|to divide into two opposing groups
-portfolio|a collection of a person's work
-portray|to show or describe in a certain way
-postulate|to suggest as a basis for reasoning
-potent|powerful
-precedent|an earlier case used as a guide
-precision|exactness
-predecessor|the person who held a post before
-predominantly|mostly
-premature|happening too early
-prestigious|respected and admired
+permanent|lasting for ever
+permit|to let something be done
+perspective|a way of looking at something
+phase|a stage in a process
+phenomenon|something that is seen to happen
+philosophy|the study of ideas about life and knowledge
+pile|a number of things one on top of another
+pilgrim|a person who travels to a holy place
+pill|a small round piece of medicine
+pitch|a field for sports
+pity|a feeling of sadness for someone's trouble
+plague|a deadly disease that spreads fast
+plain|simple, with no decoration
+plaintiff|the person who brings a case to court
+plural|referring to more than one
+polar|near the top or bottom of the earth
+portion|a share or part
+pose|to present a danger or problem
+possess|to have or own
+potential|ability that may develop
+pottery|pots and dishes made of baked clay
+praise|to say good things about
+precede|to come before
+precious|of great value
+precise|exact
+predictable|easy to know in advance
+predominant|strongest or most common
+preference|a greater liking for one thing
+pregnant|having a baby growing inside
+preoccupy|to fill the thoughts of
+preparation|the act of getting ready
+presence|the fact of being in a place
+preserve|to keep safe from harm or decay
+prestige|respect won by success
 prevalent|common in a place or time
-proactive|acting before problems arise
-probe|to examine deeply
-proclaim|to announce publicly
-proficiency|skill
+pride|a good feeling about what you have done
+primarily|mainly
+prime|first in importance
+primitive|very simple and of an early kind
+principle|a basic rule or belief
+priority|something that must be done first
+privacy|the state of being free from public attention
+procedure|the correct way of doing something
+proceed|to go on
+progressive|getting steadily worse or better
+prohibit|to forbid
 prolong|to make last longer
-propaganda|one-sided information meant to persuade
-prosperity|the state of being rich and successful
-protocol|the fixed rules for doing something
-prototype|the first model of a new design
-provision|the act of supplying
-provisional|for now, likely to change
-quota|a fixed share that is allowed
-ratify|to approve formally
-rationale|the reasons behind a decision
-reassure|to remove someone's worry
-rebuke|to speak severely to for a fault
-recipient|a person who receives
-reciprocal|given and received by both sides
+prolonged|lasting a long time
+promising|likely to succeed
+promotion|a move to a higher job
+prompt|done without delay
+proof|facts that show something is true
+prop|to support with something
+proportion|a part compared with the whole
+propose|to put forward as a plan
+prospect|the chance of future success
+protein|the substance in meat and beans that builds the body
+psychology|the study of the mind
+publicity|public attention from the news
+punctual|arriving at the right time
+pupil|a child at school
+purchase|to buy
+pure|not mixed with anything
+pursue|to follow in order to catch or reach
+pursuit|the act of trying to get something
+puzzle|a game or question that is hard to solve
+questionnaire|a list of questions for a survey
+racial|about a person's race
+radiation|dangerous rays from certain materials
+random|with no pattern or plan
+rank|a level in the army or police
+rapid|fast
+rattle|to make short knocking sounds
+raw|not cooked
+realistic|sensible about what can be done
+reasonable|fair and sensible
+rebuild|to build again
+recall|to bring back to mind
+recession|a time when business and trade fall
+reckon|to think or guess
 reconcile|to make two things agree
+recover|to get well again
+recreation|things done for enjoyment in free time
+recruit|to find new people to join
 recur|to happen again
-redeem|to exchange for goods or money
-refrain|to stop yourself from doing
+refine|to make purer
+refresh|to give new energy to
+refugee|a person forced to leave their country
+regard|to think of in a certain way
+regarding|about
+register|to put your name on an official list
+regress|to go back to a worse state
+regret|to feel sorry about
+regrettable|causing sorrow
+regulate|to control by rules
+regulation|an official rule
 rehabilitate|to help return to normal life
-reimburse|to pay back money spent
-reiterate|to say again
-relentless|never stopping
-reminiscent|making you think of something else
-remnant|a small part left over
-renowned|famous and admired
-repeal|to cancel a law
-repertoire|all the pieces a performer can do
+rehearse|to practise a play before the show
+reinforce|to make stronger
+relevant|connected with the matter
+relief|the good feeling when worry ends
+relieve|to make pain less
+rely|to depend on
+remark|something said
+remarkable|unusual and worth noticing
+repay|to give back money
+representative|a person who acts for others
 repress|to hold down by force
-reservoir|a lake made to store water
-respective|belonging to each one separately
-retaliate|to strike back
-retrieve|to get back
-retrospect|a look back at the past
-revive|to bring back to life or use
-rhetoric|fine speech that may lack meaning
+reputation|what people think of someone
+rescue|to save from danger
+resent|to feel bitter about
+resentment|bitter anger at unfair treatment
+resident|a person who lives in a place
+resign|to leave a job by choice
+resist|to fight against or refuse
+resolution|a formal decision by a vote
+resolve|to settle a problem
+resort|a holiday place
+restore|to bring back to a former state
+restrict|to limit
+retail|the selling of goods in shops
+retain|to keep
+reveal|to make known something hidden
+revenue|money that a business or state receives
+revision|the changing of a text to improve it
+revolution|a complete change of government by the people
+reward|something given for good work
+rhythm|a regular beat in music
+rid|to make free of something unwanted
+ridiculous|very silly
+rigid|stiff
 rigour/rigor|great care and exactness
-rite|a ceremony of religion or custom
-ruthless|without pity
-safeguard|to protect
-sanctuary|a safe place
-saturation|the point where no more can be added
-secular|not connected with religion
-sediment|matter that settles at the bottom of water
-segment|one of the parts something divides into
-sentiment|a general feeling or opinion
-setback|something that delays progress
-shortcoming|a fault or weakness
-shrewd|clever in practical matters
-siege|the surrounding of a town by an army
-simultaneous|happening at the same time
-solidarity|support among members of a group
-sovereign|ruling itself
-spark|to set off
-spectrum|a full range
+rival|a person competing against you
+rob|to take from a person or bank by force
+root|the part of a plant under the ground
+rub|to move your hand over a surface while pressing
+ruin|to spoil completely
+rumour/rumor|a story passed around that may not be true
+rural|of the countryside
+rush|to move or do in a great hurry
+satellite|an object sent into space to circle the earth
+satisfaction|a pleased feeling
+satisfied|pleased because you have what you wanted
+satisfy|to give what is wanted
+scale|the size or level of something
+scandal|a shocking event that people talk about
+scarce|hard to find
+scenario|a possible course of events
+scheme|an official plan
+scholar|a person of deep learning
+scratch|to mark with something sharp
+scream|to cry out loudly in fear
+sector|a part of the economy
+secure|safe
+seek|to look for
+select|to pick from a group
+senior|higher in rank
+sensitive|easily hurt or affected
+sequence|the order in which things follow
+session|a period spent on one activity
+settle|to make a home in a place
+severe|very bad
+shade|a place where sunlight does not reach
+shadow|the dark shape a thing makes when it blocks light
+shallow|not deep
+shame|a painful feeling after doing wrong
+shelter|a place that protects from weather
+shock|a sudden strong surprise
+shore|the land along the edge of a sea or lake
+shortage|a state of not having enough
+sibling|a brother or sister
+signature|your name written by you
+significant|large enough to matter
+silence|the state of no sound at all
+sincere|honest in feeling
+slide|to move smoothly over a surface
+slight|small in degree
+slip|to slide by accident and almost fall
+slope|ground that goes up or down
+solar|of the sun
+sophisticated|highly developed
+soul|the part of a person that is not the body
+spacious|having a lot of room
+spare|kept as an extra
+species|a kind of animal or plant
+spectacular|very exciting to look at
 speculate|to guess without facts
+spill|to let liquid fall out by accident
+spite|a word used to say that something does not stop another
+split|to divide into parts
+spoil|to make something bad or less good
+sponsor|a company that pays for an event
+spontaneous|done without planning
+stable|firm and not likely to change
 stance|a publicly stated position
-stagnate|to stop growing
-stakeholder|a person with an interest in a business or plan
-stark|very plain and clear
-statute|a written law
-stereotype|a fixed simple idea of a group
-stigma|a mark of shame
-strand|one thread of a larger whole
-streamline|to make simpler and faster
+stare|to look at for a long time
+starve|to suffer or die from lack of food
+status|position in society
+steady|not changing, firm
+steam|the hot gas from boiling water
+steel|a very strong metal made from iron
+steep|rising sharply
+stimulate|to make more active
+stock|goods kept ready for sale
+stream|a small narrow river
+stretch|to make longer by pulling
+strict|making people follow rules exactly
+strike|to hit
+struggle|to try very hard against difficulty
+submit|to hand in
+subordinate|lower in rank
+subsequent|coming after
 subsidiary|a company owned by another
-succession|a number of things following each other
-supervision|the watching over of work
-surge|a sudden rise
-surpass|to do better than
-surveillance|close watching of a person
-symmetry|exact likeness of two halves
-synthesis|a combining of ideas into a whole
-tariff|a tax on goods brought into a country
-temperament|a person's or animal's nature
-testimony|a statement made in court
-texture|how a surface feels
-theoretical|about ideas, not practice
-tolerant|accepting of differences
-toll|the number of people killed or hurt
-trajectory|the path of a moving object
-tranquil|calm and peaceful
-transcend|to go beyond
-transient|lasting only a short while
-transparency|openness that lets people see what is done
-traverse|to cross
-tribunal|a special court
-turmoil|great confusion
-turnover|the total sales of a business
-underestimate|to guess too low
-unify|to bring together as one
-upheaval|a great and sudden change
-utility|usefulness
+suburb|an area of houses at the edge of a city
+sufficient|enough
+sum|an amount of money
+supper|a light evening meal
+surgeon|a doctor who cuts the body to treat it
+surgery|medical treatment by cutting the body
+surround|to be all around
+suspect|to think someone is guilty
+suspend|to stop for a time
+sustainable|able to continue without harm
+swallow|to make food go down the throat
+swear|to promise very seriously
+sweep|to clean a floor with a brush
+swift|fast
+sympathy|a feeling of sorrow for another's trouble
+tackle|to deal with firmly
+tale|a story
+tap|a device that controls the flow of water from a pipe
+tear|to pull into pieces
+temple|a building for worship
+temporary|lasting only a short time
+tendency|a likely way of behaving
+tension|a nervous feeling between people
+territory|land that belongs to a ruler or animal
+terror|very great fear
+therapy|treatment for an illness without cutting
+thorough|complete and careful
+threat|a sign of danger or of harm to come
+threaten|to be a danger to
+thunder|the loud noise after lightning
+tissue|the material that forms parts of the body
+tone|the feeling in a voice or text
+tough|hard and strong
+tournament|a competition of many games
+trace|to follow back to where it began
+tragedy|a very sad event
+trait|a quality of character
+transfer|to move from one place to another
+transform|to change completely
+transition|a change from one state to another
+transmit|to pass on
+trap|a device for catching animals
+treasure|gold, jewels and other rich things
+tremble|to shake from fear or cold
+trial|the hearing of a case in court
+tribe|a group of families with one language and leader
+trigger|to set off
+troop|a group of soldiers
+tropical|of the hot regions near the middle of the earth
+trust|to believe that someone is honest
+tune|a series of musical notes
+tunnel|a passage under the ground
+tutor|a private teacher
+ultimate|final and greatest
+undergo|to experience
+undertake|to take on a task
+undertaking|a large piece of work
+unique|being the only one of its kind
+unite|to join together as one
+universe|all of space and everything in it
+upper|higher in place
+urban|of towns and cities
+urge|to advise strongly
+urgent|needing action at once
+utter|complete
+valid|legally or logically acceptable
 validate|to confirm as correct
-variable|something that can change
+vary|to be different from each other
+vast|extremely large
 vendor|a seller
-verdict|the decision of a jury
-versus|against
-vicinity|the surrounding area
-vigilant|watching for danger
+venue|the place where an event is held
+via|by way of
+victory|a win
+vigorous|strong and active
+violence|the use of force to hurt
+virtually|almost
+visible|able to be seen
+vision|the ability to see
+visual|about seeing
+vital|necessary for life or success
+vivid|clear and strong in the mind
 vocation|work that you feel called to do
-void|an empty space
-waive|to give up a right or charge
-watershed|a turning point
-withhold|to refuse to give
+volcano|a mountain that can throw out hot rock
+volume|the amount of something
+voluntary|done by choice, not forced
+wage|money paid for work, often each week
+wagon|a cart with four wheels pulled by horses
+wander|to walk around with no fixed aim
+wealth|a large amount of money and things owned
+welfare|health, comfort and happiness
+whereas|while on the other hand
+whisper|to speak very quietly
+widespread|found over a large area
+wildlife|animals living free in nature
+willing|ready to do something
+wire|a long thin piece of metal
+wisdom|good judgement from long experience
+wise|having good judgement from experience
+withdraw|to take back or move back
+witness|a person who saw an event
 workforce|all the workers
+workshop|a room where things are made or mended
+wound|a cut or hole in the body
+wrap|to cover with paper or cloth
+wreck|a badly damaged ship or car
+wrist|the joint between hand and arm
+zone|an area marked off for a purpose

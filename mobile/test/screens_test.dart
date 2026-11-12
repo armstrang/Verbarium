@@ -54,7 +54,7 @@ Future<App> learner(
 }) async {
   rootBundle.clear(); // a deck file first read inside a test's fake clock must not be handed to the next test
   final data = <String, dynamic>{
-    'v': 1,
+    'v': 2,
     'rank': rank,
     'stage': stage,
     'set': {'banner': banner, 'theme': theme, 'lang': lang, if (onboarded) 'onb': 1},
@@ -81,7 +81,7 @@ Future<App> learner(
       mem[w.id] = [20.0, now + 9 * Engine.day, 4, 0, now - Engine.day, 1];
     }
   }
-  if (rank < 5) {
+  if (rank < Engine.maxRank) {
     final next = app.deck.tier(rank + 1);
     final n = (next.length * share).round();
     for (var i = 0; i < n; i++) {
@@ -443,6 +443,8 @@ void main() {
     await beat(tester, 600);
     await tester.tap(find.textContaining('Mulai sebagai'));
     await beat(tester, 900);
+    await tester.drag(find.byType(ListView), const Offset(0, 2000));
+    await beat(tester);
     expect(find.textContaining('Knight I ·'), findsOneWidget);
     await shot(tester, '38-hari-ini-knight');
     await tester.pump(const Duration(seconds: 1));
@@ -537,7 +539,7 @@ void main() {
     await beat(tester);
     await tester.tap(find.text('Peta job'));
     await beat(tester, 900);
-    expect(find.text('3 / 43'), findsOneWidget);
+    expect(find.text('3 / 52'), findsOneWidget);
     await shot(tester, '42-peta-job');
     await tester.drag(find.byType(ListView), const Offset(0, -700));
     await beat(tester);
@@ -669,15 +671,49 @@ void main() {
     expect(app.engine.rank, 2);
     expect(app.engine.stage, 1);
     expect(app.game.job.id, 'duelist');
-    expect(app.engine.stat(1).solid, greaterThan(solid * 0.95));
+    // the other banner's own words of the tier go (under a tenth of it), the core stays
+    expect(app.engine.stat(1).solid, greaterThan(solid * 0.9));
     await tester.runAsync(() => app.chooseBanner('ielts'));
     expect(app.engine.stat(1).solid, solid, reason: 'the words of the first banner were not forgotten');
+  });
+
+  testWidgets('every foe on its own ground, for looking at', (tester) async {
+    phone(tester, w: 420, h: 760);
+    await learner(tester);
+    const foes = ['wolf', 'boar', 'bat', 'bandit', 'knight', 'skeleton', 'mage', 'count', 'gargoyle', 'dragon'];
+    await tester.pumpWidget(
+      MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: Look(
+          pal: Pal.day,
+          rank: 1,
+          calm: true,
+          child: ColoredBox(
+            color: Pal.day.bg,
+            child: Padding(
+              padding: const EdgeInsets.all(10),
+              child: Wrap(
+                spacing: 8,
+                runSpacing: 8,
+                children: [
+                  for (final e in foes) FoeStage(sprite: e, boss: e == 'dragon' || e == 'count', width: 124),
+                  const FoeStage(sprite: 'wolf', tone: 1, width: 124),
+                  for (var t = 1; t < 4; t++) FoeStage(sprite: 'knight', tone: t, width: 124),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.pump();
+    await shot(tester, '61-musuh');
   });
 
   testWidgets('every sprite, for looking at', (tester) async {
     phone(tester, w: 420, h: 760);
     await learner(tester);
-    const enemies = ['wolf', 'boar', 'bandit', 'knight', 'skeleton', 'mage', 'gargoyle', 'dragon'];
+    const enemies = ['wolf', 'boar', 'bat', 'bandit', 'knight', 'skeleton', 'mage', 'count', 'gargoyle', 'dragon'];
     await tester.pumpWidget(
       MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -718,6 +754,15 @@ void main() {
                     for (var t = 1; t < 4; t++) EnemySprite(sprite: 'knight', tone: t, size: 88),
                     const EnemySprite(sprite: 'mage', tone: 1, size: 88),
                     const EnemySprite(sprite: 'skeleton', tone: 1, size: 88),
+                    const EnemySprite(sprite: 'wolf', tone: 1, size: 88),
+                  ],
+                ),
+                const SizedBox(height: 12),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: [
+                    for (final e in enemies) FoeStage(sprite: e, boss: e == 'dragon' || e == 'count', width: 120),
                   ],
                 ),
               ],

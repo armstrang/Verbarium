@@ -1,197 +1,700 @@
-# Verbarium — plain English definitions for 3-baron.txt: word|definition
+abandon|to leave and never return to
+abnormal|not usual, in a worrying way
+abrupt|sudden and unexpected
+absolute|complete, with no limit
+absorb|to take in a liquid
+abstract|existing as an idea, not a thing
 abundant|existing in large amounts
-accelerate|to go or make go faster
-accessible|easy to reach or enter
+accent|a way of speaking that shows where you are from
+acceptable|good enough to be allowed
+accidental|happening by chance, not planned
 accommodate|to provide room for
-accountable|required to explain your actions
+accompany|to go with
+accomplish|to succeed in finishing
+accurate|correct in every detail
+accuse|to say that someone did wrong
+acid|a sour substance that can burn
 acknowledge|to accept that something is true
-adverse|harmful or unfavourable
-aggregate|formed by adding parts together
-allocate|to give out for a purpose
+acknowledgement|a statement that you have noticed or received something
+acquaintance|a person you know slightly
+acquire|to get or gain
+activate|to make something start working
+actual|real, existing in fact
+adapt|to change to suit new conditions
+additional|more, extra
+adequate|enough
+adjust|to change a little to make better
+adopt|to take up and use as your own
+advance|a movement forward
+affair|an event or matter
+affiliate|to join to a larger body
+agency|a business that arranges services for others
+agenda|a list of matters for a meeting
+aggressive|ready to attack
+agriculture|the work of farming
+aid|help given to those in need
+aircraft|a plane or helicopter
+alien|strange and from somewhere else
+alongside|next to and together with
+alter|to change
+altogether|completely
 ambiguous|able to be understood in more than one way
-amend|to change a law or text slightly
-analogy|a comparison that explains
-arbitrary|based on chance or will, not reason
-articulate|to express clearly in words
-assert|to state firmly
-attribute|to say that something is caused by
-autonomy|the right to govern yourself
+ambulance|a vehicle that takes sick people to hospital
+ancestor|a family member who lived long before you
+angle|the space between two lines that meet
+animate|to give life to
+annual|happening once a year
+anticipate|to expect and prepare for
+anxiety|a feeling of worry and fear
+anxious|worried and nervous
+apology|words that say you are sorry
+apparent|easy to see
+apparently|as it seems
+appeal|to be attractive to
+applicant|a person who asks for a job or place
+appraise|to judge the worth of
+approach|a way of dealing with something
+appropriate|right for the situation
+approve|to agree officially to
+arch|a curved top over an opening
+arise|to come up or begin
+armed|carrying a weapon
+arouse|to cause a feeling
+arrogant|too proud of yourself
+artificial|made by people, not natural
+ashamed|feeling bad about something you did
+aside|to one side
+aspect|one side or part of a matter
+assess|to judge the quality or amount of
+asset|a useful or valuable thing or quality
+assign|to give as a task
+assistance|help
+associate|to connect in the mind
+association|a group of people with a shared aim
+assume|to accept as true without proof
+assumption|something taken as true without proof
+assure|to tell someone firmly so they do not worry
+astonish|to surprise very much
+astronomy|the science of stars and planets
+attempt|an effort to do something
+auction|a public sale to the highest bidder
+awareness|knowledge that something exists
+awkward|uncomfortable and not easy
+bankrupt|unable to pay debts
+barely|only just
+bargain|something bought for less than its usual price
+barrier|something that blocks the way
+basket|a container made of thin strips, for carrying things
 beneficial|having a good effect
+beside|next to
+beyond|on the far side of
+bias|an unfair leaning toward one side
+bid|an offer to pay a price or do work
+bitter|having a sharp taste like strong coffee
+blame|to say that someone caused something bad
+blanket|a thick warm cover for a bed
+blind|not able to see
+blur|to make less clear
+bold|brave and ready to take risks
+bond|something that joins people closely
+boost|to help something grow or rise
+bound|certain to happen
+brief|lasting only a short time
+broad|wide
+broadcast|to send out by radio or television
+broker|a person who arranges deals for others
+budget|a plan of how money will be spent
+bullet|the small metal object fired from a gun
+bunch|a group of things held together
+bureaucrat|an official in a government office
+cabin|a small wooden house
+calculate|to find an answer using numbers
+cancel|to say that a planned event will not happen
+capable|able to do something
+capacity|the amount that can be held
+capture|to catch and keep
+carbon|the element found in coal and all living things
+cast|to throw, as a shadow or light
+casual|relaxed and not formal
+catalogue/catalog|a list of things for sale or in a collection
+cathedral|a very large main church
+cave|a large hole in the side of a hill
+censor|to remove parts not allowed to be seen
+census|an official count of people
+certify|to state officially in writing
+chairman|the person who leads a meeting
+chancellor|a head of government or of finance
+characteristic|a quality that is typical of something
+chase|to run after
+chief|most important
+chronicle|a record of events in order of time
+circuit|the complete path of an electric current
+circumstance|a fact or condition around an event
+cite|to mention as proof
+citizen|a person who belongs to a country
+civil|of ordinary people, not the army
+clarify|to make easier to understand
+classic|a very typical example
+classify|to put into groups by type
+cliff|a high steep wall of rock
+clinic|a place where doctors see patients
 coherent|clear and logically connected
-coincide|to happen at the same time
-collaborate|to work with others on a task
-commence|to begin
+coincidence|two things happening together by chance
+collapse|to fall down suddenly
+colony|a land ruled by another country
+combination|a mix of several things
+comfort|a state of ease
+command|skill in using something
+commission|a group asked officially to study something
+commitment|a promise of time and effort
+committee|a small group chosen to decide things
 compatible|able to exist or work together
-compensate|to make up for a loss
-compile|to collect into a list or book
-complement|to go well with and complete
-comply|to obey a rule or request
+complicated|having many parts and hard to follow
+component|one of the parts of a whole
+compose|to write music
+compound|a substance made of two or more elements
+comprehend|to understand fully
 comprehensive|including everything
+compress|to press into less space
 comprise|to be made up of
-conceive|to form an idea in the mind
-concurrent|happening at the same time
-confine|to keep within limits
-consensus|general agreement
-constitute|to form or be
-constrain|to limit or force
+compulsory|that must be done by rule
+concept|an idea
+concern|a feeling of worry
+concerning|about
+concrete|real and definite
+conduct|to carry out
+confess|to admit a fault
+confidence|a feeling of being sure of yourself
+confidential|meant to be kept secret
+conflict|a serious fight or disagreement
+conform|to follow the accepted rules
+congregate|to gather in a crowd
+congress|a national group that makes laws
+conscious|aware of
+conservation|the protection of nature
+conservative|not liking change
+considerable|fairly large
+consideration|careful thought
+consistent|always the same in quality
+conspiracy|a secret plan to do wrong
+constant|happening all the time
+construct|to build
+consult|to ask for advice
+consumption|the amount that is used or eaten
+contaminate|to make dirty or poisonous
 contemporary|belonging to the present time
-contradict|to say the opposite of
+contest|a competition
+contingent|depending on something else
+contract|a written legal agreement
+contribute|to give to a shared effort
+controversial|causing public disagreement
 controversy|a public argument
-convene|to call together for a meeting
+convention|the usual way of doing things
 conventional|following what is usual
-correlate|to be linked so that one changes with the other
-credible|able to be believed
+convert|to change into another form
+convey|to make known
+cope|to deal well with difficulty
+core|the central part
+corporate|of a large company
+corporation|a large company
+corridor|a long passage in a building
+council|a group chosen to run a town
+counter|the long table where customers are served
+county|a part of a country with its own local government
+courage|the quality of not being afraid
+coverage|the reporting of news
+crack|a thin line where something has broken
+craft|a skill of making things by hand
+crash|to hit something hard while moving
+creature|any living animal
+crew|the people who work on a ship or plane
+crisis|a time of great danger or trouble
 criterion|a standard used for judging
-cumulative|growing by additions over time
-deficit|the amount by which something is too little
-denote|to be a sign of
-depict|to show in a picture or words
-deplete|to use up a supply
-deteriorate|to become worse
-deviate|to turn away from a course
-differentiate|to see or make a difference between
-diminish|to become smaller or less
-discrete|separate and distinct
-discriminate|to treat a group unfairly
+critic|a person who judges books or films
+critical|very important and dangerous
+criticism|statements of what is bad about something
+criticize/criticise|to say what is wrong with
+crop|plants grown for food on a farm
+crucial|extremely important
+cure|something that makes an illness go away
+curious|wanting to know things
+curve|a line that bends
+dare|to be brave enough
+deaf|not able to hear
+debate|a formal discussion of two sides
+debt|money that you owe
+decay|to go bad slowly
+decent|good enough, proper
+declare|to state officially
+decline|a fall in amount or quality
+decrease|to become or make smaller in number
+deduct|to take away from a total
+defeat|to win against
+defence/defense|protection against attack
+defend|to protect from attack
+defer|to put off until later
+delay|a time of waiting when something is late
+deliberate|done on purpose
+deliberately|on purpose
+delight|great pleasure
+demand|the wish of buyers for goods
+democracy|rule by leaders the people vote for
+demonstrate|to show clearly
+deny|to say that something is not true
+depart|to leave
+dependent|needing something to live or work
+deposit|a first part of a payment
+depression|a state of deep sadness
+depth|how far down something goes
+derive|to get from a source
+deserve|to have earned
+desire|a strong wish
+despair|the loss of all hope
+desperate|in great need
+destruction|the act of ruining completely
+detach|to separate from something larger
+detect|to notice something hard to see
+deter|to stop someone by making them afraid of the result
+determination|firm will to succeed
+devote|to give time or effort to
+diameter|the width of a circle through its centre
+differ|to be unlike
+dig|to make a hole in the ground
+disabled|having a condition that limits movement or senses
+disappoint|to fail to give what was hoped
+discipline|the habit of controlling yourself and following rules
+discourage|to make less willing
+disguise|to change so as not to be known
+dismiss|to send away or reject
+disorder|an illness of body or mind
 disperse|to scatter in different directions
-displace|to force out of the usual place
-dispose|to get rid of
-disrupt|to stop from continuing normally
-distort|to twist out of true shape or meaning
+display|to put where people can see
+distant|far away
+distinct|clearly different
+distinguish|to tell apart
+distribute|to give out to many
+disturb|to stop someone's rest or work
+dive|to jump head first into water
+diverse|of many different kinds
 diversity|a range of different kinds
-doctrine|a set of beliefs that is taught
+dividend|a share of profit paid to owners
+division|the act of splitting into parts
+divorce|the legal end of a marriage
+domestic|inside a country or home
 dominant|more powerful than the others
+dominate|to have control over
+dozen|twelve
+draft|a first version of a text
+drag|to pull along the ground
+dramatic|sudden and great
+drought|a long time with no rain
+dull|not interesting or bright
+dump|to throw away carelessly
 duration|the length of time something lasts
-elaborate|to add more detail
-eligible|having the right to be chosen
+dwell|to think for too long about
+dynamic|full of energy and change
+edit|to correct a text before printing
+edition|one printing of a book
+efficient|working well without waste
+elderly|old, said politely of people
+elect|to choose by voting
+elegant|graceful and stylish
+elementary|simple and basic
+eliminate|to remove completely
 embrace|to accept gladly
-empirical|based on what is observed, not on theory
-endeavor/endeavour|a serious attempt
-endorse|to give public approval to
-enforce|to make people obey a rule
-entity|something that exists as a separate unit
+emerge|to come out into view
+emotional|full of strong feeling
+emperor|a man who rules several countries
+emphasis|special importance given to something
+emphasize/emphasise|to give special importance to
+empire|a group of countries under one ruler
+enable|to make possible
+enclose|to put inside an envelope with a letter
+encounter|to meet unexpectedly
+endanger|to put at risk
+endow|to give money to support
+endowment|money given to provide income
+energetic|full of life and force
+engage|to hold the interest of
+enhance|to improve the quality of
+enjoyable|giving pleasure
+enlargement|the act of making bigger
+enlighten|to give understanding to
+enquiry/inquiry|a question, or an official search for facts
+ensure|to make certain
+enthusiasm|strong and eager interest
+enthusiastic|showing strong and eager interest
+entire|whole
+entrepreneur|a person who starts businesses
+envelope|a paper cover for a letter
+envy|the feeling of wanting what another has
+equip|to give the tools that are needed
+equity|fairness
 equivalent|equal in value or meaning
-erode|to wear away slowly
+era|a long period of history
+erupt|to burst out with fire and rock
+escort|to go with as a guard
+establish|to set up
+estate|a large piece of land with a big house
+estimate|to guess a number carefully
+ethic|a rule or belief about right behaviour
 ethical|morally right
+ethics|ideas about right and wrong behaviour
+ethnic|about a group with a shared culture
+evaluate|to judge the value of
+evaluation|a judgement of quality
 evident|plain to see
-exaggerate|to make seem bigger than it is
-explicit|stated clearly and fully
-facilitate|to make easier
-feasible|possible to do
-fluctuate|to rise and fall again and again
-formulate|to express in exact form
-forthcoming|about to happen
-hierarchy|a system of ranks one above another
+evil|very bad and wishing harm
+evolve|to develop slowly
+excavate|to dig out carefully
+exceed|to be more than
+exception|a case that does not follow the rule
+exclaim|to cry out in surprise
+exclude|to leave out
+excuse|a reason you give for doing something wrong
+executive|a senior manager in a company
+exempt|free from a duty
+exhibit|to show in public
+existence|the state of being real
+exotic|unusual and from a far country
+expectation|a belief about what will happen
+expense|the money that something costs
+expertise|special skill or knowledge
+exploit|to use unfairly for gain
+exploration|travel to discover
+expose|to uncover
+exposure|the state of having no protection from something
+extend|to make longer
+extensive|covering a large area
+extent|how large or serious something is
+external|on the outside
+extract|to take out
+extraordinary|very unusual and special
+fabric|cloth
+facility|a building or equipment for a purpose
+failure|a lack of success
+faith|strong trust
+faithful|loyal and true
+fake|not real, made to trick
+fame|the state of being known by many
+fantasy|something imagined and not real
+fare|the price of a trip by bus or train
+fault|a mistake you are responsible for
+feather|one of the light soft things that cover a bird
+fee|money paid for a service
+feedback|comments on how well something was done
+fellow|belonging to the same group as you
+fibre/fiber|the part of plants that helps food pass through the body
+finance|the management of money
+firm|strong and not soft
+fiscal|about public money and taxes
+flame|the bright burning gas of a fire
+flank|the side of a body or army
+flash|a sudden bright light
+flexible|able to bend or change easily
+flicker|to burn or shine unsteadily
+float|to stay on top of water
+flock|a group of birds or sheep
+fog|thick cloud near the ground
+fond|liking someone or something very much
+fool|a person without good sense
+forbid|to say that something must not be done
+forecast|a statement of what the weather will be
+foresee|to know in advance
+forgive|to stop being angry with someone
+format|the way something is arranged
+formation|the act of forming
+former|of an earlier time
+fortunate|lucky
+fortune|a very large amount of money
+forum|a place for open discussion
+fossil|the mark of an ancient animal or plant in rock
+found|to start an organization
+foundation|the base on which something is built
+fraction|a small part of a whole
+fracture|a break in a bone
+fragment|a small broken piece
+framework|a structure of ideas that supports work
+frank|honest and direct
+fraud|the crime of tricking people to get money
+freedom|the state of being able to do as you like
+frequency|how often something happens
+frequent|happening often
+fringe|the outer edge
+frontier|the line where one country ends
+frown|to show dislike with the face
+fulfil/fulfill|to do what is required
+fulfilment/fulfillment|a feeling of having done what you hoped
+fund|money collected for a purpose
+fundamental|basic and most important
+furious|extremely angry
+furnish|to put chairs, tables and beds in a room
+furthermore|in addition to this
+gain|to get more of something
+galaxy|a huge system of stars
+gamble|to risk money on a game of chance
+gasp|to breathe in suddenly
+gauge|to measure or judge
+gender|the fact of being male or female
+gene|the part of a cell that passes features from parent to child
+generate|to produce
+genius|a person of very great ability
+genre|a type of art or writing
+genuine|real, not false
+geology|the science of rocks and the earth
+geometry|the maths of shapes and lines
+gesture|a movement of the hand that shows meaning
+glamour/glamor|exciting beauty and charm
+glare|to look angrily
+gleam|to shine softly
+glide|to move smoothly and quietly
+gloom|sadness or darkness
+gospel|something accepted as completely true
+govern|to rule a country
+governor|the head of a state or province
+grab|to take hold of suddenly
+gradually|slowly, step by step
+grand|large and impressive
+grant|money given for a purpose
+graphic|clear and full of detail
+gravel|small stones used for paths
+graze|to eat grass in a field
+greed|a wish for more than you need
+grim|serious and worrying
+guarantee|to promise that something will happen
+guideline|advice on how to do something
+gulf|a wide gap between two sides
+habitat|the natural home of an animal or plant
+hammer|a tool for hitting nails
+handicap|a condition that makes things harder
+handle|to deal with
+harass|to trouble again and again
+harm|to hurt or cause damage
+harmful|causing damage
+haste|too much speed
+hatch|to come out of an egg
+haul|to pull with effort
+headquarters|the main office of an organization
+heal|to become well again
+heaven|a place of perfect happiness
+heir|the person who will receive property or a title after a death
+hell|a place or state of great suffering
+hence|for this reason
+herd|a group of cows or similar animals
+hesitate|to pause because you are not sure
+hilarious|extremely funny
+hollow|empty inside
+holy|connected with God
+honour/honor|something that makes you proud
+hook|a curved piece of metal for hanging things
+household|all the people who live in one house
+humiliate|to make feel ashamed
+humour/humor|the quality of being funny
+hunger|the need for food
+hut|a small simple building
+hybrid|a mix of two different kinds
 hypothesis|an idea to be tested
+icon|a famous symbol
 identical|exactly the same
-ideology|a set of political beliefs
-immense|extremely large
+idle|not working
+illuminate|to make clear or light up
+illusion|something that seems real but is not
+illustrate|to make clear with examples or pictures
+imagination|the power to form pictures in the mind
+imitate|to copy the way another acts
+immune|protected against a disease
+impair|to weaken or damage
+impatient|not willing to wait
 implement|to put into action
+implication|a likely result
 implicit|suggested but not stated
+imply|to suggest without saying directly
+impose|to force on others
+impress|to cause admiration in
+impulse|a sudden wish to do something
 incentive|something that encourages effort
+incident|an event, often unpleasant
 incline|to tend toward
+income|the money a person gets, mostly from work
 incorporate|to include as a part
-indigenous|belonging naturally to a place
-induce|to cause or persuade
+incorrect|wrong, not right
+index|the list of names and subjects at the back of a book
+indifferent|not caring
+industrial|having many factories
+inevitable|certain to happen
+infection|a disease caused by germs
 infer|to conclude from evidence
-inherent|existing as a natural part
-inhibit|to hold back
-initiate|to start
-integral|necessary to make a whole
+infinite|without end
+inflame|to make more violent
+inflation|a general rise in prices
+inform|to tell someone facts
+inhabitant|a person who lives in a place
+inherit|to receive from someone who has died
+initial|first
+initiative|the first step taken by your own decision
+inn|a small old hotel
+inner|on the inside
+innovation|a new idea or method
+input|ideas or information that you add
+insert|to put into something
+insight|a deep understanding
+insist|to say firmly that something must be so
+inspire|to fill with the wish to do something good
+install|to set up for use
+instalment/installment|one of several payments
+instance|an example
+instant|happening at once
+institute|an organization for study
+institution|a large organization such as a bank or school
+insulate|to protect from heat, cold or sound
+insurance|an agreement to be paid if something bad happens
 integrate|to combine into a whole
-integrity|the quality of being honest and firm
-intervene|to step in to change events
-intrinsic|belonging to the basic nature
-invoke|to call on a rule or law
-legislation|laws that have been passed
-legitimate|lawful and reasonable
+intellectual|about thinking and the mind
+intense|very strong
+interact|to act on each other
+internal|inside
+interpret|to explain the meaning of
+interrupt|to stop someone who is speaking
+interval|the time between two events
+intimidate|to frighten into obeying
+intrigue|to make curious
+invade|to enter in large numbers by force
+invasion|the entering of a country by an army
+investment|money put into something to gain later
+isolate|to keep apart from others
+jail|a place where criminals are locked up
+jar|a glass container with a lid
+jet|a fast plane
+joint|shared by two or more
+joy|great happiness
+judgement/judgment|an opinion after careful thought
+junior|lower in rank
+jury|the group of people who decide a court case
+justice|fair treatment under the law
+justify|to show good reason for
+juvenile|of young people
+kit|a set of tools for a purpose
+kneel|to go down on your knees
+knot|a fastening made by tying string
+labor/labour|hard work, or workers as a group
+ladder|a frame with steps for climbing
+landscape|everything you see across an area of land
+landslide|a fall of earth down a slope
+lane|one of the lines of traffic on a road
+lately|in recent days or weeks
+launch|to start or send out
+leaflet|a printed sheet of information
+league|a group of teams that play each other
+lean|to rest against something
+legend|an old story that may not be true
+licence/license|an official paper that allows you to do something
+lieutenant|a junior officer
+lifetime|the whole time a person lives
 likewise|in the same way
-mandate|the authority given by voters
-manipulate|to control cleverly and unfairly
-marginal|very small
+literary|about books and writing of quality
+litter|bits of paper and rubbish left on the ground
+lively|full of life and movement
+livestock|farm animals
+load|what a vehicle carries
+loan|money that is borrowed
+loose|not tight
+loyal|always faithful
+lung|one of the two organs for breathing
+magnificent|very beautiful and grand
+maintain|to keep in good condition
+majority|more than half
+mammal|an animal that feeds its young with milk
+manufacture|to make in a factory
+margin|the amount by which someone wins
+massive|very large and heavy
+master|to learn completely
+matrix|an arrangement in rows and columns
+maximum|the greatest possible
+means|a way of doing something
+mechanic|a person who repairs engines
+mechanism|the working parts of a machine
+medal|a metal disc given as a prize
 mediate|to help two sides agree
-merge|to join into one
-methodology|a system of methods
-minimize/minimise|to reduce to the smallest amount
-moderate|neither large nor small
-momentum|force gained by movement
+medication|drugs used as treatment
+melt|to turn from solid to liquid with heat
+membership|the state of belonging to a group
+memorable|worth remembering
+metaphor|a way of describing one thing as another
+military|of soldiers and war
+mineral|a natural substance from the earth, such as salt
+minimum|the smallest possible
+minister|a head of a government department
+minor|small and not important
+minority|the smaller part of a group
+miserable|very unhappy
+mislead|to give a wrong idea to
+mission|an important task
+mock|to laugh at unkindly
+mode|a way of doing something
+modest|not large or showy
+modesty|the quality of not praising yourself
+modify|to change slightly
+moisture|small drops of water in the air or on a surface
+monarch|a king or queen
+monarchy|a state ruled by a king or queen
+monetary|about money and its supply
+monitor|to watch and check over time
+monument|a structure built to honour an event
+moral|about right and wrong
+moreover|also, and more important
+mortgage|a loan to buy a house
+motion|the act of moving
+motivate|to give a reason to work hard
+motivation|the reason or wish to act
+motor|a machine that makes something move
+mount|to climb onto
+mourn|to feel deep sadness for someone who died
+mourning|the showing of sorrow for a death
+multiple|many
+multiply|to increase greatly in number
+murmur|to speak softly
+mutter|to speak low and unclearly
+myth|a common belief that is false
+naked|without clothes or cover
+nasty|very unpleasant
+navigate|to find the way for a ship or car
+navigation|the finding of a route
+necessity|something you must have
+negotiate|to talk in order to reach an agreement
+negotiation|talks to reach an agreement
+nerve|courage in a hard moment
+neutral|not supporting either side
 nevertheless|in spite of that
+nightmare|a very bad dream
 norm|what is usual or expected
 notion|an idea or belief
-obsolete|no longer in use
+nowadays|at the present time
+numerous|many
+nutrition|the food needed for health
+obedient|doing what you are told
+obey|to do what you are told
+objective|something you aim to reach
+obligation|a duty
+obscure|not well known or not clear
+observation|careful watching
+observe|to watch carefully
+obstacle|something in the way
+obstruct|to block
+obtain|to get
+occupation|a job
+occupy|to fill or live in
+offence/offense|a crime
+offend|to hurt the feelings of
 offset|to balance one thing against another
+omit|to leave out
 ongoing|still continuing
-orient|to direct toward
-paradigm|a model or pattern of thinking
-parameter|a limit that sets how something is done
-persist|to continue
-plausible|seeming likely to be true
-pose|to present a danger or problem
-practitioner|a person who works in a profession
-precede|to come before
-predominant|strongest or most common
-preliminary|coming first to prepare
-presume|to suppose to be true
-prevail|to win or be common
-profound|very deep
-prohibit|to forbid
-prominent|well known or easily seen
-prone|likely to suffer from
-proximity|nearness
-qualitative|about kind, not amount
-quantitative|about amount
-radical|going to the root, very great
-random|with no pattern or plan
-rational|based on reason
-reinforce|to make stronger
-reluctant|not willing
-render|to cause to become
-replicate|to repeat exactly
-resemble|to look like
-residual|remaining
-resilient|able to recover quickly
-restrain|to hold back
-rigid|stiff
-rigorous|strict and careful
-scarce|hard to find
-scenario|a possible course of events
-scope|the range covered
-scrutiny|close examination
-simulate|to copy the conditions of
-skeptical/sceptical|doubting
-sole|only
-sophisticated|highly developed
-spontaneous|done without planning
-stimulate|to make more active
-straightforward|simple and easy to follow
-subordinate|lower in rank
-subsequent|coming after
-subsidy|money given by government to keep prices low
-substantial|large in amount
-successive|following one after another
-suppress|to put down by force
-surplus|an amount more than needed
-suspend|to stop for a time
-sustainable|able to continue without harm
-tangible|real enough to touch
-terminate|to bring to an end
-thereby|by that means
-threshold|the level at which something begins
-trigger|to set off
-undergo|to experience
-underlie|to be the hidden cause of
-undermine|to weaken slowly
-undertake|to take on a task
-uniform|the same everywhere
-unprecedented|never having happened before
-utilize/utilise|to make use of
-valid|legally or logically acceptable
-velocity|speed in a given direction
-verify|to check that something is true
-versatile|having many uses or skills
-viable|able to work or survive
-violate|to break a law or agreement
-virtually|almost
-vulnerable|easily hurt
-whereby|by which
-yield|to produce
+operate|to make a machine work
+opponent|the person you play or argue against
+oppose|to be against
+oppress|to rule cruelly
+optimistic|expecting good things
+orbit|the path of a body around a planet or star
+orchestra|a large group of musicians
+organ|a part of the body with one job, such as the heart
+organic|grown without man-made chemicals
+organism|a living thing

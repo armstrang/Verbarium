@@ -1,190 +1,354 @@
-# Verbarium — Spanish meanings for 1-squire-b.txt: word|meaning
-accident|accidente
-act|actuar
-action|acción
-active|activo
-actual|real, verdadero
-add|añadir
-address|dirección
-adult|adulto
-adventure|aventura
-advertise|anunciar, hacer publicidad
-afraid|asustado, con miedo
-age|edad
-agency|agencia
-agree|estar de acuerdo
-ahead|delante
-air|aire
-airport|aeropuerto
-alarm|alarma
-alive|vivo
-alone|solo
-aloud|en voz alta
-although|aunque
-amazing|asombroso
-ambulance|ambulancia
-among|entre
-angry|enfadado
-animal|animal
-annoy|molestar, fastidiar
-answer|responder
-anxious|ansioso, preocupado
-apartment|apartamento, piso
-apologize|pedir perdón
-appear|aparecer, parecer
-appearance|aspecto, apariencia
-appointment|cita
-area|zona, área
-argument|discusión, argumento
-army|ejército
-arrive|llegar
-article|artículo
-artist|artista
-ashamed|avergonzado
-asleep|dormido
-athlete|atleta
-attack|atacar
-attention|atención
-attractive|atractivo
-audience|público
-author|autor
-autumn|otoño
-awake|despierto
-award|premio
-awful|horrible, terrible
-baggage|equipaje
-bake|hornear
-bank|banco
-bargain|ganga
-basic|básico
-basket|cesta
-battery|batería, pila
-battle|batalla
-beach|playa
-bear|soportar, aguantar
-beat|vencer, golpear
-beauty|belleza
-behind|detrás de
-believe|creer
-belong|pertenecer
-below|debajo de
-bend|doblar, inclinarse
-beside|al lado de
-bill|factura, cuenta
-birth|nacimiento
-bite|morder
-bitter|amargo
-blame|culpar
-blanket|manta
-bleed|sangrar
-blind|ciego
-block|bloquear
-blood|sangre
-blow|soplar
-board|tablero, tabla
-boil|hervir
-bomb|bomba
-bone|hueso
-border|frontera
-bored|aburrido
-boring|aburrido, pesado
-boss|jefe
-bother|molestar
-bottom|fondo, parte de abajo
-brain|cerebro
-branch|rama, sucursal
-brave|valiente
-break|romper
-breath|aliento, respiración
-breathe|respirar
-bridge|puente
-bright|brillante, listo
-bring|traer
-broad|ancho, amplio
-build|construir
-burn|quemar, arder
-bury|enterrar
-business|negocio, empresa
-busy|ocupado
-calm|tranquilo, sereno
-camera|cámara
-camp|campamento
-cancel|cancelar
-candidate|candidato
-capital|capital
-captain|capitán
-care|importar, preocuparse
-careful|cuidadoso
-careless|descuidado
-carry|llevar, cargar
-case|caso
-cash|dinero en efectivo
-castle|castillo
-catch|atrapar
-celebrate|celebrar
-central|central
-century|siglo
-ceremony|ceremonia
-certain|seguro, cierto
-chain|cadena
-chance|oportunidad, posibilidad
-change|cambiar
-charge|cobrar
-cheap|barato
-cheat|hacer trampa, engañar
-check|comprobar, revisar
-cheerful|alegre
-chemical|sustancia química
-chief|principal
-childhood|infancia
-choose|elegir
-citizen|ciudadano
-clear|claro
-clever|listo, inteligente
-climate|clima
-climb|escalar, subir
-close|cerrar
-cloth|tela
-clothes|ropa
-cloud|nube
-coach|entrenador
-coast|costa
-coin|moneda
-collection|colección
-college|universidad, facultad
-colour|color
-comfortable|cómodo
-company|empresa
-competition|competencia, concurso
-computer|ordenador, computadora
-concert|concierto
-conversation|conversación
-cook|cocinar
-cool|fresco
-copy|copiar
-corner|esquina, rincón
-cost|costar
-cotton|algodón
-count|contar
-country|país
-countryside|campo
-couple|pareja
-courage|valor, coraje
-course|curso, asignatura
-court|tribunal
-cover|cubrir
-crash|chocar, estrellarse
-crazy|loco
-cream|crema, nata
-creature|criatura
-crop|cosecha, cultivo
-cross|cruzar
-cruel|cruel
-cry|llorar
-cup|taza
-cure|cura, remedio
-curious|curioso
-current|actual
-custom|costumbre
-cut|cortar
-cycle|ir en bicicleta
+probably|probablemente
+problem|problema
+process|proceso
+produce|producir
+product|producto
+professional|profesional
+profile|perfil
+progress|progreso
+project|proyecto
+promise|prometer
+pronounce|pronunciar
+protect|proteger
+provide|proporcionar
+public|público
+publish|publicar
+pull|tirar de
+purpose|propósito
+push|empujar
+quality|calidad
+quantity|cantidad
+quarter|cuarto
+queen|reina
+question|pregunta
+questionable|cuestionable
+quick|rápido
+quiet|tranquilo, silencioso
+quite|bastante
+race|carrera
+railway|ferrocarril
+rain|lluvia
+raise|subir, levantar
+rate|tasa, ritmo
+rather|bastante, más bien
+reach|alcanzar, llegar a
+react|reaccionar
+ready|listo
+real|real, auténtico
+realise|darse cuenta
+reason|razón
+receive|recibir
+recent|reciente
+reception|recepción
+recipe|receta
+recognize|reconocer
+recommend|recomendar
+record|grabar, registrar
+reduce|reducir
+refer|referirse
+refuse|negarse, rechazar
+region|región
+regular|regular, habitual
+relationship|relación
+relax|relajarse
+remember|recordar
+remove|quitar, eliminar
+repair|reparar
+repeat|repetir
+replace|sustituir
+reply|responder
+report|informe
+request|petición, solicitud
+research|investigación
+respond|responder
+rest|descansar
+restaurant|restaurante
+restless|inquieto
+result|resultado
+return|volver, devolver
+review|reseña, revisión
+rice|arroz
+rich|rico
+ride|montar, ir en
+ring|sonar, llamar
+river|río
+road|carretera
+rock|roca
+role|papel
+roof|tejado
+round|redondo
+route|ruta
+routine|rutina
+rude|grosero, maleducado
+rule|regla
+sad|triste
+safe|seguro
+sail|navegar
+salary|sueldo
+sale|venta, rebajas
+salt|sal
+same|mismo
+save|ahorrar, salvar
+scared|asustado
+scene|escena
+schedule|horario, calendario
+science|ciencia
+score|puntuación
+screen|pantalla
+sea|mar
+search|buscar
+season|estación, temporada
+seat|asiento
+second|segundo
+secret|secreto
+secretary|secretario
+section|sección
+seem|parecer
+sell|vender
+send|enviar
+sense|sentido
+sentence|oración, frase
+separate|separado
+series|serie
+serious|serio, grave
+serve|servir
+service|servicio
+several|varios
+shake|sacudir, agitar
+shape|forma
+share|compartir
+sheet|hoja, sábana
+ship|barco
+shirt|camisa
+shop|tienda
+short|corto, bajo
+shoulder|hombro
+shout|gritar
+show|mostrar
+shower|ducha, chubasco
+shut|cerrar
+sick|enfermo, mareado
+side|lado
+sign|señal, letrero
+silver|plata
+similar|similar, parecido
+simple|sencillo
+since|desde
+sing|cantar
+single|único, soltero
+site|lugar, sitio
+situation|situación
+size|tamaño, talla
+skill|habilidad
+skin|piel
+sky|cielo
+sleep|dormir
+slow|lento
+smart|listo, elegante
+smell|oler
+smile|sonreír
+smoke|humo
+snake|serpiente
+snow|nieve
+soap|jabón
+social|social
+society|sociedad
+sock|calcetín
+soft|suave, blando
+soldier|soldado
+solution|solución
+solve|resolver
+sometimes|a veces
+somewhere|en algún lugar
+song|canción
+soon|pronto
+sorry|arrepentido, lo siento
+sort|tipo, clase
+sound|sonido
+soup|sopa
+source|fuente
+south|sur
+space|espacio
+speak|hablar
+special|especial
+specific|específico
+speech|discurso
+speed|velocidad
+spell|deletrear
+spend|gastar, pasar (tiempo)
+spoon|cuchara
+sport|deporte
+spring|primavera
+square|cuadrado, plaza
+stage|escenario, etapa
+stair|escalón
+stamp|sello
+stand|estar de pie
+star|estrella
+start|empezar
+state|estado
+statement|declaración
+station|estación
+stay|quedarse, alojarse
+steal|robar
+step|paso
+still|todavía
+stomach|estómago
+stone|piedra
+stop|parar
+store|guardar, almacenar
+storm|tormenta
+story|historia, cuento
+straight|recto
+strange|extraño
+strategy|estrategia
+street|calle
+stress|estrés, presión
+strong|fuerte
+structure|estructura
+student|estudiante
+study|estudiar
+stupid|estúpido
+style|estilo
+subject|asignatura, tema
+succeed|tener éxito
+success|éxito
+sugar|azúcar
+suggest|sugerir, indicar
+suit|quedar bien, convenir
+summer|verano
+support|apoyar
+suppose|suponer
+sure|seguro
+surprise|sorpresa
+survey|encuesta
+sweet|dulce
+swim|nadar
+symbol|símbolo
+system|sistema
+table|mesa
+talk|hablar
+tall|alto
+target|objetivo, meta
+task|tarea
+taste|probar, saber a
+teach|enseñar
+team|equipo
+technology|tecnología
+temperature|temperatura
+term|trimestre, término
+terrible|terrible
+test|prueba, examen
+thank|agradecer
+theatre|teatro
+thick|grueso
+thief|ladrón
+thin|delgado, fino
+thirsty|sediento
+thought|pensamiento
+through|a través de
+throw|lanzar, tirar
+ticket|billete, entrada
+tidy|ordenado
+tie|atar
+tip|punta, consejo, propina
+tired|cansado
+title|título
+together|juntos
+tool|herramienta
+tooth|diente
+top|cima, parte de arriba
+topic|tema
+touch|tocar
+tour|gira, recorrido
+tourist|turista
+towards|hacia
+towel|toalla
+tower|torre
+town|pueblo, ciudad
+toy|juguete
+track|huella, pista
+tradition|tradición
+traditional|tradicional
+train|entrenar
+transport|transporte
+tree|árbol
+trip|viaje
+trouble|problema, dificultad
+trousers|pantalones
+true|verdadero
+try|intentar
+turn|girar
+twice|dos veces
+twin|gemelo
+type|tipo
+typical|típico
+umbrella|paraguas
+uncle|tío
+understand|entender
+uniform|uniforme
+unit|unidad
+until|hasta
+unusual|poco común
+upstairs|arriba
+use|usar
+useful|útil
+usual|habitual
+usually|normalmente
+valley|valle
+van|furgoneta
+variety|variedad
+vegetable|verdura
+vehicle|vehículo
+view|opinión, vista
+village|pueblo, aldea
+virus|virus
+visit|visitar
+visitor|visitante
+voice|voz
+wait|esperar
+wake|despertar
+walk|caminar
+wall|pared, muro
+war|guerra
+warm|cálido
+wary|receloso
+wash|lavar
+watch|mirar, vigilar
+wave|ola
+weak|débil
+wear|llevar puesto
+weather|tiempo (clima)
+wedding|boda
+week|semana
+weekend|fin de semana
+weight|peso
+welcome|dar la bienvenida
+west|oeste
+wet|mojado
+wheel|rueda
+while|rato, mientras
+whole|entero
+wide|ancho
+wife|esposa
+wild|salvaje
+win|ganar
+wind|viento
+window|ventana
+winter|invierno
+wish|desear
+without|sin
+wonderful|maravilloso
+wood|madera
+word|palabra
+work|trabajar
+world|mundo
+worry|preocuparse
+worse|peor
+write|escribir
+wrong|equivocado, incorrecto
+yard|patio
+year|año
+yet|todavía, ya
+young|joven
+zero|cero

@@ -1,197 +1,700 @@
-# Verbarium — French meanings for 3-baron.txt: word|meaning
+abandon|abandonner
+abnormal|anormal
+abrupt|brusque
+absolute|absolu
+absorb|absorber
+abstract|abstrait
 abundant|abondant
-accelerate|accélérer
-accessible|accessible
+accent|accent
+acceptable|acceptable
+accidental|accidentel
 accommodate|loger, s’adapter à
-accountable|responsable
+accompany|accompagner
+accomplish|accomplir
+accurate|exact, précis
+accuse|accuser
+acid|acide
 acknowledge|reconnaître
-adverse|défavorable
-aggregate|global, total
-allocate|allouer
+acknowledgement|reconnaissance
+acquaintance|connaissance
+acquire|acquérir
+activate|activer
+actual|réel, véritable
+adapt|s’adapter
+additional|supplémentaire
+adequate|suffisant, adéquat
+adjust|ajuster
+adopt|adopter
+advance|progrès, avancée
+affair|affaire
+affiliate|s’affilier
+agency|agence
+agenda|ordre du jour
+aggressive|agressif
+agriculture|agriculture
+aid|aide
+aircraft|avion, aéronef
+alien|étranger, étrange
+alongside|à côté de
+alter|modifier
+altogether|tout à fait, en tout
 ambiguous|ambigu
-amend|modifier, amender
-analogy|analogie
-arbitrary|arbitraire
-articulate|formuler clairement
-assert|affirmer
-attribute|attribuer
-autonomy|autonomie
+ambulance|ambulance
+ancestor|ancêtre
+angle|angle
+animate|animer
+annual|annuel
+anticipate|anticiper, prévoir
+anxiety|anxiété
+anxious|anxieux
+apology|excuses
+apparent|apparent, évident
+apparently|apparemment
+appeal|plaire, faire appel
+applicant|candidat
+appraise|évaluer
+approach|approche
+appropriate|approprié
+approve|approuver
+arch|arc, arche
+arise|survenir
+armed|armé
+arouse|susciter, éveiller
+arrogant|arrogant
+artificial|artificiel
+ashamed|honteux
+aside|de côté
+aspect|aspect
+assess|évaluer
+asset|atout, actif
+assign|attribuer, assigner
+assistance|aide
+associate|associer
+association|association
+assume|supposer
+assumption|supposition
+assure|assurer
+astonish|étonner
+astronomy|astronomie
+attempt|tentative
+auction|vente aux enchères
+awareness|conscience
+awkward|gêné, maladroit
+bankrupt|en faillite
+barely|à peine
+bargain|bonne affaire
+barrier|barrière
+basket|panier
 beneficial|bénéfique
+beside|à côté de
+beyond|au-delà de
+bias|parti pris, biais
+bid|offre, enchère
+bitter|amer
+blame|blâmer, reprocher
+blanket|couverture
+blind|aveugle
+blur|brouiller
+bold|audacieux, gras
+bond|lien
+boost|stimuler
+bound|certain, tenu
+brief|bref
+broad|large
+broadcast|diffuser
+broker|courtier
+budget|budget
+bullet|balle
+bunch|bouquet, grappe
+bureaucrat|bureaucrate
+cabin|cabane, cabine
+calculate|calculer
+cancel|annuler
+capable|capable
+capacity|capacité
+capture|capturer
+carbon|carbone
+cast|lancer, distribuer un rôle
+casual|décontracté
+catalogue|catalogue
+cathedral|cathédrale
+cave|grotte
+censor|censurer
+census|recensement
+certify|certifier
+chairman|président
+chancellor|chancelier
+characteristic|caractéristique
+chase|poursuivre
+chief|principal
+chronicle|chronique
+circuit|circuit
+circumstance|circonstance
+cite|citer
+citizen|citoyen
+civil|civil
+clarify|clarifier
+classic|classique
+classify|classer
+cliff|falaise
+clinic|clinique
 coherent|cohérent
-coincide|coïncider
-collaborate|collaborer
-commence|commencer
+coincidence|coïncidence
+collapse|s’effondrer
+colony|colonie
+combination|combinaison
+comfort|confort, réconfort
+command|ordre, maîtrise
+commission|commission
+commitment|engagement
+committee|comité
 compatible|compatible
-compensate|compenser
-compile|compiler
-complement|compléter
-comply|se conformer
+complicated|compliqué
+component|composant
+compose|composer
+compound|composé
+comprehend|comprendre
 comprehensive|complet, exhaustif
+compress|comprimer
 comprise|comprendre, se composer de
-conceive|concevoir
-concurrent|simultané
-confine|limiter
-consensus|consensus
-constitute|constituer
-constrain|contraindre
+compulsory|obligatoire
+concept|concept
+concern|inquiétude
+concerning|concernant
+concrete|concret
+conduct|mener, effectuer
+confess|avouer
+confidence|confiance
+confidential|confidentiel
+conflict|conflit
+conform|se conformer
+congregate|se rassembler
+congress|congrès
+conscious|conscient
+conservation|préservation
+conservative|conservateur
+considerable|considérable
+consideration|considération
+consistent|cohérent, constant
+conspiracy|complot
+constant|constant
+construct|construire
+consult|consulter
+consumption|consommation
+contaminate|contaminer
 contemporary|contemporain
-contradict|contredire
+contest|concours
+contingent|subordonné à
+contract|contrat
+contribute|contribuer
+controversial|controversé
 controversy|controverse
-convene|convoquer, se réunir
+convention|convention, usage
 conventional|conventionnel
-correlate|être corrélé
-credible|crédible
+convert|convertir
+convey|transmettre
+cope|faire face
+core|cœur, noyau
+corporate|d’entreprise
+corporation|société, groupe
+corridor|couloir
+council|conseil
+counter|comptoir
+county|comté
+courage|courage
+coverage|couverture
+crack|fissure
+craft|artisanat, métier
+crash|s’écraser, percuter
+creature|créature
+crew|équipage
+crisis|crise
 criterion|critère
-cumulative|cumulatif
-deficit|déficit
-denote|dénoter
-depict|représenter
-deplete|épuiser
-deteriorate|se détériorer
-deviate|s’écarter
-differentiate|différencier
-diminish|diminuer
-discrete|distinct, séparé
-discriminate|discriminer, distinguer
+critic|critique
+critical|critique
+criticism|critique
+criticize|critiquer
+crop|récolte, culture
+crucial|crucial
+cure|remède, guérison
+curious|curieux
+curve|courbe, virage
+dare|oser
+deaf|sourd
+debate|débat
+debt|dette
+decay|pourrir, se dégrader
+decent|décent, convenable
+declare|déclarer
+decline|déclin, baisse
+decrease|diminuer
+deduct|déduire
+defeat|vaincre
+defence|défense
+defend|défendre
+defer|différer
+delay|retard
+deliberate|délibéré
+deliberately|délibérément
+delight|joie, délice
+demand|demande
+democracy|démocratie
+demonstrate|démontrer
+deny|nier
+depart|partir
+dependent|dépendant
+deposit|dépôt, acompte
+depression|dépression
+depth|profondeur
+derive|tirer, dériver
+deserve|mériter
+desire|désir
+despair|désespoir
+desperate|désespéré
+destruction|destruction
+detach|détacher
+detect|détecter
+deter|dissuader
+determination|détermination
+devote|consacrer
+diameter|diamètre
+differ|différer
+dig|creuser
+disabled|handicapé
+disappoint|décevoir
+discipline|discipline
+discourage|décourager
+disguise|déguiser
+dismiss|licencier, écarter
+disorder|désordre, trouble
 disperse|disperser
-displace|déplacer, supplanter
-dispose|se débarrasser de
-disrupt|perturber
-distort|déformer
+display|afficher, exposer
+distant|lointain
+distinct|distinct
+distinguish|distinguer
+distribute|distribuer
+disturb|déranger
+dive|plonger
+diverse|divers, varié
 diversity|diversité
-doctrine|doctrine
+dividend|dividende
+division|division
+divorce|divorce
+domestic|national, domestique
 dominant|dominant
+dominate|dominer
+dozen|douzaine
+draft|brouillon
+drag|traîner
+dramatic|spectaculaire
+drought|sécheresse
+dull|ennuyeux, terne
+dump|jeter, déverser
 duration|durée
-elaborate|développer
-eligible|admissible
+dwell|s’attarder sur, demeurer
+dynamic|dynamique
+edit|éditer
+edition|édition
+efficient|efficace
+elderly|âgé
+elect|élire
+elegant|élégant
+elementary|élémentaire
+eliminate|éliminer
 embrace|adopter, embrasser
-empirical|empirique
-endeavor|effort, entreprise
-endorse|approuver, soutenir
-enforce|faire respecter
-entity|entité
+emerge|émerger
+emotional|émotionnel
+emperor|empereur
+emphasis|accent, insistance
+emphasize|souligner
+empire|empire
+enable|permettre
+enclose|joindre, enclore
+encounter|rencontrer
+endanger|mettre en danger
+endow|doter
+endowment|dotation
+energetic|énergique
+engage|engager, participer
+enhance|améliorer, renforcer
+enjoyable|agréable
+enlargement|agrandissement
+enlighten|éclairer
+enquiry|demande, enquête
+ensure|assurer, garantir
+enthusiasm|enthousiasme
+enthusiastic|enthousiaste
+entire|entier
+entrepreneur|entrepreneur
+envelope|enveloppe
+envy|envie, jalousie
+equip|équiper
+equity|équité, capitaux propres
 equivalent|équivalent
-erode|éroder
+era|ère, époque
+erupt|entrer en éruption
+escort|escorter
+establish|établir, fonder
+estate|domaine, propriété
+estimate|estimer
+ethic|éthique
 ethical|éthique
+ethics|éthique
+ethnic|ethnique
+evaluate|évaluer
+evaluation|évaluation
 evident|évident
-exaggerate|exagérer
-explicit|explicite
-facilitate|faciliter
-feasible|réalisable
-fluctuate|fluctuer
-formulate|formuler
-forthcoming|à venir
-hierarchy|hiérarchie
+evil|méchant, maléfique
+evolve|évoluer
+excavate|fouiller, creuser
+exceed|dépasser
+exception|exception
+exclaim|s’exclamer
+exclude|exclure
+excuse|excuse
+executive|cadre, dirigeant
+exempt|exempté
+exhibit|exposer, montrer
+existence|existence
+exotic|exotique
+expectation|attente
+expense|dépense
+expertise|expertise
+exploit|exploiter
+exploration|exploration
+expose|exposer
+exposure|exposition
+extend|prolonger, étendre
+extensive|étendu, vaste
+extent|étendue, mesure
+external|externe
+extract|extraire
+extraordinary|extraordinaire
+fabric|tissu
+facility|installation, équipement
+failure|échec
+faith|foi, confiance
+faithful|fidèle
+fake|faux
+fame|célébrité, renommée
+fantasy|fantasme, fantaisie
+fare|tarif, prix du billet
+fault|faute
+feather|plume
+fee|frais, honoraires
+feedback|retour, avis
+fellow|camarade, collègue
+fibre|fibre
+finance|finance
+firm|ferme
+fiscal|fiscal
+flame|flamme
+flank|flanc
+flash|éclair
+flexible|souple, flexible
+flicker|vaciller, clignoter
+float|flotter
+flock|troupeau, volée
+fog|brouillard
+fond|qui aime, attaché
+fool|imbécile, idiot
+forbid|interdire
+forecast|prévision
+foresee|prévoir
+forgive|pardonner
+format|format
+formation|formation
+former|ancien
+fortunate|chanceux
+fortune|fortune
+forum|forum
+fossil|fossile
+found|fonder
+foundation|fondement, base
+fraction|fraction
+fracture|fracture
+fragment|fragment
+framework|cadre
+frank|franc
+fraud|fraude
+freedom|liberté
+frequency|fréquence
+frequent|fréquent
+fringe|frange, marge
+frontier|frontière
+frown|froncer les sourcils
+fulfil|accomplir, remplir
+fulfilment|accomplissement
+fund|fonds
+fundamental|fondamental
+furious|furieux
+furnish|meubler
+furthermore|de plus
+gain|gagner, obtenir
+galaxy|galaxie
+gamble|parier, jouer
+gasp|haleter
+gauge|évaluer, jauger
+gender|genre, sexe
+gene|gène
+generate|générer
+genius|génie
+genre|genre
+genuine|authentique, sincère
+geology|géologie
+geometry|géométrie
+gesture|geste
+glamour|glamour
+glare|foudroyer du regard, éblouir
+gleam|luire
+glide|glisser
+gloom|obscurité, morosité
+gospel|évangile
+govern|gouverner
+governor|gouverneur
+grab|saisir
+gradually|peu à peu
+grand|grandiose
+grant|subvention, bourse
+graphic|graphique, cru
+gravel|gravier
+graze|brouter
+greed|cupidité
+grim|sombre, sinistre
+guarantee|garantir
+guideline|ligne directrice
+gulf|golfe, fossé
+habitat|habitat
+hammer|marteau
+handicap|handicap
+handle|gérer, manier
+harass|harceler
+harm|nuire à
+harmful|nuisible
+haste|hâte
+hatch|éclore
+haul|traîner, transporter
+headquarters|siège
+heal|guérir
+heaven|paradis, ciel
+heir|héritier
+hell|enfer
+hence|d’où, donc
+herd|troupeau
+hesitate|hésiter
+hilarious|hilarant
+hollow|creux
+holy|saint, sacré
+honour|honneur
+hook|crochet
+household|foyer, ménage
+humiliate|humilier
+humour|humour
+hunger|faim
+hut|cabane, hutte
+hybrid|hybride
 hypothesis|hypothèse
+icon|icône
 identical|identique
-ideology|idéologie
-immense|immense
+idle|inactif, oisif
+illuminate|éclairer
+illusion|illusion
+illustrate|illustrer
+imagination|imagination
+imitate|imiter
+immune|immunisé
+impair|altérer
+impatient|impatient
 implement|mettre en œuvre
+implication|implication
 implicit|implicite
+imply|impliquer, sous-entendre
+impose|imposer
+impress|impressionner
+impulse|impulsion
 incentive|incitation
+incident|incident
 incline|être enclin
+income|revenu
 incorporate|intégrer
-indigenous|indigène, autochtone
-induce|provoquer, inciter
+incorrect|incorrect
+index|index, indice
+indifferent|indifférent
+industrial|industriel
+inevitable|inévitable
+infection|infection
 infer|déduire
-inherent|inhérent
-inhibit|inhiber, freiner
-initiate|lancer, amorcer
-integral|intégral, essentiel
+infinite|infini
+inflame|enflammer, attiser
+inflation|inflation
+inform|informer
+inhabitant|habitant
+inherit|hériter
+initial|initial
+initiative|initiative
+inn|auberge
+inner|intérieur
+innovation|innovation
+input|contribution, entrée
+insert|insérer
+insight|aperçu, compréhension
+insist|insister
+inspire|inspirer
+install|installer
+instalment|versement
+instance|exemple, cas
+instant|instantané
+institute|institut
+institution|institution
+insulate|isoler
+insurance|assurance
 integrate|intégrer
-integrity|intégrité
-intervene|intervenir
-intrinsic|intrinsèque
-invoke|invoquer
-legislation|législation
-legitimate|légitime
+intellectual|intellectuel
+intense|intense
+interact|interagir
+internal|interne
+interpret|interpréter
+interrupt|interrompre
+interval|intervalle
+intimidate|intimider
+intrigue|intriguer
+invade|envahir
+invasion|invasion
+investment|investissement
+isolate|isoler
+jail|prison
+jar|bocal
+jet|avion à réaction
+joint|commun
+joy|joie
+judgement|jugement
+junior|subalterne, cadet
+jury|jury
+justice|justice
+justify|justifier
+juvenile|juvénile, puéril
+kit|trousse, kit
+kneel|s’agenouiller
+knot|nœud
+labor|main-d’œuvre, travail
+ladder|échelle
+landscape|paysage
+landslide|glissement de terrain, raz-de-marée
+lane|voie, ruelle
+lately|ces derniers temps
+launch|lancer
+leaflet|prospectus
+league|ligue
+lean|s’appuyer, pencher
+legend|légende
+licence|permis, licence
+lieutenant|lieutenant
+lifetime|vie entière
 likewise|de même
-mandate|mandat
-manipulate|manipuler
-marginal|marginal
+literary|littéraire
+litter|déchets (par terre)
+lively|animé, vif
+livestock|bétail
+load|charge
+loan|prêt
+loose|lâche, ample
+loyal|loyal
+lung|poumon
+magnificent|magnifique
+maintain|maintenir, entretenir
+majority|majorité
+mammal|mammifère
+manufacture|fabriquer
+margin|marge
+massive|énorme, massif
+master|maîtriser
+matrix|matrice
+maximum|maximum
+means|moyen
+mechanic|mécanicien
+mechanism|mécanisme
+medal|médaille
 mediate|servir de médiateur
-merge|fusionner
-methodology|méthodologie
-minimize|minimiser
-moderate|modéré
-momentum|élan
+medication|médicaments
+melt|fondre
+membership|adhésion
+memorable|mémorable
+metaphor|métaphore
+military|militaire
+mineral|minéral
+minimum|minimum
+minister|ministre
+minor|mineur
+minority|minorité
+miserable|malheureux, misérable
+mislead|induire en erreur
+mission|mission
+mock|se moquer de
+mode|mode
+modest|modeste
+modesty|modestie
+modify|modifier
+moisture|humidité
+monarch|monarque
+monarchy|monarchie
+monetary|monétaire
+monitor|surveiller
+monument|monument
+moral|moral
+moreover|de plus
+mortgage|prêt immobilier
+motion|mouvement
+motivate|motiver
+motivation|motivation
+motor|moteur
+mount|monter, installer
+mourn|pleurer (un mort)
+mourning|deuil
+multiple|multiple
+multiply|multiplier
+murmur|murmurer
+mutter|marmonner
+myth|mythe
+naked|nu
+nasty|désagréable, méchant
+navigate|naviguer, s’orienter
+navigation|navigation
+necessity|nécessité
+negotiate|négocier
+negotiation|négociation
+nerve|nerf, culot
+neutral|neutre
 nevertheless|néanmoins
+nightmare|cauchemar
 norm|norme
 notion|notion
-obsolete|obsolète
+nowadays|de nos jours
+numerous|nombreux
+nutrition|nutrition
+obedient|obéissant
+obey|obéir
+objective|objectif
+obligation|obligation
+obscure|obscur, peu connu
+observation|observation
+observe|observer
+obstacle|obstacle
+obstruct|entraver
+obtain|obtenir
+occupation|profession, occupation
+occupy|occuper
+offence|délit, offense
+offend|offenser
 offset|compenser
+omit|omettre
 ongoing|en cours
-orient|orienter
-paradigm|paradigme
-parameter|paramètre
-persist|persister
-plausible|plausible
-pose|poser (un risque)
-practitioner|praticien
-precede|précéder
-predominant|prédominant
-preliminary|préliminaire
-presume|présumer
-prevail|prévaloir
-profound|profond
-prohibit|interdire
-prominent|éminent, saillant
-prone|enclin, sujet à
-proximity|proximité
-qualitative|qualitatif
-quantitative|quantitatif
-radical|radical
-random|aléatoire
-rational|rationnel
-reinforce|renforcer
-reluctant|réticent
-render|rendre
-replicate|reproduire
-resemble|ressembler à
-residual|résiduel
-resilient|résilient
-restrain|retenir
-rigid|rigide
-rigorous|rigoureux
-scarce|rare
-scenario|scénario
-scope|portée
-scrutiny|examen minutieux
-simulate|simuler
-skeptical|sceptique
-sole|seul, unique
-sophisticated|sophistiqué
-spontaneous|spontané
-stimulate|stimuler
-straightforward|simple, direct
-subordinate|subordonné
-subsequent|ultérieur
-subsidy|subvention
-substantial|considérable
-successive|successif
-suppress|réprimer, étouffer
-surplus|excédent
-suspend|suspendre
-sustainable|durable
-tangible|tangible
-terminate|mettre fin à
-thereby|ainsi
-threshold|seuil
-trigger|déclencher
-undergo|subir
-underlie|sous-tendre
-undermine|saper
-undertake|entreprendre
-uniform|uniforme
-unprecedented|sans précédent
-utilize|utiliser
-valid|valable
-velocity|vitesse, vélocité
-verify|vérifier
-versatile|polyvalent
-viable|viable
-violate|violer, enfreindre
-virtually|pratiquement
-vulnerable|vulnérable
-whereby|par lequel
-yield|produire, rapporter
+operate|faire fonctionner, opérer
+opponent|adversaire
+oppose|s’opposer à
+oppress|opprimer
+optimistic|optimiste
+orbit|orbite
+orchestra|orchestre
+organ|organe
+organic|biologique, organique
+organism|organisme

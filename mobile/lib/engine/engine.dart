@@ -5,7 +5,8 @@
 /// barely moves it, a wrong answer cuts it to a quarter and brings the word back within minutes. A word is *kukuh*
 /// (solid) once its stability reaches a week and its last answer was clean.
 ///
-/// Ranks: 0 Peasant, then one rank per deck tier (1 Squire … 5 King). Only trials change the rank. The coronation
+/// Ranks: 0 Peasant, then one rank per deck tier (1 Squire, 2 Knight, 3 Baron, 4 Count, 5 Duke, 6 King), each one
+/// CEFR level (docs/riset-skor.md). Only trials change the rank. The coronation
 /// trial of a tier opens when 80 % of its words are solid; it asks 30 of them against the clock, without help, and
 /// passes at 26. A rank already held wavers when recent reviews of its words fall under 60 %; it is then kept by a
 /// short defence trial, or lost after seven days.
@@ -89,14 +90,18 @@ class Engine {
   static const placementPass = 6;
   static const placementTop = 3;
   static const trialSeconds = 25;
-  static const maxRank = 5;
+
+  /// below half its life a boss rages: this many seconds fewer per word, for the rest of the fight
+  static const rageCut = 5;
+  static const maxRank = 6;
 
   /// Score ranges per rank, from the test owners' own CEFR alignments (docs/riset-skor.md).
   static const ranks = [
-    RankInfo('Peasant', 'A2', '<4.0', '<3', '<42'),
-    RankInfo('Squire', 'B1', '4.0–5.0', '3–3.5', '42–71'),
-    RankInfo('Knight', 'B2', '5.5–6.5', '4–4.5', '72–94'),
-    RankInfo('Baron', 'C1', '7.0', '5', '95–106'),
+    RankInfo('Peasant', 'A1', '–', '–', '–'),
+    RankInfo('Squire', 'A2', '<4.0', '<3', '<42'),
+    RankInfo('Knight', 'B1', '4.0–5.0', '3–3.5', '42–71'),
+    RankInfo('Baron', 'B2', '5.5–6.5', '4–4.5', '72–94'),
+    RankInfo('Count', 'C1', '7.0', '5', '95–106'),
     RankInfo('Duke', 'C1', '7.5–8.0', '5.5', '107–113'),
     RankInfo('King', 'C2', '8.5–9.0', '6', '114–120'),
   ];

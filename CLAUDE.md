@@ -1,8 +1,8 @@
 # Verbarium — project notes for Claude
 
 English vocabulary for TOEFL/IELTS on Android, by **Armstrang** (Josh). Lingvist-like: a sentence with a gap, you
-type the word. Progress is a ladder of feudal titles (Peasant, Squire, Knight, Baron, Duke, King: English in every
-language) and, from Squire on, a job that the learner's build decides. Sister app of XueCi (`armstrang/XueCi`), but the look and
+type the word. Progress is a ladder of seven feudal titles, one per CEFR level (Peasant A1, Squire A2, Knight B1, Baron B2, Count C1,
+Duke C1+, King C2: English in every language) and, from Squire on, a job that the learner's build decides. Sister app of XueCi (`armstrang/XueCi`), but the look and
 tone are deliberately different: paper and ink, heraldry, the voice of a chronicle. Josh writes in Indonesian:
 **reply in Indonesian**. Not on Google Play yet.
 
@@ -13,12 +13,12 @@ and even then confirm first what will change and wait for his yes. Everything el
 
 | Path | What |
 |---|---|
-| `mobile/assets/deck/` | the words, canonical. 6,912 words in all (5,894 core, about 500 per banner: 513 TOEFL, 505 IELTS); every file is checked by `check_deck.py`. Core `1-squire.txt` … `5-raja.txt` (a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`; the banner decides which one is shown, both are accepted. A banner's own words come early among a rank's new words (one in two), and under TOEFL the build question comes more often. `en/<same file>`: `word|definition`, plain English, for learning through English. `es/<same file>`, `fr/<same file>`: `word|meaning` in Spanish and French (collocations: `phrase with [answer]|meaning`), use ’ never ' |
-| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_music.py` (every sound: the music `m0`…`m5`, `battle`, and all effects — wrong, rise, levelup, fanfare, quill, seal, page, tap, hit, crit, hurt, victory, defeat and each line's `tap_*`, `hit_*`, `hitx_*` — rendered from the CC0 sample libraries VSCO 2 CE and VCSL, which are cloned outside the repo, see its header; numpy + scipy + ffmpeg → `res/raw/*.ogg`), `pair_spellings.py` (adds the British spelling where a known pattern gives one), `make_icons.py` (Pillow → `mipmap-*`) |
+| `mobile/assets/deck/` | the words, canonical. 6,912 words in all (5,894 core, about 500 per banner: 513 TOEFL, 505 IELTS); every file is checked by `check_deck.py`. Core `1-squire.txt` … `6-king.txt` (1 Squire A1–A2, 2 Knight B1, 3 Baron B2, 4 Count C1, 5 Duke C1+, 6 King C2, each word placed by its Oxford 3000/5000 CEFR level, else its BNC/COCA frequency; a rank may continue in `1-squire-b.txt`, …): `word|pos|meaning|sentence with ___[|=form]`. `collocations.txt`: `rank|phrase with [answer]|wrong,wrong,wrong|meaning|meaning in English`. Banner files `toefl.txt`, `ielts.txt`: rank in front. Two spellings: `american/british`; the banner decides which one is shown, both are accepted. A banner's own words come early among a rank's new words (one in two), and under TOEFL the build question comes more often. `en/<same file>`: `word|definition`, plain English, for learning through English. `es/<same file>`, `fr/<same file>`: `word|meaning` in Spanish and French (collocations: `phrase with [answer]|meaning`), use ’ never ' |
+| `content/tools/` | `check_deck.py` (format, one gap, no word twice, a definition for every word — CI runs it), `dedupe_deck.py` (drops a word that a continuation file repeats), `place_defs.py` (definitions written anywhere as `word|definition` are filed under the deck file that holds the word), `make_music.py` (every sound: the music `m0`…`m6`, `battle`, and all effects — wrong, rise, levelup, fanfare, quill, seal, page, tap, hit, crit, hurt, victory, defeat and each line's `tap_*`, `hit_*`, `hitx_*` — rendered from the CC0 sample libraries VSCO 2 CE and VCSL, which are cloned outside the repo, see its header; numpy + scipy + ffmpeg → `res/raw/*.ogg`), `pair_spellings.py` (adds the British spelling where a known pattern gives one), `make_icons.py` (Pillow → `mipmap-*`) |
 | `mobile/lib/engine/engine.dart` | `Engine`: memory (stability in days, personal `ease`), plan, sitting of `Card`s, the three `Quiz` kinds and their weights, ranks, stages and sub-bosses, trials, placement, defence; `slip()` |
 | `mobile/lib/engine/game.dart` | `Game`: experience and level, combo, figures, quests, feats, gear, enemies, advice, the build (`bp`) and the path of jobs. Never changes memory or rank |
 | `mobile/lib/engine/lore.dart` | `LoreBook`: the lore of every title and job (quote, story, nature, background, drive) in both languages, from the document "Kitab Lore Verbarium"; shown only by `ui/lore.dart` (the introduction after a coronation, closed by its button, and the story page when the hero is tapped in Karakter) |
-| `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (37 on the map + 6 hidden), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
+| `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (45 on the map + 7 hidden; the Count's tier asks whether the build still leads with the line's own side), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
 | `mobile/lib/app/lang.dart`, `l10n.dart` | `code` ('id', 'en', 'es', 'fr') and `tr(id, en, es, fr)`: every text is written in all four languages where it is used; data written only in English (gear, enemies, feats, job hints) gets its Spanish and French from `l10n.dart` through `tx(en)` |
 | `mobile/lib/data/` | `store.dart` (one JSON document, keys listed at the top — never rename), `deck.dart` |
 | `mobile/lib/app/` | `app.dart` (`App`: settings, sound, `stamp`), `native.dart` (channel `verbarium/native`) |
@@ -37,7 +37,7 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
 
 ## Rules
 
-- **Store keys never change** once testers have the app (`v`, `set`, `mem`, `log`, `rank`, `ev`, `win`, `shaky`,
+- **Store keys never change** once testers have the app (schema 2: seven titles, `Store.migrate` lifts a version 1 file) (`v`, `set`, `mem`, `log`, `rank`, `ev`, `win`, `shaky`,
   `cool`, `placed`, `stage`, `subcool`, `ease`, `ret`, `er`, `game`). A format change = a migration and a test.
 - Package **`com.armstrang.verbarium`**. `versionCode` = 4000 + run for every build. Signing key
   `keystore/verbarium.jks` is public: test APKs only, never Play. The Play upload key is `keystore/upload.jks.enc`
@@ -62,7 +62,7 @@ output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything 
 ## Look and motion
 
 - Paper (`Pal.day`) and candlelight (`Pal.night`); the accent is the tincture of the title held
-  (tanah, vert, gules, azure, purpure, sable). Colour is never the only sign: each shield has its own charge.
+  (tanah, vert, gules, azure, murrey, purpure, sable). Colour is never the only sign: each shield has its own charge.
   `contrast_test` must stay green.
 - The learning screen stays plain: one sentence with the gap you type into. Ornament and pixel art live in Negeri, Karakter, the fights and the coronation.
 - Pixel art is built from shapes in `pixel.dart` (no image files): figures 40×43 (body 32 wide, room for a swing),

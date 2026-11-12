@@ -1,480 +1,353 @@
-# Verbarium — French meanings for 3-baron-b.txt: word|meaning
-abbreviate|abréger
-abide|respecter (abide by)
-abnormal|anormal
-abrupt|brusque
-absurd|absurde
-accessory|accessoire
-acclaim|acclamation, éloges
-accord|accord
-accordingly|en conséquence
-accusation|accusation
-activate|activer
-adaptation|adaptation
-addict|toxicomane, accro
-adhesive|adhésif
-adjoin|jouxter
-administer|administrer
-admirable|admirable
-adolescence|adolescence
-adversary|adversaire
-advisory|consultatif
-affection|affection
-affirm|affirmer
-aggravate|aggraver
-agitate|agiter, inquiéter
-agrarian|agraire
-albeit|bien que
-alienate|éloigner, aliéner
-align|aligner
-allegation|allégation
-allege|alléguer, prétendre
-alliance|alliance
-allot|attribuer
-ambivalent|ambivalent
-amid|au milieu de
-analogous|analogue
-anecdote|anecdote
-annex|annexer
-anonymous|anonyme
-antagonist|antagoniste
-apparatus|appareil, dispositif
-appraise|évaluer
-apprentice|apprenti
-arbitrate|arbitrer
-archive|archives
-arena|arène
-aristocracy|aristocratie
-array|ensemble, gamme
-ascend|monter
-aspiration|aspiration
-assertion|affirmation
-assumption|supposition
-assurance|assurance, garantie
-asylum|asile
-attain|atteindre
-attainment|réussite
-attentive|attentif
-audit|audit
-authentic|authentique
-authorize|autoriser
-aviation|aviation
-backdrop|toile de fond
-backlash|réaction hostile
-ballot|scrutin
-bankrupt|en faillite
-benchmark|référence, repère
-beneficiary|bénéficiaire
-benign|bénin
-bilateral|bilatéral
-bizarre|bizarre
-bleak|sombre, morne
-blueprint|plan, schéma directeur
-blunt|émoussé, franc
-blur|brouiller
-breakdown|panne, ventilation
-brink|bord, seuil
-brutal|brutal
-bulky|encombrant
-bureaucracy|bureaucratie
-bypass|contourner
-calibre|calibre, envergure
-candid|franc
-captivate|captiver
-cater|répondre aux besoins
-caveat|mise en garde
-censor|censurer
-census|recensement
-chronic|chronique
-chronicle|chronique
-chronological|chronologique
-clarity|clarté
-coalition|coalition
-coerce|contraindre
-cognitive|cognitif
-collateral|garantie
-commemorate|commémorer
-commentary|commentaire
-commonplace|banal, courant
-communal|commun, communautaire
-compassion|compassion
-compelling|convaincant
-competence|compétence
-complexity|complexité
-compliance|conformité
-complication|complication
-composition|composition
-compress|comprimer
-conceivable|concevable
-conception|conception
-concession|concession
-concise|concis
-condense|condenser
-configuration|configuration
-confiscate|confisquer
-conform|se conformer
-conscientious|consciencieux
-consecutive|consécutif
-consolidate|consolider
-conspiracy|complot
-constituent|composant, électeur
-constraint|contrainte
-contaminate|contaminer
-contempt|mépris
-contention|thèse, litige
-continuity|continuité
-conversely|inversement
-conviction|conviction, condamnation
-coordinate|coordonner
-cornerstone|pierre angulaire
-correlation|corrélation
-correspondence|correspondance
-counterpart|homologue
-credibility|crédibilité
-culprit|coupable
-curb|freiner
-customary|habituel
-daunt|intimider
-deadlock|impasse
-debris|débris
-decisive|décisif
-decree|décret
-default|défaut de paiement
-defer|différer
-deficiency|carence
-defy|défier
-degrade|dégrader
-deliberately|délibérément
-denial|déni, démenti
-density|densité
-deploy|déployer
-depreciate|se déprécier
-deprive|priver
-descendant|descendant
-detain|détenir
-devise|concevoir
-diagnosis|diagnostic
-dictate|dicter
-diffuse|diffuser
-dilute|diluer
-diplomacy|diplomatie
-directive|directive
-disclose|divulguer
-discourse|discours
-discretion|discrétion, discernement
-dismantle|démanteler
-disparate|disparate
-dispatch|expédier
-disposal|élimination
-disposition|tempérament
-dissent|désaccord
-distinctive|distinctif
-divert|détourner
-documentary|documentaire
-dormant|en sommeil
-dubious|douteux
-duplicate|dupliquer
-dwell|s’attarder sur, demeurer
-eccentric|excentrique
-eclipse|éclipse
-ecology|écologie
-elapse|s’écouler
-electorate|électorat
-elite|élite
-eloquent|éloquent
-embark|se lancer, embarquer
-embed|intégrer, ancrer
-empathy|empathie
-empower|donner du pouvoir
-enact|promulguer
-endow|doter
-enlighten|éclairer
-enrich|enrichir
-entrepreneur|entrepreneur
-epidemic|épidémie
-equilibrium|équilibre
-escalate|s’intensifier
-essence|essence
-esteem|estime
-ethics|éthique
-evade|éviter, éluder
-evoke|évoquer
-exceptional|exceptionnel
-exclusive|exclusif
-exemplary|exemplaire
-exempt|exempté
-expenditure|dépenses
-expire|expirer
-explanatory|explicatif
-exploitation|exploitation
-exquisite|exquis
-fabricate|inventer, fabriquer
-facet|facette
-faction|faction
-fallout|retombées
-feat|exploit
-fertility|fertilité
-fidelity|fidélité
-finite|fini, limité
-flaw|défaut
-flourish|prospérer
-foremost|principal, premier
-forfeit|perdre (un droit)
-formidable|redoutable
-forum|forum
-franchise|franchise
-frantic|frénétique
-frugal|économe
-gauge|évaluer, jauger
-generic|générique
-genre|genre
-gist|l’essentiel
-governance|gouvernance
-grievance|grief
-grounds|motifs
-habitual|habituel
-hallmark|marque distinctive
-haphazard|désordonné
-harness|exploiter
-hasten|hâter
-hazardous|dangereux
-heed|tenir compte de
-hefty|considérable
-heighten|accroître
-hereditary|héréditaire
-hindsight|recul
-homogeneous|homogène
-hostility|hostilité
-humane|humain
-hybrid|hybride
-hypothetical|hypothétique
-illuminate|éclairer
-imminent|imminent
-immerse|plonger, immerger
-impair|altérer
-impending|imminent
-implication|implication
-improvise|improviser
-inaugurate|inaugurer
-inclusive|inclusif
-incur|encourir
-indefinite|indéfini
-indicator|indicateur
-indifferent|indifférent
-indulge|se faire plaisir, gâter
-inequality|inégalité
-infinite|infini
-inflict|infliger
-influx|afflux
-infringe|enfreindre
-ingenuity|ingéniosité
-inquire|se renseigner
-insistence|insistance
-insofar|dans la mesure où (insofar as)
-instability|instabilité
-insulate|isoler
-intact|intact
-intake|apport
-integration|intégration
-interim|intérimaire, provisoire
-intuition|intuition
-invaluable|inestimable
-inventory|inventaire
-irony|ironie
-irrelevant|hors de propos
-irrespective|indépendamment de
-jurisdiction|juridiction
-landmark|repère, jalon
-lapse|défaillance, laps
-lavish|somptueux
-layout|disposition
-legacy|héritage
-legislate|légiférer
-legitimacy|légitimité
-lenient|indulgent
-liability|responsabilité, handicap
-liable|responsable, susceptible
-liaison|liaison
-linear|linéaire
-literacy|alphabétisation
-literal|littéral
-lobby|faire pression
-longevity|longévité
-loophole|faille juridique
-magnitude|ampleur
-mainstream|courant dominant
-malfunction|dysfonctionnement
-mandatory|obligatoire
-manifest|manifester
-manuscript|manuscrit
-maritime|maritime
-materialize|se concrétiser
-mediocre|médiocre
-mentor|mentor
-metaphor|métaphore
-migration|migration
-milestone|étape importante
-mimic|imiter
-misconception|idée fausse
-mobilize|mobiliser
-monopoly|monopole
-morale|moral
-mortality|mortalité
-motif|motif
-mundane|banal
-narrate|raconter
-negligence|négligence
-niche|niche, créneau
-nominal|nominal, symbolique
-nonetheless|néanmoins
-notorious|tristement célèbre
-novelty|nouveauté
-nutrient|nutriment
-oblivious|inconscient
-obstruct|entraver
-occupant|occupant
-occurrence|événement
-optimal|optimal
-optimism|optimisme
+origin|origine
 orthodox|orthodoxe
-outrage|indignation
-outright|total, catégorique
-outset|début
-overhaul|réviser complètement
+otherwise|sinon
+outcome|résultat
+outfit|tenue
+outline|grandes lignes
+output|production
+outstanding|remarquable
+overall|global, d’ensemble
+overcome|surmonter
+overhead|au-dessus
 overlap|se chevaucher
-oversee|superviser
-overt|manifeste
-pact|pacte
-paramount|primordial
-partisan|partisan
-patron|mécène, client
+owe|devoir (de l’argent)
+oxygen|oxygène
+pace|rythme
+palm|paume, palmier
+panel|panneau, jury
+panic|panique
+parade|défilé
+paradox|paradoxe
+parallel|parallèle
+parliament|parlement
+particle|particule
+passage|passage, couloir
+passionate|passionné
+patience|patience
+patriot|patriote
+pause|faire une pause
+penalty|peine, amende
 penetrate|pénétrer
+pension|retraite, pension
+perceive|percevoir
 perception|perception
-peripheral|périphérique
-perpetual|perpétuel
-persistent|persistant
-petition|pétition
-philanthropy|philanthropie
-pinpoint|localiser précisément
-plight|situation critique
-polarize|polariser
-portfolio|portefeuille
-portray|dépeindre
-postulate|postuler
-potent|puissant
-precedent|précédent
-precision|précision
-predecessor|prédécesseur
-predominantly|principalement
-premature|prématuré
-prestigious|prestigieux
+permanent|permanent
+permit|permettre
+perspective|perspective
+phase|phase
+phenomenon|phénomène
+philosophy|philosophie
+pile|tas, pile
+pilgrim|pèlerin
+pill|pilule
+pitch|terrain, ton
+pity|pitié, dommage
+plague|fléau, peste
+plain|simple, uni
+plaintiff|plaignant
+plural|pluriel
+polar|polaire
+portion|portion
+pose|poser (un risque)
+possess|posséder
+potential|potentiel
+pottery|poterie
+praise|louer, féliciter
+precede|précéder
+precious|précieux
+precise|précis
+predictable|prévisible
+predominant|prédominant
+preference|préférence
+pregnant|enceinte
+preoccupy|préoccuper
+preparation|préparation
+presence|présence
+preserve|préserver, conserver
+prestige|prestige
 prevalent|répandu
-proactive|proactif
-probe|sonder, enquêter
-proclaim|proclamer
-proficiency|maîtrise
+pride|fierté
+primarily|principalement
+prime|principal
+primitive|primitif
+principle|principe
+priority|priorité
+privacy|vie privée
+procedure|procédure
+proceed|poursuivre
+progressive|progressiste
+prohibit|interdire
 prolong|prolonger
-propaganda|propagande
-prosperity|prospérité
-protocol|protocole
-prototype|prototype
-provision|fourniture, disposition
-provisional|provisoire
-quota|quota
-ratify|ratifier
-rationale|justification
-reassure|rassurer
-rebuke|réprimander
-recipient|destinataire
-reciprocal|réciproque
+prolonged|prolongé
+promising|prometteur
+promotion|promotion
+prompt|rapide, prompt
+proof|preuve
+prop|étayer
+proportion|proportion
+propose|proposer
+prospect|perspective
+protein|protéine
+psychology|psychologie
+publicity|publicité
+punctual|ponctuel
+pupil|élève
+purchase|acheter
+pure|pur
+pursue|poursuivre
+pursuit|poursuite, quête
+puzzle|énigme, casse-tête
+questionnaire|questionnaire
+racial|racial
+radiation|rayonnement
+random|aléatoire
+rank|rang, grade
+rapid|rapide
+rattle|cliqueter, déstabiliser
+raw|cru
+realistic|réaliste
+reasonable|raisonnable
+rebuild|reconstruire
+recall|se rappeler
+recession|récession
+reckon|penser, estimer
 reconcile|réconcilier
+recover|se rétablir
+recreation|loisirs
+recruit|recruter
 recur|se reproduire
-redeem|racheter, échanger
-refrain|s’abstenir
+refine|raffiner, peaufiner
+refresh|rafraîchir
+refugee|réfugié
+regard|considérer
+regarding|concernant
+register|s’inscrire
+regress|régresser
+regret|regretter
+regrettable|regrettable
+regulate|réglementer
+regulation|règlement
 rehabilitate|réhabiliter
-reimburse|rembourser
-reiterate|réitérer
-relentless|implacable
-reminiscent|qui rappelle
-remnant|vestige, reste
-renowned|renommé
-repeal|abroger
-repertoire|répertoire
+rehearse|répéter
+reinforce|renforcer
+relevant|pertinent
+relief|soulagement, secours
+relieve|soulager
+rely|compter sur
+remark|remarque
+remarkable|remarquable
+repay|rembourser
+representative|représentant
 repress|réprimer
-reservoir|réservoir
-respective|respectif
-retaliate|riposter
-retrieve|récupérer
-retrospect|rétrospective
-revive|raviver
-rhetoric|rhétorique
+reputation|réputation
+rescue|secourir
+resent|en vouloir à
+resentment|ressentiment
+resident|résident, habitant
+resign|démissionner
+resist|résister
+resolution|résolution
+resolve|résoudre
+resort|station touristique
+restore|restaurer
+restrict|restreindre
+retail|commerce de détail
+retain|conserver, retenir
+reveal|révéler
+revenue|recettes
+revision|révision
+revolution|révolution
+reward|récompense
+rhythm|rythme
+rid|débarrasser
+ridiculous|ridicule
+rigid|rigide
 rigour|rigueur
-rite|rite
-ruthless|impitoyable
-safeguard|protéger
-sanctuary|sanctuaire, refuge
-saturation|saturation
-secular|laïque
-sediment|sédiment
-segment|segment
-sentiment|sentiment
-setback|revers
-shortcoming|lacune
-shrewd|astucieux
-siege|siège
-simultaneous|simultané
-solidarity|solidarité
-sovereign|souverain
-spark|déclencher
-spectrum|spectre, éventail
+rival|rival
+rob|voler, cambrioler
+root|racine
+rub|frotter
+ruin|ruiner, gâcher
+rumour|rumeur
+rural|rural
+rush|se précipiter
+satellite|satellite
+satisfaction|satisfaction
+satisfied|satisfait
+satisfy|satisfaire
+scale|échelle
+scandal|scandale
+scarce|rare
+scenario|scénario
+scheme|plan, projet
+scholar|érudit
+scratch|gratter, rayer
+scream|crier, hurler
+sector|secteur
+secure|sûr, sécurisé
+seek|chercher
+select|sélectionner
+senior|supérieur, aîné
+sensitive|sensible
+sequence|séquence, suite
+session|séance
+settle|s’installer, régler
+severe|grave, sévère
+shade|ombre
+shadow|ombre
+shallow|peu profond
+shame|honte, dommage
+shelter|abri
+shock|choc
+shore|rivage
+shortage|pénurie
+sibling|frère ou sœur
+signature|signature
+significant|important, significatif
+silence|silence
+sincere|sincère
+slide|glisser
+slight|léger
+slip|glisser
+slope|pente
+solar|solaire
+sophisticated|sophistiqué
+soul|âme
+spacious|spacieux
+spare|de rechange, libre
+species|espèce
+spectacular|spectaculaire
 speculate|spéculer
+spill|renverser
+spite|malgré (in spite of)
+split|fendre, diviser
+spoil|gâcher, gâter
+sponsor|sponsor
+spontaneous|spontané
+stable|stable
 stance|position
-stagnate|stagner
-stakeholder|partie prenante
-stark|frappant, austère
-statute|loi, statut
-stereotype|stéréotype
-stigma|stigmate
-strand|brin, fil
-streamline|simplifier
+stare|fixer du regard
+starve|mourir de faim
+status|statut
+steady|stable, régulier
+steam|vapeur
+steel|acier
+steep|raide
+stimulate|stimuler
+stock|stock, actions
+stream|ruisseau
+stretch|étirer
+strict|strict
+strike|frapper, faire grève
+struggle|lutter, peiner
+submit|soumettre, remettre
+subordinate|subordonné
+subsequent|ultérieur
 subsidiary|filiale
-succession|succession
-supervision|supervision
-surge|forte hausse
-surpass|surpasser
-surveillance|surveillance
-symmetry|symétrie
-synthesis|synthèse
-tariff|droit de douane
-temperament|tempérament
-testimony|témoignage
-texture|texture
-theoretical|théorique
-tolerant|tolérant
-toll|bilan, péage
-trajectory|trajectoire
-tranquil|tranquille
-transcend|transcender
-transient|passager
-transparency|transparence
-traverse|traverser
-tribunal|tribunal
-turmoil|tourmente
-turnover|chiffre d’affaires, rotation
-underestimate|sous-estimer
-unify|unifier
-upheaval|bouleversement
-utility|utilité, service public
+suburb|banlieue
+sufficient|suffisant
+sum|somme
+supper|souper, dîner
+surgeon|chirurgien
+surgery|chirurgie
+surround|entourer
+suspect|soupçonner
+suspend|suspendre
+sustainable|durable
+swallow|avaler
+swear|jurer
+sweep|balayer
+swift|rapide
+sympathy|compassion
+tackle|s’attaquer à
+tale|conte
+tap|robinet
+tear|déchirer
+temple|temple
+temporary|temporaire
+tendency|tendance
+tension|tension
+territory|territoire
+terror|terreur
+therapy|thérapie
+thorough|minutieux, approfondi
+threat|menace
+threaten|menacer
+thunder|tonnerre
+tissue|tissu, mouchoir
+tone|ton
+tough|dur, coriace
+tournament|tournoi
+trace|retracer
+tragedy|tragédie
+trait|trait
+transfer|transférer
+transform|transformer
+transition|transition
+transmit|transmettre
+trap|piège
+treasure|trésor
+tremble|trembler
+trial|procès, essai
+tribe|tribu
+trigger|déclencher
+troop|troupe
+tropical|tropical
+trust|faire confiance à
+tune|air, mélodie
+tunnel|tunnel
+tutor|précepteur
+ultimate|ultime
+undergo|subir
+undertake|entreprendre
+undertaking|entreprise, tâche
+unique|unique
+unite|unir
+universe|univers
+upper|supérieur
+urban|urbain
+urge|exhorter
+urgent|urgent
+utter|total, complet
+valid|valable
 validate|valider
-variable|variable
+vary|varier
+vast|vaste
 vendor|vendeur
-verdict|verdict
-versus|contre
-vicinity|environs
-vigilant|vigilant
+venue|lieu
+via|via, par
+victory|victoire
+vigorous|vigoureux
+violence|violence
+virtually|pratiquement
+visible|visible
+vision|vision, vue
+visual|visuel
+vital|vital
+vivid|vif, frappant
 vocation|vocation
-void|vide
-waive|renoncer à
-watershed|tournant
-withhold|retenir, refuser
+volcano|volcan
+volume|volume, tome
+voluntary|volontaire, bénévole
+wage|salaire
+wagon|chariot, wagon
+wander|errer
+wealth|richesse
+welfare|bien-être
+whereas|tandis que
+whisper|chuchoter
+widespread|répandu
+wildlife|faune
+willing|disposé
+wire|fil, câble
+wisdom|sagesse
+wise|sage
+withdraw|retirer, se retirer
+witness|témoin
 workforce|main-d’œuvre
+workshop|atelier
+wound|blessure
+wrap|envelopper
+wreck|épave
+wrist|poignet
+zone|zone

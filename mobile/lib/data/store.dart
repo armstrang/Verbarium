@@ -3,11 +3,11 @@
 /// renamed, so a crash never leaves half a file.
 ///
 /// Keys (never rename one: learners' progress depends on them):
-///   v      schema version (1)
+///   v      schema version (2: seven titles; a version 1 file is moved up once when it is opened, see [Store.migrate])
 ///   set    settings {banner, lang, perDay, music, musicVol, sfx, theme, calm, onb}
 ///   mem    {word id: [stability days, due ms, reps, lapses, last ms, last answer clean 0/1]}
 ///   log    {yyyymmdd: [new words, reviews, right, wrong]}
-///   rank   0 Peasant … 5 King
+///   rank   0 Peasant, 1 Squire, 2 Knight, 3 Baron, 4 Count, 5 Duke, 6 King
 ///   ev     chronicle entries [{t, k, r, a, b}]
 ///   win    the last review answers on ranks already held (1 right, 0 wrong)
 ///   shaky  ms since when the title wavers (0 = steady)
@@ -64,7 +64,7 @@ class FileBackend implements Backend {
 }
 
 class Store {
-  static const schema = 1;
+  static const schema = 2;
   final Backend backend;
   Map<String, dynamic> data = {};
   Timer? _timer;
@@ -77,8 +77,65 @@ class Store {
         if (d is Map<String, dynamic>) data = d;
       } catch (_) {}
     }
-    data['v'] ??= schema;
+    if (text == null || data.isEmpty) data['v'] = schema;
+    migrate(data);
   }
+
+  /// Version 1 had six titles (Peasant … King, Squire = B1). Version 2 has seven, one per CEFR level, with the Count
+  /// between Baron and Duke: every title held moves up one so that it keeps its CEFR level (a B1 Squire is now a
+  /// B1 Knight). The chronicle follows; jobs keep their tier, and a job for the Count is put in for anyone who had
+  /// gone past the Baron, on the side of their own line.
+  static void migrate(Map<String, dynamic> data) {
+    final v = (data['v'] as num?)?.toInt() ?? 1;
+    if (v >= 2) return;
+    int up(Object? r) {
+      final n = (r as num?)?.toInt() ?? 0;
+      return n >= 1 ? n + 1 : n;
+    }
+
+    if (data['rank'] is num) data['rank'] = up(data['rank']);
+    final ev = data['ev'];
+    if (ev is List) {
+      for (final e in ev) {
+        if (e is! Map || e['r'] is! num) continue;
+        final r = (e['r'] as num).toInt();
+        // a job event carries the job's tier, which only moves from the Duke up; the rest carry a title
+        e['r'] = e['k'] == 'job' ? (r >= 4 ? r + 1 : r) : up(r);
+      }
+    }
+    final g = data['game'];
+    if (g is Map) {
+      final jobs = g['jobs'];
+      if (jobs is List && jobs.length > 4) jobs.insert(4, _countOf[jobs[3]] ?? 'justicar');
+      final hid = g['hid'];
+      if (hid is Map) {
+        final moved = <String, dynamic>{
+          for (final e in hid.entries)
+            (int.tryParse('${e.key}') ?? 0) >= 4 ? '${int.parse('${e.key}') + 1}' : '${e.key}': e.value,
+        };
+        hid
+          ..clear()
+          ..addAll(moved);
+      }
+    }
+    data['v'] = 2;
+  }
+
+  /// the Count's job that keeps to the line of a Baron's job
+  static const _countOf = {
+    'blademaster': 'justicar',
+    'paladin': 'justicar',
+    'spellblade': 'justicar',
+    'marksman': 'pathfinder',
+    'nightblade': 'pathfinder',
+    'trickster': 'pathfinder',
+    'wizard': 'loremaster',
+    'bishop': 'loremaster',
+    'enchanter': 'loremaster',
+    'warden': 'bulwark',
+    'mystic': 'bulwark',
+    'runekeeper': 'bulwark',
+  };
 
   Map<String, dynamic> map(String key) {
     final v = data[key];

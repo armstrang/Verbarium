@@ -1,0 +1,354 @@
+mistrust|desconfianza
+moderation|moderación
+modicum|mínimo
+mollify|apaciguar
+momentous|trascendental
+morass|cenagal, embrollo
+morose|taciturno
+motto|lema
+muddle|lío
+mural|mural
+murky|turbio
+mutiny|motín
+myopic|miope
+narcotic|narcótico
+nascent|naciente
+negate|anular
+negligible|insignificante
+nettle|irritar
+neurotic|neurótico
+nimble|ágil
+nocturnal|nocturno
+nomad|nómada
+nonchalant|despreocupado
+nonplussed|desconcertado
+noxious|nocivo
+nuance|matiz
+nullify|anular
+obdurate|obstinado
+obituary|necrológica
+oblique|indirecto, oblicuo
+obliterate|arrasar
+oblivious|ajeno, inconsciente
+obsolete|obsoleto
+obstinate|obstinado
+obtrusive|llamativo, molesto
+odious|odioso
+omen|presagio
+onerous|oneroso
+onslaught|embestida
+opaque|opaco
+opine|opinar
+optimum|óptimo
+opulent|opulento
+ordinance|ordenanza
+ornate|recargado, ornamentado
+ostentatious|ostentoso
+ostracize|marginar
+outburst|arrebato
+outcast|marginado
+outcry|protesta
+outdated|anticuado
+outnumber|superar en número
+outpost|puesto avanzado
+outspoken|franco
+ovation|ovación
+overboard|por la borda
+overdue|atrasado
+overload|sobrecargar
+overpower|dominar
+overrun|invadir, exceder
+oversight|descuido, supervisión
+overture|obertura, propuesta
+overwrought|alterado
+pageant|desfile, espectáculo
+painstaking|minucioso
+palatable|sabroso, aceptable
+pallid|pálido
+palpable|palpable
+paltry|insignificante
+panorama|panorama
+parable|parábola
+parch|resecar
+parchment|pergamino
+parity|paridad
+parry|esquivar
+paternal|paternal, paterno
+patronize|tratar con condescendencia
+pedigree|pedigrí
+penal|penal
+penchant|inclinación
+pendulum|péndulo
+penitent|arrepentido
+perceptive|perspicaz
+perilous|peligroso
+perjury|perjurio
+permissible|permisible
+pernicious|pernicioso
+perplex|desconcertar
+persevere|perseverar
+persona|imagen pública
+pertain|concernir
+pertinent|pertinente
+perturb|perturbar
+peruse|examinar, leer con atención
+pervade|impregnar
+pessimism|pesimismo
+pessimistic|pesimista
+phenomenal|fenomenal
+phobia|fobia
+picturesque|pintoresco
+pinnacle|cumbre
+pious|piadoso
+pique|despertar, ofender
+piracy|piratería
+pivotal|crucial
+placate|aplacar
+placid|plácido
+plaintive|lastimero
+plethora|plétora
+plucky|valiente
+plunder|saquear
+poignant|conmovedor
+polemic|polémica
+pollinate|polinizar
+pomp|pompa
+ponderous|pesado
+porous|poroso
+portend|presagiar
+postulate|postular
+potency|potencia
+pounce|abalanzarse
+pragmatism|pragmatismo
+prairie|pradera
+prattle|parlotear
+precept|precepto
+precinct|recinto, distrito
+precipitous|escarpado, precipitado
+predicament|aprieto
+predominate|predominar
+preen|acicalarse
+preface|prefacio
+prehistoric|prehistórico
+preposterous|absurdo
+prerogative|prerrogativa
+presumptuous|presuntuoso
+pretext|pretexto
+prim|remilgado
+primate|primate
+pristine|prístino
+proactive|proactivo
+prodigious|prodigioso
+prodigy|prodigio
+profane|profano
+profess|profesar, declarar
+proficient|competente
+profuse|profuso
+prolific|prolífico
+promulgate|promulgar
+propensity|propensión
+prophecy|profecía
+propitious|propicio
+protracted|prolongado
+protrude|sobresalir
+proverb|proverbio
+prowess|destreza, proeza
+prowl|merodear
+proxy|apoderado
+puberty|pubertad
+pulp|pulpa
+pungent|acre, penetrante
+punitive|punitivo
+puny|enclenque
+quaint|pintoresco
+qualm|escrúpulo
+quandary|dilema
+quarantine|cuarentena
+quell|sofocar
+querulous|quejumbroso
+quibble|poner pegas
+quintessential|por excelencia
+quip|ocurrencia
+rampage|alboroto violento
+rampant|desenfrenado
+rankle|doler, escocer
+ransom|rescate
+rapport|buena relación
+rapture|éxtasis
+raucous|estridente
+ravage|asolar
+rebuff|rechazar
+rebuke|reprender
+rebut|refutar
+recapture|recuperar
+recline|reclinarse
+reclusive|solitario
+recourse|recurso
+recrimination|recriminación
+rectify|rectificar
+redoubtable|temible
+redress|reparación
+refute|refutar
+regal|regio
+rejoice|regocijarse
+relapse|recaída
+remiss|negligente
+remission|remisión
+remorse|remordimiento
+rendition|interpretación
+repatriate|repatriar
+repercussion|repercusión
+repetitive|repetitivo
+replenish|reponer
+replica|réplica
+repose|reposo
+reprieve|indulto, respiro
+reprimand|reprender
+reprisal|represalia
+reproach|reproche
+reprove|reprobar
+reptile|reptil
+repudiate|repudiar
+rescind|rescindir
+resolute|resuelto
+resonate|resonar
+respite|respiro
+resplendent|resplandeciente
+resurgence|resurgimiento
+retinue|séquito
+retract|retractarse, retirar
+retribution|castigo, venganza
+revoke|revocar
+rife|plagado
+rift|grieta, ruptura
+righteous|justo, recto
+rile|irritar
+rodent|roedor
+rout|derrota aplastante
+rudimentary|rudimentario
+ruminate|rumiar
+rupture|ruptura
+rustic|rústico
+sacrosanct|sacrosanto
+sallow|cetrino
+sanctimonious|santurrón
+sardonic|sardónico
+sate|saciar
+scathing|mordaz
+scoff|burlarse
+scourge|azote
+scrupulous|escrupuloso
+scrutinize|escudriñar
+scuttle|hundir, escabullirse
+secluded|apartado
+sedate|sosegado
+seethe|hervir de rabia
+sequel|secuela, continuación
+shirk|eludir
+shun|rehuir
+skirmish|escaramuza
+slander|calumnia
+slovenly|desaliñado
+sluggish|lento, aletargado
+smug|engreído
+snub|desairar
+sojourn|estancia
+solace|consuelo
+sombre|sombrío
+sporadic|esporádico
+spurious|espurio
+spurn|desdeñar
+squalid|sórdido
+squander|derrochar
+stagnant|estancado
+stagnate|estancarse
+staunch|firme, leal
+steadfast|firme
+stigma|estigma
+stoic|estoico
+strenuous|agotador
+strident|estridente
+strife|conflicto
+stupor|estupor
+suave|afable, cortés
+subjugate|subyugar
+substantiate|corroborar
+subterfuge|subterfugio
+succinct|sucinto
+sullen|hosco
+sully|mancillar
+sumptuous|suntuoso
+superfluous|superfluo
+supersede|reemplazar
+supplant|suplantar
+surly|arisco
+surmise|conjeturar
+surreptitious|subrepticio
+swagger|pavonearse
+tacit|tácito
+taciturn|taciturno
+tantamount|equivalente a
+tarnish|empañar
+tawdry|chabacano
+tedious|tedioso
+temperance|templanza
+tenacious|tenaz
+tenacity|tenacidad
+tenuous|tenue
+tepid|tibio
+terse|lacónico
+throng|multitud
+timorous|temeroso
+tirade|diatriba
+toil|trabajar duro
+torrid|tórrido
+tractable|dócil, manejable
+trajectory|trayectoria
+transgress|transgredir
+travesty|parodia, farsa
+trepidation|inquietud, temor
+trite|trillado
+truant|alumno que hace novillos
+truncate|truncar
+tumult|tumulto
+turbulent|turbulento
+tutelage|tutela
+unassuming|modesto
+uncanny|misterioso, asombroso
+underscore|subrayar
+unkempt|descuidado
+unruly|revoltoso
+unscathed|ileso
+untenable|insostenible
+unwieldy|difícil de manejar
+upshot|resultado
+urbane|cortés, refinado
+usurp|usurpar
+vagary|capricho
+valour|valor
+vanquish|vencer
+veer|virar
+vehement|vehemente
+veneer|barniz, apariencia
+venerable|venerable
+verve|brío
+vestige|vestigio
+vex|irritar
+vie|competir
+vindicate|reivindicar
+vindictive|vengativo
+virulent|virulento
+vociferous|vociferante
+waft|flotar
+wallow|revolcarse
+watershed|momento decisivo
+whet|abrir (el apetito)
+whim|capricho
+wily|astuto
+wistful|nostálgico
+wizened|arrugado
+wrangle|discutir
+wrath|ira
+wrest|arrebatar
+zenith|cénit, apogeo
+zest|entusiasmo

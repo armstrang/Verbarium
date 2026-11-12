@@ -1,261 +1,700 @@
-# Verbarium — French meanings for 1-squire.txt: word|meaning
 ability|capacité
-absence|absence
+abroad|à l’étranger
 accept|accepter
-accurate|exact, précis
+accident|accident
 achieve|atteindre, réaliser
+act|agir
+action|action
+active|actif
 activity|activité
-admit|admettre
+add|ajouter
+address|adresse
+adult|adulte
 advantage|avantage
+adventure|aventure
+advertise|faire de la publicité
 advice|conseil
 affect|affecter
-afford|avoir les moyens
-agreement|accord
-aim|but, objectif
+afraid|effrayé, qui a peur
+age|âge
+agree|être d’accord
+air|air
+airport|aéroport
+alive|vivant
 allow|permettre
+alone|seul
+alternative|alternative
+although|bien que
+amaze|stupéfier
+amazing|étonnant
+among|parmi
 amount|quantité, montant
+analyse|analyser
 ancient|ancien, antique
-announce|annoncer
+angry|en colère
+animal|animal
+answer|répondre
+apartment|appartement
+appear|apparaître, sembler
+appearance|apparence
 apply|postuler
+architect|architecte
+architecture|architecture
+area|zone, région
 argue|se disputer, soutenir
+argument|dispute, argument
+army|armée
 arrange|organiser
+arrangement|arrangement, disposition
+arrive|arriver
+artful|rusé
+article|article
+artist|artiste
+asleep|endormi
+athlete|athlète
+attack|attaquer
 attend|assister à
-attitude|attitude
+attention|attention
+attractive|attirant
+audience|public, auditoire
+author|auteur
+autumn|automne
 available|disponible
 average|moyen
 avoid|éviter
-aware|conscient
+award|prix, récompense
+awful|affreux
+backbone|colonne vertébrale, pilier
 background|milieu, contexte
-balance|équilibre
+bank|banque
+beach|plage
+bear|supporter
+beat|battre, frapper
 behave|se comporter
-belief|croyance
+behind|derrière
+believe|croire
+belong|appartenir
+below|en dessous de
 benefit|avantage, bienfait
+bill|facture, addition
+biology|biologie
+birth|naissance
+blank|vide, vierge
+block|bloquer
+blood|sang
+blow|souffler
+board|planche, tableau
+boil|bouillir
+bone|os
+bored|qui s’ennuie
+boring|ennuyeux
 borrow|emprunter
-brief|bref
+boss|patron, chef
+bottom|fond, bas
+brain|cerveau
+breadth|largeur, étendue
+break|casser
+bridge|pont
+bright|brillant, vif
+brilliant|brillant
+bring|apporter
+build|construire
+burn|brûler
+business|affaires, entreprise
+busy|occupé
+camera|appareil photo
+camp|camp
+capital|capitale
+care|se soucier
 career|carrière
+careful|prudent, soigneux
+carry|porter
+case|cas, affaire
+cash|argent liquide
+castle|château
+catch|attraper
 cause|cause
-challenge|défi
+celebrate|fêter, célébrer
+celebrity|célébrité
+cell|cellule
+century|siècle
+certain|certain
+chance|chance, occasion
+change|changer
 character|caractère, personnage
+charity|œuvre caritative
+chart|graphique
+cheap|bon marché
+check|vérifier
+chip|éclat, frite
 choice|choix
-claim|affirmer
+choose|choisir
+clear|clair
+clever|intelligent, malin
+climate|climat
+climb|grimper, escalader
+close|fermer
+clothes|vêtements
+cloud|nuage
+coach|entraîneur
+coast|côte
+code|code
+colleague|collègue
 collect|collecter, ramasser
+college|université, faculté
+colour|couleur
+column|colonne
+comedy|comédie
+comely|avenant
+comfortable|confortable
+comment|commentaire
 common|courant, commun
+communicate|communiquer
+community|communauté
+company|entreprise
 compare|comparer
+compete|rivaliser
+competition|concurrence, concours
 complain|se plaindre
 complete|achever, compléter
-concern|inquiétude
+computer|ordinateur
+concert|concert
+concerted|concerté
 condition|condition, état
-confident|confiant, sûr de soi
+conference|conférence
 connect|relier, connecter
 consider|envisager, considérer
 contain|contenir
+context|contexte
+continent|continent
 continue|continuer
 control|contrôler
-convince|convaincre
+conversation|conversation
+cook|cuisiner
+cool|frais
+copy|copier
+corner|coin
+cornerstone|pierre angulaire
 correct|correct
+cost|coûter
+count|compter
+country|pays
+couple|couple
+course|cours
+cover|couvrir
+cower|se recroqueviller
+crazy|fou
+cream|crème
 create|créer
+criminal|criminel
+cross|traverser
 crowd|foule
+cry|pleurer
 culture|culture
+cup|tasse
 customer|client
-damage|dégâts, dommage
+cut|couper
+cutback|réduction
+cycle|faire du vélo
+daily|quotidien
+danger|danger
+dangerous|dangereux
+dark|sombre
+data|données
+date|date
+dead|mort
 deal|s’occuper de
+dear|cher
+dearth|pénurie
+death|mort
 decide|décider
-decrease|diminuer
+decision|décision
+deep|profond
 degree|diplôme
-deliver|livrer
-demand|demande
+delicious|délicieux
+department|service, département
 depend|dépendre
+dependable|fiable
 describe|décrire
+desert|désert
 design|concevoir
+desk|bureau
 destroy|détruire
 detail|détail
+detective|détective
 develop|développer
+device|appareil, dispositif
+dialogue|dialogue
+dictionary|dictionnaire
+die|mourir
 difference|différence
-difficulty|difficulté
+different|différent
+difficult|difficile
+digital|numérique
+dinner|dîner
+direct|direct
+direction|direction
+dirty|sale
+disagree|ne pas être d’accord
+disappear|disparaître
+disaster|catastrophe
 discover|découvrir
 discuss|discuter de
 disease|maladie
+dish|plat
 distance|distance
-divide|diviser
-doubt|doute
+document|document
+downfall|chute
+downstairs|en bas
+downturn|ralentissement
+drama|drame
+draw|dessiner
+dream|rêve
+dress|s’habiller
+drink|boire
+drive|conduire
+drop|laisser tomber, baisser
+drug|médicament, drogue
+dry|sec
+during|pendant
+early|tôt, précoce
+earmark|affecter
 earn|gagner (de l’argent)
-economy|économie
+earth|terre
+east|est
+easy|facile
 education|éducation
 effect|effet
-effort|effort
+electric|électrique
+electricity|électricité
+electronic|électronique
+else|d’autre
 employ|employer
-encourage|encourager
+employee|employé
+employer|employeur
+empty|vide
+end|finir, terminer
 energy|énergie
+engine|moteur
+engineer|ingénieur
+enjoy|apprécier, profiter
+enormous|énorme
+enough|assez
+enter|entrer
 environment|environnement
-equal|égal
-escape|s’échapper
+equipment|équipement
+error|erreur
+especially|surtout
+essay|essai, dissertation
+even|même
+evening|soir
 event|événement
+ever|jamais (déjà)
+everywhere|partout
 evidence|preuves
 exact|exact
-examine|examiner
+exacting|exigeant
+exam|examen
 example|exemple
-exchange|échanger
+excellent|excellent
+except|sauf
+excited|enthousiaste
+exercise|exercice
+exist|exister
 expect|s’attendre à
+expensive|cher
 experience|expérience
 experiment|expérience
+expert|expert
 explain|expliquer
 express|exprimer
+expression|expression
+extra|supplémentaire
+extreme|extrême
+fact|fait
+factor|facteur
+factory|usine
 fail|échouer
-familiar|familier
+fair|juste
+fallout|retombées
+false|faux
+famous|célèbre
+far|loin
+farm|ferme
+fashion|mode
+fat|graisse
+favourite|préféré
+fear|peur
 feature|caractéristique
+feed|nourrir
+feel|sentir, ressentir
+female|féminin, femelle
+festival|festival
+fever|fièvre
+few|peu de
+fiction|fiction
+field|champ, terrain
+fight|se battre, lutter
+figure|chiffre, silhouette
+fill|remplir
 final|final
-flood|inondation
+finally|enfin
+find|trouver
+fine|bien, fin
+finger|doigt
+finish|finir
+fire|feu, incendie
+fit|aller, convenir
+fix|réparer
+flat|plat
+flight|vol
+floor|sol
+fly|voler
 focus|se concentrer
+follow|suivre
 foreign|étranger
 forest|forêt
-fuel|carburant
-function|fonction
+forget|oublier
+fork|fourchette
+form|formulaire, forme
+formal|formel, officiel
+forward|en avant
+free|libre, gratuit
+fresh|frais
+friendly|aimable
+front|devant, avant
+fruit|fruit
+full|plein
+fun|amusement
+funny|drôle
+furniture|meubles
+further|plus loin
 future|avenir
-gain|gagner, obtenir
+gallery|galerie
+game|jeu
+gap|trou, écart
+garden|jardin
+gate|portail
+gateway|porte d’entrée
 general|général
-global|mondial
+geography|géographie
+gift|cadeau
+glass|verre
 goal|objectif
 government|gouvernement
-growth|croissance
+grass|herbe
+great|super, grand
+greet|saluer
+ground|sol
+grounds|motifs
+group|groupe
+grow|grandir, cultiver
 guess|deviner
+guest|invité
+guide|guide
 habit|habitude
-harm|nuire à
+half|moitié
+hall|salle
+happen|arriver, se produire
+hard|dur, difficile
+hardship|épreuve, privation
+hardy|robuste
+hate|détester
+headache|mal de tête
+heady|grisant
 health|santé
+healthy|en bonne santé
+heart|cœur
+heat|chaleur
+heavy|lourd
+height|hauteur, taille
+helpful|utile, serviable
+hero|héros
+hide|cacher, se cacher
+hill|colline
+history|histoire
+hit|frapper
+hobby|passe-temps
+hold|tenir
+hole|trou
+holiday|vacances
+hope|espérer
+hospital|hôpital
+huge|énorme
+human|humain
+hungry|affamé, qui a faim
+hurt|blesser, faire mal
+ice|glace
+idea|idée
+ideal|idéal
+identify|identifier
+ill|malade
+illness|maladie
+image|image
+imagine|imaginer
+immediately|immédiatement
+important|important
+impossible|impossible
 improve|améliorer
 include|inclure
-income|revenu
 increase|augmenter
+incredible|incroyable
+independent|indépendant
+individual|individu
 industry|industrie
-influence|influence
-inform|informer
+information|information
 injury|blessure
+insect|insecte
+inside|à l’intérieur de
 instead|à la place
+instruction|instruction
+instrument|instrument
+intelligent|intelligent
 interest|intérêt
+interesting|intéressant
+international|international
+interview|entretien
 introduce|présenter
 invent|inventer
+invention|invention
+invite|inviter
 involve|impliquer
-issue|question, problème
+island|île
+item|article, élément
+jam|embouteillage, confiture
+jewellery|bijoux
+job|travail, emploi
+join|rejoindre
+joke|blague
+journalist|journaliste
 journey|voyage, trajet
+juice|jus
+jump|sauter
+keep|garder
+key|clé
+kill|tuer
+kind|gentil
+kitchen|cuisine
+knee|genou
+knife|couteau
+knock|frapper (à la porte)
 knowledge|connaissance
+lake|lac
+lamp|lampe
+land|terre
 language|langue
+large|grand
+last|durer
+late|en retard
+laugh|rire
 law|loi
-limit|limite
+lawyer|avocat
+lazy|paresseux
+lead|mener, diriger
+leader|chef, dirigeant
+learn|apprendre
+least|le moins
+leave|partir, quitter
+lecture|cours magistral, conférence
+lend|prêter
+lesson|leçon
+letter|lettre
+level|niveau
+library|bibliothèque
+lie|s’allonger, mentir
+lifestyle|mode de vie
+lift|soulever
+light|lumière
+likely|probable
+line|ligne, file
+link|lien
+list|liste
+listless|apathique
 local|local
+lock|fermer à clé
+look|regarder, sembler
+lose|perdre
+loud|fort, bruyant
+lovely|charmant, ravissant
+low|bas
+luck|chance
+lunch|déjeuner
+machine|machine
+magazine|magazine
+mail|courrier
+main|principal
+major|majeur, principal
+male|masculin, mâle
 manage|gérer, réussir à
+manner|manière
+map|carte
+mark|marque, note
+market|marché
+marry|se marier, épouser
 material|matériau
-measure|mesurer
+matter|compter, importer
+meal|repas
+mean|signifier, vouloir dire
+meaning|sens
+meat|viande
+media|médias
+medicine|médicament, médecine
+meet|rencontrer
+meeting|réunion
 member|membre
 memory|mémoire, souvenir
+mention|mentionner
+message|message
+metal|métal
 method|méthode
+middle|milieu
+milestone|étape importante
+mind|esprit
+mirror|miroir
+miss|manquer, rater
+mistake|erreur
+mobile|mobile
+model|modèle
 modern|moderne
+moment|moment
+money|argent
+month|mois
+moon|lune
+mostly|surtout, principalement
+mountain|montagne
+mouth|bouche
+move|bouger, déménager
+movement|mouvement
+museum|musée
+music|musique
+narrow|étroit
 natural|naturel
+nature|nature
+near|près de
+nearly|presque
 necessary|nécessaire
+neck|cou
+need|avoir besoin de
+needy|nécessiteux
+negative|négatif
+neighbour|voisin
+neighbouring|voisin
+neither|non plus, aucun des deux
+nervous|nerveux
+network|réseau
+news|nouvelles, informations
+newspaper|journal
+nice|agréable, sympa
+noise|bruit
+noisy|bruyant
+none|aucun
+normal|normal
+north|nord
+nose|nez
+note|note
+nothing|rien
 notice|remarquer
-obvious|évident
-occur|se produire
+novel|roman
+number|numéro, nombre
+nurse|infirmier
+object|objet
+ocean|océan
 offer|offrir, proposer
+office|bureau
+officer|agent, officier
+often|souvent
+oil|huile, pétrole
+once|une fois, autrefois
+onion|oignon
+only|seulement
+open|ouvrir
 opinion|opinion, avis
 opportunity|occasion
+opposite|opposé, d’en face
+option|option
+orange|orange
+order|commander, ordonner
 ordinary|ordinaire
 organize|organiser
+original|original
+outside|dehors, à l’extérieur de
+outward|extérieur
+oven|four
+overseas|à l’étranger
+own|posséder
+owner|propriétaire
+pack|emballer, faire ses bagages
+page|page
+pain|douleur
+paint|peindre
+pair|paire
+palace|palais
+paper|papier
+paragraph|paragraphe
+pardon|pardonner
+parent|parent
+park|garer
+part|partie
 particular|particulier
+partner|partenaire
+party|fête, parti
+pass|réussir, passer
+passenger|passager
+passport|passeport
+past|passé
 patient|patient
+pattern|motif, schéma
+pay|payer
+peace|paix
+perfect|parfait
 perform|effectuer, jouer
+perhaps|peut-être
 period|période
-permit|permettre
+perish|périr
+person|personne
+personal|personnel
+personality|personnalité
+pet|animal de compagnie
+petrol|essence
+photograph|photographie
+phrase|expression
+physical|physique
+pick|choisir, cueillir
+picture|image, tableau
+piece|morceau
+pilot|pilote
+place|endroit, lieu
+plan|prévoir, planifier
+plant|plante
+plastic|plastique
+plate|assiette
+platform|quai
+pleased|content, ravi
+pocket|poche
+point|point
+police|police
 polite|poli
 pollution|pollution
+poor|pauvre, mauvais
 popular|populaire
 population|population
+position|position
 positive|positif
+possession|possession
 possible|possible
+post|poster, envoyer
+power|pouvoir, puissance, énergie
 practice|pratique, entraînement
+predict|prédire
 prefer|préférer
+preferable|préférable
 prepare|préparer
+present|cadeau, présent
+presentable|présentable
+president|président
+pretty|joli
 prevent|empêcher, prévenir
-previous|précédent
-private|privé
-problem|problème
-process|processus
-produce|produire
-protect|protéger
-provide|fournir
-public|public
-purpose|but
-quality|qualité
-quantity|quantité
-reason|raison
-receive|recevoir
-recent|récent
-recognize|reconnaître
-reduce|réduire
-refuse|refuser
-region|région
-relationship|relation
-remain|rester
-remove|enlever, supprimer
-repair|réparer
-replace|remplacer
-reply|répondre
-report|rapport
-require|exiger, nécessiter
-research|recherche
-respect|respect
-responsible|responsable
-result|résultat
-reveal|révéler
-reward|récompense
-risk|risque
-role|rôle
-rule|règle
-safety|sécurité
-salary|salaire
-search|chercher
-select|sélectionner
-separate|séparé
-serious|sérieux, grave
-service|service
-share|partager
-similar|semblable
-simple|simple
-situation|situation
-skill|compétence
-society|société
-solve|résoudre
-source|source
-special|spécial
-spread|se répandre
-standard|norme, niveau
-steady|stable, régulier
-structure|structure
-struggle|lutter, peiner
-succeed|réussir
-suggest|suggérer, indiquer
-supply|approvisionnement, réserve
-support|soutenir
-surface|surface
-survive|survivre
-system|système
-task|tâche
-technology|technologie
-temperature|température
-tend|avoir tendance à
-theory|théorie
-threat|menace
-tradition|tradition
-transport|transport
-trust|faire confiance à
-typical|typique
-useful|utile
-value|valeur
-variety|variété
-various|divers
-view|avis, vue
-visible|visible
-volunteer|bénévole
-waste|gaspiller
-wealth|richesse
-weigh|peser
-wonder|se demander
-worth|qui vaut, digne de
-youth|jeunesse
+price|prix
+print|imprimer
+prison|prison
+prize|prix
