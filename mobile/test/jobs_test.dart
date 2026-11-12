@@ -41,8 +41,9 @@ void main() {
     for (final j in Jobs.all) {
       expect(j.hint, isNotEmpty);
       expect(j.id == 'peasant' || j.perk.kind != 'none', isTrue, reason: j.id);
-      if (j.id != 'peasant')
+      if (j.id != 'peasant') {
         expect(j.perk.text, isNot(contains('Belum ada')), reason: '${j.id} has a perk the app can describe');
+      }
     }
   });
 
