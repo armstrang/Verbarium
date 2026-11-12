@@ -33,12 +33,13 @@ void main() {
     expect(cards.where((c) => c.quiz == Quiz.cloze).length, 15);
     expect(cards.every((c) => c.w.tier == 1), isTrue);
     for (var i = 0; i < cards.length; i++) {
-      if (cards[i].quiz == Quiz.cloze)
+      if (cards[i].quiz == Quiz.cloze) {
         expect(
           cards.sublist(0, i).any((c) => c.w.id == cards[i].w.id),
           isTrue,
           reason: 'the gap follows the introduction',
         );
+      }
     }
   });
 

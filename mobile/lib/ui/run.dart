@@ -39,7 +39,7 @@ Route<void> runRoute(Widget page) => PageRouteBuilder<void>(
   },
 );
 
-class RunScreen extends StatefulWidget {
+class RunScreen extends StatelessWidget {
   /// for tests: what the card on screen expects (the word, the right option, or the sentence)
   @visibleForTesting
   static String probe = '';
@@ -53,7 +53,20 @@ class RunScreen extends StatefulWidget {
   const RunScreen({super.key, required this.kind, this.tier = 0, this.extraFresh = 0});
 
   @override
-  State<RunScreen> createState() => _RunState();
+  Widget build(BuildContext context) {
+    final look = Look.of(context);
+    // a coronation is fought by night, whatever the page is by day
+    if (kind != RunKind.trial || look.pal.dark) return _Run(this);
+    return Look(pal: Pal.night, rank: look.rank, calm: look.calm, stamp: look.stamp, child: _Run(this));
+  }
+}
+
+class _Run extends StatefulWidget {
+  final RunScreen s;
+  const _Run(this.s);
+
+  @override
+  State<_Run> createState() => _RunState();
 }
 
 class _Item {
@@ -70,7 +83,7 @@ class _Item {
 /// right: correct, a short pause · miss: wrong, the answer is shown for a moment
 enum _Phase { ask, near, shown, right, miss }
 
-class _RunState extends State<RunScreen> with TickerProviderStateMixin {
+class _RunState extends State<_Run> with TickerProviderStateMixin {
   final _input = TextEditingController();
   final _focus = FocusNode();
   late final AnimationController _shake = AnimationController(vsync: this, duration: const Duration(milliseconds: 320));
@@ -79,6 +92,14 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     vsync: this,
     duration: const Duration(seconds: Engine.trialSeconds),
   );
+
+  /// the air of the arena (embers, the boss's fire) and the flash of a blow
+  late final AnimationController _air = AnimationController(vsync: this, duration: const Duration(milliseconds: 3200));
+  late final AnimationController _flash = AnimationController(vsync: this, duration: const Duration(milliseconds: 360));
+  bool _flashBad = false;
+
+  /// one mark per word of a fight: true right, false missed
+  final List<bool> _marks = [];
   final _watch = Stopwatch();
 
   final List<_Item> _q = [];
@@ -114,7 +135,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
 
   Engine get _e => App.I.engine;
   Game get _g => App.I.game;
-  RunKind get _kind => widget.kind;
+  RunKind get _kind => widget.s.kind;
   bool get _test => _kind != RunKind.learn;
   bool get _fight => _kind == RunKind.trial || _kind == RunKind.sub;
   bool get _timed => _fight || _kind == RunKind.defence;
@@ -137,7 +158,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     _g.combo = 0;
     switch (_kind) {
       case RunKind.learn:
-        final cards = _e.sitting(extraFresh: widget.extraFresh);
+        final cards = _e.sitting(extraFresh: widget.s.extraFresh);
         final collocs = App.I.deck.collocs.where((c) => c.tier <= _e.learning).toList()..shuffle(Random(_e.now()));
         var k = 0;
         for (var n = 0; n < cards.length; n++) {
@@ -147,14 +168,14 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
       case RunKind.placement:
         _q.addAll([for (final w in _e.placementWords(1)) _Item(w, Quiz.cloze, false)]);
       case RunKind.trial:
-        _q.addAll([for (final w in _e.trialWords(widget.tier, Engine.trialSize)) _Item(w, Quiz.cloze, false)]);
+        _q.addAll([for (final w in _e.trialWords(widget.s.tier, Engine.trialSize)) _Item(w, Quiz.cloze, false)]);
         _startFight(Engine.trialPass, Engine.trialSize - Engine.trialPass + 1);
       case RunKind.sub:
         _q.addAll([for (final w in _e.subWords()) _Item(w, Quiz.cloze, false)]);
         _startFight(Engine.subPass, Engine.subSize - Engine.subPass + 1 + _g.perk('subHp'));
         _clock.duration = Duration(seconds: _seconds);
       case RunKind.defence:
-        _q.addAll([for (final w in _e.trialWords(widget.tier, Engine.defenceSize)) _Item(w, Quiz.cloze, false)]);
+        _q.addAll([for (final w in _e.trialWords(widget.s.tier, Engine.defenceSize)) _Item(w, Quiz.cloze, false)]);
     }
     if (_q.isEmpty) _finished = true;
     _clock.addStatusListener((s) {
@@ -168,6 +189,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     _enemyHp = _enemyMax = enemyHp;
     _heroHp = _heroMax = heroHp;
     App.I.setBattle(true);
+    _air.repeat();
   }
 
   /// prepares the card at [_i]: options or chips, the clock, the stopwatch
@@ -216,6 +238,8 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     _shake.dispose();
     _write.dispose();
     _clock.dispose();
+    _air.dispose();
+    _flash.dispose();
     super.dispose();
   }
 
@@ -301,6 +325,9 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     if (_fight) {
       final calmBefore = !_rage;
       _enemyHp = max(0, _enemyHp - 1);
+      _marks.add(true);
+      _flashBad = false;
+      _flash.forward(from: 0);
       _blow(HeroPose.attack, crit ? tr('KRITIS!', 'CRITICAL!', '¡CRÍTICO!', 'CRITIQUE !') : '−1', true);
       if (calmBefore && _rage) {
         _clock.duration = Duration(seconds: _seconds);
@@ -326,6 +353,9 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     if (_item.fresh) _freshSeen++;
     if (_fight) {
       _heroHp = max(0, _heroHp - 1);
+      _marks.add(false);
+      _flashBad = true;
+      _flash.forward(from: 0);
       _blow(HeroPose.hurt, '−1', false);
       App.I.sfx('hurt');
     } else {
@@ -418,12 +448,12 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
         _passed = _tiersPassed > 0;
         App.I.sfx(_passed ? 'rise' : 'seal', 0.9);
       case RunKind.trial:
-        _passed = _enemyHp <= 0 && _e.finishTrial(widget.tier, Engine.trialPass, Engine.trialSize);
-        if (!_passed) _e.finishTrial(widget.tier, min(_right, Engine.trialPass - 1), Engine.trialSize);
+        _passed = _enemyHp <= 0 && _e.finishTrial(widget.s.tier, Engine.trialPass, Engine.trialSize);
+        if (!_passed) _e.finishTrial(widget.s.tier, min(_right, Engine.trialPass - 1), Engine.trialSize);
         if (_passed) {
           _news.insertAll(0, _g.onVictory(_rankBefore, _stageBefore, true, _wrongN == 0));
           // the build of the title just won decides the job
-          final (job, lines) = _g.onPromotion(widget.tier, _wrongN == 0);
+          final (job, lines) = _g.onPromotion(widget.s.tier, _wrongN == 0);
           _newJob = job;
           _news.insertAll(0, lines);
         }
@@ -440,7 +470,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     App.I.changed();
     if (_kind == RunKind.trial && _passed) {
       Navigator.of(context).pushReplacement(
-        runRoute(Coronation(rank: widget.tier, right: _right, total: _done, news: List.of(_news), job: _newJob)),
+        runRoute(Coronation(rank: widget.s.tier, right: _right, total: _done, news: List.of(_news), job: _newJob)),
       );
       return;
     }
@@ -492,7 +522,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
     );
     if (!leave || !mounted) return;
     if (_kind == RunKind.trial && _done >= 5) {
-      _e.finishTrial(widget.tier, min(_right, Engine.trialPass - 1), Engine.trialSize);
+      _e.finishTrial(widget.s.tier, min(_right, Engine.trialPass - 1), Engine.trialSize);
     }
     if (_kind == RunKind.sub && _done >= 5) _e.finishSub(min(_right, Engine.subPass - 1), Engine.subSize);
     if (_kind == RunKind.placement) _e.finishPlacement(_tiersPassed, _right, max(_done, 1));
@@ -534,9 +564,7 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
               label: tr('Tutup', 'Close', 'Cerrar', 'Fermer'),
               child: SizedBox(width: 48, height: 48, child: Icon(Icons.close, color: pal.ink, size: 24)),
             ),
-            Expanded(
-              child: _fight ? Text(_enemy?.name ?? '', style: T.display(21, pal.ink)) : Bar(_done / total, height: 3),
-            ),
+            Expanded(child: _fight ? _Tally(_marks, _q.length, _i) : Bar(_done / total, height: 3)),
             const SizedBox(width: 12),
             if (combo >= 3)
               Padding(
@@ -558,21 +586,10 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
           ],
         ),
         if (_fight) _arena(context),
-        if (_timed)
+        if (_timed && !_fight)
           Padding(
-            padding: const EdgeInsets.fromLTRB(8, 2, 8, 0),
-            child: AnimatedBuilder(
-              animation: _clock,
-              builder: (context, _) => Semantics(
-                label: tr(
-                  'Sisa waktu ${(_seconds * (1 - _clock.value)).ceil()} detik',
-                  '${(_seconds * (1 - _clock.value)).ceil()} seconds left',
-                  'Quedan ${(_seconds * (1 - _clock.value)).ceil()} segundos',
-                  'Encore ${(_seconds * (1 - _clock.value)).ceil()} secondes',
-                ),
-                child: Bar(1 - _clock.value, height: 2, color: pal.ink, animate: false),
-              ),
-            ),
+            padding: const EdgeInsets.fromLTRB(8, 4, 8, 0),
+            child: Align(alignment: Alignment.centerRight, child: _ring(context)),
           ),
         Expanded(
           child: SingleChildScrollView(
@@ -647,111 +664,190 @@ class _RunState extends State<RunScreen> with TickerProviderStateMixin {
 
   // -- the arena of a fight
 
+  /// the time left for this word, as a ring that empties; red in its last seconds
+  Widget _ring(BuildContext context) {
+    final pal = Look.of(context).pal;
+    return AnimatedBuilder(
+      animation: _clock,
+      builder: (context, _) {
+        final left = (_seconds * (1 - _clock.value)).ceil();
+        return Semantics(
+          label: tr('Sisa waktu $left detik', '$left seconds left', 'Quedan $left segundos', 'Encore $left secondes'),
+          child: ExcludeSemantics(
+            child: SizedBox(
+              width: 42,
+              height: 42,
+              child: CustomPaint(
+                painter: _RingPainter(1 - _clock.value, left <= 3 ? pal.bad : pal.ink, pal.line, pal.field),
+                child: Center(
+                  child: Text('$left', style: T.body(16, left <= 3 ? pal.bad : pal.ink, w: FontWeight.w700)),
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   Widget _arena(BuildContext context) {
     final look = Look.of(context);
     final pal = look.pal;
     final g = _g;
     final en = _enemy!;
     final big = en.boss;
-    return SizedBox(
-      height: big ? 196 : 162,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          if (big)
-            // the boss stands in its own fire
-            Positioned(
-              right: -30,
-              bottom: 0,
-              width: 230,
-              height: 190,
-              child: IgnorePointer(
-                child: DecoratedBox(
-                  decoration: BoxDecoration(
-                    gradient: RadialGradient(
-                      center: const Alignment(0, 0.3),
-                      radius: 0.5,
-                      colors: [
-                        pal.bad.withValues(alpha: _rage ? 0.42 : 0.24),
-                        pal.bad.withValues(alpha: 0),
-                      ],
-                    ),
-                  ),
-                ),
+    final typing = MediaQuery.viewInsetsOf(context).bottom > 0;
+    final height = big ? (typing ? 236.0 : 300.0) : (typing ? 176.0 : 214.0);
+    final rage = Text(
+      _rage
+          ? tr(
+              'MURKA · −${Engine.rageCut} detik',
+              'ENRAGED · −${Engine.rageCut} s',
+              'FURIA · −${Engine.rageCut} s',
+              'FUREUR · −${Engine.rageCut} s',
+            )
+          : tr(
+              'Di bawah separuh: murka · −${Engine.rageCut} detik',
+              'Below half: enraged · −${Engine.rageCut} s',
+              'Por debajo de la mitad: furia · −${Engine.rageCut} s',
+              'Sous la moitié : fureur · −${Engine.rageCut} s',
+            ),
+      textAlign: TextAlign.center,
+      style: _rage ? T.label(pal.bad) : T.body(12.5, pal.muted),
+    );
+    final hero = _Pips('${tr('Kamu', 'You', 'Tú', 'Toi')} · ${g.job.name}', _heroHp, _heroMax, pal.good);
+    final stage = LayoutBuilder(
+      builder: (context, box) {
+        final h = box.maxHeight;
+        final foe = big ? min(h - 6, 176.0) : min(h - 10, 104.0);
+        return Stack(
+          clipBehavior: Clip.none,
+          children: [
+            AnimatedPositioned(
+              duration: const Duration(milliseconds: 140),
+              curve: Curves.easeOut,
+              left: _pose == HeroPose.attack ? 64 : (_pose == HeroPose.hurt ? 4 : 18),
+              bottom: 6,
+              child: HeroSprite(
+                garb: g.job.garb,
+                tier: g.job.tier,
+                weapon: g.tone('weapon'),
+                shield: g.tone('shield'),
+                cloak: g.tone('cloak'),
+                pose: _pose,
+                size: min(h - 10, 86.0),
               ),
             ),
-          Positioned(left: 0, right: 0, bottom: 14, child: Container(height: 1.5, color: pal.ink)),
-          Positioned(left: 0, top: 0, child: _Hp(tr('Kamu', 'You', 'Tú', 'Toi'), _heroHp, _heroMax, pal.good)),
-          Positioned(right: 0, top: 0, child: _Hp(en.name, _enemyHp, _enemyMax, pal.bad, right: true)),
-          if (_rage)
-            Positioned(
-              right: 0,
-              top: 40,
-              child: Text(
-                tr(
-                  'MURKA · −${Engine.rageCut} detik',
-                  'ENRAGED · −${Engine.rageCut} s',
-                  'FURIA · −${Engine.rageCut} s',
-                  'FUREUR · −${Engine.rageCut} s',
-                ),
-                style: T.label(pal.bad),
-              ),
+            AnimatedPositioned(
+              duration: const Duration(milliseconds: 140),
+              right: _pose == HeroPose.hurt ? 40 : (big ? 0 : 14),
+              bottom: 4,
+              child: EnemySprite(sprite: en.sprite, tone: en.tone, size: foe, struck: _struck, beaten: _enemyHp <= 0),
             ),
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 140),
-            curve: Curves.easeOut,
-            left: _pose == HeroPose.attack ? 56 : (_pose == HeroPose.hurt ? 4 : 18),
-            bottom: 15,
-            child: HeroSprite(
-              garb: g.job.garb,
-              tier: g.job.tier,
-              weapon: g.tone('weapon'),
-              shield: g.tone('shield'),
-              cloak: g.tone('cloak'),
-              pose: _pose,
-              size: 80,
-            ),
-          ),
-          AnimatedPositioned(
-            duration: const Duration(milliseconds: 140),
-            right: _pose == HeroPose.hurt ? 44 : 18,
-            bottom: 15,
-            child: EnemySprite(
-              sprite: en.sprite,
-              tone: en.tone,
-              size: big ? 138 : 96,
-              struck: _struck,
-              beaten: _enemyHp <= 0,
-            ),
-          ),
-          if (_float.isNotEmpty)
-            Positioned.fill(
-              child: IgnorePointer(
-                child: TweenAnimationBuilder<double>(
-                  key: ValueKey(_floatN),
-                  tween: Tween(begin: 0, end: 1),
-                  duration: const Duration(milliseconds: 800),
-                  builder: (context, t, _) => Align(
-                    alignment: Alignment(
-                      _struck || _enemyHp <= 0 && _pose != HeroPose.hurt ? 0.55 : -0.6,
-                      0.1 - t * 0.9,
-                    ),
-                    child: Opacity(
-                      opacity: (1 - t * t).clamp(0.0, 1.0),
-                      child: Text(
-                        _float,
-                        style: T.body(
-                          _float.length > 3 ? 20 : 24,
-                          _pose == HeroPose.hurt ? pal.bad : pal.ink,
-                          w: FontWeight.w700,
+            if (_float.isNotEmpty)
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: TweenAnimationBuilder<double>(
+                    key: ValueKey(_floatN),
+                    tween: Tween(begin: 0, end: 1),
+                    duration: const Duration(milliseconds: 800),
+                    builder: (context, t, _) => Align(
+                      alignment: Alignment(
+                        _struck || _enemyHp <= 0 && _pose != HeroPose.hurt ? 0.5 : -0.6,
+                        0.1 - t * 0.9,
+                      ),
+                      child: Opacity(
+                        opacity: (1 - t * t).clamp(0.0, 1.0),
+                        child: Transform.scale(
+                          scale: look.calm ? 1 : 1 + 0.35 * (1 - t) * (1 - t),
+                          child: Text(
+                            _float,
+                            style: _float.length > 3
+                                ? T.display(26, _pose == HeroPose.hurt ? pal.bad : pal.gold)
+                                : T.body(28, _pose == HeroPose.hurt ? pal.bad : pal.gold, w: FontWeight.w700),
+                          ),
                         ),
                       ),
                     ),
                   ),
                 ),
               ),
-            ),
-        ],
+            Positioned(left: 0, right: 0, bottom: 2, child: Center(child: _ring(context))),
+          ],
+        );
+      },
+    );
+    return AnimatedBuilder(
+      animation: _shake,
+      builder: (context, child) {
+        final t = _shake.value;
+        final dx = look.calm || !_flashBad ? 0.0 : sin(t * pi * 6) * 6 * (1 - t);
+        return Transform.translate(offset: Offset(dx, 0), child: child);
+      },
+      child: AnimatedContainer(
+        duration: look.calm ? Duration.zero : Dur.enter,
+        curve: Curves.easeOutCubic,
+        height: height,
+        margin: const EdgeInsets.only(top: 4),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: RepaintBoundary(child: CustomPaint(painter: _Sky(look.calm ? null : _air, pal, big, _rage))),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12, 10, 12, 8),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    if (big) ...[
+                      _BossCard(
+                        label: tr(
+                          'Boss · penobatan ${rankNames[widget.s.tier]}',
+                          'Boss · ${rankNames[widget.s.tier]} coronation',
+                          'Jefe · coronación de ${rankNames[widget.s.tier]}',
+                          'Boss · couronnement de ${rankNames[widget.s.tier]}',
+                        ),
+                        name: en.name,
+                        compact: typing,
+                      ),
+                      const SizedBox(height: 6),
+                      _BossBar(_enemyHp, _enemyMax, en.name),
+                      const SizedBox(height: 3),
+                      rage,
+                      const SizedBox(height: 6),
+                      Align(alignment: Alignment.centerLeft, child: hero),
+                    ] else
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [hero, const Spacer(), _Hp(en.name, _enemyHp, _enemyMax, pal.bad, right: true)],
+                      ),
+                    Expanded(child: stage),
+                  ],
+                ),
+              ),
+              // the flash of a blow: gold when you strike, red when you are struck
+              if (!look.calm)
+                Positioned.fill(
+                  child: IgnorePointer(
+                    child: AnimatedBuilder(
+                      animation: _flash,
+                      builder: (context, _) {
+                        final t = _flash.value;
+                        if (t == 0 || t == 1) return const SizedBox();
+                        return ColoredBox(
+                          color: (_flashBad ? const Color(0xFFB8402E) : const Color(0xFFD9B861)).withValues(
+                            alpha: 0.32 * (1 - t) * (1 - t),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -1593,4 +1689,356 @@ class _LetterKey extends StatelessWidget {
       ),
     );
   }
+}
+
+/// the time left, as a ring
+class _RingPainter extends CustomPainter {
+  final double left;
+  final Color color, track, fill;
+  _RingPainter(this.left, this.color, this.track, this.fill);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final c = size.center(Offset.zero);
+    final r = size.shortestSide / 2 - 2.5;
+    canvas.drawCircle(c, r, Paint()..color = fill);
+    canvas.drawCircle(
+      c,
+      r,
+      Paint()
+        ..color = track
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3,
+    );
+    canvas.drawArc(
+      Rect.fromCircle(center: c, radius: r),
+      -pi / 2,
+      2 * pi * left.clamp(0.0, 1.0),
+      false,
+      Paint()
+        ..color = color
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3.5
+        ..strokeCap = StrokeCap.round,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_RingPainter old) => old.left != left || old.color != color || old.fill != fill;
+}
+
+/// the land behind a fight: a road under a pale sky, or for a boss a dark ridge, its fire and the embers rising
+class _Sky extends CustomPainter {
+  final Animation<double>? air;
+  final Pal pal;
+  final bool boss, rage;
+  _Sky(this.air, this.pal, this.boss, this.rage) : super(repaint: air);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final w = size.width, h = size.height;
+    final t = air?.value ?? 0.35;
+    if (!boss) {
+      final sky = Color.lerp(pal.deep, const Color(0xFF9DB0B8), pal.dark ? 0.12 : 0.32)!;
+      final ground = Color.lerp(pal.deep, const Color(0xFFB9AE94), pal.dark ? 0.16 : 0.55)!;
+      canvas.drawRect(Offset.zero & size, Paint()..color = sky);
+      final trees = Paint()..color = pal.line.withValues(alpha: pal.dark ? 0.9 : 0.75);
+      for (final x in [0.04, 0.12, 0.84, 0.93]) {
+        final cx = x * w, base = h * 0.74;
+        canvas.drawPath(
+          Path()
+            ..moveTo(cx - 13, base)
+            ..lineTo(cx, base - 34 - (x * 37 % 1) * 12)
+            ..lineTo(cx + 13, base)
+            ..close(),
+          trees,
+        );
+      }
+      canvas.drawRect(Rect.fromLTWH(0, h * 0.74, w, h * 0.26), Paint()..color = ground);
+      final dash = Paint()
+        ..color = pal.muted.withValues(alpha: 0.35)
+        ..strokeWidth = 2;
+      for (var x = 6.0; x < w; x += 14) {
+        canvas.drawLine(Offset(x, h * 0.86), Offset(x + 6, h * 0.86), dash);
+      }
+      return;
+    }
+    // the boss's hall: night, a ridge of broken stone, and its own fire behind it
+    canvas.drawRect(
+      Offset.zero & size,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [Color(0xFF100D0C), Color(0xFF1E1915)],
+        ).createShader(Offset.zero & size),
+    );
+    final pulse = 0.78 + 0.22 * sin(t * 2 * pi);
+    final fire = Offset(w * 0.72, h * 0.72);
+    canvas.drawCircle(
+      fire,
+      w * 0.62,
+      Paint()
+        ..shader = RadialGradient(
+          colors: [
+            const Color(0xFF8E1B16).withValues(alpha: (rage ? 0.9 : 0.62) * pulse),
+            const Color(0xFF8E1B16).withValues(alpha: 0),
+          ],
+        ).createShader(Rect.fromCircle(center: fire, radius: w * 0.62)),
+    );
+    final ridge = Path()..moveTo(0, h * 0.82);
+    const peaks = [0.62, 0.74, 0.52, 0.7, 0.46, 0.66, 0.5, 0.72, 0.58, 0.8];
+    for (var i = 0; i < peaks.length; i++) {
+      ridge.lineTo(w * (i + 0.5) / peaks.length, h * peaks[i]);
+      ridge.lineTo(w * (i + 1) / peaks.length, h * (peaks[i] + 0.12).clamp(0.0, 0.84));
+    }
+    ridge
+      ..lineTo(w, h)
+      ..lineTo(0, h)
+      ..close();
+    canvas.drawPath(ridge, Paint()..color = const Color(0xFF2A2420));
+    canvas.drawPath(
+      ridge,
+      Paint()
+        ..color = const Color(0xFF3F3B34)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 1,
+    );
+    canvas.drawRect(Rect.fromLTWH(0, h * 0.9, w, h * 0.1), Paint()..color = const Color(0xFF211C18));
+    // embers, each on its own clock
+    final n = rage ? 26 : 14;
+    final ember = Paint();
+    for (var i = 0; i < n; i++) {
+      final seed = (i * 0.6180339) % 1;
+      final p = (t + seed * 1.7) % 1;
+      final x = w * ((seed * 7.3) % 1) + sin((p + seed) * 2 * pi) * 8;
+      final y = h * 0.98 - p * h * 0.85;
+      final a = p < 0.15 ? p / 0.15 : 1 - (p - 0.15) / 0.85;
+      ember.color = const Color(0xFFE07A3A).withValues(alpha: a.clamp(0.0, 1.0));
+      canvas.drawCircle(Offset(x, y), 1.3 + seed * 1.1, ember);
+    }
+  }
+
+  @override
+  bool shouldRepaint(_Sky old) => old.rage != rage || old.pal != pal || old.boss != boss || old.air != air;
+}
+
+/// the boss's name, struck in like a title card
+class _BossCard extends StatelessWidget {
+  final String label, name;
+  final bool compact;
+  const _BossCard({required this.label, required this.name, this.compact = false});
+
+  @override
+  Widget build(BuildContext context) {
+    final look = Look.of(context);
+    final pal = look.pal;
+    return TweenAnimationBuilder<double>(
+      tween: Tween(begin: look.calm ? 1 : 0, end: 1),
+      duration: const Duration(milliseconds: 900),
+      curve: Curves.easeOutCubic,
+      builder: (context, t, child) => Opacity(
+        opacity: t.clamp(0.0, 1.0),
+        child: Transform.scale(scale: 1.3 - 0.3 * t, child: child),
+      ),
+      child: Column(
+        children: [
+          if (!compact) Text(label.toUpperCase(), textAlign: TextAlign.center, style: T.label(pal.gold)),
+          Text(
+            name,
+            textAlign: TextAlign.center,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: T.display(compact ? 22 : 32, pal.ink, height: 1.1),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// the boss's life across the arena, with the mark where its rage begins
+class _BossBar extends StatelessWidget {
+  final int hp, max;
+  final String name;
+  const _BossBar(this.hp, this.max, this.name);
+
+  @override
+  Widget build(BuildContext context) {
+    final look = Look.of(context);
+    final pal = look.pal;
+    final frac = max == 0 ? 0.0 : hp / max;
+    return Semantics(
+      label: tr(
+        '$name, nyawa $hp dari $max',
+        '$name, life $hp of $max',
+        '$name, vida $hp de $max',
+        '$name, vie $hp sur $max',
+      ),
+      child: ExcludeSemantics(
+        child: Row(
+          children: [
+            Expanded(
+              child: SizedBox(
+                height: 16,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Positioned.fill(
+                      top: 2,
+                      bottom: 2,
+                      child: DecoratedBox(
+                        decoration: BoxDecoration(
+                          color: pal.field,
+                          border: Border.all(color: pal.muted),
+                          borderRadius: BorderRadius.circular(3),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 1,
+                      top: 3,
+                      bottom: 3,
+                      right: 1,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: AnimatedFractionallySizedBox(
+                          duration: look.calm ? Duration.zero : Dur.slow,
+                          curve: Curves.easeOutCubic,
+                          widthFactor: frac,
+                          heightFactor: 1,
+                          child: const DecoratedBox(decoration: BoxDecoration(color: Color(0xFFB8402E))),
+                        ),
+                      ),
+                    ),
+                    Align(
+                      alignment: const Alignment(0, 0),
+                      child: Container(width: 2, height: 16, color: pal.gold),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            const SizedBox(width: 8),
+            Text('$hp/$max', style: T.body(13.5, pal.ink, w: FontWeight.w700)),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// your life as boxes, one for each blow you can still take
+class _Pips extends StatelessWidget {
+  final String name;
+  final int hp, max;
+  final Color color;
+  const _Pips(this.name, this.hp, this.max, this.color);
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    return Semantics(
+      label: tr(
+        '$name, nyawa $hp dari $max',
+        '$name, life $hp of $max',
+        '$name, vida $hp de $max',
+        '$name, vie $hp sur $max',
+      ),
+      child: ExcludeSemantics(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text('$name  $hp/$max', style: T.body(13.5, pal.ink, w: FontWeight.w700)),
+            const SizedBox(height: 3),
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                for (var i = 0; i < max; i++)
+                  AnimatedContainer(
+                    duration: Dur.enter,
+                    width: 16,
+                    height: 9,
+                    margin: const EdgeInsets.only(right: 3),
+                    decoration: BoxDecoration(
+                      color: i < hp ? color : pal.field,
+                      border: Border.all(color: i < hp ? color : pal.muted),
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// every word of a fight as a box: filled when right, struck through when missed, ringed when it is the one now
+class _Tally extends StatelessWidget {
+  final List<bool> marks;
+  final int total, now;
+  const _Tally(this.marks, this.total, this.now);
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final right = marks.where((m) => m).length;
+    return Semantics(
+      label: tr(
+        'Kata ${now + 1} dari $total · $right benar, ${marks.length - right} salah',
+        'Word ${now + 1} of $total · $right right, ${marks.length - right} missed',
+        'Palabra ${now + 1} de $total · $right bien, ${marks.length - right} mal',
+        'Mot ${now + 1} sur $total · $right justes, ${marks.length - right} manqués',
+      ),
+      child: ExcludeSemantics(
+        child: SizedBox(height: 14, child: CustomPaint(painter: _TallyPainter(marks, total, now, pal))),
+      ),
+    );
+  }
+}
+
+class _TallyPainter extends CustomPainter {
+  final List<bool> marks;
+  final int total, now;
+  final Pal pal;
+  _TallyPainter(this.marks, this.total, this.now, this.pal);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (total == 0) return;
+    final gap = total > 15 ? 2.0 : 3.0;
+    final bw = (size.width - gap * (total - 1)) / total;
+    for (var i = 0; i < total; i++) {
+      final r = RRect.fromRectAndRadius(
+        Rect.fromLTWH(i * (bw + gap), 1, bw, size.height - 2),
+        const Radius.circular(1.5),
+      );
+      if (i < marks.length) {
+        canvas.drawRRect(r, Paint()..color = marks[i] ? pal.good : pal.bad);
+        if (!marks[i]) {
+          canvas.drawLine(
+            r.outerRect.bottomLeft + const Offset(1, -1),
+            r.outerRect.topRight + const Offset(-1, 1),
+            Paint()
+              ..color = pal.field
+              ..strokeWidth = 1.4,
+          );
+        }
+      } else {
+        canvas.drawRRect(
+          r,
+          Paint()
+            ..color = i == now ? pal.ink : pal.line
+            ..style = PaintingStyle.stroke
+            ..strokeWidth = i == now ? 1.8 : 1,
+        );
+      }
+    }
+  }
+
+  @override
+  bool shouldRepaint(_TallyPainter old) => true;
 }
