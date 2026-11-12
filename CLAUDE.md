@@ -23,7 +23,7 @@ and even then confirm first what will change and wait for his yes. Everything el
 | `mobile/lib/app/lang.dart`, `l10n.dart` | `code` ('id', 'en', 'es', 'fr', 'de', 'pt') and `tr(id, en, es, fr, de, pt)`: every text is written in all six languages where it is used; data written only in English (gear, enemies, feats, job hints) gets the other four from `l10n.dart` through `tx(en)`. The learning language is universal (every kingdom); where it is the kingdom's own language, `via` (`set.via`, chosen once per kingdom on its banner, English by default) gives the language of meanings |
 | `mobile/lib/data/` | `store.dart` (one JSON document, keys listed at the top — never rename), `deck.dart` (also `Kingdom`: the five kingdoms, their arms and the letters offered under the gap) |
 | `mobile/lib/app/` | `app.dart` (`App`: settings, sound, `stamp`), `native.dart` (channel `verbarium/native`) |
-| `mobile/lib/ui/` | `theme.dart` (`Pal`, `Look`, `T`, `Dur`), `widgets.dart` (paper, buttons, `Shield`, `Seal`), `root.dart` (app, opening, first run, tabs, Today), `run.dart` (learning, trials and fights: gap, build, choice, the arena), `pixel.dart` (sprites as letter grids, `HeroSprite`, `EnemySprite`), `hero.dart` (Karakter), `coronation.dart`, `realm.dart`, `chronicle.dart`, `settings.dart` |
+| `mobile/lib/ui/` | `theme.dart` (`Pal`, `Look`, `T`, `Dur`), `widgets.dart` (paper, buttons, `Shield`, `Seal`), `root.dart` (app, opening, first run in four steps: language spoken, kingdom, banner or exam, where to start; tabs, Today), `world.dart` (Negeri: the world map, each kingdom's road, the ladder of titles), `banner.dart` (a kingdom's banner: exam to aim for, language of meanings), `run.dart` (learning, trials and fights: gap, build, choice, the arena), `pixel.dart` (sprites as letter grids, `HeroSprite`, `EnemySprite`), `hero.dart` (Karakter), `coronation.dart`, `realm.dart` (where the score ranges come from), `chronicle.dart`, `settings.dart` |
 | `mobile/android/` | Kotlin `MainActivity.kt`: files folder, splash hand-over, MediaPlayer (ambience) + SoundPool (effects); `Donate.kt`: Google Play Billing for Dukung Verbarium (consumables `donasi_kecil`, `donasi_sedang`, `donasi_besar` that unlock nothing; the page shows only when Play has them, counted in `set.dn`) |
 | `mobile/test/` | `deck_test`, `engine_test`, `contrast_test` (WCAG 4.5:1, both themes), `screens_test` (drives the app; pictures in `test/goldens/`, not committed: look at them) |
 | `docs/riset-skor.md` | where each title's score range comes from |
@@ -34,7 +34,7 @@ Cloud sessions: Flutter comes from XueCi's `dev-flutter-sdk` release (public dow
 `FLUTTER_ROOT=/opt/flutter dart pub get --offline`, `flutter analyze --no-pub`, `flutter test --no-pub --update-goldens`.
 Only packages in that cache resolve offline, so **no third-party plugins**: native needs go through the method
 channel. No Android SDK here: Kotlin is compiled by CI only. CI (`.github/workflows/flutter.yml`) pushes its
-output to the branch `ci-out/main` and publishes `v0.4-alpha-N` when everything passes.
+output to the branch `ci-out/main` and publishes `v0.5-alpha-N` when everything passes.
 
 ## Rules
 

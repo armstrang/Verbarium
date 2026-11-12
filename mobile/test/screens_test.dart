@@ -228,25 +228,90 @@ void main() {
     App.phoneLanguage = () => 'id';
   });
 
-  testWidgets('first run: banner, then where to start', (tester) async {
+  Future<void> until(WidgetTester tester, Finder f) async {
+    for (var i = 0; i < 12 && !has(f); i++) {
+      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 150)));
+      await beat(tester);
+    }
+    expect(f, findsWidgets);
+  }
+
+  testWidgets('first run: the language spoken, the kingdom, the banner, then where to start', (tester) async {
     phone(tester);
     await learner(tester, rank: 0, banner: '', onboarded: false, share: 0, history: false);
     await tester.pumpWidget(const VerbariumApp());
     await beat(tester);
-    await shot(tester, '01-panji');
+    expect(find.text('Aplikasi bicara dalam bahasa apa?'), findsOneWidget);
+    expect(find.text('Mengikuti bahasa ponselmu'), findsOneWidget);
+    await shot(tester, '01-bahasa');
+    await tester.tap(find.text('Lanjut'));
+    await beat(tester);
+    expect(find.text('Bahasa apa yang ingin kamu pelajari?'), findsOneWidget);
+    await shot(tester, '01b-kerajaan');
+    await tester.tap(find.text('Masuk ke Aldmere'));
+    await until(tester, find.text('Pilih panjimu'));
+    await shot(tester, '01c-panji');
     await tester.tap(find.text('IELTS'));
     await beat(tester);
     await tester.tap(find.text('Lanjut'));
-    for (var i = 0; i < 6 && !has(find.text('Dari mana kamu mulai?')); i++) {
-      await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 150)));
-      await beat(tester);
-    }
-    expect(find.text('Dari mana kamu mulai?'), findsOneWidget);
-    await tester.tap(find.text('Mulai sebagai Peasant'));
+    await until(tester, find.text('Dari mana kamu mulai?'));
+    expect(find.textContaining('Aldmere · English · IELTS'), findsOneWidget);
+    await shot(tester, '01d-mulai');
+    await tester.tap(find.text('Mulai'));
     await beat(tester, 900);
     expect(find.text('Mulai belajar'), findsOneWidget);
     expect(find.textContaining('Peasant · '), findsOneWidget);
     await shot(tester, '03-hari-ini-petani');
+    await tester.pump(const Duration(seconds: 1));
+  });
+
+  testWidgets('first run into another kingdom: its exam, then the placement test in its language', (tester) async {
+    phone(tester);
+    final app = await learner(tester, rank: 0, banner: '', onboarded: false, share: 0, history: false);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester);
+    await tester.tap(find.text('Lanjut'));
+    await beat(tester);
+    await tester.tap(find.text('Grauwacht'));
+    await beat(tester);
+    await tester.tap(find.text('Masuk ke Grauwacht'));
+    await until(tester, find.textContaining('Goethe-Zertifikat'));
+    expect(app.realm, 'de');
+    await shot(tester, '01e-grauwacht');
+    await tester.tap(find.text('Lanjut'));
+    await until(tester, find.text('Dari mana kamu mulai?'));
+    await tester.tap(find.text('Ikut ujian penempatan'));
+    await beat(tester);
+    await tester.tap(find.text('Mulai'));
+    await beat(tester, 900);
+    await shot(tester, '01g-penempatan');
+    expect(find.textContaining('PENEMPATAN'), findsOneWidget);
+    expect(find.text('ä'), findsOneWidget);
+    await tester.pump(const Duration(seconds: 1));
+  });
+
+  testWidgets('first run: Spanish learned through Spanish asks which language explains it', (tester) async {
+    phone(tester);
+    final app = await learner(tester, rank: 0, banner: '', onboarded: false, share: 0, history: false, lang: 'es');
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester);
+    await tester.tap(find.text('Continuar'));
+    await beat(tester);
+    await tester.tap(find.text('Valdoro'));
+    await beat(tester);
+    await tester.tap(find.text('Entrar en Valdoro'));
+    await until(tester, find.text('¿En qué idioma ves los significados?'));
+    await shot(tester, '01f-valdoro');
+    await tester.tap(find.text('Deutsch'));
+    await beat(tester);
+    await tester.tap(find.text('Continuar'));
+    await until(tester, find.text('¿Por dónde empiezas?'));
+    expect(app.via, 'de');
+    expect(app.viaChosen, isTrue);
+    expect(find.text('Explicado en Deutsch'), findsOneWidget);
+    await tester.tap(find.text('Empezar'));
+    await beat(tester, 900);
+    expect(find.text('LOS SIGNIFICADOS SE MUESTRAN EN'), findsNothing);
     await tester.pump(const Duration(seconds: 1));
   });
 

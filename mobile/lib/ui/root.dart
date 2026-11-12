@@ -10,7 +10,9 @@ import '../app/app.dart';
 import '../app/lang.dart';
 import '../app/native.dart';
 import '../engine/engine.dart';
+import '../data/deck.dart';
 import '../engine/game.dart';
+import 'banner.dart' show examOf;
 import 'chronicle.dart';
 import 'hero.dart';
 import 'world.dart';
@@ -250,6 +252,9 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
 
 // ---------------------------------------------------------------------------- first run
 
+/// The first run, in four steps: the language the app speaks, the kingdom (the language learned), then the banner
+/// (Aldmere), an exam to aim for (another kingdom) or the language of meanings (a kingdom whose language is the one
+/// the app speaks), and where to start.
 class Onboarding extends StatefulWidget {
   const Onboarding({super.key});
 
@@ -257,240 +262,666 @@ class Onboarding extends StatefulWidget {
   State<Onboarding> createState() => _OnboardingState();
 }
 
+const _langNames = [
+  ('id', 'Bahasa Indonesia'),
+  ('en', 'English'),
+  ('es', 'Español'),
+  ('fr', 'Français'),
+  ('de', 'Deutsch'),
+  ('pt', 'Português'),
+];
+
+/// words each kingdom teaches, for the card that offers it
+const _kingdomWords = {'en': 6912, 'de': 8236, 'es': 8008, 'fr': 8055, 'pt': 8069};
+
+String _langName(String c) => _langNames.firstWhere((l) => l.$1 == c, orElse: () => _langNames[1]).$2;
+
 class _OnboardingState extends State<Onboarding> {
   int _step = 0;
+  String _k = App.I.realm;
   String _banner = '';
+  String _via = 'en';
+  bool _test = false;
+  bool _busy = false;
 
-  Future<void> _next() async {
-    await App.I.chooseBanner(_banner);
-    if (mounted) setState(() => _step = 1);
+  Future<void> _go(Future<void> Function() work, int next) async {
+    if (_busy) return;
+    setState(() => _busy = true);
+    await work();
+    if (mounted) {
+      setState(() {
+        _busy = false;
+        _step = next;
+      });
+    }
   }
 
-  Future<void> _placement() async {
-    await Navigator.of(context).push(runRoute(const RunScreen(kind: RunKind.placement)));
+  Future<void> _start() async {
+    if (_test) {
+      await Navigator.of(context).push(runRoute(const RunScreen(kind: RunKind.placement)));
+    }
     App.I.finishOnboarding();
   }
 
   @override
   Widget build(BuildContext context) {
     final pal = Look.of(context).pal;
-    final Widget body = _step == 0
-        ? Column(
-            key: const ValueKey(0),
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              const SizedBox(height: 4),
-              const Center(child: Rise(child: Seal(size: 58))),
-              const SizedBox(height: 8),
-              Center(child: Text('VERBARIUM', style: T.label(pal.muted).copyWith(letterSpacing: 3))),
-              const SizedBox(height: 16),
-              Wrap(
-                runSpacing: 8,
-                alignment: WrapAlignment.center,
-                children: [
-                  for (final l in const [
-                    ('id', 'Indonesia'),
-                    ('en', 'English'),
-                    ('es', 'Español'),
-                    ('fr', 'Français'),
-                    ('de', 'Deutsch'),
-                    ('pt', 'Português'),
-                  ])
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: Press(
-                        onTap: () => App.I.put('lang', l.$1),
-                        label: l.$2,
-                        child: Semantics(
-                          selected: App.I.langCode == l.$1,
-                          child: ExcludeSemantics(
-                            child: Container(
-                              constraints: const BoxConstraints(minHeight: 44),
-                              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                              decoration: BoxDecoration(
-                                color: App.I.langCode == l.$1 ? pal.ink : Colors.transparent,
-                                border: Border.all(color: pal.ink, width: 1.5),
-                                borderRadius: BorderRadius.circular(999),
-                              ),
-                              child: Text(
-                                l.$2,
-                                style: T.body(15.5, App.I.langCode == l.$1 ? pal.bg : pal.ink, w: FontWeight.w700),
-                              ),
+    final app = App.I;
+    final Kingdom k = Kingdom.of(_k);
+    final (Widget content, String button, VoidCallback? onTap) = switch (_step) {
+      0 => (
+        _language(context),
+        tr('Lanjut', 'Continue', 'Continuar', 'Continuer', 'Weiter', 'Continuar'),
+        () => setState(() => _step = 1),
+      ),
+      1 => (
+        _kingdom(context),
+        tr(
+          'Masuk ke ${k.name}',
+          'Enter ${k.name}',
+          'Entrar en ${k.name}',
+          'Entrer à ${k.name}',
+          '${k.name} betreten',
+          'Entrar em ${k.name}',
+        ),
+        () => _go(() async {
+          await app.chooseRealm(_k);
+          if (app.clash) _via = app.viaChosen ? app.via : 'en';
+        }, 2),
+      ),
+      2 => (
+        _k == 'en' ? _bannerStep(context) : _examStep(context),
+        tr('Lanjut', 'Continue', 'Continuar', 'Continuer', 'Weiter', 'Continuar'),
+        _k == 'en' && _banner.isEmpty
+            ? null
+            : () => _go(() async {
+                if (_k == 'en') await app.chooseBanner(_banner);
+                if (app.clash) app.chooseVia(_via);
+              }, 3),
+      ),
+      _ => (_startStep(context), tr('Mulai', 'Start', 'Empezar', 'Commencer', 'Starten', 'Começar'), _start),
+    };
+    return Leaf(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          SizedBox(
+            height: 48,
+            child: Row(
+              children: [
+                if (_step > 0)
+                  Press(
+                    onTap: () => setState(() => _step--),
+                    label: tr('Kembali', 'Back', 'Atrás', 'Retour', 'Zurück', 'Voltar'),
+                    child: SizedBox(width: 44, height: 44, child: Icon(Icons.arrow_back, color: pal.ink)),
+                  )
+                else
+                  const Seal(size: 34),
+                const SizedBox(width: 10),
+                Text('VERBARIUM', style: T.label(pal.muted).copyWith(letterSpacing: 3)),
+                const Spacer(),
+                Semantics(
+                  label: tr(
+                    'Langkah ${_step + 1} dari 4',
+                    'Step ${_step + 1} of 4',
+                    'Paso ${_step + 1} de 4',
+                    'Étape ${_step + 1} sur 4',
+                    'Schritt ${_step + 1} von 4',
+                    'Passo ${_step + 1} de 4',
+                  ),
+                  child: ExcludeSemantics(
+                    child: Row(
+                      children: [
+                        for (var i = 0; i < 4; i++)
+                          AnimatedContainer(
+                            duration: Dur.enter,
+                            margin: const EdgeInsets.only(left: 6),
+                            width: i == _step ? 22 : 8,
+                            height: 8,
+                            decoration: BoxDecoration(
+                              color: i <= _step ? pal.ink : pal.line,
+                              borderRadius: BorderRadius.circular(4),
                             ),
                           ),
-                        ),
-                      ),
+                      ],
                     ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              Label(tr('Selamat datang', 'Welcome', 'Bienvenido', 'Bienvenue', 'Willkommen', 'Bem-vindo')),
-              const SizedBox(height: 8),
-              Text(
-                tr(
-                  'Pilih panjimu',
-                  'Choose your banner',
-                  'Elige tu estandarte',
-                  'Choisis ta bannière',
-                  'Wähle dein Banner',
-                  'Escolha seu estandarte',
+                  ),
                 ),
-                style: T.display(38, pal.ink),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                tr(
-                  'Kata dan ejaan mengikuti ujian yang kamu tuju. Bisa diganti kapan saja.',
-                  'Words and spelling follow the test you are heading for. You can change it at any time.',
-                  'Las palabras y la ortografía siguen el examen al que te diriges. Puedes cambiarlo cuando quieras.',
-                  'Les mots et l’orthographe suivent le test que tu vises. Tu peux le changer quand tu veux.',
-                  'Wörter und Schreibung folgen der Prüfung, die du anstrebst. Du kannst es jederzeit ändern.',
-                  'As palavras e a grafia seguem a prova que você vai fazer. Dá para mudar a qualquer momento.',
-                ),
-                style: T.body(17.5, pal.muted),
-              ),
-              const SizedBox(height: 28),
-              IntrinsicHeight(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Expanded(
-                      child: _BannerCard(
-                        'toefl',
-                        'TOEFL',
-                        tr(
-                          'Kata kampus dan kuliah. Ejaan Amerika.',
-                          'Words of campus and lectures. American spelling.',
-                          'Palabras del campus y de las clases. Ortografía estadounidense.',
-                          'Mots du campus et des cours. Orthographe américaine.',
-                          'Wörter aus Campus und Vorlesung. Amerikanische Schreibung.',
-                          'Palavras de campus e aulas. Grafia americana.',
-                        ),
-                        _banner == 'toefl',
-                        () => setState(() => _banner = 'toefl'),
-                      ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 14),
+          Expanded(
+            child: AnimatedSwitcher(
+              duration: Dur.enter,
+              reverseDuration: Dur.out,
+              layoutBuilder: (current, previous) =>
+                  Stack(alignment: Alignment.topCenter, children: [...previous, ?current]),
+              child: SingleChildScrollView(key: ValueKey('$_step$_k'), child: content),
+            ),
+          ),
+          const SizedBox(height: 12),
+          InkButton(button, onTap: _busy ? null : onTap),
+        ],
+      ),
+    );
+  }
+
+  Widget _title(BuildContext context, String title, String sub) {
+    final pal = Look.of(context).pal;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Text(title, style: T.display(32, pal.ink, height: 1.15)),
+        const SizedBox(height: 8),
+        Text(sub, style: T.body(16.5, pal.muted, height: 1.45)),
+        const SizedBox(height: 18),
+      ],
+    );
+  }
+
+  Widget _row(
+    BuildContext context, {
+    required bool on,
+    required VoidCallback onTap,
+    required Widget child,
+    String? label,
+  }) {
+    final pal = Look.of(context).pal;
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Press(
+        onTap: onTap,
+        label: label,
+        child: Semantics(
+          selected: on,
+          child: AnimatedContainer(
+            duration: Dur.out,
+            constraints: const BoxConstraints(minHeight: 56),
+            padding: EdgeInsets.symmetric(horizontal: on ? 13 : 14, vertical: on ? 9 : 10),
+            decoration: BoxDecoration(
+              color: pal.field,
+              border: Border.all(color: on ? pal.ink : pal.line, width: on ? 2 : 1),
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Row(
+              children: [
+                Expanded(child: child),
+                if (on) Icon(Icons.check_circle, size: 24, color: pal.ink),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  // -- 1: the language the app speaks
+
+  Widget _language(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final phone = App.phoneLanguage();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _title(
+          context,
+          tr(
+            'Aplikasi bicara dalam bahasa apa?',
+            'Which language should the app speak?',
+            '¿En qué idioma te habla la app?',
+            'Dans quelle langue l’app te parle-t-elle ?',
+            'In welcher Sprache soll die App sprechen?',
+            'Em que idioma o app fala com você?',
+          ),
+          tr(
+            'Menu, arti kata, dan terjemahan kalimat memakai bahasa ini, di semua kerajaan. Bisa diganti kapan saja di Pengaturan.',
+            'Menus, meanings and sentence translations use this language in every kingdom. You can change it any time in Settings.',
+            'Los menús, los significados y las traducciones usan este idioma en todos los reinos. Puedes cambiarlo cuando quieras en Ajustes.',
+            'Les menus, les sens et les traductions utilisent cette langue dans tous les royaumes. Tu peux la changer à tout moment dans Réglages.',
+            'Menüs, Bedeutungen und Übersetzungen erscheinen in jedem Königreich in dieser Sprache. Du kannst sie jederzeit in den Einstellungen ändern.',
+            'Menus, sentidos e traduções usam este idioma em todos os reinos. Dá para mudar a qualquer momento nas Configurações.',
+          ),
+        ),
+        for (final (code, name) in _langNames)
+          _row(
+            context,
+            on: App.I.langCode == code,
+            onTap: () => App.I.put('lang', code),
+            label: name,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(name, style: T.body(18, pal.ink, w: FontWeight.w700)),
+                if (code == phone)
+                  Text(
+                    tr(
+                      'Mengikuti bahasa ponselmu',
+                      'Matches your phone',
+                      'El idioma de tu teléfono',
+                      'La langue de ton téléphone',
+                      'Die Sprache deines Handys',
+                      'O idioma do seu celular',
                     ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: _BannerCard(
-                        'ielts',
-                        'IELTS',
-                        tr(
-                          'Kata topik esai dan grafik. Ejaan Inggris.',
-                          'Words of essay topics and charts. British spelling.',
-                          'Palabras de redacciones y gráficos. Ortografía británica.',
-                          'Mots des rédactions et des graphiques. Orthographe britannique.',
-                          'Wörter aus Aufsatzthemen und Diagrammen. Britische Schreibung.',
-                          'Palavras de temas de redação e gráficos. Grafia britânica.',
-                        ),
-                        _banner == 'ielts',
-                        () => setState(() => _banner = 'ielts'),
+                    style: T.body(14, pal.muted),
+                  ),
+              ],
+            ),
+          ),
+      ],
+    );
+  }
+
+  // -- 2: the kingdom, the language learned
+
+  Widget _kingdom(BuildContext context) {
+    final pal = Look.of(context).pal;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _title(
+          context,
+          tr(
+            'Bahasa apa yang ingin kamu pelajari?',
+            'Which language do you want to learn?',
+            '¿Qué idioma quieres aprender?',
+            'Quelle langue veux-tu apprendre ?',
+            'Welche Sprache möchtest du lernen?',
+            'Que idioma você quer aprender?',
+          ),
+          tr(
+            'Setiap bahasa adalah satu kerajaan dengan jalan, gelar, dan karakternya sendiri. Kerajaan lain bisa dibuka nanti lewat peta Negeri.',
+            'Each language is a kingdom with its own road, titles and character. The others can be opened later from the map.',
+            'Cada idioma es un reino con su propio camino, sus títulos y su personaje. Los demás se pueden abrir luego desde el mapa.',
+            'Chaque langue est un royaume avec sa route, ses titres et son personnage. Les autres s’ouvrent plus tard depuis la carte.',
+            'Jede Sprache ist ein Königreich mit eigenem Weg, eigenen Titeln und eigener Figur. Die anderen kannst du später über die Karte öffnen.',
+            'Cada idioma é um reino com sua própria estrada, títulos e personagem. Os outros podem ser abertos depois pelo mapa.',
+          ),
+        ),
+        for (final k in Kingdom.all)
+          _row(
+            context,
+            on: _k == k.code,
+            onTap: () => setState(() => _k = k.code),
+            label: '${k.name}, ${k.language}',
+            child: Row(
+              children: [
+                CustomPaint(size: const Size(30, 35), painter: KingdomShield(Color(k.tint), k.charge)),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.baseline,
+                        textBaseline: TextBaseline.alphabetic,
+                        children: [
+                          Text(k.name, style: T.display(21, pal.ink)),
+                          const SizedBox(width: 8),
+                          Text(k.language, style: T.body(14.5, pal.muted)),
+                        ],
                       ),
-                    ),
-                  ],
+                      Text(
+                        '${tr('${_kingdomWords[k.code]} kata', '${_kingdomWords[k.code]} words', '${_kingdomWords[k.code]} palabras', '${_kingdomWords[k.code]} mots', '${_kingdomWords[k.code]} Wörter', '${_kingdomWords[k.code]} palavras')} · '
+                        '${k.code == 'en' ? 'TOEFL · IELTS' : k.letters.take(4).join(' ')}',
+                        style: T.body(14, pal.muted),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-              const Spacer(),
-              InkButton(
-                tr('Lanjut', 'Continue', 'Continuar', 'Continuer', 'Weiter', 'Continuar'),
-                onTap: _banner.isEmpty ? null : _next,
-              ),
-            ],
-          )
-        : Column(
-            key: const ValueKey(1),
+              ],
+            ),
+          ),
+      ],
+    );
+  }
+
+  // -- 3: Aldmere's banner
+
+  Widget _bannerStep(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _title(
+          context,
+          tr(
+            'Pilih panjimu',
+            'Choose your banner',
+            'Elige tu estandarte',
+            'Choisis ta bannière',
+            'Wähle dein Banner',
+            'Escolha seu estandarte',
+          ),
+          tr(
+            'Kata dan ejaan mengikuti ujian yang kamu tuju. Kedua ejaan tetap diterima, dan panji bisa diganti kapan saja.',
+            'Words and spelling follow the test you are heading for. Both spellings are accepted, and you can change it at any time.',
+            'Las palabras y la ortografía siguen el examen al que te diriges. Se aceptan ambas ortografías y puedes cambiarlo cuando quieras.',
+            'Les mots et l’orthographe suivent le test que tu vises. Les deux orthographes sont acceptées, et tu peux le changer quand tu veux.',
+            'Wörter und Schreibung folgen der Prüfung, die du anstrebst. Beide Schreibungen gelten, und du kannst es jederzeit ändern.',
+            'As palavras e a grafia seguem a prova que você vai fazer. As duas grafias são aceitas, e dá para mudar a qualquer momento.',
+          ),
+        ),
+        IntrinsicHeight(
+          child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              const SizedBox(height: 24),
-              Label(
-                tr(
-                  'Panji ${bannerName(_banner)}',
-                  'Banner ${bannerName(_banner)}',
-                  'Estandarte ${bannerName(_banner)}',
-                  'Bannière ${bannerName(_banner)}',
-                  'Banner ${bannerName(_banner)}',
-                  'Estandarte ${bannerName(_banner)}',
-                ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                tr(
-                  'Dari mana kamu mulai?',
-                  'Where do you start?',
-                  '¿Por dónde empiezas?',
-                  'Par où commences-tu ?',
-                  'Wo fängst du an?',
-                  'Por onde você começa?',
-                ),
-                style: T.display(38, pal.ink),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                tr(
-                  'Semua orang mulai sebagai Peasant. Kalau kosakatamu sudah jauh, ujian penempatan bisa mengangkatmu langsung, paling tinggi sampai Baron.',
-                  'Everyone starts as a Peasant. If your vocabulary is already far along, the placement test can raise you at once, as high as Baron.',
-                  'Todos empiezan como Peasant. Si tu vocabulario ya va avanzado, la prueba de nivel puede subirte enseguida, hasta Baron.',
-                  'Tout le monde commence en Peasant. Si ton vocabulaire est déjà avancé, le test de niveau peut te faire monter tout de suite, jusqu’à Baron.',
-                  'Alle beginnen als Peasant. Ist dein Wortschatz schon weit, kann dich der Einstufungstest sofort aufsteigen lassen, bis zum Baron.',
-                  'Todos começam como Peasant. Se seu vocabulário já vai longe, o teste de nivelamento pode subir você na hora, até Baron.',
-                ),
-                style: T.body(17.5, pal.muted),
-              ),
-              const SizedBox(height: 28),
-              Rise(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    for (var r = 0; r <= Engine.maxRank; r++)
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: Shield(r, width: 24.0 + r * 2.5),
-                      ),
-                  ],
-                ),
-              ),
-              const Spacer(),
-              InkButton(
-                tr(
-                  'Ikut ujian penempatan',
-                  'Take the placement test',
-                  'Hacer la prueba de nivel',
-                  'Passer le test de niveau',
-                  'Einstufungstest machen',
-                  'Fazer o teste de nivelamento',
-                ),
-                onTap: _placement,
-              ),
-              const SizedBox(height: 6),
-              Center(
-                child: Text(
+              Expanded(
+                child: _BannerCard(
+                  'toefl',
+                  'TOEFL',
                   tr(
-                    'Sampai 24 kata, sekitar lima menit',
-                    'Up to 24 words, about five minutes',
-                    'Hasta 24 palabras, unos cinco minutos',
-                    'Jusqu’à 24 mots, environ cinq minutes',
-                    'Bis zu 24 Wörter, etwa fünf Minuten',
-                    'Até 24 palavras, uns cinco minutos',
+                    'Kata kampus dan kuliah. Ejaan Amerika.',
+                    'Words of campus and lectures. American spelling.',
+                    'Palabras del campus y de las clases. Ortografía estadounidense.',
+                    'Mots du campus et des cours. Orthographe américaine.',
+                    'Wörter aus Campus und Vorlesung. Amerikanische Schreibung.',
+                    'Palavras de campus e aulas. Grafia americana.',
                   ),
-                  style: T.body(15, pal.muted),
+                  _banner == 'toefl',
+                  () => setState(() => _banner = 'toefl'),
                 ),
               ),
-              const SizedBox(height: 6),
-              GhostButton(
-                tr(
-                  'Mulai sebagai Peasant',
-                  'Start as a Peasant',
-                  'Empezar como Peasant',
-                  'Commencer en Peasant',
-                  'Als Peasant beginnen',
-                  'Começar como Peasant',
+              const SizedBox(width: 14),
+              Expanded(
+                child: _BannerCard(
+                  'ielts',
+                  'IELTS',
+                  tr(
+                    'Kata topik esai dan grafik. Ejaan Inggris.',
+                    'Words of essay topics and charts. British spelling.',
+                    'Palabras de redacciones y gráficos. Ortografía británica.',
+                    'Mots des rédactions et des graphiques. Orthographe britannique.',
+                    'Wörter aus Aufsatzthemen und Diagrammen. Britische Schreibung.',
+                    'Palavras de temas de redação e gráficos. Grafia britânica.',
+                  ),
+                  _banner == 'ielts',
+                  () => setState(() => _banner = 'ielts'),
                 ),
-                onTap: App.I.finishOnboarding,
               ),
             ],
-          );
-    return Leaf(
-      child: AnimatedSwitcher(duration: Dur.enter, reverseDuration: Dur.out, child: body),
+          ),
+        ),
+      ],
+    );
+  }
+
+  // -- 3: another kingdom: an exam to aim for, and the language of meanings where it must be chosen
+
+  Widget _examStep(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final k = Kingdom.of(_k);
+    final clash = App.I.clash;
+    final exam = Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: pal.field,
+        border: Border.all(color: pal.line),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            tr(
+              'UJIAN YANG BISA JADI TUJUAN',
+              'AN EXAM TO AIM FOR',
+              'UN EXAMEN COMO META',
+              'UN EXAMEN POUR CIBLE',
+              'EINE PRÜFUNG ALS ZIEL',
+              'UMA PROVA COMO META',
+            ),
+            style: T.label(pal.muted),
+          ),
+          const SizedBox(height: 6),
+          Text(examOf(k.code), style: T.body(16.5, pal.ink, height: 1.45)),
+          const SizedBox(height: 6),
+          Text(
+            tr(
+              'Ini hanya saran. Gelar di sini mengukur kosakata, bukan nilai ujian.',
+              'This is only a suggestion. A title here measures vocabulary, not an exam score.',
+              'Es solo una sugerencia. Aquí un título mide vocabulario, no la nota de un examen.',
+              'Ce n’est qu’une suggestion. Ici, un titre mesure le vocabulaire, pas une note d’examen.',
+              'Das ist nur ein Vorschlag. Ein Titel misst hier den Wortschatz, kein Prüfungsergebnis.',
+              'É só uma sugestão. Aqui um título mede vocabulário, não a nota de uma prova.',
+            ),
+            style: T.body(14.5, pal.muted, height: 1.4),
+          ),
+        ],
+      ),
+    );
+    if (clash) {
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _title(
+            context,
+            tr(
+              'Arti ditampilkan dalam bahasa apa?',
+              'Which language for the meanings?',
+              '¿En qué idioma ves los significados?',
+              'Dans quelle langue vois-tu les sens ?',
+              'In welcher Sprache stehen die Bedeutungen?',
+              'Em que idioma aparecem os sentidos?',
+            ),
+            tr(
+              'Kamu belajar ${k.language} lewat ${k.language}, jadi arti kata dan terjemahan kalimat ditampilkan dalam bahasa lain. Bisa diganti lewat panji ${k.name}.',
+              'You learn ${k.language} through ${k.language}, so meanings and translations are shown in another language. You can change it on the banner of ${k.name}.',
+              'Aprendes ${k.language.toLowerCase()} a través del ${k.language.toLowerCase()}, así que los significados y las traducciones se muestran en otro idioma. Puedes cambiarlo en el estandarte de ${k.name}.',
+              'Tu apprends le ${k.language.toLowerCase()} en ${k.language.toLowerCase()} : les sens et les traductions s’affichent donc dans une autre langue. Tu peux la changer sur la bannière de ${k.name}.',
+              'Du lernst ${k.language} über ${k.language}, darum erscheinen Bedeutungen und Übersetzungen in einer anderen Sprache. Du kannst sie am Banner von ${k.name} ändern.',
+              'Você aprende ${k.language.toLowerCase()} por meio do ${k.language.toLowerCase()}, então os sentidos e as traduções aparecem em outro idioma. Dá para mudar no estandarte de ${k.name}.',
+            ),
+          ),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              for (final (code, name) in _langNames)
+                if (code != k.code)
+                  Press(
+                    onTap: () => setState(() => _via = code),
+                    label: name,
+                    child: Semantics(
+                      selected: _via == code,
+                      child: ExcludeSemantics(
+                        child: Container(
+                          constraints: const BoxConstraints(minHeight: 44),
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                          decoration: BoxDecoration(
+                            color: _via == code ? pal.ink : Colors.transparent,
+                            border: Border.all(color: pal.ink, width: 1.5),
+                            borderRadius: BorderRadius.circular(999),
+                          ),
+                          child: Text(name, style: T.body(15, _via == code ? pal.bg : pal.ink, w: FontWeight.w700)),
+                        ),
+                      ),
+                    ),
+                  ),
+            ],
+          ),
+          const SizedBox(height: 18),
+          exam,
+        ],
+      );
+    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        const SizedBox(height: 8),
+        Center(
+          child: CustomPaint(size: const Size(72, 84), painter: KingdomShield(Color(k.tint), k.charge)),
+        ),
+        const SizedBox(height: 10),
+        Center(child: Text(k.name, style: T.display(34, pal.ink))),
+        Center(child: Text(k.language, style: T.body(16, pal.muted))),
+        const SizedBox(height: 20),
+        exam,
+        const SizedBox(height: 18),
+        Text(
+          tr(
+            'Yang kamu dapat',
+            'What you get',
+            'Lo que obtienes',
+            'Ce que tu as',
+            'Was du bekommst',
+            'O que você recebe',
+          ),
+          style: T.body(16, pal.ink, w: FontWeight.w700),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          tr(
+            'Kalimat dengan celah, terjemahan kalimatnya, dan tombol huruf ${k.letters.take(4).join(' ')} di bawah celah.',
+            'Sentences with a gap, their translation, and keys for ${k.letters.take(4).join(' ')} under the gap.',
+            'Frases con un hueco, su traducción y teclas para ${k.letters.take(4).join(' ')} bajo el hueco.',
+            'Des phrases à trou, leur traduction et des touches pour ${k.letters.take(4).join(' ')} sous le trou.',
+            'Sätze mit einer Lücke, ihre Übersetzung und Tasten für ${k.letters.take(4).join(' ')} unter der Lücke.',
+            'Frases com uma lacuna, a tradução delas e teclas para ${k.letters.take(4).join(' ')} embaixo da lacuna.',
+          ),
+          style: T.body(16, pal.muted, height: 1.45),
+        ),
+      ],
+    );
+  }
+
+  // -- 4: where to start
+
+  Widget _startStep(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final app = App.I;
+    final k = Kingdom.of(_k);
+    final explained = app.clash ? app.via : app.langCode;
+    Widget option(bool test, Widget icon, String title, String note) => _row(
+      context,
+      on: _test == test,
+      onTap: () => setState(() => _test = test),
+      label: title,
+      child: Row(
+        children: [
+          SizedBox(width: 30, child: Center(child: icon)),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title, style: T.body(17, pal.ink, w: FontWeight.w700)),
+                Text(note, style: T.body(14, pal.muted)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        _title(
+          context,
+          tr(
+            'Dari mana kamu mulai?',
+            'Where do you start?',
+            '¿Por dónde empiezas?',
+            'Par où commences-tu ?',
+            'Wo fängst du an?',
+            'Por onde você começa?',
+          ),
+          tr(
+            'Semua orang mulai sebagai Peasant. Kalau kosakatamu sudah jauh, ujian penempatan bisa mengangkatmu langsung, paling tinggi sampai Baron.',
+            'Everyone starts as a Peasant. If your vocabulary is already far along, the placement test can raise you at once, as high as Baron.',
+            'Todos empiezan como Peasant. Si tu vocabulario ya va avanzado, la prueba de nivel puede subirte enseguida, hasta Baron.',
+            'Tout le monde commence en Peasant. Si ton vocabulaire est déjà avancé, le test de niveau peut te faire monter tout de suite, jusqu’à Baron.',
+            'Alle beginnen als Peasant. Ist dein Wortschatz schon weit, kann dich der Einstufungstest sofort aufsteigen lassen, bis zum Baron.',
+            'Todos começam como Peasant. Se seu vocabulário já vai longe, o teste de nivelamento pode subir você na hora, até Baron.',
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.all(14),
+          decoration: BoxDecoration(
+            color: pal.field,
+            border: Border.all(color: pal.line),
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                tr('JALANMU', 'YOUR ROAD', 'TU CAMINO', 'TA ROUTE', 'DEIN WEG', 'SEU CAMINHO'),
+                style: T.label(pal.muted),
+              ),
+              const SizedBox(height: 8),
+              Row(
+                children: [
+                  CustomPaint(size: const Size(30, 35), painter: KingdomShield(Color(k.tint), k.charge)),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '${k.name} · ${k.language}${k.code == 'en' && app.banner.isNotEmpty ? ' · ${bannerName(app.banner)}' : ''}',
+                          style: T.body(16, pal.ink, w: FontWeight.w700),
+                        ),
+                        Text(
+                          tr(
+                            'Dijelaskan dalam ${_langName(explained)}',
+                            'Explained in ${_langName(explained)}',
+                            'Explicado en ${_langName(explained)}',
+                            'Expliqué en ${_langName(explained)}',
+                            'Erklärt auf ${_langName(explained)}',
+                            'Explicado em ${_langName(explained)}',
+                          ),
+                          style: T.body(14, pal.muted),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 14),
+        option(
+          false,
+          const Shield(0, width: 24),
+          tr(
+            'Mulai sebagai Peasant',
+            'Start as a Peasant',
+            'Empezar como Peasant',
+            'Commencer en Peasant',
+            'Als Peasant beginnen',
+            'Começar como Peasant',
+          ),
+          tr(
+            'Dari kata dasar · CEFR A1',
+            'From the basics · CEFR A1',
+            'Desde lo básico · MCER A1',
+            'Depuis les bases · CECRL A1',
+            'Von den Grundlagen · GER A1',
+            'Do básico · QECR A1',
+          ),
+        ),
+        option(
+          true,
+          Icon(Icons.star_border, color: pal.ink, size: 28),
+          tr(
+            'Ikut ujian penempatan',
+            'Take the placement test',
+            'Hacer la prueba de nivel',
+            'Passer le test de niveau',
+            'Einstufungstest machen',
+            'Fazer o teste de nivelamento',
+          ),
+          tr(
+            'Sampai 24 kata, sekitar lima menit',
+            'Up to 24 words, about five minutes',
+            'Hasta 24 palabras, unos cinco minutos',
+            'Jusqu’à 24 mots, environ cinq minutes',
+            'Bis zu 24 Wörter, etwa fünf Minuten',
+            'Até 24 palavras, uns cinco minutos',
+          ),
+        ),
+      ],
     );
   }
 }

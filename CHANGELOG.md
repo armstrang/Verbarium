@@ -2,6 +2,14 @@
 
 ## v0.5 (alpha, not released)
 
+### v0.5-alpha-2: a first run for five kingdoms
+
+- **The first run asks what it should:** the language the app speaks (the phone's language is marked), then the
+  language you want to learn, as one of the five kingdoms, then the banner (Aldmere), an exam to aim for (the
+  other kingdoms) or, when you learn a language through itself, the language of meanings. Last: start as a
+  Peasant or take the placement test, now in every kingdom.
+- Steps can be gone back through; nothing changes for learners who already started.
+
 ### v0.5-alpha-1: five kingdoms, seven titles, six languages
 
 - **Seven titles, one for each CEFR level:** Peasant A1, Squire A2, Knight B1, Baron B2, Count C1, Duke C1+ and
