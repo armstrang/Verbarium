@@ -436,7 +436,7 @@ void main() {
     await tester.pump(const Duration(milliseconds: 6000));
     await beat(tester, 400);
     await shot(tester, '37-penobatan');
-    await tester.tap(find.text('Masuk ke negerimu'));
+    await tester.tap(find.text('Terima gelar'));
     await beat(tester, 900);
     // the new character is introduced; only its button closes the page
     expect(find.byType(JobIntro), findsOneWidget);
