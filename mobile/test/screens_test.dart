@@ -146,14 +146,22 @@ bool has(Finder f) => f.evaluate().isNotEmpty;
 /// answers the card on screen, right or wrong, whatever kind it is; returns the kind
 Future<String> answer(WidgetTester tester, {bool right = true}) async {
   final want = RunScreen.probe;
-  final check = has(find.text('Periksa')) ? find.text('Periksa') : find.text('Check');
+  final check = [
+    for (final c in const ['Periksa', 'Check', 'Comprobar', 'Vérifier', 'Prüfen', 'Conferir']) find.text(c),
+  ].firstWhere(has, orElse: () => find.text('Periksa'));
   if (has(find.byKey(const ValueKey('gap-field')))) {
     await tester.enterText(find.byKey(const ValueKey('gap-field')), right ? want : 'zzzzzzzz');
     await tester.tap(check);
     return 'cloze';
   }
-  if (has(find.text('Ketuk kata di bawah sesuai urutannya')) ||
-      has(find.text('Tap the words below in the right order'))) {
+  if (const [
+    'Ketuk kata di bawah sesuai urutannya',
+    'Tap the words below in the right order',
+    'Toca las palabras de abajo en el orden correcto',
+    'Touche les mots ci-dessous dans le bon ordre',
+    'Tippe die Wörter unten in der richtigen Reihenfolge an',
+    'Toque nas palavras abaixo na ordem certa',
+  ].any((t) => has(find.text(t)))) {
     final words = want.split(' ');
     for (final w in right ? words : words.reversed) {
       await tester.tap(find.text(w).last);
