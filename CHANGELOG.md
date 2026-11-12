@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.5 (alpha, not released)
+
+### v0.5-alpha-1: five kingdoms, seven titles, six languages
+
+- **Seven titles, one for each CEFR level:** Peasant A1, Squire A2, Knight B1, Baron B2, Count C1, Duke C1+ and
+  King C2. The Count is new, between Baron and Duke, with its own jobs, boss and music. Saves from 0.4 are lifted
+  to the new ladder: titles, jobs and the chronicle are kept.
+- **Five kingdoms.** Beside Aldmere (English) there are Grauwacht (German), Valdoro (Spanish), Beaumarais (French)
+  and Alvamar (Portuguese), each with its own road from Peasant to King, its own character and chronicle.
+- **The world map.** Negeri is now a living map: tap a kingdom, fly down through the clouds to its road of seven
+  places, each place a title. The ladder of titles has its own page.
+- **A kingdom's banner** can be tapped from the start and names an exam to aim for: Goethe-Zertifikat, DELE or
+  SIELE, DELF or DALF, CAPLE or Celpe-Bras. A suggestion only, never a score.
+- **German and Portuguese** as learning languages, beside Indonesian, English, Spanish and French: every screen,
+  the lore, and the meaning of all 6,912 words and 84 collocations. The learning language is the same in every
+  kingdom; a kingdom learned in its own language (Spanish in Valdoro) asks once which language explains it.
+- **Fights by night.** A coronation boss is fought in the dark among embers: its name struck in, its rage marked on
+  its life bar, a box for each of the words and a ring for the time. Every blow flashes and shakes.
+- **Candlelight coronation:** rays turning, the crown coming down onto the shield, the job sealed on its card, the
+  title's own words, then Terima gelar.
+- **New layouts** for Hari ini, Karakter, Kronik and Pengaturan; scarier, bigger bosses and foes.
+- Calm motion is still honoured everywhere, and the learning screen stays plain.
+
 ## v0.4 (alpha, not released)
 
 ### v0.4-alpha-4: ready for Google Play
