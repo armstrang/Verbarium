@@ -80,9 +80,12 @@ class _GrainPainter extends CustomPainter {
 class Press extends StatefulWidget {
   final Widget child;
   final VoidCallback? onTap;
+
+  /// a long press, for a second way in (the kingdom's name: all five kingdoms at once)
+  final VoidCallback? onLongPress;
   final String? label;
   final bool sound;
-  const Press({super.key, required this.child, required this.onTap, this.label, this.sound = true});
+  const Press({super.key, required this.child, required this.onTap, this.onLongPress, this.label, this.sound = true});
 
   @override
   State<Press> createState() => _PressState();
@@ -110,6 +113,13 @@ class _PressState extends State<Press> {
                 widget.onTap!();
               }
             : null,
+        onLongPress: widget.onLongPress == null
+            ? null
+            : () {
+                setState(() => _down = false);
+                App.I.haptic();
+                widget.onLongPress!();
+              },
         child: AnimatedScale(
           scale: _down && !calm ? 0.97 : 1,
           duration: Dur.tap,
@@ -553,4 +563,43 @@ Future<bool> confirm(
     ),
   );
   return r ?? false;
+}
+
+/// A note on a slip of paper, closed by one button.
+Future<void> notice(BuildContext context, {required String title, required String text, String? ok}) async {
+  final look = Look.of(context);
+  final pal = look.pal;
+  await showDialog<void>(
+    context: context,
+    barrierColor: Colors.black.withValues(alpha: 0.45),
+    builder: (ctx) => Look(
+      pal: pal,
+      rank: look.rank,
+      calm: look.calm,
+      child: Dialog(
+        backgroundColor: pal.field,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(3),
+          side: BorderSide(color: pal.ink, width: 1.5),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(title, style: T.display(25, pal.ink)),
+              const SizedBox(height: 8),
+              Text(text, style: T.body(16.5, pal.muted, height: 1.4)),
+              const SizedBox(height: 18),
+              InkButton(
+                ok ?? tr('Mengerti', 'Got it', 'Entendido', 'Compris', 'Verstanden', 'Entendi'),
+                onTap: () => Navigator.of(ctx).pop(),
+              ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
 }

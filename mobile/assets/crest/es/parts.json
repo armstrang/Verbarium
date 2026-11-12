@@ -1,0 +1,100 @@
+{
+ "size": [
+  260,
+  310
+ ],
+ "crown": [
+  160,
+  80
+ ],
+ "scroll": [
+  320,
+  75
+ ],
+ "parts": [
+  {
+   "name": "wingR",
+   "group": "wingR"
+  },
+  {
+   "name": "wingL",
+   "group": "wingL"
+  },
+  {
+   "name": "tail",
+   "group": "tail"
+  },
+  {
+   "name": "farleg",
+   "group": ""
+  },
+  {
+   "name": "body",
+   "group": ""
+  },
+  {
+   "name": "head",
+   "group": "head"
+  },
+  {
+   "name": "arms",
+   "group": "arms"
+  },
+  {
+   "name": "leg",
+   "group": ""
+  },
+  {
+   "name": "fire",
+   "group": "fire"
+  }
+ ],
+ "groups": {
+  "wingR": {
+   "pivot": [
+    146.1,
+    118.0
+   ],
+   "parent": null
+  },
+  "wingL": {
+   "pivot": [
+    123.1,
+    118.0
+   ],
+   "parent": null
+  },
+  "tail": {
+   "pivot": [
+    148.4,
+    173.2
+   ],
+   "parent": null
+  },
+  "head": {
+   "pivot": [
+    125.4,
+    81.2
+   ],
+   "parent": null
+  },
+  "arms": {
+   "pivot": [
+    134.6,
+    131.8
+   ],
+   "parent": null
+  },
+  "fire": {
+   "pivot": [
+    65.6,
+    76.6
+   ],
+   "parent": "head"
+  }
+ },
+ "focus": [
+  65.6,
+  76.6
+ ]
+}

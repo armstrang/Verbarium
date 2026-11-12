@@ -1,6 +1,6 @@
 # Kebijakan privasi Verbarium
 
-Berlaku untuk aplikasi Android **Verbarium** (`com.armstrang.verbarium`) oleh Armstrang. Terakhir diperbarui 11 November 2026. Isinya sama dengan halaman Pengaturan → Privasi di aplikasi.
+Berlaku untuk aplikasi Android **Verbarium** (`com.armstrang.verbarium`) oleh Armstrang. Terakhir diperbarui 13 November 2026. Isinya sama dengan halaman Pengaturan → Privasi di aplikasi.
 
 ## Yang disimpan
 
@@ -9,6 +9,10 @@ Kemajuanmu (kata yang sudah dipelajari, gelar, kronik, pengaturan) disimpan dala
 ## Yang dikirim
 
 Tidak ada. Verbarium tidak memakai iklan, analitik, laporan kerusakan, atau pelacak apa pun, dan tidak mengirim data ke server mana pun. Semua kata, musik, dan suara sudah ada di dalam aplikasi.
+
+## Cadangan
+
+Pengaturan → Cadangan → Simpan cadangan menulis satu berkas ke tempat yang kamu pilih sendiri lewat pemilih berkas Android (misalnya folder Download, Drive, atau kartu memori). Verbarium tidak mengirim berkas itu ke mana pun. Cadangan otomatis Android, bila menyala di ponselmu, menyimpan berkas kemajuan ke akun Google-mu sendiri; itu diurus oleh Android, bukan oleh Verbarium, dan bisa dimatikan di pengaturan ponsel.
 
 ## Izin internet
 
@@ -20,7 +24,7 @@ Untuk versi dari Play Store ada pilihan mendukung Verbarium. Pembayarannya diuru
 
 ## Menghapus data
 
-Pilih Pengaturan → Mulai dari awal → Hapus semua kemajuan, atau hapus aplikasinya. Berkasnya ikut terhapus. Karena tidak ada yang tersimpan di luar ponsel, tidak ada yang perlu diminta untuk dihapus dari pihak kami.
+Pilih Pengaturan → Mulai dari awal → Hapus semua kemajuan, atau hapus aplikasinya. Berkasnya ikut terhapus. Tidak ada yang tersimpan pada pihak kami, jadi tidak ada yang perlu diminta untuk dihapus; berkas cadangan yang kamu simpan sendiri tetap ada di tempat yang kamu pilih.
 
 ## Anak-anak
 
@@ -34,12 +38,13 @@ Pertanyaan tentang privasi: lewat halaman isu repositori github.com/armstrang/Ve
 
 # Verbarium privacy policy (English)
 
-Applies to the Android app **Verbarium** (`com.armstrang.verbarium`) by Armstrang. Last updated 11 November 2026.
+Applies to the Android app **Verbarium** (`com.armstrang.verbarium`) by Armstrang. Last updated 13 November 2026.
 
 - **What is kept:** your progress (words, title, chronicle, settings) in one file in the app's internal storage, on this phone only. No account, no name, no email.
 - **What is sent:** nothing. No ads, no analytics, no crash reports, no trackers; no data goes to any server.
+- **Backups:** Settings → Backup → Save a backup writes one file to a place you choose through Android's file picker; Verbarium sends it nowhere. Android's own backup, when it is on in your phone, keeps the progress file in your own Google account; that is done by Android, not by Verbarium, and can be turned off in the phone's settings.
 - **Internet permission:** requested only because Google Play needs it for donations. The connection is opened only while the Support Verbarium page is open, only to Google Play, and closed when the page is left. Verbarium itself sends and collects nothing.
 - **Support:** the Play Store version offers a way to support Verbarium; the payment is handled entirely by Google Play Billing. Verbarium never sees your payment details, and support unlocks nothing.
-- **Erasing:** Settings → Start over → Erase all progress, or uninstall the app. Nothing is kept anywhere else.
+- **Erasing:** Settings → Start over → Erase all progress, or uninstall the app. Nothing is kept on our side; a backup file you saved yourself stays where you put it.
 - **Children:** Verbarium collects no personal data from anyone, children included.
 - **Contact:** the issues page of github.com/armstrang/Verbarium.

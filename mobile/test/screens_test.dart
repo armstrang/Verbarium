@@ -12,6 +12,7 @@ import 'package:verbarium/data/store.dart';
 import 'package:verbarium/engine/engine.dart';
 import 'package:verbarium/engine/jobs.dart';
 import 'package:verbarium/ui/coronation.dart';
+import 'package:verbarium/ui/crest.dart';
 import 'package:verbarium/ui/lore.dart';
 import 'package:verbarium/ui/pixel.dart';
 import 'package:verbarium/ui/root.dart';
@@ -272,7 +273,7 @@ void main() {
     await beat(tester);
     await tester.tap(find.text('Lanjut'));
     await beat(tester);
-    await tester.tap(find.text('Grauwacht'));
+    await tester.tap(find.text('Grauwacht').last);
     await beat(tester);
     await tester.tap(find.text('Masuk ke Grauwacht'));
     await until(tester, find.textContaining('Goethe-Zertifikat'));
@@ -297,7 +298,7 @@ void main() {
     await beat(tester);
     await tester.tap(find.text('Continuar'));
     await beat(tester);
-    await tester.tap(find.text('Valdoro'));
+    await tester.tap(find.text('Valdoro').last);
     await beat(tester);
     await tester.tap(find.text('Entrar en Valdoro'));
     await until(tester, find.text('¿En qué idioma ves los significados?'));
@@ -791,7 +792,7 @@ void main() {
     await beat(tester, 900);
     await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/80-dunia.png'));
     await tester.runAsync(() => app.chooseRealm('de'));
-    await tester.tap(find.text('Grauwacht'));
+    await tester.tap(find.text('Grauwacht').last);
     await tester.pump(const Duration(milliseconds: 700));
     await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/80b-zoom.png'));
     for (var i = 0; i < 8; i++) {
@@ -802,7 +803,7 @@ void main() {
     await tester.tap(find.text('Peta'));
     await beat(tester, 900);
     await tester.runAsync(() => app.chooseRealm('en'));
-    await tester.tap(find.text('Aldmere'));
+    await tester.tap(find.text('Aldmere').last);
     await beat(tester, 2500);
     await expectLater(find.byType(MaterialApp), matchesGoldenFile('goldens/82-jalan-aldmere.png'));
     await tester.drag(find.byType(ListView).first, const Offset(0, -500));
@@ -820,7 +821,7 @@ void main() {
     await beat(tester, 900);
     await tester.tap(find.text('Negeri'));
     await beat(tester, 700);
-    expect(find.text('Grauwacht'), findsOneWidget);
+    expect(find.text('Grauwacht'), findsWidgets);
     await tester.runAsync(() => app.chooseRealm('de'));
     await beat(tester, 700);
     expect(app.engine.rank, 0, reason: 'a new kingdom starts from the fields');
@@ -854,7 +855,7 @@ void main() {
     await tester.tap(find.text('Negeri'));
     await beat(tester, 700);
     await tester.runAsync(() => app.chooseRealm('de'));
-    await tester.tap(find.text('Grauwacht'));
+    await tester.tap(find.text('Grauwacht').last);
     await beat(tester, 2500);
     expect(find.byType(KingdomScreen), findsOneWidget);
     expect(find.text('UJIAN YANG BISA JADI TUJUAN'), findsNothing, reason: 'no question in Indonesian');
@@ -871,7 +872,7 @@ void main() {
     app.put('lang', 'es');
     await tester.runAsync(() => app.chooseRealm('es'));
     await beat(tester, 600);
-    await tester.tap(find.text('Valdoro'));
+    await tester.tap(find.text('Valdoro').last);
     await beat(tester, 2500);
     expect(app.clash, isTrue);
     expect(find.text('LOS SIGNIFICADOS SE MUESTRAN EN'), findsOneWidget);
@@ -988,5 +989,87 @@ void main() {
     );
     await tester.pump();
     await shot(tester, '60-sprite');
+  });
+
+  testWidgets('Today names the kingdom; a long press offers all five; the coin asks where to give', (tester) async {
+    phone(tester);
+    await learner(tester, rank: 2);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    expect(find.text('Aldmere · English'), findsOneWidget);
+    await shot(tester, '86-hari-ini-negeri');
+    await tester.longPress(find.text('Aldmere · English'));
+    await beat(tester, 500);
+    expect(find.text('Pindah negeri'), findsOneWidget);
+    await shot(tester, '87-pindah-negeri');
+    await tester.tapAt(const Offset(10, 10));
+    await beat(tester, 500);
+    await tester.tap(find.text('Aldmere · English'));
+    await beat(tester, 700);
+    expect(find.text('GULUNGAN GELAR'), findsOneWidget, reason: 'a tap opens Negeri');
+    await tester.tap(find.text('Hari ini'));
+    await beat(tester, 700);
+    await tester.tap(find.bySemanticsLabel('Dukung Verbarium'));
+    await beat(tester, 500);
+    expect(find.textContaining('Play Store'), findsWidgets, reason: 'outside the Play Store the coin only explains');
+    await shot(tester, '88-koin');
+    await tester.tap(find.text('Mengerti'));
+    await beat(tester, 400);
+  });
+
+  testWidgets('the arms of each kingdom come alive and settle', (tester) async {
+    phone(tester);
+    await learner(tester, rank: 2);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    for (final code in ['es', 'en', 'de', 'fr', 'pt']) {
+      final ctx = tester.element(find.byType(Today));
+      final shown = showCrest(ctx, code);
+      // the pictures are read for real, outside the test's clock
+      await tester.runAsync(() => CrestParts.load(code));
+      for (var i = 0; i < 6; i++) {
+        await tester.pump(const Duration(milliseconds: 30));
+        await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 120)));
+      }
+      expect(find.byType(CrestSplash), findsOneWidget);
+      await tester.pump(const Duration(milliseconds: 900));
+      if (code == 'es') await shot(tester, '89-lambang-api');
+      await tester.pump(const Duration(milliseconds: 1700));
+      await shot(tester, '89-lambang-$code');
+      await tester.pump(const Duration(milliseconds: 900));
+      await tester.pump(const Duration(milliseconds: 400));
+      expect(find.byType(CrestSplash), findsNothing, reason: 'the arms close by themselves');
+      await shown;
+    }
+  });
+
+  testWidgets('the roll of titles names an Emperor once three kingdoms are held as King', (tester) async {
+    phone(tester);
+    final app = await learner(tester, rank: Engine.maxRank);
+    for (final c in ['de', 'es']) {
+      app.root.realm(c).data['rank'] = Engine.maxRank;
+      app.root.realm(c).map('mem')['x'] = [1];
+    }
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await tester.tap(find.text('Negeri'));
+    await beat(tester, 900);
+    expect(TitleRoll.kings(app), 3);
+    expect(find.text('Emperor'), findsOneWidget);
+    await shot(tester, '90-gulungan');
+  });
+
+  testWidgets('settings offer to save and restore a backup', (tester) async {
+    phone(tester);
+    await learner(tester, rank: 2);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await tester.tap(find.bySemanticsLabel('Pengaturan'));
+    await beat(tester, 700);
+    await tester.drag(find.byType(ListView).first, const Offset(0, -900));
+    await beat(tester);
+    expect(find.text('Simpan cadangan'), findsOneWidget);
+    expect(find.text('Pulihkan cadangan'), findsOneWidget);
+    await shot(tester, '91-cadangan');
   });
 }

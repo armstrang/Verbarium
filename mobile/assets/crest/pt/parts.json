@@ -1,0 +1,79 @@
+{
+ "size": [
+  260,
+  310
+ ],
+ "crown": [
+  160,
+  80
+ ],
+ "scroll": [
+  320,
+  75
+ ],
+ "parts": [
+  {
+   "name": "pearl",
+   "group": "pearl"
+  },
+  {
+   "name": "far",
+   "group": "body"
+  },
+  {
+   "name": "farClaws",
+   "group": "body"
+  },
+  {
+   "name": "body",
+   "group": "body"
+  },
+  {
+   "name": "mane",
+   "group": "head"
+  },
+  {
+   "name": "head",
+   "group": "head"
+  },
+  {
+   "name": "whiskers",
+   "group": "head"
+  },
+  {
+   "name": "near",
+   "group": "body"
+  },
+  {
+   "name": "nearClaws",
+   "group": "body"
+  }
+ ],
+ "groups": {
+  "pearl": {
+   "pivot": [
+    203.6,
+    58.2
+   ],
+   "parent": null
+  },
+  "body": {
+   "pivot": [
+    134.6,
+    145.6
+   ],
+   "parent": null
+  },
+  "head": {
+   "pivot": [
+    97.8,
+    85.8
+   ],
+   "parent": "body"
+  }
+ },
+ "focus": [
+  203.6,
+  58.2
+ ]
+}

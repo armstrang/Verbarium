@@ -222,16 +222,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
                 const SizedBox(height: 14),
                 Opacity(
                   opacity: calm ? 1 : _span(0.5, 0.72),
-                  child: Label(
-                    tr(
-                      'Kosakata TOEFL & IELTS',
-                      'TOEFL & IELTS vocabulary',
-                      'Vocabulario de TOEFL e IELTS',
-                      'Vocabulaire du TOEFL et de l’IELTS',
-                      'Wortschatz für TOEFL & IELTS',
-                      'Vocabulário de TOEFL e IELTS',
-                    ),
-                  ),
+                  // the tagline stays English in every language, like the names of titles
+                  child: const Label('Vocabulary Quest'),
                 ),
                 const SizedBox(height: 44),
                 Opacity(
@@ -1002,12 +994,30 @@ class _PennantPainter extends CustomPainter {
 class Shell extends StatefulWidget {
   const Shell({super.key});
 
+  /// the tab shown; anything may move it (the kingdom's name on Today opens Negeri)
+  static final tab = ValueNotifier<int>(0);
+
   @override
   State<Shell> createState() => _ShellState();
 }
 
 class _ShellState extends State<Shell> {
-  int _tab = 0;
+  int get _tab => Shell.tab.value;
+
+  void _moved() => setState(() {});
+
+  @override
+  void initState() {
+    super.initState();
+    Shell.tab.value = 0; // a new shell (a new start) opens on Today
+    Shell.tab.addListener(_moved);
+  }
+
+  @override
+  void dispose() {
+    Shell.tab.removeListener(_moved);
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -1050,7 +1060,7 @@ class _ShellState extends State<Shell> {
                             onTap: () {
                               if (_tab != i) {
                                 App.I.sfx('page', 0.5);
-                                setState(() => _tab = i);
+                                Shell.tab.value = i;
                               }
                             },
                             sound: false,
@@ -1401,6 +1411,7 @@ class Today extends StatelessWidget {
                   style: T.body(15, pal.gold, w: FontWeight.w700),
                 ),
               ),
+            const DonateButton(),
             Press(
               onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SettingsPage())),
               label: tr('Pengaturan', 'Settings', 'Ajustes', 'Réglages', 'Einstellungen', 'Configurações'),
@@ -1408,6 +1419,7 @@ class Today extends StatelessWidget {
             ),
           ],
         ),
+        const Align(alignment: Alignment.centerLeft, child: KingdomName()),
         const SizedBox(height: 6),
         Rise(
           child: Container(
@@ -1426,6 +1438,7 @@ class Today extends StatelessWidget {
                   weapon: g.tone('weapon'),
                   shield: g.tone('shield'),
                   cloak: g.tone('cloak'),
+                  livery: App.I.livery,
                   size: 64,
                 ),
                 const SizedBox(width: 12),

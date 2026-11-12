@@ -1,0 +1,101 @@
+{
+ "size": [
+  260,
+  310
+ ],
+ "crown": [
+  160,
+  80
+ ],
+ "scroll": [
+  320,
+  75
+ ],
+ "parts": [
+  {
+   "name": "wingFar",
+   "group": "wingFar"
+  },
+  {
+   "name": "tail",
+   "group": "tail"
+  },
+  {
+   "name": "far",
+   "group": ""
+  },
+  {
+   "name": "body",
+   "group": ""
+  },
+  {
+   "name": "ruff",
+   "group": "ruff"
+  },
+  {
+   "name": "head",
+   "group": "head"
+  },
+  {
+   "name": "beak",
+   "group": "head"
+  },
+  {
+   "name": "hind",
+   "group": ""
+  },
+  {
+   "name": "wingNear",
+   "group": "wingNear"
+  },
+  {
+   "name": "legs",
+   "group": ""
+  },
+  {
+   "name": "talons",
+   "group": ""
+  }
+ ],
+ "groups": {
+  "wingFar": {
+   "pivot": [
+    107.0,
+    113.4
+   ],
+   "parent": null
+  },
+  "wingNear": {
+   "pivot": [
+    120.8,
+    118.0
+   ],
+   "parent": null
+  },
+  "tail": {
+   "pivot": [
+    194.4,
+    150.2
+   ],
+   "parent": null
+  },
+  "ruff": {
+   "pivot": [
+    70.2,
+    95.0
+   ],
+   "parent": null
+  },
+  "head": {
+   "pivot": [
+    70.2,
+    90.4
+   ],
+   "parent": null
+  }
+ },
+ "focus": [
+  35.7,
+  81.2
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "size": [
+  260,
+  310
+ ],
+ "crown": [
+  160,
+  80
+ ],
+ "scroll": [
+  320,
+  75
+ ],
+ "parts": [
+  {
+   "name": "tail",
+   "group": "tail"
+  },
+  {
+   "name": "far",
+   "group": ""
+  },
+  {
+   "name": "body",
+   "group": ""
+  },
+  {
+   "name": "mane",
+   "group": "mane"
+  },
+  {
+   "name": "head",
+   "group": "head"
+  },
+  {
+   "name": "near",
+   "group": ""
+  },
+  {
+   "name": "claws",
+   "group": ""
+  },
+  {
+   "name": "crown",
+   "group": "head"
+  }
+ ],
+ "groups": {
+  "tail": {
+   "pivot": [
+    180.6,
+    150.2
+   ],
+   "parent": null
+  },
+  "mane": {
+   "pivot": [
+    88.6,
+    95.0
+   ],
+   "parent": null
+  },
+  "head": {
+   "pivot": [
+    86.3,
+    95.0
+   ],
+   "parent": null
+  }
+ },
+ "focus": [
+  47.2,
+  90.4
+ ]
+}

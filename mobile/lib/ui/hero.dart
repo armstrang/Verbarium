@@ -72,6 +72,7 @@ class HeroTab extends StatelessWidget {
                         weapon: g.tone('weapon'),
                         shield: g.tone('shield'),
                         cloak: g.tone('cloak'),
+                        livery: App.I.livery,
                         size: 150,
                       ),
                     ),

@@ -1,0 +1,70 @@
+{
+ "size": [
+  260,
+  310
+ ],
+ "crown": [
+  160,
+  80
+ ],
+ "scroll": [
+  320,
+  75
+ ],
+ "parts": [
+  {
+   "name": "wingR",
+   "group": "wingR"
+  },
+  {
+   "name": "wingL",
+   "group": "wingL"
+  },
+  {
+   "name": "tail",
+   "group": "tail"
+  },
+  {
+   "name": "body",
+   "group": ""
+  },
+  {
+   "name": "head",
+   "group": "head"
+  }
+ ],
+ "groups": {
+  "wingR": {
+   "pivot": [
+    143.8,
+    143.3
+   ],
+   "parent": null
+  },
+  "wingL": {
+   "pivot": [
+    116.2,
+    143.3
+   ],
+   "parent": null
+  },
+  "tail": {
+   "pivot": [
+    130.0,
+    175.5
+   ],
+   "parent": null
+  },
+  "head": {
+   "pivot": [
+    120.8,
+    106.5
+   ],
+   "parent": null
+  }
+ },
+ "focus": [
+  120.8,
+  101.9
+ ]
+}

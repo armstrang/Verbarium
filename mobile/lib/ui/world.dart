@@ -13,6 +13,7 @@ import '../app/lang.dart';
 import '../data/deck.dart';
 import '../engine/engine.dart';
 import 'banner.dart';
+import 'crest.dart';
 import 'pixel.dart';
 import 'realm.dart' show SourcesPage;
 import 'root.dart';
@@ -97,9 +98,13 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
       _target = code;
       _flying = true;
     });
+    final changed = code != App.I.realm;
     final travel = App.I.chooseRealm(code);
     if (!calm) await _zoom.forward(from: 0);
     await travel;
+    if (!mounted) return;
+    // a kingdom entered anew shows its arms first
+    if (changed) await showCrest(context, code);
     if (!mounted) return;
     await Navigator.of(context).push(_cloudRoute(const KingdomScreen(), calm));
     if (!mounted) return;
@@ -213,6 +218,8 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 16),
+        const Rise(child: TitleRoll()),
+        const SizedBox(height: 16),
         for (final (i, k) in Kingdom.all.indexed)
           Rise(
             delay: Duration(milliseconds: 60 * i),
@@ -290,6 +297,199 @@ class _CloudPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(_CloudPainter old) => old.t != t;
+}
+
+/// The roll of titles: the five arms side by side, the title held under each. Whoever is King in three kingdoms is
+/// named Emperor above them, an honour only: it changes no memory, rank or trial.
+class TitleRoll extends StatelessWidget {
+  const TitleRoll({super.key});
+
+  /// Kings needed for the Emperor
+  static const forEmperor = 3;
+
+  static int kings(App app) => Kingdom.all.where((k) => app.standing(k.code).rank >= Engine.maxRank).length;
+
+  @override
+  Widget build(BuildContext context) {
+    final look = Look.of(context);
+    final pal = look.pal;
+    final app = App.I;
+    final emperor = kings(app) >= forEmperor;
+    return Container(
+      padding: const EdgeInsets.fromLTRB(10, 12, 10, 12),
+      decoration: BoxDecoration(
+        color: pal.field,
+        border: Border.all(color: emperor ? pal.gold : pal.line, width: emperor ? 2 : 1),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        children: [
+          Label(
+            tr(
+              'Gulungan gelar',
+              'Roll of titles',
+              'Rollo de títulos',
+              'Rouleau des titres',
+              'Rolle der Titel',
+              'Rolo de títulos',
+            ),
+          ),
+          if (emperor) ...[
+            const SizedBox(height: 6),
+            Text('Emperor', style: T.display(26, pal.gold)),
+            Text(
+              tr(
+                'King di ${kings(app)} negeri',
+                'King in ${kings(app)} kingdoms',
+                'King en ${kings(app)} reinos',
+                'King dans ${kings(app)} royaumes',
+                'King in ${kings(app)} Königreichen',
+                'King em ${kings(app)} reinos',
+              ),
+              style: T.body(13.5, pal.muted),
+            ),
+          ],
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              for (final k in Kingdom.all)
+                Expanded(
+                  child: Builder(
+                    builder: (context) {
+                      final st = app.standing(k.code);
+                      final started = st.seen > 0 || k.code == app.realm;
+                      return Column(
+                        children: [
+                          Opacity(
+                            opacity: started ? 1 : .38,
+                            child: Image.asset(
+                              'assets/crest/${k.code}/full.png',
+                              height: 52,
+                              filterQuality: FilterQuality.none,
+                              semanticLabel: k.name,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            started ? rankNames[st.rank] : '—',
+                            style: T.body(12.5, started ? pal.ink : pal.muted, w: FontWeight.w700),
+                            maxLines: 1,
+                            overflow: TextOverflow.fade,
+                            softWrap: false,
+                          ),
+                          Text(
+                            k.name,
+                            style: T.body(11, pal.muted),
+                            maxLines: 1,
+                            overflow: TextOverflow.fade,
+                            softWrap: false,
+                          ),
+                        ],
+                      );
+                    },
+                  ),
+                ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// where the learner is: the kingdom's name and language, on Today and over the learning screen. A tap opens Negeri,
+/// a long press offers all five kingdoms at once.
+class KingdomName extends StatelessWidget {
+  /// false on the learning screen: there it only says where you are
+  final bool active;
+  const KingdomName({super.key, this.active = true});
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final k = App.I.kingdom;
+    final row = Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        CustomPaint(size: const Size(15, 18), painter: KingdomShield(Color(k.tint), k.charge)),
+        const SizedBox(width: 8),
+        Flexible(
+          child: Text(
+            '${k.name} · ${k.language}',
+            style: T.body(active ? 15 : 13.5, active ? pal.ink : pal.muted, w: FontWeight.w700),
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
+        if (active) Icon(Icons.unfold_more, size: 18, color: pal.muted),
+      ],
+    );
+    if (!active) {
+      return Semantics(
+        label: '${k.name}, ${k.language}',
+        child: ExcludeSemantics(child: row),
+      );
+    }
+    return Press(
+      label: '${k.name}, ${k.language}',
+      onTap: () => Shell.tab.value = 1,
+      onLongPress: () => pickKingdom(context),
+      child: Padding(padding: const EdgeInsets.symmetric(vertical: 6), child: row),
+    );
+  }
+}
+
+/// the five kingdoms at once (a long press on the kingdom's name): going to one shows its arms
+Future<void> pickKingdom(BuildContext context) async {
+  final look = Look.of(context);
+  final app = App.I;
+  final code = await showDialog<String>(
+    context: context,
+    barrierColor: Colors.black.withValues(alpha: 0.45),
+    builder: (ctx) => Look(
+      pal: look.pal,
+      rank: look.rank,
+      calm: look.calm,
+      child: Dialog(
+        backgroundColor: look.pal.bg,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(3),
+          side: BorderSide(color: look.pal.ink, width: 1.5),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(14, 16, 14, 8),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 4, bottom: 10),
+                child: Text(
+                  tr(
+                    'Pindah negeri',
+                    'Change kingdom',
+                    'Cambiar de reino',
+                    'Changer de royaume',
+                    'Königreich wechseln',
+                    'Mudar de reino',
+                  ),
+                  style: T.display(24, look.pal.ink),
+                ),
+              ),
+              for (final k in Kingdom.all)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: KingdomRow(k, onTap: () => Navigator.of(ctx).pop(k.code)),
+                ),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+  if (code == null || code == app.realm || !context.mounted) return;
+  await app.chooseRealm(code);
+  if (!context.mounted) return;
+  await showCrest(context, code);
 }
 
 /// one kingdom in the list under the map: its arms, its language, where the learner stands in it
@@ -1240,6 +1440,7 @@ class _KingdomRoadState extends State<KingdomRoad> with TickerProviderStateMixin
                 weapon: g.tone('weapon'),
                 shield: g.tone('shield'),
                 cloak: g.tone('cloak'),
+                livery: App.I.livery,
                 size: 36 * k,
               ),
             ),

@@ -97,6 +97,17 @@ void main() {
     expect(e.streak, 0);
   });
 
+  test('one streak is kept across the kingdoms: a day in Grauwacht carries Aldmere’s streak on', () {
+    e.answer(e.freshWords(1).single, Grade.clean);
+    days(1);
+    final de = Engine(store.realm('de'), d, clock: () => now);
+    de.answer(de.freshWords(1).single, Grade.clean);
+    days(1);
+    e.answer(e.freshWords(1).single, Grade.clean);
+    expect(e.streak, 3);
+    expect(de.streak, 3);
+  });
+
   test('the coronation trial opens at 80 % solid, crowns at 26 of 30 and cools down after a failure', () {
     final tier1 = d.tier(1);
     final need = (tier1.length * Engine.openShare).ceil();

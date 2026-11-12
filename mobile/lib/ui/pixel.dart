@@ -217,7 +217,7 @@ const figW = 40, figH = 43;
 /// arm: 0 stick, 1 sword, 2 spear, 3 bow, 4 daggers, 5 staff, 6 mace, 7 book.
 class _Fig {
   final int head, arm;
-  final bool shield, roundShield, cape, heavy, robe, mask, visor, bone, beard;
+  final bool shield, roundShield, cape, sash, heavy, robe, mask, visor, bone, beard;
   final String hairStyle;
   const _Fig({
     required this.head,
@@ -225,6 +225,7 @@ class _Fig {
     this.shield = false,
     this.roundShield = false,
     this.cape = false,
+    this.sash = false,
     this.heavy = false,
     this.robe = false,
     this.mask = false,
@@ -454,7 +455,7 @@ void _figure(_B b, _Fig f, HeroPose pose, int frame) {
       b.rect(13, 19, 18, 25, 'tabard');
       b.rows(14, 20, ['..##..', '.####.', '..##..', '..##..'], 'trim');
     } else if (!f.robe) {
-      b.line(11, 17, 19, 25, 'leather');
+      b.line(11, 17, 19, 25, f.sash ? 'sash' : 'leather');
     } else {
       b.rect(15, 17, 16, 26, 'trim');
     }
@@ -750,6 +751,16 @@ const _cloakTone = [
 
 Color _darker(Color c, double f) => Color.lerp(c, Colors.black, f)!;
 
+/// each kingdom's livery, in the order of Kingdom.all: its field and its metal. The hero wears them (tabard, sash,
+/// cape, plume and trim) while the job keeps the coat, so a Knight of Valdoro and a Knight of Alvamar differ at a glance
+const liveries = [
+  (Color(0xFF2B4F8E), Color(0xFFD6A93A)), // Aldmere: azure and gold
+  (Color(0xFF55585F), Color(0xFFD3D7DE)), // Grauwacht: slate and silver
+  (Color(0xFF9E1E1A), Color(0xFFE6B53C)), // Valdoro: crimson and gold
+  (Color(0xFF5E2D78), Color(0xFFE8CF7A)), // Beaumarais: purple and pale gold
+  (Color(0xFF22766A), Color(0xFFC07E3E)), // Alvamar: sea green and bronze
+];
+
 final _heroCache = <String, PixelArt>{};
 
 /// The hero for a pose and frame. [tier] is the job's tier: from tier 2 a fighter wears plate, from tier 3 the trim
@@ -762,8 +773,9 @@ PixelArt heroArt(
   required int cloak,
   required Garb garb,
   int tier = 0,
+  int livery = -1,
 }) {
-  final key = '${pose.index}/$frame/$weapon/$shield/$cloak/${garb.head}/${garb.arm}/${garb.tint}/$tier';
+  final key = '${pose.index}/$frame/$weapon/$shield/$cloak/${garb.head}/${garb.arm}/${garb.tint}/$tier/$livery';
   final hit = _heroCache[key];
   if (hit != null) return hit;
   final arm = garb.arm.clamp(0, 7);
@@ -776,6 +788,7 @@ PixelArt heroArt(
     shield: shield >= 0 && fighter,
     roundShield: shield == 0,
     cape: cloak >= 0,
+    sash: livery >= 0,
     heavy: heavy,
     robe: robe,
     hairStyle: switch (garb.head) {
@@ -785,16 +798,19 @@ PixelArt heroArt(
     },
   );
   final tint = _tint[garb.tint.clamp(0, _tint.length - 1)];
-  final cape = _cloakTone[cloak.clamp(0, 6)];
+  final liv = livery >= 0 ? liveries[livery.clamp(0, liveries.length - 1)] : null;
+  final cape = liv?.$1 ?? _cloakTone[cloak.clamp(0, 6)];
   final sh = _shieldTone[shield.clamp(0, 6)];
   final pal = <String, _T>{
     ..._common,
     'coat': _of(tint),
     'hood': _of(_darker(tint, .12)),
     'hat': _of(tint),
-    'tabard': _of(tint),
-    'plume': _of(cloak >= 0 ? cape : tint),
-    'gem': _of(cloak >= 0 ? cape : const Color(0xFFAE2E28)),
+    'tabard': _of(liv?.$1 ?? tint),
+    'plume': _of(liv?.$2 ?? (cloak >= 0 ? cape : tint)),
+    'gem': _of(liv?.$2 ?? (cloak >= 0 ? cape : const Color(0xFFAE2E28))),
+    if (liv != null) 'trim': _of(liv.$2),
+    if (liv != null) 'sash': _of(liv.$1),
     'cape': _of(_darker(cape, .16)),
     'metal': tier >= 4 && heavy ? _of(const Color(0xFF6E7488)) : _steel,
     'blade': _of(_weaponBlade[weapon.clamp(0, 6)]),
@@ -1153,8 +1169,12 @@ class HeroSprite extends StatefulWidget {
 
   /// a job not yet reached: the shape only, in one colour
   final bool shadow;
+
+  /// the kingdom whose livery is worn (its index in Kingdom.all), -1 for none
+  final int livery;
   const HeroSprite({
     super.key,
+    this.livery = -1,
     this.garb = const Garb(6, 0, 0),
     this.tier = 0,
     this.shadow = false,
@@ -1214,6 +1234,7 @@ class _HeroSpriteState extends State<HeroSprite> with SingleTickerProviderStateM
               cloak: widget.cloak,
               garb: widget.garb,
               tier: widget.tier,
+              livery: widget.livery,
             );
             final palette = widget.shadow ? {for (final k in art.palette.keys) k: pal.line} : art.palette;
             return CustomPaint(

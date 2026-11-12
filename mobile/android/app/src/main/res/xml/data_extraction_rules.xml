@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android's own backup and phone-to-phone transfer (Android 12 and newer): only the progress file under store/ -->
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="file" path="store/" />
+    </cloud-backup>
+    <device-transfer>
+        <include domain="file" path="store/" />
+    </device-transfer>
+</data-extraction-rules>

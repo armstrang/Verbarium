@@ -269,13 +269,19 @@ class Engine {
     store.touch();
   }
 
-  /// days in a row with at least one answer, counting today or yesterday as the latest
+  /// days in a row with at least one answer in any kingdom, counting today or yesterday as the latest: one streak
+  /// for the whole realm, whichever language was learned that day
   int get streak {
     var n = 0;
     var d = DateTime.fromMillisecondsSinceEpoch(now());
+    final logs = store.allLogs();
     bool active(DateTime x) {
-      final l = dayLog(dayKey(x.millisecondsSinceEpoch));
-      return l[0] + l[1] > 0;
+      final key = dayKey(x.millisecondsSinceEpoch);
+      for (final m in logs) {
+        final v = m[key];
+        if (v is List && v.length >= 2 && (v[0] as num) + (v[1] as num) > 0) return true;
+      }
+      return false;
     }
 
     if (!active(d)) d = d.subtract(const Duration(days: 1));

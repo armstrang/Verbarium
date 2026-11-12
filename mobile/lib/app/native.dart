@@ -56,4 +56,12 @@ class Native {
 
   /// ok | pending | cancel | error
   static Future<String> donBuy(String id) async => await _call<String>('donBuy', id) ?? 'error';
+
+  /// Cadangan: the system's own file picker writes [text] to a file the learner chooses (Download, Drive, a card).
+  /// ok | cancel | error
+  static Future<String> backupSave(String name, String text) async =>
+      await _call<String>('backupSave', {'name': name, 'text': text}) ?? 'error';
+
+  /// the text of a backup file the learner picks; null when nothing was picked or it could not be read
+  static Future<String?> backupOpen() => _call<String>('backupOpen');
 }

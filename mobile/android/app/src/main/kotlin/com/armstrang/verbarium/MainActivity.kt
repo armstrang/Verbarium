@@ -1,5 +1,6 @@
 package com.armstrang.verbarium
 
+import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.media.AudioAttributes
@@ -38,6 +39,11 @@ class MainActivity : FlutterActivity() {
     } catch (e: Exception) {
         false
     }
+    // Cadangan: the system's file picker, answered in onActivityResult
+    private var saveText: String? = null
+    private var saveResult: MethodChannel.Result? = null
+    private var openResult: MethodChannel.Result? = null
+
     @Volatile private var ready = false
     private var startedAt = 0L
 
@@ -78,6 +84,12 @@ class MainActivity : FlutterActivity() {
         "hitx_1" to R.raw.hitx_1,
         "hitx_2" to R.raw.hitx_2,
         "hitx_3" to R.raw.hitx_3,
+        // the kingdoms' arms coming alive (ui/crest.dart)
+        "crest_en" to R.raw.crest_en,
+        "crest_de" to R.raw.crest_de,
+        "crest_es" to R.raw.crest_es,
+        "crest_fr" to R.raw.crest_fr,
+        "crest_pt" to R.raw.crest_pt,
     )
 
     // one tune per title, and one for fights
@@ -142,7 +154,71 @@ class MainActivity : FlutterActivity() {
                     result.success(null)
                 }
                 "fromPlay" -> result.success(fromPlay())
+                "backupSave" -> {
+                    saveResult?.success("cancel")
+                    saveText = call.argument<String>("text") ?: ""
+                    saveResult = result
+                    val i = Intent(Intent.ACTION_CREATE_DOCUMENT)
+                        .addCategory(Intent.CATEGORY_OPENABLE)
+                        .setType("application/json")
+                        .putExtra(Intent.EXTRA_TITLE, call.argument<String>("name") ?: "verbarium.json")
+                    try {
+                        startActivityForResult(i, REQ_SAVE)
+                    } catch (_: ActivityNotFoundException) {
+                        saveResult = null
+                        result.success("error")
+                    }
+                }
+                "backupOpen" -> {
+                    openResult?.success(null)
+                    openResult = result
+                    val i = Intent(Intent.ACTION_OPEN_DOCUMENT)
+                        .addCategory(Intent.CATEGORY_OPENABLE)
+                        .setType("*/*")
+                    try {
+                        startActivityForResult(i, REQ_OPEN)
+                    } catch (_: ActivityNotFoundException) {
+                        openResult = null
+                        result.success(null)
+                    }
+                }
                 else -> result.notImplemented()
+            }
+        }
+    }
+
+    @Deprecated("startActivityForResult is enough here: two plain requests, no fragments")
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val uri = data?.data
+        when (requestCode) {
+            REQ_SAVE -> {
+                val r = saveResult ?: return
+                saveResult = null
+                val text = saveText ?: ""
+                saveText = null
+                if (resultCode != Activity.RESULT_OK || uri == null) return r.success("cancel")
+                try {
+                    contentResolver.openOutputStream(uri, "wt")?.use { it.write(text.toByteArray(Charsets.UTF_8)) }
+                        ?: return r.success("error")
+                    r.success("ok")
+                } catch (e: Exception) {
+                    r.success("error")
+                }
+            }
+            REQ_OPEN -> {
+                val r = openResult ?: return
+                openResult = null
+                if (resultCode != Activity.RESULT_OK || uri == null) return r.success(null)
+                try {
+                    val text = contentResolver.openInputStream(uri)?.use { s ->
+                        val bytes = s.readBytes()
+                        if (bytes.size > MAX_BACKUP) null else String(bytes, Charsets.UTF_8)
+                    }
+                    r.success(text)
+                } catch (e: Exception) {
+                    r.success(null)
+                }
             }
         }
     }
@@ -194,5 +270,11 @@ class MainActivity : FlutterActivity() {
         pool?.release()
         pool = null
         super.onDestroy()
+    }
+
+    companion object {
+        private const val REQ_SAVE = 4101
+        private const val REQ_OPEN = 4102
+        private const val MAX_BACKUP = 32 * 1024 * 1024
     }
 }

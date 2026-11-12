@@ -32,6 +32,7 @@ Widget _figure(BuildContext context, Job job, {double size = 132, HeroPose pose 
       weapon: g.tone('weapon'),
       shield: g.tone('shield'),
       cloak: g.tone('cloak'),
+      livery: App.I.livery,
       pose: pose,
       size: size,
     ),

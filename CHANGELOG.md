@@ -2,7 +2,28 @@
 
 ## v0.5 (alpha, not released)
 
-### v0.5-alpha-2: a first run for five kingdoms
+### v0.5-alpha-4: the arms of the kingdoms, backups, one streak
+
+- **The arms of the five kingdoms.** Going to another kingdom shows its arms coming alive for 2.5 seconds: the
+  dragon of Valdoro breathes fire, the lion of Aldmere roars, the griffin of Grauwacht beats its wings and cries,
+  the phoenix of Beaumarais flares, the eastern dragon of Alvamar sways after its pearl. Then the kingdom's own
+  crown comes down and its motto unrolls. Every beast, crown and sound is Verbarium's own. A tap ends it; with calm
+  motion the arms only fade in.
+- **Where you are:** the kingdom and its language are named on Today and over the learning screen. Tap the name for
+  Negeri, press it long to choose any of the five kingdoms at once.
+- **One streak** for the whole realm: a day of learning in any kingdom keeps it going.
+- **The roll of titles** in Negeri shows the title held in each kingdom; King in three of them makes you Emperor,
+  an honour that changes nothing else.
+- **Each kingdom's livery:** your character wears the colours of the kingdom you play (azure and gold, slate and
+  silver, crimson and gold, purple and pale gold, sea green and bronze).
+- **Backups.** Pengaturan → Cadangan saves everything (every kingdom, the chronicle, the settings) to a file you
+  choose, and restores it on a new phone after showing what it holds. Android's own backup now keeps only the
+  progress file. Verbarium still sends nothing anywhere; the privacy page says how.
+- **A coin beside the settings** opens Dukung Verbarium in the Play Store version; elsewhere it explains where
+  donations can be made.
+- The opening now reads **Vocabulary Quest**.
+
+### v0.5-alpha-3: a first run for five kingdoms
 
 - **The first run asks what it should:** the language the app speaks (the phone's language is marked), then the
   language you want to learn, as one of the five kingdoms, then the banner (Aldmere), an exam to aim for (the

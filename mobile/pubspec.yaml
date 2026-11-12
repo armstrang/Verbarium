@@ -27,6 +27,11 @@ flutter:
     - assets/deck/pt/
     - assets/realm/
     - assets/legal/
+    - assets/crest/en/
+    - assets/crest/de/
+    - assets/crest/es/
+    - assets/crest/fr/
+    - assets/crest/pt/
   fonts:
     - family: Fell
       fonts:

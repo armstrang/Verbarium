@@ -7,6 +7,8 @@ import 'package:flutter/services.dart' show rootBundle;
 import '../app/app.dart';
 import '../app/lang.dart';
 import '../app/native.dart';
+import '../data/deck.dart';
+import '../data/store.dart';
 import 'realm.dart';
 import 'theme.dart';
 import 'widgets.dart';
@@ -229,6 +231,40 @@ class SettingsPage extends StatelessWidget {
                         ),
                       ),
                     ]),
+                    _Group(tr('Cadangan', 'Backup', 'Copia de seguridad', 'Sauvegarde', 'Sicherung', 'Backup'), [
+                      _Link(
+                        tr(
+                          'Simpan cadangan',
+                          'Save a backup',
+                          'Guardar una copia',
+                          'Enregistrer une sauvegarde',
+                          'Sicherung speichern',
+                          'Salvar um backup',
+                        ),
+                        () => saveBackup(context),
+                      ),
+                      _Link(
+                        tr(
+                          'Pulihkan cadangan',
+                          'Restore a backup',
+                          'Restaurar una copia',
+                          'Restaurer une sauvegarde',
+                          'Sicherung wiederherstellen',
+                          'Restaurar um backup',
+                        ),
+                        () => restoreBackup(context),
+                      ),
+                      _Note(
+                        tr(
+                          'Satu berkas berisi semua negeri, gelar, kronik dan pengaturanmu. Kamu yang memilih tempatnya: folder Download, Drive atau kartu memori. Android juga mencadangkan kemajuanmu ke akun Google-mu sendiri bila cadangan ponselmu menyala.',
+                          'One file with every kingdom, title, chronicle and setting. You choose where it goes: Download, Drive or a memory card. Android also backs up your progress to your own Google account when your phone\'s backup is on.',
+                          'Un archivo con todos tus reinos, títulos, crónica y ajustes. Tú eliges dónde va: Descargas, Drive o una tarjeta de memoria. Android también guarda tu progreso en tu propia cuenta de Google si la copia del teléfono está activada.',
+                          'Un fichier avec tous tes royaumes, titres, chronique et réglages. Tu choisis où il va : Téléchargements, Drive ou une carte mémoire. Android sauvegarde aussi ta progression sur ton propre compte Google si la sauvegarde du téléphone est activée.',
+                          'Eine Datei mit allen Königreichen, Titeln, deiner Chronik und den Einstellungen. Du wählst, wohin sie kommt: Download, Drive oder eine Speicherkarte. Android sichert deinen Fortschritt außerdem in deinem eigenen Google-Konto, wenn die Sicherung des Handys an ist.',
+                          'Um arquivo com todos os reinos, títulos, crônica e configurações. Você escolhe onde ele fica: Download, Drive ou um cartão de memória. O Android também faz backup do seu progresso na sua própria conta Google se o backup do celular estiver ativado.',
+                        ),
+                      ),
+                    ]),
                     _Group(tr('Tentang', 'About', 'Acerca de', 'À propos', 'Über', 'Sobre'), [
                       _Link(
                         tr(
@@ -337,6 +373,115 @@ class SettingsPage extends StatelessWidget {
       },
     );
   }
+}
+
+/// Cadangan: the whole save written to a file the learner chooses, through Android's own file picker
+Future<void> saveBackup(BuildContext context) async {
+  final now = DateTime.now();
+  String two(int n) => n.toString().padLeft(2, '0');
+  final name = 'verbarium-${now.year}-${two(now.month)}-${two(now.day)}.json';
+  App.I.root.flush();
+  final r = await Native.backupSave(name, App.I.root.backupText(now));
+  if (!context.mounted || r == 'cancel') return;
+  await notice(
+    context,
+    title: r == 'ok'
+        ? tr(
+            'Cadangan tersimpan',
+            'Backup saved',
+            'Copia guardada',
+            'Sauvegarde enregistrée',
+            'Sicherung gespeichert',
+            'Backup salvo',
+          )
+        : tr(
+            'Gagal menyimpan',
+            'Could not save',
+            'No se pudo guardar',
+            'Échec de l’enregistrement',
+            'Speichern fehlgeschlagen',
+            'Não foi possível salvar',
+          ),
+    text: r == 'ok'
+        ? tr(
+            'Simpan berkas $name baik-baik. Di ponsel baru, pasang Verbarium lalu pilih Pulihkan cadangan.',
+            'Keep $name somewhere safe. On a new phone, install Verbarium and choose Restore a backup.',
+            'Guarda $name en un lugar seguro. En un teléfono nuevo, instala Verbarium y elige Restaurar una copia.',
+            'Garde $name en lieu sûr. Sur un nouveau téléphone, installe Verbarium et choisis Restaurer une sauvegarde.',
+            'Bewahre $name gut auf. Auf einem neuen Handy installierst du Verbarium und wählst Sicherung wiederherstellen.',
+            'Guarde $name num lugar seguro. Num celular novo, instale o Verbarium e escolha Restaurar um backup.',
+          )
+        : tr(
+            'Berkasnya tidak bisa ditulis di sana. Coba tempat lain.',
+            'The file could not be written there. Try another place.',
+            'No se pudo escribir el archivo ahí. Prueba otro lugar.',
+            'Le fichier n’a pas pu être écrit là. Essaie un autre endroit.',
+            'Die Datei ließ sich dort nicht schreiben. Versuch einen anderen Ort.',
+            'Não foi possível gravar o arquivo aí. Tente outro lugar.',
+          ),
+  );
+}
+
+/// what a backup holds, one line per kingdom: its title and the words met
+String backupSummary(Map<String, dynamic> d) {
+  String line(Kingdom k, Map m) {
+    final r = ((m['rank'] as num?)?.toInt() ?? 0).clamp(0, rankNames.length - 1);
+    final seen = m['mem'] is Map ? (m['mem'] as Map).length : 0;
+    return '${k.name}: ${rankNames[r]} · $seen ${tr('kata', 'words', 'palabras', 'mots', 'Wörter', 'palavras')}';
+  }
+
+  final realms = d['realms'] is Map ? d['realms'] as Map : const {};
+  return [
+    for (final k in Kingdom.all)
+      if (k.code == 'en' ? d['mem'] is Map && (d['mem'] as Map).isNotEmpty : realms[k.code] is Map)
+        line(k, k.code == 'en' ? d : realms[k.code] as Map),
+  ].join('\n');
+}
+
+/// Cadangan: a backup file read back, checked, and put in place of this phone's progress after a yes
+Future<void> restoreBackup(BuildContext context) async {
+  final text = await Native.backupOpen();
+  if (!context.mounted || text == null) return;
+  final d = Store.fromBackup(text);
+  if (d == null) {
+    await notice(
+      context,
+      title: tr(
+        'Bukan cadangan Verbarium',
+        'Not a Verbarium backup',
+        'No es una copia de Verbarium',
+        'Pas une sauvegarde de Verbarium',
+        'Keine Verbarium-Sicherung',
+        'Não é um backup do Verbarium',
+      ),
+      text: tr(
+        'Berkas ini tidak bisa dibaca sebagai cadangan, atau dibuat oleh Verbarium yang lebih baru. Kemajuanmu tidak diubah.',
+        'This file cannot be read as a backup, or was made by a newer Verbarium. Your progress was not changed.',
+        'Este archivo no se puede leer como copia, o lo hizo un Verbarium más nuevo. Tu progreso no ha cambiado.',
+        'Ce fichier ne peut pas être lu comme sauvegarde, ou vient d’un Verbarium plus récent. Ta progression n’a pas changé.',
+        'Diese Datei lässt sich nicht als Sicherung lesen oder stammt von einem neueren Verbarium. Dein Fortschritt bleibt unverändert.',
+        'Este arquivo não pode ser lido como backup, ou foi feito por um Verbarium mais novo. Seu progresso não mudou.',
+      ),
+    );
+    return;
+  }
+  final sum = backupSummary(d);
+  final yes = await confirm(
+    context,
+    title: tr(
+      'Pulihkan cadangan ini?',
+      'Restore this backup?',
+      '¿Restaurar esta copia?',
+      'Restaurer cette sauvegarde ?',
+      'Diese Sicherung wiederherstellen?',
+      'Restaurar este backup?',
+    ),
+    text:
+        '${sum.isEmpty ? '' : '$sum\n\n'}${tr('Semua kemajuan di ponsel ini akan diganti isi cadangan. Ini tidak bisa dibatalkan.', 'All progress on this phone will be replaced by the backup. This cannot be undone.', 'Todo el progreso de este teléfono se sustituirá por la copia. No se puede deshacer.', 'Toute la progression de ce téléphone sera remplacée par la sauvegarde. C’est irréversible.', 'Aller Fortschritt auf diesem Handy wird durch die Sicherung ersetzt. Das lässt sich nicht rückgängig machen.', 'Todo o progresso deste celular será substituído pelo backup. Não dá para desfazer.')}',
+    yes: tr('Pulihkan', 'Restore', 'Restaurar', 'Restaurer', 'Wiederherstellen', 'Restaurar'),
+  );
+  if (!yes) return;
+  await App.I.restore(d);
 }
 
 /// a group of settings on its own card, with its name above it
@@ -637,6 +782,17 @@ class PrivacyPage extends StatelessWidget {
         'Rien. Verbarium n’a ni publicité, ni statistiques, ni traceurs, et n’envoie rien à aucun serveur.',
         'Nichts. Verbarium hat keine Werbung, keine Analyse und keine Tracker und sendet nichts an einen Server.',
         'Nada. O Verbarium não tem anúncios, análises nem rastreadores, e não envia nada para nenhum servidor.',
+      ),
+    ),
+    (
+      tr('Cadangan', 'Backups', 'Copias de seguridad', 'Sauvegardes', 'Sicherungen', 'Backups'),
+      tr(
+        'Simpan cadangan menulis satu berkas ke tempat yang kamu pilih sendiri lewat pemilih berkas Android; Verbarium tidak mengirimnya ke mana pun. Cadangan otomatis Android (bila menyala di ponselmu) menyimpan berkas kemajuan ke akun Google-mu sendiri; itu diurus oleh Android, bukan oleh Verbarium, dan bisa dimatikan di pengaturan ponsel.',
+        'Save a backup writes one file to a place you choose yourself through Android\'s file picker; Verbarium sends it nowhere. Android\'s own backup (when it is on in your phone) keeps the progress file in your own Google account; that is done by Android, not by Verbarium, and can be turned off in the phone\'s settings.',
+        'Guardar una copia escribe un archivo en el lugar que tú eliges con el selector de archivos de Android; Verbarium no lo envía a ningún sitio. La copia automática de Android (si está activada en tu teléfono) guarda el archivo de progreso en tu propia cuenta de Google; eso lo hace Android, no Verbarium, y se puede desactivar en los ajustes del teléfono.',
+        'Enregistrer une sauvegarde écrit un fichier à l’endroit que tu choisis toi-même avec le sélecteur de fichiers d’Android ; Verbarium ne l’envoie nulle part. La sauvegarde d’Android (si elle est activée sur ton téléphone) garde le fichier de progression dans ton propre compte Google ; c’est Android qui s’en charge, pas Verbarium, et on peut la désactiver dans les réglages du téléphone.',
+        'Sicherung speichern schreibt eine Datei an einen Ort, den du selbst in der Dateiauswahl von Android wählst; Verbarium schickt sie nirgendwohin. Die Android-Sicherung (wenn sie auf deinem Handy an ist) legt die Fortschrittsdatei in deinem eigenen Google-Konto ab; das macht Android, nicht Verbarium, und es lässt sich in den Einstellungen des Handys ausschalten.',
+        'Salvar um backup grava um arquivo no lugar que você mesmo escolhe pelo seletor de arquivos do Android; o Verbarium não o envia para lugar nenhum. O backup do próprio Android (se estiver ativado no celular) guarda o arquivo de progresso na sua própria conta Google; isso é feito pelo Android, não pelo Verbarium, e pode ser desligado nas configurações do celular.',
       ),
     ),
     (
@@ -950,6 +1106,52 @@ class _SupportPageState extends State<SupportPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+/// The coin on Today, left of the settings: opens Dukung Verbarium when the app came from the Play Store; anywhere
+/// else it only says where donations can be made (no connection is opened)
+class DonateButton extends StatelessWidget {
+  const DonateButton({super.key});
+
+  static String get label => tr(
+    'Dukung Verbarium',
+    'Support Verbarium',
+    'Apoya a Verbarium',
+    'Soutenir Verbarium',
+    'Verbarium unterstützen',
+    'Apoiar o Verbarium',
+  );
+
+  Future<void> _open(BuildContext context) async {
+    final play = await Native.fromPlay();
+    if (!context.mounted) return;
+    if (play) {
+      await Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const SupportPage()));
+      return;
+    }
+    await notice(
+      context,
+      title: label,
+      text: tr(
+        'Donasi hanya bisa lewat Verbarium yang dipasang dari Play Store. Versi ini tetap lengkap dan gratis, dan dukungan memang tidak membuka apa pun.',
+        'Donations work only in Verbarium installed from the Play Store. This version is just as complete and free, and support unlocks nothing anyway.',
+        'Las donaciones solo funcionan en el Verbarium instalado desde Play Store. Esta versión está igual de completa y es gratis, y el apoyo no desbloquea nada de todos modos.',
+        'Les dons ne fonctionnent que dans le Verbarium installé depuis le Play Store. Cette version est tout aussi complète et gratuite, et le soutien ne débloque rien de toute façon.',
+        'Spenden gehen nur im Verbarium aus dem Play Store. Diese Version ist genauso vollständig und kostenlos, und Unterstützung schaltet ohnehin nichts frei.',
+        'As doações só funcionam no Verbarium instalado pela Play Store. Esta versão é igualmente completa e gratuita, e o apoio não desbloqueia nada mesmo.',
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    return Press(
+      onTap: () => _open(context),
+      label: label,
+      child: SizedBox(width: 44, height: 48, child: Icon(Icons.monetization_on_outlined, color: pal.gold, size: 24)),
     );
   }
 }

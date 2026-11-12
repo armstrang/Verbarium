@@ -20,7 +20,7 @@ One short theme belongs to the Chronicler, the player. It never changes; the way
                          (its notes bent to Phrygian), and the Chronicler's own theme tries to break through.
 Every piece is followed by its place alone (wind, town, hall, night) before it plays again: music, then silence
 that belongs to the place, as the lore asks.
-Effects made here as well: wrong, rise, levelup, fanfare, quill, seal, page, tap, hit, crit, hurt, victory, defeat, and each line's tap and hit (see sfx()). Every sound of the app now comes from this file.
+Effects made here as well: wrong, rise, levelup, fanfare, quill, seal, page, tap, hit, crit, hurt, victory, defeat, and each line's tap and hit (see sfx()); and\nthe five kingdoms' arms, crest_en … crest_pt (see crests()). Every sound of the app now comes from this file.
 
 The instruments are samples from two CC0 (public domain) libraries by Versilian Studios, used only to render the
 files; nothing of them ships in the app except the rendered music:
@@ -723,8 +723,80 @@ def sfx(k):
             one(f'hitx_{line}', hit_line(line, True), 1.6, rt=1.8, peak=-3)
 
 
+# ---------------------------------------------------------------------------------------------- the kingdoms' arms
+
+
+def crests(k):
+    """crest_en … crest_pt: what is heard while a kingdom's arms come alive (2.5 s, see ui/crest.dart): the beast's
+    voice when it moves (0.3-1.5 s), then its kingdom's call when the crown comes down (about 1.6 s). There are no
+    animal recordings here: every voice is played on the same CC0 instruments, with shaped noise for breath and fire."""
+    def noise(L, a, b, env):
+        n = int(L * SR)
+        x = bp(rng.standard_normal((n, 2)), a, b, 2)
+        return x * env(np.linspace(0, 1, n))[:, None]
+
+    def growl(L, a=70, b=900, rate=26.0):
+        n = int(L * SR); t = T(n)
+        am = .55 + .45 * np.sin(2 * np.pi * rate * t + 3 * np.sin(2 * np.pi * 3.1 * t))
+        x = bp(rng.standard_normal((n, 2)), a, b, 2) * am[:, None]
+        env = np.minimum(1, t / .08) * np.clip((L - t) / (L * .6), 0, 1) ** 1.4
+        return x * env[:, None]
+
+    def call(mx, notes, inst, at, beat=.16, gain=.5):
+        play(mx, k[inst], P(notes), at, beat, pan=.05, gain=gain, vel=.8, tag='call')
+        mx.add(k['timp'].hit(.6), at, 0, .35, .3, 'call')
+        mx.add(k['crash'].hit(.25), at + .02, 0, .16, .5, 'call')
+
+    def en(mx):  # Aldmere, the lion: a breath, a roar of low brass and cellos over a growl, a royal call
+        mx.add(noise(.4, 200, 1500, lambda u: np.sin(np.pi * u) ** 2) * .25, .3, 0, .4, .1, 'br')
+        mx.add(growl(.9, 60, 700, 24) * .55, .68, 0, .7, .25, 'roar')
+        for m, g in (('D2', .5), ('A2', .4), ('D3', .3)):
+            mx.add(k['horn'].note(midi(m) + 12, .8, .8) * g, .7, 0, .55, .4, 'roar')
+        mx.add(k['cellos'].note(midi('D2') + 12, .9, .8), .7, -.2, .4, .4, 'roar')
+        mx.add(k['timp'].hit(.8, shift=-5), .7, 0, .5, .3, 'roar')
+        call(mx, 'A3:.5 D4:.5 F#4:.5 A4:1.5', 'horn', 1.6)
+
+    def de(mx):  # Grauwacht, the griffin: wingbeats on the drum, a high cry on the violin, a stern call
+        for j in range(3):
+            mx.add(lp(k['frame'].hit(.45, length=.3), 1500), .3 + j * .16, 0, .45, .15, 'wing')
+            mx.add(noise(.14, 300, 2500, lambda u: (1 - u) ** 2) * .3, .3 + j * .16, 0, .4, .1, 'wing')
+        mx.add(k['fiddle'].note(midi('E6'), .55, .9), .8, .2, .9, .5, 'cry')
+        mx.add(k['fiddle'].note(midi('B5'), .35, .8), 1.12, .2, .8, .5, 'cry')
+        mx.add(noise(.5, 2500, 7000, lambda u: np.sin(np.pi * u)) * .4, .8, .2, .6, .3, 'cry')
+        call(mx, 'D4:.5 A4:.5 G4:.25 F4:.25 D4:1.5', 'horn', 1.6)
+
+    def es(mx):  # Valdoro, the dragon: an indrawn breath, fire, low brass beneath it, then a bright call
+        mx.add(noise(.4, 300, 2500, lambda u: u ** 2) * .3, .3, 0, .4, .1, 'br')
+        mx.add(noise(.8, 150, 5000, lambda u: np.minimum(1, u * 6) * (1 - u) ** .8) * .55, .7, -.1, .6, .3, 'fire')
+        mx.add(growl(.8, 50, 400, 18) * .35, .7, 0, .6, .2, 'fire')
+        for m in ('D2', 'Eb2'):
+            mx.add(k['horn'].note(midi(m) + 12, .75, .8) * .4, .72, 0, .5, .4, 'fire')
+        mx.add(k['roll'].hit(.5, length=.8), .7, 0, .35, .3, 'fire')
+        call(mx, 'A3:.25 D4:.25 E4:.25 F4:.5 E4:.25 D4:1.5', 'horn', 1.6)
+
+    def fr(mx):  # Beaumarais, the phoenix: flames rising as a harp sweep and sparks, then a courtly call
+        for j, m in enumerate(['D4', 'F#4', 'A4', 'D5', 'F#5', 'A5', 'D6', 'F#6']):
+            mx.add(k['harp'].note(midi(m), 1.2, .5), .45 + j * .06, -.5 + j * .14, .35, .5, 'rise')
+        mx.add(noise(.9, 400, 6000, lambda u: np.sin(np.pi * u) ** 1.5) * .3, .5, 0, .45, .3, 'rise')
+        for j, m in enumerate(['A6', 'D7', 'F#7', 'A7']):
+            mx.add(k['glock'].note(midi(m), .4, .35), .9 + j * .09, -.3 + j * .2, .25, .6, 'rise')
+        call(mx, 'A4:.25 B4:.25 C#5:.5 D5:.5 A4:1.5', 'harpsi', 1.6, gain=.6)
+        chord(mx, k['violas'], ['D4', 'F#4', 'A4'], 1.6, 1.0, gain=.1, vel=.55)
+
+    def pt(mx):  # Alvamar, the eastern dragon: sea wind, bells for the pearl, a call on the recorder over the waves
+        mx.add(noise(1.3, 150, 1800, lambda u: np.sin(np.pi * u) ** 2) * .35, .2, 0, .5, .3, 'sea')
+        for j, m in enumerate(['E5', 'B5', 'E6']):
+            mx.add(k['bells'].note(midi(m), 1.6, .3), .7 + j * .18, -.3 + j * .3, .25, .6, 'pearl')
+        for j, m in enumerate(['E4', 'G#4', 'B4', 'E5']):
+            mx.add(k['fharp'].note(midi(m), .8, .4), .5 + j * .08, .2, .35, .4, 'pearl')
+        call(mx, 'B4:.25 E5:.5 F#5:.25 G#5:.5 E5:1.5', 'recorder', 1.6, gain=.6)
+
+    for code, build in (('en', en), ('de', de), ('es', es), ('fr', fr), ('pt', pt)):
+        mx = Mix(3.0); build(mx); mx.render(f'crest_{code}', rt=2.4, lufs=-17, fade=.4)
+
+
 if __name__ == '__main__':
-    jobs = {'m0': peasant, 'm1': squire, 'm2': knight, 'm3': baron, 'm4': count, 'm5': duke, 'm6': king, 'battle': battle, 'sfx': sfx}
+    jobs = {'m0': peasant, 'm1': squire, 'm2': knight, 'm3': baron, 'm4': count, 'm5': duke, 'm6': king, 'battle': battle, 'sfx': sfx, 'crests': crests}
     k = kit()
     for name in (sys.argv[1:] or jobs):
         jobs[name](k)

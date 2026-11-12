@@ -19,6 +19,7 @@ import 'pixel.dart';
 import 'root.dart';
 import 'theme.dart';
 import 'widgets.dart';
+import 'world.dart' show KingdomName;
 
 enum RunKind { learn, placement, trial, sub, defence }
 
@@ -629,6 +630,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
             const SizedBox(width: 8),
           ],
         ),
+        // which kingdom, which language: said quietly over the desk
+        if (!_fight) const Padding(padding: EdgeInsets.only(left: 12), child: KingdomName(active: false)),
         if (_fight) _arena(context),
         if (_timed && !_fight)
           Padding(
@@ -798,6 +801,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 weapon: g.tone('weapon'),
                 shield: g.tone('shield'),
                 cloak: g.tone('cloak'),
+                livery: App.I.livery,
                 pose: _pose,
                 size: min(h - 10, 86.0),
               ),
@@ -1508,6 +1512,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                 weapon: _g.tone('weapon'),
                 shield: _g.tone('shield'),
                 cloak: _g.tone('cloak'),
+                livery: App.I.livery,
                 pose: HeroPose.cheer,
                 size: 104,
               )

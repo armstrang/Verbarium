@@ -80,6 +80,9 @@ class App extends ChangeNotifier {
   String get realm => Kingdom.all.any((k) => k.code == _set['realm']) ? _set['realm'] as String : 'en';
   Kingdom get kingdom => Kingdom.of(realm);
 
+  /// the kingdom's place in Kingdom.all: the livery the hero wears there
+  int get livery => Kingdom.all.indexWhere((k) => k.code == realm);
+
   /// where another kingdom stands without loading it: the title held and the words met
   ({int rank, int seen}) standing(String code) {
     final m = code == 'en' ? root.data : (root.map('realms')[code] as Map<String, dynamic>? ?? const {});
@@ -206,6 +209,15 @@ class App extends ChangeNotifier {
     if (battle == on) return;
     battle = on;
     syncMusic();
+  }
+
+  /// a backup read back in place of everything on this phone: every kingdom, the settings and the chronicle
+  Future<void> restore(Map<String, dynamic> data) async {
+    root.replace(data);
+    await _load();
+    engine.checkDemotion();
+    syncMusic();
+    notifyListeners();
   }
 
   Future<void> resetProgress() async {

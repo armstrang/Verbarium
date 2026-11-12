@@ -153,6 +153,18 @@ class Store {
     'runekeeper': 'bulwark',
   };
 
+  /// the day logs of every kingdom, Aldmere's first: one streak is kept across all of them
+  List<Map> allLogs() {
+    if (_parent != null) return _parent.allLogs();
+    final realms = data['realms'];
+    return [
+      if (data['log'] is Map) data['log'] as Map,
+      if (realms is Map)
+        for (final r in realms.values)
+          if (r is Map && r['log'] is Map) r['log'] as Map,
+    ];
+  }
+
   Map<String, dynamic> map(String key) {
     // every kingdom shares the settings
     if (key == 'set' && _parent != null) return _parent.map('set');
@@ -186,6 +198,35 @@ class Store {
     if (_parent != null) return _parent.touch();
     _timer?.cancel();
     _timer = Timer(const Duration(milliseconds: 400), flush);
+  }
+
+  /// the whole save as one text, to be kept somewhere else (Pengaturan → Cadangan); the keys are the store's own
+  String backupText(DateTime when) =>
+      const JsonEncoder.withIndent(' ').convert({'verbarium': 1, 'saved': when.toIso8601String(), 'store': data});
+
+  /// a save read back from a backup (or a bare state.json); null when the text is not one, or comes from a newer
+  /// Verbarium than this one
+  static Map<String, dynamic>? fromBackup(String text) {
+    try {
+      final d = json.decode(text);
+      if (d is! Map<String, dynamic>) return null;
+      final s = d['verbarium'] == 1 ? d['store'] : d;
+      if (s is! Map<String, dynamic>) return null;
+      final v = s['v'];
+      if (v is! num || v > schema) return null;
+      if (s['set'] is! Map && s['mem'] is! Map && s['realms'] is! Map) return null;
+      migrate(s);
+      return s;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// puts a whole save in place of this one (the root store only), and writes it at once
+  void replace(Map<String, dynamic> d) {
+    assert(_parent == null);
+    data = d;
+    flush();
   }
 
   void flush() {
