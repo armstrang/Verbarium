@@ -2,6 +2,12 @@
 
 ## v0.5 (alpha, not released)
 
+### v0.5-alpha-5: the new arms everywhere
+
+- The old plain shields (cross, peak, sun, flame, waves) are gone: the five kingdoms now show their new arms
+  everywhere, in the list under the map, the kingdom's name on Today and over the desk, Pindah negeri, the banner
+  and the first run.
+
 ### v0.5-alpha-4: the arms of the kingdoms, backups, one streak
 
 - **The arms of the five kingdoms.** Going to another kingdom shows its arms coming alive for 2.5 seconds: the

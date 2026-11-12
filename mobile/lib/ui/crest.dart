@@ -29,6 +29,25 @@ Future<void> showCrest(BuildContext context, String code) {
   );
 }
 
+/// a kingdom's arms at rest, as a picture (lists, Today, the banner, the first run): large ones as pixels, small
+/// ones smoothed so the beast still reads
+class KingdomArms extends StatelessWidget {
+  final String code;
+  final double height;
+  const KingdomArms(this.code, {super.key, required this.height});
+
+  @override
+  Widget build(BuildContext context) => ExcludeSemantics(
+    child: Image.asset(
+      'assets/crest/$code/full.png',
+      height: height,
+      width: height * 260 / 310,
+      filterQuality: height < 80 ? FilterQuality.medium : FilterQuality.none,
+      gaplessPlayback: true,
+    ),
+  );
+}
+
 class CrestPart {
   final String name, group;
   const CrestPart(this.name, this.group);

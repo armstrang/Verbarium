@@ -14,6 +14,7 @@ import '../data/deck.dart';
 import '../engine/game.dart';
 import 'banner.dart' show examOf;
 import 'chronicle.dart';
+import 'crest.dart' show KingdomArms;
 import 'hero.dart';
 import 'world.dart';
 import 'pixel.dart';
@@ -538,7 +539,7 @@ class _OnboardingState extends State<Onboarding> {
             label: '${k.name}, ${k.language}',
             child: Row(
               children: [
-                CustomPaint(size: const Size(30, 35), painter: KingdomShield(Color(k.tint), k.charge)),
+                KingdomArms(k.code, height: 44),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Column(
@@ -740,9 +741,7 @@ class _OnboardingState extends State<Onboarding> {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         const SizedBox(height: 8),
-        Center(
-          child: CustomPaint(size: const Size(72, 84), painter: KingdomShield(Color(k.tint), k.charge)),
-        ),
+        Center(child: KingdomArms(k.code, height: 120)),
         const SizedBox(height: 10),
         Center(child: Text(k.name, style: T.display(34, pal.ink))),
         Center(child: Text(k.language, style: T.body(16, pal.muted))),
@@ -843,7 +842,7 @@ class _OnboardingState extends State<Onboarding> {
               const SizedBox(height: 8),
               Row(
                 children: [
-                  CustomPaint(size: const Size(30, 35), painter: KingdomShield(Color(k.tint), k.charge)),
+                  KingdomArms(k.code, height: 44),
                   const SizedBox(width: 12),
                   Expanded(
                     child: Column(

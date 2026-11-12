@@ -411,7 +411,7 @@ class KingdomName extends StatelessWidget {
     final row = Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        CustomPaint(size: const Size(15, 18), painter: KingdomShield(Color(k.tint), k.charge)),
+        KingdomArms(k.code, height: 26),
         const SizedBox(width: 8),
         Flexible(
           child: Text(
@@ -517,7 +517,7 @@ class KingdomRow extends StatelessWidget {
         ),
         child: Row(
           children: [
-            CustomPaint(size: const Size(28, 32), painter: KingdomShield(Color(k.tint), k.charge)),
+            KingdomArms(k.code, height: 42),
             const SizedBox(width: 12),
             Expanded(
               child: Column(
@@ -546,75 +546,6 @@ class KingdomRow extends StatelessWidget {
       ),
     );
   }
-}
-
-/// a kingdom's arms: its colour and a mark of its own (a cross, a peak, a sun, a flame, waves)
-class KingdomShield extends CustomPainter {
-  final Color field;
-  final int charge;
-  KingdomShield(this.field, this.charge);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final w = size.width, h = size.height;
-    final path = Path()
-      ..moveTo(1, 1)
-      ..lineTo(w - 1, 1)
-      ..lineTo(w - 1, h * 0.48)
-      ..quadraticBezierTo(w - 1, h * 0.86, w / 2, h - 1)
-      ..quadraticBezierTo(1, h * 0.86, 1, h * 0.48)
-      ..close();
-    canvas.drawPath(path, Paint()..color = field);
-    final mark = Paint()
-      ..color = const Color(0xFFFCFBF7)
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = w * 0.09;
-    switch (charge) {
-      case 0:
-        canvas.drawLine(Offset(w / 2, h * 0.16), Offset(w / 2, h * 0.72), mark);
-        canvas.drawLine(Offset(w * 0.28, h * 0.32), Offset(w * 0.72, h * 0.32), mark);
-      case 1:
-        canvas.drawPath(
-          Path()
-            ..moveTo(w * 0.22, h * 0.66)
-            ..lineTo(w * 0.5, h * 0.24)
-            ..lineTo(w * 0.78, h * 0.66)
-            ..close(),
-          Paint()..color = const Color(0xFFEAE6DA),
-        );
-      case 2:
-        canvas.drawCircle(Offset(w / 2, h * 0.43), w * 0.18, Paint()..color = const Color(0xFFD9B861));
-      case 3:
-        canvas.drawPath(
-          Path()
-            ..moveTo(w / 2, h * 0.18)
-            ..quadraticBezierTo(w * 0.24, h * 0.42, w / 2, h * 0.58)
-            ..quadraticBezierTo(w * 0.76, h * 0.42, w / 2, h * 0.18),
-          mark,
-        );
-        canvas.drawLine(Offset(w * 0.28, h * 0.68), Offset(w * 0.72, h * 0.68), mark);
-      default:
-        for (final y in [0.36, 0.56]) {
-          canvas.drawPath(
-            Path()
-              ..moveTo(w * 0.18, h * y)
-              ..quadraticBezierTo(w * 0.34, h * (y - 0.1), w * 0.5, h * y)
-              ..quadraticBezierTo(w * 0.66, h * (y + 0.1), w * 0.82, h * y),
-            mark,
-          );
-        }
-    }
-    canvas.drawPath(
-      path,
-      Paint()
-        ..style = PaintingStyle.stroke
-        ..strokeWidth = 1.4
-        ..color = const Color(0xFF1C1B19),
-    );
-  }
-
-  @override
-  bool shouldRepaint(KingdomShield old) => old.field != field || old.charge != charge;
 }
 
 // ---------------------------------------------------------------------------- the world map

@@ -10,7 +10,7 @@ import '../app/lang.dart';
 import '../data/deck.dart';
 import 'theme.dart';
 import 'widgets.dart';
-import 'world.dart' show KingdomShield;
+import 'crest.dart' show KingdomArms;
 
 /// the exams a kingdom's road leads towards, as the test owners name them
 String examOf(String code) => switch (code) {
@@ -87,7 +87,7 @@ class BannerPill extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            CustomPaint(size: const Size(18, 22), painter: KingdomShield(Color(k.tint), k.charge)),
+            KingdomArms(k.code, height: 28),
             const SizedBox(width: 6),
             Text(k.language, style: T.body(14.5, pal.ink, w: FontWeight.w700)),
             Icon(Icons.chevron_right, size: 18, color: pal.muted),
@@ -128,7 +128,7 @@ Future<void> showBanner(BuildContext context) async {
                 children: [
                   Row(
                     children: [
-                      CustomPaint(size: const Size(34, 40), painter: KingdomShield(Color(k.tint), k.charge)),
+                      KingdomArms(k.code, height: 50),
                       const SizedBox(width: 12),
                       Expanded(
                         child: Column(
