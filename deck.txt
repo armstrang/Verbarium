@@ -1,0 +1,30 @@
+definitions 6912 of 6912
+es meanings 6912 of 6912 collocations 84 of 84
+fr meanings 6912 of 6912 collocations 84 of 84
+de meanings 6912 of 6912 collocations 84 of 84
+pt meanings 6912 of 6912 collocations 84 of 84
+('colloc', 2) 20
+('colloc', 3) 26
+('colloc', 4) 20
+('colloc', 5) 11
+('colloc', 6) 7
+('core', 1) 1054
+('core', 2) 568
+('core', 3) 1053
+('core', 4) 1805
+('core', 5) 1054
+('core', 6) 360
+('ielts', 1) 88
+('ielts', 2) 31
+('ielts', 3) 102
+('ielts', 4) 155
+('ielts', 5) 112
+('ielts', 6) 17
+('toefl', 1) 26
+('toefl', 2) 18
+('toefl', 3) 64
+('toefl', 4) 177
+('toefl', 5) 206
+('toefl', 6) 22
+core 5894 toefl 513 ielts 505
+deck ok

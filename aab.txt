@@ -1,0 +1,17 @@
+Resolving dependencies...
+Downloading packages...
+  material_color_utilities 0.13.0 (0.13.1 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.3 (2.4.4 available)
+Got dependencies!
+3 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'bundleRelease'...                          
+Font asset "MaterialIcons-Regular.otf" was tree-shaken, reducing it from 1645184 to 3728 bytes (99.8% reduction). Tree-shaking can be disabled by providing the --no-tree-shake-icons flag when building your app.
+Caught exception: Already watching path: /home/runner/work/Verbarium/Verbarium/mobile/android
+Running Gradle task 'bundleRelease'...                             11.4s
+✓ Built build/app/outputs/bundle/release/app-release.aab (66.0MB)
+total 64504
+drwxr-xr-x 2 runner runner     4096 Nov 13 02:50 .
+drwxr-xr-x 3 runner runner     4096 Nov 13 02:50 ..
+-rw-r--r-- 1 runner runner 66042656 Nov 13 02:50 app-release.aab
