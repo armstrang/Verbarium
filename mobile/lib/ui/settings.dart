@@ -298,7 +298,7 @@ class SettingsPage extends StatelessWidget {
                           'Licenças de software',
                         ),
                         () =>
-                            showLicensePage(context: context, applicationName: 'Verbarium', applicationVersion: '0.5'),
+                            showLicensePage(context: context, applicationName: 'Verbarium', applicationVersion: '0.6'),
                       ),
                       const _SupportLink(),
                       _Link(
@@ -308,12 +308,12 @@ class SettingsPage extends StatelessWidget {
                       const SizedBox(height: 8),
                       Text(
                         tr(
-                          'Verbarium 0.5 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.\nMusik dimainkan dengan sampel instrumen CC0 dari VSCO 2 CE dan VCSL (Versilian Studios).',
-                          'Verbarium 0.5 (test build) · by Armstrang\nWorks without internet. Your progress lives only on this phone.\nThe music is played on CC0 instrument samples from VSCO 2 CE and VCSL (Versilian Studios).',
-                          'Verbarium 0.5 (versión de prueba) · por Armstrang\nFunciona sin internet. Tu progreso vive solo en este teléfono.\nLa música se toca con muestras de instrumentos CC0 de VSCO 2 CE y VCSL (Versilian Studios).',
-                          'Verbarium 0.5 (version de test) · par Armstrang\nFonctionne sans internet. Ta progression ne vit que sur ce téléphone.\nLa musique est jouée avec des échantillons d’instruments CC0 de VSCO 2 CE et VCSL (Versilian Studios).',
-                          'Verbarium 0.5 (Testversion) · von Armstrang\nFunktioniert ohne Internet. Dein Fortschritt liegt nur auf diesem Handy.\nDie Musik wird mit CC0-Instrumentensamples aus VSCO 2 CE und VCSL (Versilian Studios) gespielt.',
-                          'Verbarium 0.5 (versão de teste) · por Armstrang\nFunciona sem internet. Seu progresso fica só neste celular.\nA música é tocada com amostras de instrumentos CC0 do VSCO 2 CE e do VCSL (Versilian Studios).',
+                          'Verbarium 0.6 (uji coba) · oleh Armstrang\nBekerja tanpa internet. Kemajuanmu hanya ada di ponsel ini.\nMusik dimainkan dengan sampel instrumen CC0 dari VSCO 2 CE dan VCSL (Versilian Studios).',
+                          'Verbarium 0.6 (test build) · by Armstrang\nWorks without internet. Your progress lives only on this phone.\nThe music is played on CC0 instrument samples from VSCO 2 CE and VCSL (Versilian Studios).',
+                          'Verbarium 0.6 (versión de prueba) · por Armstrang\nFunciona sin internet. Tu progreso vive solo en este teléfono.\nLa música se toca con muestras de instrumentos CC0 de VSCO 2 CE y VCSL (Versilian Studios).',
+                          'Verbarium 0.6 (version de test) · par Armstrang\nFonctionne sans internet. Ta progression ne vit que sur ce téléphone.\nLa musique est jouée avec des échantillons d’instruments CC0 de VSCO 2 CE et VCSL (Versilian Studios).',
+                          'Verbarium 0.6 (Testversion) · von Armstrang\nFunktioniert ohne Internet. Dein Fortschritt liegt nur auf diesem Handy.\nDie Musik wird mit CC0-Instrumentensamples aus VSCO 2 CE und VCSL (Versilian Studios) gespielt.',
+                          'Verbarium 0.6 (versão de teste) · por Armstrang\nFunciona sem internet. Seu progresso fica só neste celular.\nA música é tocada com amostras de instrumentos CC0 do VSCO 2 CE e do VCSL (Versilian Studios).',
                         ),
                         style: T.body(15, pal.muted, height: 1.5),
                       ),

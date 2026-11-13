@@ -154,6 +154,10 @@ class MainActivity : FlutterActivity() {
                     result.success(null)
                 }
                 "fromPlay" -> result.success(fromPlay())
+                "widgetRefresh" -> {
+                    PracticeWidget.refresh(this)
+                    result.success(null)
+                }
                 "backupSave" -> {
                     saveResult?.success("cancel")
                     saveText = call.argument<String>("text") ?: ""

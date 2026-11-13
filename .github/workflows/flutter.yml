@@ -1,9 +1,9 @@
 name: Flutter
 
-# Test builds of Verbarium (0.5-alpha): every push to main. Same arrangement as XueCi: everything the run produces
+# Test builds of Verbarium (0.6-alpha): every push to main. Same arrangement as XueCi: everything the run produces
 # (Flutter version, deck check, analyzer and test output, screenshots, build log) is pushed to the branch
 # ci-out/<branch>, because a run's logs cannot be read from Claude's cloud sessions but a branch can. When every
-# check passes, the APK goes to a new pre-release v0.5-alpha-N (N counts up; never marked latest).
+# check passes, the APK goes to a new pre-release v0.6-alpha-N (N counts up; never marked latest).
 # Nothing here publishes to Google Play.
 on:
   push:
@@ -68,12 +68,12 @@ jobs:
           flutter test --update-goldens --reporter expanded > ../ci-out/test.txt 2>&1
           mkdir -p ../ci-out/shots && find test -name '*.png' -path '*goldens*' -exec cp {} ../ci-out/shots/ \; || true
 
-      # the next alpha number: one more than the highest v0.5-alpha-N published so far
+      # the next alpha number: one more than the highest v0.6-alpha-N published so far
       - name: Alpha number
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          last=$(gh api "repos/${{ github.repository }}/releases?per_page=100" --jq '.[].tag_name' | sed -n 's/^v0\.5-alpha-\([0-9]\+\)$/\1/p' | sort -n | tail -1)
+          last=$(gh api "repos/${{ github.repository }}/releases?per_page=100" --jq '.[].tag_name' | sed -n 's/^v0\.6-alpha-\([0-9]\+\)$/\1/p' | sort -n | tail -1)
           echo "ALPHA=$(( ${last:-0} + 1 ))" >> "$GITHUB_ENV"
 
       # versionCode = 4000 + run, so each test build installs over the one before it
@@ -82,7 +82,7 @@ jobs:
         continue-on-error: true
         working-directory: mobile
         run: |
-          flutter build apk --release --build-number=$((4000 + GITHUB_RUN_NUMBER)) --build-name=0.5.0-alpha.${ALPHA} > ../ci-out/build.txt 2>&1
+          flutter build apk --release --build-number=$((4000 + GITHUB_RUN_NUMBER)) --build-name=0.6.0-alpha.${ALPHA} > ../ci-out/build.txt 2>&1
           ls -la build/app/outputs/flutter-apk/ >> ../ci-out/build.txt 2>&1
           cp build/app/outputs/flutter-apk/app-release.apk ../ci-out/verbarium-dev.apk || true
 
@@ -97,7 +97,7 @@ jobs:
         run: |
           if [ -z "$VERBARIUM_UPLOAD_PASSWORD" ]; then echo "no upload key secret: AAB skipped" > ../ci-out/aab.txt; exit 0; fi
           openssl enc -d -aes-256-cbc -pbkdf2 -iter 600000 -in ../keystore/upload.jks.enc -out ../keystore/upload.jks -pass env:VERBARIUM_UPLOAD_PASSWORD
-          flutter build appbundle --release --build-number=$((4000 + GITHUB_RUN_NUMBER)) --build-name=0.5.0-alpha.${ALPHA} > ../ci-out/aab.txt 2>&1
+          flutter build appbundle --release --build-number=$((4000 + GITHUB_RUN_NUMBER)) --build-name=0.6.0-alpha.${ALPHA} > ../ci-out/aab.txt 2>&1
           rm -f ../keystore/upload.jks
           ls -la build/app/outputs/bundle/release/ >> ../ci-out/aab.txt 2>&1
           cp build/app/outputs/bundle/release/app-release.aab ../Verbarium.aab
@@ -135,9 +135,9 @@ jobs:
         run: |
           cp ci-out/verbarium-dev.apk Verbarium-alpha.apk
           {
-            echo "**Versi uji coba, belum rilis.** 0.5-alpha-${ALPHA} (build $((4000 + GITHUB_RUN_NUMBER)), $(git rev-parse --short HEAD))."
+            echo "**Versi uji coba, belum rilis.** 0.6-alpha-${ALPHA} (build $((4000 + GITHUB_RUN_NUMBER)), $(git rev-parse --short HEAD))."
             echo
-            awk 'index($0,"## ")==1{if(p)exit; p=(index($0,"## v0.5")==1)} p' CHANGELOG.md | tail -n +2
+            awk 'index($0,"## ")==1{if(p)exit; p=(index($0,"## v0.6")==1)} p' CHANGELOG.md | tail -n +2
             echo
             echo "---"
             echo
@@ -150,9 +150,9 @@ jobs:
         if: steps.alpha.outcome == 'success'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v0.5-alpha-${{ env.ALPHA }}
+          tag_name: v0.6-alpha-${{ env.ALPHA }}
           target_commitish: ${{ github.sha }}
-          name: Verbarium 0.5-alpha-${{ env.ALPHA }}
+          name: Verbarium 0.6-alpha-${{ env.ALPHA }}
           body_path: alpha.md
           prerelease: true
           make_latest: false

@@ -22,9 +22,9 @@ and even then confirm first what will change and wait for his yes. Everything el
 | `mobile/lib/engine/jobs.dart` | `Jobs`: the tree (45 on the map + 7 hidden; the Count's tier asks whether the build still leads with the line's own side), `natural()` decides a job from a `Build`, `hiddenFor()`, perks (`Perk`), looks (`Garb`) |
 | `mobile/lib/app/lang.dart`, `l10n.dart` | `code` ('id', 'en', 'es', 'fr', 'de', 'pt') and `tr(id, en, es, fr, de, pt)`: every text is written in all six languages where it is used; data written only in English (gear, enemies, feats, job hints) gets the other four from `l10n.dart` through `tx(en)`. The learning language is universal (every kingdom); where it is the kingdom's own language, `via` (`set.via`, chosen once per kingdom on its banner, English by default) gives the language of meanings |
 | `mobile/lib/data/` | `store.dart` (one JSON document, keys listed at the top — never rename), `deck.dart` (also `Kingdom`: the five kingdoms, their tincture and the letters offered under the gap) |
-| `mobile/lib/app/` | `app.dart` (`App`: settings, sound, `stamp`), `native.dart` (channel `verbarium/native`) |
+| `mobile/lib/app/` | `app.dart` (`App`: settings, sound, `stamp`), `native.dart` (channel `verbarium/native`), `home_widget.dart` (`HomeWidget`: the practice widget's questions `files/widget/deck.json` and its answers `answers.jsonl`, read back on open: a choice for memory, 1–5 XP, ten a day keep the streak in `set.wd`) |
 | `mobile/lib/ui/` | `theme.dart` (`Pal`, `Look`, `T`, `Dur`), `widgets.dart` (paper, buttons, `Shield`, `Seal`), `root.dart` (app, opening ("Vocabulary Quest", English in every language), first run in four steps: language spoken, kingdom, banner or exam, where to start; tabs (`Shell.tab`), Today with the coin for Dukung Verbarium), `world.dart` (Negeri: the world map, the roll of titles with the Emperor (King in 3 kingdoms, an honour only), each kingdom's road, the ladder of titles; `KingdomName` on Today and over the desk, a long press for all five kingdoms), `crest.dart` (a kingdom's arms coming alive when it is entered, 2.5 s, a tap ends it; `KingdomArms`, the arms at rest wherever a kingdom is shown), `banner.dart` (a kingdom's banner: exam to aim for, language of meanings), `run.dart` (learning, trials and fights: gap, build, choice, the arena), `pixel.dart` (sprites as letter grids, `HeroSprite`, `EnemySprite`), `hero.dart` (Karakter), `coronation.dart`, `realm.dart` (where the score ranges come from), `chronicle.dart`, `settings.dart` |
-| `mobile/android/` | Kotlin `MainActivity.kt`: files folder, splash hand-over, MediaPlayer (ambience) + SoundPool (effects); `Donate.kt`: Google Play Billing for Dukung Verbarium (consumables `donasi_kecil`, `donasi_sedang`, `donasi_besar` that unlock nothing; the page shows only when Play has them, counted in `set.dn`) |
+| `mobile/android/` | Kotlin `MainActivity.kt`: files folder, splash hand-over, MediaPlayer (ambience) + SoundPool (effects); `PracticeWidget.kt`: the home-screen practice widget (RemoteViews, four words, no network); `Donate.kt`: Google Play Billing for Dukung Verbarium (consumables `donasi_kecil`, `donasi_sedang`, `donasi_besar` that unlock nothing; the page shows only when Play has them, counted in `set.dn`) |
 | `mobile/test/` | `deck_test`, `engine_test`, `contrast_test` (WCAG 4.5:1, both themes), `screens_test` (drives the app; pictures in `test/goldens/`, not committed: look at them) |
 | `docs/riset-skor.md` | where each title's score range comes from |
 
@@ -34,7 +34,7 @@ Cloud sessions: Flutter comes from XueCi's `dev-flutter-sdk` release (public dow
 `FLUTTER_ROOT=/opt/flutter dart pub get --offline`, `flutter analyze --no-pub`, `flutter test --no-pub --update-goldens`.
 Only packages in that cache resolve offline, so **no third-party plugins**: native needs go through the method
 channel. No Android SDK here: Kotlin is compiled by CI only. CI (`.github/workflows/flutter.yml`) pushes its
-output to the branch `ci-out/main` and publishes `v0.5-alpha-N` when everything passes.
+output to the branch `ci-out/main` and publishes `v0.6-alpha-N` when everything passes.
 
 ## Rules
 
@@ -51,6 +51,7 @@ output to the branch `ci-out/main` and publishes `v0.5-alpha-N` when everything 
 - **Six languages**: Indonesian, English, Spanish, French, German and Portuguese (`set.lang`: id, en, es, fr, de, pt).
   A new text goes in as `tr('…', '…', '…', '…', '…', '…')` (French with ’, never '); names of titles and jobs stay English in every language. A
   definition never uses the word it explains. `docs/privasi.md` and Pengaturan → Privasi say the same thing.
+- **Hints in the gap** (`Engine.hintLevel`): a new word always shows its meaning; A1–A2 the meaning, B1–B2 the first letter written in the gap (one long line after it, never the length), C1–C2 the line alone (through English the definition); below, only the kind of word. A first miss opens the meaning, a second the answer. XP for a gap: 10, 7 after Petunjuk, 5 after a miss, 1 after being shown, 0.
 - **Jobs** are decided by the build at a coronation (`Game.onPromotion`); there is no way to pick or change one,
   and a perk may never touch memory, rank or a coronation trial.
 - **App text** sounds human, short, "kamu"; the chronicle voice ("Tercatat …", "Engkau dinobatkan …") only in

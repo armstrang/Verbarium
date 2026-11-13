@@ -1,4 +1,14 @@
 <resources>
     <color name="vb_bg">#F5F2EA</color>
     <color name="ic_bg">#F5F2EA</color>
+    <!-- the practice widget (PracticeWidget.kt): paper by day -->
+    <color name="w_bg">#FCFBF7</color>
+    <color name="w_line">#CFC9BA</color>
+    <color name="w_field">#F5F2EA</color>
+    <color name="w_ink">#1C1B19</color>
+    <color name="w_muted">#5C574D</color>
+    <color name="w_gold">#8A6D22</color>
+    <color name="w_good">#2F5D3A</color>
+    <color name="w_bad">#8E1B16</color>
+    <color name="w_on">#FCFBF7</color>
 </resources>

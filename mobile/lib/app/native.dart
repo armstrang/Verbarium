@@ -64,4 +64,7 @@ class Native {
 
   /// the text of a backup file the learner picks; null when nothing was picked or it could not be read
   static Future<String?> backupOpen() => _call<String>('backupOpen');
+
+  /// asks the practice widget on the home screen to read widget/deck.json again
+  static Future<void> widgetRefresh() => _call<void>('widgetRefresh');
 }

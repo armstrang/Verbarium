@@ -1,0 +1,5 @@
+<resources>
+    <string name="widget_name">Verbarium: Übung</string>
+    <string name="widget_about">Ein Satz, vier Wörter, ohne Tippen</string>
+    <string name="widget_empty">Öffne Verbarium und lerne zuerst ein paar Wörter.</string>
+</resources>

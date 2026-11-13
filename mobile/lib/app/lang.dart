@@ -52,3 +52,13 @@ String tx(String en) {
   final t = l10n[en];
   return t != null && i < t.length ? t[i] : en;
 }
+
+/// the kind of word, in the language spoken
+String posName(String p) => switch (p) {
+  'n' => tr('kata benda', 'noun', 'sustantivo', 'nom', 'Nomen', 'substantivo'),
+  'v' => tr('kata kerja', 'verb', 'verbo', 'verbe', 'Verb', 'verbo'),
+  'adj' => tr('kata sifat', 'adjective', 'adjetivo', 'adjectif', 'Adjektiv', 'adjetivo'),
+  'adv' => tr('kata keterangan', 'adverb', 'adverbio', 'adverbe', 'Adverb', 'advérbio'),
+  'prep' => tr('kata depan', 'preposition', 'preposición', 'préposition', 'Präposition', 'preposição'),
+  _ => tr('kata sambung', 'conjunction', 'conjunción', 'conjonction', 'Konjunktion', 'conjunção'),
+};

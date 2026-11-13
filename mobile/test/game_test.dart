@@ -25,6 +25,36 @@ void main() {
     g = Game(store, e);
   });
 
+  test('a gap pays 10 unaided, 7 after the hint button, 5 after a slip; bonuses are flat and add nothing else', () {
+    final w = d.words.firstWhere((x) => x.tier == 3);
+    final clean = g.onAnswer(w, Quiz.cloze, Grade.clean, 9000).xp;
+    g.combo = 0;
+    final hinted = g.onAnswer(w, Quiz.cloze, Grade.helped, 9000, hinted: true).xp;
+    g.combo = 0;
+    final slip = g.onAnswer(w, Quiz.cloze, Grade.helped, 9000, err: 's').xp;
+    g.combo = 0;
+    final miss = g.onAnswer(w, Quiz.cloze, Grade.wrong, 9000, err: 'm').xp;
+    expect([clean, hinted, slip, miss], [10, 7, 5, 0]);
+    final xp = g.xp;
+    final combo = g.combo;
+    expect(g.bonus(5).xp, 5);
+    expect(g.bonus(1).xp, 1);
+    expect(g.xp, xp + 6);
+    expect(g.combo, combo, reason: 'a bonus leaves the combo alone');
+    expect(g.bonus(0).xp, 0);
+  });
+
+  test('how much of the meaning a gap shows: new words always, then less with each level', () {
+    Word at(int tier) => d.words.firstWhere((x) => x.tier == tier);
+    expect(Engine.hintLevel(at(4), true, false), 0, reason: 'a new word is introduced with its meaning');
+    expect(Engine.hintLevel(at(1), false, false), 0, reason: 'A1–A2 keep the meaning');
+    expect(Engine.hintLevel(at(2), false, false), 1, reason: 'B1: the first letter in the gap');
+    expect(Engine.hintLevel(at(3), false, false), 1, reason: 'B2: the first letter in the gap');
+    expect(Engine.hintLevel(at(4), false, false), 2, reason: 'C1: the gap alone');
+    expect(Engine.hintLevel(at(6), false, false), 2);
+    expect(Engine.hintLevel(at(5), false, true), 0, reason: 'through English the definition is the cue');
+  });
+
   test('collocations parse with one right partner and three wrong ones', () {
     expect(d.collocs.length, greaterThan(70));
     for (final c in d.collocs) {

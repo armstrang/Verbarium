@@ -207,27 +207,18 @@ class _RealmWorldState extends State<RealmWorld> with TickerProviderStateMixin {
         const SizedBox(height: 8),
         Text(
           tr(
-            'Ketuk wilayah untuk turun',
-            'Tap a land to go down',
-            'Toca una tierra para bajar',
-            'Touche une terre pour descendre',
-            'Tippe auf ein Land, um hinabzusteigen',
-            'Toque numa terra para descer',
+            'Ketuk wilayah atau lambang untuk masuk',
+            'Tap a land or a crest to enter',
+            'Toca una tierra o un escudo para entrar',
+            'Touche une terre ou un blason pour entrer',
+            'Tippe auf ein Land oder ein Wappen, um einzutreten',
+            'Toque numa terra ou num brasão para entrar',
           ),
           style: T.body(14, pal.muted),
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 16),
-        const Rise(child: TitleRoll()),
-        const SizedBox(height: 16),
-        for (final (i, k) in Kingdom.all.indexed)
-          Rise(
-            delay: Duration(milliseconds: 60 * i),
-            child: Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: KingdomRow(k, onTap: () => _go(k.code)),
-            ),
-          ),
+        Rise(child: TitleRoll(onEnter: _go)),
       ],
     );
   }
@@ -299,10 +290,13 @@ class _CloudPainter extends CustomPainter {
   bool shouldRepaint(_CloudPainter old) => old.t != t;
 }
 
-/// The roll of titles: the five arms side by side, the title held under each. Whoever is King in three kingdoms is
-/// named Emperor above them, an honour only: it changes no memory, rank or trial.
+/// The roll of titles, the way into every kingdom: the five arms side by side, each with the title held there, the
+/// kingdom's name and the words met; the kingdom being played is framed in gold. Whoever is King in three kingdoms
+/// is named Emperor, an honour only: it changes no memory, rank or trial.
 class TitleRoll extends StatelessWidget {
-  const TitleRoll({super.key});
+  /// a tap on a kingdom's arms; null in a picture of the roll
+  final void Function(String code)? onEnter;
+  const TitleRoll({super.key, this.onEnter});
 
   /// Kings needed for the Emperor
   static const forEmperor = 3;
@@ -314,9 +308,74 @@ class TitleRoll extends StatelessWidget {
     final look = Look.of(context);
     final pal = look.pal;
     final app = App.I;
-    final emperor = kings(app) >= forEmperor;
+    final n = kings(app);
+    final emperor = n >= forEmperor;
+    Widget cell(Kingdom k) {
+      final st = app.standing(k.code);
+      final here = k.code == app.realm;
+      final started = st.seen > 0 || here;
+      final words = tr(
+        '${st.seen} kata',
+        '${st.seen} words',
+        '${st.seen} palabras',
+        '${st.seen} mots',
+        '${st.seen} Wörter',
+        '${st.seen} palavras',
+      );
+      final fresh = tr('belum dimulai', 'not begun', 'sin empezar', 'pas commencé', 'nicht begonnen', 'não iniciado');
+      return Expanded(
+        child: Press(
+          label: '${k.name}, ${k.language}, ${started ? rankNames[st.rank] : fresh}',
+          onTap: onEnter == null ? null : () => onEnter!(k.code),
+          child: AnimatedContainer(
+            duration: Dur.enter,
+            padding: const EdgeInsets.fromLTRB(2, 10, 2, 10),
+            decoration: BoxDecoration(
+              color: here ? pal.gold.withValues(alpha: pal.dark ? .16 : .1) : null,
+              border: Border.all(color: here ? pal.gold : Colors.transparent, width: 2),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              children: [
+                Opacity(opacity: started ? 1 : .42, child: KingdomArms(k.code, height: 58)),
+                const SizedBox(height: 4),
+                Text(
+                  started ? rankNames[st.rank] : '—',
+                  style: T.body(13, started ? pal.ink : pal.muted, w: FontWeight.w800),
+                  maxLines: 1,
+                  overflow: TextOverflow.fade,
+                  softWrap: false,
+                ),
+                Text(
+                  k.name,
+                  style: T.body(11.5, pal.muted, w: FontWeight.w500),
+                  maxLines: 1,
+                  overflow: TextOverflow.fade,
+                  softWrap: false,
+                ),
+                Text(
+                  started ? words : fresh,
+                  style: T.body(10.5, pal.muted, height: 1.15),
+                  maxLines: 2,
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                if (here) ...[
+                  const SizedBox(height: 2),
+                  Text(
+                    tr('DI SINI', 'HERE', 'AQUÍ', 'ICI', 'HIER', 'AQUI'),
+                    style: T.body(9.5, pal.gold, w: FontWeight.w800).copyWith(letterSpacing: 1.2),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     return Container(
-      padding: const EdgeInsets.fromLTRB(10, 12, 10, 12),
+      padding: const EdgeInsets.fromLTRB(6, 12, 6, 10),
       decoration: BoxDecoration(
         color: pal.field,
         border: Border.all(color: emperor ? pal.gold : pal.line, width: emperor ? 2 : 1),
@@ -334,62 +393,56 @@ class TitleRoll extends StatelessWidget {
               'Rolo de títulos',
             ),
           ),
-          if (emperor) ...[
-            const SizedBox(height: 6),
-            Text('Emperor', style: T.display(26, pal.gold)),
-            Text(
-              tr(
-                'King di ${kings(app)} negeri',
-                'King in ${kings(app)} kingdoms',
-                'King en ${kings(app)} reinos',
-                'King dans ${kings(app)} royaumes',
-                'King in ${kings(app)} Königreichen',
-                'King em ${kings(app)} reinos',
+          const SizedBox(height: 8),
+          Row(crossAxisAlignment: CrossAxisAlignment.start, children: [for (final k in Kingdom.all) cell(k)]),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 10, 8, 0),
+            child: Container(
+              padding: const EdgeInsets.only(top: 10),
+              decoration: BoxDecoration(
+                border: Border(top: BorderSide(color: pal.line)),
               ),
-              style: T.body(13.5, pal.muted),
-            ),
-          ],
-          const SizedBox(height: 10),
-          Row(
-            children: [
-              for (final k in Kingdom.all)
-                Expanded(
-                  child: Builder(
-                    builder: (context) {
-                      final st = app.standing(k.code);
-                      final started = st.seen > 0 || k.code == app.realm;
-                      return Column(
-                        children: [
-                          Opacity(
-                            opacity: started ? 1 : .38,
-                            child: Image.asset(
-                              'assets/crest/${k.code}/full.png',
-                              height: 52,
-                              filterQuality: FilterQuality.none,
-                              semanticLabel: k.name,
-                            ),
+              child: Row(
+                children: [
+                  Icon(Icons.workspace_premium_outlined, size: 22, color: pal.gold),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Emperor',
+                          style: emperor ? T.display(22, pal.gold) : T.body(14, pal.ink, w: FontWeight.w800),
+                        ),
+                        Text(
+                          tr(
+                            'King di $forEmperor negeri · $n dari $forEmperor',
+                            'King in $forEmperor kingdoms · $n of $forEmperor',
+                            'King en $forEmperor reinos · $n de $forEmperor',
+                            'King dans $forEmperor royaumes · $n sur $forEmperor',
+                            'King in $forEmperor Königreichen · $n von $forEmperor',
+                            'King em $forEmperor reinos · $n de $forEmperor',
                           ),
-                          const SizedBox(height: 4),
-                          Text(
-                            started ? rankNames[st.rank] : '—',
-                            style: T.body(12.5, started ? pal.ink : pal.muted, w: FontWeight.w700),
-                            maxLines: 1,
-                            overflow: TextOverflow.fade,
-                            softWrap: false,
-                          ),
-                          Text(
-                            k.name,
-                            style: T.body(11, pal.muted),
-                            maxLines: 1,
-                            overflow: TextOverflow.fade,
-                            softWrap: false,
-                          ),
-                        ],
-                      );
-                    },
+                          style: T.body(12.5, pal.muted),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-            ],
+                  SizedBox(
+                    width: 84,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(3),
+                      child: LinearProgressIndicator(
+                        value: min(n, forEmperor) / forEmperor,
+                        minHeight: 6,
+                        backgroundColor: pal.deep,
+                        color: pal.gold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),

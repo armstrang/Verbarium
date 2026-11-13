@@ -1,0 +1,5 @@
+<resources>
+    <string name="widget_name">Verbarium: practice</string>
+    <string name="widget_about">One sentence, four words, no typing</string>
+    <string name="widget_empty">Open Verbarium and learn a few words first.</string>
+</resources>

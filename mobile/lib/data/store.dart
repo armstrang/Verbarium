@@ -153,6 +153,14 @@ class Store {
     'runekeeper': 'bulwark',
   };
 
+  /// answers given in the home-screen widget, by day (`set.wd`, shared by every kingdom)
+  Map widgetDays() {
+    if (_parent != null) return _parent.widgetDays();
+    final s = data['set'];
+    final d = s is Map ? s['wd'] : null;
+    return d is Map ? d : const {};
+  }
+
   /// the day logs of every kingdom, Aldmere's first: one streak is kept across all of them
   List<Map> allLogs() {
     if (_parent != null) return _parent.allLogs();

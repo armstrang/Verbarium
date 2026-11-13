@@ -12,6 +12,7 @@ import '../data/store.dart';
 import '../engine/engine.dart';
 import '../engine/game.dart';
 import 'lang.dart' as lang;
+import 'home_widget.dart';
 import 'native.dart';
 
 class App extends ChangeNotifier {
@@ -93,12 +94,33 @@ class App extends ChangeNotifier {
   /// go to another kingdom: its own deck, title, character and chronicle
   Future<void> chooseRealm(String code) async {
     if (code == realm) return;
+    await syncWidget(); // the widget's answers belong to the kingdom being left
     _set['realm'] = code;
     root.flush();
     await _load();
     engine.checkDemotion();
     syncMusic();
     notifyListeners();
+    syncWidget();
+  }
+
+  Future<void>? _widgetSync;
+
+  /// the home-screen widget: its answers read back, today's questions written (see HomeWidget); one at a time
+  Future<void> syncWidget() {
+    final running = _widgetSync;
+    if (running != null) return running;
+    final f = () async {
+      try {
+        await HomeWidget.sync(this);
+        notifyListeners();
+      } catch (_) {
+        // the widget is a convenience: a failure here never stops the app
+      } finally {
+        _widgetSync = null;
+      }
+    }();
+    return _widgetSync = f;
   }
 
   /// the language the learner learns through, the same in every kingdom: 'id', 'en' (monolingual in Aldmere), 'es',

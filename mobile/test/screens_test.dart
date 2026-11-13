@@ -1072,4 +1072,35 @@ void main() {
     expect(find.text('Pulihkan cadangan'), findsOneWidget);
     await shot(tester, '91-cadangan');
   });
+
+  testWidgets('from Knight on, a word under review shows its first letter in the gap and only its kind below', (
+    tester,
+  ) async {
+    phone(tester);
+    await learner(tester, rank: 2);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await tester.tap(find.text('Lanjut belajar'));
+    await beat(tester, 900);
+    // step past new words and other kinds until a reviewed gap with a first letter comes up
+    for (var i = 0; i < 24 && !has(find.byKey(const ValueKey('gap-lead'))); i++) {
+      await answer(tester);
+      await beat(tester, 300);
+      await tester.pump(const Duration(milliseconds: 2700));
+      await beat(tester);
+    }
+    expect(find.byKey(const ValueKey('gap-lead')), findsOneWidget);
+    final lead = (tester.widget(find.byKey(const ValueKey('gap-lead'))) as Text).data!;
+    expect(RunScreen.probe.toLowerCase().startsWith(lead.toLowerCase()), isTrue);
+    expect(find.textContaining('huruf'), findsNothing, reason: 'the length of the word is never told');
+    await shot(tester, '92-petunjuk-huruf');
+    await tester.tap(find.text('Petunjuk'));
+    await beat(tester, 400);
+    await shot(tester, '93-petunjuk-dibuka');
+    // the rest of the word is enough: the first letter is already in the gap
+    await tester.enterText(find.byKey(const ValueKey('gap-field')), RunScreen.probe.substring(1));
+    await tester.tap(find.text('Periksa'));
+    await beat(tester, 300);
+    expect(find.text('+7 XP'), findsOneWidget, reason: 'right after the hint is worth 7');
+  });
 }

@@ -476,6 +476,7 @@ class Game {
     bool fresh = false,
     bool hadLapses = false,
     double stab = 0,
+    bool hinted = false,
   }) {
     final right = g != Grade.wrong;
     final news = <String>[];
@@ -516,7 +517,8 @@ class Game {
     var gain = 0;
     if (right) {
       gain = switch (quiz) {
-        Quiz.cloze => g == Grade.clean ? 10 + perk('xpCloze') : 5,
+        // 10 unaided, 7 after the hint button, 5 after a slip
+        Quiz.cloze => g == Grade.clean ? 10 + perk('xpCloze') : (hinted ? 7 : 5),
         Quiz.build => 6 + perk('xpBuild'),
         Quiz.choice => 3 + perk('xpChoice'),
       };
@@ -601,6 +603,15 @@ class Game {
     news.addAll(_checkFeats());
     store.touch();
     return Reward(gain, combo, crit, up, news);
+  }
+
+  /// a flat reward outside the table: a gap got right after one miss (5), the answer typed once it was shown (1),
+  /// the widget on the home screen (1-5). Touches nothing but experience.
+  Reward bonus(int n) {
+    if (n <= 0) return Reward(0, combo, false, false, const []);
+    final up = _gain(n);
+    store.touch();
+    return Reward(n, combo, false, up, up ? [_levelNews] : const []);
   }
 
   /// a collocation card: counts for experience and the collocation figure only

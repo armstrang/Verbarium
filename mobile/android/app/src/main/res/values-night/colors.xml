@@ -1,3 +1,13 @@
 <resources>
     <color name="vb_bg">#1B1A17</color>
+    <!-- the practice widget by candlelight -->
+    <color name="w_bg">#1E1C19</color>
+    <color name="w_line">#3B3731</color>
+    <color name="w_field">#26231F</color>
+    <color name="w_ink">#F2EEE4</color>
+    <color name="w_muted">#B9B2A3</color>
+    <color name="w_gold">#D6B25E</color>
+    <color name="w_good">#7DBF8A</color>
+    <color name="w_bad">#E08A80</color>
+    <color name="w_on">#1E1C19</color>
 </resources>

@@ -109,6 +109,12 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
   _Phase _phase = _Phase.ask;
   bool _nearUsed = false;
   String _nearWhy = '';
+
+  /// the hint button was used on this gap: right still counts, but helped (7 XP)
+  bool _hinted = false;
+
+  /// a first miss on this gap in learning: the meaning is opened and one more try is given
+  bool _missOnce = false;
   bool _finished = false;
   bool _passed = false;
   int _solidBefore = 0;
@@ -257,11 +263,13 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       ok ? _rightAnswer() : _wrong('o');
       return;
     }
-    final typed = _input.text.trim();
-    if (typed.isEmpty) return;
+    final rest = _input.text.trim();
+    if (rest.isEmpty) return;
+    final typed = it.quiz == Quiz.cloze ? _typedWith(rest) : rest;
     final w = it.w!;
     if (_phase == _Phase.shown) {
       if (w.accepts(typed)) {
+        _bonus(1);
         _advance();
       } else {
         _shake.forward(from: 0);
@@ -274,9 +282,67 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       _near('f');
     } else if (!_nearUsed && w.wanted.map((f) => slip(typed, f)).reduce(min) == 1) {
       _near('s');
+    } else if (_kind == RunKind.learn && !_missOnce) {
+      _missFirst();
     } else {
       _wrong('m');
     }
+  }
+
+  /// the first miss on a gap while learning: no grade yet, the meaning opens, and the gap waits for one more try
+  void _missFirst() {
+    setState(() {
+      _missOnce = true;
+      _phase = _Phase.near;
+      _nearWhy = 'm';
+      _input.clear();
+    });
+    _shake.forward(from: 0);
+    App.I.haptic(strong: true);
+    App.I.sfx('wrong', 0.6);
+  }
+
+  /// experience outside the table (see Game.bonus), shown like any other
+  void _bonus(int n) {
+    final r = _g.bonus(n);
+    _xp += r.xp;
+    if (r.levelUp) {
+      _news.addAll(r.news);
+      App.I.sfx('levelup');
+    }
+  }
+
+  bool get _meaningOpen {
+    final it = _item;
+    if (it.w == null) return true;
+    if (_hinted || _missOnce) return true;
+    if (_phase == _Phase.right || _phase == _Phase.miss || _phase == _Phase.shown) return true;
+    return Engine.hintLevel(it.w!, it.fresh, App.I.english) == 0;
+  }
+
+  /// Knight and Baron (B1–B2) get the word's first letter written in the gap, before one long line that says
+  /// nothing of its length; Count and above get the line alone. The meaning waits for a hint or a miss.
+  String get _lead {
+    final it = _item;
+    final w = it.w;
+    if (w == null || it.quiz != Quiz.cloze) return '';
+    if (Engine.hintLevel(w, it.fresh, App.I.english) != 1) return '';
+    final a = w.answer(App.I.british);
+    return a.isEmpty ? '' : a[0];
+  }
+
+  /// what was typed, with the first letter given in the gap put in front, unless the learner typed the whole word
+  /// again: whichever reading is right, or nearer to the word, is the one judged
+  String _typedWith(String rest) {
+    final lead = _lead;
+    if (lead.isEmpty) return rest;
+    final w = _item.w!;
+    final whole = lead + rest;
+    if (w.accepts(whole)) return whole;
+    if (w.accepts(rest)) return rest;
+    if (!rest.toLowerCase().startsWith(lead.toLowerCase())) return whole;
+    int near(String t) => w.wanted.map((f) => slip(t, f)).reduce(min);
+    return near(rest) < near(whole) ? rest : whole;
   }
 
   void _near(String why) {
@@ -297,7 +363,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     ok ? _rightAnswer() : _wrong('m');
   }
 
-  void _grade(Grade g, String err) {
+  void _grade(Grade g, String err, {bool hinted = false}) {
     final it = _item;
     final ms = _watch.elapsedMilliseconds;
     if (it.c != null) {
@@ -307,7 +373,17 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       final lapses = (_e.mem(w)?.lapses ?? 0) > 0;
       final stab = _e.mem(w)?.s ?? 0.0;
       _e.answer(w, g, count: _kind != RunKind.placement, quiz: it.quiz);
-      _reward = _g.onAnswer(w, it.quiz, g, ms, err: err, fresh: it.fresh, hadLapses: lapses, stab: stab);
+      _reward = _g.onAnswer(
+        w,
+        it.quiz,
+        g,
+        ms,
+        err: err,
+        fresh: it.fresh,
+        hadLapses: lapses,
+        stab: stab,
+        hinted: hinted,
+      );
     }
     _xp += _reward!.xp;
     if (_reward!.news.isNotEmpty) {
@@ -317,7 +393,26 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
   }
 
   void _rightAnswer() {
-    _grade(_nearUsed ? Grade.helped : Grade.clean, _nearUsed ? _nearWhy : '');
+    if (_missOnce) {
+      // right only after the meaning was opened by a miss: the word was not known (a miss for memory),
+      // but finding it is worth 5
+      _grade(Grade.wrong, 'm');
+      final r = _g.bonus(5);
+      _xp += r.xp;
+      _reward = r;
+      if (r.levelUp) {
+        _news.addAll(r.news);
+        App.I.sfx('levelup');
+      }
+      final it = _item;
+      if (it.tries < 2) _q.insert(min(_i + 4, _q.length), _Item(it.w, Quiz.cloze, false, it.tries + 1));
+    } else {
+      _grade(
+        _nearUsed || _hinted ? Grade.helped : Grade.clean,
+        _nearUsed ? _nearWhy : '',
+        hinted: _hinted && !_nearUsed,
+      );
+    }
     _clock.stop();
     _right++;
     if (_kind == RunKind.placement) _ptierRight++;
@@ -431,6 +526,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       _i++;
       _phase = _Phase.ask;
       _nearUsed = false;
+      _hinted = false;
+      _missOnce = false;
       _input.clear();
       _open();
     });
@@ -977,6 +1074,14 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       ),
     };
     final String? note = switch (_phase) {
+      _Phase.near when _nearWhy == 'm' => tr(
+        'Belum tepat. Artinya sekarang terlihat; coba sekali lagi.',
+        'Not yet. The meaning is showing now; try once more.',
+        'Todavía no. Ahora ves el significado; inténtalo otra vez.',
+        'Pas encore. Le sens est affiché ; essaie encore une fois.',
+        'Noch nicht. Jetzt siehst du die Bedeutung; versuch es noch einmal.',
+        'Ainda não. Agora o significado aparece; tente mais uma vez.',
+      ),
       _Phase.near =>
         _nearWhy == 'f'
             ? tr(
@@ -1043,12 +1148,12 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
         Semantics(
           label: typing
               ? tr(
-                  '${parts[0]} celah ${parts[1]}',
-                  '${parts[0]} gap ${parts[1]}',
-                  '${parts[0]} hueco ${parts[1]}',
-                  '${parts[0]} trou ${parts[1]}',
-                  '${parts[0]} Lücke ${parts[1]}',
-                  '${parts[0]} lacuna ${parts[1]}',
+                  '${parts[0]} celah${_lead.isEmpty ? '' : ' berawalan $_lead'} ${parts[1]}',
+                  '${parts[0]} gap${_lead.isEmpty ? '' : ' starting with $_lead'} ${parts[1]}',
+                  '${parts[0]} hueco${_lead.isEmpty ? '' : ' que empieza por $_lead'} ${parts[1]}',
+                  '${parts[0]} trou${_lead.isEmpty ? '' : ' commençant par $_lead'} ${parts[1]}',
+                  '${parts[0]} Lücke${_lead.isEmpty ? '' : ' mit $_lead am Anfang'} ${parts[1]}',
+                  '${parts[0]} lacuna${_lead.isEmpty ? '' : ' começando com $_lead'} ${parts[1]}',
                 )
               : '${parts[0]}$answer${parts[1]}',
           child: GestureDetector(
@@ -1066,9 +1171,9 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                         ? _GapField(
                             controller: _input,
                             focus: _focus,
-                            ghost: _phase == _Phase.shown ? answer : null,
+                            lead: _lead,
+                            ghost: _phase == _Phase.shown ? answer.substring(_lead.length) : null,
                             onDone: _check,
-                            minChars: max(5, answer.length),
                           )
                         : _GapWord(answer: answer, write: _write, told: _phase == _Phase.miss),
                   ),
@@ -1079,22 +1184,52 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
           ),
         ),
         const SizedBox(height: 16),
-        Text.rich(
-          TextSpan(
+        if (_meaningOpen)
+          Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: w.gloss,
+                  style: T.body(19, pal.ink, w: FontWeight.w500),
+                ),
+                TextSpan(
+                  text: '   ${_posName(w.pos)}${w.inflected ? ' · ${w.forms[0]}' : ''}',
+                  style: T.body(15, pal.muted),
+                ),
+              ],
+            ),
+          )
+        else
+          // B1 and above: only the kind of word, until a hint or a miss opens the meaning
+          Wrap(
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 12,
+            runSpacing: 6,
             children: [
-              TextSpan(
-                text: w.gloss,
-                style: T.body(19, pal.ink, w: FontWeight.w500),
-              ),
-              TextSpan(
-                text: '   ${_posName(w.pos)}${w.inflected ? ' · ${w.forms[0]}' : ''}',
-                style: T.body(15, pal.muted),
-              ),
+              Text(_posName(w.pos), style: T.body(15, pal.muted)),
+              if (_kind == RunKind.learn && (_phase == _Phase.ask || _phase == _Phase.near))
+                Press(
+                  label: tr('Petunjuk', 'Hint', 'Pista', 'Indice', 'Hinweis', 'Dica'),
+                  onTap: () => setState(() => _hinted = true),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.lightbulb_outline, size: 18, color: pal.gold),
+                        const SizedBox(width: 4),
+                        Text(
+                          tr('Petunjuk', 'Hint', 'Pista', 'Indice', 'Hinweis', 'Dica'),
+                          style: T.body(15, pal.gold, w: FontWeight.w700),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
             ],
           ),
-        ),
         // a kingdom of another language: the whole sentence in the learner's own, and the letters to type with
-        if (w.trans.isNotEmpty) ...[
+        if (w.trans.isNotEmpty && _meaningOpen) ...[
           const SizedBox(height: 6),
           Text(w.trans, style: T.body(16.5, pal.muted, height: 1.4)),
         ],
@@ -1149,7 +1284,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
 
   Widget _noteLine(String? note) {
     final pal = Look.of(context).pal;
-    final c = _phase == _Phase.right ? pal.good : (_phase == _Phase.near ? pal.muted : pal.bad);
+    final c = _phase == _Phase.right ? pal.good : (_phase == _Phase.near && _nearWhy != 'm' ? pal.muted : pal.bad);
     return ConstrainedBox(
       constraints: const BoxConstraints(minHeight: 26),
       child: AnimatedSwitcher(
@@ -1383,14 +1518,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     );
   }
 
-  static String _posName(String p) => switch (p) {
-    'n' => tr('kata benda', 'noun', 'sustantivo', 'nom', 'Nomen', 'substantivo'),
-    'v' => tr('kata kerja', 'verb', 'verbo', 'verbe', 'Verb', 'verbo'),
-    'adj' => tr('kata sifat', 'adjective', 'adjetivo', 'adjectif', 'Adjektiv', 'adjetivo'),
-    'adv' => tr('kata keterangan', 'adverb', 'adverbio', 'adverbe', 'Adverb', 'advérbio'),
-    'prep' => tr('kata depan', 'preposition', 'preposición', 'préposition', 'Präposition', 'preposição'),
-    _ => tr('kata sambung', 'conjunction', 'conjunción', 'conjonction', 'Konjunktion', 'conjunção'),
-  };
+  static String _posName(String p) => posName(p);
 
   // ------------------------------------------------------------------ endings
 
@@ -1670,18 +1798,20 @@ String stageName(int stage) => const ['I', 'II', 'III'][stage.clamp(0, 2)];
 
 /// The gap itself is the field: you tap it and type in the sentence. It is as wide as the word needs and grows
 /// with what is typed.
+/// The gap you type into: one unbroken line, the same length for every word (it tells nothing of the answer's
+/// length), with the first letter written in front of it when the title gives that hint.
 class _GapField extends StatelessWidget {
   final TextEditingController controller;
   final FocusNode focus;
+  final String lead;
   final String? ghost;
   final VoidCallback onDone;
-  final int minChars;
   const _GapField({
     required this.controller,
     required this.focus,
+    required this.lead,
     required this.ghost,
     required this.onDone,
-    required this.minChars,
   });
 
   @override
@@ -1699,32 +1829,40 @@ class _GapField extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border(bottom: BorderSide(color: pal.ink, width: 2)),
         ),
-        child: IntrinsicWidth(
-          child: ConstrainedBox(
-            constraints: BoxConstraints(minWidth: 14.0 * minChars.clamp(5, 12)),
-            child: TextField(
-              key: const ValueKey('gap-field'),
-              controller: controller,
-              focusNode: focus,
-              autofocus: true,
-              autocorrect: false,
-              enableSuggestions: false,
-              enableIMEPersonalizedLearning: false,
-              smartDashesType: SmartDashesType.disabled,
-              smartQuotesType: SmartQuotesType.disabled,
-              textCapitalization: TextCapitalization.none,
-              keyboardType: TextInputType.visiblePassword,
-              textInputAction: TextInputAction.done,
-              onEditingComplete: onDone,
-              cursorColor: pal.ink,
-              cursorWidth: 2,
-              style: style,
-              decoration: InputDecoration.collapsed(
-                hintText: ghost,
-                hintStyle: style.copyWith(color: pal.muted.withValues(alpha: 0.55)),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.alphabetic,
+          children: [
+            if (lead.isNotEmpty) Text(lead, key: const ValueKey('gap-lead'), style: style),
+            IntrinsicWidth(
+              child: ConstrainedBox(
+                constraints: const BoxConstraints(minWidth: 14.0 * 9),
+                child: TextField(
+                  key: const ValueKey('gap-field'),
+                  controller: controller,
+                  focusNode: focus,
+                  autofocus: true,
+                  autocorrect: false,
+                  enableSuggestions: false,
+                  enableIMEPersonalizedLearning: false,
+                  smartDashesType: SmartDashesType.disabled,
+                  smartQuotesType: SmartQuotesType.disabled,
+                  textCapitalization: TextCapitalization.none,
+                  keyboardType: TextInputType.visiblePassword,
+                  textInputAction: TextInputAction.done,
+                  onEditingComplete: onDone,
+                  cursorColor: pal.ink,
+                  cursorWidth: 2,
+                  style: style,
+                  decoration: InputDecoration.collapsed(
+                    hintText: ghost,
+                    hintStyle: style.copyWith(color: pal.muted.withValues(alpha: 0.55)),
+                  ),
+                ),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.6 (alpha, not released)
+
+### v0.6-alpha-1: practice on the home screen, hints that grow with the title
+
+- **A practice widget for the home screen.** One sentence with a gap from the kingdom you play and four words to
+  choose from, no typing. Below B1 the meaning shows from the start; above, only the kind of word, and the meaning
+  after you answer. A right answer is worth 1–5 XP and helps the memory a little (a wrong one brings the word back
+  sooner); ten answers in a day keep the streak. Today's twelve questions come round again until the app gives new
+  ones. Answers are kept on the phone and counted when Verbarium opens.
+- **Hints by title in the gap.** A new word always shows its meaning. Peasant and Squire (A1–A2) see the meaning;
+  Knight and Baron (B1–B2) get the word's first letter written in the gap, before one long line that says nothing
+  of its length, and only the kind of word below; Count and above get the line alone. A first miss opens the
+  meaning, a second shows the answer; the Petunjuk button opens the meaning at any time.
+- **Experience for a gap:** 10 unaided, 7 after Petunjuk, 5 after a miss, 1 once the answer was shown, 0 for a
+  miss (and the combo starts again). Nothing is taken from later answers.
+- **Negeri:** the list under the map is gone. The roll of titles is the way in: tap a kingdom's arms to enter it;
+  each shows the title held there, its name and the words met, the kingdom being played framed in gold, and how
+  far the Emperor is.
+
 ## v0.5 (alpha, not released)
 
 ### v0.5-alpha-5: the new arms everywhere

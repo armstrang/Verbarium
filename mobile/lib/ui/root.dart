@@ -105,6 +105,7 @@ class _RootState extends State<Root> with WidgetsBindingObserver {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Native.ready();
       if (!_opening) App.I.syncMusic();
+      App.I.syncWidget();
     });
   }
 
@@ -118,6 +119,8 @@ class _RootState extends State<Root> with WidgetsBindingObserver {
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.paused || state == AppLifecycleState.inactive) App.I.store.flush();
     if (state == AppLifecycleState.resumed && App.I.engine.checkDemotion()) App.I.changed();
+    // the home-screen widget: what it answered comes in, the latest questions go out
+    if (state == AppLifecycleState.resumed || state == AppLifecycleState.paused) App.I.syncWidget();
   }
 
   @override

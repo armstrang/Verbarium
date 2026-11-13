@@ -197,6 +197,15 @@ class Engine {
     if (!fresh && w.tier <= rank && rank > 0) _window(g != Grade.wrong);
   }
 
+  /// what of the meaning a gap shows before it is answered: 0 the meaning, 1 the first letter and the length,
+  /// 2 the length only. A new word always gets its meaning; then A1–A2 keep it, B1–B2 lose it, C1–C2 keep only
+  /// the length (or the English definition, when learning through English).
+  static int hintLevel(Word w, bool fresh, bool english) {
+    if (fresh || w.tier <= 1) return 0;
+    if (w.tier <= 3) return 1;
+    return english ? 0 : 2;
+  }
+
   /// what kind of slip a word last suffered: 'm' meaning, 's' spelling, 'f' form, 'o' order (see Game)
   String lastError(Word w) => store.map('er')[w.id] as String? ?? '';
 
@@ -269,14 +278,20 @@ class Engine {
     store.touch();
   }
 
+  /// answers in the home-screen widget that keep a day of the streak (HomeWidget.forStreak)
+  static const widgetStreak = 10;
+
   /// days in a row with at least one answer in any kingdom, counting today or yesterday as the latest: one streak
   /// for the whole realm, whichever language was learned that day
   int get streak {
     var n = 0;
     var d = DateTime.fromMillisecondsSinceEpoch(now());
     final logs = store.allLogs();
+    final widget = store.widgetDays();
     bool active(DateTime x) {
       final key = dayKey(x.millisecondsSinceEpoch);
+      // ten answers in the home-screen widget keep a day too
+      if (((widget[key] as num?) ?? 0) >= widgetStreak) return true;
       for (final m in logs) {
         final v = m[key];
         if (v is List && v.length >= 2 && (v[0] as num) + (v[1] as num) > 0) return true;
