@@ -8,6 +8,7 @@ import 'util.dart';
 import 'package:verbarium/data/store.dart';
 import 'package:verbarium/engine/engine.dart';
 import 'package:verbarium/engine/game.dart';
+import 'package:verbarium/ui/run.dart' show nearMeaning;
 
 Deck deck() => Deck(coreWords(), Deck.parseCollocs(File('assets/deck/collocations.txt').readAsStringSync()));
 
@@ -153,5 +154,16 @@ void main() {
     expect(g.accuracy, 100);
     expect(g.speed, 100);
     expect(g.diligence, greaterThan(0));
+  });
+
+  test('C1–C2: a word of the same kind and a shared sense earns a second chance, other words do not', () {
+    final ali = d.byId['alleviate']!;
+    expect(ali.tier, greaterThanOrEqualTo(4));
+    expect(nearMeaning(d, ali, 'ease'), isTrue, reason: 'both "meringankan"');
+    expect(nearMeaning(d, ali, 'relieve'), isTrue, reason: 'a word of another title counts too');
+    expect(nearMeaning(d, ali, 'house'), isFalse);
+    expect(nearMeaning(d, ali, 'alleviate'), isFalse, reason: 'the word itself is simply right');
+    final relieve = d.byId['relieve']!;
+    expect(nearMeaning(d, relieve, 'alleviate'), isFalse, reason: 'below C1 the first letter already helps');
   });
 }

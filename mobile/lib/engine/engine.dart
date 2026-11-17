@@ -485,11 +485,16 @@ class Engine {
     return Plan(dueCount, freshWords(freshToday).length, today[0] + today[1]);
   }
 
-  /// today's sitting: reviews first, a new word after every third one. A new word is met by choosing its meaning
-  /// and returns a few cards later as a gap. At most 70 cards.
-  List<Card> sitting({int extraFresh = 0}) {
-    final reviews = dueWords().take(48).toList();
-    final fresh = freshWords(freshToday + extraFresh);
+  /// Today's sitting. The reviews go like a sandwich: two likely wins first, the hardest in the middle, two wins to
+  /// close; a new word comes after every third review, met by choosing its meaning, and returns three cards later
+  /// as a gap. [focus] is the week's focus (Game.focus): 'p' gives words that change their form and long words as
+  /// gaps; 'i' puts the words forgotten before first among the hard ones. [maxCards] keeps the sitting to the
+  /// length this learner usually manages. At least six in ten questions are gaps.
+  List<Card> sitting({int extraFresh = 0, String focus = '', int maxCards = 70}) {
+    final cap = maxCards.clamp(10, 70);
+    final due = dueWords().take(min(48, cap)).toList();
+    final fresh = freshWords(min(freshToday + extraFresh, max(0, (cap - due.length) ~/ 2)));
+    final reviews = _sandwich(due, focus);
     final out = <Card>[];
     final later = <int, Word>{};
     var r = 0, f = 0;
@@ -499,22 +504,54 @@ class Engine {
       if (w != null) out.add(Card(w, Quiz.cloze, false));
     }
 
+    Quiz quizFor(Word w) {
+      final q = pickQuiz(w);
+      if (focus == 'p' && (w.inflected || w.id.length >= 9)) return Quiz.cloze;
+      return q;
+    }
+
     while (r < reviews.length || f < fresh.length) {
       for (var i = 0; i < 3 && r < reviews.length; i++) {
         final w = reviews[r++];
-        add(Card(w, pickQuiz(w), false));
+        add(Card(w, quizFor(w), false));
       }
       if (f < fresh.length) {
         final w = fresh[f++];
         add(Card(w, Quiz.choice, true));
         later[out.length + 3] = w;
       }
-      if (out.length >= 70) break;
+      if (out.length >= cap) break;
     }
     for (final w in later.values) {
       out.add(Card(w, Quiz.cloze, false));
     }
+    // gaps keep at least six in ten of the reviews
+    final asked = out.where((c) => !c.fresh).toList();
+    var other = asked.where((c) => c.quiz != Quiz.cloze).length;
+    for (var i = out.length - 1; i >= 0 && other > asked.length * 0.4; i--) {
+      final c = out[i];
+      if (!c.fresh && c.quiz != Quiz.cloze) {
+        out[i] = Card(c.w, Quiz.cloze, false);
+        other--;
+      }
+    }
     return out;
+  }
+
+  /// due words (most at risk first) put in sitting order: two likely wins, then the rest from the hardest, then the
+  /// two likeliest wins to close
+  List<Word> _sandwich(List<Word> due, String focus) {
+    if (due.length < 6) return due;
+    final l = List<Word>.of(due);
+    final easy = l.reversed.take(4).toList();
+    l.removeWhere(easy.contains);
+    if (focus == 'i') {
+      final lapsed = l.where((w) => (_mem[w.id]?.lapses ?? 0) >= 2).toList();
+      l
+        ..removeWhere(lapsed.contains)
+        ..insertAll(0, lapsed);
+    }
+    return [easy[2], easy[3], ...l, easy[1], easy[0]];
   }
 
   // ---------------------------------------------------------------- trials

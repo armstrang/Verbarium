@@ -70,6 +70,25 @@ class _Run extends StatefulWidget {
   State<_Run> createState() => _RunState();
 }
 
+/// A word typed in a C1–C2 gap that is another word of the deck, of the same kind, sharing a sense with the one
+/// asked: the learner knows the idea, not yet this word. Senses are the meaning's parts split at commas and
+/// semicolons, without what stands in brackets.
+bool nearMeaning(Deck deck, Word w, String typed) {
+  if (w.tier < 4) return false;
+  final t = typed.trim().toLowerCase();
+  if (t.isEmpty) return false;
+  Set<String> senses(String m) => {
+    for (final p in m.replaceAll(RegExp(r'\([^)]*\)'), '').split(RegExp('[,;/]')))
+      if (p.trim().isNotEmpty) p.trim().toLowerCase(),
+  };
+  final mine = senses(w.meaning);
+  for (final x in deck.words) {
+    if (x.id == w.id || x.pos != w.pos || !x.forms.any((f) => f.toLowerCase() == t)) continue;
+    if (senses(x.meaning).intersection(mine).isNotEmpty) return true;
+  }
+  return false;
+}
+
 class _Item {
   final Word? w;
   final Colloc? c;
@@ -106,6 +125,9 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
   final List<_Item> _q = [];
   int _i = 0;
   int _right = 0, _wrongN = 0, _done = 0, _freshSeen = 0, _xp = 0;
+
+  /// the last answers of this sitting (true right): when too many go wrong, new words wait for another day
+  final List<bool> _recent = [];
   _Phase _phase = _Phase.ask;
   bool _nearUsed = false;
   String _nearWhy = '';
@@ -171,7 +193,11 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     _input.addListener(_typed);
     switch (_kind) {
       case RunKind.learn:
-        final cards = _e.sitting(extraFresh: widget.s.extraFresh);
+        // the sitting fits the learner: the week's focus, and a length they usually finish
+        final focus = _g.focus;
+        final usual = _g.sittingLength;
+        final cap = focus == 'e' ? 24 : (usual != null && _g.quitRate > 0.5 ? max(12, usual + 2) : 70);
+        final cards = _e.sitting(extraFresh: widget.s.extraFresh, focus: focus, maxCards: cap);
         final collocs = App.I.deck.collocs.where((c) => c.tier <= _e.learning).toList()..shuffle(Random(_e.now()));
         var k = 0;
         for (var n = 0; n < cards.length; n++) {
@@ -284,6 +310,10 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     }
     if (w.accepts(typed)) {
       _rightAnswer();
+    } else if (!_nearUsed && _kind == RunKind.learn && nearMeaning(App.I.deck, w, typed)) {
+      // C1–C2: another word of the deck that means much the same; the sentence wants this one
+      _input.clear();
+      _near('n');
     } else if (!_nearUsed && w.wrongForm(typed)) {
       _near('f');
     } else if (!_nearUsed && w.wanted.map((f) => slip(typed, f)).reduce(min) == 1) {
@@ -332,7 +362,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     final it = _item;
     final w = it.w;
     if (w == null || it.quiz != Quiz.cloze) return '';
-    if (Engine.hintLevel(w, it.fresh || _e.isNew(w), App.I.english) != 1) return '';
+    final given = _nearUsed && _nearWhy == 'n';
+    if (!given && Engine.hintLevel(w, it.fresh || _e.isNew(w), App.I.english) != 1) return '';
     final a = w.answer(App.I.british);
     return a.isEmpty ? '' : a[0];
   }
@@ -369,6 +400,24 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     ok ? _rightAnswer() : _wrong('m');
   }
 
+  /// A sitting going badly (three misses in six): the new words still ahead wait, so the rest stays within reach.
+  /// Success near 85 % is where learning goes best.
+  void _holdFresh() {
+    final ahead = _q.sublist(_i + 1);
+    final held = {
+      for (final it in ahead)
+        if (it.fresh && it.w != null) it.w!.id,
+    };
+    if (held.isEmpty) return;
+    final kept = [
+      for (final it in ahead)
+        if (it.w == null || !held.contains(it.w!.id)) it,
+    ];
+    _q
+      ..removeRange(_i + 1, _q.length)
+      ..addAll(kept);
+  }
+
   void _typed() {
     final n = _input.text.length;
     if (_firstKey == 0 && n > 0) _firstKey = max(1, _watch.elapsedMilliseconds);
@@ -378,6 +427,11 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
 
   void _grade(Grade g, String err, {bool hinted = false}) {
     final it = _item;
+    _recent.add(g != Grade.wrong);
+    if (_kind == RunKind.learn && _recent.length >= 6) {
+      final last = _recent.sublist(_recent.length - 6);
+      if (last.where((x) => !x).length >= 3) _holdFresh();
+    }
     final ms = _watch.elapsedMilliseconds;
     if (it.c != null) {
       _reward = _g.onColloc(g != Grade.wrong);
@@ -428,8 +482,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     } else {
       _grade(
         _nearUsed || _hinted ? Grade.helped : Grade.clean,
-        _nearUsed ? _nearWhy : '',
-        hinted: _hinted && !_nearUsed,
+        _nearUsed && _nearWhy != 'n' ? _nearWhy : '',
+        hinted: (_hinted && !_nearUsed) || (_nearUsed && _nearWhy == 'n'),
       );
     }
     _clock.stop();
@@ -440,6 +494,15 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     if (_fight) {
       final calmBefore = !_rage;
       _enemyHp = max(0, _enemyHp - 1);
+      // the week of swiftness: against a guard of the road (never the coronation boss) a quick gap strikes twice
+      final it = _item;
+      if (_kind == RunKind.sub &&
+          _g.focus == 's' &&
+          it.w != null &&
+          !_nearUsed &&
+          _watch.elapsedMilliseconds < 2500 + 180 * it.w!.id.length) {
+        _enemyHp = max(0, _enemyHp - 1);
+      }
       _marks.add(true);
       _flashBad = false;
       _flash.forward(from: 0);
@@ -1107,6 +1170,14 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       ),
     };
     final String? note = switch (_phase) {
+      _Phase.near when _nearWhy == 'n' => tr(
+        'Bukan kata yang dicari. Artinya mirip, tapi kalimat ini butuh kata lain. Huruf pertamanya sekarang terlihat.',
+        'Not the word we want. It means much the same, but this sentence needs another. Its first letter is showing now.',
+        'No es la palabra buscada. Significa algo parecido, pero esta frase pide otra. Ahora ves su primera letra.',
+        'Ce n’est pas le mot cherché. Le sens est proche, mais cette phrase en veut un autre. Sa première lettre s’affiche.',
+        'Nicht das gesuchte Wort. Es bedeutet fast dasselbe, aber dieser Satz will ein anderes. Sein erster Buchstabe ist jetzt zu sehen.',
+        'Não é a palavra procurada. O sentido é parecido, mas esta frase pede outra. A primeira letra aparece agora.',
+      ),
       _Phase.near when _nearWhy == 'm' => tr(
         'Belum tepat. Artinya sekarang terlihat; coba sekali lagi.',
         'Not yet. The meaning is showing now; try once more.',

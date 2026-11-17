@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:verbarium/data/deck.dart';
 
@@ -370,5 +372,25 @@ void main() {
     }
 
     expect(builds('toefl'), greaterThan(builds('ielts')));
+  });
+
+  test('a sitting opens and closes with likely wins, keeps six in ten gaps, and fits the length asked', () {
+    final ws = d.tier(1).take(30).toList();
+    for (var i = 0; i < ws.length; i++) {
+      // stabilities from 1 to 30 days, all last seen 10 days ago: the short ones are most at risk
+      store.map('mem')[ws[i].id] = [1.0 + i, now - Engine.day, 3, 0, now - 10 * Engine.day, 1, 5.0];
+    }
+    e = Engine(store, d, clock: () => now);
+    final cards = e.sitting();
+    final reviews = cards.where((c) => !c.fresh && e.seen(c.w) && !e.isNew(c.w)).map((c) => c.w).toList();
+    final r = {for (final w in ws) w.id: e.recall(w)};
+    final middle = reviews.sublist(2, reviews.length - 2).map((w) => r[w.id]!);
+    expect(r[reviews.first.id]!, greaterThan(middle.reduce(min)));
+    expect(r[reviews.last.id]!, greaterThanOrEqualTo(middle.reduce(max)));
+    final asked = cards.where((c) => !c.fresh);
+    expect(asked.where((c) => c.quiz == Quiz.cloze).length, greaterThanOrEqualTo((asked.length * 0.6).floor()));
+    expect(e.sitting(maxCards: 20).length, lessThanOrEqualTo(26), reason: 'short, with the gaps of its new words');
+    final p = e.sitting(focus: 'p');
+    expect(p.where((c) => !c.fresh && (c.w.inflected || c.w.id.length >= 9)).every((c) => c.quiz == Quiz.cloze), isTrue);
   });
 }
