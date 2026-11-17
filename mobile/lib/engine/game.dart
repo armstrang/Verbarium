@@ -602,11 +602,81 @@ class Game {
     }
     _saveQuests();
 
+    news.addAll(_bounty(w, quiz, g, counted));
+    // rested: after days away, the experience of the way back counts twice until the pool is spent
+    if (firstOfDay) _rest();
+    final pool = _int('rx');
+    if (gain > 0 && pool > 0) {
+      final extra = min(gain, pool);
+      _g['rx'] = pool - extra;
+      gain += extra;
+    }
+
     final up = gain > 0 && _gain(gain);
     if (up) news.add(_levelNews);
     news.addAll(_checkFeats());
     store.touch();
     return Reward(gain, combo, crit, up, news);
+  }
+
+  // ---------------------------------------------------------------- the bounty board and rest
+
+  /// the Nemesis words of this kingdom: forgotten five times or more and not beaten yet
+  List<Word> get nemeses => [
+    for (final w in e.deck.words)
+      if (e.hard(w) && !beaten.contains(w.id)) w,
+  ];
+
+  /// Nemesis words beaten: two clean gaps on two days in a row of reviews, after becoming one
+  Set<String> get beaten => {...((_g['nmx'] as List?) ?? const []).cast<String>()};
+
+  bool isNemesis(Word w) => e.hard(w) && !beaten.contains(w.id);
+
+  List<String> _bounty(Word w, Quiz quiz, Grade g, bool counted) {
+    if (!isNemesis(w) || !counted) return const [];
+    final nm = (_g['nm'] ??= <String, dynamic>{}) as Map<String, dynamic>;
+    if (g == Grade.wrong) {
+      nm[w.id] = 0;
+      return const [];
+    }
+    if (quiz != Quiz.cloze || g != Grade.clean) return const [];
+    final n = ((nm[w.id] as num?)?.toInt() ?? 0) + 1;
+    if (n < 2) {
+      nm[w.id] = n;
+      return const [];
+    }
+    nm.remove(w.id);
+    final x = (_g['nmx'] ??= <dynamic>[]) as List;
+    x.add(w.id);
+    _gain(25);
+    e.note('nemesis', e.rank, extra: {'w': w.id});
+    final word = w.answer(false);
+    return [
+      tr(
+        'Nemesis kalah: $word (+25 XP)',
+        'Nemesis beaten: $word (+25 XP)',
+        'Némesis vencido: $word (+25 XP)',
+        'Némésis vaincu : $word (+25 XP)',
+        'Nemesis besiegt: $word (+25 XP)',
+        'Nêmesis vencido: $word (+25 XP)',
+      ),
+    ];
+  }
+
+  /// experience still counted twice after a time away (shown on Today)
+  int get rested => _int('rx');
+
+  /// the first answer of a study day: days away fill the pool, 60 XP for each day missed after the first, 300 at most
+  void _rest() {
+    final last = _g['rd'] as String?;
+    final today = Engine.studyDay(e.now());
+    _g['rd'] = today;
+    if (last == null) return;
+    final then = DateTime.tryParse('${last.substring(0, 4)}-${last.substring(4, 6)}-${last.substring(6)}');
+    final now = DateTime.tryParse('${today.substring(0, 4)}-${today.substring(4, 6)}-${today.substring(6)}');
+    if (then == null || now == null) return;
+    final away = now.difference(then).inDays - 1;
+    if (away >= 1) _g['rx'] = min(300, _int('rx') + 60 * away);
   }
 
   /// a flat reward outside the table: a gap got right after one miss (5), the answer typed once it was shown (1),
@@ -883,6 +953,7 @@ class Game {
     final b = build.total > 0 ? build : career;
     final pick = ['p', 's', 'i', 'e'][b.order.last];
     _g['fw'] = {'w': week, 'f': pick};
+    e.note('week', e.rank, extra: {'f': pick, 'fam': weakFamily ?? ''});
     store.touch();
     return pick;
   }

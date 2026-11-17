@@ -1,6 +1,8 @@
 /// Pengaturan: the banner, the daily load, sound, the look, and starting over.
 library;
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
@@ -109,6 +111,16 @@ class SettingsPage extends StatelessWidget {
                         'Palavras novas por dia',
                       ),
                       [
+                        _Choice(
+                          options: {
+                            '10': tr('Santai', 'Easy', 'Tranquilo', 'Tranquille', 'Gemütlich', 'Tranquilo'),
+                            '15': 'Normal',
+                            '25': tr('Kebut', 'Sprint', 'A tope', 'Sprint', 'Sprint', 'Acelerado'),
+                          },
+                          value: '${app.perDay}',
+                          onPick: (v) => app.put('perDay', int.parse(v)),
+                        ),
+                        const SizedBox(height: 10),
                         Row(
                           children: [
                             _Step(
@@ -138,6 +150,7 @@ class SettingsPage extends StatelessWidget {
                         ),
                       ],
                     ),
+                    if (app.realm == 'en') const ExamGroup(),
                     _Group(tr('Suara', 'Sound', 'Sonido', 'Son', 'Ton', 'Som'), [
                       _Toggle(
                         tr(
@@ -1153,5 +1166,103 @@ class DonateButton extends StatelessWidget {
       label: label,
       child: SizedBox(width: 44, height: 48, child: Icon(Icons.monetization_on_outlined, color: pal.gold, size: 24)),
     );
+  }
+}
+
+/// Hari ujian: the day of the TOEFL or IELTS. No review is set past it, the last two weeks bring no new words, and the
+/// pace that would finish the title being learned before it is suggested (never a promised score).
+class ExamGroup extends StatelessWidget {
+  const ExamGroup({super.key});
+
+  static String dayOf(DateTime d) =>
+      '${d.year}${d.month.toString().padLeft(2, '0')}${d.day.toString().padLeft(2, '0')}';
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final app = App.I;
+    final e = app.engine;
+    final days = e.examDays;
+    final left = e.deck.tier(e.learning).where((w) => !e.seen(w)).length;
+    String pace(int n) => n >= 25
+        ? tr('Kebut', 'Sprint', 'A tope', 'Sprint', 'Sprint', 'Acelerado')
+        : (n >= 15 ? 'Normal' : tr('Santai', 'Easy', 'Tranquilo', 'Tranquille', 'Gemütlich', 'Tranquilo'));
+    final room = days == null ? 0 : max(1, days - 14);
+    final need = days == null ? 0 : (left / room).ceil();
+    final suggest = need <= 10 ? 10 : (need <= 15 ? 15 : 25);
+    return _Group(tr('Hari ujian', 'Exam day', 'Día del examen', 'Jour de l’examen', 'Prüfungstag', 'Dia da prova'), [
+      Row(
+        children: [
+          Expanded(
+            child: Text(
+              days == null
+                  ? tr('Belum diisi', 'Not set', 'Sin fecha', 'Pas de date', 'Nicht gesetzt', 'Sem data')
+                  : tr(
+                      '$days hari lagi',
+                      'In $days days',
+                      'En $days días',
+                      'Dans $days jours',
+                      'In $days Tagen',
+                      'Em $days dias',
+                    ),
+              style: T.display(24, pal.ink),
+            ),
+          ),
+          Press(
+            onTap: () async {
+              final now = DateTime.fromMillisecondsSinceEpoch(e.now());
+              final d = await showDatePicker(
+                context: context,
+                initialDate: now.add(const Duration(days: 60)),
+                firstDate: now.add(const Duration(days: 1)),
+                lastDate: now.add(const Duration(days: 730)),
+              );
+              if (d != null) app.put('exam', dayOf(d));
+            },
+            label: tr(
+              'Pilih tanggal',
+              'Pick a date',
+              'Elegir fecha',
+              'Choisir une date',
+              'Datum wählen',
+              'Escolher data',
+            ),
+            child: SizedBox(width: 48, height: 48, child: Icon(Icons.event, color: pal.ink)),
+          ),
+          if (days != null)
+            Press(
+              onTap: () => app.put('exam', ''),
+              label: tr(
+                'Hapus tanggal',
+                'Clear the date',
+                'Borrar fecha',
+                'Effacer la date',
+                'Datum löschen',
+                'Apagar data',
+              ),
+              child: SizedBox(width: 48, height: 48, child: Icon(Icons.close, color: pal.ink)),
+            ),
+        ],
+      ),
+      _Note(
+        days == null
+            ? tr(
+                'Isi tanggal TOEFL atau IELTS-mu: jadwal ulangan tidak akan melewatinya, dan dua minggu terakhir dipakai untuk memperkuat kata yang lemah.',
+                'Set the date of your TOEFL or IELTS: no review will fall after it, and the last two weeks go to strengthening weak words.',
+                'Pon la fecha de tu TOEFL o IELTS: ningún repaso caerá después, y las dos últimas semanas sirven para reforzar las palabras débiles.',
+                'Indique la date de ton TOEFL ou IELTS : aucune révision ne tombera après, et les deux dernières semaines servent à renforcer les mots fragiles.',
+                'Trag das Datum deines TOEFL oder IELTS ein: keine Wiederholung fällt danach, und die letzten zwei Wochen stärken die schwachen Wörter.',
+                'Informe a data do seu TOEFL ou IELTS: nenhuma revisão cairá depois dela, e as duas últimas semanas servem para reforçar as palavras fracas.',
+              )
+            : tr(
+                'Kata baru gelar ini tinggal $left. Supaya habis sebelum masa persiapan, tempo yang cocok: ${pace(suggest)}. Ini saran, bukan janji skor.',
+                '$left new words are left in this title. To finish them before the weeks of preparation, a fitting pace: ${pace(suggest)}. A suggestion, not a promised score.',
+                'Quedan $left palabras nuevas en este título. Para terminarlas antes de las semanas de preparación, un ritmo adecuado: ${pace(suggest)}. Es una sugerencia, no una nota prometida.',
+                'Il reste $left nouveaux mots dans ce titre. Pour les finir avant les semaines de préparation, un rythme adapté : ${pace(suggest)}. Une suggestion, pas un score promis.',
+                'In diesem Titel sind noch $left neue Wörter übrig. Um sie vor den Vorbereitungswochen zu schaffen, passt das Tempo ${pace(suggest)}. Ein Vorschlag, kein versprochenes Ergebnis.',
+                'Restam $left palavras novas neste título. Para terminá-las antes das semanas de preparação, um ritmo adequado: ${pace(suggest)}. Uma sugestão, não uma nota prometida.',
+              ),
+      ),
+    ]);
   }
 }

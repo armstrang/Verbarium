@@ -6,6 +6,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:verbarium/engine/game.dart';
 import 'package:verbarium/app/app.dart';
 import 'package:verbarium/app/native.dart';
 import 'package:verbarium/data/store.dart';
@@ -1102,5 +1103,46 @@ void main() {
     await tester.tap(find.text('Periksa'));
     await beat(tester, 300);
     expect(find.text('+7 XP'), findsOneWidget, reason: 'right after the hint is worth 7');
+  });
+
+  testWidgets('the fog, the exam ahead, the training ground, and the book of words with its bounty board', (
+    tester,
+  ) async {
+    phone(tester);
+    final app = await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);
+    // a pile of reviews, one Nemesis, and an exam in 40 days
+    final mem = app.store.map('mem');
+    final words = app.deck.tier(2).toList();
+    for (var i = 0; i < 120; i++) {
+      mem[words[i].id] = [3.0 + i, now - Engine.day, 3, i == 0 ? 6 : 0, now - 9 * Engine.day, 1, 5.0];
+    }
+    final exam = DateTime.fromMillisecondsSinceEpoch(now).add(const Duration(days: 40));
+    app.put('exam', ExamGroup.dayOf(exam));
+    app.engine = Engine(app.store, app.deck, clock: () => now);
+    app.game = Game(app.store, app.engine);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    expect(find.textContaining('Kabut menebal'), findsOneWidget);
+    expect(find.textContaining('World Boss'), findsOneWidget);
+    expect(find.textContaining('Lapangan Latihan'), findsOneWidget);
+    await shot(tester, '94-kabut-raid');
+    await tester.tap(find.text('Negeri'));
+    await beat(tester, 900);
+    await tester.tap(find.text('Karakter'));
+    await beat(tester, 900);
+    await tester.scrollUntilVisible(find.text('Kitab kata'), 300, scrollable: find.byType(Scrollable).first);
+    await tester.tap(find.text('Kitab kata'));
+    await beat(tester, 900);
+    expect(find.text('Legendary'), findsOneWidget);
+    await tester.tap(find.text('Uncommon'));
+    await beat(tester);
+    await shot(tester, '95-kitab');
+    await tester.tap(find.text('Uncommon'));
+    await beat(tester);
+    await tester.scrollUntilVisible(find.text(words[0].answer(false)), 300, scrollable: find.byType(Scrollable).last);
+    await beat(tester);
+    expect(find.text('Papan Buronan'.toUpperCase()), findsOneWidget);
+    expect(find.text(words[0].answer(false)), findsWidgets, reason: 'the Nemesis on the board');
+    await shot(tester, '96-buronan');
   });
 }

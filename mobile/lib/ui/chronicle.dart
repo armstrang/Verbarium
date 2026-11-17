@@ -11,6 +11,7 @@ import '../app/lang.dart';
 import '../engine/engine.dart';
 import '../engine/jobs.dart';
 import 'root.dart';
+import 'hero.dart' show familyName;
 import 'theme.dart';
 import 'widgets.dart';
 
@@ -224,6 +225,43 @@ class _Figure extends StatelessWidget {
   }
 }
 
+/// the Chronicler's note at the start of a week: what the answers showed, and what the week will train
+String weekLine(Map<String, dynamic> ev) {
+  final f = '${ev['f'] ?? ''}';
+  final fam = '${ev['fam'] ?? ''}';
+  final side = switch (f) {
+    'p' => tr('ketelitian', 'precision', 'la precisión', 'la précision', 'die Genauigkeit', 'a precisão'),
+    's' => tr('kecepatan', 'swiftness', 'la rapidez', 'la rapidité', 'die Schnelligkeit', 'a rapidez'),
+    'i' => tr(
+      'ingatan lama',
+      'insight',
+      'la memoria larga',
+      'la mémoire longue',
+      'das lange Gedächtnis',
+      'a memória longa',
+    ),
+    _ => tr('ketekunan', 'endurance', 'la constancia', 'l’endurance', 'die Ausdauer', 'a constância'),
+  };
+  final weak = fam.isEmpty
+      ? ''
+      : tr(
+          ' Tinta paling cepat pudar pada ${familyName(fam)}.',
+          ' The ink fades fastest on ${familyName(fam)}.',
+          ' La tinta se apaga antes en ${familyName(fam)}.',
+          ' L’encre pâlit le plus vite sur ${familyName(fam)}.',
+          ' Die Tinte verblasst am schnellsten bei ${familyName(fam)}.',
+          ' A tinta desbota mais rápido em ${familyName(fam)}.',
+        );
+  return tr(
+    'Tercatat oleh Kronikawan: minggu ini engkau melatih $side.$weak',
+    'Noted by the Chronicler: this week you train $side.$weak',
+    'Anotado por el Cronista: esta semana entrenas $side.$weak',
+    'Noté par le Chroniqueur : cette semaine, tu travailles $side.$weak',
+    'Vom Chronisten verzeichnet: diese Woche übst du $side.$weak',
+    'Registrado pelo Cronista: esta semana você treina $side.$weak',
+  );
+}
+
 class _EventRow extends StatelessWidget {
   final Map<String, dynamic> ev;
   final bool last;
@@ -238,6 +276,15 @@ class _EventRow extends StatelessWidget {
     final kind = ev['k'] as String? ?? '';
     final job = Jobs.byId(ev['j'] as String?);
     final text = switch (kind) {
+      'week' => weekLine(ev),
+      'nemesis' => tr(
+        'Nemesis "${ev['w']}" dikalahkan dan diturunkan dari Papan Buronan.',
+        'The Nemesis "${ev['w']}" was beaten and taken down from the bounty board.',
+        'El Némesis "${ev['w']}" fue vencido y retirado del tablón.',
+        'La Némésis « ${ev['w']} » a été vaincue et retirée du tableau des primes.',
+        'Die Nemesis „${ev['w']}“ wurde besiegt und vom Kopfgeldbrett genommen.',
+        'O Nêmesis "${ev['w']}" foi vencido e tirado do quadro.',
+      ),
       'job' =>
         job.hidden
             ? tr(

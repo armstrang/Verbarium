@@ -391,6 +391,9 @@ void main() {
     expect(asked.where((c) => c.quiz == Quiz.cloze).length, greaterThanOrEqualTo((asked.length * 0.6).floor()));
     expect(e.sitting(maxCards: 20).length, lessThanOrEqualTo(26), reason: 'short, with the gaps of its new words');
     final p = e.sitting(focus: 'p');
-    expect(p.where((c) => !c.fresh && (c.w.inflected || c.w.id.length >= 9)).every((c) => c.quiz == Quiz.cloze), isTrue);
+    expect(
+      p.where((c) => !c.fresh && (c.w.inflected || c.w.id.length >= 9)).every((c) => c.quiz == Quiz.cloze),
+      isTrue,
+    );
   });
 }

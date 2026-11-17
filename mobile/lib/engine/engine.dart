@@ -204,6 +204,33 @@ class Engine {
     return Fsrs.r((now() - m.last) / day, m.s);
   }
 
+  /// How rare a word's hold is, like loot: 0 not yet rated, 1 Common (under a week), 2 Uncommon (under three
+  /// weeks), 3 Rare (under two months), 4 Epic (under half a year), 5 Legendary (longer, and not a hard word)
+  int rarity(Word w) {
+    final m = _mem[w.id];
+    if (m == null || m.reps == 0) return 0;
+    if (m.s < 7) return 1;
+    if (m.s < 21) return 2;
+    if (m.s < 60) return 3;
+    if (m.s < 180 || m.d > 7) return 4;
+    return 5;
+  }
+
+  static const rarityNames = ['–', 'Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
+
+  /// words met in this kingdom by rarity, [0] unrated … [5] Legendary
+  List<int> get rarities {
+    final n = List<int>.filled(6, 0);
+    for (final w in deck.words) {
+      if (_mem.containsKey(w.id)) n[rarity(w)]++;
+    }
+    return n;
+  }
+
+  /// a word forgotten five times or more: a Nemesis on the bounty board (Game decides when it is beaten)
+  static const nemesisLapses = 5;
+  bool hard(Word w) => (_mem[w.id]?.lapses ?? 0) >= nemesisLapses;
+
   /// the exam day (`set.exam`, yyyymmdd) for the English kingdom: no interval goes past it
   int? get examAt {
     if (store.isRealm) return null;

@@ -1371,6 +1371,111 @@ class FightCard extends StatelessWidget {
 
 // ---------------------------------------------------------------------------- Today
 
+/// What the realm asks of today beyond the plan: the fog of waiting reviews and the gate it closes, the exam ahead
+/// (a World Boss) and its weeks of preparation, the rested bonus after days away, and the training ground.
+class TodayStatus extends StatelessWidget {
+  const TodayStatus({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final e = App.I.engine, g = App.I.game;
+    final due = e.dueCount;
+    final days = e.examDays;
+    final lines = <String>[
+      if (e.gateReason == 'fog')
+        tr(
+          'Kabut menebal: $due kata menunggu. Gerbang kata baru tertutup sampai kurang dari ${Engine.gateShut}.',
+          'The fog thickens: $due words are waiting. The gate to new words stays shut until fewer than ${Engine.gateShut}.',
+          'La niebla se espesa: $due palabras esperan. La puerta de las palabras nuevas sigue cerrada hasta bajar de ${Engine.gateShut}.',
+          'Le brouillard s’épaissit : $due mots attendent. La porte des nouveaux mots reste fermée sous ${Engine.gateShut}.',
+          'Der Nebel wird dichter: $due Wörter warten. Das Tor zu neuen Wörtern bleibt zu, bis es weniger als ${Engine.gateShut} sind.',
+          'A névoa engrossa: $due palavras esperam. O portão das palavras novas fica fechado até menos de ${Engine.gateShut}.',
+        )
+      else if (due > Engine.gateHalf && e.gateReason.isEmpty)
+        tr(
+          'Kabut mulai naik: $due kata menunggu, jadi kata baru hari ini separuh dulu.',
+          'The fog is rising: $due words are waiting, so today brings half the new words.',
+          'La niebla sube: $due palabras esperan, así que hoy llegan la mitad de palabras nuevas.',
+          'Le brouillard monte : $due mots attendent, alors aujourd’hui ne vient que la moitié des nouveaux mots.',
+          'Der Nebel steigt: $due Wörter warten, darum kommen heute nur halb so viele neue.',
+          'A névoa sobe: $due palavras esperam, então hoje vêm metade das palavras novas.',
+        ),
+      if (days != null && e.raidPrep)
+        tr(
+          'Persiapan Raid: ujian $days hari lagi. Kata baru berhenti; yang diulang kata yang paling lemah.',
+          'Raid preparation: the exam is in $days days. New words stop; the weakest ones are reviewed.',
+          'Preparación del asalto: el examen es en $days días. Se acaban las palabras nuevas; se repasan las más débiles.',
+          'Préparation du raid : l’examen est dans $days jours. Plus de nouveaux mots ; on révise les plus fragiles.',
+          'Raid-Vorbereitung: die Prüfung ist in $days Tagen. Keine neuen Wörter mehr; die schwächsten werden wiederholt.',
+          'Preparação do raide: a prova é em $days dias. As palavras novas param; as mais fracas são revisadas.',
+        )
+      else if (days != null)
+        tr(
+          'World Boss: ujianmu $days hari lagi. Jadwal ulangan tidak akan melewati hari itu.',
+          'World Boss: your exam is $days days away. No review is set past that day.',
+          'Jefe mundial: tu examen es en $days días. Ningún repaso pasa de ese día.',
+          'Boss mondial : ton examen est dans $days jours. Aucune révision ne dépasse ce jour.',
+          'Weltboss: deine Prüfung ist in $days Tagen. Keine Wiederholung liegt nach diesem Tag.',
+          'Chefão mundial: sua prova é em $days dias. Nenhuma revisão passa desse dia.',
+        ),
+      if (g.rested > 0)
+        tr(
+          'Selamat kembali. ${g.rested} XP berikutnya dihitung dua kali.',
+          'Welcome back. The next ${g.rested} XP count twice.',
+          'Bienvenido de nuevo. Los próximos ${g.rested} XP cuentan doble.',
+          'Bon retour. Les ${g.rested} prochains XP comptent double.',
+          'Willkommen zurück. Die nächsten ${g.rested} XP zählen doppelt.',
+          'Bem-vindo de volta. Os próximos ${g.rested} XP contam em dobro.',
+        ),
+    ];
+    final train = days != null || g.nemeses.isNotEmpty;
+    if (lines.isEmpty && !train) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.only(top: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          for (final l in lines)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 6),
+              child: Text(l, style: T.body(15, pal.ink, height: 1.4)),
+            ),
+          if (train)
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Press(
+                onTap: () => runFrom(context, const RunScreen(kind: RunKind.learn, practice: true)),
+                label: tr(
+                  'Lapangan Latihan',
+                  'Training ground',
+                  'Campo de entrenamiento',
+                  'Terrain d’entraînement',
+                  'Übungsplatz',
+                  'Campo de treino',
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Text(
+                    tr(
+                      'Lapangan Latihan: ulang kata lemah tanpa mengubah jadwal →',
+                      'Training ground: go over weak words without touching the schedule →',
+                      'Campo de entrenamiento: repasa palabras débiles sin tocar el calendario →',
+                      'Terrain d’entraînement : repasse les mots fragiles sans toucher au calendrier →',
+                      'Übungsplatz: schwache Wörter üben, ohne den Plan zu ändern →',
+                      'Campo de treino: revise palavras fracas sem mexer no cronograma →',
+                    ),
+                    style: T.body(15, pal.ink, w: FontWeight.w600),
+                  ),
+                ),
+              ),
+            ),
+        ],
+      ),
+    );
+  }
+}
+
 class Today extends StatelessWidget {
   const Today({super.key});
 
@@ -1529,6 +1634,7 @@ class Today extends StatelessWidget {
             ],
           ),
         ),
+        const TodayStatus(),
         const SizedBox(height: 14),
         if (!plan.empty)
           InkButton(
@@ -1573,7 +1679,7 @@ class Today extends StatelessWidget {
             style: T.display(22, pal.ink, italic: true),
           ),
           const SizedBox(height: 12),
-          if (moreFresh > 0)
+          if (moreFresh > 0 && e.gateReason.isEmpty)
             InkButton(
               tr(
                 'Tambah $moreFresh kata baru',

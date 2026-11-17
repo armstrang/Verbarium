@@ -9,6 +9,7 @@ import '../app/lang.dart';
 import '../engine/engine.dart';
 import '../engine/game.dart';
 import '../engine/jobs.dart';
+import 'codex.dart';
 import 'pixel.dart';
 import 'root.dart';
 import 'lore.dart';
@@ -227,6 +228,19 @@ class HeroTab extends StatelessWidget {
         ),
         const SizedBox(height: 22),
         const _BuildBlock(),
+        const SizedBox(height: 10),
+        InkButton(
+          tr(
+            'Kitab kata',
+            'Book of words',
+            'Libro de palabras',
+            'Livre des mots',
+            'Buch der Wörter',
+            'Livro das palavras',
+          ),
+          outline: true,
+          onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const CodexPage())),
+        ),
         const SizedBox(height: 22),
         Label(tr('Kemampuan', 'Figures', 'Cifras', 'Chiffres', 'Kennzahlen', 'Números')),
         const SizedBox(height: 6),

@@ -1408,6 +1408,22 @@ class _KingdomRoadState extends State<KingdomRoad> with TickerProviderStateMixin
                 ),
               ),
             ),
+            // the fog of waiting reviews over the kingdom being played: thicker as they pile up
+            if (widget.code == App.I.realm && App.I.engine.dueCount > 20)
+              Positioned.fill(
+                child: IgnorePointer(
+                  child: AnimatedBuilder(
+                    animation: _life,
+                    builder: (context, _) => CustomPaint(
+                      painter: FogPainter(
+                        (App.I.engine.dueCount / Engine.gateShut).clamp(0.0, 1.0),
+                        Look.of(context).calm ? 0 : _life.value,
+                        pal.bg,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             if (foe != null && en != null)
               Positioned(
                 // the guard stands just short of the place it keeps, on the side away from its name
@@ -1433,6 +1449,31 @@ class _KingdomRoadState extends State<KingdomRoad> with TickerProviderStateMixin
       },
     );
   }
+}
+
+/// banks of fog drifting slowly over the land; [amount] 0–1 sets how many and how thick
+class FogPainter extends CustomPainter {
+  final double amount, t;
+  final Color tint;
+  FogPainter(this.amount, this.t, this.tint);
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final r = Random(41);
+    final n = (4 + 10 * amount).round();
+    final blur = Paint()
+      ..color = tint.withValues(alpha: 0.25 + 0.45 * amount)
+      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 18);
+    for (var i = 0; i < n; i++) {
+      final x = (r.nextDouble() * 1.3 - 0.15 + 0.04 * sin(2 * pi * (t + i / n))) * size.width;
+      final y = r.nextDouble() * size.height;
+      final w = (0.25 + 0.3 * r.nextDouble()) * size.width;
+      canvas.drawOval(Rect.fromCenter(center: Offset(x, y), width: w, height: w * 0.35), blur);
+    }
+  }
+
+  @override
+  bool shouldRepaint(FogPainter o) => o.amount != amount || o.t != t || o.tint != tint;
 }
 
 class _RoadPainter extends CustomPainter {

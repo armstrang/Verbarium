@@ -166,4 +166,55 @@ void main() {
     final relieve = d.byId['relieve']!;
     expect(nearMeaning(d, relieve, 'alleviate'), isFalse, reason: 'below C1 the first letter already helps');
   });
+
+  test('rarity follows the hold of a word, from Common to Legendary', () {
+    final w = d.tier(1).first;
+    expect(e.rarity(w), 0);
+    for (final (st, df, r) in [
+      (3.0, 5.0, 1),
+      (10.0, 5.0, 2),
+      (30.0, 5.0, 3),
+      (100.0, 5.0, 4),
+      (200.0, 5.0, 5),
+      (200.0, 9.0, 4),
+    ]) {
+      store.map('mem')[w.id] = [st, now + Engine.day, 3, 0, now, 1, df];
+      e = Engine(store, d, clock: () => now);
+      expect(e.rarity(w), r, reason: '$st days, difficulty $df');
+    }
+    expect(e.rarities[4], 1);
+  });
+
+  test('a Nemesis is beaten by two clean gaps on two days of review, and a miss starts it over', () {
+    final w = d.tier(1).first;
+    store.map('mem')[w.id] = [2.0, now - 1, 9, 5, now - 3 * Engine.day, 0, 8.0];
+    e = Engine(store, d, clock: () => now);
+    g = Game(store, e);
+    expect(g.isNemesis(w), isTrue);
+    expect(g.nemeses, contains(w));
+    g.onAnswer(w, Quiz.cloze, Grade.clean, 6000, counted: true);
+    g.onAnswer(w, Quiz.cloze, Grade.wrong, 6000, counted: true, err: 'm');
+    g.onAnswer(w, Quiz.cloze, Grade.clean, 6000, counted: true);
+    expect(g.isNemesis(w), isTrue, reason: 'the miss started it over');
+    final xp = g.xp;
+    final r = g.onAnswer(w, Quiz.cloze, Grade.clean, 6000, counted: true);
+    expect(g.isNemesis(w), isFalse);
+    expect(g.beaten, contains(w.id));
+    expect(r.news.join(), contains('Nemesis'));
+    expect(g.xp - xp, greaterThanOrEqualTo(25));
+    expect(e.events.first['k'], 'nemesis');
+  });
+
+  test('days away fill a rested pool that doubles experience until it is spent', () {
+    final w = d.tier(1).first;
+    g.onAnswer(w, Quiz.cloze, Grade.clean, 9000);
+    expect(g.rested, 0);
+    now += 4 * Engine.day;
+    final xp = g.xp;
+    g.combo = 0;
+    final r = g.onAnswer(w, Quiz.cloze, Grade.clean, 9000);
+    expect(r.xp, 20, reason: 'ten for the gap, and ten more from the pool');
+    expect(g.xp - xp, 20);
+    expect(g.rested, 3 * 60 - 10);
+  });
 }

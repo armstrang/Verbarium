@@ -51,7 +51,10 @@ class RunScreen extends StatelessWidget {
   final RunKind kind;
   final int tier;
   final int extraFresh;
-  const RunScreen({super.key, required this.kind, this.tier = 0, this.extraFresh = 0});
+
+  /// Lapangan Latihan: the weak words again, as practice. Memory and the profile stay as they are; 1 XP a word.
+  final bool practice;
+  const RunScreen({super.key, required this.kind, this.tier = 0, this.extraFresh = 0, this.practice = false});
 
   @override
   Widget build(BuildContext context) {
@@ -87,6 +90,19 @@ bool nearMeaning(Deck deck, Word w, String typed) {
     if (senses(x.meaning).intersection(mine).isNotEmpty) return true;
   }
   return false;
+}
+
+/// Lapangan Latihan: the Nemesis words first, then the words most likely forgotten among those rated (20 at most)
+List<Word> practiceWords(Engine e, Game g) {
+  final out = <Word>[...g.nemeses.take(10)];
+  final rated = [
+    for (final w in e.deck.words)
+      if (e.seen(w) && !e.isNew(w) && !out.contains(w)) w,
+  ];
+  final r = {for (final w in rated) w.id: e.recall(w)};
+  rated.sort((a, b) => r[a.id]!.compareTo(r[b.id]!));
+  out.addAll(rated.take(20 - out.length));
+  return out;
 }
 
 class _Item {
@@ -192,6 +208,8 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     _g.combo = 0;
     _input.addListener(_typed);
     switch (_kind) {
+      case RunKind.learn when widget.s.practice:
+        _q.addAll([for (final w in practiceWords(_e, _g)) _Item(w, Quiz.cloze, false)]);
       case RunKind.learn:
         // the sitting fits the learner: the week's focus, and a length they usually finish
         final focus = _g.focus;
@@ -353,7 +371,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     if (it.w == null) return true;
     if (_hinted || _missOnce) return true;
     if (_phase == _Phase.right || _phase == _Phase.miss || _phase == _Phase.shown) return true;
-    return Engine.hintLevel(it.w!, it.fresh || _e.isNew(it.w!), App.I.english) == 0;
+    return Engine.hintLevel(it.w!, it.fresh || _e.isNew(it.w!), App.I.english) == 0 || _g.isNemesis(it.w!);
   }
 
   /// Knight and Baron (B1–B2) get the word's first letter written in the gap, before one long line that says
@@ -433,7 +451,9 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       if (last.where((x) => !x).length >= 3) _holdFresh();
     }
     final ms = _watch.elapsedMilliseconds;
-    if (it.c != null) {
+    if (widget.s.practice) {
+      _reward = _g.bonus(g == Grade.wrong ? 0 : 1);
+    } else if (it.c != null) {
       _reward = _g.onColloc(g != Grade.wrong);
     } else {
       final w = it.w!;
@@ -470,7 +490,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       // right only after the meaning was opened by a miss: the word was not known (a miss for memory),
       // but finding it is worth 5
       _grade(Grade.wrong, 'm');
-      final r = _g.bonus(5);
+      final r = _g.bonus(widget.s.practice ? 0 : 5);
       _xp += r.xp;
       _reward = r;
       if (r.levelUp) {
@@ -630,7 +650,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     final total = max(_done, 1);
     switch (_kind) {
       case RunKind.learn:
-        _g.onSitting(_done, _q.length);
+        if (!widget.s.practice) _g.onSitting(_done, _q.length);
         App.I.sfx('seal', 0.8);
       case RunKind.placement:
         _e.finishPlacement(_tiersPassed, _right, total);
@@ -670,7 +690,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
 
   Future<void> _close() async {
     if (_finished || !_test) {
-      if (!_finished && _kind == RunKind.learn) {
+      if (!_finished && _kind == RunKind.learn && !widget.s.practice) {
         _g.onSitting(_done, _q.length);
         App.I.store.flush();
       }
