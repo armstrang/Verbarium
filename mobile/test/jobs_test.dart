@@ -26,6 +26,9 @@ void main() {
   });
   tearDown(() => lang.english = false);
 
+  /// the day's log shows the learner was there (the engine writes it in the app)
+  void present() => store.map('log')[Engine.dayKey(now)] = [0, 1, 1, 0];
+
   /// crown the learner at [tier] the way a won trial does
   Job crown(int tier, {bool flawless = false}) {
     store.data['rank'] = tier;
@@ -97,25 +100,49 @@ void main() {
     expect(g.path.map((j) => j.id), ['peasant', 'blade', 'duelist']);
   });
 
-  test('a fast learner becomes a Scout, one with old words a Scribe, one who shows up a Sentinel', () {
+  test('a fast learner becomes a Scout, one who keeps old words a Scribe, one who shows up a Sentinel', () {
     final w = d.tier(1).first;
+    // quick, but not always exact: speed is what stands out
     for (var i = 0; i < 30; i++) {
       g.onAnswer(w, Quiz.cloze, Grade.clean, 2500);
+      if (i % 3 == 0) g.onAnswer(w, Quiz.cloze, Grade.wrong, 2500, err: 's');
     }
+    expect(g.side('s'), greaterThan(g.side('p')));
     expect(Jobs.natural(1, g.job, g.build, g.career).id, 'scout');
 
     store.map('game').remove('bp');
+    // remembering words that had time to fade, however many answers it takes
     for (var i = 0; i < 30; i++) {
-      g.onAnswer(w, Quiz.choice, Grade.clean, 9000, stab: 20, hadLapses: true);
+      g.onAnswer(w, Quiz.choice, Grade.clean, 9000, counted: true, recall: 0.6);
     }
     expect(Jobs.natural(1, g.job, g.build, g.career).id, 'scribe');
 
     store.map('game').remove('bp');
     for (var day = 0; day < 12; day++) {
       now += Engine.day;
+      present();
       g.onAnswer(w, Quiz.cloze, Grade.wrong, 9000, err: 'm');
     }
     expect(Jobs.natural(1, g.job, g.build, g.career).id, 'sentinel');
+  });
+
+  test('a side is measured by how well, not how much: more answers of the same kind change nothing', () {
+    final w = d.tier(1).first;
+    for (var i = 0; i < 20; i++) {
+      g.onAnswer(w, Quiz.cloze, Grade.clean, 9000);
+      if (i % 4 == 0) g.onAnswer(w, Quiz.cloze, Grade.wrong, 9000, err: 's');
+    }
+    final once = g.build.v.toList();
+    for (var i = 0; i < 200; i++) {
+      g.onAnswer(w, Quiz.cloze, Grade.clean, 9000);
+      if (i % 4 == 0) g.onAnswer(w, Quiz.cloze, Grade.wrong, 9000, err: 's');
+    }
+    for (var k = 0; k < 4; k++) {
+      expect((g.build.v[k] - once[k]).abs(), lessThanOrEqualTo(3), reason: 'side $k');
+    }
+    expect(g.honesty, 0, reason: 'every miss was a guess');
+    g.onAnswer(w, Quiz.cloze, Grade.wrong, 9000, err: 'm', honest: true);
+    expect(g.honesty, greaterThan(0));
   });
 
   test('the perks of the whole path add up, and only touch experience and the guards of the road', () {
@@ -133,6 +160,7 @@ void main() {
     }
     for (var i = 0; i < 30; i++) {
       now += Engine.day;
+      present();
       g.onAnswer(w, Quiz.cloze, Grade.clean, 14000);
     }
     expect(crown(2).id, 'crusader');
@@ -182,6 +210,7 @@ void main() {
     expect(g.job.id, 'peasant');
     for (var i = 0; i < 60; i++) {
       g.onAnswer(w, Quiz.cloze, Grade.clean, 2000);
+      if (i % 3 == 0) g.onAnswer(w, Quiz.cloze, Grade.wrong, 2000, err: 'f');
     }
     expect(crown(1).id, 'scout');
     expect(g.known, containsAll(['blade', 'scout']));

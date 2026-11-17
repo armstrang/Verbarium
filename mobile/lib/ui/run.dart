@@ -115,6 +115,11 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
 
   /// a first miss on this gap in learning: the meaning is opened and one more try is given
   bool _missOnce = false;
+
+  // signals of one answer for the learner's profile: when the first letter came, how often letters were taken back,
+  // and whether a miss was owned ("I don't know") rather than guessed
+  int _firstKey = 0, _edits = 0, _lastLen = 0;
+  bool _honest = false;
   bool _finished = false;
   bool _passed = false;
   int _solidBefore = 0;
@@ -163,6 +168,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     _rankBefore = _e.rank;
     _stageBefore = _e.stage;
     _g.combo = 0;
+    _input.addListener(_typed);
     switch (_kind) {
       case RunKind.learn:
         final cards = _e.sitting(extraFresh: widget.s.extraFresh);
@@ -363,6 +369,13 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     ok ? _rightAnswer() : _wrong('m');
   }
 
+  void _typed() {
+    final n = _input.text.length;
+    if (_firstKey == 0 && n > 0) _firstKey = max(1, _watch.elapsedMilliseconds);
+    if (n < _lastLen) _edits++;
+    _lastLen = n;
+  }
+
   void _grade(Grade g, String err, {bool hinted = false}) {
     final it = _item;
     final ms = _watch.elapsedMilliseconds;
@@ -372,6 +385,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       final w = it.w!;
       final lapses = (_e.mem(w)?.lapses ?? 0) > 0;
       final stab = _e.mem(w)?.s ?? 0.0;
+      final recall = _e.isNew(w) ? -1.0 : _e.recall(w);
       _e.answer(w, g, count: _kind != RunKind.placement, quiz: it.quiz, ms: ms);
       _reward = _g.onAnswer(
         w,
@@ -383,6 +397,11 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
         hadLapses: lapses,
         stab: stab,
         hinted: hinted,
+        recall: recall,
+        counted: _e.lastCounted,
+        honest: _honest,
+        firstKey: _firstKey,
+        edits: _edits,
       );
     }
     _xp += _reward!.xp;
@@ -529,6 +548,10 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       _hinted = false;
       _missOnce = false;
       _input.clear();
+      _firstKey = 0;
+      _edits = 0;
+      _lastLen = 0;
+      _honest = false;
       _open();
     });
     _write.value = 0;
@@ -544,6 +567,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     final total = max(_done, 1);
     switch (_kind) {
       case RunKind.learn:
+        _g.onSitting(_done, _q.length);
         App.I.sfx('seal', 0.8);
       case RunKind.placement:
         _e.finishPlacement(_tiersPassed, _right, total);
@@ -583,6 +607,10 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
 
   Future<void> _close() async {
     if (_finished || !_test) {
+      if (!_finished && _kind == RunKind.learn) {
+        _g.onSitting(_done, _q.length);
+        App.I.store.flush();
+      }
       Navigator.of(context).pop();
       return;
     }
@@ -805,7 +833,12 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
                               'Weiß ich nicht',
                               'Não sei',
                             ),
-                      onTap: _phase == _Phase.ask || _phase == _Phase.near ? () => _wrong('m') : null,
+                      onTap: _phase == _Phase.ask || _phase == _Phase.near
+                          ? () {
+                              _honest = true;
+                              _wrong('m');
+                            }
+                          : null,
                     ),
                   ),
               ],

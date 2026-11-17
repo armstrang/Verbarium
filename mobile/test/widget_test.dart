@@ -73,7 +73,11 @@ void main() {
     expect(g.xp - xp0, got);
     expect(HomeWidget.xpFor(ws[0]), inInclusiveRange(1, 5));
     expect(e.mem(ws[0])!.s, greaterThan(before), reason: 'a right answer helps the memory');
-    expect(e.mem(ws[0])!.s, lessThan(Fsrs.next(before, diff, 3, Fsrs.good).$1), reason: 'but less than typing it would');
+    expect(
+      e.mem(ws[0])!.s,
+      lessThan(Fsrs.next(before, diff, 3, Fsrs.good).$1),
+      reason: 'but less than typing it would',
+    );
     expect(e.mem(ws[1])!.lapses, 1, reason: 'a wrong one counts as a lapse');
     expect((store.map('set')['wd'] as Map)[Engine.dayKey(now)], 11, reason: 'every kingdom counts for the streak');
     expect(e.streak, greaterThanOrEqualTo(1), reason: 'ten answers in the widget keep the day');

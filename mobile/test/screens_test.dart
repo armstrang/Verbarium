@@ -74,7 +74,7 @@ Future<App> learner(
         'bc': 14,
         'jobs': ?jobs,
         'seen': ?jobs,
-        'bp': {'p': 245, 's': 260, 'i': 120, 'e': 90, 'n': 300},
+        'bp': {'ps': 9600, 'pc': 100, 'ss': 8350, 'sc': 100, 'is': 7500, 'ic': 100, 'es': 6000, 'ec': 100, 'n': 300},
       },
   };
   final app = (await tester.runAsync(() => App.boot(backend: MemoryBackend(json.encode(data)), clock: () => now)))!;

@@ -115,7 +115,8 @@ void main() {
     final dues = {for (final w in ws) e.mem(w)!.due};
     expect(dues.length, greaterThan(1), reason: 'words learned together are not all due together');
     final exam = DateTime.fromMillisecondsSinceEpoch(now).add(const Duration(days: 30));
-    store.map('set')['exam'] = '${exam.year}${exam.month.toString().padLeft(2, '0')}${exam.day.toString().padLeft(2, '0')}';
+    store.map('set')['exam'] =
+        '${exam.year}${exam.month.toString().padLeft(2, '0')}${exam.day.toString().padLeft(2, '0')}';
     expect(e.examDays, 30);
     days(10);
     e.answer(ws[0], Grade.clean);
@@ -141,7 +142,8 @@ void main() {
     store.map('mem').clear();
     e = Engine(store, d, clock: () => now);
     final exam = DateTime.fromMillisecondsSinceEpoch(now).add(const Duration(days: 10));
-    store.map('set')['exam'] = '${exam.year}${exam.month.toString().padLeft(2, '0')}${exam.day.toString().padLeft(2, '0')}';
+    store.map('set')['exam'] =
+        '${exam.year}${exam.month.toString().padLeft(2, '0')}${exam.day.toString().padLeft(2, '0')}';
     expect(e.raidPrep, isTrue);
     expect(e.freshToday, 0);
     expect(e.gateReason, 'raid');

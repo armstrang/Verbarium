@@ -76,7 +76,9 @@ void main() {
   final results = {for (final l in learners) l.name: simulate(deck, l)};
   for (final r in results.entries) {
     // ignore: avoid_print
-    print('${r.key}: maxDue ${r.value.maxDue}, retention ${r.value.retention.toStringAsFixed(3)}, met ${r.value.met}, days ${r.value.days}, reviews ${r.value.reviews}');
+    print(
+      '${r.key}: maxDue ${r.value.maxDue}, retention ${r.value.retention.toStringAsFixed(3)}, met ${r.value.met}, days ${r.value.days}, reviews ${r.value.reviews}',
+    );
   }
 
   test('every kind of learner keeps the reviews within reach', () {

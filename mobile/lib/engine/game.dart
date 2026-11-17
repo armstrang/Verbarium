@@ -477,6 +477,11 @@ class Game {
     bool hadLapses = false,
     double stab = 0,
     bool hinted = false,
+    double recall = -1,
+    bool counted = false,
+    bool honest = false,
+    int firstKey = 0,
+    int edits = 0,
   }) {
     final right = g != Grade.wrong;
     final news = <String>[];
@@ -532,36 +537,35 @@ class Game {
       gain += perk('xpAll');
     }
 
-    // the build: what kind of learner this answer shows
+    // the build: what kind of learner this answer shows. Each side is a running mean of how well, not how much
+    // (see [side]); the counts below feed the hidden jobs only.
     _add('n', 1);
     if (night) _add('nt', 1);
     if (combo > _b('bc')) _bp['bc'] = combo;
-    if (right) {
-      if (quiz == Quiz.cloze) {
-        _add('p', g == Grade.clean ? 2 : 1);
-        if (cleanGap && w.inflected) _add('p', 1);
-        if (crit) {
-          _add('s', 4);
-        } else if (cleanGap && ms > 0 && ms < 10000) {
-          _add('s', 1);
-        }
-        if (ms > 0) {
-          _add('cz', 1);
-          _add('czms', ms);
-        }
-      } else if (quiz == Quiz.build) {
-        _add('s', ms > 0 && ms < 15000 ? 3 : 1);
-      } else {
-        _add('i', 1);
-        if (ms > 0 && ms < 4000) _add('s', 1);
-      }
-      if (longHeld) _add('i', 4);
-      if (hadLapses) _add('i', 2);
+    if (right && quiz == Quiz.cloze && ms > 0) {
+      _add('cz', 1);
+      _add('czms', ms);
     }
-    if (!fresh) _add('e', 1);
-    if (firstToday) _add('e', e.streak >= 3 ? 12 : 8);
-    final dayAnswers = e.dayLog(today);
-    if (dayAnswers[0] + dayAnswers[1] > 30) _add('e', 1);
+    final firstOfDay = _g['sd'] != Engine.studyDay(e.now());
+    _g['sd'] = Engine.studyDay(e.now());
+    if (quiz == Quiz.cloze && err != 'm' && (right || err == 's' || err == 'f')) {
+      // precision: the word was known; was it written exactly, in the right form?
+      _sample('p', err == 's' || err == 'f' ? 0 : 100, w.inflected ? 1.5 : 1);
+    } else if (quiz == Quiz.build) {
+      _sample('p', right ? 100 : 0, 0.5);
+    }
+    if (right && ms > 0 && quiz != Quiz.choice) {
+      // swiftness: from a quick answer for its length to a slow one
+      final fast = quiz == Quiz.cloze ? 2500 + 180 * w.id.length : 6000;
+      _sample('s', (100 * (fast + 10000 - ms) / 10000).clamp(0.0, 100.0));
+    }
+    if (counted && recall >= 0 && !fresh) {
+      // insight: remembering what had time to fade counts most
+      _sample('i', right ? 100 : 0, 0.4 + 3 * (1 - recall).clamp(0.0, 1.0));
+    }
+    if (!right && quiz == Quiz.cloze) _sample('h', honest ? 100 : 0);
+    if (firstOfDay) _sample('e', endurance.toDouble());
+    _signals(w, quiz, right, err, ms, firstKey, edits, honest);
 
     // quests
     for (final q in [...daily, ...weekly]) {
@@ -619,7 +623,7 @@ class Game {
     _wk('c', right);
     combo = right ? combo + 1 : 0;
     final gain = right ? 4 + perk('xpColloc') + perk('xpAll') : 0;
-    if (right) _add('p', 2);
+    _sample('p', right ? 100 : 0, 0.5);
     _add('n', 1);
     final up = right && _gain(gain);
     store.touch();
@@ -762,14 +766,164 @@ class Game {
     return [tr('Pencapaian: $name', 'Feat: $name', 'Hazaña: $name', 'Exploit : $name', 'Tat: $name', 'Feito: $name')];
   }
 
+  // ---------------------------------------------------------------- the learner's profile (all on the phone)
+
+  Map<String, dynamic> get _pf => (_g['pf'] ??= <String, dynamic>{}) as Map<String, dynamic>;
+
+  /// the families a word belongs to: its kind, its ending, and "form" when the gap asks for another form of it
+  static List<String> families(Word w) => [
+    'pos:${w.pos}',
+    if (w.inflected) 'form',
+    for (final end in endings)
+      if (w.id.length > end.length + 2 && w.id.endsWith(end)) '-$end',
+  ];
+
+  static const endings = [
+    'tion',
+    'sion',
+    'ment',
+    'ness',
+    'ity',
+    'ance',
+    'ence',
+    'ous',
+    'ive',
+    'able',
+    'ize',
+    'ise',
+    'ly',
+  ];
+
+  void _ema(String k, num x, [double a = 0.05]) {
+    final v = (_pf[k] as num?)?.toDouble();
+    _pf[k] = v == null ? x.toDouble() : v + (x - v) * a;
+  }
+
+  void _signals(Word w, Quiz quiz, bool right, String err, int ms, int firstKey, int edits, bool honest) {
+    final hr = ((_pf['hr'] as List?) ?? List<dynamic>.filled(24, 0)).cast<dynamic>().toList();
+    final h = DateTime.fromMillisecondsSinceEpoch(e.now()).hour;
+    hr[h] = (hr[h] as num) + 1;
+    _pf['hr'] = hr;
+    if (quiz != Quiz.cloze) return;
+    if (firstKey > 0) _ema('fk', firstKey);
+    _ema('ed', edits);
+    final fam = (_pf['fam'] ??= <String, dynamic>{}) as Map<String, dynamic>;
+    for (final f in families(w)) {
+      final l = (fam[f] as List?)?.map((x) => (x as num).toInt()).toList() ?? [0, 0];
+      l[right && err.isEmpty ? 0 : 1]++;
+      if (l[0] + l[1] > 80) {
+        l[0] = (l[0] * 0.75).round();
+        l[1] = (l[1] * 0.75).round();
+      }
+      fam[f] = l;
+    }
+  }
+
+  /// the family of words that goes wrong most, compared with the learner's other answers; null when nothing stands
+  /// out (at least 12 answers in it and a miss rate half again the overall one)
+  String? get weakFamily {
+    final fam = (_pf['fam'] as Map?) ?? const {};
+    var ok = 0, bad = 0;
+    for (final k in fam.keys) {
+      if (!'$k'.startsWith('pos:')) continue;
+      final l = fam[k] as List;
+      ok += (l[0] as num).toInt();
+      bad += (l[1] as num).toInt();
+    }
+    if (ok + bad < 30) return null;
+    final rate = bad / (ok + bad);
+    String? worst;
+    var worstRate = max(0.12, rate * 1.5);
+    for (final e in fam.entries) {
+      final l = e.value as List;
+      final n = (l[0] as num) + (l[1] as num);
+      if (n < 12) continue;
+      final r = (l[1] as num) / n;
+      if (r > worstRate) {
+        worst = e.key;
+        worstRate = r;
+      }
+    }
+    return worst;
+  }
+
+  /// A sitting ended: [done] cards of [total]. Keeps how long this learner's sittings run, so the next one can fit.
+  void onSitting(int done, int total) {
+    if (done <= 0) return;
+    _ema('sl', done, 0.2);
+    _ema('sq', done < total ? 1 : 0, 0.2);
+    store.touch();
+  }
+
+  /// the usual length of a sitting (cards), null before the first one
+  int? get sittingLength => (_pf['sl'] as num?)?.round();
+
+  /// how often sittings are left before the end, 0–1
+  double get quitRate => (_pf['sq'] as num?)?.toDouble() ?? 0;
+
+  /// the hour most answers are given at (null before 50 answers)
+  int? get favouriteHour {
+    final hr = (_pf['hr'] as List?)?.map((x) => (x as num).toInt()).toList();
+    if (hr == null || hr.fold<int>(0, (a, b) => a + b) < 50) return null;
+    var best = 0;
+    for (var i = 1; i < 24; i++) {
+      if (hr[i] > hr[best]) best = i;
+    }
+    return best;
+  }
+
+  /// The week's focus: one weakness at a time, kept for seven days so the learner sees what is being trained.
+  /// 'p' precision, 's' swiftness, 'i' insight, 'e' endurance; '' before there is enough to go on.
+  String get focus {
+    final week = (Engine.studyStart(e.now()) ~/ (7 * Engine.day)).toString();
+    final f = _g['fw'];
+    if (f is Map && f['w'] == week) return '${f['f']}';
+    final n = ['p', 's', 'i', 'e'].map((k) => (_bp['${k}c'] as num?)?.toDouble() ?? 0).fold<double>(0, (a, b) => a + b);
+    if (n < 40 && career.total == 0) return '';
+    final b = build.total > 0 ? build : career;
+    final pick = ['p', 's', 'i', 'e'][b.order.last];
+    _g['fw'] = {'w': week, 'f': pick};
+    store.touch();
+    return pick;
+  }
+
   // ---------------------------------------------------------------- the build and the jobs
 
   Map<String, dynamic> get _bp => (_g['bp'] ??= <String, dynamic>{}) as Map<String, dynamic>;
   int _b(String k) => (_bp[k] as num?)?.toInt() ?? 0;
   void _add(String k, int n) => _bp[k] = _b(k) + n;
 
-  /// the build of the title being won now
-  Build get build => Build([_b('p'), _b('s'), _b('i'), _b('e')]);
+  /// one sample of a side for the title being won: a weighted running mean (`bp.<k>s` sum, `bp.<k>c` weight)
+  void _sample(String k, double x, [double weight = 1]) {
+    _bp['${k}s'] = ((_bp['${k}s'] as num?)?.toDouble() ?? 0) + x * weight;
+    _bp['${k}c'] = ((_bp['${k}c'] as num?)?.toDouble() ?? 0) + weight;
+  }
+
+  double? _mean(String k) {
+    final c = (_bp['${k}c'] as num?)?.toDouble() ?? 0;
+    return c <= 0 ? null : ((_bp['${k}s'] as num?)?.toDouble() ?? 0) / c;
+  }
+
+  /// what an ordinary learner scores on each side: a side counts from there up, so that being exact (which most
+  /// answers are) weighs no more than being quick or remembering long
+  static const sideBase = {'p': 80.0, 's': 25.0, 'i': 55.0, 'e': 40.0};
+
+  /// a side of the build for the title being won, 0–100 (0 before there is anything to go on)
+  int side(String k) {
+    final m = _mean(k);
+    if (m == null) return 0;
+    final b = sideBase[k]!;
+    return (100 * (m - b) / (100 - b)).clamp(0.0, 100.0).round();
+  }
+
+  /// how honest the misses are: "I don't know" rather than a guess, 0–100 (null before any miss)
+  int? get honesty => _mean('h')?.round();
+
+  /// endurance now: days active in the last two weeks, and the fog kept thin
+  int get endurance => (0.6 * diligence + 0.4 * 100 * (1 - min(1.0, e.dueCount / Engine.gateShut))).round();
+
+  /// the build of the title being won now: the four sides, by quality
+  Build get build => Build([side('p'), side('s'), side('i'), side('e')]);
 
   /// the build of the whole journey
   Build get career {

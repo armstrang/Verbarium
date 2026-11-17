@@ -391,6 +391,152 @@ class HeroTab extends StatelessWidget {
 
 /// The build of the title being won, the branches it can lead to, and the way to the map of all jobs. A branch not
 /// yet reached is a shadow without a name.
+/// the week's focus in words: what the app trains now, and why
+String focusText(String f) => switch (f) {
+  'p' => tr(
+    'Minggu ini: ketelitian. Kata yang bentuknya berubah dan kata panjang lebih sering datang sebagai celah, dengan huruf pertamanya.',
+    'This week: precision. Words that change their form and long words come more often as gaps, with their first letter.',
+    'Esta semana: precisión. Las palabras que cambian de forma y las largas vuelven más a menudo como huecos, con su primera letra.',
+    'Cette semaine : la précision. Les mots qui changent de forme et les mots longs reviennent plus souvent en trous, avec leur première lettre.',
+    'Diese Woche: Genauigkeit. Wörter, die ihre Form ändern, und lange Wörter kommen öfter als Lücke, mit ihrem ersten Buchstaben.',
+    'Esta semana: precisão. Palavras que mudam de forma e palavras longas voltam mais como lacunas, com a primeira letra.',
+  ),
+  's' => tr(
+    'Minggu ini: kecepatan. Jawaban yang cepat untuk panjang katanya memberi pukulan tambahan dalam pertarungan.',
+    'This week: swiftness. An answer that is quick for the length of its word strikes an extra blow in a fight.',
+    'Esta semana: rapidez. Una respuesta rápida para el largo de su palabra da un golpe extra en combate.',
+    'Cette semaine : la rapidité. Une réponse vive pour la longueur du mot porte un coup de plus en combat.',
+    'Diese Woche: Schnelligkeit. Eine Antwort, die für die Wortlänge schnell ist, trifft im Kampf ein zweites Mal.',
+    'Esta semana: rapidez. Uma resposta rápida para o tamanho da palavra dá um golpe extra na luta.',
+  ),
+  'i' => tr(
+    'Minggu ini: ingatan lama. Kata yang hampir pudar didahulukan, dan kata yang sudah kamu jawab hari ini tidak diulang lagi.',
+    'This week: insight. Words about to fade come first, and words already answered today are not asked again.',
+    'Esta semana: perspicacia. Primero vienen las palabras a punto de borrarse, y las ya respondidas hoy no se repiten.',
+    'Cette semaine : la perspicacité. Les mots sur le point de s’effacer passent d’abord, et ceux déjà vus aujourd’hui ne reviennent pas.',
+    'Diese Woche: Einsicht. Wörter kurz vor dem Verblassen kommen zuerst, und heute schon beantwortete nicht noch einmal.',
+    'Esta semana: perspicácia. Palavras prestes a sumir vêm primeiro, e as já respondidas hoje não voltam.',
+  ),
+  'e' => tr(
+    'Minggu ini: ketekunan. Sesi dibuat pendek supaya mudah datang setiap hari.',
+    'This week: endurance. Sittings are kept short so that coming every day is easy.',
+    'Esta semana: constancia. Las sesiones son cortas para que venir cada día sea fácil.',
+    'Cette semaine : l’endurance. Les séances restent courtes pour qu’il soit facile de venir chaque jour.',
+    'Diese Woche: Ausdauer. Die Runden bleiben kurz, damit du leicht jeden Tag kommst.',
+    'Esta semana: constância. As sessões ficam curtas para ser fácil vir todo dia.',
+  ),
+  _ => tr(
+    'Belum ada fokus. Setelah beberapa hari, app memilih satu sisi untuk dilatih tiap minggu.',
+    'No focus yet. After a few days the app picks one side to train each week.',
+    'Aún no hay enfoque. Tras unos días, la app elige un lado para entrenar cada semana.',
+    'Pas encore d’objectif. Après quelques jours, l’app choisit un côté à travailler chaque semaine.',
+    'Noch kein Schwerpunkt. Nach ein paar Tagen wählt die App jede Woche eine Seite zum Üben.',
+    'Ainda sem foco. Depois de alguns dias, o app escolhe um lado para treinar a cada semana.',
+  ),
+};
+
+/// a family of words by name: a kind of word, words that change their form, or an ending
+String familyName(String f) {
+  if (f.startsWith('pos:')) return posName(f.substring(4));
+  if (f == 'form') {
+    return tr(
+      'bentuk kata (lampau, jamak, -ing)',
+      'word forms (past, plural, -ing)',
+      'formas de palabra (pasado, plural, -ing)',
+      'formes du mot (passé, pluriel, -ing)',
+      'Wortformen (Vergangenheit, Plural, -ing)',
+      'formas da palavra (passado, plural, -ing)',
+    );
+  }
+  return tr(
+    'kata berakhiran $f',
+    'words ending in $f',
+    'palabras en $f',
+    'mots en $f',
+    'Wörter auf $f',
+    'palavras em $f',
+  );
+}
+
+/// Watak belajar: what the answers show about this learner, and what the app does about it this week
+class TraitBlock extends StatelessWidget {
+  const TraitBlock({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final g = App.I.game;
+    final fam = g.weakFamily;
+    final weak = g.weakness();
+    final honesty = g.honesty;
+    final len = g.sittingLength;
+    Widget line(String t) => Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Text(t, style: T.body(15, pal.ink, height: 1.45)),
+    );
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Label(
+          tr(
+            'Watak belajar',
+            'How you learn',
+            'Cómo aprendes',
+            'Ta façon d’apprendre',
+            'Wie du lernst',
+            'Como você aprende',
+          ),
+        ),
+        const SizedBox(height: 8),
+        line(focusText(g.focus)),
+        if (weak != null) line(weak),
+        if (fam != null)
+          line(
+            tr(
+              'Yang paling sering meleset: ${familyName(fam)}.',
+              'What slips most often: ${familyName(fam)}.',
+              'Lo que más falla: ${familyName(fam)}.',
+              'Ce qui échappe le plus : ${familyName(fam)}.',
+              'Was am häufigsten danebengeht: ${familyName(fam)}.',
+              'O que mais escapa: ${familyName(fam)}.',
+            ),
+          ),
+        if (honesty != null)
+          line(
+            honesty >= 50
+                ? tr(
+                    'Kamu jujur saat tidak tahu. Itu membuat jadwal ulanganmu tepat.',
+                    'You say so when you don’t know. That keeps your reviews well timed.',
+                    'Dices cuando no sabes. Así tus repasos llegan a tiempo.',
+                    'Tu le dis quand tu ne sais pas. Tes révisions tombent ainsi au bon moment.',
+                    'Du sagst es, wenn du es nicht weißt. So kommen deine Wiederholungen zur rechten Zeit.',
+                    'Você diz quando não sabe. Assim suas revisões chegam na hora certa.',
+                  )
+                : tr(
+                    'Kamu sering menebak. Tekan "Belum tahu" saja: jadwal ulanganmu jadi lebih tepat.',
+                    'You often guess. Just press "I don’t know": your reviews will be better timed.',
+                    'Sueles adivinar. Pulsa "No lo sé": tus repasos llegarán más a tiempo.',
+                    'Tu devines souvent. Appuie sur « Je ne sais pas » : tes révisions tomberont plus juste.',
+                    'Du rätst oft. Drück einfach „Weiß ich nicht“: deine Wiederholungen kommen dann besser getaktet.',
+                    'Você costuma chutar. Toque em "Não sei": suas revisões ficam mais bem marcadas.',
+                  ),
+          ),
+        if (len != null)
+          line(
+            tr(
+              'Sesimu biasanya $len kartu.',
+              'Your sittings usually run $len cards.',
+              'Tus sesiones suelen tener $len tarjetas.',
+              'Tes séances comptent d’habitude $len cartes.',
+              'Deine Runden haben meist $len Karten.',
+              'Suas sessões costumam ter $len cartas.',
+            ),
+          ),
+      ],
+    );
+  }
+}
+
 class _BuildBlock extends StatelessWidget {
   const _BuildBlock();
 
@@ -400,7 +546,6 @@ class _BuildBlock extends StatelessWidget {
     final pal = look.pal;
     final g = App.I.game;
     final b = g.build;
-    final shares = b.shares;
     final next = g.nextJobs;
     final heading = g.heading;
     final known = g.known;
@@ -418,15 +563,15 @@ class _BuildBlock extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 6),
-        if (b.total < 20)
+        if (b.total == 0)
           Text(
             tr(
-              'Belum cukup jawaban untuk dibaca. Tiap jawaban menambah salah satu dari empat sisi di bawah ini.',
-              'Not enough answers to read yet. Every answer adds to one of the four sides below.',
-              'Aún no hay respuestas suficientes. Cada respuesta suma a uno de los cuatro lados de abajo.',
-              'Pas encore assez de réponses. Chaque réponse s’ajoute à l’un des quatre côtés ci-dessous.',
-              'Noch zu wenige Antworten. Jede Antwort zählt zu einer der vier Seiten unten.',
-              'Ainda não há respostas suficientes. Cada resposta soma a um dos quatro lados abaixo.',
+              'Belum cukup jawaban untuk dibaca. Empat sisi di bawah diukur dari mutu jawabanmu, bukan banyaknya.',
+              'Not enough answers to read yet. The four sides below are measured by how well you answer, not how much.',
+              'Aún no hay respuestas suficientes. Los cuatro lados de abajo miden lo bien que respondes, no cuánto.',
+              'Pas encore assez de réponses. Les quatre côtés ci-dessous mesurent la qualité de tes réponses, pas leur nombre.',
+              'Noch zu wenige Antworten. Die vier Seiten unten messen, wie gut du antwortest, nicht wie viel.',
+              'Ainda não há respostas suficientes. Os quatro lados abaixo medem quão bem você responde, não quanto.',
             ),
             style: T.body(15, pal.muted, height: 1.45),
           ),
@@ -434,7 +579,7 @@ class _BuildBlock extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 5),
             child: Semantics(
-              label: '${statNames[i]} ${(shares[i] * 100).round()}%',
+              label: '${statNames[i]} ${b.v[i]}',
               child: ExcludeSemantics(
                 child: Row(
                   children: [
@@ -442,11 +587,11 @@ class _BuildBlock extends StatelessWidget {
                       width: 96,
                       child: Text(statNames[i], style: T.body(15.5, pal.ink, w: FontWeight.w500)),
                     ),
-                    Expanded(child: Bar(b.total == 0 ? 0 : shares[i], height: 6)),
+                    Expanded(child: Bar(b.v[i] / 100, height: 6)),
                     SizedBox(
                       width: 46,
                       child: Text(
-                        b.total == 0 ? '–' : '${(shares[i] * 100).round()}%',
+                        b.total == 0 ? '–' : '${b.v[i]}',
                         textAlign: TextAlign.right,
                         style: T.body(15, pal.muted),
                       ),
@@ -459,15 +604,17 @@ class _BuildBlock extends StatelessWidget {
         const SizedBox(height: 4),
         Text(
           tr(
-            'Precision dari celah yang diisi bersih dan bentuk kata yang tepat. Swiftness dari jawaban cepat. Insight dari kata lama yang masih kamu ingat. Endurance dari hari-hari kamu datang.',
-            'Precision comes from gaps filled cleanly and the right form of a word. Swiftness from quick answers. Insight from old words you still remember. Endurance from the days you show up.',
-            'La precisión viene de los huecos completados sin fallo y de la forma correcta. La rapidez, de responder rápido. La perspicacia, de las palabras antiguas que aún recuerdas. La resistencia, de los días que vienes.',
-            'La précision vient des trous remplis sans faute et de la bonne forme du mot. La rapidité, des réponses vives. La perspicacité, des vieux mots dont tu te souviens encore. L’endurance, des jours où tu reviens.',
-            'Precision kommt von sauber gefüllten Lücken und der richtigen Wortform. Swiftness von schnellen Antworten. Insight von alten Wörtern, die du noch weißt. Endurance von den Tagen, an denen du da bist.',
-            'Precision vem de lacunas preenchidas sem erro e da forma certa da palavra. Swiftness, de respostas rápidas. Insight, de palavras antigas que você ainda lembra. Endurance, dos dias em que você aparece.',
+            'Precision: kata yang kamu tahu ditulis persis, dalam bentuk yang tepat. Swiftness: cepat untuk panjang katanya. Insight: masih ingat kata yang sempat pudar. Endurance: datang di banyak hari dan kabut tetap tipis. Banyaknya jawaban tidak menambah apa pun.',
+            'Precision: words you know, written exactly and in the right form. Swiftness: quick for the length of the word. Insight: remembering words that had begun to fade. Endurance: showing up on many days and keeping the fog thin. How many answers you give adds nothing.',
+            'Precision: las palabras que conoces, escritas con exactitud y en la forma correcta. Swiftness: rapidez según el largo de la palabra. Insight: recordar palabras que empezaban a borrarse. Endurance: venir muchos días y mantener la niebla fina. Responder más no suma nada.',
+            'Precision : les mots que tu connais, écrits exactement et sous la bonne forme. Swiftness : rapide pour la longueur du mot. Insight : te souvenir de mots qui commençaient à s’effacer. Endurance : venir de nombreux jours et garder le brouillard léger. Répondre plus n’ajoute rien.',
+            'Precision: Wörter, die du kennst, genau und in der richtigen Form geschrieben. Swiftness: schnell für die Länge des Wortes. Insight: Wörter noch wissen, die schon verblassten. Endurance: an vielen Tagen da sein und den Nebel dünn halten. Mehr Antworten zählen nicht mehr.',
+            'Precision: palavras que você conhece, escritas com exatidão e na forma certa. Swiftness: rapidez para o tamanho da palavra. Insight: lembrar palavras que já começavam a sumir. Endurance: aparecer em muitos dias e manter a névoa fina. Responder mais não soma nada.',
           ),
           style: T.body(14.5, pal.muted, height: 1.45),
         ),
+        const SizedBox(height: 18),
+        const TraitBlock(),
         if (next.isNotEmpty) ...[
           const SizedBox(height: 18),
           Label(
