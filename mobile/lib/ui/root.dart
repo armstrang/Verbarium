@@ -1429,7 +1429,8 @@ class TodayStatus extends StatelessWidget {
           'Bem-vindo de volta. Os próximos ${g.rested} XP contam em dobro.',
         ),
     ];
-    final train = days != null || g.nemeses.isNotEmpty;
+    // the training ground opens from the Squire on, or as soon as an exam is set
+    final train = days != null || (e.rank >= 1 && g.nemeses.isNotEmpty);
     if (lines.isEmpty && !train) return const SizedBox.shrink();
     return Padding(
       padding: const EdgeInsets.only(top: 12),

@@ -628,7 +628,21 @@ class _BuildBlock extends StatelessWidget {
           style: T.body(14.5, pal.muted, height: 1.45),
         ),
         const SizedBox(height: 18),
-        const TraitBlock(),
+        // opened once there is something to read: fifty answers
+        if (App.I.game.answers >= 50)
+          const TraitBlock()
+        else
+          Text(
+            tr(
+              'Watak belajarmu terbaca setelah 50 jawaban.',
+              'How you learn can be read after 50 answers.',
+              'Cómo aprendes se podrá leer tras 50 respuestas.',
+              'Ta façon d’apprendre se lira après 50 réponses.',
+              'Wie du lernst, lässt sich nach 50 Antworten ablesen.',
+              'Como você aprende poderá ser lido depois de 50 respostas.',
+            ),
+            style: T.body(14.5, pal.muted, height: 1.45),
+          ),
         if (next.isNotEmpty) ...[
           const SizedBox(height: 18),
           Label(

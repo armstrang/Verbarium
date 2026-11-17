@@ -364,6 +364,18 @@ const Map<String, List<String>> l10n = {
     'Für den, der den ganzen Weg am treuesten war.',
     'Para quem foi o mais fiel o caminho todo.',
   ],
+  'However thick the fog, it can be driven off, word by word.': [
+    'Por espesa que sea la niebla, se puede ahuyentar, palabra a palabra.',
+    'Aussi épais soit-il, le brouillard se chasse, mot après mot.',
+    'Wie dicht der Nebel auch ist, er lässt sich vertreiben, Wort für Wort.',
+    'Por mais densa que seja a névoa, dá para afastá-la, palavra por palavra.',
+  ],
+  'Brave enough to say "I don\'t know yet", and quick to know because of it.': [
+    'Con valor para decir "aún no lo sé", y por eso aprende pronto.',
+    'Assez brave pour dire « je ne sais pas encore », et prompt à savoir grâce à cela.',
+    'Mutig genug zu sagen „weiß ich noch nicht“, und gerade darum schnell im Wissen.',
+    'Corajoso o bastante para dizer "ainda não sei", e por isso aprende depressa.',
+  ],
   'Some learn while the others sleep.': [
     'Algunos aprenden mientras los demás duermen.',
     'Certains apprennent pendant que les autres dorment.',

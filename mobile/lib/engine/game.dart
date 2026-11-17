@@ -565,6 +565,13 @@ class Game {
     }
     if (!right && quiz == Quiz.cloze) _sample('h', honest ? 100 : 0);
     if (firstOfDay) _sample('e', endurance.toDouble());
+    // the fog of this title: how thick it got, and whether it was driven back under 20 after passing 100
+    if (firstOfDay || _int('fq') % 10 == 0) {
+      final due = e.dueCount;
+      if (due > _b('fogmax')) _bp['fogmax'] = due;
+      if (_b('fogmax') > Engine.gateShut && due < 20) _bp['fogclear'] = 1;
+    }
+    _g['fq'] = _int('fq') + 1;
     _signals(w, quiz, right, err, ms, firstKey, edits, honest);
 
     // quests
@@ -1084,6 +1091,10 @@ class Game {
       'cz': _b('cz'),
       'czms': _b('czms'),
       'letter': tier == 3 && _letterHeld(tier) ? 1 : 0,
+      'fogmax': _b('fogmax'),
+      'fogclear': _b('fogclear'),
+      'hc': ((_bp['hc'] as num?) ?? 0).round(),
+      'hm': _mean('h')?.round() ?? 0,
       'flawless': flawless ? 1 : 0,
     });
     if (secret != null) hid['$tier'] = secret.id;

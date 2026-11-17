@@ -765,6 +765,28 @@ class Jobs {
       hidden: true,
     ),
     Job(
+      'fogbreaker',
+      'Fogbreaker',
+      2,
+      0,
+      Perk('dayXp', 3),
+      Garb(3, 1, 4),
+      'Kabut setebal apa pun bisa diusir, kata demi kata.',
+      'However thick the fog, it can be driven off, word by word.',
+      hidden: true,
+    ),
+    Job(
+      'truthsayer',
+      'Truthsayer',
+      3,
+      0,
+      Perk('lapseXp', 3),
+      Garb(6, 3, 0),
+      'Berani berkata "belum tahu", dan karena itu cepat tahu.',
+      'Brave enough to say "I don\'t know yet", and quick to know because of it.',
+      hidden: true,
+    ),
+    Job(
       'polymath',
       'Polymath',
       6,
@@ -881,15 +903,17 @@ class Jobs {
         if (v('n') >= 80 && v('nt') / v('n') >= 0.5) return byId('nightwatch');
       case 2:
         if (v('bc') >= 100) return byId('berserker');
+        if (v('fogmax') > 100 && v('fogclear') == 1) return byId('fogbreaker');
       case 3:
         if (v('letter') == 1) return byId('lexicon');
         if (v('flawless') == 1) return byId('oracle');
+        if (v('hc') >= 30 && v('hm') >= 80) return byId('truthsayer');
       case 4:
         if (v('flawless') == 1) return byId('archivist');
       case 5:
         if (v('cz') >= 150 && v('czms') / v('cz') < 4500) return byId('chronomancer');
       case 6:
-        if (career.total >= 2000 && career.even) return byId('polymath');
+        if (career.total >= 1200 && career.even) return byId('polymath');
     }
     return null;
   }

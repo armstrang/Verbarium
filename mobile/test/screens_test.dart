@@ -630,7 +630,7 @@ void main() {
     await beat(tester);
     await tester.tap(find.text('Peta job'));
     await beat(tester, 900);
-    expect(find.text('3 / 52'), findsOneWidget);
+    expect(find.text('3 / 54'), findsOneWidget);
     await shot(tester, '42-peta-job');
     await tester.drag(find.byType(ListView), const Offset(0, -700));
     await beat(tester);

@@ -35,9 +35,9 @@ void main() {
     return g.onPromotion(tier, flawless).$1;
   }
 
-  test('the tree: 45 jobs on the map, 7 hidden, every name and id once', () {
+  test('the tree: 45 jobs on the map, 9 hidden, every name and id once', () {
     expect(Jobs.visible.length, 45);
-    expect(Jobs.secret.length, 7);
+    expect(Jobs.secret.length, 9);
     expect(Jobs.all.map((j) => j.id).toSet().length, Jobs.all.length);
     expect(Jobs.all.map((j) => j.name).toSet().length, Jobs.all.length);
     expect([for (var t = 0; t <= 6; t++) Jobs.tier(t).length], [1, 4, 8, 12, 8, 8, 4]);
@@ -259,5 +259,39 @@ void main() {
     expect(close.length, 3);
     expect(close.where((x) => Engine.looksLike(w.id, x.id)).length, inInclusiveRange(1, 2));
     expect(close.map((x) => x.id), isNot(contains('adapt')));
+  });
+
+  test('hidden jobs from behaviour: driving back a thick fog, and owning what you do not know', () {
+    final w = d.tier(1).first;
+    for (var i = 0; i < 40; i++) {
+      g.onAnswer(w, Quiz.cloze, Grade.clean, 14000);
+    }
+    crown(1);
+    // a fog over a hundred, then driven back under twenty within the title
+    final mem = store.map('mem');
+    final many = d.tier(2).take(130).toList();
+    for (final x in many) {
+      mem[x.id] = [3.0, now - Engine.day, 2, 0, now - 5 * Engine.day, 1, 5.0];
+    }
+    e = Engine(store, d, clock: () => now);
+    g = Game(store, e);
+    now += Engine.day;
+    g.onAnswer(w, Quiz.cloze, Grade.clean, 14000);
+    for (final x in many) {
+      mem[x.id] = [9.0, now + 9 * Engine.day, 3, 0, now, 1, 5.0];
+    }
+    e = Engine(store, d, clock: () => now);
+    g = Game(store, e);
+    now += Engine.day;
+    g.onAnswer(w, Quiz.cloze, Grade.clean, 14000);
+    final fog = crown(2);
+    expect(fog.id, 'fogbreaker');
+    expect(fog.hidden, isTrue);
+
+    // thirty misses or more in a title, nearly all owned with "I don't know"
+    for (var i = 0; i < 32; i++) {
+      g.onAnswer(w, Quiz.cloze, Grade.wrong, 9000, err: 'm', honest: i % 10 != 0);
+    }
+    expect(crown(3).id, 'truthsayer');
   });
 }
