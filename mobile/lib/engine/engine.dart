@@ -1,9 +1,12 @@
 /// The learning engine: spaced repetition on typed answers, the daily plan, the ranks and their trials.
 /// Pure Dart on top of the [Store]; the clock is passed in, so tests can move time.
 ///
-/// Memory: each word has a stability in days. A clean answer (typed right, no help) multiplies it, a helped answer
-/// barely moves it, a wrong answer cuts it to a quarter and brings the word back within minutes. A word is *kukuh*
-/// (solid) once its stability reaches a week and its last answer was clean.
+/// Memory: FSRS-6 (fsrs.dart). Each word has a stability in days and a difficulty 1–10. Only the first answer of a
+/// study day (which turns at 04:00) moves them: a gap typed unaided is "good" (or "easy" when quick), with the hint
+/// button or a slip "hard", wrong or "I don't know" "again"; choosing the meaning or building the sentence is at
+/// most "hard", since recognising is easier than recalling. Later answers the same day are practice. The interval
+/// is the time until recall falls to 90 %, times the learner's own `ease`, spread a little and never past the exam
+/// day. A word is *kukuh* (solid) once its stability reaches a week and its last answer was clean.
 ///
 /// Ranks: 0 Peasant, then one rank per deck tier (1 Squire, 2 Knight, 3 Baron, 4 Count, 5 Duke, 6 King), each one
 /// CEFR level (docs/riset-skor.md). Only trials change the rank. The coronation
@@ -16,6 +19,7 @@ import 'dart:math';
 
 import '../data/deck.dart';
 import '../data/store.dart';
+import 'fsrs.dart';
 
 enum Grade { clean, helped, wrong }
 
@@ -33,6 +37,9 @@ class Card {
   const Card(this.w, this.quiz, this.fresh);
 }
 
+/// One word's memory. Stored as `[s, due, reps, lapses, last, clean, d]`; files from before FSRS have no `d`, which
+/// is then read from the lapses (a word forgotten often starts harder). `reps` counts the days it was rated; a word
+/// met but not yet rated (its first gap still to come) has reps 0 and stability 0.
 class Mem {
   double s;
   int due;
@@ -40,21 +47,36 @@ class Mem {
   int lapses;
   int last;
   bool clean;
-  Mem(this.s, this.due, this.reps, this.lapses, this.last, this.clean);
+  double d;
+  Mem(this.s, this.due, this.reps, this.lapses, this.last, this.clean, [this.d = 5]);
 
   static Mem? from(Object? v) {
     if (v is! List || v.length < 6) return null;
+    final lapses = (v[3] as num).toInt();
     return Mem(
       (v[0] as num).toDouble(),
       (v[1] as num).toInt(),
       (v[2] as num).toInt(),
-      (v[3] as num).toInt(),
+      lapses,
       (v[4] as num).toInt(),
       v[5] == 1,
+      v.length >= 7 ? (v[6] as num).toDouble() : legacyD(lapses, v[5] == 1),
     );
   }
 
-  List<Object> toJson() => [double.parse(s.toStringAsFixed(3)), due, reps, lapses, last, clean ? 1 : 0];
+  /// the difficulty given to a word remembered before FSRS: 4.5, one more for each lapse, half a point less after
+  /// a clean answer
+  static double legacyD(int lapses, bool clean) => (4.5 + lapses - (clean ? 0.5 : 0)).clamp(1.0, 10.0);
+
+  List<Object> toJson() => [
+    double.parse(s.toStringAsFixed(3)),
+    due,
+    reps,
+    lapses,
+    last,
+    clean ? 1 : 0,
+    double.parse(d.toStringAsFixed(2)),
+  ];
 }
 
 class TierStat {
@@ -147,8 +169,8 @@ class Engine {
     store.touch();
   }
 
-  /// How fast memory grows for this learner: 1 is the starting point; it rises when on-time reviews are nearly
-  /// always right (the intervals were too short) and falls when too many are missed.
+  /// The learner's own pace: intervals are multiplied by it. 1 is the starting point; it rises when on-time
+  /// reviews are nearly always right (the intervals were too short) and falls when too many are missed.
   double get ease => ((store.data['ease'] as num?)?.toDouble() ?? 1.0).clamp(0.7, 1.3);
 
   void _tune(bool right) {
@@ -158,43 +180,117 @@ class Engine {
     if (r.length >= 30 && r.length % 10 == 0) {
       final rate = r.where((x) => x == 1).length / r.length;
       if (rate > 0.93) store.data['ease'] = min(1.3, ease + 0.05);
-      if (rate < 0.8) store.data['ease'] = max(0.7, ease - 0.05);
+      if (rate < 0.85) store.data['ease'] = max(0.7, ease - 0.05);
     }
   }
 
-  /// Records one answer. [count] = false keeps it out of the daily log (placement).
-  void answer(Word w, Grade g, {bool count = true, Quiz quiz = Quiz.cloze}) {
+  /// the study day of a moment: days turn at 04:00, so a late night still belongs to the evening before
+  static const dayTurn = 4 * 3600000;
+  static String studyDay(int ms) => dayKey(ms - dayTurn);
+
+  /// 04:00 of the study day of [ms], in ms
+  static int studyStart(int ms) {
+    final d = DateTime.fromMillisecondsSinceEpoch(ms - dayTurn);
+    return DateTime(d.year, d.month, d.day, 4).millisecondsSinceEpoch;
+  }
+
+  /// met, but its first gap not yet answered: it still gets its meaning
+  bool isNew(Word w) => (_mem[w.id]?.reps ?? 0) == 0;
+
+  /// the chance this word is recalled now (1 when never rated)
+  double recall(Word w) {
+    final m = _mem[w.id];
+    if (m == null || m.reps == 0) return 0;
+    return Fsrs.r((now() - m.last) / day, m.s);
+  }
+
+  /// the exam day (`set.exam`, yyyymmdd) for the English kingdom: no interval goes past it
+  int? get examAt {
+    if (store.isRealm) return null;
+    final v = '${store.map('set')['exam'] ?? ''}';
+    if (v.length != 8) return null;
+    final y = int.tryParse(v.substring(0, 4)), mo = int.tryParse(v.substring(4, 6)), d = int.tryParse(v.substring(6));
+    if (y == null || mo == null || d == null) return null;
+    final at = DateTime(y, mo, d, 4).millisecondsSinceEpoch;
+    return at > now() ? at : null;
+  }
+
+  /// days until the exam (null without one)
+  int? get examDays {
+    final at = examAt;
+    return at == null ? null : ((at - studyStart(now())) / day).round();
+  }
+
+  /// the last two weeks before the exam: no new words, the weak ones first
+  bool get raidPrep => (examDays ?? 99) <= 14;
+
+  /// The FSRS rating of one answer: 1 again, 2 hard, 3 good, 4 easy. A quick unaided gap on a word already known
+  /// is easy; choosing and building are at most hard.
+  static int rating(Grade g, Quiz quiz, {int ms = 0, int length = 6, bool first = false}) {
+    if (g == Grade.wrong) return Fsrs.again;
+    if (quiz != Quiz.cloze || g == Grade.helped) return Fsrs.hard;
+    if (!first && ms > 0 && ms < 2500 + 180 * length) return Fsrs.easy;
+    return Fsrs.good;
+  }
+
+  /// whether the last call of [answer] moved the memory (false: practice, or a word only met)
+  bool lastCounted = false;
+
+  /// Records one answer. [count] = false keeps it out of the daily log (placement). [ms] is the time taken.
+  void answer(Word w, Grade g, {bool count = true, Quiz quiz = Quiz.cloze, int ms = 0}) {
     final t = now();
     final old = _mem[w.id];
-    final fresh = old == null;
-    final m = old ?? Mem(0, t, 0, 0, t, false);
-    final elapsed = (t - m.last) / day;
-    final weight = quizWeight[quiz]!;
-    final onTime = elapsed >= m.s * 0.5;
-    switch (g) {
-      case Grade.clean:
-        if (fresh) {
-          m.s = quiz == Quiz.cloze ? 3 : (quiz == Quiz.build ? 2 : 0.003);
-        } else {
-          final grow = onTime ? 1 + 1.3 * weight * ease : 1 + 0.3 * weight;
-          m.s = min(365, max(quiz == Quiz.choice ? m.s : 1.0, m.s) * grow);
-        }
-        if (quiz == Quiz.cloze) m.clean = true;
-      case Grade.helped:
-        m.s = fresh ? (quiz == Quiz.cloze ? 1 : 0.003) : max(quiz == Quiz.cloze ? 1.0 : m.s, m.s * 1.1);
-        m.clean = false;
-      case Grade.wrong:
-        m.s = fresh ? 0.01 : max(0.01, m.s * (quiz == Quiz.cloze ? 0.25 : (quiz == Quiz.build ? 0.5 : 0.6)));
-        m.clean = false;
-        if (!fresh) m.lapses++;
+    lastCounted = false;
+    if (old == null) {
+      // a word met for the first time (its meaning is chosen): not rated yet, its gap comes later
+      _put(w, Mem(0, t, 0, 0, t, false, 5));
+      if (count) _log(true, g != Grade.wrong);
+      return;
     }
+    final m = old;
+    final first = m.reps == 0;
+    // the same study day again: practice, the memory stays as it was
+    if (!first && studyDay(m.last) == studyDay(t)) {
+      if (count) _log(false, g != Grade.wrong);
+      return;
+    }
+    // the first rating of a word is never easy (its meaning was shown minutes ago), and comes from a gap
+    if (first && quiz != Quiz.cloze) {
+      if (count) _log(false, g != Grade.wrong);
+      return;
+    }
+    final elapsed = max(0.0, (t - m.last) / day);
+    final onTime = elapsed >= m.s * 0.5;
+    final r = rating(g, quiz, ms: ms, length: w.id.length, first: first);
+    final (ns, nd) = Fsrs.next(m.s, m.d, elapsed, r);
+    m.s = ns;
+    m.d = nd;
+    if (r == Fsrs.again && !first) m.lapses++;
+    if (quiz == Quiz.cloze) m.clean = r >= Fsrs.good;
+    if (r == Fsrs.again) m.clean = false;
     m.reps++;
     m.last = t;
-    m.due = t + (m.s * day).round();
+    m.due = _dueAfter(w, m, t);
     _put(w, m);
-    if (count) _log(fresh, g != Grade.wrong);
-    if (!fresh && onTime && quiz == Quiz.cloze && count) _tune(g != Grade.wrong);
-    if (!fresh && w.tier <= rank && rank > 0) _window(g != Grade.wrong);
+    lastCounted = true;
+    if (count) _log(false, g != Grade.wrong);
+    if (!first && onTime && quiz == Quiz.cloze && count) _tune(g != Grade.wrong);
+    if (!first && w.tier <= rank && rank > 0) _window(g != Grade.wrong);
+  }
+
+  /// the start of the study day the word is due: the FSRS interval times [ease], spread by up to 8 % either way
+  /// (the same word and day always get the same spread), at least the next day, never past the exam
+  int _dueAfter(Word w, Mem m, int t) {
+    var ivl = Fsrs.interval(m.s) * ease;
+    if (ivl >= 3) {
+      final h = (w.id.codeUnits.fold<int>(m.reps, (a, b) => (a * 31 + b) & 0x7fffffff)) % 1000;
+      ivl *= 0.92 + 0.16 * h / 999;
+    }
+    var days = max(1, ivl.round());
+    final exam = examDays;
+    if (exam != null && exam > 1) days = min(days, exam - 1);
+    days = min(days, 36500);
+    return studyStart(t) + days * day;
   }
 
   /// what of the meaning a gap shows before it is answered: 0 the meaning, 1 the first letter and the length,
@@ -214,6 +310,7 @@ class Engine {
   Quiz pickQuiz(Word w) {
     final m = _mem[w.id];
     if (m == null) return Quiz.choice;
+    if (m.reps == 0) return Quiz.cloze;
     final h = (w.id.codeUnits.fold<int>(0, (a, b) => a * 31 + b) + m.reps * 7) & 0x7fffffff;
     final err = lastError(w);
     if (err == 'm' && m.s < 2) return Quiz.choice;
@@ -330,14 +427,45 @@ class Engine {
 
   // ---------------------------------------------------------------- the plan and a sitting
 
+  /// the words due now, the most likely to be forgotten first (a word met but not yet rated counts as forgotten)
   List<Word> dueWords() {
     final t = now();
     final l = [
       for (final w in deck.words)
         if ((_mem[w.id]?.due ?? t + 1) <= t) w,
     ];
-    l.sort((a, b) => _mem[a.id]!.due.compareTo(_mem[b.id]!.due));
+    final r = {for (final w in l) w.id: recall(w)};
+    l.sort((a, b) => r[a.id]!.compareTo(r[b.id]!));
     return l;
+  }
+
+  /// how many reviews are waiting: the fog over the kingdom
+  int get dueCount {
+    final t = now();
+    var n = 0;
+    for (final m in _mem.values) {
+      if (m.due <= t) n++;
+    }
+    return n;
+  }
+
+  static const gateHalf = 50, gateShut = 100;
+
+  /// new words allowed today: the pace set (`perDay`), halved over 50 waiting reviews, none over 100 and none in
+  /// the two weeks before the exam
+  int get freshToday {
+    final today = dayLog(dayKey(now()));
+    final due = dueCount;
+    if (due > gateShut || raidPrep) return 0;
+    final pace = due > gateHalf ? perDay ~/ 2 : perDay;
+    return max(0, pace - today[0]);
+  }
+
+  /// why no new words come today, when that is the reason: 'fog' (too many reviews), 'raid' (the exam is near)
+  String get gateReason {
+    if (raidPrep) return 'raid';
+    if (dueCount > gateShut) return 'fog';
+    return '';
   }
 
   List<Word> freshWords(int limit) {
@@ -354,16 +482,14 @@ class Engine {
 
   Plan plan() {
     final today = dayLog(dayKey(now()));
-    final left = max(0, perDay - today[0]);
-    return Plan(dueWords().length, freshWords(left).length, today[0] + today[1]);
+    return Plan(dueCount, freshWords(freshToday).length, today[0] + today[1]);
   }
 
   /// today's sitting: reviews first, a new word after every third one. A new word is met by choosing its meaning
   /// and returns a few cards later as a gap. At most 70 cards.
   List<Card> sitting({int extraFresh = 0}) {
-    final today = dayLog(dayKey(now()));
     final reviews = dueWords().take(48).toList();
-    final fresh = freshWords(max(0, perDay - today[0]) + extraFresh);
+    final fresh = freshWords(freshToday + extraFresh);
     final out = <Card>[];
     final later = <int, Word>{};
     var r = 0, f = 0;
@@ -479,7 +605,7 @@ class Engine {
       for (final w in deck.tier(t)) {
         if (seen(w)) continue;
         final t0 = now();
-        _put(w, Mem(10, t0 + ((2 + r.nextInt(38)) * day), 1, 0, t0, true));
+        _put(w, Mem(10, t0 + ((2 + r.nextInt(38)) * day), 1, 0, t0, true, 4));
       }
     }
     store.set('rank', passed);

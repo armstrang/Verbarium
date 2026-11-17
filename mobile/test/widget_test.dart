@@ -7,6 +7,7 @@ import 'package:verbarium/app/home_widget.dart';
 import 'package:verbarium/data/deck.dart';
 import 'package:verbarium/data/store.dart';
 import 'package:verbarium/engine/engine.dart';
+import 'package:verbarium/engine/fsrs.dart';
 import 'package:verbarium/engine/game.dart';
 
 import 'util.dart';
@@ -28,6 +29,7 @@ void main() {
 
   void meet(Iterable<Word> ws) {
     for (final w in ws) {
+      e.answer(w, Grade.clean, quiz: Quiz.choice);
       e.answer(w, Grade.clean);
     }
   }
@@ -59,7 +61,7 @@ void main() {
   test('answers count lightly for memory, 1–5 XP when right, and ten a day keep the streak', () {
     final ws = d.tier(3).take(10).toList();
     meet(ws);
-    final before = e.mem(ws[0])!.s;
+    final before = e.mem(ws[0])!.s, diff = e.mem(ws[0])!.d;
     now += 3 * Engine.day;
     final xp0 = g.xp;
     final answers = [
@@ -71,7 +73,7 @@ void main() {
     expect(g.xp - xp0, got);
     expect(HomeWidget.xpFor(ws[0]), inInclusiveRange(1, 5));
     expect(e.mem(ws[0])!.s, greaterThan(before), reason: 'a right answer helps the memory');
-    expect(e.mem(ws[0])!.s, lessThan(before * 2), reason: 'but less than typing it would');
+    expect(e.mem(ws[0])!.s, lessThan(Fsrs.next(before, diff, 3, Fsrs.good).$1), reason: 'but less than typing it would');
     expect(e.mem(ws[1])!.lapses, 1, reason: 'a wrong one counts as a lapse');
     expect((store.map('set')['wd'] as Map)[Engine.dayKey(now)], 11, reason: 'every kingdom counts for the streak');
     expect(e.streak, greaterThanOrEqualTo(1), reason: 'ten answers in the widget keep the day');

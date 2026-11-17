@@ -317,7 +317,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     if (it.w == null) return true;
     if (_hinted || _missOnce) return true;
     if (_phase == _Phase.right || _phase == _Phase.miss || _phase == _Phase.shown) return true;
-    return Engine.hintLevel(it.w!, it.fresh, App.I.english) == 0;
+    return Engine.hintLevel(it.w!, it.fresh || _e.isNew(it.w!), App.I.english) == 0;
   }
 
   /// Knight and Baron (B1–B2) get the word's first letter written in the gap, before one long line that says
@@ -326,7 +326,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     final it = _item;
     final w = it.w;
     if (w == null || it.quiz != Quiz.cloze) return '';
-    if (Engine.hintLevel(w, it.fresh, App.I.english) != 1) return '';
+    if (Engine.hintLevel(w, it.fresh || _e.isNew(w), App.I.english) != 1) return '';
     final a = w.answer(App.I.british);
     return a.isEmpty ? '' : a[0];
   }
@@ -372,7 +372,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       final w = it.w!;
       final lapses = (_e.mem(w)?.lapses ?? 0) > 0;
       final stab = _e.mem(w)?.s ?? 0.0;
-      _e.answer(w, g, count: _kind != RunKind.placement, quiz: it.quiz);
+      _e.answer(w, g, count: _kind != RunKind.placement, quiz: it.quiz, ms: ms);
       _reward = _g.onAnswer(
         w,
         it.quiz,

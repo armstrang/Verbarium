@@ -4,8 +4,9 @@
 ///
 /// Keys (never rename one: learners' progress depends on them):
 ///   v      schema version (2: seven titles; a version 1 file is moved up once when it is opened, see [Store.migrate])
-///   set    settings {banner, lang, perDay, music, musicVol, sfx, theme, calm, onb}
-///   mem    {word id: [stability days, due ms, reps, lapses, last ms, last answer clean 0/1]}
+///   set    settings {banner, lang, perDay, music, musicVol, sfx, theme, calm, onb, exam (yyyymmdd), …}
+///   mem    {word id: [stability days, due ms, reps, lapses, last ms, last answer clean 0/1, difficulty 1–10]}
+///          (FSRS since v0.7; a list without the difficulty is read from its lapses, see Mem.from)
 ///   log    {yyyymmdd: [new words, reviews, right, wrong]}
 ///   rank   0 Peasant, 1 Squire, 2 Knight, 3 Baron, 4 Count, 5 Duke, 6 King
 ///   ev     chronicle entries [{t, k, r, a, b}]
@@ -75,6 +76,9 @@ class Store {
   final Store? _parent;
 
   Store._child(Store parent, this.data) : backend = parent.backend, _parent = parent;
+
+  /// the store of one of the other kingdoms (not Aldmere, the English one)
+  bool get isRealm => _parent != null;
 
   /// the store of the kingdom of [code] ('de', 'es', 'fr', 'pt'), kept under `realms`
   Store realm(String code) {

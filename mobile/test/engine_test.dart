@@ -5,6 +5,7 @@ import 'util.dart';
 
 import 'package:verbarium/data/store.dart';
 import 'package:verbarium/engine/engine.dart';
+import 'package:verbarium/engine/fsrs.dart';
 
 Deck deck() => Deck(coreWords());
 
@@ -43,39 +44,124 @@ void main() {
     }
   });
 
-  test('a word becomes solid after clean answers spread over more than a week', () {
+  /// a new word: its meaning chosen, then its first gap in the same sitting
+  void meet(Word w, [Grade g = Grade.clean]) {
+    e.answer(w, Grade.clean, quiz: Quiz.choice);
+    e.answer(w, g);
+  }
+
+  test('a word becomes solid once its stability passes a week; it comes back at the start of its day', () {
     final w = e.freshWords(1).single;
+    e.answer(w, Grade.clean, quiz: Quiz.choice);
+    expect(e.isNew(w), isTrue, reason: 'met, its first gap still to come');
     e.answer(w, Grade.clean);
+    expect(e.isNew(w), isFalse);
+    expect(e.mem(w)!.s, closeTo(Fsrs.s0(Fsrs.good), 0.01));
     expect(e.solid(w), isFalse);
     expect(e.dueWords(), isEmpty);
-    days(3.1);
-    expect(e.dueWords(), contains(w));
+    days(1);
+    expect(e.dueWords(), isEmpty);
+    days(1);
+    expect(e.dueWords(), contains(w), reason: 'due from 04:00 of its day');
     e.answer(w, Grade.clean);
-    expect(e.solid(w), isFalse, reason: '6.9 days is not a week yet');
-    days(7);
-    e.answer(w, Grade.clean);
+    expect(e.mem(w)!.s, greaterThan(Engine.solidDays));
     expect(e.solid(w), isTrue);
   });
 
-  test('cramming does not make a word solid, and a miss brings it back within the hour', () {
+  test('only the first answer of a day moves memory; a miss brings the word back the next day', () {
     final w = e.freshWords(1).single;
+    meet(w);
+    final s = e.mem(w)!.s;
     for (var i = 0; i < 3; i++) {
       e.answer(w, Grade.clean);
+      expect(e.lastCounted, isFalse);
     }
-    expect(e.solid(w), isFalse);
+    expect(e.mem(w)!.s, s, reason: 'cramming the same day is practice');
+    expect(e.mem(w)!.reps, 1);
     days(20);
     e.answer(w, Grade.clean);
     expect(e.solid(w), isTrue);
+    days(40);
+    final before = e.mem(w)!.s;
     e.answer(w, Grade.wrong);
     expect(e.solid(w), isFalse);
     expect(e.mem(w)!.lapses, 1);
-    days(8);
+    expect(e.mem(w)!.s, lessThan(before));
+    expect(e.mem(w)!.d, greaterThan(Fsrs.d0(Fsrs.good)), reason: 'a lapse makes the word harder');
+    days(e.mem(w)!.s.ceil() + 1);
     expect(e.dueWords(), contains(w));
+  });
+
+  test('a quick unaided gap is easy and grows the word more than a slow one', () {
+    final a = e.freshWords(2)[0], b = e.freshWords(2)[1];
+    meet(a);
+    meet(b);
+    days(3);
+    e.answer(a, Grade.clean, ms: 1500);
+    e.answer(b, Grade.clean, ms: 20000);
+    expect(e.mem(a)!.s, greaterThan(e.mem(b)!.s));
+    expect(Engine.rating(Grade.clean, Quiz.cloze, ms: 1500, first: true), Fsrs.good, reason: 'never easy at first');
+  });
+
+  test('intervals spread a little, and never pass the exam day', () {
+    final ws = e.freshWords(15);
+    for (final w in ws) {
+      meet(w);
+    }
+    days(2);
+    for (final w in ws) {
+      e.answer(w, Grade.clean);
+    }
+    final dues = {for (final w in ws) e.mem(w)!.due};
+    expect(dues.length, greaterThan(1), reason: 'words learned together are not all due together');
+    final exam = DateTime.fromMillisecondsSinceEpoch(now).add(const Duration(days: 30));
+    store.map('set')['exam'] = '${exam.year}${exam.month.toString().padLeft(2, '0')}${exam.day.toString().padLeft(2, '0')}';
+    expect(e.examDays, 30);
+    days(10);
+    e.answer(ws[0], Grade.clean);
+    expect(e.mem(ws[0])!.due, lessThanOrEqualTo(e.examAt!));
+  });
+
+  test('new words wait when the reviews pile up, and stop two weeks before the exam', () {
+    expect(e.freshToday, 15);
+    final ws = e.freshWords(120);
+    for (final w in ws.take(60)) {
+      meet(w);
+    }
+    days(30);
+    expect(e.dueCount, 60);
+    expect(e.freshToday, 7, reason: 'over 50 waiting: half the pace');
+    for (final w in ws.skip(60)) {
+      store.map('mem')[w.id] = [2.0, now - Engine.day, 1, 0, now - 3 * Engine.day, 1, 5.0];
+    }
+    e = Engine(store, d, clock: () => now);
+    expect(e.dueCount, 120);
+    expect(e.freshToday, 0);
+    expect(e.gateReason, 'fog');
+    store.map('mem').clear();
+    e = Engine(store, d, clock: () => now);
+    final exam = DateTime.fromMillisecondsSinceEpoch(now).add(const Duration(days: 10));
+    store.map('set')['exam'] = '${exam.year}${exam.month.toString().padLeft(2, '0')}${exam.day.toString().padLeft(2, '0')}';
+    expect(e.raidPrep, isTrue);
+    expect(e.freshToday, 0);
+    expect(e.gateReason, 'raid');
+  });
+
+  test('a memory saved before FSRS is read with a difficulty from its lapses', () {
+    final w = d.tier(1).first;
+    store.map('mem')[w.id] = [12.0, now + Engine.day, 4, 2, now - 5 * Engine.day, 1];
+    e = Engine(store, d, clock: () => now);
+    expect(e.mem(w)!.s, 12.0);
+    expect(e.mem(w)!.d, Mem.legacyD(2, true));
+    expect(e.solid(w), isTrue);
+    days(1);
+    e.answer(w, Grade.clean);
+    expect((store.map('mem')[w.id] as List).length, 7, reason: 'written back with its difficulty');
   });
 
   test('help keeps a word from counting as solid', () {
     final w = e.freshWords(1).single;
-    e.answer(w, Grade.clean);
+    meet(w);
     days(4);
     e.answer(w, Grade.clean);
     days(8);
@@ -173,41 +259,40 @@ void main() {
 
   test('progress survives a restart', () {
     final w = e.freshWords(1).single;
-    e.answer(w, Grade.clean);
+    meet(w);
     store.flush();
     final again = Engine(Store(MemoryBackend((store.backend as MemoryBackend).text)), d, clock: () => now);
     expect(again.seen(w), isTrue);
-    expect(again.mem(w)!.s, 3);
+    expect(again.mem(w)!.s, closeTo(Fsrs.s0(Fsrs.good), 0.01));
     expect(again.dayLog(Engine.dayKey(now))[0], 1);
   });
 
-  test('the gap counts most, building less, choosing least; only the gap makes a word solid', () {
+  test('the gap counts most, building and choosing less; only the gap makes a word solid', () {
     final ws = e.freshWords(3);
     for (final w in ws) {
-      e.answer(w, Grade.clean);
+      meet(w);
     }
     days(4);
     e.answer(ws[0], Grade.clean, quiz: Quiz.cloze);
     e.answer(ws[1], Grade.clean, quiz: Quiz.build);
     e.answer(ws[2], Grade.clean, quiz: Quiz.choice);
     expect(e.mem(ws[0])!.s, greaterThan(e.mem(ws[1])!.s));
-    expect(e.mem(ws[1])!.s, greaterThan(e.mem(ws[2])!.s));
+    expect(e.mem(ws[1])!.s, closeTo(e.mem(ws[2])!.s, 0.001), reason: 'recognising is at most "hard"');
 
     final w = e.freshWords(1).single;
     e.answer(w, Grade.clean, quiz: Quiz.choice);
-    expect(e.dueWords(), isEmpty);
-    now += 10 * 60000;
-    expect(e.dueWords(), contains(w), reason: 'a word only chosen comes back within minutes');
+    e.answer(w, Grade.clean, quiz: Quiz.choice);
+    expect(e.isNew(w), isTrue, reason: 'a word only chosen has not been rated yet');
+    expect(e.dueWords(), contains(w), reason: 'its gap is still owed');
+    e.answer(w, Grade.helped);
     for (var i = 0; i < 6; i++) {
       days(9);
       e.answer(w, Grade.clean, quiz: Quiz.choice);
     }
     expect(e.solid(w), isFalse);
-    for (final gap in [9, 3, 6]) {
-      days(gap);
-      e.answer(w, Grade.clean);
-    }
-    expect(e.solid(w), isTrue, reason: 'three gaps over more than a week');
+    days(9);
+    e.answer(w, Grade.clean);
+    expect(e.solid(w), isTrue, reason: 'a clean gap');
   });
 
   test('three stages to a title: two sub-bosses, then the boss', () {
@@ -240,7 +325,7 @@ void main() {
     expect(e.ease, 1.0);
     final ws = e.freshWords(40);
     for (final w in ws) {
-      e.answer(w, Grade.clean);
+      meet(w);
     }
     days(4);
     for (final w in ws) {
