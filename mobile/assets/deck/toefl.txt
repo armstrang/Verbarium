@@ -13,7 +13,7 @@
 2|enroll/enrol|v|mendaftar (kuliah)|You must ___ in the course before September.
 2|laboratory|n|laboratorium|Students wear gloves in the chemistry ___ at all times.
 3|textbook|n|buku ajar|The ___ for this course costs ninety dollars.
-4|attendance|n|kehadiran|Class ___ counts for ten percent of the grade.
+4|attendance|n|kehadiran (jumlah yang hadir)|Class ___ counts for ten percent of the grade.
 1|credit|n|satuan kredit (SKS)|Each course is worth one ___ toward the degree.
 5|syllabus|n|silabus|The ___ lists every reading for the term.
 3|prerequisite|n|mata kuliah prasyarat|Statistics is a ___ for this course.
@@ -45,7 +45,7 @@
 4|colloquium|n|kolokium|The department holds a ___ every Thursday.
 3|classmate|n|teman sekelas|A ___ lent me her notes after I was ill.
 3|roommate|n|teman sekamar|My ___ studies until two in the morning.
-5|cafeteria|n|kantin|We eat lunch in the ___ on the ground floor.
+5|cafeteria|n|kantin (swalayan)|We eat lunch in the ___ on the ground floor.
 3|notebook|n|buku catatan|Bring a ___ and a pen to every class.
 1|backpack|n|ransel|He carries his laptop in a ___ on his back.
 1|handout|n|lembar bahan|The professor gave each student a ___ with the key dates.
@@ -72,7 +72,7 @@
 3|enrollment/enrolment|n|pendaftaran, jumlah mahasiswa|___ in the course is limited to thirty.
 5|postgraduate|adj|pascasarjana|She is doing ___ work in chemistry.
 5|doctorate|n|gelar doktor|He earned a ___ in physics at twenty-six.
-5|auditorium|n|aula|The lecture was moved to the main ___ because of the crowd.
+5|auditorium|n|aula (gedung pertunjukan)|The lecture was moved to the main ___ because of the crowd.
 5|paraphrase|v|memparafrasakan|Do not copy the passage; ___ it in your own words.
 1|footnote|n|catatan kaki|The source is given in a ___ on page three.
 4|appendix|n|lampiran|The full tables are in the ___ at the back.
@@ -113,11 +113,11 @@
 5|topography|n|topografi|The ___ of the region made road building hard.
 4|archipelago|n|kepulauan|The ___ has more than a thousand islands.
 4|nomadic|adj|nomaden|The tribe led a ___ life on the steppe.
-5|suffrage|n|hak pilih|Women won ___ in the country in 1920.
+5|suffrage|n|hak pilih (dalam pemilu)|Women won ___ in the country in 1920.
 5|homestead|n|tanah garapan keluarga|The family farmed a small ___ on the prairie.
 4|impressionism|n|impresionisme|The lecture covered ___ and the painters of light.
 5|fresco|n|lukisan dinding basah|The chapel ceiling is covered by a ___ from 1510.
-5|stanza|n|bait|The poem's last ___ changes its meaning.
+5|stanza|n|bait (puisi)|The poem's last ___ changes its meaning.
 4|paleontology|n|paleontologi|___ is the study of ancient life through fossils.
 4|hypothesize|v|berhipotesis|Scientists ___ that the lake was once a sea.
 4|algae|n|ganggang|Green ___ cover the surface of the pond every summer.
@@ -187,7 +187,7 @@
 3|whale|n|paus|A blue ___ is the largest animal alive.
 5|yolk|n|kuning telur|The ___ feeds the growing chick.
 4|appendage|n|anggota tubuh tambahan|An insect's antenna is a thin ___ used for sensing.
-5|arid|adj|gersang|Few trees grow in the ___ south of the state.
+5|arid|adj|gersang (kering, jarang hujan)|Few trees grow in the ___ south of the state.
 4|axis|n|sumbu|The earth turns on its ___ once every day.
 4|biome|n|bioma|The desert is a ___ with extreme heat and little water.
 4|botany|n|ilmu tumbuhan|She took a course in ___ to learn how plants grow.
@@ -204,7 +204,7 @@
 4|digestion|n|pencernaan|Fiber helps ___.
 4|ecologist|n|ahli ekologi|An ___ studied how wolves change the river.
 5|estuary|n|muara|Salt water and fresh water mix in the ___.
-4|evaporate|v|menguap|Water in the dish will ___ in the sun.
+4|evaporate|v|menguap (menjadi uap)|Water in the dish will ___ in the sun.
 5|fauna|n|fauna|The island's ___ includes rare birds.
 4|geologist|n|ahli geologi|A ___ studied the layers of the canyon.
 4|geyser|n|geiser|The ___ shoots hot water into the air every hour.
@@ -234,7 +234,7 @@
 4|savanna|n|sabana|Lions hunt on the open ___.
 4|scavenger|n|pemakan bangkai|A vulture is a ___ that eats dead animals.
 4|shrub|n|semak|A low ___ grows along the trail.
-4|slavery|n|perbudakan|The war ended ___ in the United States.
+4|slavery|n|perbudakan (sistem)|The war ended ___ in the United States.
 4|solstice|n|titik balik matahari|The summer ___ is the longest day of the year.
 4|specimen|n|spesimen, contoh|The lab kept a ___ of every rock found.
 4|sulfur/sulphur|n|belerang|Volcanic gas smells of ___.
@@ -242,7 +242,7 @@
 4|terrain|n|medan|The rocky ___ made the journey slow.
 4|thermal|adj|panas, termal|Hot springs are a source of ___ energy.
 4|tidal|adj|pasang surut|The ___ pool fills twice a day.
-4|toxin|n|racun|The plant makes a ___ that keeps insects away.
+4|toxin|n|racun (zat dari makhluk hidup)|The plant makes a ___ that keeps insects away.
 5|tremor|n|getaran (gempa)|A small ___ shook the building.
 4|tributary|n|anak sungai|The Missouri is a ___ of the Mississippi.
 5|tundra|n|tundra|Few trees grow on the frozen ___.
@@ -396,7 +396,7 @@
 5|romanticism|n|romantisisme|The age of ___ valued feeling and nature.
 5|tapestry|n|permadani dinding|A huge ___ hung in the castle hall.
 1|woodcut|n|cukil kayu|The book has a ___ on every page.
-5|deferral|n|penangguhan|He asked for a ___ of his tuition payment.
+5|deferral|n|penangguhan (penundaan pembayaran, keputusan)|He asked for a ___ of his tuition payment.
 5|plagiarize/plagiarise|v|menjiplak|Students who ___ may fail the course.
 5|sorority|n|perkumpulan mahasiswi|She joined a ___ in her first year.
 5|abiotic|adj|abiotik, tak hidup|Sunlight and water are ___ parts of an ecosystem.

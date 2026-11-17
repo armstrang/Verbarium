@@ -30,7 +30,7 @@ ascetic|adj|bertarak|The monks lead an ___ life.
 asperity|n|kekasaran nada|She answered with some ___ and turned away.
 assiduous|adj|tekun, rajin|She was ___ in checking every reference.
 atrophy|v|menyusut, melemah|Muscles ___ when they are not used.
-augur|v|menjadi pertanda|Such results ___ well for the season.
+augur|v|menjadi pertanda (baik atau buruk)|Such results ___ well for the season.
 auspicious|adj|menjanjikan, bertanda baik|The clear sky seemed an ___ start to the voyage.
 avarice|n|ketamakan|The tale is a warning against ___ and pride.
 avuncular|adj|kebapakan dan ramah|The ___ judge put the young witness at ease.
@@ -38,21 +38,21 @@ beatific|adj|berseri bahagia|The child gave a ___ smile in her sleep.
 beguile|v|memikat, memperdaya|The gardens ___ every visitor.
 bellicose|adj|suka berperang|The speech struck a ___ tone.
 bilious|adj|pemarah, memualkan|He was in a ___ mood all morning.
-bombastic|adj|muluk-muluk|His ___ style hides a lack of ideas.
+bombastic|adj|muluk-muluk (bahasa)|His ___ style hides a lack of ideas.
 bowdlerize/bowdlerise|v|menyensor bagian kasar|Editors used to ___ the plays for schools.
 brusque|adj|kasar dan singkat|The clerk gave a ___ reply.
 bucolic|adj|bersuasana pedesaan|The painting shows a ___ scene with sheep.
 bumptious|adj|sombong dan cerewet|A ___ young clerk corrected the manager.
-cacophony|n|hiruk-pikuk|A ___ of horns filled the street.
+cacophony|n|hiruk-pikuk (bunyi sumbang)|A ___ of horns filled the street.
 cajole|v|membujuk dengan rayuan|Parents ___ small children into eating.
-calumny|n|fitnah|The pamphlet was a ___ against an honest man.
+calumny|n|fitnah (tuduhan palsu untuk mencemarkan)|The pamphlet was a ___ against an honest man.
 candor/candour|n|keterusterangan|The minister spoke with unusual ___ about the failure.
 capricious|adj|berubah-ubah sesuka hati|Mountain weather is ___ even in summer.
 captious|adj|suka mencari-cari salah|A ___ reviewer counted the commas.
 castigate|v|mencerca|Editors ___ the minister for the delay.
 cavil|v|mencari-cari kesalahan kecil|It seems mean to ___ at so generous a gift.
 chary|adj|berhati-hati, enggan|Banks are ___ of lending to new firms.
-chicanery|n|tipu daya|The deal was won by legal ___ rather than merit.
+chicanery|n|tipu daya (akal licik, terutama hukum)|The deal was won by legal ___ rather than merit.
 chimera|n|khayalan mustahil|A city without traffic proved a ___ in the end.
 circumlocution|n|bahasa berbelit|He answered with ___ instead of a plain no.
 coda|n|bagian penutup|The trial was a sad ___ to a long career.
@@ -63,8 +63,8 @@ compendious|adj|ringkas tetapi lengkap|It is a ___ guide to the law of contract.
 complicit|adj|turut terlibat|Silence made them ___ in the fraud.
 conciliatory|adj|bersifat mendamaikan|The letter was written in a ___ tone.
 conflate|v|mencampuradukkan|Writers often ___ wealth with happiness.
-contrite|adj|menyesal|He looked ___ as he handed back the money.
-contumacious|adj|membangkang|The ___ witness was fined by the court.
+contrite|adj|menyesal (sungguh-sungguh)|He looked ___ as he handed back the money.
+contumacious|adj|membangkang (terhadap pengadilan)|The ___ witness was fined by the court.
 conundrum|n|teka-teki pelik|How to fund care for the old is a real ___ for planners.
 convivial|adj|ramah dan riang|The dinner was a ___ affair.
 corpulent|adj|gemuk|A ___ innkeeper filled the doorway.
@@ -80,7 +80,7 @@ deleterious|adj|merusak, merugikan|The dye has a ___ effect on river life.
 demagogue|n|penghasut rakyat|The ___ promised bread and blamed outsiders.
 demur|v|keberatan, menolak halus|Few members dared to ___ at the proposal.
 denouement|n|penyelesaian cerita|The ___ of the play comes in a single line.
-desiccate|v|mengeringkan|Hot winds ___ the soil within days.
+desiccate|v|mengeringkan (menghilangkan seluruh air)|Hot winds ___ the soil within days.
 desultory|adj|tanpa arah, asal-asalan|They made ___ conversation over tea.
 diaphanous|adj|tipis menerawang|The window was hung with ___ curtains.
 diatribe|n|kecaman pedas|The column was a ___ against modern art.
@@ -96,7 +96,7 @@ doggerel|n|sajak picisan|The card contained four lines of ___ about cats.
 dyspeptic|adj|pemarah, pencernaan buruk|The ___ critic liked nothing that season.
 ebullient|adj|riang meluap-luap|The team was ___ after the final result.
 effete|adj|lemah, kehilangan daya|The court had grown ___ and idle.
-effrontery|n|kelancangan|He had the ___ to ask for more.
+effrontery|n|kelancangan (tanpa rasa malu)|He had the ___ to ask for more.
 effulgent|adj|bercahaya cemerlang|The hills lay under an ___ evening sky.
 egregious|adj|sangat buruk, keterlaluan|The report lists the most ___ errors in the audit.
 elegy|n|elegi|The poem is an ___ for a lost village.
@@ -104,11 +104,11 @@ elide|v|menghilangkan, melewati|The report tends to ___ the awkward facts.
 eloquence|n|kefasihan|The ___ of her speech moved the hall.
 emollient|adj|menenangkan|The chairman made an ___ statement after the row.
 encomium|n|pujian resmi|The retiring judge received an ___ from the bar.
-enervate|v|melemahkan|Hot afternoons ___ even the keenest walkers.
+enervate|v|melemahkan (membuat lesu)|Hot afternoons ___ even the keenest walkers.
 enjoin|v|memerintahkan, melarang|The rules ___ silence in the reading room.
 ennui|n|kejemuan|A sense of ___ settled over the long summer.
 epigram|n|ungkapan singkat jenaka|He summed up the affair in an ___ of six words.
-equipoise|n|keseimbangan|The treaty kept the powers in ___ for decades.
+equipoise|n|keseimbangan (kekuatan yang seimbang)|The treaty kept the powers in ___ for decades.
 equivocate|v|berbicara mendua|Ministers ___ when asked for dates.
 ersatz|adj|tiruan bermutu rendah|During the war people drank ___ coffee.
 erudite|adj|sangat terpelajar|The book is ___ but never dull.
@@ -116,14 +116,14 @@ erudition|n|keluasan ilmu|The lecture was a display of ___ worn lightly.
 eulogy|n|pidato pujian (kematian)|Her brother gave the ___ at the funeral.
 evanescent|adj|cepat lenyap|Fame proved ___ for most of the winners.
 exculpate|v|membebaskan dari kesalahan|The new evidence may ___ the driver.
-execrable|adj|sangat buruk|The food at the inn was ___ and cold.
+execrable|adj|sangat buruk (sangat jelek)|The food at the inn was ___ and cold.
 exegesis|n|tafsir|The lecture was an ___ of a single verse.
 exigency|n|kebutuhan mendesak|Rules were bent to meet the ___ of war.
-exiguous|adj|sangat sedikit|They lived on an ___ pension.
+exiguous|adj|sangat sedikit (minim)|They lived on an ___ pension.
 exonerate|v|membebaskan dari tuduhan|New evidence may ___ the accused.
 expiate|v|menebus (dosa)|He sought to ___ his guilt through service.
 expostulate|v|memprotes dengan alasan|Neighbours came to ___ with the builder.
-expunge|v|menghapus|The court agreed to ___ the record.
+expunge|v|menghapus (dari catatan)|The court agreed to ___ the record.
 extraneous|adj|tidak berkaitan, dari luar|Remove any ___ detail from the summary.
 facetious|adj|bercanda tidak pada tempatnya|This is no time for ___ remarks.
 fallacious|adj|keliru (nalar)|The argument rests on a ___ premise.
@@ -153,7 +153,7 @@ iconoclast|n|pendobrak tradisi|The young ___ mocked every rule of the academy.
 idiosyncrasy|n|keanehan khas seseorang|Eating at midnight was one ___ his family accepted.
 ignominious|adj|memalukan|The campaign ended in ___ defeat.
 imbroglio|n|kekusutan rumit|The loan became a diplomatic ___ within a week.
-immure|v|mengurung|Monks used to ___ themselves for years.
+immure|v|mengurung (dalam tembok)|Monks used to ___ themselves for years.
 impecunious|adj|tak beruang|The ___ poet lived on the kindness of friends.
 imperious|adj|suka memerintah|She dismissed him with an ___ wave.
 impervious|adj|kebal, tidak terpengaruh|The coach seemed ___ to criticism.
@@ -162,16 +162,16 @@ impugn|v|meragukan, menyerang (kejujuran)|Nobody wished to ___ her motives.
 impute|v|menuduhkan, mengaitkan|It is unfair to ___ bad motives to her.
 inchoate|adj|baru mulai terbentuk|The plan is still ___ and vague.
 incipient|adj|baru mulai timbul|Doctors caught the disease at an ___ stage.
-incontrovertible|adj|tak terbantahkan|The proof is ___ and public.
+incontrovertible|adj|tak terbantahkan (pasti benar)|The proof is ___ and public.
 inculcate|v|menanamkan (ajaran)|Schools try to ___ habits of thrift.
 indefatigable|adj|tak kenal lelah|She was an ___ campaigner for clean water.
 indigent|adj|sangat miskin|The clinic treats ___ patients for free.
-indolent|adj|malas|An ___ student rarely finishes a long book.
+indolent|adj|malas (enggan bekerja)|An ___ student rarely finishes a long book.
 ineffable|adj|tak terlukiskan|The view filled her with ___ joy.
-ineluctable|adj|tak terelakkan|He saw decline as the ___ fate of empires.
+ineluctable|adj|tak terelakkan (pasti terjadi)|He saw decline as the ___ fate of empires.
 inimitable|adj|tak tertirukan|She told the story in her ___ style.
-insipid|adj|hambar|The soup was thin and ___ without salt.
-insolent|adj|kurang ajar|The ___ reply cost him his job.
+insipid|adj|hambar (tidak menarik)|The soup was thin and ___ without salt.
+insolent|adj|kurang ajar (menghina)|The ___ reply cost him his job.
 insouciant|adj|santai tak peduli|He gave an ___ shrug at the news.
 internecine|adj|saling menghancurkan|The party was torn by ___ quarrels.
 intransigent|adj|keras kepala, tidak mau berkompromi|Both sides remained ___ throughout the talks.
@@ -180,21 +180,21 @@ invective|n|caci maki|The debate sank into personal ___ within minutes.
 inveigle|v|membujuk dengan tipu|Salesmen ___ old people into signing.
 inveterate|adj|sudah mendarah daging|He is an ___ collector of old maps.
 invidious|adj|menimbulkan iri atau benci|It would be ___ to name one player.
-irascible|adj|lekas marah|The ___ editor shouted at everyone.
+irascible|adj|lekas marah (pemarah)|The ___ editor shouted at everyone.
 jejune|adj|dangkal, kekanak-kanakan|The essay offers only ___ remarks on politics.
 jingoism|n|nasionalisme berlebihan|The paper was accused of ___ during the war.
 lachrymose|adj|mudah menangis, sendu|The film has a ___ ending.
 laconic|adj|irit kata|His ___ reply was simply a nod and one word.
 lacuna|n|kekosongan, celah|There is a ___ in the records for 1840.
-lambast|v|mengecam keras|Columnists ___ the board for its silence.
+lambast|v|mengecam keras (dengan pedas)|Columnists ___ the board for its silence.
 largesse|n|kemurahan hati (memberi)|The museum depends on the ___ of a few families.
-lassitude|n|kelesuan|The heat brought a feeling of ___ by noon.
+lassitude|n|kelesuan (lemah, letih)|The heat brought a feeling of ___ by noon.
 laudable|adj|terpuji|It is a ___ aim, though hard to reach.
-lethargic|adj|lesu|The heat made the whole class ___ by noon.
+lethargic|adj|lesu (tidak bertenaga)|The heat made the whole class ___ by noon.
 levity|n|sikap main-main|This is not a moment for ___ of any kind.
-licentious|adj|tak bermoral|The court was known for its ___ ways.
+licentious|adj|tak bermoral (dalam hal seks)|The court was known for its ___ ways.
 liminal|adj|di ambang peralihan|Dusk is a ___ hour in the old stories.
-limpid|adj|jernih|The stream ran ___ over white stones.
+limpid|adj|jernih (air)|The stream ran ___ over white stones.
 loquacious|adj|suka berbicara|He becomes ___ after a glass of wine.
 lugubrious|adj|muram berlebihan|The ___ music suited the grey day.
 magnanimous|adj|berjiwa besar|The winner was ___ in praising her rival.
@@ -206,17 +206,17 @@ maudlin|adj|cengeng|He grew ___ when he spoke of home.
 mellifluous|adj|merdu mengalir|The actor had a ___ voice.
 mendacious|adj|suka berdusta|The report was called ___ by the opposition.
 mendicant|n|peminta-minta|A ___ sat at the temple gate.
-mercurial|adj|mudah berubah|The ___ director changed the script daily.
+mercurial|adj|mudah berubah (suasana hati)|The ___ director changed the script daily.
 meretricious|adj|mencolok tetapi kosong|The hotel has a ___ glitter that fools nobody.
 minatory|adj|mengancam|The letter had a ___ tone.
 misanthrope|n|pembenci manusia|The old ___ lived alone on the hill.
 munificent|adj|sangat dermawan|A ___ gift paid for the new wing.
 nadir|n|titik terendah|The firm reached its ___ in the third year.
 nebulous|adj|samar, kabur|The firm has only a ___ idea of its future.
-nefarious|adj|keji|The gang used the shop for ___ purposes.
+nefarious|adj|keji (jahat)|The gang used the shop for ___ purposes.
 neophyte|n|pemula|Even a ___ can follow these steps.
 nugatory|adj|tak bernilai|The fine was so small as to be ___ in effect.
-obfuscate|v|mengaburkan|Long sentences ___ a simple message.
+obfuscate|v|mengaburkan (membuat sulit dipahami)|Long sentences ___ a simple message.
 obloquy|n|celaan umum|He endured years of ___ before he was cleared.
 obsequious|adj|menjilat, terlalu patuh|The ___ waiter agreed with everything they said.
 obstreperous|adj|ribut dan sulit diatur|Two ___ guests were asked to leave.
@@ -245,7 +245,7 @@ peregrination|n|pengembaraan|His ___ through Asia lasted ten years.
 peremptory|adj|bernada memerintah|The note was short and ___ in tone.
 perfidy|n|pengkhianatan|The king never forgave the ___ of his brother.
 perfunctory|adj|asal-asalan, sekadar formalitas|The guard gave our bags a ___ check.
-perspicacious|adj|tajam pengamatan|A ___ reader will notice the hidden joke.
+perspicacious|adj|tajam pengamatan (cerdas menilai)|A ___ reader will notice the hidden joke.
 perspicuous|adj|jelas dan mudah dipahami|Her account of the theory is ___ and brief.
 pertinacious|adj|gigih bersikeras|A ___ reporter kept asking the same question.
 petulant|adj|merajuk|The star gave a ___ reply to the press.
@@ -256,26 +256,26 @@ plangent|adj|menggema sedih|The ___ notes of a horn drifted across the lake.
 platitude|n|ungkapan klise|The speech was one ___ after another.
 plenary|adj|pleno, penuh|The conference ends with a ___ session.
 polyglot|n|orang yang menguasai banyak bahasa|The guide was a ___ who spoke nine tongues.
-portent|n|pertanda|The comet was seen as a ___ of war.
+portent|n|pertanda (buruk)|The comet was seen as a ___ of war.
 precocious|adj|matang sebelum waktunya|The ___ child read at three.
 predilection|n|kegemaran khusus|He has a ___ for long Russian novels.
 prescient|adj|berpandangan jauh ke depan|Her warning about the bubble proved ___ within a year.
 prevaricate|v|berdalih|Witnesses ___ when the truth is costly.
-probity|n|kejujuran|The judge was known for her ___ and care.
-proclivity|n|kecenderungan|He has a ___ for risky deals.
-profligate|adj|boros|The ___ spending emptied the treasury.
-prolix|adj|bertele-tele|The judgment is ___ but sound.
-propinquity|n|kedekatan|Friendship often grows from mere ___ at work.
-propitiate|v|mengambil hati|Farmers made offerings to ___ the river.
+probity|n|kejujuran (integritas)|The judge was known for her ___ and care.
+proclivity|n|kecenderungan (ke arah buruk)|He has a ___ for risky deals.
+profligate|adj|boros (berfoya-foya)|The ___ spending emptied the treasury.
+prolix|adj|bertele-tele (tulisan, pidato)|The judgment is ___ but sound.
+propinquity|n|kedekatan (jarak, hubungan)|Friendship often grows from mere ___ at work.
+propitiate|v|mengambil hati (meredakan murka)|Farmers made offerings to ___ the river.
 prosaic|adj|biasa, tidak imajinatif|The real reason was more ___ than the rumour.
 proscribe|v|melarang secara resmi|The law will ___ the sale of such weapons.
 protean|adj|mudah berubah bentuk|The actor is famous for his ___ talent.
 puerile|adj|kekanak-kanakan|The joke was ___ and badly timed.
-pugnacious|adj|suka berkelahi|The ___ lawyer never settled a case.
+pugnacious|adj|suka berkelahi (agresif)|The ___ lawyer never settled a case.
 puissant|adj|perkasa|The league faced a ___ rival in the east.
 pulchritude|n|kecantikan|The poem praises the ___ of the bride.
 punctilious|adj|sangat cermat akan tata cara|He is ___ about dates and titles.
-pusillanimous|adj|pengecut|The council's reply was ___ and vague.
+pusillanimous|adj|pengecut (tidak punya nyali)|The council's reply was ___ and vague.
 quiescent|adj|diam, tenang|The volcano has been ___ for a decade.
 quixotic|adj|idealis tak realistis|It was a ___ plan to rebuild the canal by hand.
 raconteur|n|pencerita ulung|The old sailor was a fine ___ at dinner.
@@ -289,10 +289,10 @@ recondite|adj|sukar dipahami, langka|He writes on ___ points of law.
 recrudescence|n|kambuhnya kembali|Doctors feared a ___ of the fever.
 redolent|adj|mengingatkan pada, harum|The hall is ___ of an older age.
 redoubt|n|kubu pertahanan|The village was the last ___ of the old dialect.
-refractory|adj|bandel|The ___ pupil ignored every warning.
+refractory|adj|bandel (sulit dikendalikan)|The ___ pupil ignored every warning.
 refulgent|adj|bersinar terang|The dome was ___ in the morning sun.
 remonstrate|v|memprotes|Neighbours ___ with the builders about the noise.
-reprehensible|adj|tercela|Lying to the inquiry was ___ and foolish.
+reprehensible|adj|tercela (patut dikecam)|Lying to the inquiry was ___ and foolish.
 reprobate|n|bajingan|The old ___ charmed everyone he cheated.
 restive|adj|gelisah, sulit dikendalikan|The crowd grew ___ as the delay went on.
 reticent|adj|pendiam, enggan bicara|She was ___ about her years abroad.
@@ -300,32 +300,32 @@ ribald|adj|cabul jenaka|The play is full of ___ jokes.
 riposte|n|jawaban tangkas|Her ___ silenced the heckler.
 sagacious|adj|arif, bijaksana|A ___ adviser knows when to stay silent.
 salubrious|adj|menyehatkan|They moved to a more ___ part of the coast.
-sanguine|adj|optimistis|Few economists are ___ about next year.
-saturnine|adj|muram|The ___ steward rarely smiled.
-sedulous|adj|tekun|She was ___ in checking every figure.
+sanguine|adj|optimistis (tetap yakin)|Few economists are ___ about next year.
+saturnine|adj|muram (pendiam dan murung)|The ___ steward rarely smiled.
+sedulous|adj|tekun (cermat dan gigih)|She was ___ in checking every figure.
 sententious|adj|sok bijak|He gave a ___ little speech about duty.
 simulacrum|n|tiruan semu|The theme park is a ___ of a Tuscan town.
 sinecure|n|jabatan tanpa kerja|The post was a ___ worth a thousand a year.
 solecism|n|kesalahan tata bahasa atau tata krama|Wearing a hat indoors was a ___ in that club.
-solicitous|adj|penuh perhatian|The nurse was ___ about his comfort.
+solicitous|adj|penuh perhatian (cemas memperhatikan)|The nurse was ___ about his comfort.
 solipsism|n|solipsisme|The novel is a study in ___ and loneliness.
 somnolent|adj|mengantuk|The town was ___ in the afternoon heat.
 sophistry|n|dalih licik|The defence was pure ___ from start to finish.
 specious|adj|tampak benar tetapi keliru|The case rests on a ___ argument.
-splenetic|adj|pemarah|The ___ critic spared no one.
+splenetic|adj|pemarah (mudah murka)|The ___ critic spared no one.
 stentorian|adj|sangat lantang|The sergeant gave orders in a ___ voice.
 stolid|adj|tenang tanpa emosi|The ___ guard did not blink.
 stultify|v|menumpulkan|Endless forms ___ the brightest staff.
-supercilious|adj|angkuh|A ___ waiter looked at our shoes.
+supercilious|adj|angkuh (meremehkan orang lain)|A ___ waiter looked at our shoes.
 supine|adj|telentang, pasif|The board was ___ in the face of the takeover.
 sybarite|n|pencinta kemewahan|The ___ ordered oysters for breakfast.
 sycophant|n|penjilat|The minister was surrounded by a ___ or two at every turn.
 temerity|n|kenekatan|He had the ___ to correct the judge.
 tendentious|adj|berat sebelah|The film gives a ___ account of the strike.
 torpid|adj|lamban, lesu|Snakes are ___ in cold weather.
-torpor|n|kelesuan|The town lay in the ___ of a hot afternoon.
+torpor|n|kelesuan (tidak bergerak)|The town lay in the ___ of a hot afternoon.
 tortuous|adj|berliku-liku|The path to a deal was long and ___ for both sides.
-traduce|v|memfitnah|Rivals sought to ___ her in the press.
+traduce|v|memfitnah (menjelekkan nama)|Rivals sought to ___ her in the press.
 trenchant|adj|tajam, tegas|She wrote a ___ critique of the policy.
 truculent|adj|galak, suka melawan|The ___ player argued with the referee.
 tumid|adj|bengkak, muluk|The speech was ___ with borrowed phrases.
@@ -343,8 +343,8 @@ variegated|adj|beraneka warna|The plant has ___ leaves of green and cream.
 venal|adj|dapat disuap|The ___ clerk sold permits for cash.
 venerate|v|memuliakan, menghormati|Many cultures ___ their elders.
 venial|adj|ringan, dapat dimaafkan|Being late once is a ___ fault.
-veracity|n|kebenaran|Nobody doubted the ___ of her account.
-verbose|adj|bertele-tele|The first draft was ___ and hard to follow.
+veracity|n|kebenaran (kejujuran)|Nobody doubted the ___ of her account.
+verbose|adj|bertele-tele (terlalu banyak kata)|The first draft was ___ and hard to follow.
 verisimilitude|n|kemiripan dengan kenyataan|Small details give the story its ___ and force.
 vicarious|adj|dialami lewat orang lain|Readers take ___ pleasure in the hero's travels.
 vicissitude|n|pasang surut nasib|He bore each ___ of fortune with calm.
@@ -355,7 +355,7 @@ vituperate|v|mencaci maki|Pamphlets ___ against the court.
 voluble|adj|lancar dan banyak bicara|The ___ guide never paused for breath.
 wanton|adj|semena-mena|The ___ destruction of the forest shocked visitors.
 winnow|v|menampi, menyaring|Judges ___ the entries down to ten.
-winsome|adj|memikat|The child gave a ___ smile.
+winsome|adj|memikat (menarik hati)|The child gave a ___ smile.
 zealous|adj|sangat bersemangat|A ___ official checked every single ticket.
 zeitgeist|n|semangat zaman|The novel caught the ___ of the decade.
 zephyr|n|angin sepoi|A ___ stirred the curtains at dawn.
