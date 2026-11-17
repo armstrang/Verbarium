@@ -12,6 +12,7 @@ import '../engine/engine.dart';
 import '../engine/jobs.dart';
 import 'root.dart';
 import 'hero.dart' show familyName;
+import 'hikayat.dart';
 import 'theme.dart';
 import 'widgets.dart';
 
@@ -114,6 +115,14 @@ class ChronicleTab extends StatelessWidget {
         ),
         const SizedBox(height: 10),
         const VocabSize(),
+        if (App.I.realm == 'en') ...[
+          const SizedBox(height: 10),
+          InkButton(
+            'Hikayat Aldmere',
+            outline: true,
+            onTap: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const HikayatPage())),
+          ),
+        ],
         const SizedBox(height: 18),
         Label(
           tr(

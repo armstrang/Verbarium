@@ -13,6 +13,7 @@ import 'package:verbarium/data/store.dart';
 import 'package:verbarium/engine/engine.dart';
 import 'package:verbarium/engine/jobs.dart';
 import 'package:verbarium/ui/coronation.dart';
+import 'package:verbarium/ui/hikayat.dart';
 import 'package:verbarium/ui/crest.dart';
 import 'package:verbarium/ui/lore.dart';
 import 'package:verbarium/ui/pixel.dart';
@@ -1144,5 +1145,25 @@ void main() {
     expect(find.text('Papan Buronan'.toUpperCase()), findsOneWidget);
     expect(find.text(words[0].answer(false)), findsWidgets, reason: 'the Nemesis on the board');
     await shot(tester, '96-buronan');
+  });
+
+  testWidgets('Hikayat: a tale for each title, open up to the title held, words met underlined', (tester) async {
+    final tales = Tale.parse(File('assets/hikayat/en.txt').readAsStringSync());
+    expect(tales.map((t) => t.rank), [0, 1, 2, 3, 4, 5, 6]);
+    expect(tales.every((t) => t.paragraphs.length >= 4), isTrue);
+    phone(tester);
+    await learner(tester, rank: 2, stage: 1, jobs: ['peasant', 'blade', 'duelist']);
+    await tester.pumpWidget(const VerbariumApp());
+    await beat(tester, 900);
+    await tester.tap(find.text('Kronik'));
+    await beat(tester, 900);
+    await tester.scrollUntilVisible(find.text('Hikayat Aldmere'), 300, scrollable: find.byType(Scrollable).first);
+    await tester.tap(find.text('Hikayat Aldmere'));
+    await beat(tester, 900);
+    expect(find.text('? ? ?'), findsNWidgets(4), reason: 'Baron to King still closed');
+    await shot(tester, '97-hikayat');
+    await tester.tap(find.text(tales[2].title));
+    await beat(tester, 900);
+    await shot(tester, '98-hikayat-kisah');
   });
 }

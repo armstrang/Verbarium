@@ -1,0 +1,53 @@
+# Hikayat of Aldmere: one short tale for each title, written for Verbarium, read once the title is held.
+# Format: "== rank|Title" opens a tale; the lines after it are its paragraphs.
+
+== 0|The Lamp in the Window
+In a small village in Aldmere, there is a girl called Wren. She works in the fields every day. Her hands are tired at night, but she is not sad.
+One evening, an old man comes to the village. He has a long coat and a heavy bag. “I am the Chronicler,” he says. “I write down the story of every person who learns.”
+Wren laughs. “Nobody writes about me. I only carry water and cut wheat.”
+The old man opens his bag. Inside there is a small book with empty pages. “This is your book,” he says. “Every word you learn will be a line in it.”
+That night, Wren lights a lamp in her window. She learns three new words: bread, river, friend. She writes them in the book. The Chronicler smiles and walks on into the dark.
+
+== 1|The Squire's First Road
+Wren is a squire now. She follows an old knight called Sir Bram along the road to the north. Her job is to look after his horse and his armour, and to listen.
+“A squire must notice everything,” Sir Bram tells her. “The weather, the tracks on the ground, the faces of strangers.”
+On the third day they reach a bridge. A man is standing in the middle of it. He wants money from every traveller.
+Sir Bram does not shout. He asks the man why he is there. The man explains that the river destroyed his farm last spring and he has nothing to eat.
+Instead of fighting, Sir Bram gives him a job: to guard the bridge for the village and keep it in good repair. “A word can open a road,” he says to Wren, “when a sword would only close it.”
+Wren writes that sentence in her book that night.
+
+== 2|The Knight and the Silent Tower
+As a knight, Wren travels alone. Her reputation reaches the Silent Tower before she does, so the people inside are already waiting when she arrives.
+The tower belongs to a scholar who refuses to speak. Years ago she lost an argument in front of the whole court, and since then she has written instead of talking.
+The villagers believe she is dangerous. They describe strange lights in her windows and a voice that sings at midnight.
+Wren climbs the stairs and knocks. The door opens a little, and a note slides out: “What do you want?”
+Wren writes her answer on the back: “To understand you.” The scholar reads it twice. Then, for the first time in nine years, she opens the door completely.
+Inside, the walls are covered with words: thousands of them, carefully arranged by meaning. “I was afraid of saying the wrong thing,” the scholar finally admits. “So I tried to collect every right one.”
+
+== 3|The Baron's Ledger
+Becoming a baron brought Wren responsibilities she had never anticipated. Lands, harvests, disputes between neighbours: everything now required her judgement, and every decision was recorded in a ledger that the whole region could inspect.
+That autumn, two families brought her a conflict over a strip of woodland. Each insisted that their grandparents had owned it, and each produced a document to support the claim.
+Wren examined both papers by candlelight. The handwriting was convincing, the seals appeared genuine, and yet the descriptions of the boundary contradicted each other entirely.
+Rather than favour either side, she proposed an alternative. The woodland would be managed jointly, its timber shared, and its oldest tree preserved as a sign of the agreement.
+Neither family was entirely satisfied, which, the Chronicler later observed, is often evidence of a fair outcome. Wren recorded the settlement in the ledger in plain language, so that no clever reader could ever twist its meaning.
+
+== 4|The Count's Embassy
+As a count, Wren was dispatched to negotiate with the merchants of a neighbouring kingdom, whose language she had studied for years but never used in earnest.
+The talks were tense from the outset. Her counterparts spoke rapidly, employed idioms she had only half mastered, and occasionally exploited her hesitation to steer the discussion towards terms that favoured them.
+On the second evening, exhausted, she nearly conceded a clause she did not fully comprehend. Instead, she asked them to restate it in simpler words. The room fell silent; such candour was evidently unusual.
+The merchants’ leader eventually laughed and rephrased the clause. Its implications, once clear, were considerably less generous than they had appeared.
+The treaty that emerged was modest but durable. Wren concluded that admitting uncertainty had not weakened her position at all; it had merely deprived others of the opportunity to take advantage of it.
+
+== 5|The Duke Who Listened
+By the time Wren was elevated to duke, her eloquence had become proverbial, and petitioners travelled considerable distances merely to hear her address the assembly.
+Paradoxically, her most consequential achievement that year involved scarcely a word of her own. A drought had devastated the southern provinces, and the council was inclined to impose emergency levies that would have fallen disproportionately on the poorest villages.
+Wren postponed the vote and spent a fortnight in those villages, listening. She heard farmers articulate, with remarkable precision, which channels had silted up, which reservoirs had been neglected, and which officials had diverted funds for their own convenience.
+When the council reconvened, she presented not a speech but a meticulous account of their testimony, each claim corroborated and every figure verified.
+The levies were abandoned, the reservoirs restored, and two officials quietly dismissed. The Chronicler noted that the most persuasive words in the assembly that season had belonged to people who would never set foot in it.
+
+== 6|The King and the Last Page
+Wren’s coronation as monarch was an occasion of unprecedented splendour, yet she insisted on spending the eve of it not in the palace but in the village where her journey had begun.
+The lamp still stood in the window of her childhood home, somewhat tarnished, but intact. Beside it lay the book the Chronicler had given her, its pages now dense with decades of annotations, contradictions resolved and ambiguities untangled.
+She turned to the final page, expecting it to be blank. Instead, she discovered a single line in the Chronicler’s meticulous hand: “Every sovereign believes the story ends with a crown. It does not; it ends with whoever is next.”
+At dawn, a girl from the neighbouring farm appeared at the door, curious and slightly apprehensive, asking what all the visitors were for. Wren did not explain the ceremony.
+Instead, she placed an empty book in the child’s hands and asked her to choose three words she would like to learn first. The Chronicler, watching from the road, began a new page.
