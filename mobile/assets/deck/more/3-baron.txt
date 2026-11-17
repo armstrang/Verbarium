@@ -524,3 +524,178 @@ indifferent|The food was ___.|He was ___ to her pain.
 industrial|The town has an ___ past.|There was ___ action.
 inevitable|Change is ___.|The ___ happened.
 infection|She has an ear ___.|The ___ spread quickly.
+infer|What can we ___ from this?|Readers will ___ his meaning.
+infinite|The universe may be ___.|She has ___ energy.
+inflame|The drug may ___ the skin.|His words seemed to ___ the crowd.
+inflation|___ hurts savers.|The government fought ___.
+inform|We will ___ you of any change.|Please ___ the police.
+inhabitant|Every ___ received a letter.|The island has few ___.=inhabitants
+inherit|He will ___ his father's eyes.|She hopes to ___ the business.
+initial|Sign your ___ here.=initials|His ___ reaction was shock.
+initiative|The government launched a new ___.|She lacks ___.
+inn|The ___ served hot food.|They spent the night at an ___.
+inner|She has ___ strength.|They live in the ___ city.
+innovation|The firm values ___.|Each ___ was tested.
+input|Data ___ takes time.|Thanks for your ___.
+insert|Please ___ a coin.|The magazine had an advertising ___.
+insight|She has deep ___.|The book offers ___ into history.
+insist|I ___ on paying.|She will ___ on the truth.
+inspire|Her story will ___ you.|They tried to ___ hope.
+install|They will ___ new windows.|He was ___ as bishop.=installed
+instalment/installment|Pay in monthly ___.=instalments/installments|The next ___ of the series is out.
+instance|For ___, take the case of Rome.|In this ___, I agree.
+instant|It happened in an ___.|She drank ___ coffee.
+institute|They will ___ a new rule.|The ___ was founded in 1900.
+institution|Marriage is an old ___.|The ___ cares for the elderly.
+insulate|___ the pipes against frost.|They tried to ___ the children from the news.
+insurance|___ is expensive.|She works in ___.
+integrate|They try to ___ new arrivals.|The parts ___ well.
+intellectual|She is an ___.|The work requires ___ effort.
+intense|The heat was ___.|She gave an ___ stare.
+interact|The drugs may ___.|He refused to ___ with others.
+internal|She suffered ___ injuries.|It is an ___ matter.
+interpret|She will ___ for the president.|Don't ___ my silence as agreement.
+interrupt|Sorry to ___.|The rain began to ___ the match.
+interval|There is a short ___ in the play.|At regular ___ the bell rang.=intervals
+intimidate|They tried to ___ the witness.|He refused to be ___.=intimidated
+intrigue|The court was full of ___.|The idea seemed to ___ her.
+invade|The army began to ___.|Don't ___ my privacy.
+invasion|It was an ___ of privacy.|The ___ failed.
+investment|The house was a good ___.|Foreign ___ rose.
+isolate|They will ___ the patient.|The village is ___ by snow.=isolated
+jail|He was sent to ___.|They will ___ him for a year.
+jar|She opened a ___ of honey.|The noise seemed to ___ my nerves.
+jet|A ___ of water sprayed the crowd.|She has ___ black hair.
+joint|He hurt his knee ___.|They have a ___ account.
+joy|She cried with ___.|The baby is a ___.
+judgement/judgment|The ___ was in our favour.|Use your ___.
+junior|She is a ___ partner.|He is my ___ by two years.
+jury|The ___ found him guilty.|The ___ is still out.
+justice|___ was done.|She did ___ to the role.
+justify|Can you ___ the cost?|Nothing can ___ violence.
+juvenile|His behaviour is ___.|___ birds have dull feathers.
+kit|He forgot his football ___.|They sell the bike as a ___.
+kneel|She began to ___ in prayer.|He chose to ___ and propose.
+knot|My stomach was in a ___.|They tied the ___ in June.
+labor/labour|Manual ___ is hard.|She went into ___ at night.
+ladder|He climbed the career ___.|Don't walk under a ___.
+landscape|The ___ was beautiful.|The political ___ changed.
+landslide|A ___ blocked the road.|The ___ buried the village.
+lane|They walked down a country ___.|The bus ___ is for buses only.
+lately|What have you been doing ___?|___, she has been tired.
+launch|The ___ of the rocket was delayed.|They will ___ the boat.
+leaflet|They handed out a ___.|Read the ___ in the box.
+league|He is out of my ___.|They are in ___ with the devil.
+lean|She began to ___ out of the window.|The meat is ___.
+legend|She is a living ___.|The ___ of King Arthur is old.
+licence/license|She has a driving ___.|The ___ ran out.
+lieutenant|The ___ gave the order.|He was promoted to ___.
+lifetime|It will last a ___.|She worked there for a ___.
+likewise|Watch me and do ___.|He thanked me, and I said ___.
+literary|She reads ___ fiction.|The ___ festival was busy.
+litter|The cat had a ___ of kittens.|The street was full of ___.
+lively|She has a ___ mind.|The party was ___.
+livestock|They sold their ___.|The ___ market is weekly.
+load|She began to ___ the car.|What a ___ of rubbish!
+loan|Can I ___ you a pen?|The bank refused the ___.
+loose|The dog got ___.|She wore a ___ dress.
+loyal|He is ___ to the king.|The ___ fans cheered.
+lung|She has a weak ___.|He filled each ___ with air.
+magnificent|The view is ___.|She gave a ___ performance.
+maintain|They will ___ the road.|She continued to ___ her innocence.
+majority|The government has a large ___.|The ___ of people agree.
+mammal|A bat is a flying ___.|Every ___ feeds its young milk.
+manufacture|The ___ of cars employs thousands.|They ___ toys.
+margin|Write in the ___.|The profit ___ is small.
+massive|He had a ___ heart attack.|The project was ___.
+master|She is a ___ of disguise.|The dog obeyed its ___.
+matrix|The ___ has three rows.|The village is a ___ of narrow lanes.
+maximum|Turn the heat to ___.|The ___ penalty is death.
+means|By all ___.|She lives beyond her ___.
+mechanic|He works as a car ___.|The ___ checked the brakes.
+mechanism|The lock ___ broke.|The body has a defence ___.
+medal|He received a ___ for bravery.|They won the bronze ___.
+mediate|She agreed to ___.|A judge will ___ the dispute.
+medication|She is on ___.|Take the ___ with food.
+melt|The ice began to ___.|Her heart seemed to ___.
+membership|___ is growing.|She renewed her ___.
+memorable|It was a ___ day.|The song is ___.
+metaphor|"Life is a journey" is a ___.|The poet uses ___ well.=metaphors
+military|The ___ took power.|He went to a ___ school.
+mineral|They drank ___ water.|The country is rich in ___.=minerals
+minimum|The ___ wage rose.|Keep noise to a ___.
+minister|The ___ resigned.|The ___ led the prayers.
+minor|It's a ___ problem.|Children are ___ in law.=minors
+minority|They are a religious ___.|She is in the ___.
+miserable|The weather was ___.|He lives on a ___ wage.
+mislead|The advert may ___ customers.|Don't ___ me.
+mission|Her ___ is to help.|The space ___ was a success.
+mock|Don't ___ me.|They had a ___ exam.
+mode|Switch to silent ___.|He is in work ___.
+modest|He is ___ about his success.|The costs are ___.
+modesty|She dressed with ___.|His ___ is charming.
+modify|They will ___ the car.|She had to ___ her plan.
+moisture|The soil holds ___.|___ on the window froze.
+monarch|The ___ waved to the crowd.|She was a powerful ___.
+monarchy|They want to abolish the ___.|The ___ has little power.
+monetary|The prize has no ___ value.|___ policy affects prices.
+monitor|The heart ___ beeped.|They will ___ the situation.
+monument|The ___ is a tourist attraction.|The bridge is a ___ to engineers.
+moral|The ___ of the story is clear.|He gave ___ support.
+moreover|The plan is cheap; ___, it works.|She is clever and, ___, kind.
+mortgage|They paid off the ___.|The ___ rate rose.
+motion|The film was in slow ___.|The ___ was passed.
+motivate|Money does not ___ her.|The coach tried to ___ the team.
+motivation|Lack of ___ is a problem.|What is the ___ behind it?
+motor|The ___ is broken.|She has poor ___ skills.
+mount|They began to ___ the stairs.|Pressure continued to ___.
+mourn|They ___ the loss of their son.|Fans ___ the singer.
+mourning|She wore black in ___.|The nation is in ___.
+multiple|The test has ___ choice questions.|She has ___ talents.
+multiply|___ two by three.|Problems began to ___.
+murmur|There was a ___ of agreement.|The stream began to ___.
+mutter|She began to ___ to herself.|He gave a ___ of complaint.
+myth|The Greek ___ of Icarus is famous.|That story is a ___.
+naked|He was ___ to the waist.|The ___ truth is ugly.
+nasty|She has a ___ temper.|It was a ___ accident.
+navigate|She used a map to ___.|It is hard to ___ the system.
+navigation|The ship's ___ failed.|Satellite ___ is accurate.
+necessity|Water is a ___.|He acted out of ___.
+negotiate|They will ___ a deal.|She had to ___ the stairs carefully.
+negotiation|The deal is under ___.|___ skills are useful.
+nerve|He lost his ___.|She has a ___ problem in her arm.
+neutral|Switzerland is ___.|She wears ___ colours.
+nevertheless|It was raining; ___, they went.|He was tired but carried on ___.
+nightmare|She woke from a ___.|The traffic was a ___.
+norm|Long hours are the ___.|Social ___ change.=norms
+notion|She has no ___ of time.|The ___ is absurd.
+nowadays|___, few people write letters.|Children ___ have phones.
+numerous|___ people complained.|She has ___ friends.
+nutrition|___ labels are on all food.|She studies ___.
+obedient|He was an ___ child.|The ___ soldier followed orders.
+obey|Children should ___ their parents.|The dog will ___ you.
+objective|Try to be ___.|What is your ___?
+obligation|She felt an ___ to help.|There is no ___.
+obscure|Clouds began to ___ the sun.|He was an ___ poet.
+observation|Her ___ was correct.|The ___ deck has a view.
+observe|They ___ Sunday as a holiday.|She paused to ___ the stars.
+obstacle|Fear is the main ___.|He overcame every ___.
+obstruct|Do not ___ the road.|He was charged with trying to ___ justice.
+obtain|She managed to ___ a visa.|The data is hard to ___.
+occupation|The ___ lasted five years.|What is your ___?
+occupy|Soldiers began to ___ the town.|Games ___ the children.
+offence/offense|No ___ meant.|He took ___ at the joke.
+offend|Did I ___ you?|The smell may ___ some people.
+offset|Trees ___ carbon.|The loss was ___ by the gain.=offset
+omit|She chose to ___ his name.|Please ___ the last line.
+ongoing|The project is ___.|There are ___ talks.
+operate|The surgeon will ___ tomorrow.|The firm will ___ in Asia.
+opponent|He is an ___ of the war.|She respects her ___.
+oppose|They will ___ the plan.|Many ___ the war.
+oppress|The king began to ___ the people.|The heat seemed to ___ us.
+optimistic|She is ___ about the future.|The forecast is ___.
+orbit|The moon will ___ the earth.|The rocket reached ___.
+orchestra|The ___ played Mozart.|She sat in the ___ seats.
+organ|She plays the church ___.|He donated an ___.
+organic|They grow ___ food.|The ___ matter decayed.
+organism|A tiny ___ caused the disease.|The city is a living ___.
