@@ -151,6 +151,25 @@ class App extends ChangeNotifier {
   bool get musicOn => _set['music'] != 0;
   double get musicVol => (_set['musicVol'] as num?)?.toDouble() ?? 0.45;
   bool get sfxOn => _set['sfx'] != 0;
+
+  /// say the answer aloud after it is found or shown (`set.say`, on unless turned off)
+  bool get sayOn => _set['say'] != 0;
+
+  /// the voice of the kingdom's language: British under the IELTS banner, American under the TOEFL
+  String get voice => switch (realm) {
+    'de' => 'de-DE',
+    'es' => 'es-ES',
+    'fr' => 'fr-FR',
+    'pt' => 'pt-BR',
+    _ => british ? 'en-GB' : 'en-US',
+  };
+
+  /// says a word with the phone's own voice (offline); [force] for a tap on a word, even with the setting off
+  void say(String text, {bool force = false}) {
+    if (text.isEmpty || (!force && !sayOn)) return;
+    Native.speak(text, voice);
+  }
+
   String get theme => _set['theme'] as String? ?? 'system';
 
   /// fewer and gentler animations (Settings); the phone's own setting is honoured as well

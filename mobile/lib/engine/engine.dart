@@ -227,6 +227,17 @@ class Engine {
     return n;
   }
 
+  /// An estimate of the words held now: those rated whose chance of recall is still 85 % or more. Recorded at each
+  /// coronation, so the learner sees it grow (Kronik).
+  int get vocabSize {
+    var n = 0;
+    final t = now();
+    for (final m in _mem.values) {
+      if (m.reps > 0 && Fsrs.r((t - m.last) / day, m.s) >= 0.85) n++;
+    }
+    return n;
+  }
+
   /// a word forgotten five times or more: a Nemesis on the bounty board (Game decides when it is beaten)
   static const nemesisLapses = 5;
   bool hard(Word w) => (_mem[w.id]?.lapses ?? 0) >= nemesisLapses;
@@ -649,7 +660,7 @@ class Engine {
       store.set('cool', 0);
       store.set('shaky', 0);
       store.set('win', <int>[]);
-      _event('crown', tier, right, total);
+      _event('crown', tier, right, total, {'vs': vocabSize});
     } else {
       store.set('cool', now() + 20 * 3600000);
       _event('fail', tier, right, total);

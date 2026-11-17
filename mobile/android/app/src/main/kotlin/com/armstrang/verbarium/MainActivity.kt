@@ -12,6 +12,8 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.SystemClock
+import android.speech.tts.TextToSpeech
+import java.util.Locale
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
@@ -26,6 +28,33 @@ import org.json.JSONArray
 class MainActivity : FlutterActivity() {
     private val main = Handler(Looper.getMainLooper())
     private var donate: Donate? = null
+
+    /** the phone's own text-to-speech, started at the first word spoken: offline with the voices installed */
+    private var tts: TextToSpeech? = null
+    private var ttsReady = false
+    private var ttsWaiting: Pair<String, String>? = null
+
+    private fun say(text: String, tag: String): String {
+        val t = tts
+        if (t == null) {
+            ttsWaiting = text to tag
+            tts = TextToSpeech(this) { status ->
+                ttsReady = status == TextToSpeech.SUCCESS
+                val w = ttsWaiting
+                ttsWaiting = null
+                if (ttsReady && w != null) main.post { say(w.first, w.second) }
+            }
+            return "starting"
+        }
+        if (!ttsReady) {
+            ttsWaiting = text to tag
+            return "starting"
+        }
+        val ok = t.setLanguage(Locale.forLanguageTag(tag))
+        if (ok == TextToSpeech.LANG_MISSING_DATA || ok == TextToSpeech.LANG_NOT_SUPPORTED) return "nolang"
+        t.speak(text, TextToSpeech.QUEUE_FLUSH, null, "verbarium")
+        return "ok"
+    }
 
     /** Google Play Billing only starts when the support page is opened, and ends when it is left: the internet
      *  permission that Billing brings is used for nothing else */
@@ -154,6 +183,7 @@ class MainActivity : FlutterActivity() {
                     result.success(null)
                 }
                 "fromPlay" -> result.success(fromPlay())
+                "speak" -> result.success(say(call.argument<String>("text") ?: "", call.argument<String>("lang") ?: "en-US"))
                 "widgetRefresh" -> {
                     PracticeWidget.refresh(this)
                     result.success(null)
@@ -267,6 +297,8 @@ class MainActivity : FlutterActivity() {
     }
 
     override fun onDestroy() {
+        tts?.shutdown()
+        tts = null
         donate?.end()
         donate = null
         music?.release()

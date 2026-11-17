@@ -67,4 +67,8 @@ class Native {
 
   /// asks the practice widget on the home screen to read widget/deck.json again
   static Future<void> widgetRefresh() => _call<void>('widgetRefresh');
+
+  /// says [text] aloud with the phone's own voice for [lang] (a BCP-47 tag such as en-GB): 'ok', 'starting' (the
+  /// engine wakes up and speaks a moment later), 'nolang' (no voice for it installed), null outside Android
+  static Future<String?> speak(String text, String lang) => _call<String>('speak', {'text': text, 'lang': lang});
 }

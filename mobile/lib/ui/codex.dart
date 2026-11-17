@@ -329,9 +329,12 @@ class _Words extends StatelessWidget {
             Semantics(
               label: '${w.answer(App.I.british)}, ${(e.recall(w) * 100).round()}%',
               child: ExcludeSemantics(
-                child: Opacity(
-                  opacity: (0.35 + 0.65 * e.recall(w)).clamp(0.35, 1.0),
-                  child: Text(w.answer(App.I.british), style: T.body(15.5, pal.ink)),
+                child: GestureDetector(
+                  onTap: () => App.I.say(w.answer(App.I.british), force: true),
+                  child: Opacity(
+                    opacity: (0.35 + 0.65 * e.recall(w)).clamp(0.35, 1.0),
+                    child: Text(w.answer(App.I.british), style: T.body(15.5, pal.ink)),
+                  ),
                 ),
               ),
             ),

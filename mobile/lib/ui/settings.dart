@@ -202,6 +202,28 @@ class SettingsPage extends StatelessWidget {
                         app.sfxOn,
                         (v) => app.put('sfx', v ? 1 : 0),
                       ),
+                      _Toggle(
+                        tr(
+                          'Lafal kata',
+                          'Say the word',
+                          'Pronunciar la palabra',
+                          'Prononcer le mot',
+                          'Wort aussprechen',
+                          'Pronunciar a palavra',
+                        ),
+                        app.sayOn,
+                        (v) => app.put('say', v ? 1 : 0),
+                      ),
+                      _Note(
+                        tr(
+                          'Kata diucapkan dengan suara bawaan ponselmu, tanpa internet, setelah jawabannya ketemu. Kalau tak terdengar, pasang suara bahasa itu di pengaturan Text-to-speech ponsel.',
+                          'The word is spoken by your phone\'s own voice, offline, once the answer is found. If you hear nothing, install a voice for that language in the phone\'s text-to-speech settings.',
+                          'La palabra la dice la voz de tu teléfono, sin internet, cuando se encuentra la respuesta. Si no oyes nada, instala una voz para ese idioma en los ajustes de texto a voz del teléfono.',
+                          'Le mot est prononcé par la voix de ton téléphone, hors ligne, une fois la réponse trouvée. Si tu n’entends rien, installe une voix pour cette langue dans les réglages de synthèse vocale du téléphone.',
+                          'Das Wort spricht die Stimme deines Handys, offline, sobald die Antwort gefunden ist. Hörst du nichts, installiere eine Stimme für die Sprache in den Sprachausgabe-Einstellungen des Handys.',
+                          'A palavra é dita pela voz do seu celular, sem internet, quando a resposta é encontrada. Se não ouvir nada, instale uma voz desse idioma nas configurações de conversão de texto em voz do celular.',
+                        ),
+                      ),
                     ]),
                     _Group(tr('Tampilan', 'Look', 'Aspecto', 'Apparence', 'Aussehen', 'Aparência'), [
                       _Choice(

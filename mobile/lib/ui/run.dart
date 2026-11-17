@@ -538,6 +538,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
       App.I.sfx(crit ? 'crit' : 'hit');
     } else {
       App.I.sfx('quill');
+      if (_item.w != null && _item.quiz == Quiz.cloze) App.I.say(_item.w!.answer(App.I.british));
     }
     App.I.haptic();
     setState(() => _phase = _Phase.right);
@@ -574,6 +575,7 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
     } else {
       if (it.tries < 2) _q.insert(min(_i + 4, _q.length), _Item(it.w, Quiz.cloze, false, it.tries + 1));
       _input.clear();
+      if (!_fight && it.w != null) App.I.say(it.w!.answer(App.I.british));
       setState(() => _phase = _Phase.shown);
     }
   }

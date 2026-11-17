@@ -112,6 +112,8 @@ class ChronicleTab extends StatelessWidget {
             ],
           ),
         ),
+        const SizedBox(height: 10),
+        const VocabSize(),
         const SizedBox(height: 18),
         Label(
           tr(
@@ -260,6 +262,74 @@ String weekLine(Map<String, dynamic> ev) {
     'Vom Chronisten verzeichnet: diese Woche übst du $side.$weak',
     'Registrado pelo Cronista: esta semana você treina $side.$weak',
   );
+}
+
+/// how many words are held now (Engine.vocabSize), and how it stood at each coronation: proof of the road walked
+class VocabSize extends StatelessWidget {
+  const VocabSize({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final pal = Look.of(context).pal;
+    final e = App.I.engine;
+    final n = e.vocabSize;
+    final past = [
+      for (final ev in e.events.reversed)
+        if (ev['k'] == 'crown' && ev['vs'] is num)
+          (rankNames[((ev['r'] as num).toInt()).clamp(0, Engine.maxRank)], (ev['vs'] as num).toInt()),
+    ];
+    return Container(
+      padding: const EdgeInsets.fromLTRB(14, 12, 14, 12),
+      decoration: BoxDecoration(
+        color: pal.field,
+        border: Border.all(color: pal.line),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            tr(
+              'Perkiraan kata yang kamu pegang: $n',
+              'Words you hold, as estimated: $n',
+              'Palabras que dominas, según el cálculo: $n',
+              'Mots que tu tiens, d’après l’estimation : $n',
+              'Wörter, die du sicher kannst, geschätzt: $n',
+              'Palavras que você domina, pela estimativa: $n',
+            ),
+            style: T.body(16, pal.ink, w: FontWeight.w600),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            tr(
+              'Kata yang peluang ingatnya masih 85% atau lebih. Ini perkiraan dari ulanganmu, bukan skor ujian.',
+              'Words whose chance of recall is still 85% or more. An estimate from your reviews, not an exam score.',
+              'Palabras con un 85 % o más de probabilidad de recordarlas. Una estimación de tus repasos, no una nota de examen.',
+              'Mots dont la chance de rappel reste de 85 % ou plus. Une estimation tirée de tes révisions, pas un score d’examen.',
+              'Wörter, an die du dich noch mit 85 % oder mehr erinnerst. Eine Schätzung aus deinen Wiederholungen, kein Prüfungsergebnis.',
+              'Palavras com 85% ou mais de chance de lembrar. Uma estimativa das suas revisões, não uma nota de prova.',
+            ),
+            style: T.body(14, pal.muted, height: 1.4),
+          ),
+          if (past.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            for (final (title, v) in past)
+              Text(
+                tr(
+                  'Saat menjadi $title: $v',
+                  'On becoming $title: $v',
+                  'Al ser $title: $v',
+                  'En devenant $title : $v',
+                  'Als $title: $v',
+                  'Ao virar $title: $v',
+                ),
+                style: T.body(14.5, pal.ink),
+              ),
+          ],
+        ],
+      ),
+    );
+  }
 }
 
 class _EventRow extends StatelessWidget {
