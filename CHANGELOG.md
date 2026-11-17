@@ -1,5 +1,53 @@
 # Changelog
 
+## v0.7 (alpha, not released)
+
+### v0.7-alpha-1: FSRS, a profile read from how you learn, and a world that shows your memory
+
+- **FSRS-6 schedules the reviews** (the open scheduler that newer Anki uses, written again in Dart with its
+  published defaults). Each word has a stability, a difficulty and a chance of recall. Only the first answer of a
+  study day (days turn at 04:00) moves the memory; later answers that day are practice. An unaided gap is "good",
+  a quick one "easy", with Petunjuk or a slip "hard", a miss or "Belum tahu" "again"; choosing the meaning and
+  building the sentence count at most as "hard". New words are first checked again after about two days.
+  Intervals spread a little so words learned together do not all come back together, and never pass the exam day.
+- **New words wait when reviews pile up:** half the pace over 50 waiting, none over 100 ("the fog"), none in the
+  two weeks before the exam. A sitting that goes badly (three misses in six) holds its remaining new words back.
+- **Pace:** Santai (10), Normal (15) or Kebut (25) new words a day, or any number in steps of five.
+- **Exam day** (Pengaturan, Aldmere): the TOEFL or IELTS date becomes a World Boss on Today with a countdown,
+  the last two weeks are Raid preparation, and a pace that finishes the title in time is suggested (never a
+  promised score).
+- **How you learn (Karakter):** the four sides of the build are now measured by how well you answer, not how much:
+  Precision (words you know written exactly, in the right form), Swiftness (quick for the length of the word),
+  Insight (remembering words that had begun to fade), Endurance (days present and the fog kept thin). The job at
+  each coronation still comes from them, from the next title on. The card also names the week's focus, the family
+  of words that slips most (a kind of word, word forms, an ending), whether misses are owned or guessed, and how
+  long sittings usually run. It opens after 50 answers.
+- **Sittings fit the learner:** two likely wins first and two to close, the hardest in the middle; at least six in
+  ten questions are gaps; the week's focus decides a little more (precision: forms and long words as gaps;
+  insight: words forgotten before first; endurance: short sittings; swiftness: a quick gap strikes twice against
+  a guard of the road, never the coronation boss); a learner who often stops early gets sittings of the length
+  they finish.
+- **C1–C2 second chance:** typing another word of the deck with the same meaning shows "Bukan kata yang dicari"
+  and the first letter; right after it is worth 7 XP and the combo goes on. 709 C1–C2 meanings now carry the usage
+  that sets them apart, e.g. alleviate "meringankan (penderitaan, masalah)", ease "meringankan (rasa sakit,
+  kecemasan)".
+- **Kitab kata (Karakter):** every word met, as loot: Common, Uncommon, Rare, Epic, Legendary by how long it
+  holds, its ink as dark as its chance of recall; a tap says it. **Papan Buronan:** a word forgotten five times is
+  a Nemesis, its meaning shows again as a hint, and two clean gaps on two days of review beat it (+25 XP).
+- **The fog** of waiting reviews drifts over the kingdom's road in Negeri. **Rested:** after days away, the next
+  XP counts twice (60 for each day missed after the first, 300 at most). **Lapangan Latihan:** weak words again as
+  practice, 1 XP each, the schedule untouched.
+- **Two hidden jobs:** Fogbreaker (a Knight who drove a fog of over 100 back under 20) and Truthsayer (a Baron who
+  owned nearly every miss with "Belum tahu").
+- **Say the word:** after a gap is found or shown, the phone's own voice says it (British under IELTS, American
+  under TOEFL; offline with the voices installed). Pengaturan → Lafal kata turns it off.
+- **More sentences:** a review goes round a word's sentences, so the word is learned and not one sentence of it.
+  The King's 360 words have two more each.
+- **Hikayat Aldmere (Kronik):** a short tale for each title, in English at that title's level, opened with the
+  title; words met are underlined and a tap shows the meaning.
+- **Kronik:** an estimate of the words held now (recall 85 % or more), kept at each coronation; the Chronicler's
+  note at the start of each week.
+
 ## v0.6 (alpha, not released)
 
 ### v0.6-alpha-1: practice on the home screen, hints that grow with the title

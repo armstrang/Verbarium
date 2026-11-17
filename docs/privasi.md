@@ -1,14 +1,14 @@
 # Kebijakan privasi Verbarium
 
-Berlaku untuk aplikasi Android **Verbarium** (`com.armstrang.verbarium`) oleh Armstrang. Terakhir diperbarui 13 November 2026. Isinya sama dengan halaman Pengaturan → Privasi di aplikasi.
+Berlaku untuk aplikasi Android **Verbarium** (`com.armstrang.verbarium`) oleh Armstrang. Terakhir diperbarui 18 November 2026. Isinya sama dengan halaman Pengaturan → Privasi di aplikasi.
 
 ## Yang disimpan
 
-Kemajuanmu (kata yang sudah dipelajari, gelar, kronik, pengaturan) disimpan dalam satu berkas di penyimpanan internal aplikasi, hanya di ponsel ini. Tidak ada akun, tidak ada nama, tidak ada alamat email.
+Kemajuanmu (kata yang sudah dipelajari, gelar, kronik, pengaturan) dan watak belajarmu (cara kamu menjawab: cepat lambat, jenis salah, jam belajar) disimpan dalam satu berkas di penyimpanan internal aplikasi, hanya di ponsel ini, dan hanya dipakai untuk mengatur latihanmu. Tidak ada akun, tidak ada nama, tidak ada alamat email.
 
 ## Yang dikirim
 
-Tidak ada. Verbarium tidak memakai iklan, analitik, laporan kerusakan, atau pelacak apa pun, dan tidak mengirim data ke server mana pun. Semua kata, musik, dan suara sudah ada di dalam aplikasi.
+Tidak ada. Verbarium tidak memakai iklan, analitik, laporan kerusakan, atau pelacak apa pun, dan tidak mengirim data ke server mana pun. Semua kata, musik, dan suara sudah ada di dalam aplikasi. Lafal kata memakai mesin suara bawaan ponselmu; Verbarium hanya memberinya kata yang diucapkan.
 
 ## Cadangan
 
