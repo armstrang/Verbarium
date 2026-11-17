@@ -349,3 +349,178 @@ evil|They fought against ___.|It was an ___ act.
 evolve|The plan will ___ over time.|Birds ___ from dinosaurs.=evolved
 excavate|They will ___ the old fort.|Machines ___ the earth for the new road.
 exceed|Do not ___ the speed limit.|The results ___ our hopes.
+exception|She is the ___.|With the ___ of Tom, everyone came.
+exclaim|"Look!" she began to ___.|The children ___ with joy.
+exclude|Don't ___ anyone from the game.|We cannot ___ the possibility.
+excuse|Please ___ me.|That is a poor ___.
+executive|She is a senior ___.|The ___ branch carries out laws.
+exempt|He was ___ from military service.|Children are ___ from the fee.
+exhibit|The ___ opens next week.|The patient began to ___ symptoms.
+existence|She led a quiet ___.|They doubt the ___ of ghosts.
+exotic|She keeps ___ birds.|They went on an ___ holiday.
+expectation|She lived up to ___.=expectations|He had high ___ of the trip.=expectations
+expense|They spared no ___.|He made a joke at my ___.
+expertise|She has ___ in law.|The job needs technical ___.
+exploit|They tried to ___ his weakness.|His heroic ___ were famous.=exploits
+exploration|Space ___ is costly.|The ___ of the jungle was dangerous.
+expose|The report will ___ the fraud.|Do not ___ your skin to the sun.
+exposure|Climbers died of ___.|The film got huge ___.
+extend|They plan to ___ the house.|She chose to ___ her stay.
+extensive|They have ___ gardens.|She did ___ research.
+extent|To some ___, I agree.|The ___ of the forest is huge.
+external|The ___ walls need painting.|We hired ___ advisers.
+extract|She read an ___ from the book.|The dentist will ___ the tooth.
+extraordinary|It was an ___ day.|She showed ___ courage.
+fabric|The ___ of society is changing.|She chose a red ___.
+facility|She has a ___ for languages.|The hospital is a modern ___.
+failure|Engine ___ caused the crash.|He felt like a ___.
+faith|She lost her ___.|They acted in good ___.
+faithful|He was a ___ servant.|The copy is ___ to the original.
+fake|The painting is a ___.|She tried to ___ a smile.
+fame|___ did not change her.|He rose to ___ quickly.
+fantasy|She writes ___ novels.|Winning the lottery is a ___.
+fare|How did you ___ in the exam?|The taxi ___ was high.
+fault|The ___ is in the wiring.|She has many ___.=faults
+feather|The pillow is filled with ___.=feathers|She is as light as a ___.
+fee|The lawyer charged a high ___.|School ___ are rising.=fees
+feedback|We welcome your ___.|The ___ was positive.
+fellow|He is a ___ of the society.|She's a nice ___.
+fibre/fiber|The cloth is made of natural ___.|Eat more ___.
+finance|They need to ___ the project.|She works in ___.
+firm|He works for a law ___.|She was ___ with the children.
+fiscal|___ policy affects taxes.|The ___ crisis hit hard.
+flame|The house burst into ___.=flames|She is an old ___ of his.
+flank|Soldiers began to ___ the enemy.|The horse's ___ was wet.
+flash|The camera ___ blinded me.|It happened in a ___.
+flexible|Rubber is ___.|My plans are ___.
+flicker|There was a ___ of hope.|The light began to ___.
+float|Ice will ___.|They plan to ___ the company on the market.
+flock|Tourists ___ to the beach.|The shepherd watched his ___.
+fog|The ___ lifted by noon.|My mind is in a ___.
+fond|I have ___ memories of that place.|He is ___ of cake.
+fool|Don't ___ yourself.|He made a ___ of himself.
+forbid|I ___ you to go.|The law will ___ such sales.
+forecast|They ___ snow.=forecast|The economic ___ is poor.
+foresee|I ___ no problems.|Nobody could ___ the war.
+forgive|Please ___ me.|She could not ___ him.
+format|Choose a file ___.|___ the text in two columns.
+formation|The planes flew in ___.|Rock ___ take millions of years.=formations
+former|She is a ___ teacher.|I prefer the ___ option.
+fortunate|He was ___ to survive.|They are a ___ family.
+fortune|She had the good ___ to meet him.|A ___ teller read her palm.
+forum|The online ___ is busy.|The Roman ___ was the city centre.
+fossil|___ fuels cause pollution.|The ___ is millions of years old.
+found|They plan to ___ a charity.|The town was ___ in 1200.=founded
+foundation|The house has a strong ___.|The ___ gives grants to artists.
+fraction|Half is a ___.|Prices fell by a ___.
+fracture|She suffered a skull ___.|The party may ___ into groups.
+fragment|We heard a ___ of the conversation.|The vase broke into ___.=fragments
+framework|The ___ of the building is steel.|We need a legal ___.
+frank|She was ___ about her past.|Let's have a ___ talk.
+fraud|The ___ was discovered.|He is a ___.
+freedom|They fought for ___.|She enjoys the ___ of the hills.
+frequency|The radio ___ was changed.|The ___ of attacks rose.
+frequent|She is a ___ visitor.|They ___ the café.
+fringe|She cut her ___.|The ___ group was small.
+frontier|They pushed the ___ of science.|The town is on the ___.
+frown|She gave him a ___.|He began to ___ at the noise.
+fulfil/fulfill|She will ___ her dream.|They must ___ their promise.
+fulfilment/fulfillment|Order ___ is fast.|He found ___ in his work.
+fund|They will ___ the research.|She raised money for the ___.
+fundamental|Education is a ___ right.|We need ___ change.
+furious|The storm was ___.|He was ___ with himself.
+furnish|They will ___ the room with antiques.|He chose to ___ details.
+furthermore|___, the price is too high.|It's cheap and, ___, good.
+gain|She will ___ weight.|There was a ___ in profits.
+galaxy|A ___ of stars attended the party.|The ___ is spiral in shape.
+gamble|It was a ___ that paid off.|He liked to ___ on horses.
+gasp|She gave a ___ of surprise.|They began to ___ in shock.
+gauge|The fuel ___ is broken.|It is hard to ___ his mood.
+gender|The ___ gap in pay is closing.|Nouns have ___ in French.
+gene|The ___ for blue eyes is recessive.|She has a ___ for music.
+generate|The plan will ___ jobs.|The film may ___ debate.
+genius|She is a ___.|He has a ___ for comedy.
+genre|Jazz is her favourite ___.|The film mixes ___.=genres
+genuine|The diamond is ___.|She is a ___ person.
+geology|She studies ___.|The ___ of the island is volcanic.
+geometry|The ___ class learned angles.|The ___ of the roof is complex.
+gesture|It was a kind ___.|She made a ___ of welcome.
+glamour/glamor|Hollywood is full of ___.|The ___ of the job faded.
+glare|The ___ of the sun hurt my eyes.|She gave him a ___.
+gleam|There was a ___ in his eye.|The polished car began to ___.
+glide|The skater began to ___.|The bird can ___ for hours.
+gloom|The room was in ___.|She sank into ___.
+gospel|She sings ___ music.|The ___ was read in church.
+govern|The rules ___ our conduct.|Who will ___ after the election?
+governor|The ___ of the bank spoke.|She is the state ___.
+grab|Let me ___ a coffee.|She made a ___ for the bag.
+gradually|The days ___ grew longer.|She ___ recovered.
+grand|They held a ___ party.|It cost a ___ total of fifty euros.
+grant|She received a research ___.|They will ___ your wish.
+graphic|She is a ___ designer.|The film has ___ violence.
+gravel|The car crunched over the ___.|They spread ___ on the drive.
+graze|She got a ___ on her knee.|The bullet seemed to ___ his arm.
+greed|___ ruined the company.|Their ___ for power grew.
+grim|He had a ___ expression.|The news is ___.
+guarantee|The watch has a ___.|We cannot ___ success.
+guideline|Follow the safety ___.=guidelines|Each ___ is clear.
+gulf|They swam in the ___.|A ___ opened between them.
+habitat|The ___ is being destroyed.|Bears need a large ___.
+hammer|He began to ___ on the door.|She used a ___.
+handicap|His lack of English is a ___.|He plays golf off a low ___.
+handle|The door ___ is broken.|She can ___ the pressure.
+harass|They continued to ___ her online.|Police must not ___ protesters.
+harm|No ___ was done.|The drug can ___ the baby.
+harmful|The chemicals are ___.|___ rays come from the sun.
+haste|Make ___!|He left in ___.
+hatch|They plan to ___ a plot.|Close the ___.
+haul|The thieves got away with a big ___.|They began to ___ the boat ashore.
+headquarters|The police ___ is downtown.|The army ___ moved.
+heal|Time will ___ the pain.|The wound began to ___.
+heaven|She thought she was in ___.|For ___'s sake, stop.
+heir|He is ___ to a fortune.|She is the ___ to the business.
+hell|War is ___.|She made his life ___.
+hence|The tea is from India, ___ the name.|Two years ___, all will change.
+herd|A ___ of elephants passed.|They began to ___ the sheep.
+hesitate|She did not ___.|He seemed to ___ at the door.
+hilarious|The film was ___.|She told a ___ story.
+hollow|The tree is ___.|His promises rang ___.
+holy|The city is ___ to three faiths.|They visited a ___ site.
+honour/honor|They will ___ the dead.|She is a woman of ___.
+hook|The fish took the ___.|He let me off the ___.
+household|___ chores take time.|She is a ___ name.
+humiliate|The defeat will ___ the champion.|Don't ___ him in public.
+humour/humor|The film has dry ___.|She tried to ___ the old man.
+hunger|They died of ___.|She has a ___ for knowledge.
+hut|They built a ___ from branches.|The ___ was cold.
+hybrid|The plant is a ___.|They drive a ___ car.
+hypothesis|Test your ___.|The ___ was proved wrong.
+icon|Click the ___ to open the file.|She became a fashion ___.
+identical|They are ___ twins.|The two houses are ___.
+idle|Don't sit ___.|He made ___ threats.
+illuminate|Lamps ___ the street.|The study will ___ the problem.
+illusion|He has no ___ about the job.=illusions|It was an optical ___.
+illustrate|She will ___ the book.|The chart helps ___ the trend.
+imagination|Use your ___.|It's all in your ___.
+imitate|Children ___ adults.|The comedian can ___ the president.
+immune|She is ___ to criticism.|The ___ system fights disease.
+impair|The injury may ___ his sight.|Noise can ___ hearing.
+impatient|She is ___ to start.|Don't be ___.
+implement|They will ___ the law.|A garden ___ was left out.
+implication|What is the ___ of this?|He denied any ___ in the crime.
+implicit|She had ___ trust in him.|The threat was ___.
+imply|What do you ___?|His silence seems to ___ guilt.
+impose|They will ___ a fine.|I don't want to ___ on you.
+impress|She tried to ___ her boss.|He failed to ___ the judges.
+impulse|She acted on ___.|He felt an ___ to run.
+incentive|There is no ___ to work hard.|They offer tax ___.=incentives
+incident|The ___ was minor.|There was a shooting ___.
+incline|The road has a steep ___.|I ___ to agree.
+income|Their ___ fell.|___ tax is high.
+incorporate|They plan to ___ the company.|The design will ___ solar panels.
+incorrect|Your answer is ___.|The address was ___.
+index|The price ___ rose.|Point with your ___ finger.
+indifferent|The food was ___.|He was ___ to her pain.
+industrial|The town has an ___ past.|There was ___ action.
+inevitable|Change is ___.|The ___ happened.
+infection|She has an ear ___.|The ___ spread quickly.
