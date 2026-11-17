@@ -58,6 +58,17 @@ class Word {
     return inflected && forms.any((f) => f.toLowerCase() == t);
   }
 
+  /// The word in another of its sentences (`assets/deck/more/`): [n] 0 is the sentence of the deck itself, then each
+  /// extra one in turn, round again. Reviews go through them, so a word is known and not only one sentence.
+  Word variant(int n) {
+    final more = moreSentences[id];
+    if (more == null || more.isEmpty) return this;
+    final k = n % (more.length + 1);
+    if (k == 0) return this;
+    final (s, g) = more[k - 1];
+    return Word(id, forms, pos, meaning, s, tier, g, def, banner);
+  }
+
   /// the sentence in the language the learner learns through (kingdoms of other languages only; empty otherwise)
   String get trans => transOf(id);
 
@@ -73,6 +84,28 @@ class Word {
   bool get buildable {
     final n = sentence.split(' ').length;
     return n >= 4 && n <= 10;
+  }
+}
+
+/// More sentences for a word, from `assets/deck/more/<same file name>` (`word|sentence[=form]|sentence[=form]`):
+/// each with what its gap wants when that is not the headword
+final moreSentences = <String, List<(String, List<String>)>>{};
+
+/// reads one file of more sentences into [moreSentences]
+void parseMore(String text) {
+  final re = RegExp(r'^(.*___.*?)(?:=([a-z]+(?:/[a-z]+)?))?$');
+  for (final raw in text.split('\n')) {
+    final line = raw.trim();
+    if (line.isEmpty || line.startsWith('#')) continue;
+    final f = line.split('|');
+    final id = f[0].split('/')[0];
+    final out = <(String, List<String>)>[];
+    for (final s in f.skip(1)) {
+      final m = re.firstMatch(s.trim());
+      if (m == null || '___'.allMatches(m.group(1)!).length != 1) continue;
+      out.add((m.group(1)!.trim(), m.group(2)?.split('/') ?? const <String>[]));
+    }
+    if (out.isNotEmpty) moreSentences[id] = out;
   }
 }
 
@@ -184,6 +217,10 @@ class Deck {
     words.retainWhere((w) => seen.add(w.id));
     for (final w in parse(await rootBundle.loadString('assets/deck/$banner.txt'))) {
       if (seen.add(w.id)) words.add(w.asBanner());
+    }
+    moreSentences.clear();
+    for (final f in all.where((a) => a.startsWith('assets/deck/more/'))) {
+      parseMore(await rootBundle.loadString(f));
     }
     final defs = <String, String>{};
     for (final f in all.where((a) => a.startsWith('assets/deck/en/'))) {

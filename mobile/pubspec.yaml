@@ -21,6 +21,7 @@ flutter:
   assets:
     - assets/deck/
     - assets/deck/en/
+    - assets/deck/more/
     - assets/deck/es/
     - assets/deck/fr/
     - assets/deck/de/

@@ -219,7 +219,10 @@ class _RunState extends State<_Run> with TickerProviderStateMixin {
         final collocs = App.I.deck.collocs.where((c) => c.tier <= _e.learning).toList()..shuffle(Random(_e.now()));
         var k = 0;
         for (var n = 0; n < cards.length; n++) {
-          _q.add(_Item(cards[n].w, cards[n].quiz, cards[n].fresh));
+          // a review takes the word's next sentence, so the word is learned and not one sentence of it
+          final c = cards[n];
+          final w = c.fresh || _e.isNew(c.w) ? c.w : c.w.variant(_e.mem(c.w)?.reps ?? 0);
+          _q.add(_Item(w, c.quiz, c.fresh));
           if ((n + 1) % _g.collocEvery == 0 && k < collocs.length) _q.add(_Item.colloc(collocs[k++]));
         }
       case RunKind.placement:

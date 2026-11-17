@@ -15,6 +15,7 @@ import glob, os, re, sys
 POS = {"n", "v", "adj", "adv", "prep", "conj"}
 root = os.path.join(os.path.dirname(__file__), "..", "..", "mobile", "assets", "deck")
 bad, seen, counts = [], {}, {}
+sents = {}  # headword -> (its sentence, what the gap wants)
 words_in = {}  # file name -> headwords
 for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
     name = os.path.basename(path)
@@ -66,6 +67,7 @@ for path in sorted(glob.glob(os.path.join(root, "*.txt"))):
             seen[key] = f"{name}:{ln}"
         if not sent.rstrip().endswith((".", "?", "!")): bad.append(f"{name}:{ln} no full stop")
         words_in.setdefault(name, {})[word.split("/")[0]] = word.split("/")
+        sents[word.split("/")[0]] = (sent, gap or word.split("/"))
         counts[(layer, rank)] = counts.get((layer, rank), 0) + 1
 # English definitions
 have, total = 0, sum(len(v) for v in words_in.values())
@@ -114,6 +116,34 @@ for lang in ("es", "fr", "de", "pt"):
     have_c = [l.split("|")[0] for l in open(path, encoding="utf-8") if l.strip() and not l.startswith("#")] if os.path.exists(path) else []
     if sorted(have_c) != sorted(colloc_phrases) and "--loose" not in sys.argv: bad.append(f"{lang}/collocations.txt does not match collocations.txt")
     print(lang, "meanings", n, "of", total, "collocations", len(have_c), "of", len(colloc_phrases))
+# more sentences: more/<same file> (`word|sentence[=form]|sentence[=form]`), one or two more per word, each with one
+# gap, not the deck's own sentence again, and never giving the answer away
+more_n = 0
+for path in sorted(glob.glob(os.path.join(root, "more", "*.txt"))):
+    name = os.path.basename(path)
+    if name not in words_in: bad.append(f"more/{name}: no deck file of that name"); continue
+    got = set()
+    for ln, line in enumerate(open(path, encoding="utf-8"), 1):
+        line = line.rstrip("\n")
+        if not line or line.startswith("#"): continue
+        f = line.split("|")
+        w = f[0].split("/")[0]
+        if w not in words_in[name]: bad.append(f"more/{name}:{ln} not a word of {name}: {w}"); continue
+        if w in got: bad.append(f"more/{name}:{ln} twice: {w}")
+        got.add(w)
+        if len(f) not in (2, 3): bad.append(f"more/{name}:{ln} {len(f) - 1} sentences"); continue
+        mine = []
+        for s in f[1:]:
+            m = re.fullmatch(r"(.*___.*?)(?:=([a-z]+(?:/[a-z]+)?))?", s.strip())
+            if not m or m.group(1).count("___") != 1: bad.append(f"more/{name}:{ln} gap: {s}"); continue
+            sent, ans = m.group(1), (m.group(2).split("/") if m.group(2) else words_in[name][w])
+            if not sent.rstrip().endswith((".", "?", "!")): bad.append(f"more/{name}:{ln} no full stop: {sent}")
+            for a in ans + words_in[name][w]:
+                if re.search(rf"\b{a}\b", sent.lower()): bad.append(f"more/{name}:{ln} answer in sentence: {a}")
+            if sent == sents[w][0] or sent in mine: bad.append(f"more/{name}:{ln} the same sentence again")
+            mine.append(sent)
+            more_n += 1
+print("more sentences", more_n)
 for k in sorted(counts): print(k, counts[k])
 print("core", sum(v for (l, _), v in counts.items() if l == "core"),
       "toefl", sum(v for (l, _), v in counts.items() if l == "toefl"),

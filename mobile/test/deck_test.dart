@@ -165,4 +165,27 @@ void formsAndChips() {
       });
     }
   });
+
+  test('more sentences: a review goes round the word\'s sentences, each with one gap and its own form', () {
+    moreSentences.clear();
+    for (final f in Directory('assets/deck/more').listSync().whereType<File>()) {
+      parseMore(f.readAsStringSync());
+    }
+    expect(moreSentences.length, greaterThanOrEqualTo(360), reason: 'every King word has two more');
+    final words = core();
+    final abscond = words.firstWhere((w) => w.id == 'abscond');
+    expect(abscond.variant(0), same(abscond));
+    final v1 = abscond.variant(1), v2 = abscond.variant(2);
+    expect(v1.sentence, isNot(abscond.sentence));
+    expect(v2.sentence, isNot(v1.sentence));
+    expect(v1.accepts('absconded'), isTrue, reason: 'the first one wants the past');
+    expect(v2.accepts('abscond'), isTrue);
+    expect(abscond.variant(3).sentence, abscond.sentence, reason: 'and round again');
+    for (final w in words) {
+      for (var n = 1; n <= 2; n++) {
+        expect(w.variant(n).parts.length, 2, reason: w.id);
+      }
+    }
+    moreSentences.clear();
+  });
 }
