@@ -419,3 +419,143 @@ deception|The magician's trick was a clever ___.|She saw through his ___.
 decisive|The general made a ___ move.|We need ___ leadership.
 decree|The emperor's ___ was law.|A new ___ banned the festival.
 deem|They ___ the film unsuitable for children.|Do whatever you ___ necessary.
+deface|Someone tried to ___ the poster.|Graffiti ___ the bridge.=defaced
+defamation|The article was full of ___.|She won the ___ case.
+default|The ___ setting is English.|If you ___ on the loan, you lose the house.
+defect|The spy wanted to ___ to the West.|A hearing ___ kept him out of the army.
+defection|His ___ to the enemy shocked his country.|The club suffered a ___ of fans.
+deficiency|Iron ___ is common in women.|The report points out each ___ in the system.
+deficit|The budget ___ grew last year.|The team overcame a two-goal ___.
+deflect|The goalkeeper managed to ___ the ball.|She tried to ___ attention from her error.
+defraud|He tried to ___ his own company.|They ___ thousands of pensioners.=defrauded
+defy|The dancer's leaps seem to ___ gravity.|He would ___ his parents.
+degenerate|The party began to ___ into a fight.|Muscles ___ without exercise.
+degrade|Sunlight can ___ plastic.|Such work would ___ him.
+deity|The god of thunder was a powerful ___.|Each village honoured its own ___.
+dejected|She felt ___ after the rejection.|The ___ fans left early.
+delegate|A good manager knows how to ___.|She was elected as a ___.
+delegation|A ___ of farmers visited the minister.|___ of tasks saves time.
+deliberation|After much ___, she accepted.|The ___ lasted two days.
+delicate|The issue is ___.|She has ___ hands.
+delinquent|The ___ was caught stealing cars.|He was ___ in paying his taxes.
+delirious|The fans were ___ with joy.|He became ___ from the heat.
+delusion|She suffers from the ___ that she is famous.|It is a ___ to think money buys happiness.
+demise|The ___ of the old king caused a crisis.|The ___ of the newspaper was sad.
+demolish|They plan to ___ the old bridge.|She managed to ___ his argument.
+denial|He is in ___ about his illness.|The ___ of rights caused protests.
+denomination|Members of every ___ attended.|The notes come in small ___.=denominations
+denote|A red light can ___ danger.|The sign ___ a place of worship.=denotes
+denounce|The paper began to ___ the mayor.|She refused to ___ her friends.
+dense|The forest was too ___ to walk through.|The book is ___ with facts.
+density|The ___ of the wood makes it heavy.|Traffic ___ is highest at eight.
+depict|The novel tries to ___ life in prison.|The statue seems to ___ a king.
+depiction|The ___ of women in the film was criticised.|It is a realistic ___ of war.
+deplete|The drought began to ___ the reservoirs.|Do not ___ your savings.
+deplorable|His behaviour was ___.|The roads are in a ___ state.
+deploy|The army began to ___ its tanks.|The firm will ___ new software.
+deport|They plan to ___ the illegal workers.|He was ___ to his home country.=deported
+depot|The bus ___ is near the station.|Supplies were stored in the ___.
+deprive|Do not ___ the plants of light.|Poverty can ___ children of education.
+deputy|The ___ mayor gave the speech.|She acted as ___ head.
+deregulate|They chose to ___ the banks.|The airline market began to ___.
+deride|Critics began to ___ the film.|Do not ___ other people's dreams.
+derogatory|The word is ___.|She was hurt by his ___ comments.
+descend|Night began to ___ on the city.|The climbers started to ___.
+descendant|Each ___ of the king inherited land.|The modern horse is a ___ of a small animal.
+descent|She is of Irish ___.|The ___ into the cave was dangerous.
+desecrate|It is a crime to ___ a church.|Litter began to ___ the beauty of the beach.
+designate|They will ___ the area a park.|She was ___ as the new leader.=designated
+despise|He began to ___ his job.|She would ___ cowards.
+detain|The guard may ___ shoplifters.|I won't ___ you any longer.
+detention|The boy got ___ for being late.|They protested against ___ without trial.
+deteriorate|His health began to ___.|Relations between the countries ___.=deteriorated
+deterrence|The death penalty is meant as ___.|Nuclear ___ kept the peace.
+devalue|Do not ___ your own achievements.|Inflation can ___ savings.
+devastate|The news will ___ her.|Fire can ___ a forest in hours.
+deviate|Do not ___ from the path.|He never ___ from his routine.=deviates
+deviation|There was a small ___ in the results.|The ___ cost the ship a day.
+devil|He has the luck of the ___.|She is a little ___ when she is tired.
+devise|She managed to ___ a clever trick.|They ___ a plan to escape.=devised
+diagnose|It is hard to ___ the fault.|She was ___ with flu.=diagnosed
+diagnosis|The doctor confirmed the ___.|A wrong ___ can be dangerous.
+diagnostic|The ___ test took an hour.|The software runs a ___ check.
+dialect|The north has its own ___.|She spoke in a strong ___.
+dictate|She began to ___ a letter.|Do not let fear ___ your life.
+dictator|The ___ ruled for thirty years.|He behaves like a ___ at home.
+differentiate|Can you ___ the two colours?|The firm tries to ___ itself from its rivals.
+diffuse|The lamp gives a ___ light.|They tried to ___ the tension.
+diffusion|The ___ of ideas happens fast online.|Light passes by ___ through the glass.
+dignity|Every person has ___.|He kept his ___ in defeat.
+dilemma|She was caught in a moral ___.|The ___ had no easy answer.
+diligence|Success requires ___.|The lawyer showed great ___.
+diligent|The ___ nurse checked every bed.|He is ___ in his studies.
+dilute|Water will ___ the paint.|The changes will ___ the law.
+dimension|The box has three ___.=dimensions|The new ___ of the problem worried us.
+diminish|His power began to ___.|The pain will ___ over time.
+diplomacy|She handled the dispute with ___.|Wars begin when ___ fails.
+diplomat|The ___ left the embassy.|A good ___ listens carefully.
+dire|The economy is in a ___ state.|They warned of ___ consequences.
+directive|The boss issued a ___ on dress.|EU ___ apply to all members.=directives
+disarm|Her smile seemed to ___ him.|The treaty forced them to ___.
+disbelief|He shook his head in ___.|The news was met with ___.
+discard|___ the old batteries safely.|He would ___ his clothes on the floor.
+discern|I could ___ a figure in the dark.|She can ___ the truth quickly.
+discharge|The factory began to ___ waste into the river.|He received an honourable ___.
+disciple|The ___ followed his master.|She is a ___ of the new diet.
+disclose|He would not ___ his salary.|The firm must ___ the risks.
+disclosure|The ___ of her identity was illegal.|Full ___ is required by law.
+discontent|The ___ of the workers grew.|The winter of ___ led to strikes.
+discourse|The book is a ___ on freedom.|Political ___ has become rude.
+discredit|The scandal began to ___ the minister.|New tests ___ the theory.
+discrepancy|There is a ___ in the figures.|The ___ was explained by a typing error.
+discrete|The process has several ___ steps.|The data come in ___ values.
+discretion|You can rely on my ___.|Use your ___ when choosing.
+disdain|He showed ___ for the rules.|She treated them with ___.
+disgrace|He left the army in ___.|The cheating was a ___.
+disillusion|The defeat began to ___ the young fans.|They hoped politics would not ___ them.
+disintegrate|The empire began to ___.|The paper will ___ in water.
+dismal|The weather was ___.|Her exam results were ___.
+dismantle|They began to ___ the old machine.|The new leader set out to ___ the system.
+dismay|The news filled him with ___.|They watched in ___ as the house burned.
+disobey|Children sometimes ___ their parents.|He chose to ___ the order.
+disorient|Long flights can ___ travellers.|The blow seemed to ___ him.
+disparity|There is a ___ in wealth.|The ___ between rich and poor is growing.
+dispatch|The army will ___ troops tomorrow.|The ___ arrived by horse.
+dispense|The pharmacist will ___ your medicine.|Let us ___ with formalities.
+dispersal|The ___ of the crowd took an hour.|Birds aid in the ___ of seeds.
+displace|The war began to ___ thousands.|Robots may ___ factory workers.
+displacement|The ___ of water shows the volume.|___ of people caused a crisis.
+disposal|The tools are at your ___.|Waste ___ is a growing problem.
+dispose|The firm will ___ of its shares.|Please ___ of the rubbish.
+disposition|The dog has a gentle ___.|The ___ of troops was secret.
+disproportionate|The punishment was ___.|They took a ___ amount of time.
+dispute|The border ___ lasted years.|No one would ___ her talent.
+disqualify|The judges may ___ the athlete.|The rule will ___ many applicants.
+disregard|He showed a complete ___ for safety.|Please ___ the last message.
+disrepute|The bridge fell into ___.|The behaviour brought the club into ___.
+disrupt|Protesters tried to ___ the meeting.|Snow may ___ flights.
+dissatisfaction|She expressed ___ with the hotel.|___ led to the strike.
+disseminate|The internet helps ___ information.|They plan to ___ the results.
+dissent|The judge wrote a ___.|There was little ___ in the party.
+dissident|The ___ was arrested.|He wrote as a ___ under the old regime.
+dissolve|The parliament will ___ before the election.|Her anger began to ___.
+distil/distill|They ___ whisky in old copper pots.|She managed to ___ the ideas into a single page.
+distinction|She passed with ___.|He served with ___.
+distinctive|The cheese has a ___ smell.|Her ___ voice is easy to recognise.
+distort|The mirror would ___ his face.|The media tend to ___ the facts.
+distress|The ship sent out a ___ signal.|The child was in ___.
+diversify|The company plans to ___ into food.|Investors should ___ their savings.
+divert|The river was ___ to save the town.=diverted|Jokes can ___ attention.
+divine|The music was ___.|They believed in ___ justice.
+docile|The ___ cow let the child stroke it.|He became ___ after the medicine.
+doctrine|The party's ___ was strict.|They taught a ___ of peace.
+domain|The garden is her ___.|The site has its own ___ name.
+donor|An anonymous ___ gave a million.|She is a kidney ___.
+dosage|Follow the ___ on the label.|The ___ depends on age.
+dose|He needed a ___ of fresh air.|The vaccine needs a second ___.
+drain|The sink began to ___ slowly.|The meetings ___ my energy.
+drastic|The firm made ___ cuts.|She made a ___ change to her hair.
+drift|Snow began to ___ against the door.|I didn't catch the ___ of his speech.
+drown|The music began to ___ out his voice.|He would ___ his sorrows in drink.
+drudgery|Housework is ___ for many.|He escaped the ___ of office life.
+dual|The car has ___ controls.|The room serves a ___ purpose.
