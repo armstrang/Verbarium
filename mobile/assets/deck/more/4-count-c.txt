@@ -279,3 +279,128 @@ sue|She decided to ___ her employer.|They threatened to ___.
 suicide|Helplines work to reduce ___ among farmers.|The report studies ___ rates by region.
 superficial|The wound was ___.|She is ___ and vain.
 superior|He reported to his ___.|They have ___ weapons.
+supervise|A nurse will ___ the patients.|He was hired to ___ the builders.
+supervision|The project is under my ___.|Prisoners need constant ___.
+supplement|She works nights to ___ her income.|The newspaper has a Sunday ___.
+suppress|She tried to ___ a laugh.|The regime would ___ dissent.
+surge|A ___ of water broke the dam.|Prices began to ___.
+surpass|She hopes to ___ her own record.|The view will ___ your expectations.
+surplus|The budget has a ___.|We have a ___ of chairs.
+surrender|They chose to ___.|The ___ was signed at dawn.
+surveillance|Cameras provide ___ of the car park.|___ of phone calls is controversial.
+susceptible|She is ___ to flattery.|Children are ___ to infection.
+suspicion|She looked at him with ___.|I have a ___ he is lying.
+sustain|They cannot ___ this pace.|The building may ___ damage.
+swing|The children played on the ___.|Mood ___ are common.=swings
+sword|He was killed by the ___.|The pen is mightier than the ___.
+symmetry|Her face has perfect ___.|The ___ of the design is pleasing.
+synthesis|Plants use light for ___.|Her style is a ___ of old and new.
+tangible|There is no ___ evidence.|The tension was ___.
+tariff|The hotel's ___ is high.|They put a ___ on imports.
+temper|She has a quick ___.|He tried to ___ his criticism.
+temperament|Her artistic ___ made her moody.|He has the right ___ for the job.
+tempt|Can I ___ you with some cake?|Don't ___ fate.
+tenant|The ___ moved out.|Each ___ has a key.
+tender|Her foot was ___.|He gave her a ___ kiss.
+tentative|She took a ___ step.|We made ___ plans.
+terminate|The contract was ___ early.=terminated|The train will ___ here.
+testify|She agreed to ___ against him.|The ruins ___ to the war.
+testimony|His ___ was false.|The building is a ___ to his skill.
+texture|The cloth has a rough ___.|The soup has a smooth ___.
+theoretical|It is a ___ possibility.|Her knowledge is purely ___.
+thereby|He signed, ___ agreeing to the terms.|She won, ___ earning a place in the final.
+thread|He lost the ___ of the story.|She tried to ___ the needle.
+threshold|He carried her over the ___.|She has a low pain ___.
+thrive|Children ___ on love.|The business began to ___.
+throne|The king sat on his ___.|She is next in line to the ___.
+thwart|Police managed to ___ the robbery.|The weather may ___ our plans.
+tide|The ___ turned in our favour.|They waited for low ___.
+timber|They built the house of ___.|The ___ trade is important here.
+tolerance|He has a low ___ for noise.|The drug builds ___.
+tolerant|She is ___ of her children's mess.|Some plants are ___ of drought.
+tolerate|I cannot ___ rudeness.|The plant can ___ cold.
+toll|They paid a ___ to cross the bridge.|The bell began to ___.
+tomb|The ___ was sealed.|They found treasure in the ___.
+torture|The wait was ___.|They used ___ to get information.
+tout|A ticket ___ sold us fake tickets.|They ___ the product as a miracle.
+toxic|The river is ___.|She left a ___ relationship.
+trail|The dog followed the ___.|Smoke began to ___ behind the plane.
+tranquil|The village has a ___ atmosphere.|She lives a ___ life.
+transaction|The ___ was completed online.|Each ___ costs a small fee.
+transcend|Love can ___ time.|The music seems to ___ borders.
+transient|The city has a ___ population.|Fame is ___.
+transparency|The firm promised ___.|The ___ of the glass is perfect.
+transparent|His lies were ___.|The water was ___.
+traverse|They plan to ___ the Alps.|The road will ___ the valley.
+treaty|They broke the ___.|The ___ ended the war.
+tremendous|She made a ___ effort.|There was a ___ noise.
+tribunal|He appealed to an employment ___.|The war crimes ___ met in The Hague.
+tribute|They paid ___ to the nurses.|The film is a ___ to her father.
+triumph|She returned in ___.|It was a ___ of hope over fear.
+trivial|The problem is ___.|We discussed ___ things.
+turmoil|Her mind was in ___.|The markets were in ___.
+turnover|Staff ___ is high.|They raised ___ by a third.
+unanimous|The vote was ___.|They gave ___ support.
+underestimate|Never ___ your opponent.|We ___ the cost.=underestimated
+undermine|Rumours ___ his authority.=undermined|The waves ___ the cliffs.
+unify|The king tried to ___ the country.|A common enemy can ___ people.
+unprecedented|The crisis is ___.|There was ___ demand.
+unveil|The mayor will ___ the statue.|They will ___ the new plans.
+upheaval|The war caused social ___.|There was political ___.
+uphold|The court chose to ___ the verdict.|We must ___ our values.
+upright|He is an ___ citizen.|Sit ___ in your chair.
+utility|The ___ bills are high.|The tool has great ___.
+utilize/utilise|We must ___ every resource.|They ___ local labour.
+vacant|She stared with ___ eyes.|The post is ___.
+vaccine|The ___ is free.|Scientists developed a ___ quickly.
+vague|He gave a ___ answer.|I have a ___ memory of it.
+vain|He is ___ about his looks.|It was a ___ attempt.
+vanish|The magician made the coin ___.|Her smile began to ___.
+variable|The weather is ___.|Interest rates are ___.
+velocity|The bullet's ___ was huge.|The ___ of money has slowed.
+venture|She will ___ out in the rain.|It was a joint ___.
+verdict|What's your ___ on the film?|The ___ was guilty.
+verify|Please ___ your email.|We could not ___ his story.
+versatile|She is a ___ actress.|The tool is ___.
+verse|The poem has five ___.=verses|He wrote in ___.
+versus|It's quality ___ quantity.|The case was Smith ___ Jones.
+vessel|The ___ docked at noon.|Blood flows through each ___.
+veteran|She is a ___ of the stage.|The war ___ received a medal.
+viable|The plan is not ___.|The seeds are still ___.
+vice|He has no ___.|She was elected ___ president.
+vicinity|Was anyone in the ___?|The hotel is in the ___ of the airport.
+vigil|They held a candlelit ___.|She kept a ___ by his bed.
+vigilant|Be ___ at night.|The guard was ___.
+violate|They tried to ___ the treaty.|Do not ___ my privacy.
+virtue|She is a woman of ___.|By ___ of her age, she won.
+vitality|The city is full of ___.|She has great ___.
+vocabulary|The child has a large ___.|Medical ___ is hard.
+void|The contract is null and ___.|She stared into the ___.
+volatile|The situation is ___.|Petrol is ___.
+voyage|They set off on a long ___.|The ___ of discovery began.
+vulnerable|The child felt ___.|The system is ___ to attack.
+waive|They agreed to ___ the rule.|She chose to ___ her right to a lawyer.
+wallet|My ___ was stolen.|She has a leather ___.
+wane|The moon began to ___.|His popularity began to ___.
+warehouse|The ___ was full of boxes.|They worked in the ___.
+warrant|The police had a search ___.|Nothing can ___ such cruelty.
+warrior|She is a ___ for justice.|The ___ died in battle.
+weave|She learned to ___ on a loom.|The cyclist began to ___ through traffic.
+weed|The garden is full of ___.=weeds|They ___ the beds every week.
+whereby|There is a scheme ___ you can save tax.|They have an agreement ___ profits are shared.
+widow|The ___ wore black.|She was left a ___ at forty.
+wield|He can ___ a sword.|She knows how to ___ power.
+wilderness|The park is a protected ___.|He spent years in the political ___.
+wince|She began to ___ with pain.|He gave a ___ at the bill.
+wipe|___ your feet before you come in.|The flood seemed to ___ out the village.
+withhold|She chose to ___ the truth.|They may ___ your pay.
+withstand|The walls can ___ an earthquake.|She could not ___ the pressure.
+woe|They told a tale of ___.|Financial ___ hit the town.=woes
+worship|They went to ___ on Sunday.|Fans ___ the singer.
+worthwhile|It is a ___ cause.|Is the course ___?
+yawn|She tried to hide a ___.|The film made me ___.
+yearn|She began to ___ for adventure.|He seemed to ___ for his youth.
+yell|He let out a ___.|Don't ___ at me.
+yield|The ___ was poor this year.|Drivers must ___ to buses.
+youngster|The ___ wanted to be a pilot.|Every ___ in town came to the fair.
+zeal|His religious ___ worried his family.|She worked with great ___.
