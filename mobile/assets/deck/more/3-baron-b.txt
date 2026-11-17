@@ -179,3 +179,176 @@ satisfy|Nothing will ___ him.|The meal will ___ your hunger.
 scale|Weigh it on the ___.|Draw it to ___.
 scandal|It's a ___!|The ___ broke last week.
 scarce|Food was ___.|Jobs are ___.
+scenario|Imagine the following ___.|That is the best-case ___.
+scheme|They hatched a ___ to escape.|The colour ___ is blue and white.
+scholar|She is a Latin ___.|The ___ wrote ten books.
+scratch|The car has a ___ on the door.|She made the cake from ___.
+scream|She let out a ___.|The children began to ___ with joy.
+sector|The private ___ is growing.|She works in the public ___.
+secure|The door is ___.|She hopes to ___ a loan.
+seek|They ___ shelter from the storm.|You should ___ advice.
+select|Only a ___ few were invited.|She will ___ the winners.
+senior|He is ___ to me.|She is a ___ citizen.
+sensitive|It's a ___ topic.|He is a ___ child.
+sequence|The film opens with a chase ___.|Follow the ___ of steps.
+session|The training ___ lasts an hour.|Parliament is in ___.
+settle|They will ___ the dispute.|The dust began to ___.
+severe|He had ___ pain.|The judge was ___.
+shade|The lamp has a red ___.|She chose a darker ___ of blue.
+shadow|She is a ___ of her former self.|He lives in his brother's ___.
+shallow|He is a ___ person.|The children played in the ___ end.
+shame|She hung her head in ___.|What a ___!
+shelter|The bus ___ was full.|They will ___ the refugees.
+shock|She was in ___.|The news will ___ them.
+shore|The boat came to ___.|They swam back to ___.
+shortage|There is a water ___.|The ___ of staff is serious.
+sibling|They are ___ who fight a lot.=siblings|Each ___ got a gift.
+signature|The dish is the chef's ___.|Can I have your ___?
+significant|It was a ___ day.|She gave him a ___ look.
+silence|___ fell over the room.|They tried to ___ the critics.
+sincere|He is a ___ man.|Her thanks were ___.
+slide|The children went down the ___.|Prices began to ___.
+slight|She has a ___ accent.|He felt the ___ deeply.
+slip|She wrote it on a ___ of paper.|It was a ___ of the tongue.
+slope|They skied down the ___.|The road began to ___ upward.
+solar|The ___ eclipse was visible.|They have ___ panels.
+sophisticated|She has ___ taste.|It's a ___ system.
+soul|She sang with ___.|There wasn't a ___ in sight.
+spacious|The car is ___.|They have a ___ garden.
+spare|She has no ___ time.|He tried to ___ her feelings.
+species|The panda is an endangered ___.|Many ___ live in the reef.
+spectacular|The view is ___.|She made a ___ catch.
+speculate|Investors ___ on gold.|We can only ___.
+spill|She tried not to ___ the soup.|There was an oil ___.
+spite|He did it out of ___.|In ___ of the cost, they bought it.
+split|The party may ___.|There was a ___ in the wood.
+spoil|Don't ___ the ending.|They tend to ___ their children.
+sponsor|They will ___ the event.|She found a ___ for her trip.
+spontaneous|It was a ___ decision.|She is very ___.
+stable|The patient is ___.|The horse is in the ___.
+stance|She took a firm ___.|His ___ on the issue changed.
+stare|She gave him a cold ___.|Don't ___.
+starve|They were left to ___.|I'm going to ___ if we don't eat.
+status|What is the ___ of the project?|She has celebrity ___.
+steady|Hold the ladder ___.|He has a ___ job.
+steam|The train ran on ___.|She let off ___.
+steel|He has nerves of ___.|She tried to ___ herself for the news.
+steep|The price is ___.|___ the tea for five minutes.
+stimulate|Coffee can ___ the brain.|The film may ___ debate.
+stock|The shop is out of ___.|She invested in ___.=stocks
+stream|There was a ___ of visitors.|They will ___ the film online.
+stretch|A long ___ of road lay ahead.|She tried to ___ the budget.
+strict|Her parents are ___.|He follows a ___ diet.
+strike|The workers are on ___.|Lightning may ___ twice.
+struggle|It was a ___ to finish.|They continue to ___ for freedom.
+submit|She will ___ her essay.|He refused to ___.
+subordinate|She praised her ___.|He gave the work to a ___.
+subsequent|___ events proved him right.|The ___ report was clearer.
+subsidiary|It is a ___ company.|The question is ___.
+suburb|They moved to a leafy ___.|The ___ has good schools.
+sufficient|We have ___ food.|One cup is ___.
+sum|Add up the ___.|In ___, it was a success.
+supper|They ate ___ at eight.|Come over for ___.
+surgeon|She is a brain ___.|The ___ washed his hands.
+surgery|She is in ___.|The doctor's ___ opens at nine.
+surround|The police began to ___ the house.|Mountains ___ the valley.
+suspect|The ___ was arrested.|I ___ he is lying.
+suspend|They will ___ the player.|She had to ___ her studies.
+sustainable|They use ___ energy.|Is this growth ___?
+swallow|A ___ flew over the field.|She found it hard to ___ her pride.
+swear|He began to ___ in anger.|She will ___ an oath.
+sweep|The police made a ___ of the area.|The disease began to ___ the country.
+swift|She sent a ___ reply.|He is ___ on his feet.
+sympathy|She showed no ___.|They sent a ___ card.
+tackle|He made a hard ___.|She will ___ the problem.
+tale|She told a sad ___.|It's a ___ of two cities.
+tap|She heard a ___ at the door.|He began to ___ his foot.
+tear|She shed a ___.|He tried to ___ the letter in two.
+temple|She rubbed her ___.|They visited the Greek ___.
+temporary|The pain is ___.|It is a ___ measure.
+tendency|There is a ___ to blame others.|She has a ___ to be late.
+tension|___ rose before the match.|Check the ___ of the rope.
+territory|The army entered enemy ___.|The topic is new ___ for me.
+terror|They lived in ___.|The ___ attack shocked the world.
+therapy|She is in ___.|Music ___ helps patients.
+thorough|She did a ___ job.|He is ___ in his work.
+threat|He made a ___.|There is a ___ of rain.
+threaten|They began to ___ him.|Clouds ___ rain.
+thunder|There was a crash of ___.|The ___ scared the dog.
+tissue|She handed me a ___.|The ___ healed well.
+tone|She spoke in a soft ___.|The ___ of the meeting was friendly.
+tough|The meat is ___.|She is a ___ woman.
+tournament|The ___ starts tomorrow.|They won the ___.
+trace|There was no ___ of him.|She began to ___ the outline.
+tragedy|It was a terrible ___.|She wrote a Greek ___.
+trait|Kindness is a family ___.|Each ___ is inherited.
+transfer|She asked for a ___.|The bank will ___ the funds.
+transform|The new roof will ___ the house.|Love can ___ people.
+transition|The ___ to adulthood is hard.|The country is in ___.
+transmit|They will ___ the match live.|The virus can ___ quickly.
+trap|They fell into a ___.|She felt ___ in her job.=trapped
+treasure|The map led to the ___.|She will ___ the memory.
+tremble|Her voice began to ___.|The ground seemed to ___.
+trial|He is on ___.|They ran a clinical ___.
+tribe|The ___ elders met.|Each ___ has its customs.
+trigger|He pulled the ___.|Stress may ___ an attack.
+troop|The ___ were sent home.=troops|A ___ of scouts arrived.
+tropical|They saw a ___ storm.|She loves ___ fruit.
+trust|I ___ you.|They lost the public's ___.
+tune|The piano is out of ___.|She will ___ the guitar.
+tunnel|They dug a ___ under the wall.|We drove through the ___.
+tutor|She works as a private ___.|The ___ marked the essay.
+ultimate|It was the ___ test.|The ___ decision is yours.
+undergo|She will ___ surgery.|The city will ___ big changes.
+undertake|She chose to ___ the task.|They will ___ research.
+undertaking|It is a risky ___.|She gave an ___ to pay.
+unique|She has a ___ voice.|Each fingerprint is ___.
+unite|They will ___ against the enemy.|Can we ___ the party?
+universe|She is the centre of his ___.|The ___ is expanding.
+upper|He has the ___ hand.|She lives on the ___ floor.
+urban|___ life is busy.|___ planning is important.
+urge|She felt an ___ to run.|We ___ you to vote.
+urgent|The matter is ___.|There is an ___ need for doctors.
+utter|She did not ___ a word.|It was ___ nonsense.
+valid|Is your passport ___?|It's a ___ point.
+validate|We need to ___ the data.|The ticket must be ___.=validated
+vary|Opinions ___.|The prices ___ by season.
+vast|They own ___ lands.|The ___ majority agreed.
+vendor|The ___ sold fruit.|Each ___ pays a fee.
+venue|The ___ was full.|We need a bigger ___.
+via|Send it ___ email.|They travelled ___ Paris.
+victory|It was a narrow ___.|They claimed ___.
+vigorous|She takes ___ exercise.|He is a ___ old man.
+violence|They condemned the ___.|Domestic ___ is a crime.
+virtually|It is ___ impossible.|They met ___ online.
+visible|The stars are ___ tonight.|There was ___ relief on her face.
+vision|She has a ___ for the future.|He had a ___ of an angel.
+visual|She is a ___ learner.|The ___ effects are great.
+vital|She played a ___ role.|His ___ signs are good.
+vivid|She has a ___ imagination.|The colours are ___.
+vocation|She found her ___ in teaching.|He has a ___ for music.
+volcano|They climbed the ___.|The ___ is active.
+volume|Turn up the ___.|The book is in three ___.=volumes
+voluntary|The work is ___.|She took ___ redundancy.
+wage|They pay a fair ___.|The country will ___ war.
+wagon|The ___ wheels creaked.|They travelled west by ___.
+wander|Don't ___ off.|His mind began to ___.
+wealth|She has a ___ of experience.|___ does not bring happiness.
+welfare|They care about animal ___.|He lives on ___.
+whereas|Some like it hot, ___ others don't.|She is tall, ___ he is short.
+whisper|She spoke in a ___.|He began to ___ to her.
+widespread|The damage was ___.|There is ___ fear.
+wildlife|The ___ park is open.|They film ___ in Africa.
+willing|She is ___ to help.|He was a ___ pupil.
+wire|The ___ is live.|They will ___ the money.
+wisdom|She spoke with ___.|They questioned the ___ of the plan.
+wise|He is a ___ old man.|That was not ___.
+withdraw|She will ___ cash.|The army began to ___.
+witness|She was a ___ to the crime.|They will ___ history.
+workforce|The ___ is skilled.|The ___ is on strike.
+workshop|She attended a writing ___.|The ___ was full of tools.
+wound|The ___ healed.|His words began to ___ her.
+wrap|___ up warm.|She used gift ___.
+wreck|The car was a ___.|The storm may ___ the boat.
+wrist|He broke his ___.|She tapped his ___.
+zone|The war ___ was dangerous.|He is in the ___.
